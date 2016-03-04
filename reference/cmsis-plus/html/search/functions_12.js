@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['sched_5fprio',['sched_prio',['../classos_1_1rtos_1_1_thread.html#adda417485c68f1af5c279f0e36dc6382',1,'os::rtos::Thread::sched_prio(thread::priority_t prio)'],['../classos_1_1rtos_1_1_thread.html#af1118dae8826231c78f8805704f90a66',1,'os::rtos::Thread::sched_prio(void)']]],
+  ['sched_5fstate',['sched_state',['../classos_1_1rtos_1_1_thread.html#a6f7a57857cfb1806f6ffb7e139c0bcce',1,'os::rtos::Thread']]],
+  ['semaphore',['Semaphore',['../classos_1_1rtos_1_1_semaphore.html#ad8b005eb3618fb0c9b5fa7eeda019a0d',1,'os::rtos::Semaphore::Semaphore()'],['../classos_1_1rtos_1_1_semaphore.html#a016fd0cc042a53b898ba8c18a250fcbc',1,'os::rtos::Semaphore::Semaphore(const semaphore::Attributes &amp;attr)'],['../classos_1_1rtos_1_1_semaphore.html#ae081923eedd56401905830a981063be7',1,'os::rtos::Semaphore::Semaphore(const Semaphore &amp;)=delete'],['../classos_1_1rtos_1_1_semaphore.html#ae3774e6f34c8f64d0f927853bbcc25cd',1,'os::rtos::Semaphore::Semaphore(Semaphore &amp;&amp;)=delete']]],
+  ['send',['send',['../classos_1_1driver_1_1_serial.html#af002a780fce6376249c98ac6df633e2d',1,'os::driver::Serial::send()'],['../classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195',1,'os::rtos::Message_queue::send()']]],
+  ['serial',['Serial',['../classos_1_1driver_1_1_serial.html#a3695d724eba31437b7ca9d55b9bf29be',1,'os::driver::Serial::Serial() noexcept'],['../classos_1_1driver_1_1_serial.html#a6420517f0c4543bd9ff2d9903fe147c9',1,'os::driver::Serial::Serial(const Serial &amp;)=delete'],['../classos_1_1driver_1_1_serial.html#aabfedd098e7d635b8be6df16cd552fe1',1,'os::driver::Serial::Serial(Serial &amp;&amp;)=delete']]],
+  ['sig_5fclear',['sig_clear',['../classos_1_1rtos_1_1_thread.html#a684676c4acf5fe6ad4a7a0aa6ea4c854',1,'os::rtos::Thread']]],
+  ['sig_5fget',['sig_get',['../classos_1_1rtos_1_1_thread.html#a2661cc44d1b239382f95baba06ab2e3e',1,'os::rtos::Thread']]],
+  ['sig_5fraise',['sig_raise',['../classos_1_1rtos_1_1_thread.html#a2936cb3bffb587e83ec9d199ac1898c8',1,'os::rtos::Thread']]],
+  ['sig_5fwait',['sig_wait',['../classos_1_1rtos_1_1_thread.html#a290fdad87e54541b91811d62a5f57f50',1,'os::rtos::Thread::sig_wait()'],['../namespaceos_1_1rtos_1_1this__thread.html#a4a579a77bc717cda108156f58dbe617e',1,'os::rtos::this_thread::sig_wait()']]],
+  ['signal',['signal',['../classos_1_1rtos_1_1_condition__variable.html#a3d473424e6a4d29b02bed96f471ff95a',1,'os::rtos::Condition_variable']]],
+  ['signal_5fdevice_5fevent',['signal_device_event',['../classos_1_1driver_1_1usb_1_1_device.html#a4e5d57abce213113667e61355a0e2cdf',1,'os::driver::usb::Device']]],
+  ['signal_5fendpoint_5fevent',['signal_endpoint_event',['../classos_1_1driver_1_1usb_1_1_device.html#a244ef05affa778be22c9f0ff70701f8b',1,'os::driver::usb::Device']]],
+  ['signal_5fevent',['signal_event',['../classos_1_1driver_1_1_serial.html#a069b0f66adb7e654801de27c7e43cf82',1,'os::driver::Serial']]],
+  ['signal_5fpipe_5fevent',['signal_pipe_event',['../classos_1_1driver_1_1usb_1_1_host.html#a73140f099e2b475a5145e02b2cd2896d',1,'os::driver::usb::Host']]],
+  ['signal_5fport_5fevent',['signal_port_event',['../classos_1_1driver_1_1usb_1_1_host.html#af676fbe5bf78c7b8b30b5c355b92c6b0',1,'os::driver::usb::Host']]],
+  ['sleep_5ffor',['sleep_for',['../classos_1_1rtos_1_1_systick__clock.html#a76f6284d0c0669275479acfda0e4cc66',1,'os::rtos::Systick_clock::sleep_for()'],['../classos_1_1rtos_1_1_realtime__clock.html#a7e6f9c25fd06220ea6814af3e212428d',1,'os::rtos::Realtime_clock::sleep_for()']]],
+  ['stall_5fendpoint',['stall_endpoint',['../classos_1_1driver_1_1usb_1_1_device.html#afc5df60a9e2df09bc635797d464acbce',1,'os::driver::usb::Device']]],
+  ['start',['start',['../classos_1_1rtos_1_1_timer.html#a1e30798a6215891718d204804f14cf6d',1,'os::rtos::Timer::start()'],['../namespaceos_1_1rtos_1_1scheduler.html#ae7c7332aa5fedf779169fa3dfaf01f75',1,'os::rtos::scheduler::start()']]],
+  ['started',['started',['../namespaceos_1_1rtos_1_1scheduler.html#a6b69515f09f9b87c1488f1684aec5afa',1,'os::rtos::scheduler']]],
+  ['stop',['stop',['../classos_1_1rtos_1_1_timer.html#a0b4f43cfce5d43fcc783dd8b6b8b11f1',1,'os::rtos::Timer']]],
+  ['suspend',['suspend',['../classos_1_1rtos_1_1_thread.html#adb62f9d5c8007d0032cd45ddbacab5f5',1,'os::rtos::Thread::suspend()'],['../namespaceos_1_1rtos_1_1this__thread.html#a1c97602fb159c5e99461d6d5ea3972d8',1,'os::rtos::this_thread::suspend()']]],
+  ['suspend_5fport',['suspend_port',['../classos_1_1driver_1_1usb_1_1_host.html#ab9750f5d6ff33635046cc67cb1bf09b1',1,'os::driver::usb::Host']]],
+  ['svc_5fhandler',['SVC_Handler',['../exception-handlers_8h.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'exception-handlers.h']]],
+  ['sync',['sync',['../embed_8h.html#adc03879c8ec381223f2179578464062f',1,'embed.h']]],
+  ['systick_5fhandler',['SysTick_Handler',['../exception-handlers_8h.html#ab5e09814056d617c521549e542639b7e',1,'exception-handlers.h']]]
+];

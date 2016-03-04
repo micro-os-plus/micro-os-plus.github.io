@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['r0',['r0',['../struct_exception_stack_frame.html#a438f9e853effc38bca162f3821fd176a',1,'ExceptionStackFrame']]],
+  ['r1',['r1',['../struct_exception_stack_frame.html#a4ca6f1d249bae98cc5fd549defd36740',1,'ExceptionStackFrame']]],
+  ['r12',['r12',['../struct_exception_stack_frame.html#ae10879ca5d9e29cb102fdd287a6a6fdc',1,'ExceptionStackFrame']]],
+  ['r2',['r2',['../struct_exception_stack_frame.html#a21bcab1471ce8d7389f81bbc7fb5bbc6',1,'ExceptionStackFrame']]],
+  ['r3',['r3',['../struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91',1,'ExceptionStackFrame']]],
+  ['receive_5flist',['receive_list',['../structos__mqueue__s.html#a8065bcb2e4e2ab60d72231e7dc1aeac7',1,'os_mqueue_s']]],
+  ['receive_5flist_5f',['receive_list_',['../classos_1_1rtos_1_1_message__queue.html#a3de44b086197e490c383c9f5bd355811',1,'os::rtos::Message_queue']]],
+  ['recursive_5finitializer',['recursive_initializer',['../namespaceos_1_1rtos_1_1mutex.html#a993b1031f91e1417f95c473a68078588',1,'os::rtos::mutex']]],
+  ['request',['request',['../embed_8h.html#a05a3dde463ccd2a33b55443624a76c36',1,'embed.h']]],
+  ['ret',['ret',['../namespaceos_1_1trace.html#ab10592380e84fa025edb7572eb1e87a2',1,'os::trace']]],
+  ['return',['return',['../os-main_8cpp.html#a9717e7bbecb906637e86cef6da3d83c2',1,'os-main.cpp']]],
+  ['return_5fok',['RETURN_OK',['../namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497',1,'os::driver']]],
+  ['ri',['ri',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b',1,'os::driver::serial::Modem_status::ri()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#aabdcd81f18c0daeff729367e22a87306',1,'os::driver::serial::Capabilities::ri()']]],
+  ['robustness',['robustness',['../structos__mutex__attr__s.html#a4d7d9cabb07d12268ee5af30b2092a81',1,'os_mutex_attr_s::robustness()'],['../structos__mutex__s.html#a1d2029330ec55e1a7365fde2ce9f3025',1,'os_mutex_s::robustness()']]],
+  ['robustness_5f',['robustness_',['../classos_1_1rtos_1_1_mutex.html#ad3f33f759c85dffe5b68672fc3f67277',1,'os::rtos::Mutex']]],
+  ['rts',['rts',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a6421e78157d0f6daa7af4a1761c96a4f',1,'os::driver::serial::Capabilities']]],
+  ['rx_5fbreak',['rx_break',['../classos_1_1driver_1_1serial_1_1_status.html#af9a39a9f0afa08587df69fa2f0d6ecc2',1,'os::driver::serial::Status']]],
+  ['rx_5fbusy',['rx_busy',['../classos_1_1driver_1_1serial_1_1_status.html#a62248d07854afc94575f6aa577724174',1,'os::driver::serial::Status']]],
+  ['rx_5fframing_5ferror',['rx_framing_error',['../classos_1_1driver_1_1serial_1_1_status.html#a6bd02482695b63b97edb70710524eec0',1,'os::driver::serial::Status']]],
+  ['rx_5foverflow',['rx_overflow',['../classos_1_1driver_1_1serial_1_1_status.html#a31be58a1890037a36187a9700cfdbea9',1,'os::driver::serial::Status']]],
+  ['rx_5fparity_5ferror',['rx_parity_error',['../classos_1_1driver_1_1serial_1_1_status.html#aeb97bc3a167f2ae0fe089620f79f0373',1,'os::driver::serial::Status']]]
+];
