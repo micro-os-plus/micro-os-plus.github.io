@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['main',['main',['../os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;os-main.cpp'],['../startup_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;os-main.cpp']]],
+  ['main_5ftrampoline',['main_trampoline',['../namespaceos_1_1rtos_1_1thread.html#a5022387f5a5cbda12afab4318e090271',1,'os::rtos::thread']]],
+  ['malloc',['malloc',['../group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4',1,'os::estd']]],
+  ['max_5fvalue',['max_value',['../classos_1_1rtos_1_1_semaphore.html#ab0892c8cd78d99100a3cb17e797cd17c',1,'os::rtos::Semaphore']]],
+  ['memory_5fpool',['Memory_pool',['../classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f',1,'os::rtos::Memory_pool::Memory_pool(mempool::size_t blocks, mempool::size_t block_size_bytes)'],['../classos_1_1rtos_1_1_memory__pool.html#a0e93a08a4b8914c08dec51d3d4bfd65f',1,'os::rtos::Memory_pool::Memory_pool(const mempool::Attributes &amp;attr, mempool::size_t blocks, mempool::size_t block_size_bytes)']]],
+  ['message_5fqueue',['Message_queue',['../classos_1_1rtos_1_1_message__queue.html#ac25c49e479fecd1b7e07f71a6aa1daf2',1,'os::rtos::Message_queue::Message_queue(mqueue::size_t msgs, mqueue::size_t msg_size_bytes)'],['../classos_1_1rtos_1_1_message__queue.html#af874a0efa359591c9067eaf1e8f22b0d',1,'os::rtos::Message_queue::Message_queue(const mqueue::Attributes &amp;attr, mqueue::size_t msgs, mqueue::size_t msg_size_bytes)']]],
+  ['modify_5fpipe',['modify_pipe',['../classos_1_1driver_1_1usb_1_1_host.html#aac20ab43632317a150048735c5c1b7fc',1,'os::driver::usb::Host']]],
+  ['msg_5fsize',['msg_size',['../classos_1_1rtos_1_1_message__queue.html#ac06946d49bb7b8e67d8dc05877ae8690',1,'os::rtos::Message_queue']]],
+  ['mutex',['Mutex',['../classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41',1,'os::rtos::Mutex::Mutex()'],['../classos_1_1rtos_1_1_mutex.html#a2c0fd06460ecc869e747936b347a6d62',1,'os::rtos::Mutex::Mutex(const mutex::Attributes &amp;attr)'],['../classos_1_1estd_1_1mutex.html#a36a553ed259467d607db2aa856bfe38b',1,'os::estd::mutex::mutex() noexcept'],['../classos_1_1estd_1_1mutex.html#abf220fb05c1e6255b8a75914c28eda96',1,'os::estd::mutex::mutex(os::rtos::mutex::Attributes &amp;attr) noexcept'],['../classos_1_1estd_1_1mutex.html#ad3fbd0971e672dafd88fdd516a9ae029',1,'os::estd::mutex::mutex(const mutex &amp;)=delete'],['../classos_1_1estd_1_1unique__lock.html#aa7f883416dc7068f13f39def08614a97',1,'os::estd::unique_lock::mutex()']]]
+];
