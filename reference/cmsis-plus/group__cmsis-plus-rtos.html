@@ -109,7 +109,8 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos.html','');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">CMSIS++ RTOS API</div>  </div>
 </div><!--header-->
@@ -159,10 +160,35 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_timer.html">os::rtos::Timer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User single-shot or periodic <b>timer</b>.  <a href="classos_1_1rtos_1_1_timer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga9884f6375450700b1e95678a7b7d351d"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d">os::rtos::thread::priority::shift</a> = 4</td></tr>
+<tr class="memdesc:ga9884f6375450700b1e95678a7b7d351d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priorities pre-scaler.  <a href="group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d">More...</a><br /></td></tr>
+<tr class="separator:ga9884f6375450700b1e95678a7b7d351d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>CMSIS++ RTOS API summary page. </p>
-<p>This page groups together the main CMSIS++ RTOS API classes and namespaces. </p>
+<p>This page groups the main CMSIS++ RTOS API classes and namespaces. </p>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ga9884f6375450700b1e95678a7b7d351d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t os::rtos::thread::priority::shift = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Priorities pre-scaler. </p>
+<p>Decreasing this value narrows the range of allowed priorities. It is recommended to keep it low to give the scheduler a chance to optimise accesses to the ready list with an array of priorities, which will require some pointers and counters for each priority level.</p>
+<p>The default value of 4 gives the full range of 256 priorities; 0 gives 16 priorities, 1 gives 32 priorities, 2 gives 64 priorities, 3 gives 128 priorities. </p>
+
+<p>Definition at line <a class="el" href="os_8h_source.html#l00771">771</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

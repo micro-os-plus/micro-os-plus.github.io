@@ -29,6 +29,7 @@ var NAVTREEINDEX7 =
 "os_8h.html#aef4e7e64b0985755b1ef432289b2adf3":[4,0,1,0,7,2,100],
 "os_8h.html#af1d385ca401f753ae725118254291409":[4,0,1,0,7,2,23],
 "os_8h.html#af6b0d4a09e097f97dbd9766054e8f3aa":[4,0,1,0,7,2,28],
+"os_8h.html#ga9884f6375450700b1e95678a7b7d351d":[4,0,1,0,7,2,102],
 "os_8h_source.html":[4,0,1,0,7,2],
 "pages.html":[],
 "reset-hardware_8c.html":[4,0,2,0,6,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structos__mempool__s.html#a3b2f8a82dbffdf0518ecb9e8a28b650c":[3,0,9,5],
 "structos__mempool__s.html#a87288e1ea06035ba07217b1fe105cda6":[3,0,9,0],
 "structos__mempool__s.html#a9a5da6fe93f26cbdbe75758465c6a92d":[3,0,9,4],
-"structos__mempool__s.html#a9dfb09ab2fdce53f0817b278cce945ca":[3,0,9,3],
-"structos__mempool__s.html#aca6a58c528dfa1cab282115a1c400fab":[3,0,9,7]
+"structos__mempool__s.html#a9dfb09ab2fdce53f0817b278cce945ca":[3,0,9,3]
 };

@@ -192,7 +192,7 @@ Types &amp; Constants</h2></td></tr>
 <p>For Cortex-M implementations using the standard SysTick, this clock is able to provide accuracy at CPU cycle level, by sampling the SysTick internal counter. For a CPU clock of 100 MHz, this gives a 10 ns resolution, quite high for accurate timing.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Get the current ticks counter.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1_systick__clock.html#a3a336bffaba53c6e9e10ee113223ce2c">Systick_clock::rep</a> ticks = <a class="code" href="classos_1_1rtos_1_1_systick__clock.html#aa4d672026780d470d98aa0e6d286783a">Systick_clock::now</a>();</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of ticks.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1_systick__clock.html#a76f6284d0c0669275479acfda0e4cc66">Systick_clock::sleep_for</a>(7);</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of microseconds.</span></div><div class="line">   <span class="comment">// For a 1000 Hz clock, the actual value is 4 ticks.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1_systick__clock.html#a76f6284d0c0669275479acfda0e4cc66">Systick_clock::sleep_for</a>(<a class="code" href="classos_1_1rtos_1_1_systick__clock.html#abfd02e91207b5351fc799c02f0d96d11">Systick_clock::ticks_cast</a>(3500));</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01636">1636</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01638">1638</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a8ea430f491120f81fc56fae1936c9af7"></a>
 <div class="memitem">
@@ -208,7 +208,7 @@ Types &amp; Constants</h2></td></tr>
 <p>When an accurate timestamp is needed, the current SysTick counter can be sampled to get the count of CPU cycles inside the tick. For a 100 MHz clock, this gives a 10 ns resolution.</p>
 <p>To simplify further processing of this timestamp, the structure also includes the CPU clock and the SysTick divider. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01679">1679</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01681">1681</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +224,7 @@ Types &amp; Constants</h2></td></tr>
 
 <p>Type of ticks counter. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01653">1653</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01655">1655</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ Types &amp; Constants</h2></td></tr>
 
 <p>Type of duration in ticks. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01658">1658</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01660">1660</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ template&lt;typename Rep_T &gt; </div>
 </div><div class="memdoc">
 <p>Round up the microseconds value and convert to a number of ticks, using the SysTick frequency in Hz. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04372">4372</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04374">4374</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>CPU clock frequency Hz. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01694">1694</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01696">1696</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -537,7 +537,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>Count of SysTick cycles since timer reload (24 bits). </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01684">1684</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01686">1686</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -553,7 +553,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>SysTick reload value (24 bits). </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01689">1689</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01691">1691</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>SysTick frequency in Hz. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01648">1648</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01650">1650</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

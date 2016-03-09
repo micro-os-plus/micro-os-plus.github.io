@@ -210,7 +210,7 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="comment">// Create a normal mutex. Same as using the default constructor.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> mx { <a class="code" href="namespaceos_1_1rtos_1_1mutex.html#a8f98fec4c3f9b170459aaabd975de69e">normal_initializer</a> };</div><div class="line"></div><div class="line"><span class="comment">// Create a recursive mutex.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> rmx { <a class="code" href="namespaceos_1_1rtos_1_1mutex.html#a993b1031f91e1417f95c473a68078588">recursive_initializer</a> };</div></div><!-- fragment --><dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Protected resource.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  <span class="keywordtype">int</span> count;</div><div class="line">} res_t;</div><div class="line"></div><div class="line">res_t res;</div><div class="line"></div><div class="line"><span class="comment">// Mutex to protect the resource.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> mx;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  mx.lock();</div><div class="line">  res.count++;</div><div class="line">  mx.unlock();</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutex_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02360">2360</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02362">2362</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad8dd37e9132a372809f3548868645e41"></a>
 <div class="memitem">
@@ -401,7 +401,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04396">4396</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04398">4398</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>Identical mutexes should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04645">4645</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04647">4647</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +467,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to thread or <code>nullptr</code> if not owned. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04651">4651</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04653">4653</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -711,7 +711,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02579">2579</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02581">2581</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +736,7 @@ Differences from the standard:<ul>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01093">1093</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01095">1095</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -758,7 +758,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02571">2571</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02573">2573</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -780,7 +780,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02582">2582</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02584">2584</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +802,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02586">2586</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02588">2588</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -824,7 +824,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02587">2587</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02589">2589</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -846,7 +846,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02585">2585</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l02587">2587</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

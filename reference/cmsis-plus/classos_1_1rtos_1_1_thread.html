@@ -270,7 +270,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="os_8h.html">cmsis-plus/rtos/os.h</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceos_1_1rtos.html">os::rtos</a>;</div><div class="line"></div><div class="line"><span class="comment">// Thread function.</span></div><div class="line"><span class="keywordtype">void</span>*</div><div class="line">func(<span class="keywordtype">void</span>* args)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something.</span></div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="os-c-api_8h.html#adc9fe392fc6245784eb029f4eecfb8dd">os_main</a>(<span class="keywordtype">int</span> <a class="code" href="namespaceos_1_1rtos_1_1thread.html#a9738b5728fee3bfd489ca749671ebaee">argc</a>, <span class="keywordtype">char</span>* <a class="code" href="namespaceos_1_1rtos_1_1thread.html#a0400168a8152643d538cd5420ed8c4fc">argv</a>[])</div><div class="line">{</div><div class="line">  <span class="comment">// Create new thread, with function and no arguments.</span></div><div class="line">  <a class="code" href="classos_1_1rtos_1_1_thread.html">Thread</a> th { func, <span class="keyword">nullptr</span> };</div><div class="line"></div><div class="line">  <span class="comment">// Do something.</span></div><div class="line"></div><div class="line">  <span class="comment">// Wait for thread to terminate.</span></div><div class="line">  th.<a class="code" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518">join</a>();</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01215">1215</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01217">1217</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa6683ed71435ffac38839854a5a691ca"></a>
 <div class="memitem">
@@ -640,7 +640,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to arguments. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04551">4551</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04553">4553</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +760,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04396">4396</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04398">4398</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -797,7 +797,7 @@ Private Member Functions</h2></td></tr>
 <p>Identical threads should have the same memory address.</p>
 <p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04539">4539</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04541">4541</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -884,7 +884,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> scheduler state. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04545">4545</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04547">4547</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1298,7 @@ Private Member Functions</h2></td></tr>
 <p>The user storage is a custom structure defined in <code>&lt;os-app-config.h&gt;</code>, which is added to each and every thread storage. Applications can store here any data.</p>
 <p>Inspired by (actually a generalisation of) µC-OS III task user registers and FreeRTOS thread local storage, which proved useful when implementing CMSIS+ over FreeRTOS. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04575">4575</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04577">4577</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1522,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01597">1597</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01599">1599</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1544,7 +1544,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01598">1598</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01600">1600</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1566,7 +1566,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01599">1599</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01601">1601</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1588,7 +1588,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01607">1607</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01609">1609</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1613,7 @@ Private Member Functions</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01093">1093</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01095">1095</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1635,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01611">1611</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01613">1613</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1657,7 +1657,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01610">1610</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01612">1612</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1679,7 +1679,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01616">1616</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01618">1618</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1701,7 +1701,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01596">1596</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01598">1598</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1723,7 +1723,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01609">1609</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01611">1611</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1745,7 +1745,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01618">1618</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01620">1620</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1767,7 +1767,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01613">1613</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01615">1615</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

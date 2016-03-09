@@ -212,5 +212,6 @@ var group__cmsis_plus_rtos =
       [ "func_args_", "classos_1_1rtos_1_1_timer.html#ae44f7064d0e57d98a2ce9ebe2e198d25", null ],
       [ "name_", "classos_1_1rtos_1_1_timer.html#ad7667db8bf3171d900237500cb0e1e67", null ],
       [ "type_", "classos_1_1rtos_1_1_timer.html#a2d3c6fbd4cbd9370a435bc6c3f460bd8", null ]
-    ] ]
+    ] ],
+    [ "shift", "group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d", null ]
 ];

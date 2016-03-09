@@ -215,7 +215,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Define the message type.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t id;</div><div class="line">} msg_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the queue size.</span></div><div class="line">constexpr uint32_t queue_size = 5;</div><div class="line"></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_message__queue.html#ac25c49e479fecd1b7e07f71a6aa1daf2">Message_queue</a> mq { queue_size, <span class="keyword">sizeof</span>(msg_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">consumer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  <span class="keywordflow">for</span> (; some_condition();)</div><div class="line">    {</div><div class="line">      mq.receive(&amp;msg, <span class="keyword">sizeof</span>(msg), <span class="keyword">nullptr</span>);</div><div class="line">      <span class="comment">// Process message</span></div><div class="line">      <span class="keywordflow">if</span> (msg.id == 7)</div><div class="line">        {</div><div class="line">          <span class="comment">// Something special</span></div><div class="line">        }</div><div class="line">     }</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">producer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  msg.id = 7;</div><div class="line">  mq.send(&amp;msg, <span class="keyword">sizeof</span>(msg), <a class="code" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mqd_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03684">3684</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03686">3686</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac25c49e479fecd1b7e07f71a6aa1daf2"></a>
 <div class="memitem">
@@ -350,7 +350,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The max number of messages that can be queued.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04871">4871</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04873">4873</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04893">4893</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04895">4895</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04904">4904</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04906">4906</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The number of messages in the queue.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04860">4860</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04862">4862</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -486,7 +486,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The message size, in bytes.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04882">4882</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04884">4884</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -517,7 +517,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04396">4396</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04398">4398</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -554,7 +554,7 @@ Protected Attributes</h2></td></tr>
 <p>Identical message queues should have the same memory address.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04849">4849</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04851">4851</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1002,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03959">3959</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03961">3961</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1024,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03957">3957</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03959">3959</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1046,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03956">3956</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03958">3958</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1071,7 @@ Differences from the standard:<ul>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01093">1093</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01095">1095</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1093,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03947">3947</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03949">3949</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1115,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03954">3954</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03956">3956</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1137,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03943">3943</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03945">3945</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1159,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03942">3942</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03944">3944</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

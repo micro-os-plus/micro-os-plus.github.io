@@ -231,7 +231,7 @@ Private Member Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Create the pool object.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f">Memory_pool</a> mp { pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  <span class="keywordtype">void</span>* buf;</div><div class="line"></div><div class="line">  <span class="comment">// Get one block from pool.</span></div><div class="line">  buf = mp.alloc();</div><div class="line"></div><div class="line">  <span class="comment">// ... use the buffer</span></div><div class="line"></div><div class="line">  <span class="comment">// Free the buffer.</span></div><div class="line">  mp.free(buf);</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is no equivalent of calloc(); to initialise to zero a memory block, use: <div class="fragment"><div class="line">block = mp.alloc();</div><div class="line">memset (block, 0, mp.block_size ());</div></div><!-- fragment --></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03298">3298</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03300">3300</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a728d69104be7165a0af33d13eb7f49e3"></a>
 <div class="memitem">
@@ -258,7 +258,7 @@ Private Member Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03540">3540</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03542">3542</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +449,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The block size, in bytes. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04796">4796</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04798">4798</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The max number of blocks in the pool. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04790">4790</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04792">4792</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of blocks used from the queue. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04802">4802</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04804">4804</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -545,7 +545,7 @@ Private Member Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04808">4808</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04810">4810</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +612,7 @@ Private Member Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04814">4814</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04816">4816</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -643,7 +643,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04396">4396</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04398">4398</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -679,7 +679,7 @@ Private Member Variables</h2></td></tr>
 </dl>
 <p>Identical memory pools should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04784">4784</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04786">4786</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -706,7 +706,7 @@ Private Member Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04820">4820</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04822">4822</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +816,7 @@ Private Member Variables</h2></td></tr>
 
 <p>The size of a block, in bytes. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03517">3517</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03519">3519</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +840,7 @@ Private Member Variables</h2></td></tr>
 
 <p>The number of blocks in the pool. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03512">3512</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03514">3514</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +864,7 @@ Private Member Variables</h2></td></tr>
 
 <p>The current number of blocks allocated from the pool. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03522">3522</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03524">3524</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -888,7 +888,7 @@ Private Member Variables</h2></td></tr>
 
 <p>Pointer to the first free block, or nullptr. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03530">3530</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03532">3532</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -912,7 +912,7 @@ Private Member Variables</h2></td></tr>
 
 <p>Internal status bits. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03535">3535</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03537">3537</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -934,7 +934,7 @@ Private Member Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03494">3494</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03496">3496</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -959,7 +959,7 @@ Private Member Variables</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01093">1093</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l01095">1095</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -984,7 +984,7 @@ Private Member Variables</h2></td></tr>
 <p>Memory address where the pool is located. </p>
 <p>If the pool was dynamically allocated, the <code>flags_allocated</code> bit will be set in <code>flags_</code> and the destructor will deallocate.. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03502">3502</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l03504">3504</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

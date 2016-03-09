@@ -42,7 +42,7 @@ var searchData=
   ['set_5fdtr',['set_dtr',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287ad02280c27589d6022f02b94a6cda2d76',1,'os::driver::serial']]],
   ['set_5frts',['set_rts',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287af3b15ec3cecb44ccf8fe85b56044d7b8',1,'os::driver::serial']]],
   ['setup',['setup',['../namespaceos_1_1driver_1_1usb_1_1device.html#aa54cbb59440f3be58ec61a52efe494efa150f1ea821a3e2ebff496b942a8a0c66',1,'os::driver::usb::device']]],
-  ['shift',['shift',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#a9884f6375450700b1e95678a7b7d351d',1,'os::rtos::thread::priority']]],
+  ['shift',['shift',['../group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d',1,'os::rtos::thread::priority']]],
   ['sig_5fclear',['sig_clear',['../classos_1_1rtos_1_1_thread.html#a684676c4acf5fe6ad4a7a0aa6ea4c854',1,'os::rtos::Thread']]],
   ['sig_5fget',['sig_get',['../classos_1_1rtos_1_1_thread.html#a2661cc44d1b239382f95baba06ab2e3e',1,'os::rtos::Thread']]],
   ['sig_5fmask_5f',['sig_mask_',['../classos_1_1rtos_1_1_thread.html#ab36f37b895c94f45cac841c00e9f5722',1,'os::rtos::Thread']]],

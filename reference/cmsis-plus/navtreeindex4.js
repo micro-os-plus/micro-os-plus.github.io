@@ -219,6 +219,7 @@ var NAVTREEINDEX4 =
 "group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc":[1,3,5,1],
 "group__cmsis-plus-posix-io.html":[1,6],
 "group__cmsis-plus-rtos.html":[1,2],
+"group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d":[1,2,12],
 "group__cmsis-plus-startup.html":[1,1],
 "hierarchy.html":[3,2],
 "index.html":[],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "mutex.html#a5cd14457b0c5e499b1ac4be877c33f86":[4,0,1,0,4,3,20],
 "mutex.html#a69694c9c4c6ce2553c8b26a3371ed55b":[4,0,1,0,4,3,18],
 "mutex.html#a84a76556e18d9dbf96054848a470fc65":[4,0,1,0,4,3,14],
-"mutex.html#a9203ffb47314590482ba619b0fae9e30":[4,0,1,0,4,3,10],
-"mutex.html#ab0fd06745caaaa2ad1adcb64821326ab":[4,0,1,0,4,3,21]
+"mutex.html#a9203ffb47314590482ba619b0fae9e30":[4,0,1,0,4,3,10]
 };
