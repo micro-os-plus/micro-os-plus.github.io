@@ -199,7 +199,7 @@
 
         
 <h1 class="page-title">CMSIS++ RTOS API</h1>
-<p class="last-modified">Last modified on Wed Mar  9 18:50:58 2016 UTC.</p>
+<p class="last-modified">Last modified on Wed Mar  9 19:15:08 2016 UTC.</p>
 
 
 <h2 id="overview">Overview</h2>
@@ -216,16 +216,16 @@
 
 <ul>
   <li>
-    <p>the core CMSIS++ RTOS is based on a C++ API (namespace os::rtos), defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/rtos/os.h">&lt;cmsis-plus/rtos/os.h&gt;</a>;</p>
+    <p>the core CMSIS++ RTOS is based on a C++ API (namespace <code>os::rtos</code>), defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/rtos/os.h">&lt;cmsis-plus/rtos/os.h&gt;</a>;</p>
   </li>
   <li>
     <p>exactly the same functionality is provided in C, with a C wrapper, for those who prefer to use plain C; the C API is defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/rtos/os-c-api.h">&lt;cmsis-plus/rtos/os-c-api.h&gt;</a>;</p>
   </li>
   <li>
-    <p>for compatibility reasons, the actual CMSIS API is also implemented in the C wrapper; it is defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/legacy/cmsis_os.h">&lt;cmsis_os.h&gt;</a> (functional, just passed the CMSIS RTOS validation, using the <a href="https://github.com/xpacks/freertos/blob/xpack/cmsis-plus/include/cmsis-plus/rtos/port/os-inlines.h">FreeRTOS port</a>);</p>
+    <p>for compatibility reasons, the actual CMSIS API is also implemented in the C wrapper; it is defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/legacy/cmsis_os.h">&lt;cmsis_os.h&gt;</a> (functional, passed the CMSIS RTOS validation, using the <a href="https://github.com/xpacks/freertos/blob/xpack/cmsis-plus/include/cmsis-plus/rtos/port/os-inlines.h">FreeRTOS port</a>);</p>
   </li>
   <li>
-    <p>on top of the core C++ API, the ISO standard thread library is fully implemented, and this is the recommended C++ API for future applications; the definitions are available form <a href="https://github.com/micro-os-plus/cmsis-plus/tree/xpack/include/cmsis-plus/iso">&lt;cmsis-plus/iso/*&gt;</a>;</p>
+    <p>on top of the core C++ API, the ISO standard thread library is fully implemented (namespace <code>os::estd</code>), and this is the recommended C++ API for future applications; the definitions are available from <a href="https://github.com/micro-os-plus/cmsis-plus/tree/xpack/include/cmsis-plus/iso">&lt;cmsis-plus/iso/*&gt;</a>;</p>
   </li>
   <li>
     <p>all RTOS objects are based on the core C++ objects, and objects created in C++ can be used in C and similarly objects created in C can be used in C++ (there is no mystery here, they represent exactly the same objects);</p>
@@ -240,7 +240,7 @@
     <p>there will also be a reference scheduler implementation (called µOS++ III), that will also be highly portable; it will run in 32-bits and 64-bits environments but will be specifically tailored for Cortex-M cores; it’ll also run on synthetic POSIX platforms, for example as a user mode POSIX process, on OS X and GNU/Linux, possibly on Windows if MinGW-w64 will allow an easy port. (will be based on prior µOS++ versions, which are fully functional);</p>
   </li>
   <li>
-    <p>CMSIS++ also includes a POSIX IO interface (namespace os::posix), bringing together access to terminal devices, files and sockets, via a unified and standard API (functional in a separate project, will be updated and moved here shortly);</p>
+    <p>CMSIS++ also includes a POSIX IO interface (namespace <code>os::posix</code>), bringing together access to terminal devices, files and sockets, via a unified and standard API (functional in a separate project, will be updated and moved here shortly);</p>
   </li>
   <li>
     <p>CMSIS++ Drivers are the response to CMSIS Drivers, but designed in C++ (namespace os::drivers), and with a C API on top of them (CMSIS++ serial, USB Device and USB Host already defined and partly implemented);</p>
