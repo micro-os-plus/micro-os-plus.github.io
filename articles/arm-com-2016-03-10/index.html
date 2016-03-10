@@ -204,7 +204,7 @@
 
         
 <h1 class="page-title">Article: CMSIS++: a proposal for a future CMSIS, written in C++</h1>
-<p class="last-modified">Last modified on Thu Mar 10 18:37:36 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Mar 10 20:06:39 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -231,19 +231,19 @@
 <li class="toc_level-2 toc_section-5">
 <a href="#the-new-cmsis-rtos-c-api"><span class="tocnumber">2.3</span> <span class="toctext">The new CMSIS++ RTOS C API</span></a>
 </li>
+<li class="toc_level-2 toc_section-6">
+<a href="#the-arm-cmsis-rtos-c-api"><span class="tocnumber">2.4</span> <span class="toctext">The ARM CMSIS RTOS C API</span></a>
+</li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-6">
-<a href="#the-arm-cmsis-rtos-c-api"><span class="tocnumber">3</span> <span class="toctext">The ARM CMSIS RTOS C API</span></a>
-</li>
 <li class="toc_level-1 toc_section-7">
-<a href="#the-cmsis-rtos-reference"><span class="tocnumber">4</span> <span class="toctext">The CMSIS++ RTOS Reference</span></a>
+<a href="#the-cmsis-rtos-reference"><span class="tocnumber">3</span> <span class="toctext">The CMSIS++ RTOS Reference</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#conclusions"><span class="tocnumber">5</span> <span class="toctext">Conclusions</span></a>
+<a href="#conclusions"><span class="tocnumber">4</span> <span class="toctext">Conclusions</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#more-info"><span class="tocnumber">6</span> <span class="toctext">More info</span></a>
+<a href="#more-info"><span class="tocnumber">5</span> <span class="toctext">More info</span></a>
 </li>
 </ul>
 </td>
@@ -442,7 +442,7 @@ count(void)
 
 <p>Although fully written in C++, CMSIS++ provides a C API, to be used by C applications. Yes, that’s correct, plain C applications can use CMSIS++ without any problems. Just that function names are a bit longer and some of the C++ magic (like running the constructors and the destructors) needs to be done by hand, but otherwise the entire functionality is available.</p>
 
-<p>The C API is defined in the <code>&lt;cmsis-plus/rtos/c_api.h&gt;</code> header.</p>
+<p>The C API is defined in the <code>&lt;cmsis-plus/rtos/os-c-api.h&gt;</code> header.</p>
 
 <p>The same simple example that counts 5 seconds and quits, in C would look like:</p>
 
@@ -487,7 +487,7 @@ os_main(int argc, char* argv[])
 }
 </code></pre>
 
-<h2 id="the-arm-cmsis-rtos-c-api">The ARM CMSIS RTOS C API</h2>
+<h3 id="the-arm-cmsis-rtos-c-api">The ARM CMSIS RTOS C API</h3>
 
 <p>Even more, the CMSIS++ C wrapper also implements the original ARM CMSIS API. This is a full and accurate implementation, since this API already passed the ARM CMSIS RTOS validation test.</p>
 
@@ -547,13 +547,13 @@ os_main(int argc, char* argv[])
 
 <p>CMSIS++ is still a young project, and many things need to be addressed, but the core component, the RTOS API, is pretty well defined and awaiting for comments.</p>
 
-<p>For now it may not be perfect (as it tries to be), but it definitely provides a more standard set of primitives, closer to POSIX, and a wider set of APIs, covering both C++ and C applications, and at the same time preserving compatibility with the original ARM CMSIS RTOS.</p>
+<p>For now it may not be perfect (as it tries to be), but it definitely provides a more standard set of primitives, closer to POSIX, and a wider set of APIs, covering both C++ and C applications; at the same time it does its best to preserve compatibility with the original ARM CMSIS RTOS.</p>
 
 <p>Any contributions to improve CMSIS++ will be highly appreciated.</p>
 
 <h2 id="more-info">More info</h2>
 
-<p>The main source of information for CMSIS++ is the project site <a href="http://micro-os-plus.github.io/cmsis-plus/"><strong>http://micro-os-plus.github.io/cmsis-plus/</strong></a>.</p>
+<p>The main source of information for CMSIS++ is the <a href="http://micro-os-plus.github.io/cmsis-plus/">project site</a>.</p>
 
 <p>The Git repositories and all public releases are available from <a href="https://github.com/micro-os-plus/cmsis-plus">GitHub</a>.</p>
 
