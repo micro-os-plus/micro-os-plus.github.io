@@ -204,7 +204,7 @@
 
         
 <h1 class="page-title">Article: CMSIS++: a proposal for a future CMSIS, written in C++</h1>
-<p class="last-modified">Last modified on Thu Mar 10 17:13:15 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Mar 10 18:37:36 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -237,10 +237,13 @@
 <a href="#the-arm-cmsis-rtos-c-api"><span class="tocnumber">3</span> <span class="toctext">The ARM CMSIS RTOS C API</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#conclusions"><span class="tocnumber">4</span> <span class="toctext">Conclusions</span></a>
+<a href="#the-cmsis-rtos-reference"><span class="tocnumber">4</span> <span class="toctext">The CMSIS++ RTOS Reference</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#more-info"><span class="tocnumber">5</span> <span class="toctext">More info</span></a>
+<a href="#conclusions"><span class="tocnumber">5</span> <span class="toctext">Conclusions</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#more-info"><span class="tocnumber">6</span> <span class="toctext">More info</span></a>
 </li>
 </ul>
 </td>
@@ -307,7 +310,8 @@ func(void* args)
   return nullptr;
 }
 
-// in CMSIS++, os_main() is guaranteed to run on a thread.
+// In CMSIS++, os_main() is called from main()
+// after initialising and starting the scheduler.
 int
 os_main(int argc, char* argv[])
 {
@@ -386,7 +390,8 @@ func(int max_count, const char* msg)
   return nullptr;
 }
 
-// In CMSIS++, os_main() is guaranteed to run on a thread.
+// In CMSIS++, os_main() is called from main()
+// after initialising and starting the scheduler.
 int
 os_main(int argc, char* argv[])
 {
@@ -460,7 +465,8 @@ func(void* args)
   return nullptr;
 }
 
-// In CMSIS++, os_main() is guaranteed to run on a thread.
+// In CMSIS++, os_main() is called from main()
+// after initialising and starting the scheduler.
 int
 os_main(int argc, char* argv[])
 {
@@ -511,7 +517,8 @@ func(void* args)
 // some structures.
 osThreadDef(func, 0, 1, 0);
 
-// In CMSIS++, os_main() is guaranteed to run on a thread.
+// In CMSIS++, os_main() is called from main()
+// after initialising and starting the scheduler.
 int
 os_main(int argc, char* argv[])
 {
@@ -527,6 +534,14 @@ os_main(int argc, char* argv[])
   return 0;
 }
 </code></pre>
+
+<h2 id="the-cmsis-rtos-reference">The CMSIS++ RTOS Reference</h2>
+
+<p>The entire CMSIS++ RTOS interface is fully documented in the separate site, available in the <a href="http://micro-os-plus.github.io/reference/cmsis-plus/group__cmsis-plus-rtos.html">project web</a>:</p>
+
+<p>
+<img src="/assets/images/2016/cmsis-plus-rtos-reference.png" alt="CMSIS++ RTOS API" />
+</p>
 
 <h2 id="conclusions">Conclusions</h2>
 
