@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['realtime',['realtime',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9',1,'os::rtos::thread::priority']]],
+  ['realtime',['realtime',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9',1,'os::rtos::thread::priority']]],
   ['receive_5fcomplete',['receive_complete',['../namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590aca1b793b0f88d578263a00078c12c152',1,'os::driver::serial']]],
   ['remote_5fhangup',['remote_hangup',['../namespaceos_1_1driver_1_1usb_1_1host.html#a29f43829f9945aefa55c484f4e3021a0abfe24418c904d5eb95b3e5858c49a980',1,'os::driver::usb::host']]],
   ['reset',['reset',['../namespaceos_1_1driver_1_1usb_1_1device.html#ac271252f96010635939d3fcb301ba435a3a865208c4a08af6742d949564fc560a',1,'os::driver::usb::device::reset()'],['../namespaceos_1_1driver_1_1usb_1_1host.html#a29f43829f9945aefa55c484f4e3021a0af0672809972697c38c433bb85d372d2a',1,'os::driver::usb::host::reset()']]],

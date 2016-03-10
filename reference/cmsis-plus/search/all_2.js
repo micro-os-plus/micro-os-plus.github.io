@@ -2,7 +2,7 @@ var searchData=
 [
   ['base',['Base',['../classos_1_1driver_1_1_base.html',1,'os::driver']]],
   ['base',['Base',['../classos_1_1driver_1_1_base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
-  ['below_5fnormal',['below_normal',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
+  ['below_5fnormal',['below_normal',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
   ['binary_5fattributes',['Binary_attributes',['../classos_1_1rtos_1_1semaphore_1_1_binary__attributes.html#abc099a7b7f163f4c0c606218c74d4c1c',1,'os::rtos::semaphore::Binary_attributes']]],
   ['binary_5fattributes',['Binary_attributes',['../classos_1_1rtos_1_1semaphore_1_1_binary__attributes.html',1,'os::rtos::semaphore']]],
   ['binary_5finitializer',['binary_initializer',['../namespaceos_1_1rtos_1_1semaphore.html#a06ed6cddb2c204bcecec3e3b816de9f7',1,'os::rtos::semaphore']]],

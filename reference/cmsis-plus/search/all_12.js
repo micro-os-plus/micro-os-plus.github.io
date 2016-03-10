@@ -7,7 +7,7 @@ var searchData=
   ['r3',['r3',['../struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91',1,'ExceptionStackFrame']]],
   ['raise',['raise',['../classos_1_1rtos_1_1_event__flags.html#add5d6338ca6b723be6ae9556c50446e2',1,'os::rtos::Event_flags']]],
   ['read_5fsetup_5fpacket',['read_setup_packet',['../classos_1_1driver_1_1usb_1_1_device.html#a688de8e35598af531305da80e82d98c1',1,'os::driver::usb::Device']]],
-  ['realtime',['realtime',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9',1,'os::rtos::thread::priority']]],
+  ['realtime',['realtime',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9',1,'os::rtos::thread::priority']]],
   ['realtime_5fclock',['Realtime_clock',['../classos_1_1rtos_1_1_realtime__clock.html',1,'os::rtos']]],
   ['realtime_5fclock',['Realtime_clock',['../classos_1_1estd_1_1chrono_1_1_realtime__clock.html',1,'os::estd::chrono']]],
   ['receive',['receive',['../classos_1_1driver_1_1_serial.html#a78bbcd368b63ef83a0db22ac57db62a5',1,'os::driver::Serial::receive()'],['../classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f',1,'os::rtos::Message_queue::receive()']]],

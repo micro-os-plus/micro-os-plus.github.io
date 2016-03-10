@@ -33,7 +33,7 @@ var searchData=
   ['prio_5f',['prio_',['../classos_1_1rtos_1_1_thread.html#acb6b86867c6dcc9e2e0cc088e365b9fe',1,'os::rtos::Thread']]],
   ['prio_5fceiling',['prio_ceiling',['../structos__mutex__s.html#a5da8c82e9626eb017defb8dd378acbe8',1,'os_mutex_s::prio_ceiling()'],['../classos_1_1rtos_1_1_mutex.html#a6d43f0dac308800a0d069f6b526b920b',1,'os::rtos::Mutex::prio_ceiling(void) const '],['../classos_1_1rtos_1_1_mutex.html#ad1121d41ad4ed96b3ca15dbec654ebc0',1,'os::rtos::Mutex::prio_ceiling(thread::priority_t prio_ceiling, thread::priority_t *old_prio_ceiling=nullptr)']]],
   ['prio_5fceiling_5f',['prio_ceiling_',['../classos_1_1rtos_1_1_mutex.html#aa3887353afd8a7cfa4190996b49ad3a6',1,'os::rtos::Mutex']]],
-  ['priority_5ft',['priority_t',['../namespaceos_1_1rtos_1_1thread.html#a1257cd2ea834219f38831bcf66485103',1,'os::rtos::thread::priority_t()'],['../namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d',1,'os::rtos::mqueue::priority_t()']]],
+  ['priority_5ft',['priority_t',['../group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103',1,'os::rtos::thread::priority_t()'],['../namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d',1,'os::rtos::mqueue::priority_t()']]],
   ['protocol',['protocol',['../structos__mutex__s.html#a3e7442c7ac262d38f58855e76c95d720',1,'os_mutex_s']]],
   ['protocol_5f',['protocol_',['../classos_1_1rtos_1_1_mutex.html#a671575343eaa2fbaab379756663f19f0',1,'os::rtos::Mutex']]],
   ['protocol_5ft',['protocol_t',['../namespaceos_1_1rtos_1_1mutex.html#aafe5223e5997cc46df1ab8e0fd7c1aa9',1,'os::rtos::mutex']]],

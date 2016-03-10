@@ -27,7 +27,7 @@ var searchData=
   ['ceil',['ceil',['../namespaceos_1_1estd_1_1chrono.html#a542c9fa0314d389294aed1aeb93a9419',1,'os::estd::chrono']]],
   ['chrono',['chrono',['../chrono.html',1,'']]],
   ['clean',['clean',['../classos_1_1driver_1_1_serial.html#a50bb343b6ce54b6439475be0c95f7627',1,'os::driver::Serial']]],
-  ['clear',['clear',['../classos_1_1rtos_1_1_event__flags.html#adfb373cebc193d4317b876836cf9c398',1,'os::rtos::Event_flags::clear()'],['../namespaceos_1_1rtos_1_1flags_1_1mode.html#a281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a',1,'os::rtos::flags::mode::clear()']]],
+  ['clear',['clear',['../classos_1_1rtos_1_1_event__flags.html#adfb373cebc193d4317b876836cf9c398',1,'os::rtos::Event_flags::clear()'],['../group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a',1,'os::rtos::flags::mode::clear()']]],
   ['clear_5fdtr',['clear_dtr',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287abe40086364f2c947267ef3bd4a0ba2b1',1,'os::driver::serial']]],
   ['clear_5frts',['clear_rts',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287a848524acf5dec7dcc042cd0948daefe7',1,'os::driver::serial']]],
   ['cmsis_2b_2b_20core',['CMSIS++ Core',['../group__cmsis-plus-core.html',1,'']]],

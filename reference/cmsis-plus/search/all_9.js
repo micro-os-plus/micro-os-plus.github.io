@@ -3,7 +3,7 @@ var searchData=
   ['id',['id',['../classos_1_1estd_1_1thread_1_1id.html',1,'os::estd::thread']]],
   ['id',['id',['../classos_1_1estd_1_1thread_1_1id.html#a7e9beac677fa45033331f811a0d8ff7c',1,'os::estd::thread::id::id() noexcept'],['../classos_1_1estd_1_1thread_1_1id.html#a1b6bc9a281984c98a555b7d572c6fd3a',1,'os::estd::thread::id::id(native_handle_type system_thread) noexcept']]],
   ['id_5f',['id_',['../classos_1_1estd_1_1thread.html#ae9b35917ec815a40460114a32b3383c0',1,'os::estd::thread']]],
-  ['idle',['idle',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154a24b83eece3b5e2c59b6cc190cfbec515',1,'os::rtos::thread::priority']]],
+  ['idle',['idle',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a24b83eece3b5e2c59b6cc190cfbec515',1,'os::rtos::thread::priority']]],
   ['in',['in',['../namespaceos_1_1driver_1_1usb_1_1device.html#aa54cbb59440f3be58ec61a52efe494efa773438b06ca4c5e4e4c519f7bc9ffa18',1,'os::driver::usb::device']]],
   ['in_5fhandler_5fmode',['in_handler_mode',['../namespaceos_1_1rtos_1_1scheduler.html#a72474ad9ad219abeb13fb3ed0b95a8b3',1,'os::rtos::scheduler']]],
   ['initial_5fcount',['initial_count',['../structos__semaphore__s.html#a4d295cf95e0b8a9dbd396e6ce968b371',1,'os_semaphore_s']]],
@@ -38,7 +38,7 @@ var searchData=
   ['is_5ftx_5funderflow',['is_tx_underflow',['../classos_1_1driver_1_1serial_1_1_status.html#af52e1b5a4a6aaa0b3faa1cc0cac9019f',1,'os::driver::serial::Status']]],
   ['is_5fvbus_5fon',['is_vbus_on',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#a706ce6e0443614bde5b3ebdf315c79b7',1,'os::driver::usb::device::Status']]],
   ['isochronous',['isochronous',['../namespaceos_1_1driver_1_1usb.html#ace9b3966f59cf1ba965cc5bcad04efd2a1ccb1e43be64fd715fae60b8f048ecf4',1,'os::driver::usb']]],
-  ['isr',['isr',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553',1,'os::rtos::thread::priority']]],
+  ['isr',['isr',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553',1,'os::rtos::thread::priority']]],
   ['item_5fsz',['item_sz',['../structos__pool__def.html#a815cc2ca8f46c006e460d57fa0f3be6a',1,'os_pool_def::item_sz()'],['../structos__message_q__def.html#ae38d83bb9cb36d9ce40e511330bb2c29',1,'os_messageQ_def::item_sz()']]],
   ['items',['items',['../structos__pool__def.html#ae0a9d218980d5676c6a97f12f3482cf2',1,'os_pool_def::items()'],['../structos__message_q__def.html#a8dcd59d8d0d67ac594c0b57728288fff',1,'os_messageQ_def::items()'],['../structos__mail_q__def.html#a1036b66daa7408b2d98897969eab7d93',1,'os_mailQ_def::items()']]]
 ];

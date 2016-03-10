@@ -1,7 +1,10 @@
 var group__cmsis_plus_rtos =
 [
+    [ "flags", "namespaceos_1_1rtos_1_1flags.html", null ],
+    [ "mode", "namespaceos_1_1rtos_1_1flags_1_1mode.html", null ],
     [ "scheduler", "namespaceos_1_1rtos_1_1scheduler.html", null ],
     [ "this_thread", "namespaceos_1_1rtos_1_1this__thread.html", null ],
+    [ "priority", "namespaceos_1_1rtos_1_1thread_1_1priority.html", null ],
     [ "Condition_variable", "classos_1_1rtos_1_1_condition__variable.html", [
       [ "Condition_variable", "classos_1_1rtos_1_1_condition__variable.html#a529d67d9f3d8b7dddba6ef37daec9ad4", null ],
       [ "Condition_variable", "classos_1_1rtos_1_1_condition__variable.html#acbee5659b170c813849cb3eb13c7d4d9", null ],
@@ -212,6 +215,25 @@ var group__cmsis_plus_rtos =
       [ "func_args_", "classos_1_1rtos_1_1_timer.html#ae44f7064d0e57d98a2ce9ebe2e198d25", null ],
       [ "name_", "classos_1_1rtos_1_1_timer.html#ad7667db8bf3171d900237500cb0e1e67", null ],
       [ "type_", "classos_1_1rtos_1_1_timer.html#a2d3c6fbd4cbd9370a435bc6c3f460bd8", null ]
+    ] ],
+    [ "mask_t", "group__cmsis-plus-rtos.html#ga87571a2d62e491d2af4e4390eb1aca06", null ],
+    [ "mode_t", "group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac", null ],
+    [ "priority_t", "group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103", [
+      [ "all", "group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a0efea2cf0731279e9b4aa341820582a2", null ],
+      [ "any", "group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63ab708645ba400c7eaa8a0a22a25322339", null ],
+      [ "clear", "group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a", null ],
+      [ "none", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154abe1def6f8adb29967a162872655593ae", null ],
+      [ "idle", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a24b83eece3b5e2c59b6cc190cfbec515", null ],
+      [ "lowest", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ab2750fc62b452d5734c9d48f98b15220", null ],
+      [ "low", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154afa27875e2cfdd82964492ec24defc750", null ],
+      [ "below_normal", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804", null ],
+      [ "normal", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ad92eafd06437bfec575bb7c47244e93c", null ],
+      [ "above_normal", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ae255d30184b1db425fced0ead1708334", null ],
+      [ "high", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a06a3f2cab2ecc909e21184ad819aa2bb", null ],
+      [ "realtime", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9", null ],
+      [ "highest", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a899451bc782f7dc4679653d14625bcaf", null ],
+      [ "isr", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553", null ],
+      [ "error", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c", null ]
     ] ],
     [ "shift", "group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d", null ]
 ];

@@ -14,7 +14,7 @@ var searchData=
   ['endpoint_5ftype',['Endpoint_type',['../namespaceos_1_1driver_1_1usb.html#ace9b3966f59cf1ba965cc5bcad04efd2',1,'os::driver::usb']]],
   ['endpoint_5ftype_5ft',['endpoint_type_t',['../namespaceos_1_1driver_1_1usb.html#a6a0d35b8e0f7946ab8d9ddddade13978',1,'os::driver::usb']]],
   ['enter',['enter',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a4cfe5893a2e12caee6410b418dc858ac',1,'os::rtos::interrupts::Critical_section']]],
-  ['error',['error',['../namespaceos_1_1rtos_1_1thread_1_1priority.html#ae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c',1,'os::rtos::thread::priority::error()'],['../namespaceos_1_1driver.html#aa0c726a6c160b3f630ad0f45db91e789',1,'os::driver::ERROR()']]],
+  ['error',['error',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c',1,'os::rtos::thread::priority::error()'],['../namespaceos_1_1driver.html#aa0c726a6c160b3f630ad0f45db91e789',1,'os::driver::ERROR()']]],
   ['error_5fbaudrate',['ERROR_BAUDRATE',['../namespaceos_1_1driver_1_1serial.html#ac9029ae92680c24acdaa4bc99cad32b2',1,'os::driver::serial']]],
   ['error_5fbusy',['ERROR_BUSY',['../namespaceos_1_1driver.html#ae2d4b937f6d9678989a0d5b33568b19b',1,'os::driver']]],
   ['error_5fcpha',['ERROR_CPHA',['../namespaceos_1_1driver_1_1serial.html#ab73c70420c2b0589f91b4f888ade27ea',1,'os::driver::serial']]],
