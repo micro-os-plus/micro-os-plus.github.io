@@ -8,7 +8,6 @@ var startup_8c =
     [ "__initialize_hardware_early", "startup_8c.html#a7fc8815552bed9f58a072ed05a4e23d2", null ],
     [ "__run_fini_array", "startup_8c.html#a1580250883cbb7e6dbc5c0c8c72030a0", null ],
     [ "__run_init_array", "startup_8c.html#ac6bcc8910f5ec92fed3eca54e5ff258f", null ],
-    [ "_exit", "startup_8c.html#a31dcaff181eaa6a8cfb484e35f23fb5f", null ],
     [ "_start", "startup_8c.html#a8b67a6ff3f33fae9b3f1b142005c0bc2", null ],
     [ "main", "startup_8c.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
     [ "__bss_end__", "startup_8c.html#aaf3e997542a737017aa3041cd3c8e06a", null ],

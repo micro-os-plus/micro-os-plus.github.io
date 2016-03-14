@@ -235,5 +235,5 @@ var group__cmsis_plus_rtos =
       [ "isr", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553", null ],
       [ "error", "group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c", null ]
     ] ],
-    [ "shift", "group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d", null ]
+    [ "range", "group__cmsis-plus-rtos.html#gac6eda42298fb0342b8aa20ecf8096cbd", null ]
 ];

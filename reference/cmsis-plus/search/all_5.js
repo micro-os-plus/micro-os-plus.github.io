@@ -34,8 +34,8 @@ var searchData=
   ['event_5fdcd',['event_dcd',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a01e9ff5bd74360cd11000423369b1c6a',1,'os::driver::serial::Capabilities']]],
   ['event_5fdisconnect',['event_disconnect',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#abc46d86edd579374372484b34bd82a45',1,'os::driver::usb::host::Capabilities']]],
   ['event_5fdsr',['event_dsr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a651a22214ea9f9ee1d1a819091bf4d2b',1,'os::driver::serial::Capabilities']]],
-  ['event_5fflags',['Event_flags',['../classos_1_1rtos_1_1_event__flags.html#a8cbd40a6d2ddd17bf9f9d05e91ea9133',1,'os::rtos::Event_flags::Event_flags()'],['../classos_1_1rtos_1_1_event__flags.html#a9f33766b508de8456784801d096499a9',1,'os::rtos::Event_flags::Event_flags(const evflags::Attributes &amp;attr)']]],
   ['event_5fflags',['Event_flags',['../classos_1_1rtos_1_1_event__flags.html',1,'os::rtos']]],
+  ['event_5fflags',['Event_flags',['../classos_1_1rtos_1_1_event__flags.html#a8cbd40a6d2ddd17bf9f9d05e91ea9133',1,'os::rtos::Event_flags::Event_flags()'],['../classos_1_1rtos_1_1_event__flags.html#a9f33766b508de8456784801d096499a9',1,'os::rtos::Event_flags::Event_flags(const evflags::Attributes &amp;attr)']]],
   ['event_5fovercurrent',['event_overcurrent',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a49e6b4a8404345cf79e969e50c6fed77',1,'os::driver::usb::host::Capabilities']]],
   ['event_5fri',['event_ri',['../classos_1_1driver_1_1serial_1_1_capabilities.html#af218d26ef070de72fd1f73cdaef6a533',1,'os::driver::serial::Capabilities']]],
   ['event_5frx_5ftimeout',['event_rx_timeout',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a6a2ac26e377f1add947a037f08ab72f3',1,'os::driver::serial::Capabilities']]],
@@ -46,5 +46,7 @@ var searchData=
   ['exception_2dhandlers_2ec',['exception-handlers.c',['../exception-handlers_8c.html',1,'']]],
   ['exception_2dhandlers_2eh',['exception-handlers.h',['../exception-handlers_8h.html',1,'']]],
   ['exceptionstackframe',['ExceptionStackFrame',['../struct_exception_stack_frame.html',1,'']]],
-  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64',1,'os::rtos::Thread::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]]
+  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64',1,'os::rtos::Thread::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]],
+  ['exit_2ec',['exit.c',['../exit_8c.html',1,'']]],
+  ['exit_5ffunc_5ft',['exit_func_t',['../atexit_8h.html#a075b063ab79e6c5aeef211291c25b5cd',1,'atexit.h']]]
 ];

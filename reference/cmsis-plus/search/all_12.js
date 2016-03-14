@@ -6,6 +6,7 @@ var searchData=
   ['r2',['r2',['../struct_exception_stack_frame.html#a21bcab1471ce8d7389f81bbc7fb5bbc6',1,'ExceptionStackFrame']]],
   ['r3',['r3',['../struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91',1,'ExceptionStackFrame']]],
   ['raise',['raise',['../classos_1_1rtos_1_1_event__flags.html#add5d6338ca6b723be6ae9556c50446e2',1,'os::rtos::Event_flags']]],
+  ['range',['range',['../group__cmsis-plus-rtos.html#gac6eda42298fb0342b8aa20ecf8096cbd',1,'os::rtos::thread::priority']]],
   ['read_5fsetup_5fpacket',['read_setup_packet',['../classos_1_1driver_1_1usb_1_1_device.html#a688de8e35598af531305da80e82d98c1',1,'os::driver::usb::Device']]],
   ['realtime',['realtime',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9',1,'os::rtos::thread::priority']]],
   ['realtime_5fclock',['Realtime_clock',['../classos_1_1rtos_1_1_realtime__clock.html',1,'os::rtos']]],

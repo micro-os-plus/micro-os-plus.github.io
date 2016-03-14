@@ -5,6 +5,7 @@ var searchData=
   ['r12',['r12',['../struct_exception_stack_frame.html#ae10879ca5d9e29cb102fdd287a6a6fdc',1,'ExceptionStackFrame']]],
   ['r2',['r2',['../struct_exception_stack_frame.html#a21bcab1471ce8d7389f81bbc7fb5bbc6',1,'ExceptionStackFrame']]],
   ['r3',['r3',['../struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91',1,'ExceptionStackFrame']]],
+  ['range',['range',['../group__cmsis-plus-rtos.html#gac6eda42298fb0342b8aa20ecf8096cbd',1,'os::rtos::thread::priority']]],
   ['receive_5flist',['receive_list',['../structos__mqueue__s.html#a8065bcb2e4e2ab60d72231e7dc1aeac7',1,'os_mqueue_s']]],
   ['receive_5flist_5f',['receive_list_',['../classos_1_1rtos_1_1_message__queue.html#a3de44b086197e490c383c9f5bd355811',1,'os::rtos::Message_queue']]],
   ['recursive_5finitializer',['recursive_initializer',['../namespaceos_1_1rtos_1_1mutex.html#a993b1031f91e1417f95c473a68078588',1,'os::rtos::mutex']]],

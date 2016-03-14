@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
@@ -199,27 +207,27 @@ Enumerations</h2></td></tr>
 <tr class="memitem:gae5d3cbe95bd71d0a7fd8e77bfa710154"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: priority_t { <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154abe1def6f8adb29967a162872655593ae">os::rtos::thread::priority::none</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a24b83eece3b5e2c59b6cc190cfbec515">os::rtos::thread::priority::idle</a> = 1, 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a24b83eece3b5e2c59b6cc190cfbec515">os::rtos::thread::priority::idle</a> = (1 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ab2750fc62b452d5734c9d48f98b15220">os::rtos::thread::priority::lowest</a> = 2, 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ab2750fc62b452d5734c9d48f98b15220">os::rtos::thread::priority::lowest</a> = (2 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154afa27875e2cfdd82964492ec24defc750">os::rtos::thread::priority::low</a> = (2 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154afa27875e2cfdd82964492ec24defc750">os::rtos::thread::priority::low</a> = (2 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804">os::rtos::thread::priority::below_normal</a> = (4 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804">os::rtos::thread::priority::below_normal</a> = (4 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ad92eafd06437bfec575bb7c47244e93c">os::rtos::thread::priority::normal</a> = (6 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ad92eafd06437bfec575bb7c47244e93c">os::rtos::thread::priority::normal</a> = (6 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ae255d30184b1db425fced0ead1708334">os::rtos::thread::priority::above_normal</a> = (8 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ae255d30184b1db425fced0ead1708334">os::rtos::thread::priority::above_normal</a> = (8 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a06a3f2cab2ecc909e21184ad819aa2bb">os::rtos::thread::priority::high</a> = (10 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a06a3f2cab2ecc909e21184ad819aa2bb">os::rtos::thread::priority::high</a> = (10 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9">os::rtos::thread::priority::realtime</a> = (12 &lt;&lt; shift), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a047fd6a18c2fbfe5c9ec9187da97a5c9">os::rtos::thread::priority::realtime</a> = (12 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a899451bc782f7dc4679653d14625bcaf">os::rtos::thread::priority::highest</a> = ((16 &lt;&lt; shift) - 3), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a899451bc782f7dc4679653d14625bcaf">os::rtos::thread::priority::highest</a> = (((13 + 1) &lt;&lt; range) - 1), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553">os::rtos::thread::priority::isr</a> = ((16 &lt;&lt; shift) - 2), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a48f2cfacae6c01ca59332f982ba73553">os::rtos::thread::priority::isr</a> = (((14 + 1) &lt;&lt; range) - 1), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c">os::rtos::thread::priority::error</a> = ((16 &lt;&lt; shift) - 1)
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c">os::rtos::thread::priority::error</a> = (((15 + 1) &lt;&lt; range) - 1)
 <br />
  }<tr class="memdesc:gae5d3cbe95bd71d0a7fd8e77bfa710154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main priorities, intermediate values also possible.  <a href="group__cmsis-plus-rtos.html#gae5d3cbe95bd71d0a7fd8e77bfa710154">More...</a><br /></td></tr>
 </td></tr>
@@ -227,9 +235,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ga9884f6375450700b1e95678a7b7d351d"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d">os::rtos::thread::priority::shift</a> = 4</td></tr>
-<tr class="memdesc:ga9884f6375450700b1e95678a7b7d351d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priorities pre-scaler.  <a href="group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d">More...</a><br /></td></tr>
-<tr class="separator:ga9884f6375450700b1e95678a7b7d351d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6eda42298fb0342b8aa20ecf8096cbd"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#gac6eda42298fb0342b8aa20ecf8096cbd">os::rtos::thread::priority::range</a> = 4</td></tr>
+<tr class="memdesc:gac6eda42298fb0342b8aa20ecf8096cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priorities pre-scaler.  <a href="group__cmsis-plus-rtos.html#gac6eda42298fb0342b8aa20ecf8096cbd">More...</a><br /></td></tr>
+<tr class="separator:gac6eda42298fb0342b8aa20ecf8096cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>CMSIS++ RTOS API summary page. </p>
@@ -367,12 +375,12 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="ga9884f6375450700b1e95678a7b7d351d"></a>
+<a class="anchor" id="gac6eda42298fb0342b8aa20ecf8096cbd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t os::rtos::thread::priority::shift = 4</td>
+          <td class="memname">constexpr uint32_t os::rtos::thread::priority::range = 4</td>
         </tr>
       </table>
 </div><div class="memdoc">

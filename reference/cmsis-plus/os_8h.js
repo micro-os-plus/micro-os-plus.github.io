@@ -101,6 +101,6 @@ var os_8h =
     [ "normal_initializer", "os_8h.html#a8f98fec4c3f9b170459aaabd975de69e", null ],
     [ "once_initializer", "os_8h.html#a62a668f860c8e1523f0bb738d07c6858", null ],
     [ "periodic_initializer", "os_8h.html#aef4e7e64b0985755b1ef432289b2adf3", null ],
-    [ "recursive_initializer", "os_8h.html#a993b1031f91e1417f95c473a68078588", null ],
-    [ "shift", "os_8h.html#ga9884f6375450700b1e95678a7b7d351d", null ]
+    [ "range", "os_8h.html#gac6eda42298fb0342b8aa20ecf8096cbd", null ],
+    [ "recursive_initializer", "os_8h.html#a993b1031f91e1417f95c473a68078588", null ]
 ];

@@ -3,7 +3,6 @@ var searchData=
   ['sched_5fstate_5f',['sched_state_',['../classos_1_1rtos_1_1_thread.html#a5b767f10a973eb5640852b7e12ccd4e1',1,'os::rtos::Thread']]],
   ['send_5flist',['send_list',['../structos__mqueue__s.html#a82d221516ae9e345ee5a8032df6a9ffb',1,'os_mqueue_s']]],
   ['send_5flist_5f',['send_list_',['../classos_1_1rtos_1_1_message__queue.html#aad8efe7f33d723d39d6fcd4a1699b4c2',1,'os::rtos::Message_queue']]],
-  ['shift',['shift',['../group__cmsis-plus-rtos.html#ga9884f6375450700b1e95678a7b7d351d',1,'os::rtos::thread::priority']]],
   ['sig_5fmask_5f',['sig_mask_',['../classos_1_1rtos_1_1_thread.html#ab36f37b895c94f45cac841c00e9f5722',1,'os::rtos::Thread']]],
   ['signals',['signals',['../structos_event.html#ad63c33b8b5d3bb37b45433d7c67d1e09',1,'osEvent::signals()'],['../structos__thread__t.html#a6124d0ad0985d48e8a14969b0aa7c73f',1,'os_thread_t::signals()']]],
   ['single_5fwire',['single_wire',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4',1,'os::driver::serial::Capabilities']]],
