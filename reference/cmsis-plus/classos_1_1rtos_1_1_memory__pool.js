@@ -4,6 +4,7 @@ var classos_1_1rtos_1_1_memory__pool =
     [ "Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f", null ],
     [ "Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#a0e93a08a4b8914c08dec51d3d4bfd65f", null ],
     [ "~Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#a81f08979403e5ad8313b8e45cdfb6707", null ],
+    [ "_init", "classos_1_1rtos_1_1_memory__pool.html#a93f9534f4b7261f6092416502fd8e658", null ],
     [ "_try_first", "classos_1_1rtos_1_1_memory__pool.html#a2670b899849d7575924195c264568f81", null ],
     [ "alloc", "classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550", null ],
     [ "block_size", "classos_1_1rtos_1_1_memory__pool.html#af01aba174d765ec9b7f1beab36ac1550", null ],

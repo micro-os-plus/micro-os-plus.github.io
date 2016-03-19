@@ -45,15 +45,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__sbrk_8c.html",
-"classos_1_1driver_1_1serial_1_1_capabilities.html#af218d26ef070de72fd1f73cdaef6a533",
-"classos_1_1estd_1_1recursive__mutex.html#aac68da740b85bb98a96fc0d6eb47386f",
-"classos_1_1rtos_1_1_thread.html#a271099ccd0fa842d067aa89e2fd5a732",
-"cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99ea4672c8a0c0f6bb1d7981da4602e8e9ee",
-"group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154aecb6604af6f7847bafb7f3647f920804",
-"os-c-decls_8h.html#a060da9121ccf029ef843c961755938c5",
-"os_8h.html#a401cf4d8bc6b555ae0c5cd1dde760241a7a8cd63401f99b9a2052981acc955ab4",
-"structos_1_1estd_1_1once__flag.html#aafd0a6549d1f72b1c29b22a77cd8d064",
-"usb-host_8h.html#a29f43829f9945aefa55c484f4e3021a0ad7b4defaf031c4240697bd2eb5c9d3b8"
+"classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e",
+"classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96",
+"classos_1_1rtos_1_1_systick__clock.html#a76f6284d0c0669275479acfda0e4cc66",
+"cmsis__os_8h.html#ac6ad7e6e7d6c4a80e60da22c57a42ccd",
+"group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd",
+"os-c-decls_8h.html#a01128d3f26631eb950187fbb52b32140",
+"os_8h.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b",
+"struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91",
+"usb-device_8h.html#aa54cbb59440f3be58ec61a52efe494ef"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

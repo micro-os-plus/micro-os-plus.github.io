@@ -764,7 +764,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>CAN BE CHANGED: The parameter to <b>osMailQ</b> shall be consistent but the macro body is implementation specific in every CMSIS-RTOS. </dd></dl>
 
-<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01134">1134</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
+<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01146">1146</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
 
 </div>
 </div>
@@ -797,7 +797,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osMailQ data; \</div><div class="line">    type pool[items]; \</div><div class="line">    void* queue[items]; \</div><div class="line">} os_mailQ_##name; \</div><div class="line">const <a class="code" href="structos__mail_q__def.html">osMailQDef_t</a> os_mailQ_def_##name = { \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof (type), \</span></div><div class="line"><span class="preprocessor">    sizeof (void*), \</span></div><div class="line"><span class="preprocessor">    os_mailQ_##name.pool, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_mailQ_##name.pool), \</span></div><div class="line"><span class="preprocessor">    os_mailQ_##name.queue, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_mailQ_##name.queue), \</span></div><div class="line"><span class="preprocessor">    &amp;os_mailQ_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__mail_q__def_html"><div class="ttname"><a href="structos__mail_q__def.html">os_mailQ_def</a></div><div class="ttdoc">Definition structure for mail queue. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00342">cmsis_os.h:342</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osMailQ data; \</div><div class="line">    struct { \</div><div class="line">      type pool[items]; \</div><div class="line">    } pool_storage; \</div><div class="line">    struct { \</div><div class="line">      void* queue[items]; \</div><div class="line">      os_mqueue_index_t links[2 * items]; \</div><div class="line">      os_mqueue_prio_t prios[items]; \</div><div class="line">    } queue_storage; \</div><div class="line">} os_mailQ_##name; \</div><div class="line">const <a class="code" href="structos__mail_q__def.html">osMailQDef_t</a> os_mailQ_def_##name = { \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof (type), \</span></div><div class="line"><span class="preprocessor">    sizeof (void*), \</span></div><div class="line"><span class="preprocessor">    &amp;os_mailQ_##name.pool_storage, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_mailQ_##name.pool_storage), \</span></div><div class="line"><span class="preprocessor">    &amp;os_mailQ_##name.queue_storage, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_mailQ_##name.queue_storage), \</span></div><div class="line"><span class="preprocessor">    &amp;os_mailQ_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__mail_q__def_html"><div class="ttname"><a href="structos__mail_q__def.html">os_mailQ_def</a></div><div class="ttdoc">Definition structure for mail queue. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00342">cmsis_os.h:342</a></div></div>
 </div><!-- fragment -->
 <p>Create a mail queue definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -810,7 +810,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>CAN BE CHANGED: The parameter to <b>osMailQDef</b> shall be consistent but the macro body is implementation specific in every CMSIS-RTOS. </dd></dl>
 
-<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01108">1108</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
+<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01114">1114</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +838,7 @@ Functions</h2></td></tr>
 <p>Access to the message queue definition for the function osMessageCreate.</p>
 <dl class="section note"><dt>Note</dt><dd>CAN BE CHANGED: The parameter to <b>osMessageQ</b> shall be consistent but the macro body is implementation specific in every CMSIS-RTOS. </dd></dl>
 
-<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01044">1044</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
+<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01050">1050</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
 
 </div>
 </div>
@@ -871,7 +871,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osMessageQ data; \</div><div class="line">    void* queue[items]; \</div><div class="line">} os_messageQ_##name; \</div><div class="line">const <a class="code" href="structos__message_q__def.html">osMessageQDef_t</a> os_messageQ_def_##name = { \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof (void*), \</span></div><div class="line"><span class="preprocessor">    os_messageQ_##name.queue, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_messageQ_##name.queue), \</span></div><div class="line"><span class="preprocessor">    &amp;os_messageQ_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__message_q__def_html"><div class="ttname"><a href="structos__message_q__def.html">os_messageQ_def</a></div><div class="ttdoc">Definition structure for message queue. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00328">cmsis_os.h:328</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osMessageQ data; \</div><div class="line">    struct { \</div><div class="line">      void* queue[items]; \</div><div class="line">      os_mqueue_index_t links[2 * items]; \</div><div class="line">      os_mqueue_prio_t prios[items]; \</div><div class="line">    } storage; \</div><div class="line">} os_messageQ_##name; \</div><div class="line">const <a class="code" href="structos__message_q__def.html">osMessageQDef_t</a> os_messageQ_def_##name = { \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof (void*), \</span></div><div class="line"><span class="preprocessor">    &amp;os_messageQ_##name.storage, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_messageQ_##name.storage), \</span></div><div class="line"><span class="preprocessor">    &amp;os_messageQ_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__message_q__def_html"><div class="ttname"><a href="structos__message_q__def.html">os_messageQ_def</a></div><div class="ttdoc">Definition structure for message queue. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00328">cmsis_os.h:328</a></div></div>
 </div><!-- fragment -->
 <p>Create a Message Queue Definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -884,7 +884,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>CAN BE CHANGED: The parameter to <b>osMessageQDef</b> shall be consistent but the macro body is implementation specific in every CMSIS-RTOS. </dd></dl>
 
-<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01019">1019</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
+<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l01021">1021</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
 
 </div>
 </div>
@@ -930,7 +930,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__mutex__s.html">osMutex</a> os_mutex_data_##name; \</div><div class="line">const <a class="code" href="structos__mutex__def.html">osMutexDef_t</a> os_mutex_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_mutex_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__mutex__def_html"><div class="ttname"><a href="structos__mutex__def.html">os_mutex_def</a></div><div class="ttdoc">Mutex Definition structure contains setup information for a mutex. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00294">cmsis_os.h:294</a></div></div>
-<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00253">os-c-decls.h:253</a></div></div>
+<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00255">os-c-decls.h:255</a></div></div>
 </div><!-- fragment -->
 <p>Define a Mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -969,7 +969,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>CAN BE CHANGED: The parameter to <b>osPool</b> shall be consistent but the macro body is implementation specific in every CMSIS-RTOS. </dd></dl>
 
-<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l00952">952</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
+<p>Definition at line <a class="el" href="cmsis__os_8h_source.html#l00954">954</a> of file <a class="el" href="cmsis__os_8h_source.html">cmsis_os.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1002,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osPool data; \</div><div class="line">    type pool[items]; \</div><div class="line">} os_pool_##name; \</div><div class="line">const <a class="code" href="structos__pool__def.html">osPoolDef_t</a> os_pool_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof(type), \</span></div><div class="line"><span class="preprocessor">    os_pool_##name.pool, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_pool_##name.pool), \</span></div><div class="line"><span class="preprocessor">    &amp;os_pool_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__pool__def_html"><div class="ttname"><a href="structos__pool__def.html">os_pool_def</a></div><div class="ttdoc">Definition structure for memory block allocation. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00314">cmsis_os.h:314</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>{ \</div><div class="line">    osPool data; \</div><div class="line">    struct { \</div><div class="line">      type pool[items]; \</div><div class="line">    } storage; \</div><div class="line">} os_pool_##name; \</div><div class="line">const <a class="code" href="structos__pool__def.html">osPoolDef_t</a> os_pool_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    (items), \</span></div><div class="line"><span class="preprocessor">    sizeof(type), \</span></div><div class="line"><span class="preprocessor">    &amp;os_pool_##name.storage, \</span></div><div class="line"><span class="preprocessor">    sizeof(os_pool_##name.storage), \</span></div><div class="line"><span class="preprocessor">    &amp;os_pool_##name.data \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__pool__def_html"><div class="ttname"><a href="structos__pool__def.html">os_pool_def</a></div><div class="ttdoc">Definition structure for memory block allocation. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00314">cmsis_os.h:314</a></div></div>
 </div><!-- fragment -->
 <p>Define a Memory Pool. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1059,7 +1059,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00295">os-c-decls.h:295</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00302">os-c-decls.h:302</a></div></div>
 <div class="ttc" id="structos__semaphore__def_html"><div class="ttname"><a href="structos__semaphore__def.html">os_semaphore_def</a></div><div class="ttdoc">Semaphore Definition structure contains setup information for a semaphore. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00304">cmsis_os.h:304</a></div></div>
 </div><!-- fragment -->
 <p>Define a Semaphore object. </p>
@@ -2412,7 +2412,7 @@ Functions</h2></td></tr>
 <p>Delete a mutex object. The function releases internal memory obtained for mutex handling. After this call the mutex_id is no longer valid and cannot be used. The mutex may be created again using the function osMutexCreate.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01585">1585</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01589">1589</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2450,7 +2450,7 @@ Functions</h2></td></tr>
 <p>Release a Mutex that was obtained with osMutexWait. Other threads that currently wait for the same mutex will be now put into the state READY.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01546">1546</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01550">1550</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2506,7 +2506,7 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01477">1477</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01481">1481</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

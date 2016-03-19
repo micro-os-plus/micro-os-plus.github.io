@@ -193,7 +193,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04522">4522</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04673">4673</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04490">4490</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04641">4641</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -311,10 +311,11 @@ Functions</h2></td></tr>
 <p>Suspend the current running thread. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Remove the current running thread from the ready list and pass control to the next thread that is in <b>READY</b> state.</p>
+<p>Remove the current running thread from the ready list and pass control to the next thread that is in <b>READY</b> state. The thread will not be automatically rescheduled, it requires some other tread or interrupt service routine to add it back to the READY state (via <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a36e40610400fba15e445695974cd712e" title="Wake-up the thread. ">Thread::wakeup()</a></code>).</p>
+<p>This is different from <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6" title="Yield execution to the next thread ready thread. ">yield()</a></code> which automatically reschedules the current thread before passing control to the next thread (which might be the same if no other threads with at least the same priority are ready).</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04479">4479</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04630">4630</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -408,7 +409,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04514">4514</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04665">4665</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +471,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04502">4502</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04653">4653</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>

@@ -34,8 +34,10 @@ var os_c_decls_8h =
     [ "os_mempool_size_t", "os-c-decls_8h.html#aabac07100301e21809737351cc209717", null ],
     [ "os_mempool_t", "os-c-decls_8h.html#a2596c5158a3a6a6dfee34304dfb9e40d", null ],
     [ "os_mqueue_attr_t", "os-c-decls_8h.html#a6fb4a716840a09c592c8b373d40cd6e3", null ],
+    [ "os_mqueue_index_t", "os-c-decls_8h.html#a01128d3f26631eb950187fbb52b32140", null ],
+    [ "os_mqueue_msg_size_t", "os-c-decls_8h.html#ae6d068911b0788dcd73cf7e37d8a77a0", null ],
     [ "os_mqueue_prio_t", "os-c-decls_8h.html#af109367fbad9ed04cfe099cec19ff2e7", null ],
-    [ "os_mqueue_size_t", "os-c-decls_8h.html#a7f8b4d8f17d9fc2d6790b8f2be75b29c", null ],
+    [ "os_mqueue_size_t", "os-c-decls_8h.html#a42976f5e88e7e3820e1b21a93b2e1430", null ],
     [ "os_mqueue_t", "os-c-decls_8h.html#a5d15f58c85686c38806b84fc292c58c5", null ],
     [ "os_mutex_attr_t", "os-c-decls_8h.html#a6eee076e88523711841844ed92d40bdb", null ],
     [ "os_mutex_count_t", "os-c-decls_8h.html#adbef7109f7ea3bd2038583cc105b7ac4", null ],
@@ -92,5 +94,6 @@ var os_c_decls_8h =
     [ "os_mutex_robustness_robust", "os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a7db883b22fbdfcdffd20b3b618a10ded", null ],
     [ "os_mutex_type_normal", "os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57ae01682a77d20c8dfc7b1939a715bc3d9", null ],
     [ "os_mutex_type_errorcheck", "os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a4a8b83241117f715c282d7c1a6a3b63d", null ],
-    [ "os_mutex_type_recursive", "os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af", null ]
+    [ "os_mutex_type_recursive", "os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af", null ],
+    [ "os_mutex_type_default", "os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a855afe18464e4d1733c821ff862fb151", null ]
 ];

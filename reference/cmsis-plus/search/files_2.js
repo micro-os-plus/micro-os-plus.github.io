@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['c_2dnewlib_2dreent_2ecpp',['c-newlib-reent.cpp',['../c-newlib-reent_8cpp.html',1,'']]],
   ['c_2dsemihosting_2dsyscalls_2ecpp',['c-semihosting-syscalls.cpp',['../c-semihosting-syscalls_8cpp.html',1,'']]],
   ['chrono',['chrono',['../chrono.html',1,'']]],
   ['cmsis_5fos_2eh',['cmsis_os.h',['../cmsis__os_8h.html',1,'']]],

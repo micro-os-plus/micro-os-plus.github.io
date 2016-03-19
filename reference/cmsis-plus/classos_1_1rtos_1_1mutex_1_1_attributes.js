@@ -3,6 +3,7 @@ var classos_1_1rtos_1_1mutex_1_1_attributes =
     [ "Attributes", "classos_1_1rtos_1_1mutex_1_1_attributes.html#aeab2e08b22c8e67ed15ebcc0116a1c29", null ],
     [ "~Attributes", "classos_1_1rtos_1_1mutex_1_1_attributes.html#aadc846ccfb3c32e64b9798246ff3d78a", null ],
     [ "name", "classos_1_1rtos_1_1mutex_1_1_attributes.html#a1ced578ffc847e14547b02ee1473c44e", null ],
+    [ "mx_max_count", "classos_1_1rtos_1_1mutex_1_1_attributes.html#ab35f2563c94ea0a8b3fe01c7a0cbb362", null ],
     [ "mx_priority_ceiling", "classos_1_1rtos_1_1mutex_1_1_attributes.html#a7ed595ecfb30ce50afafbe7ab1ddb701", null ],
     [ "mx_protocol", "classos_1_1rtos_1_1mutex_1_1_attributes.html#a8d611f423c1412bc73e2f91a82dddd57", null ],
     [ "mx_robustness", "classos_1_1rtos_1_1mutex_1_1_attributes.html#a409270baa5818b6c6f7525ddd2dba145", null ],

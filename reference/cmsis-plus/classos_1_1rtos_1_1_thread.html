@@ -312,12 +312,14 @@ Private Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Create a new thread, with dynamically allocated stack, of default size.</p>
+<p>This constructor shall initialise the thread object with default settings. The effect shall be equivalent to creating a thread object referring to the attributes in <code><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49" title="Default thread initialiser. ">thread::initializer</a></code>. Upon successful initialisation, the state of the thread object shall become initialised, and the thread is added to the ready list.</p>
+<p>Only the thread object itself may be used for running the function. It is not allowed to make copies of condition variable objects.</p>
 <p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
+<p>For default thread objects, the stack is dynamically allocated, using the default size.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00233">233</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00246">246</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,12 +362,14 @@ Private Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Create a new thread, with attributes specified by <em>attr</em>. If the attributes specified by <em>attr</em> are modified later, the thread's attributes shall not be affected.</p>
+<p>This constructor shall initialise the thread object with attributes referenced by <em>attr</em>. If the attributes specified by <em>attr</em> are modified later, the thread attributes shall not be affected. Upon successful initialisation, the state of the thread object shall become initialised, and the thread is added to the ready list.</p>
+<p>Only the thread object itself may be used for running the function. It is not allowed to make copies of thread objects.</p>
+<p>In cases where default thread attributes are appropriate, the variable <code><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49" title="Default thread initialiser. ">thread::initializer</a></code> can be used to initialise threads. The effect shall be equivalent to creating a thread object with the default constructor.</p>
 <p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00263">263</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00289">289</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -383,11 +387,12 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy the thread. </p>
+<p>This destructor shall destroy the thread object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
 <p>If the thread was created with dynamic stack, it is freed.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00322">322</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00352">352</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +423,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00328">328</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00358">358</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +522,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <p>Internal function used to test if the desired signal flags are raised. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00822">822</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00852">852</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +553,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cancel.html"><code>pthread_cancel()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00607">607</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00637">637</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +585,7 @@ Private Member Functions</h2></td></tr>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00567">567</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00597">597</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +623,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_exit.html"><code>pthread_exit()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00661">661</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00691">691</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +653,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to arguments. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04561">4561</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04712">4712</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -676,7 +681,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00618">618</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00648">648</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -708,7 +713,7 @@ Private Member Functions</h2></td></tr>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> function shall not return an error code of [EINTR].</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00524">524</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00554">554</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -737,7 +742,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_kill.html"><code>pthread_kill()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00697">697</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00727">727</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -768,7 +773,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04406">4406</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04549">4549</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -805,7 +810,7 @@ Private Member Functions</h2></td></tr>
 <p>Identical threads should have the same memory address.</p>
 <p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04549">4549</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04700">4700</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +843,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_setschedprio.html"><code>pthread_setschedprio()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00467">467</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00497">497</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +867,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00428">428</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00458">458</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -892,7 +897,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> scheduler state. </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04555">4555</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04706">4706</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -938,7 +943,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00796">796</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00826">826</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +990,7 @@ Private Member Functions</h2></td></tr>
 <p>If the mask is zero, return the full thread signal mask, without any masking or subsequent clearing.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00765">765</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00795">795</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1037,7 @@ Private Member Functions</h2></td></tr>
 <p>Set more bits in the thread current signal flags mask. Use OR at bit-mask level. Wake-up the thread to evaluate the signal flags.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00733">733</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00763">763</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1105,7 @@ Private Member Functions</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the signal flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00880">880</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00910">910</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1136,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00359">359</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00389">389</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1215,7 @@ Private Member Functions</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the signal flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00973">973</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01003">1003</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1279,7 @@ Private Member Functions</h2></td></tr>
 <p>The function does not blocks, if the expected signal flags are not raised, but returns <code>EGAIN</code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00927">927</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00957">957</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1311,7 @@ Private Member Functions</h2></td></tr>
 <p>The user storage is a custom structure defined in <code>&lt;os-app-config.h&gt;</code>, which is added to each and every thread storage. Applications can store here any data.</p>
 <p>Inspired by (actually a generalisation of) µC-OS III task user registers and FreeRTOS thread local storage, which proved useful when implementing CMSIS+ over FreeRTOS. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04585">4585</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l04736">4736</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1337,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00384">384</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00414">414</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>

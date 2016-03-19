@@ -7,6 +7,7 @@ var searchData=
   ['os_5fmutex_5fprotocol_5fprotect',['os_mutex_protocol_protect',['../os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da833c6218717a9f577e97ad4567968f45',1,'os-c-decls.h']]],
   ['os_5fmutex_5frobustness_5frobust',['os_mutex_robustness_robust',['../os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a7db883b22fbdfcdffd20b3b618a10ded',1,'os-c-decls.h']]],
   ['os_5fmutex_5frobustness_5fstalled',['os_mutex_robustness_stalled',['../os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a84385ef4f64d839d6b80d713da91ec8a',1,'os-c-decls.h']]],
+  ['os_5fmutex_5ftype_5fdefault',['os_mutex_type_default',['../os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a855afe18464e4d1733c821ff862fb151',1,'os-c-decls.h']]],
   ['os_5fmutex_5ftype_5ferrorcheck',['os_mutex_type_errorcheck',['../os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a4a8b83241117f715c282d7c1a6a3b63d',1,'os-c-decls.h']]],
   ['os_5fmutex_5ftype_5fnormal',['os_mutex_type_normal',['../os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57ae01682a77d20c8dfc7b1939a715bc3d9',1,'os-c-decls.h']]],
   ['os_5fmutex_5ftype_5frecursive',['os_mutex_type_recursive',['../os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af',1,'os-c-decls.h']]],

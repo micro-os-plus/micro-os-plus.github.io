@@ -3,6 +3,7 @@ var classos_1_1rtos_1_1_semaphore =
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#ad8b005eb3618fb0c9b5fa7eeda019a0d", null ],
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#a016fd0cc042a53b898ba8c18a250fcbc", null ],
     [ "~Semaphore", "classos_1_1rtos_1_1_semaphore.html#a4c4f278ca1cfb213b416f31720a30f04", null ],
+    [ "_init", "classos_1_1rtos_1_1_semaphore.html#a1024f0a56bf28b5deabd24daad17fa74", null ],
     [ "initial_value", "classos_1_1rtos_1_1_semaphore.html#a4ed399e5c96ee44445fa8b7745665b11", null ],
     [ "max_value", "classos_1_1rtos_1_1_semaphore.html#ab0892c8cd78d99100a3cb17e797cd17c", null ],
     [ "name", "classos_1_1rtos_1_1_semaphore.html#a1ced578ffc847e14547b02ee1473c44e", null ],

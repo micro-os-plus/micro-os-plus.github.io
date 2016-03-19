@@ -14,7 +14,7 @@ var searchData=
   ['_7elock_5fguard',['~lock_guard',['../classos_1_1estd_1_1lock__guard.html#ab3eb7d4edc0783414234fa573db22fcf',1,'os::estd::lock_guard']]],
   ['_7ememory_5fpool',['~Memory_pool',['../classos_1_1rtos_1_1_memory__pool.html#a81f08979403e5ad8313b8e45cdfb6707',1,'os::rtos::Memory_pool']]],
   ['_7emessage_5fqueue',['~Message_queue',['../classos_1_1rtos_1_1_message__queue.html#a7b4fc1e9bbf3609ee100884754698130',1,'os::rtos::Message_queue']]],
-  ['_7emutex',['~mutex',['../classos_1_1estd_1_1mutex.html#ad40cd581cec79785c30a004d8ac806b6',1,'os::estd::mutex::~mutex()'],['../classos_1_1rtos_1_1_mutex.html#a9a18d00cf61df606519eefb88fd34290',1,'os::rtos::Mutex::~Mutex()']]],
+  ['_7emutex',['~Mutex',['../classos_1_1rtos_1_1_mutex.html#a9a18d00cf61df606519eefb88fd34290',1,'os::rtos::Mutex::~Mutex()'],['../classos_1_1estd_1_1mutex.html#ad40cd581cec79785c30a004d8ac806b6',1,'os::estd::mutex::~mutex()']]],
   ['_7enamed_5fobject',['~Named_object',['../classos_1_1rtos_1_1_named__object.html#ad60c9d586dd60f703c8ca0590fbe8691',1,'os::rtos::Named_object']]],
   ['_7eperiodic_5fattributes',['~Periodic_attributes',['../classos_1_1rtos_1_1timer_1_1_periodic__attributes.html#a5a70500ccf87888f6a3c124724d0ecf9',1,'os::rtos::timer::Periodic_attributes']]],
   ['_7erecursive_5fattributes',['~Recursive_attributes',['../classos_1_1rtos_1_1mutex_1_1_recursive__attributes.html#a2215317cf64a9cee21601b251ca0a8e5',1,'os::rtos::mutex::Recursive_attributes']]],

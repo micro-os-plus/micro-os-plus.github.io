@@ -4,6 +4,9 @@ var searchData=
   ['name_5f',['name_',['../classos_1_1rtos_1_1_named__object.html#ad7667db8bf3171d900237500cb0e1e67',1,'os::rtos::Named_object']]],
   ['native_5fthread_5f',['native_thread_',['../classos_1_1estd_1_1thread_1_1id.html#ae070f36fffc5e6b66fc8336c5239d9c9',1,'os::estd::thread::id']]],
   ['ncv_5f',['ncv_',['../classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210',1,'os::estd::condition_variable']]],
+  ['next_5farray',['next_array',['../structos__mqueue__s.html#ae85b850b5f75163fbd5a8e3b0fad1033',1,'os_mqueue_s']]],
+  ['next_5farray_5f',['next_array_',['../classos_1_1rtos_1_1_message__queue.html#a624f54ae1c8829f150f1207641de101c',1,'os::rtos::Message_queue']]],
   ['nm_5f',['nm_',['../classos_1_1estd_1_1mutex.html#a0dacaad816b4e8b500430f8189387ac4',1,'os::estd::mutex::nm_()'],['../classos_1_1estd_1_1recursive__mutex.html#a4cab2578e632960757b334730331f905',1,'os::estd::recursive_mutex::nm_()']]],
+  ['no_5findex',['no_index',['../namespaceos_1_1rtos_1_1mqueue.html#a125f1b3b01432eaa066a5c833069e0d0',1,'os::rtos::mqueue']]],
   ['normal_5finitializer',['normal_initializer',['../namespaceos_1_1rtos_1_1mutex.html#a8f98fec4c3f9b170459aaabd975de69e',1,'os::rtos::mutex']]]
 ];

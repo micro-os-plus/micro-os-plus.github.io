@@ -3,7 +3,7 @@ var classos_1_1rtos_1_1_event__flags =
     [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#a8cbd40a6d2ddd17bf9f9d05e91ea9133", null ],
     [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#a9f33766b508de8456784801d096499a9", null ],
     [ "~Event_flags", "classos_1_1rtos_1_1_event__flags.html#a531f92e4f6f2a5bd89cef0d79aab117d", null ],
-    [ "_try_wait", "classos_1_1rtos_1_1_event__flags.html#a0d335d15e40160f88d78df7acf8ee6cb", null ],
+    [ "_try_wait", "classos_1_1rtos_1_1_event__flags.html#af9b3a167d928316283da4b00ea4b6b4a", null ],
     [ "clear", "classos_1_1rtos_1_1_event__flags.html#adfb373cebc193d4317b876836cf9c398", null ],
     [ "get", "classos_1_1rtos_1_1_event__flags.html#a8042f19d252370032e8ff27c67b89fe7", null ],
     [ "name", "classos_1_1rtos_1_1_event__flags.html#a1ced578ffc847e14547b02ee1473c44e", null ],

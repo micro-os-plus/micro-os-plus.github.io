@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e":[3,0,0,0,0,0,17],
+"classos_1_1driver_1_1serial_1_1_capabilities.html#af14094d9b9fe6ef2a54397b4a1e735a1":[3,0,0,0,0,0,10],
 "classos_1_1driver_1_1serial_1_1_capabilities.html#af218d26ef070de72fd1f73cdaef6a533":[3,0,0,0,0,0,8],
 "classos_1_1driver_1_1serial_1_1_capabilities.html#af688bc917b275cab9775760af342a404":[3,0,0,0,0,0,2],
 "classos_1_1driver_1_1serial_1_1_capabilities.html#af9aad904be596e3032ee487c54cf899a":[3,0,0,0,0,0,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classos_1_1estd_1_1recursive__mutex.html#a072bc04751ceeb6cdf8e899773a483ed":[3,0,0,1,9,5],
 "classos_1_1estd_1_1recursive__mutex.html#a273656f285287abe9dbafec31d043f25":[3,0,0,1,9,4],
 "classos_1_1estd_1_1recursive__mutex.html#a4cab2578e632960757b334730331f905":[3,0,0,1,9,11],
-"classos_1_1estd_1_1recursive__mutex.html#a843c26b3591859391d319f4210fb454d":[3,0,0,1,9,0],
-"classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96":[3,0,0,1,9,9],
-"classos_1_1estd_1_1recursive__mutex.html#a9d041e25cfb22d9f47451dcb107b641e":[3,0,0,1,9,6]
+"classos_1_1estd_1_1recursive__mutex.html#a843c26b3591859391d319f4210fb454d":[3,0,0,1,9,0]
 };
