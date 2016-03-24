@@ -1,6 +1,7 @@
 var searchData=
 [
   ['chrono',['chrono',['../namespaceos_1_1estd_1_1chrono.html',1,'os::estd']]],
+  ['clock',['clock',['../namespaceos_1_1rtos_1_1clock.html',1,'os::rtos']]],
   ['condvar',['condvar',['../namespaceos_1_1rtos_1_1condvar.html',1,'os::rtos']]],
   ['device',['device',['../namespaceos_1_1driver_1_1usb_1_1device.html',1,'os::driver::usb']]],
   ['driver',['driver',['../namespaceos_1_1driver.html',1,'os']]],
@@ -22,8 +23,8 @@ var searchData=
   ['serial',['serial',['../namespaceos_1_1driver_1_1serial.html',1,'os::driver']]],
   ['sig',['sig',['../namespaceos_1_1rtos_1_1thread_1_1sig.html',1,'os::rtos::thread']]],
   ['stack',['stack',['../namespaceos_1_1rtos_1_1stack.html',1,'os::rtos']]],
-  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1this__thread.html',1,'os::rtos']]],
   ['this_5fthread',['this_thread',['../namespaceos_1_1estd_1_1this__thread.html',1,'os::estd']]],
+  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1this__thread.html',1,'os::rtos']]],
   ['thread',['thread',['../namespaceos_1_1rtos_1_1thread.html',1,'os::rtos']]],
   ['timer',['timer',['../namespaceos_1_1rtos_1_1timer.html',1,'os::rtos']]],
   ['trace',['trace',['../namespaceos_1_1trace.html',1,'os']]],

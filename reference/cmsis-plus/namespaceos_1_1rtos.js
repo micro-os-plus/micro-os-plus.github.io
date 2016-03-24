@@ -11,8 +11,12 @@ var namespaceos_1_1rtos =
     [ "semaphore", "namespaceos_1_1rtos_1_1semaphore.html", "namespaceos_1_1rtos_1_1semaphore" ],
     [ "thread", "namespaceos_1_1rtos_1_1thread.html", "namespaceos_1_1rtos_1_1thread" ],
     [ "timer", "namespaceos_1_1rtos_1_1timer.html", "namespaceos_1_1rtos_1_1timer" ],
+    [ "Clock", "classos_1_1rtos_1_1_clock.html", "classos_1_1rtos_1_1_clock" ],
     [ "Condition_variable", "classos_1_1rtos_1_1_condition__variable.html", "classos_1_1rtos_1_1_condition__variable" ],
+    [ "DoubleListLinks", "classos_1_1rtos_1_1_double_list_links.html", "classos_1_1rtos_1_1_double_list_links" ],
+    [ "DoubleListNodeRef", "classos_1_1rtos_1_1_double_list_node_ref.html", "classos_1_1rtos_1_1_double_list_node_ref" ],
     [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html", "classos_1_1rtos_1_1_event__flags" ],
+    [ "ListGuard", "classos_1_1rtos_1_1_list_guard.html", "classos_1_1rtos_1_1_list_guard" ],
     [ "Memory_pool", "classos_1_1rtos_1_1_memory__pool.html", "classos_1_1rtos_1_1_memory__pool" ],
     [ "Message_queue", "classos_1_1rtos_1_1_message__queue.html", "classos_1_1rtos_1_1_message__queue" ],
     [ "Mutex", "classos_1_1rtos_1_1_mutex.html", "classos_1_1rtos_1_1_mutex" ],
@@ -22,5 +26,6 @@ var namespaceos_1_1rtos =
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html", "classos_1_1rtos_1_1_semaphore" ],
     [ "Systick_clock", "classos_1_1rtos_1_1_systick__clock.html", "classos_1_1rtos_1_1_systick__clock" ],
     [ "Thread", "classos_1_1rtos_1_1_thread.html", "classos_1_1rtos_1_1_thread" ],
-    [ "Timer", "classos_1_1rtos_1_1_timer.html", "classos_1_1rtos_1_1_timer" ]
+    [ "Timer", "classos_1_1rtos_1_1_timer.html", "classos_1_1rtos_1_1_timer" ],
+    [ "Waiting_threads_list", "classos_1_1rtos_1_1_waiting__threads__list.html", "classos_1_1rtos_1_1_waiting__threads__list" ]
 ];

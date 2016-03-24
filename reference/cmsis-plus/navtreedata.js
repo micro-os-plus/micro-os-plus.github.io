@@ -47,13 +47,13 @@ var NAVTREEINDEX =
 "__sbrk_8c.html",
 "classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e",
 "classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96",
-"classos_1_1rtos_1_1_systick__clock.html#a76f6284d0c0669275479acfda0e4cc66",
-"cmsis__os_8h.html#ac6ad7e6e7d6c4a80e60da22c57a42ccd",
-"group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd",
-"os-c-decls_8h.html#a01128d3f26631eb950187fbb52b32140",
-"os_8h.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b",
-"struct_exception_stack_frame.html#a980339f7a21c9b31de49da6b37c80c91",
-"usb-device_8h.html#aa54cbb59440f3be58ec61a52efe494ef"
+"classos_1_1rtos_1_1_named__object.html#ad7667db8bf3171d900237500cb0e1e67",
+"cmsis__os_8h.html#a4299d838978bc2aae5e4350754e6a4e9",
+"functions_vars_q.html",
+"os-c-api_8h.html#a68883733e1c7637df06fdb4e1d9a6ce5",
+"os-c-wrapper_8cpp.html#af13a667493c5d629a90c13e113b99233",
+"serial_8h.html#ac67705f57aef90334268affc4ff9a590a64058584a4b7ca529ac5ec07c37eabed",
+"thread.html#a073e4c567d383045100b7859923aa6b1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

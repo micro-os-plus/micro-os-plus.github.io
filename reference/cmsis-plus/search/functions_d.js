@@ -1,7 +1,6 @@
 var searchData=
 [
   ['main',['main',['../os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;os-main.cpp'],['../startup_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;os-main.cpp']]],
-  ['main_5ftrampoline',['main_trampoline',['../namespaceos_1_1rtos_1_1thread.html#a5022387f5a5cbda12afab4318e090271',1,'os::rtos::thread']]],
   ['malloc',['malloc',['../group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4',1,'os::estd']]],
   ['max_5fvalue',['max_value',['../classos_1_1rtos_1_1_semaphore.html#ab0892c8cd78d99100a3cb17e797cd17c',1,'os::rtos::Semaphore']]],
   ['memory_5fpool',['Memory_pool',['../classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f',1,'os::rtos::Memory_pool::Memory_pool(mempool::size_t blocks, mempool::size_t block_size_bytes)'],['../classos_1_1rtos_1_1_memory__pool.html#a0e93a08a4b8914c08dec51d3d4bfd65f',1,'os::rtos::Memory_pool::Memory_pool(const mempool::Attributes &amp;attr, mempool::size_t blocks, mempool::size_t block_size_bytes)']]],

@@ -17,8 +17,8 @@ var classos_1_1rtos_1_1_message__queue =
     [ "receive", "classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f", null ],
     [ "reset", "classos_1_1rtos_1_1_message__queue.html#abb494387f9dbea6bc91cf19410ecde4c", null ],
     [ "send", "classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195", null ],
-    [ "timed_receive", "classos_1_1rtos_1_1_message__queue.html#ac5df4fb3b39f5b7fc3f2c1eada73f393", null ],
-    [ "timed_send", "classos_1_1rtos_1_1_message__queue.html#a400f8eb3ec46cb204c0baa251bda6b57", null ],
+    [ "timed_receive", "classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87", null ],
+    [ "timed_send", "classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067", null ],
     [ "try_receive", "classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c", null ],
     [ "try_send", "classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6", null ],
     [ "count_", "classos_1_1rtos_1_1_message__queue.html#aa4e5b41bca3b7256c6f93dc427901819", null ],
@@ -33,6 +33,6 @@ var classos_1_1rtos_1_1_message__queue =
     [ "prio_array_", "classos_1_1rtos_1_1_message__queue.html#af241c5105947378e770f13de988b1af6", null ],
     [ "queue_addr_", "classos_1_1rtos_1_1_message__queue.html#ae95076eee0b5814e13ff273fb37833be", null ],
     [ "queue_size_bytes_", "classos_1_1rtos_1_1_message__queue.html#a92684510946adae82eb3d108344e53a5", null ],
-    [ "receive_list_", "classos_1_1rtos_1_1_message__queue.html#a3de44b086197e490c383c9f5bd355811", null ],
-    [ "send_list_", "classos_1_1rtos_1_1_message__queue.html#aad8efe7f33d723d39d6fcd4a1699b4c2", null ]
+    [ "receive_list_", "classos_1_1rtos_1_1_message__queue.html#a3275bbd462d45e9ecddc8dc12d1b54ba", null ],
+    [ "send_list_", "classos_1_1rtos_1_1_message__queue.html#a75f515ca29197a3cecfdeb6a9c049182", null ]
 ];

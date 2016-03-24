@@ -5,5 +5,6 @@ var searchData=
   ['control_5farg_5ft',['control_arg_t',['../namespaceos_1_1driver_1_1serial.html#aa1a37580580c17d07e0793c5bbe183aa',1,'os::driver::serial']]],
   ['control_5ft',['control_t',['../namespaceos_1_1driver_1_1serial.html#acf05806ddf2bf72af492bf430d8de0c1',1,'os::driver::serial']]],
   ['count_5ft',['count_t',['../namespaceos_1_1rtos_1_1mutex.html#a301d03a8d9644b148d90ddb328c91172',1,'os::rtos::mutex::count_t()'],['../namespaceos_1_1rtos_1_1semaphore.html#af1d385ca401f753ae725118254291409',1,'os::rtos::semaphore::count_t()']]],
-  ['current_5ft',['current_t',['../classos_1_1rtos_1_1_systick__clock.html#a8ea430f491120f81fc56fae1936c9af7',1,'os::rtos::Systick_clock']]]
+  ['critical_5fsection',['Critical_section',['../classos_1_1rtos_1_1_list_guard.html#a53167e8e91d70e01ec8ef406ce770e0e',1,'os::rtos::ListGuard']]],
+  ['current_5ft',['current_t',['../classos_1_1rtos_1_1_systick__clock.html#a86be53558c6f19eafc0721a5ee701d2b',1,'os::rtos::Systick_clock']]]
 ];

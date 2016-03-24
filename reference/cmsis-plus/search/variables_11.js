@@ -1,8 +1,8 @@
 var searchData=
 [
   ['sched_5fstate_5f',['sched_state_',['../classos_1_1rtos_1_1_thread.html#a5b767f10a973eb5640852b7e12ccd4e1',1,'os::rtos::Thread']]],
-  ['send_5flist',['send_list',['../structos__mqueue__s.html#a82d221516ae9e345ee5a8032df6a9ffb',1,'os_mqueue_s']]],
-  ['send_5flist_5f',['send_list_',['../classos_1_1rtos_1_1_message__queue.html#aad8efe7f33d723d39d6fcd4a1699b4c2',1,'os::rtos::Message_queue']]],
+  ['send_5flist',['send_list',['../structos__mqueue__s.html#af8e172d52869dc0e40afd991f4dee247',1,'os_mqueue_s']]],
+  ['send_5flist_5f',['send_list_',['../classos_1_1rtos_1_1_message__queue.html#a75f515ca29197a3cecfdeb6a9c049182',1,'os::rtos::Message_queue']]],
   ['sig_5fmask_5f',['sig_mask_',['../classos_1_1rtos_1_1_thread.html#ab36f37b895c94f45cac841c00e9f5722',1,'os::rtos::Thread']]],
   ['signals',['signals',['../structos_event.html#ad63c33b8b5d3bb37b45433d7c67d1e09',1,'osEvent::signals()'],['../structos__thread__t.html#a6124d0ad0985d48e8a14969b0aa7c73f',1,'os_thread_t::signals()']]],
   ['single_5fwire',['single_wire',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4',1,'os::driver::serial::Capabilities']]],
@@ -24,6 +24,7 @@ var searchData=
   ['state_5f',['state_',['../structos_1_1estd_1_1once__flag.html#aafd0a6549d1f72b1c29b22a77cd8d064',1,'os::estd::once_flag']]],
   ['status',['status',['../structos_event.html#aafcd2cedd08e033f9df25fd9875caaf2',1,'osEvent']]],
   ['status_5f',['status_',['../classos_1_1driver_1_1_serial.html#ae6b841da44279d0abd02be6b66a53e8b',1,'os::driver::Serial::status_()'],['../classos_1_1driver_1_1_usart__wrapper.html#ae9a1af6f437b92ca7db5aac1b510041d',1,'os::driver::Usart_wrapper::status_()'],['../classos_1_1driver_1_1usb_1_1_device.html#a29083391f16f71582d48e069bd7e264d',1,'os::driver::usb::Device::status_()'],['../classos_1_1driver_1_1usb_1_1_host.html#adad442656488ddc80fc5bb19ef7850d0',1,'os::driver::usb::Host::status_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#aa2a5d689b0bca450afd1f60896056f87',1,'os::driver::Usbd_wrapper::status_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#ab92f9e0725bfcf5676d9435f8353a422',1,'os::driver::Usbh_wrapper::status_()'],['../classos_1_1rtos_1_1scheduler_1_1_critical__section.html#aee74c9cc197872af89d650731f87a50f',1,'os::rtos::scheduler::Critical_section::status_()'],['../classos_1_1rtos_1_1scheduler_1_1_lock.html#af77321a4c8a1f89811a94cd8aff30900',1,'os::rtos::scheduler::Lock::status_()'],['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a6426d6c7bb8d4ccfb7808a2855708463',1,'os::rtos::interrupts::Critical_section::status_()'],['../classos_1_1rtos_1_1interrupts_1_1_lock.html#a7fe459aba8f8263c8750ed7d4d421148',1,'os::rtos::interrupts::Lock::status_()']]],
+  ['steady_5fcount_5f',['steady_count_',['../classos_1_1rtos_1_1_clock.html#a290fb647db5868696ca6a9e165f297ed',1,'os::rtos::Clock']]],
   ['stop_5fbits_5f0_5f5',['STOP_BITS_0_5',['../namespaceos_1_1driver_1_1serial.html#ae91f8f32f5dcfff14ab687c8ca5b3ae8',1,'os::driver::serial']]],
   ['stop_5fbits_5f1',['STOP_BITS_1',['../namespaceos_1_1driver_1_1serial.html#a41d57e9953d645508f5e33649e4dc931',1,'os::driver::serial']]],
   ['stop_5fbits_5f1_5f5',['STOP_BITS_1_5',['../namespaceos_1_1driver_1_1serial.html#af22280c215b4e276cd2a53fce4a99e99',1,'os::driver::serial']]],
@@ -31,5 +32,6 @@ var searchData=
   ['stop_5fbits_5fmsk',['STOP_BITS_Msk',['../namespaceos_1_1driver_1_1serial.html#ad9dc9721cd5a51f578a755da1e7b8457',1,'os::driver::serial']]],
   ['stop_5fbits_5fpos',['STOP_BITS_Pos',['../namespaceos_1_1driver_1_1serial.html#ac58a4eb5d0425a2904be8312a708f3d7',1,'os::driver::serial']]],
   ['synchronous_5fmaster',['synchronous_master',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8d33b4503a5041c6fa0bf89342f1bcb7',1,'os::driver::serial::Capabilities']]],
-  ['synchronous_5fslave',['synchronous_slave',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a02c1431179aaa1497b71dfdcbf609b11',1,'os::driver::serial::Capabilities']]]
+  ['synchronous_5fslave',['synchronous_slave',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a02c1431179aaa1497b71dfdcbf609b11',1,'os::driver::serial::Capabilities']]],
+  ['systick_5fclock',['systick_clock',['../namespaceos_1_1rtos.html#ab04c435c09cf20cbc5f795c90650d674',1,'os::rtos']]]
 ];

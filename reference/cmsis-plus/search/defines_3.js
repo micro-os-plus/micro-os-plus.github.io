@@ -7,7 +7,6 @@ var searchData=
   ['os_5finteger_5fsystick_5ffrequency_5fhz',['OS_INTEGER_SYSTICK_FREQUENCY_HZ',['../os_8h.html#ab657098ae141f5b84a1319f48c181052',1,'os.h']]],
   ['os_5finteger_5ftrace_5fprintf_5ftmp_5farray_5fsize',['OS_INTEGER_TRACE_PRINTF_TMP_ARRAY_SIZE',['../trace_8cpp.html#a0fd8f6e6808c27fc3e21d3e3f888d36f',1,'trace.cpp']]],
   ['os_5fthread_5fprio_5fshift',['OS_THREAD_PRIO_SHIFT',['../os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9',1,'os-c-decls.h']]],
-  ['os_5fthread_5fprio_5fsize_5fptr',['OS_THREAD_PRIO_SIZE_PTR',['../os-c-decls_8h.html#a060da9121ccf029ef843c961755938c5',1,'os-c-decls.h']]],
   ['os_5fuse_5fcmsis_5fplus',['OS_USE_CMSIS_PLUS',['../os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-c-decls.h'],['../os_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os.h']]],
   ['oscmsis',['osCMSIS',['../cmsis__os_8h.html#a702196bacccbb978620c736b209387f1',1,'cmsis_os.h']]],
   ['oscmsis_5fkernel',['osCMSIS_KERNEL',['../cmsis__os_8h.html#ab78dce646fabec479c5f34bc5175b7de',1,'cmsis_os.h']]],

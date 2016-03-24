@@ -2,7 +2,7 @@ var searchData=
 [
   ['element_5ft',['element_t',['../namespaceos_1_1rtos_1_1stack.html#a90d62c2c988b5901f8346a44a826798c',1,'os::rtos::stack']]],
   ['embed_2eh',['embed.h',['../embed_8h.html',1,'']]],
-  ['empty',['empty',['../classos_1_1rtos_1_1_memory__pool.html#af9564feab38340dec5cb676783d8d73c',1,'os::rtos::Memory_pool::empty()'],['../classos_1_1rtos_1_1_message__queue.html#a5652693746ed5a14389f83b764e77cf2',1,'os::rtos::Message_queue::empty()']]],
+  ['empty',['empty',['../classos_1_1rtos_1_1_waiting__threads__list.html#a4612a1a1e1ebe1c7b9e770439449c0b3',1,'os::rtos::Waiting_threads_list::empty()'],['../classos_1_1rtos_1_1_memory__pool.html#af9564feab38340dec5cb676783d8d73c',1,'os::rtos::Memory_pool::empty()'],['../classos_1_1rtos_1_1_message__queue.html#a5652693746ed5a14389f83b764e77cf2',1,'os::rtos::Message_queue::empty()']]],
   ['enable_5fbreak',['enable_break',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a624fe2f3e71b321d7c9d3abded0c5270',1,'os::driver::serial']]],
   ['enable_5frx',['enable_rx',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af5c4e5e8156442278a2492c1f6ce5c2f',1,'os::driver::serial']]],
   ['enable_5ftx',['enable_tx',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af2ab2cc4eb54f4c0b40b4f0a483239c3',1,'os::driver::serial']]],

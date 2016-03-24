@@ -1,7 +1,7 @@
 var structos__mutex__s =
 [
     [ "count", "structos__mutex__s.html#a8e5d3f863ddb2895748e01466221785e", null ],
-    [ "list", "structos__mutex__s.html#ad3e30a1cd7310d7e88e38e09fa178905", null ],
+    [ "list", "structos__mutex__s.html#a4a85ee6898ca8b06aa3d584111a716c6", null ],
     [ "max_count", "structos__mutex__s.html#ad0a371b6e00dc8867b5f05e86a748c47", null ],
     [ "name", "structos__mutex__s.html#a5b1638314211c413fc46f44c4ee0ba28", null ],
     [ "owner", "structos__mutex__s.html#a9235c015e1c51f81c9ba674646063bac", null ],

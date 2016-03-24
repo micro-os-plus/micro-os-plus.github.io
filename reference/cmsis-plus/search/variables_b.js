@@ -2,7 +2,7 @@ var searchData=
 [
   ['m_5f',['m_',['../classos_1_1estd_1_1lock__guard.html#aaee3cedd024c4f9363d5ad8e9ea5e58a',1,'os::estd::lock_guard::m_()'],['../classos_1_1estd_1_1unique__lock.html#aa9a522acd5dab9eba0dc9e5ec5187059',1,'os::estd::unique_lock::m_()']]],
   ['mail_5fid',['mail_id',['../structos_event.html#aeeccddfa51120e20a2316e73bdba099a',1,'osEvent']]],
-  ['max_5fcount',['max_count',['../structos__mutex__s.html#ad0a371b6e00dc8867b5f05e86a748c47',1,'os_mutex_s::max_count()'],['../structos__semaphore__s.html#a0d0caab1913a5563e5c8dc64f928a916',1,'os_semaphore_s::max_count()']]],
+  ['max_5fcount',['max_count',['../structos__mutex__s.html#ad0a371b6e00dc8867b5f05e86a748c47',1,'os_mutex_s::max_count()'],['../structos__semaphore__s.html#a0d0caab1913a5563e5c8dc64f928a916',1,'os_semaphore_s::max_count()'],['../namespaceos_1_1rtos_1_1mutex.html#aa7751ed78ef38380bccafa55ac67c1bd',1,'os::rtos::mutex::max_count()']]],
   ['max_5fcount_5f',['max_count_',['../classos_1_1rtos_1_1_mutex.html#aba293f0645e775f3750ab7116f17b163',1,'os::rtos::Mutex::max_count_()'],['../classos_1_1rtos_1_1_semaphore.html#a189e07ad643c937c8f705bce4c48bac1',1,'os::rtos::Semaphore::max_count_()']]],
   ['max_5fcount_5fvalue',['max_count_value',['../namespaceos_1_1rtos_1_1semaphore.html#a52960bb03444802faaff6fb110156fba',1,'os::rtos::semaphore']]],
   ['max_5fmsg_5fsize',['max_msg_size',['../namespaceos_1_1rtos_1_1mqueue.html#a4a7c0ac7ca6eb156ef6ddc68281e831c',1,'os::rtos::mqueue']]],

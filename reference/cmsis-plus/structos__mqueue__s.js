@@ -12,6 +12,6 @@ var structos__mqueue__s =
     [ "prio_array", "structos__mqueue__s.html#a02d8ac66608bcac763b109b08723c77f", null ],
     [ "queue_addr", "structos__mqueue__s.html#a3102f439c4eb558f8226a7083c3166ea", null ],
     [ "queue_size_bytes", "structos__mqueue__s.html#a4e325398f11ff07c3a2cfad6c4a29ace", null ],
-    [ "receive_list", "structos__mqueue__s.html#a8065bcb2e4e2ab60d72231e7dc1aeac7", null ],
-    [ "send_list", "structos__mqueue__s.html#a82d221516ae9e345ee5a8032df6a9ffb", null ]
+    [ "receive_list", "structos__mqueue__s.html#aaab1ea0920702ffc2b270a766c18418d", null ],
+    [ "send_list", "structos__mqueue__s.html#af8e172d52869dc0e40afd991f4dee247", null ]
 ];
