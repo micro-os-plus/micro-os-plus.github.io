@@ -44,6 +44,7 @@ var searchData=
   ['os_5ftimer_5fattr_5ft',['os_timer_attr_t',['../os-c-decls_8h.html#a08193db6e5c1b76c2dfc65e5096606c8',1,'os-c-decls.h']]],
   ['os_5ftimer_5ffunc_5fargs_5ft',['os_timer_func_args_t',['../os-c-decls_8h.html#a0f88fc8c62eaba154e6ecafd92269f01',1,'os-c-decls.h']]],
   ['os_5ftimer_5ffunc_5ft',['os_timer_func_t',['../os-c-decls_8h.html#a014e88235beb3a68738440e7d2f69cde',1,'os-c-decls.h']]],
+  ['os_5ftimer_5fstate_5ft',['os_timer_state_t',['../os-c-decls_8h.html#a929c49b77ddcd1341e5acefeecd2033c',1,'os-c-decls.h']]],
   ['os_5ftimer_5ft',['os_timer_t',['../os-c-decls_8h.html#ad19c7a7636d6719827621c5cd5ac09ca',1,'os-c-decls.h']]],
   ['os_5ftimer_5ftype_5ft',['os_timer_type_t',['../os-c-decls_8h.html#a010a2799bd758cfafc50425cd4588652',1,'os-c-decls.h']]],
   ['osmailq',['osMailQ',['../cmsis__os_8h.html#a874689464239e386a1f4d74bffc3ef40',1,'cmsis_os.h']]],

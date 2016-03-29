@@ -198,7 +198,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line">Mutex mx;</div><div class="line"><a class="code" href="classos_1_1rtos_1_1_condition__variable.html#a529d67d9f3d8b7dddba6ef37daec9ad4">Condition_variable</a> cv;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">consumer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  mx.lock();</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="keywordflow">while</span>(!condition())</div><div class="line">    {</div><div class="line">      <span class="comment">// ...</span></div><div class="line">      cv.wait();</div><div class="line">      <span class="comment">// ...</span></div><div class="line">    }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  mx.unlock(mx);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">producer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  mx.lock();</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <span class="keywordflow">if</span> (some_condition())</div><div class="line">    {</div><div class="line">      <span class="comment">// ...</span></div><div class="line">      cv.signal();</div><div class="line">      <span class="comment">// ...</span></div><div class="line">    }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  mx.unlock(mx);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_cond_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l02859">2859</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00113">113</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a529d67d9f3d8b7dddba6ef37daec9ad4"></a>
 <div class="memitem">
@@ -226,7 +226,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_destroy.html"><code>pthread_cond_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00232">232</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00228">228</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_destroy.html"><code>pthread_cond_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00266">266</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00262">262</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_destroy.html"><code>pthread_cond_destroy()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00293">293</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00289">289</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_broadcast.html"><code>pthread_cond_broadcast()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00402">402</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00398">398</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04686">4686</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>Identical condition variables should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04975">4975</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00307">307</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
 
 </div>
 </div>
@@ -427,7 +427,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_signal.html"><code>pthread_cond_signal()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00335">335</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00331">331</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ by another thread to the mutex and then the condition variable". That is, if ano
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_timedwait.html"><code>pthread_cond_timedwait()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00632">632</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00628">628</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -533,7 +533,7 @@ by another thread to the mutex and then the condition variable". That is, if ano
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_wait.html"><code>pthread_cond_wait()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00496">496</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00492">492</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +556,7 @@ by another thread to the mutex and then the condition variable". That is, if ano
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03016">3016</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00270">270</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
 
 </div>
 </div>
@@ -581,12 +581,12 @@ by another thread to the mutex and then the condition variable". That is, if ano
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01122">1122</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/cmsis-plus/rtos/<a class="el" href="os_8h_source.html">os.h</a></li>
+<li>include/cmsis-plus/rtos/<a class="el" href="os-condvar_8h_source.html">os-condvar.h</a></li>
 <li>src/cmsis-plus/rtos/<a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a></li>
 </ul>
 </div><!-- contents -->

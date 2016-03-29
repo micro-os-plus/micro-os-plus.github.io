@@ -27,11 +27,16 @@ var classos_1_1rtos_1_1_thread =
     [ "try_sig_wait", "classos_1_1rtos_1_1_thread.html#a6f5bd5fb10f9a2e09f15820ac3f7bc08", null ],
     [ "user_storage", "classos_1_1rtos_1_1_thread.html#ac403644442b53259133526e8cf073771", null ],
     [ "wakeup", "classos_1_1rtos_1_1_thread.html#a36e40610400fba15e445695974cd712e", null ],
+    [ "Clock_timestamps_list", "classos_1_1rtos_1_1_thread.html#aecc28538fa95123c440127b62ce375c6", null ],
+    [ "ClockListGuard", "classos_1_1rtos_1_1_thread.html#a42499c07a0bf7b7176cc3a5c11dcde88", null ],
     [ "this_thread::exit", "classos_1_1rtos_1_1_thread.html#a95935cf5eaad0c4b3509049e814f06e7", null ],
     [ "this_thread::sig_wait", "classos_1_1rtos_1_1_thread.html#a5d29917018290bb0f1de232d56e99a37", null ],
     [ "this_thread::sleep", "classos_1_1rtos_1_1_thread.html#a63ec1dce0c19254cf3cc7874e239eb71", null ],
     [ "this_thread::timed_sig_wait", "classos_1_1rtos_1_1_thread.html#ac09eb6648758625ea5156c5e12bab90b", null ],
     [ "this_thread::try_sig_wait", "classos_1_1rtos_1_1_thread.html#adfbbd87abf32fe91a087db0d1e6d8640", null ],
+    [ "ThreadListGuard", "classos_1_1rtos_1_1_thread.html#a7e62886820491932fe166d5523093a79", null ],
+    [ "Waiting_threads_list", "classos_1_1rtos_1_1_thread.html#af7da9704c52235658b971027c32f8106", null ],
+    [ "clock_node_", "classos_1_1rtos_1_1_thread.html#a3d01a6db56d0947b3642973b1fc80585", null ],
     [ "func_", "classos_1_1rtos_1_1_thread.html#a78533ffaf052b92a45e131f9e22b95fe", null ],
     [ "func_args_", "classos_1_1rtos_1_1_thread.html#a221bef067614777aaf4815d713edde10", null ],
     [ "func_result_", "classos_1_1rtos_1_1_thread.html#a46b7138eee7bf69fd4785037c696aaa8", null ],
@@ -43,5 +48,6 @@ var classos_1_1rtos_1_1_thread =
     [ "stack_addr_", "classos_1_1rtos_1_1_thread.html#a6bbc905123b44c33b53e8e1e25978218", null ],
     [ "stack_size_bytes_", "classos_1_1rtos_1_1_thread.html#a271099ccd0fa842d067aa89e2fd5a732", null ],
     [ "user_storage_", "classos_1_1rtos_1_1_thread.html#a6c1e7318a3f64afaeb14d0be375d8823", null ],
+    [ "waiting_node_", "classos_1_1rtos_1_1_thread.html#acbafb07feb6d106667ea3cca6eba3818", null ],
     [ "wakeup_reason_", "classos_1_1rtos_1_1_thread.html#af88f029af724c2c39ae1a5ee5132f237", null ]
 ];

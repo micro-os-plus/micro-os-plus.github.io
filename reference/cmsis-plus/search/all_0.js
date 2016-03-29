@@ -34,7 +34,7 @@ var searchData=
   ['_5f_5fverbose_5fterminate_5fhandler',['__verbose_terminate_handler',['../namespace____gnu__cxx.html#af51888cedbc669a114cd79e39e0cd9be',1,'__gnu_cxx']]],
   ['_5fdestroy',['_destroy',['../classos_1_1rtos_1_1_thread.html#af7cc69f15755c7cf0cf98314ab6e5901',1,'os::rtos::Thread']]],
   ['_5fedata',['_edata',['../startup_8c.html#aa271d502d9a165bb4896f2e4a0e7921b',1,'startup.c']]],
-  ['_5finit',['_init',['../classos_1_1rtos_1_1_mutex.html#a2ea700789c27d2263933e41512172047',1,'os::rtos::Mutex::_init()'],['../classos_1_1rtos_1_1_semaphore.html#a1024f0a56bf28b5deabd24daad17fa74',1,'os::rtos::Semaphore::_init()'],['../classos_1_1rtos_1_1_memory__pool.html#a93f9534f4b7261f6092416502fd8e658',1,'os::rtos::Memory_pool::_init()'],['../classos_1_1rtos_1_1_message__queue.html#a6cd26ac848332ed9c88ffe66be39a28c',1,'os::rtos::Message_queue::_init()']]],
+  ['_5finit',['_init',['../classos_1_1rtos_1_1_memory__pool.html#a93f9534f4b7261f6092416502fd8e658',1,'os::rtos::Memory_pool::_init()'],['../classos_1_1rtos_1_1_message__queue.html#a6cd26ac848332ed9c88ffe66be39a28c',1,'os::rtos::Message_queue::_init()'],['../classos_1_1rtos_1_1_mutex.html#a2ea700789c27d2263933e41512172047',1,'os::rtos::Mutex::_init()'],['../classos_1_1rtos_1_1_semaphore.html#a1024f0a56bf28b5deabd24daad17fa74',1,'os::rtos::Semaphore::_init()']]],
   ['_5finvoke_5fwith_5fexit',['_invoke_with_exit',['../classos_1_1rtos_1_1_thread.html#aeffe0f65c42f83b02dc16ff3dd0bd33a',1,'os::rtos::Thread']]],
   ['_5flite_5fexit',['_LITE_EXIT',['../atexit_8h.html#ab8e8beb411c6404cf4ff3327a5703d99',1,'atexit.h']]],
   ['_5fmain_5ftrampoline',['_main_trampoline',['../namespaceos_1_1rtos_1_1thread.html#a67419a45b39218dd50c0139de9a551df',1,'os::rtos::thread']]],
@@ -47,6 +47,6 @@ var searchData=
   ['_5ftry_5flock',['_try_lock',['../classos_1_1rtos_1_1_mutex.html#a0dc1b2d6b18f353d1738ec3e0d66ed5b',1,'os::rtos::Mutex']]],
   ['_5ftry_5freceive',['_try_receive',['../classos_1_1rtos_1_1_message__queue.html#a3b1906a948b66e8404d74081669bdb0f',1,'os::rtos::Message_queue']]],
   ['_5ftry_5fsend',['_try_send',['../classos_1_1rtos_1_1_message__queue.html#a175324ff6d383502338dcf8e2ae64092',1,'os::rtos::Message_queue']]],
-  ['_5ftry_5fwait',['_try_wait',['../classos_1_1rtos_1_1_thread.html#a16553b693dc0aab46b9cd8812bb509dc',1,'os::rtos::Thread::_try_wait()'],['../classos_1_1rtos_1_1_semaphore.html#aedb63fab0c75a46efa3c9bc538b7a276',1,'os::rtos::Semaphore::_try_wait()'],['../classos_1_1rtos_1_1_event__flags.html#af9b3a167d928316283da4b00ea4b6b4a',1,'os::rtos::Event_flags::_try_wait()']]],
+  ['_5ftry_5fwait',['_try_wait',['../classos_1_1rtos_1_1_event__flags.html#af9b3a167d928316283da4b00ea4b6b4a',1,'os::rtos::Event_flags::_try_wait()'],['../classos_1_1rtos_1_1_semaphore.html#aedb63fab0c75a46efa3c9bc538b7a276',1,'os::rtos::Semaphore::_try_wait()'],['../classos_1_1rtos_1_1_thread.html#a16553b693dc0aab46b9cd8812bb509dc',1,'os::rtos::Thread::_try_wait()']]],
   ['_5fwait',['_wait',['../classos_1_1rtos_1_1_clock.html#a9acb70ab225a64664c306d86fca9cdc8',1,'os::rtos::Clock::_wait()'],['../classos_1_1rtos_1_1_systick__clock.html#a3e4c2b535e7d9109f2a08e8f83031e26',1,'os::rtos::Systick_clock::_wait()'],['../classos_1_1rtos_1_1_realtime__clock.html#a0a4f6761606771a6b7a9d955ca98d5b0',1,'os::rtos::Realtime_clock::_wait()']]]
 ];

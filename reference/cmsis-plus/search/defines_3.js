@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['os_5fassert_5ferr',['os_assert_err',['../os_8h.html#ae9cede0de19446e3a5eb930b6b10dd39',1,'os.h']]],
-  ['os_5fassert_5fthrow',['os_assert_throw',['../os_8h.html#a7ca7d74dfe5c184cdd627cc958564137',1,'os.h']]],
+  ['os_5fassert_5ferr',['os_assert_err',['../os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39',1,'os-decls.h']]],
+  ['os_5fassert_5fthrow',['os_assert_throw',['../os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137',1,'os-decls.h']]],
   ['os_5finclude_5fstartup_5fguard_5fchecks',['OS_INCLUDE_STARTUP_GUARD_CHECKS',['../startup_8c.html#a1507dad2f28c44dc9361cc34615db7ad',1,'startup.c']]],
-  ['os_5finteger_5frtos_5fmain_5fstack_5fsize_5fbytes',['OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES',['../os_8h.html#a1e2bd07321ee51c8de75ada8d6726cca',1,'os.h']]],
-  ['os_5finteger_5fsystick_5ffrequency_5fhz',['OS_INTEGER_SYSTICK_FREQUENCY_HZ',['../os_8h.html#ab657098ae141f5b84a1319f48c181052',1,'os.h']]],
+  ['os_5finteger_5frtos_5fmain_5fstack_5fsize_5fbytes',['OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES',['../os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca',1,'os-decls.h']]],
+  ['os_5finteger_5fsystick_5ffrequency_5fhz',['OS_INTEGER_SYSTICK_FREQUENCY_HZ',['../os-decls_8h.html#ab657098ae141f5b84a1319f48c181052',1,'os-decls.h']]],
   ['os_5finteger_5ftrace_5fprintf_5ftmp_5farray_5fsize',['OS_INTEGER_TRACE_PRINTF_TMP_ARRAY_SIZE',['../trace_8cpp.html#a0fd8f6e6808c27fc3e21d3e3f888d36f',1,'trace.cpp']]],
   ['os_5fthread_5fprio_5fshift',['OS_THREAD_PRIO_SHIFT',['../os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9',1,'os-c-decls.h']]],
-  ['os_5fuse_5fcmsis_5fplus',['OS_USE_CMSIS_PLUS',['../os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-c-decls.h'],['../os_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os.h']]],
+  ['os_5fuse_5fcmsis_5fplus',['OS_USE_CMSIS_PLUS',['../os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-c-decls.h'],['../os-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-decls.h']]],
   ['oscmsis',['osCMSIS',['../cmsis__os_8h.html#a702196bacccbb978620c736b209387f1',1,'cmsis_os.h']]],
   ['oscmsis_5fkernel',['osCMSIS_KERNEL',['../cmsis__os_8h.html#ab78dce646fabec479c5f34bc5175b7de',1,'cmsis_os.h']]],
   ['osfeature_5fmailq',['osFeature_MailQ',['../cmsis__os_8h.html#aceb2e0071ce160d153047f2eac1aca8e',1,'cmsis_os.h']]],

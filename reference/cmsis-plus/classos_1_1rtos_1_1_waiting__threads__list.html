@@ -132,10 +132,12 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_waiting__threads__
 </div><!--header-->
 <div class="contents">
 
-<p>Double linked circular list of threads.  
+<p>Ordered double linked circular list of threads.  
  <a href="classos_1_1rtos_1_1_waiting__threads__list.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os-lists_8h_source.html">os-lists.h</a>&gt;</code></p>
+
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_double__list.html">os::rtos::Double_list</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,54 +145,59 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab0327aaa384a93cc686cd9fd453e784a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed7dfe3f5167b92817392488de017652"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#aed7dfe3f5167b92817392488de017652">~Waiting_threads_list</a> ()</td></tr>
 <tr class="separator:aed7dfe3f5167b92817392488de017652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf15b933df7b650af199ab8ca32e659b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#acf15b933df7b650af199ab8ca32e659b">add</a> (<a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a> &amp;node)</td></tr>
-<tr class="memdesc:acf15b933df7b650af199ab8ca32e659b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new thread node to the list.  <a href="#acf15b933df7b650af199ab8ca32e659b">More...</a><br /></td></tr>
-<tr class="separator:acf15b933df7b650af199ab8ca32e659b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a56c4db6a1307bff56267c21f0e90c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a6a56c4db6a1307bff56267c21f0e90c4">clear</a> (void)</td></tr>
-<tr class="memdesc:a6a56c4db6a1307bff56267c21f0e90c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the list.  <a href="#a6a56c4db6a1307bff56267c21f0e90c4">More...</a><br /></td></tr>
-<tr class="separator:a6a56c4db6a1307bff56267c21f0e90c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4612a1a1e1ebe1c7b9e770439449c0b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a4612a1a1e1ebe1c7b9e770439449c0b3">empty</a> (void) const </td></tr>
-<tr class="memdesc:a4612a1a1e1ebe1c7b9e770439449c0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list is empty.  <a href="#a4612a1a1e1ebe1c7b9e770439449c0b3">More...</a><br /></td></tr>
-<tr class="separator:a4612a1a1e1ebe1c7b9e770439449c0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af26ffc065dc86c4f3a8d6ac66384552d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#af26ffc065dc86c4f3a8d6ac66384552d">length</a> (void) const </td></tr>
-<tr class="memdesc:af26ffc065dc86c4f3a8d6ac66384552d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of nodes in the list.  <a href="#af26ffc065dc86c4f3a8d6ac66384552d">More...</a><br /></td></tr>
-<tr class="separator:af26ffc065dc86c4f3a8d6ac66384552d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07cdf3ac9494494c3e720998549b660d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a07cdf3ac9494494c3e720998549b660d">remove</a> (<a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a> &amp;node)</td></tr>
-<tr class="memdesc:a07cdf3ac9494494c3e720998549b660d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the node from the list.  <a href="#a07cdf3ac9494494c3e720998549b660d">More...</a><br /></td></tr>
-<tr class="separator:a07cdf3ac9494494c3e720998549b660d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3857f7f11f1b6412e147eb8c17e73d5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a3857f7f11f1b6412e147eb8c17e73d5d">add</a> (<a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a> &amp;node)</td></tr>
+<tr class="memdesc:a3857f7f11f1b6412e147eb8c17e73d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new thread node to the list.  <a href="#a3857f7f11f1b6412e147eb8c17e73d5d">More...</a><br /></td></tr>
+<tr class="separator:a3857f7f11f1b6412e147eb8c17e73d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05565932d3505be379248bb5b7630486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a05565932d3505be379248bb5b7630486">clear</a> (void)</td></tr>
+<tr class="memdesc:a05565932d3505be379248bb5b7630486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the list.  <a href="#a05565932d3505be379248bb5b7630486">More...</a><br /></td></tr>
+<tr class="separator:a05565932d3505be379248bb5b7630486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#ad18e572f011472feb0f3bc3a6a2e47b8">empty</a> (void) const </td></tr>
+<tr class="memdesc:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list is empty.  <a href="#ad18e572f011472feb0f3bc3a6a2e47b8">More...</a><br /></td></tr>
+<tr class="separator:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0804fa1cc899641bf2c49db0014cc2c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a0804fa1cc899641bf2c49db0014cc2c6">head</a> (void)</td></tr>
+<tr class="memdesc:a0804fa1cc899641bf2c49db0014cc2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list head.  <a href="#a0804fa1cc899641bf2c49db0014cc2c6">More...</a><br /></td></tr>
+<tr class="separator:a0804fa1cc899641bf2c49db0014cc2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3a5753abcd5e8863ef71ec890b05d1"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a6b3a5753abcd5e8863ef71ec890b05d1">length</a> (void) const </td></tr>
+<tr class="memdesc:a6b3a5753abcd5e8863ef71ec890b05d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of nodes in the list.  <a href="#a6b3a5753abcd5e8863ef71ec890b05d1">More...</a><br /></td></tr>
+<tr class="separator:a6b3a5753abcd5e8863ef71ec890b05d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8246055ac8c3afa283a30759c5a6dd45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a8246055ac8c3afa283a30759c5a6dd45">remove</a> (<a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> &amp;node)</td></tr>
+<tr class="memdesc:a8246055ac8c3afa283a30759c5a6dd45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the node from the list.  <a href="#a8246055ac8c3afa283a30759c5a6dd45">More...</a><br /></td></tr>
+<tr class="separator:a8246055ac8c3afa283a30759c5a6dd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fca788e33b2432c6c4e6a61340b7675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a6fca788e33b2432c6c4e6a61340b7675">wakeup_all</a> (void)</td></tr>
-<tr class="memdesc:a6fca788e33b2432c6c4e6a61340b7675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake-up all tasks in the list.  <a href="#a6fca788e33b2432c6c4e6a61340b7675">More...</a><br /></td></tr>
+<tr class="memdesc:a6fca788e33b2432c6c4e6a61340b7675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake-up all threads in the list.  <a href="#a6fca788e33b2432c6c4e6a61340b7675">More...</a><br /></td></tr>
 <tr class="separator:a6fca788e33b2432c6c4e6a61340b7675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a656de172a1e4ab7d05cd7fa6bb70cdc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a656de172a1e4ab7d05cd7fa6bb70cdc1">wakeup_one</a> (void)</td></tr>
-<tr class="memdesc:a656de172a1e4ab7d05cd7fa6bb70cdc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake-up one task (the oldest with the highest priority)  <a href="#a656de172a1e4ab7d05cd7fa6bb70cdc1">More...</a><br /></td></tr>
+<tr class="memdesc:a656de172a1e4ab7d05cd7fa6bb70cdc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake-up one thread (the oldest with the highest priority)  <a href="#a656de172a1e4ab7d05cd7fa6bb70cdc1">More...</a><br /></td></tr>
 <tr class="separator:a656de172a1e4ab7d05cd7fa6bb70cdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7a121f2a9e824a7af66074a9baddc113"><td class="memItemLeft" align="right" valign="top">std::size_t volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a7a121f2a9e824a7af66074a9baddc113">count_</a></td></tr>
-<tr class="memdesc:a7a121f2a9e824a7af66074a9baddc113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count of nodes in the list.  <a href="#a7a121f2a9e824a7af66074a9baddc113">More...</a><br /></td></tr>
-<tr class="separator:a7a121f2a9e824a7af66074a9baddc113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50042485410b130f290887e242a1d312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a> *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html#a50042485410b130f290887e242a1d312">head_</a></td></tr>
-<tr class="memdesc:a50042485410b130f290887e242a1d312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the list first node.  <a href="#a50042485410b130f290887e242a1d312">More...</a><br /></td></tr>
-<tr class="separator:a50042485410b130f290887e242a1d312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dca8a5dcae83fff3ec7b64e60046e81"><td class="memItemLeft" align="right" valign="top">std::size_t volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a2dca8a5dcae83fff3ec7b64e60046e81">count_</a></td></tr>
+<tr class="memdesc:a2dca8a5dcae83fff3ec7b64e60046e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count of nodes in the list.  <a href="#a2dca8a5dcae83fff3ec7b64e60046e81">More...</a><br /></td></tr>
+<tr class="separator:a2dca8a5dcae83fff3ec7b64e60046e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2f58660fd9b26749faf9e9871741b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a2a2f58660fd9b26749faf9e9871741b9">head_</a></td></tr>
+<tr class="memdesc:a2a2f58660fd9b26749faf9e9871741b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the list first node.  <a href="#a2a2f58660fd9b26749faf9e9871741b9">More...</a><br /></td></tr>
+<tr class="separator:a2a2f58660fd9b26749faf9e9871741b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Double linked circular list of threads. </p>
+<div class="textblock"><p>Ordered double linked circular list of threads. </p>
 <p>There are at least two strategies:</p><ul>
 <li>keep the list ordered by priorities and have the top node easily accessible the head</li>
-<li><p class="startli">preserve the insertion order and perform a full list traversal to determine the top node.</p>
-<p class="startli">The first strategy requires a partial list traverse with each insert, to find the place to insert the node, but makes retrieving the top priority node trivial, by a single access to the list head.</p>
-<p class="startli">The second strategy might minimise the overall processing time, but always requires a full list traversal to determine the top priority node.</p>
-</li>
+<li>preserve the insertion order and perform a full list traversal to determine the top node.</li>
 </ul>
+<p>The first strategy requires a partial list traverse with each insert, to find the place to insert the node, but makes retrieving the top priority node trivial, by a single access to the list head.</p>
+<p>The second strategy might minimise the overall processing time, but always requires a full list traversal to determine the top priority node.</p>
 <p>On the other hand, typical waiting lists contain only one element, and in this case there is no distinction. <a class="el" href="classos_1_1rtos_1_1_mutex.html" title="POSIX compliant mutex. ">Mutex</a> objects occasionally might have two entries (and rarely more). Condition variables might also have several waiting threads, the number is usually small. In these cases, the distinction between the two strategies is also minimal.</p>
 <p>In the rare cases when the waiting list is large, the first strategy favours top node retrieval, possibly improving the response time, and is thus preferred. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00115">115</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00378">378</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab0327aaa384a93cc686cd9fd453e784a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::rtos::Waiting_threads_list::Waiting_threads_list </td>
@@ -199,17 +206,25 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Create a list.</p>
+<p>Create a list of waiting threads.</p>
 <p>The initial list status is empty. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00064">64</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00608">608</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="aed7dfe3f5167b92817392488de017652"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::rtos::Waiting_threads_list::~Waiting_threads_list </td>
@@ -218,23 +233,28 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Destroy the list.</p>
 <p>There must be no nodes in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00073">73</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00618">618</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acf15b933df7b650af199ab8ca32e659b"></a>
+<a class="anchor" id="a3857f7f11f1b6412e147eb8c17e73d5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void os::rtos::Waiting_threads_list::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -244,39 +264,22 @@ Protected Attributes</h2></td></tr>
 <p>Add a new thread node to the list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>Reference to a list node containing the thread reference.</td></tr>
+    <tr><td class="paramname">node</td><td>Reference to a list node.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Based on priority, the node is inserted at the end of the list, at the beginning of the list, or in the middle of the list, which requires a partial list traversal (done from the end).</p>
-<p>If the list is empty, the new node is added with references to itself, to satisfy the circular double link list requirements. </p>
+<p>Based on priority, the node is inserted</p><ul>
+<li>at the end of the list,</li>
+<li>at the beginning of the list,</li>
+<li>in the middle of the list, which requires a partial list traversal (done from the end).</li>
+</ul>
+<p>If the list is empty, the new node is added with references to itself, to satisfy the circular double linked list requirements. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00100">100</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6a56c4db6a1307bff56267c21f0e90c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::rtos::Waiting_threads_list::clear </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear the list. </p>
-<p>Reset the count and clear the head pointer. </p>
-
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00084">84</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00149">149</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4612a1a1e1ebe1c7b9e770439449c0b3"></a>
+<a class="anchor" id="a05565932d3505be379248bb5b7630486"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,7 +287,36 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Waiting_threads_list::empty </td>
+          <td class="memname">void os::rtos::Double_list::clear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the list. </p>
+<p>Reset the count and clear the head pointer. </p>
+
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00056">56</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad18e572f011472feb0f3bc3a6a2e47b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::rtos::Double_list::empty </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -293,7 +325,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -307,11 +339,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00275">275</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00590">590</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af26ffc065dc86c4f3a8d6ac66384552d"></a>
+<a class="anchor" id="a0804fa1cc899641bf2c49db0014cc2c6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -319,11 +351,11 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::Waiting_threads_list::length </td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a> * os::rtos::Waiting_threads_list::head </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -333,25 +365,62 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get list head. </p>
+<dl class="section return"><dt>Returns</dt><dd>Casted pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00624">624</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b3a5753abcd5e8863ef71ec890b05d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t os::rtos::Double_list::length </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>Get the number of nodes in the list. </p>
 <dl class="section return"><dt>Returns</dt><dd>A non negative integer with the number of nodes. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00281">281</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00596">596</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a07cdf3ac9494494c3e720998549b660d"></a>
+<a class="anchor" id="a8246055ac8c3afa283a30759c5a6dd45"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void os::rtos::Waiting_threads_list::remove </td>
+          <td class="memname">void os::rtos::Double_list::remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Remove the node from the list. </p>
@@ -365,7 +434,7 @@ Protected Attributes</h2></td></tr>
 <p>For lists with only one node, simply clear the list.</p>
 <p>For more robustness, to prevent unexpected accesses, the links in the removed node are nullified. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00163">163</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00073">73</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
@@ -383,9 +452,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Wake-up all tasks in the list. </p>
+<p>Wake-up all threads in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00217">217</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00237">237</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,15 +472,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Wake-up one task (the oldest with the highest priority) </p>
+<p>Wake-up one thread (the oldest with the highest priority) </p>
 <p>Atomically get the top thread from the list, remove the node and wake-up the thread. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00201">201</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00208">208</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a7a121f2a9e824a7af66074a9baddc113"></a>
+<a class="anchor" id="a2dca8a5dcae83fff3ec7b64e60046e81"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -419,12 +488,12 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t volatile os::rtos::Waiting_threads_list::count_</td>
+          <td class="memname">std::size_t volatile os::rtos::Double_list::count_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -432,11 +501,11 @@ Protected Attributes</h2></td></tr>
 <p>Count of nodes in the list. </p>
 <p>A non negative integer, updated with each insertion/removal, to reflect the actual number of nodes in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00206">206</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00370">370</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a50042485410b130f290887e242a1d312"></a>
+<a class="anchor" id="a2a2f58660fd9b26749faf9e9871741b9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -444,12 +513,12 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#ad16c3dcf6234723b0f9b451177f84751">DoubleListNodeThread</a>* volatile os::rtos::Waiting_threads_list::head_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a>* volatile os::rtos::Double_list::head_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -457,7 +526,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to the list first node. </p>
 <p>For empty lists, this value is 'nullptr'. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00198">198</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00362">362</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>

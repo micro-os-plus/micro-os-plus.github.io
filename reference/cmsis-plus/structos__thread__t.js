@@ -1,5 +1,6 @@
 var structos__thread__t =
 [
+    [ "clock_node", "structos__thread__t.html#ae89d637cf4894ed69b8799d98e61a25a", null ],
     [ "func", "structos__thread__t.html#a5034ee4a70879c737f2c3c12b1eb7dfc", null ],
     [ "func_args", "structos__thread__t.html#a14db8df1fc9a0fd722c75ebde3dab55c", null ],
     [ "func_result_", "structos__thread__t.html#a0a225aa956fc3a9ef9426e503da53abb", null ],
@@ -11,5 +12,6 @@ var structos__thread__t =
     [ "stack_size_bytes", "structos__thread__t.html#a40d32298d99f9319f9ea66978feddbd4", null ],
     [ "state", "structos__thread__t.html#a7eb357408c005d2461dee085e9239d82", null ],
     [ "user_storage", "structos__thread__t.html#ae6feca65a045b3369c33cc9b5d953317", null ],
+    [ "waiting_node", "structos__thread__t.html#a1ee6142e10d8fa0c54965e8f2f47c668", null ],
     [ "wakeup_reason", "structos__thread__t.html#aac5e5bd894c4508b009760dc4896daa2", null ]
 ];

@@ -176,7 +176,7 @@ Protected Attributes</h2></td></tr>
 <p>Define an array of structures and pass its address and size via the attributes.</p>
 <div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Allocate static storage for the pool.</span></div><div class="line">properties_t pool[pool_size];</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Define pool attributes.</span></div><div class="line">   mempool::Attributes attr { <span class="stringliteral">&quot;properties&quot;</span> };</div><div class="line">   attr.mp_pool_address = pool;</div><div class="line">   attr.mp_pool_size_bytes = <span class="keyword">sizeof</span>(pool);</div><div class="line"></div><div class="line">   <span class="comment">// Create the pool object.</span></div><div class="line">   Memory_pool mp { attr, pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified, but inspired by POSIX attributes used in <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (IEEE Std 1003.1, 2013 Edition). </dd></dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03423">3423</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00047">47</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3a570c2879da0bae1420ebf477741437"></a>
 <div class="memitem">
@@ -208,7 +208,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l05042">5042</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00412">412</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l04686">4686</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ Protected Attributes</h2></td></tr>
 <p>Set this variable to a user defined memory area large enough to store the memory pool. Usually this is a statically allocated array of structures.</p>
 <p>The default value is <code>nullptr</code>, which means there is no user defined memory pool. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03472">3472</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00096">96</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -302,7 +302,7 @@ Protected Attributes</h2></td></tr>
 <p>The memory pool size must match exactly the allocated size. It is used for validation; when the memory pool is initialised, this size must be large enough to accommodate the desired memory pool.</p>
 <p>If the <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#a0166305d8df8c98ec7c3376abe5817b8">mp_pool_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l03477">3477</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00101">101</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -327,12 +327,12 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l01122">1122</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/cmsis-plus/rtos/<a class="el" href="os_8h_source.html">os.h</a></li>
+<li>include/cmsis-plus/rtos/<a class="el" href="os-mempool_8h_source.html">os-mempool.h</a></li>
 <li>src/cmsis-plus/rtos/<a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a></li>
 </ul>
 </div><!-- contents -->

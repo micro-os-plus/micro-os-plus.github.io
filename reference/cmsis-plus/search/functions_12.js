@@ -21,6 +21,8 @@ var searchData=
   ['stall_5fendpoint',['stall_endpoint',['../classos_1_1driver_1_1usb_1_1_device.html#afc5df60a9e2df09bc635797d464acbce',1,'os::driver::usb::Device']]],
   ['start',['start',['../classos_1_1rtos_1_1_clock.html#a99482a5caafd5631e55d5ba183cc2a28',1,'os::rtos::Clock::start()'],['../classos_1_1rtos_1_1_realtime__clock.html#a2a9e909278a0a352c57316067f2229d0',1,'os::rtos::Realtime_clock::start()'],['../classos_1_1rtos_1_1_timer.html#a13eae4fd14ea5d98fa1511f2883cc433',1,'os::rtos::Timer::start()'],['../namespaceos_1_1rtos_1_1scheduler.html#a1f95f21495b763252a4485078f82716b',1,'os::rtos::scheduler::start()']]],
   ['started',['started',['../namespaceos_1_1rtos_1_1scheduler.html#a6b69515f09f9b87c1488f1684aec5afa',1,'os::rtos::scheduler']]],
+  ['steady_5flist',['steady_list',['../classos_1_1rtos_1_1_clock.html#a9ae816de784e32a2e4c61f59aad2fbc8',1,'os::rtos::Clock']]],
+  ['steady_5fnow',['steady_now',['../classos_1_1rtos_1_1_clock.html#ae0b8b08d8db52720c93475bd51a35f56',1,'os::rtos::Clock']]],
   ['stop',['stop',['../classos_1_1rtos_1_1_timer.html#a0b4f43cfce5d43fcc783dd8b6b8b11f1',1,'os::rtos::Timer']]],
   ['suspend_5fport',['suspend_port',['../classos_1_1driver_1_1usb_1_1_host.html#ab9750f5d6ff33635046cc67cb1bf09b1',1,'os::driver::usb::Host']]],
   ['svc_5fhandler',['SVC_Handler',['../exception-handlers_8h.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;exception-handlers.c'],['../exception-handlers_8c.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;exception-handlers.c']]],

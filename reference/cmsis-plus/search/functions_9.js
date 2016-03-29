@@ -4,7 +4,7 @@ var searchData=
   ['in_5fhandler_5fmode',['in_handler_mode',['../namespaceos_1_1rtos_1_1scheduler.html#a72474ad9ad219abeb13fb3ed0b95a8b3',1,'os::rtos::scheduler']]],
   ['initial_5fvalue',['initial_value',['../classos_1_1rtos_1_1_semaphore.html#a4ed399e5c96ee44445fa8b7745665b11',1,'os::rtos::Semaphore']]],
   ['initialize',['initialize',['../namespaceos_1_1trace.html#a412dbb6aeb8348a73eedd73a6494c35d',1,'os::trace::initialize()'],['../namespaceos_1_1rtos_1_1scheduler.html#ab6cf4a77bd9f182fb9ee339e08b2289d',1,'os::rtos::scheduler::initialize()']]],
-  ['interrupt_5fservice_5froutine',['interrupt_service_routine',['../classos_1_1rtos_1_1_clock.html#a5a27587cf1ca26181822b3acc767bdee',1,'os::rtos::Clock::interrupt_service_routine()'],['../classos_1_1rtos_1_1_systick__clock.html#aae5801d41791513092df4702cfab5bce',1,'os::rtos::Systick_clock::interrupt_service_routine()']]],
+  ['interrupt_5fservice_5froutine',['interrupt_service_routine',['../classos_1_1rtos_1_1_clock.html#a5a27587cf1ca26181822b3acc767bdee',1,'os::rtos::Clock::interrupt_service_routine()'],['../classos_1_1rtos_1_1_systick__clock.html#aae5801d41791513092df4702cfab5bce',1,'os::rtos::Systick_clock::interrupt_service_routine()'],['../classos_1_1rtos_1_1_timer.html#acd22b5127918acb99e8f15f60bb18c37',1,'os::rtos::Timer::interrupt_service_routine()']]],
   ['interrupted',['interrupted',['../classos_1_1rtos_1_1_thread.html#a707ddda84d350fe2371e0095ae5eddad',1,'os::rtos::Thread']]],
   ['ioctl',['ioctl',['../embed_8h.html#ae18f760062a7e3579c50cab722855102',1,'embed.h']]],
   ['is_5factive',['is_active',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#ad287950ff9c49c188dd58cfe7817dcdd',1,'os::driver::usb::device::Status']]],
