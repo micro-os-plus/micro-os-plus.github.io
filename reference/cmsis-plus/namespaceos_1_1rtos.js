@@ -12,8 +12,8 @@ var namespaceos_1_1rtos =
     [ "thread", "namespaceos_1_1rtos_1_1thread.html", "namespaceos_1_1rtos_1_1thread" ],
     [ "timer", "namespaceos_1_1rtos_1_1timer.html", "namespaceos_1_1rtos_1_1timer" ],
     [ "Clock", "classos_1_1rtos_1_1_clock.html", "classos_1_1rtos_1_1_clock" ],
+    [ "Clock_list_guard", "classos_1_1rtos_1_1_clock__list__guard.html", "classos_1_1rtos_1_1_clock__list__guard" ],
     [ "Clock_timestamps_list", "classos_1_1rtos_1_1_clock__timestamps__list.html", "classos_1_1rtos_1_1_clock__timestamps__list" ],
-    [ "ClockListGuard", "classos_1_1rtos_1_1_clock_list_guard.html", "classos_1_1rtos_1_1_clock_list_guard" ],
     [ "Condition_variable", "classos_1_1rtos_1_1_condition__variable.html", "classos_1_1rtos_1_1_condition__variable" ],
     [ "Double_list", "classos_1_1rtos_1_1_double__list.html", "classos_1_1rtos_1_1_double__list" ],
     [ "Double_list_links", "classos_1_1rtos_1_1_double__list__links.html", "classos_1_1rtos_1_1_double__list__links" ],
@@ -31,7 +31,7 @@ var namespaceos_1_1rtos =
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html", "classos_1_1rtos_1_1_semaphore" ],
     [ "Systick_clock", "classos_1_1rtos_1_1_systick__clock.html", "classos_1_1rtos_1_1_systick__clock" ],
     [ "Thread", "classos_1_1rtos_1_1_thread.html", "classos_1_1rtos_1_1_thread" ],
-    [ "ThreadListGuard", "classos_1_1rtos_1_1_thread_list_guard.html", "classos_1_1rtos_1_1_thread_list_guard" ],
+    [ "Thread_list_guard", "classos_1_1rtos_1_1_thread__list__guard.html", "classos_1_1rtos_1_1_thread__list__guard" ],
     [ "Timer", "classos_1_1rtos_1_1_timer.html", "classos_1_1rtos_1_1_timer" ],
     [ "Waiting_threads_list", "classos_1_1rtos_1_1_waiting__threads__list.html", "classos_1_1rtos_1_1_waiting__threads__list" ]
 ];

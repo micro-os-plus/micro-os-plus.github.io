@@ -9,6 +9,6 @@ var searchData=
   ['next_5farray_5f',['next_array_',['../classos_1_1rtos_1_1_message__queue.html#a624f54ae1c8829f150f1207641de101c',1,'os::rtos::Message_queue']]],
   ['nm_5f',['nm_',['../classos_1_1estd_1_1mutex.html#a0dacaad816b4e8b500430f8189387ac4',1,'os::estd::mutex::nm_()'],['../classos_1_1estd_1_1recursive__mutex.html#a4cab2578e632960757b334730331f905',1,'os::estd::recursive_mutex::nm_()']]],
   ['no_5findex',['no_index',['../namespaceos_1_1rtos_1_1mqueue.html#a125f1b3b01432eaa066a5c833069e0d0',1,'os::rtos::mqueue']]],
-  ['node_5f',['node_',['../classos_1_1rtos_1_1_thread_list_guard.html#ac92cbbd212d91b31dbc5491a94ad9568',1,'os::rtos::ThreadListGuard::node_()'],['../classos_1_1rtos_1_1_clock_list_guard.html#a2a96618281cb355e62932ecb3981a8fa',1,'os::rtos::ClockListGuard::node_()']]],
+  ['node_5f',['node_',['../classos_1_1rtos_1_1_thread__list__guard.html#ac4624279b6cdca457cfbe7bb7dd19818',1,'os::rtos::Thread_list_guard::node_()'],['../classos_1_1rtos_1_1_clock__list__guard.html#aa72f76f3fafd0c5a6a6efb1b9ff7e719',1,'os::rtos::Clock_list_guard::node_()']]],
   ['normal_5finitializer',['normal_initializer',['../namespaceos_1_1rtos_1_1mutex.html#a8f98fec4c3f9b170459aaabd975de69e',1,'os::rtos::mutex']]]
 ];

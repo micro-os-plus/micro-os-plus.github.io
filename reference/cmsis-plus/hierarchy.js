@@ -20,7 +20,7 @@ var hierarchy =
       [ "os::rtos::Realtime_clock", "classos_1_1rtos_1_1_realtime__clock.html", null ],
       [ "os::rtos::Systick_clock", "classos_1_1rtos_1_1_systick__clock.html", null ]
     ] ],
-    [ "os::rtos::ClockListGuard< CS_T, List_T, Node_T >", "classos_1_1rtos_1_1_clock_list_guard.html", null ],
+    [ "os::rtos::Clock_list_guard< CS_T, List_T, Node_T >", "classos_1_1rtos_1_1_clock__list__guard.html", null ],
     [ "os::estd::condition_variable", "classos_1_1estd_1_1condition__variable.html", null ],
     [ "os::estd::condition_variable_any", "classos_1_1estd_1_1condition__variable__any.html", null ],
     [ "os::rtos::interrupts::Critical_section", "classos_1_1rtos_1_1interrupts_1_1_critical__section.html", null ],
@@ -114,7 +114,7 @@ var hierarchy =
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
     [ "os::estd::chrono::Systick_clock", "classos_1_1estd_1_1chrono_1_1_systick__clock.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],
-    [ "os::rtos::ThreadListGuard< CS_T, List_T, Node_T >", "classos_1_1rtos_1_1_thread_list_guard.html", null ],
+    [ "os::rtos::Thread_list_guard< CS_T, List_T, Node_T >", "classos_1_1rtos_1_1_thread__list__guard.html", null ],
     [ "os::estd::try_to_lock_t", "structos_1_1estd_1_1try__to__lock__t.html", null ],
     [ "os::estd::unique_lock< Mutex_T >", "classos_1_1estd_1_1unique__lock.html", null ],
     [ "os::driver::Version", "classos_1_1driver_1_1_version.html", null ]
