@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_timeout__thread__n
 </div><!--header-->
 <div class="contents">
 
-<p>Double linked list node, with timestamp and thread.  
+<p>Double linked list node, with time stamp and thread.  
  <a href="classos_1_1rtos_1_1_timeout__thread__node.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os-lists_8h_source.html">os-lists.h</a>&gt;</code></p>
@@ -148,7 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0bdf58c0ef05d2b3271c5458fecdfd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:acc32f1738669c10a2ef3ead733cee073"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html#acc32f1738669c10a2ef3ead733cee073">action</a> (void) override</td></tr>
-<tr class="memdesc:acc32f1738669c10a2ef3ead733cee073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action performed when the timestamp is reached.  <a href="#acc32f1738669c10a2ef3ead733cee073">More...</a><br /></td></tr>
+<tr class="memdesc:acc32f1738669c10a2ef3ead733cee073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action to perform when the time stamp is reached.  <a href="#acc32f1738669c10a2ef3ead733cee073">More...</a><br /></td></tr>
 <tr class="separator:acc32f1738669c10a2ef3ead733cee073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -159,7 +159,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa9123e3110978e80216d6c06add9474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:afef09491feeae24c58558c48fce5ab5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a7e1766f1fcca4517d63087b2073afd05">clock::timestamp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_timestamp__node.html#afef09491feeae24c58558c48fce5ab5f">timestamp</a></td></tr>
-<tr class="memdesc:afef09491feeae24c58558c48fce5ab5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp when the next action will be performed.  <a href="#afef09491feeae24c58558c48fce5ab5f">More...</a><br /></td></tr>
+<tr class="memdesc:afef09491feeae24c58558c48fce5ab5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time stamp when the next action will be performed.  <a href="#afef09491feeae24c58558c48fce5ab5f">More...</a><br /></td></tr>
 <tr class="separator:afef09491feeae24c58558c48fce5ab5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:afc078525fc3b5b399ddc765bc1732ee5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html#afc078525fc3b5b399ddc765bc1732ee5">prev</a></td></tr>
@@ -173,9 +173,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6a8c15c4c459feaea92f3c7b1dd4161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Double linked list node, with timestamp and thread. </p>
+<div class="textblock"><p>Double linked list node, with time stamp and thread. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00281">281</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00284">284</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a99cc73ba84974c6db81bbf2e026cb98a"></a>
 <div class="memitem">
@@ -210,9 +210,9 @@ Public Attributes</h2></td></tr>
 <p>Create a clock timeout node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lst</td><td>Reference to the list. </td></tr>
-    <tr><td class="paramname">ts</td><td>Timestamp. </td></tr>
-    <tr><td class="paramname">th</td><td>Reference to thread. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lst</td><td>Reference to the list. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>Time stamp. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Reference to thread. </td></tr>
   </table>
   </dd>
 </dl>
@@ -271,7 +271,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Action performed when the timestamp is reached. </p>
+<p>Action to perform when the time stamp is reached. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 <p>Implements <a class="el" href="classos_1_1rtos_1_1_timestamp__node.html#a89677fd20e48d8553eb958df95cd4076">os::rtos::Timestamp_node</a>.</p>
 
@@ -364,7 +366,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reference to thread who initiated the timeout. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00345">345</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00354">354</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -386,9 +388,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Timestamp when the next action will be performed. </p>
+<p>Time stamp when the next action will be performed. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00263">263</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00266">266</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>

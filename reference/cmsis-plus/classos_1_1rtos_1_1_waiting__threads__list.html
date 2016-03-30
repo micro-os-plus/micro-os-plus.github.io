@@ -192,7 +192,7 @@ Protected Attributes</h2></td></tr>
 <p>On the other hand, typical waiting lists contain only one element, and in this case there is no distinction. <a class="el" href="classos_1_1rtos_1_1_mutex.html" title="POSIX compliant mutex. ">Mutex</a> objects occasionally might have two entries (and rarely more). Condition variables might also have several waiting threads, the number is usually small. In these cases, the distinction between the two strategies is also minimal.</p>
 <p>In the rare cases when the waiting list is large, the first strategy favours top node retrieval, possibly improving the response time, and is thus preferred. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00552">552</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00572">572</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab0327aaa384a93cc686cd9fd453e784a"></a>
 <div class="memitem">
@@ -217,7 +217,7 @@ Protected Attributes</h2></td></tr>
 <p>Create a list of waiting threads.</p>
 <p>The initial list status is empty. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00914">914</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00947">947</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@ Protected Attributes</h2></td></tr>
 <p>Destroy the list.</p>
 <p>There must be no nodes in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00924">924</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00957">957</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -266,10 +266,11 @@ Protected Attributes</h2></td></tr>
 <p>Add a new thread node to the list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>Reference to a list node.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>Reference to a list node. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Based on priority, the node is inserted</p><ul>
 <li>at the end of the list,</li>
 <li>at the beginning of the list,</li>
@@ -304,6 +305,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear the list. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Reset the count and clear the head pointer. </p>
 
 <p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00065">65</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
@@ -333,6 +336,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if the list is empty. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The list has no nodes. </td></tr>
@@ -341,7 +345,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00896">896</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00929">929</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -368,9 +372,10 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get list head. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted pointer. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00930">930</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00963">963</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -397,9 +402,10 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the number of nodes in the list. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A non negative integer with the number of nodes. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00902">902</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00935">935</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -428,10 +434,11 @@ Protected Attributes</h2></td></tr>
 <p>Remove the node from the list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>Reference to the list node to remove from the list.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>Reference to the list node to remove from the list. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>If the list has more than one node, update the neighbours to point to each other, skipping the node.</p>
 <p>For lists with only one node, simply clear the list.</p>
 <p>For more robustness, to prevent unexpected accesses, the links in the removed node are nullified. </p>
@@ -455,6 +462,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wake-up all threads in the list. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 <p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00247">247</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
@@ -475,6 +484,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wake-up one thread (the oldest with the highest priority) </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Atomically get the top thread from the list, remove the node and wake-up the thread. </p>
 
 <p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00216">216</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
@@ -503,7 +514,7 @@ Protected Attributes</h2></td></tr>
 <p>Count of nodes in the list. </p>
 <p>A non negative integer, updated with each insertion/removal, to reflect the actual number of nodes in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00540">540</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00560">560</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +539,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to the list first node. </p>
 <p>For empty lists, this value is 'nullptr'. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00532">532</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00552">552</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
