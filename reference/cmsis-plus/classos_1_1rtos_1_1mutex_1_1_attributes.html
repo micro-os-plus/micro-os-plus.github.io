@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1mutex_1_1_attribute
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html">os::rtos::Clocked_attribute</a>.</p>
 
 <p>Inherited by <a class="el" href="classos_1_1rtos_1_1mutex_1_1_recursive__attributes.html">os::rtos::mutex::Recursive_attributes</a>.</p>
 <table class="memberdecls">
@@ -171,6 +171,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab35f2563c94ea0a8b3fe01c7a0cbb362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mutex.html#a301d03a8d9644b148d90ddb328c91172">mutex::count_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex_1_1_attributes.html#ab35f2563c94ea0a8b3fe01c7a0cbb362">mx_max_count</a></td></tr>
 <tr class="memdesc:ab35f2563c94ea0a8b3fe01c7a0cbb362"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_mutex.html" title="POSIX compliant mutex. ">Mutex</a> maximum recursive count.  <a href="#ab35f2563c94ea0a8b3fe01c7a0cbb362">More...</a><br /></td></tr>
 <tr class="separator:ab35f2563c94ea0a8b3fe01c7a0cbb362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
+<tr class="memitem:acab0fbecb204f30b6d26228d706e6917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html#acab0fbecb204f30b6d26228d706e6917">clock</a></td></tr>
+<tr class="memdesc:acab0fbecb204f30b6d26228d706e6917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#acab0fbecb204f30b6d26228d706e6917">More...</a><br /></td></tr>
+<tr class="separator:acab0fbecb204f30b6d26228d706e6917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -185,7 +189,7 @@ Protected Attributes</h2></td></tr>
 <p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00047">47</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00056">56</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aeab2e08b22c8e67ed15ebcc0116a1c29"></a>
 <div class="memitem">
@@ -217,7 +221,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00488">488</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00503">503</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -274,11 +278,35 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="acab0fbecb204f30b6d26228d706e6917"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Clocked_attribute::clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to clock. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00881">881</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab35f2563c94ea0a8b3fe01c7a0cbb362"></a>
 <div class="memitem">
 <div class="memproto">
@@ -291,7 +319,7 @@ Protected Attributes</h2></td></tr>
 
 <p><a class="el" href="classos_1_1rtos_1_1_mutex.html" title="POSIX compliant mutex. ">Mutex</a> maximum recursive count. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00116">116</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00125">125</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -309,7 +337,7 @@ Protected Attributes</h2></td></tr>
 <p>The <a class="el" href="classos_1_1rtos_1_1mutex_1_1_attributes.html#a7ed595ecfb30ce50afafbe7ab1ddb701">mx_priority_ceiling</a> attribute defines the priority ceiling of initialised mutexes, which is the minimum priority level at which the critical section guarded by the mutex is executed. In order to avoid priority inversion, the priority ceiling of the mutex shall be set to a priority higher than or equal to the highest priority of all the threads that may lock that mutex. The values of <a class="el" href="classos_1_1rtos_1_1mutex_1_1_attributes.html#a7ed595ecfb30ce50afafbe7ab1ddb701">mx_priority_ceiling</a> are within the maximum range of priorities defined under the SCHED_FIFO scheduling policy.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_setprioceiling()</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00096">96</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00105">105</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -335,7 +363,7 @@ Protected Attributes</h2></td></tr>
 <p>When a thread makes a call to <code><a class="el" href="classos_1_1rtos_1_1_mutex.html#a525b1d221c3ecfac6ccfbb4cc4457c92" title="Lock the mutex. ">Mutex::lock()</a></code>, the mutex was initialised with the protocol attribute having the value <code>mutex::protocol::inherit</code>, when the calling thread is blocked because the mutex is owned by another thread, that owner thread shall inherit the priority level of the calling thread as long as it continues to own the mutex. The implementation shall update its execution priority to the maximum of its assigned priority and all its inherited priorities. Furthermore, if this owner thread itself becomes blocked on another mutex with the protocol attribute having the value <code>mutex::protocol::inherit</code>, the same priority inheritance effect shall be propagated to this other owner thread, in a recursive manner.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_setprotocol()</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00101">101</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00110">110</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -361,7 +389,7 @@ Protected Attributes</h2></td></tr>
 </ul>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00106">106</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00115">115</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +415,7 @@ Protected Attributes</h2></td></tr>
 <p>The mutex type affects the behaviour of calls which lock and unlock the mutex. See <code><a class="el" href="classos_1_1rtos_1_1_mutex.html#a525b1d221c3ecfac6ccfbb4cc4457c92" title="Lock the mutex. ">Mutex::lock()</a></code> for details. An implementation may map <code>mutex::type::_default</code> to one of the other mutex types.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_settype.html"><code>pthread_mutexattr_settype()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00111">111</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00120">120</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +440,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

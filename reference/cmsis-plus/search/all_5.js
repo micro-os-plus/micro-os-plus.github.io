@@ -46,7 +46,7 @@ var searchData=
   ['exception_2dhandlers_2ec',['exception-handlers.c',['../exception-handlers_8c.html',1,'']]],
   ['exception_2dhandlers_2eh',['exception-handlers.h',['../exception-handlers_8h.html',1,'']]],
   ['exceptionstackframe',['ExceptionStackFrame',['../struct_exception_stack_frame.html',1,'']]],
-  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64',1,'os::rtos::Thread::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]],
+  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]],
   ['exit_2ec',['exit.c',['../exit_8c.html',1,'']]],
   ['exit_5ffunc_5ft',['exit_func_t',['../atexit_8h.html#a075b063ab79e6c5aeef211291c25b5cd',1,'atexit.h']]]
 ];

@@ -34,7 +34,6 @@ var searchData=
   ['os_5fsemaphore_5fcount_5ft',['os_semaphore_count_t',['../os-c-decls_8h.html#ae4141b84b2ee40838c36b6c606cf7e5e',1,'os-c-decls.h']]],
   ['os_5fsemaphore_5ft',['os_semaphore_t',['../os-c-decls_8h.html#a6f43e7bfa993ee025cc7238390c91691',1,'os-c-decls.h']]],
   ['os_5fsystick_5fclock_5fcurrent_5ft',['os_systick_clock_current_t',['../os-c-decls_8h.html#abfe934a54705933d9fb887e494d5a202',1,'os-c-decls.h']]],
-  ['os_5fsysticks_5ft',['os_systicks_t',['../os-c-decls_8h.html#aedf2838db92c8eb2d19cd62fbb009fff',1,'os-c-decls.h']]],
   ['os_5fthread_5ffunc_5fargs_5ft',['os_thread_func_args_t',['../os-c-decls_8h.html#a8b048f911624cd470f327cea02245790',1,'os-c-decls.h']]],
   ['os_5fthread_5ffunc_5ft',['os_thread_func_t',['../os-c-decls_8h.html#a5c927d23d4ba368f34a1a73eefb2d6b3',1,'os-c-decls.h']]],
   ['os_5fthread_5fprio_5ft',['os_thread_prio_t',['../os-c-decls_8h.html#a314f97c14203c7ec9cabd3adc7b1d95d',1,'os-c-decls.h']]],

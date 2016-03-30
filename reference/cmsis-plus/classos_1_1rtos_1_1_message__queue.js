@@ -21,6 +21,7 @@ var classos_1_1rtos_1_1_message__queue =
     [ "timed_send", "classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067", null ],
     [ "try_receive", "classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c", null ],
     [ "try_send", "classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6", null ],
+    [ "clock_", "classos_1_1rtos_1_1_message__queue.html#a1393db5f75691ad76f56316342743d5d", null ],
     [ "count_", "classos_1_1rtos_1_1_message__queue.html#aa4e5b41bca3b7256c6f93dc427901819", null ],
     [ "first_free_", "classos_1_1rtos_1_1_message__queue.html#a844a14de75f7ae765e8b4615503ccceb", null ],
     [ "flags_", "classos_1_1rtos_1_1_message__queue.html#a3217a2a5314001128622fd44748948b9", null ],

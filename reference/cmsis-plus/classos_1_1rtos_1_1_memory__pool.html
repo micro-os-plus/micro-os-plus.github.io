@@ -216,6 +216,8 @@ Private Member Variables</h2></td></tr>
 <tr class="separator:a728d69104be7165a0af33d13eb7f49e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa172792b51a3a5e85f9261a757480011"><td class="memItemLeft" align="right" valign="top">port::Waiting_threads_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa172792b51a3a5e85f9261a757480011">list_</a></td></tr>
 <tr class="separator:aa172792b51a3a5e85f9261a757480011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c6d9080d9335a3e731e3600d3c0629"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a29c6d9080d9335a3e731e3600d3c0629">clock_</a></td></tr>
+<tr class="separator:a29c6d9080d9335a3e731e3600d3c0629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae82a7ba6f5b86ce646380546d3e17c1b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae82a7ba6f5b86ce646380546d3e17c1b">pool_addr_</a></td></tr>
 <tr class="memdesc:ae82a7ba6f5b86ce646380546d3e17c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory address where the pool is located.  <a href="#ae82a7ba6f5b86ce646380546d3e17c1b">More...</a><br /></td></tr>
 <tr class="separator:ae82a7ba6f5b86ce646380546d3e17c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,7 +244,7 @@ Private Member Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Create the pool object.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f">Memory_pool</a> mp { pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  <span class="keywordtype">void</span>* buf;</div><div class="line"></div><div class="line">  <span class="comment">// Get one block from pool.</span></div><div class="line">  buf = mp.alloc();</div><div class="line"></div><div class="line">  <span class="comment">// ... use the buffer</span></div><div class="line"></div><div class="line">  <span class="comment">// Free the buffer.</span></div><div class="line">  mp.free(buf);</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is no equivalent of calloc(); to initialise to zero a memory block, use: <div class="fragment"><div class="line">block = mp.alloc();</div><div class="line">memset (block, 0, mp.block_size ());</div></div><!-- fragment --></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. Current functionality inspired by ARM CMSIS, with extensions. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00132">132</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00141">141</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a728d69104be7165a0af33d13eb7f49e3"></a>
 <div class="memitem">
@@ -269,7 +271,7 @@ Private Member Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00382">382</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00397">397</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -311,7 +313,7 @@ Private Member Variables</h2></td></tr>
 <p>For default memory pool objects, the storage is dynamically allocated.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00196">196</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00205">205</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +362,7 @@ Private Member Variables</h2></td></tr>
 <p>If the attributes define a storage area, it is used, otherwise it is dynamically allocated.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00227">227</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00236">236</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +385,7 @@ Private Member Variables</h2></td></tr>
 <p>If the storage for the memory pool was dynamically allocated, it is deallocated.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00284">284</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00296">296</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +415,7 @@ Private Member Variables</h2></td></tr>
 <p>Internal initialisation. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00301">301</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00313">313</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -443,7 +445,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to block or <code>nullptr</code> if no more blocks available. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00324">324</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00336">336</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ Private Member Variables</h2></td></tr>
 <p>The function uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00352">352</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00364">364</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -498,7 +500,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The block size, in bytes. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00440">440</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00455">455</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +530,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The max number of blocks in the pool. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00434">434</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00449">449</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +560,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of blocks used from the queue. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00446">446</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00461">461</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +596,7 @@ Private Member Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00452">452</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00467">467</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -625,7 +627,7 @@ Private Member Variables</h2></td></tr>
 <p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00493">493</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00505">505</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -661,7 +663,7 @@ Private Member Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00458">458</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00473">473</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -692,7 +694,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -728,7 +730,7 @@ Private Member Variables</h2></td></tr>
 </dl>
 <p>Identical memory pools should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00428">428</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00443">443</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -755,7 +757,7 @@ Private Member Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00464">464</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00479">479</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -785,7 +787,7 @@ Private Member Variables</h2></td></tr>
 <p>Reset the memory pool to the initial state, with all blocks free.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00533">533</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00545">545</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -815,7 +817,7 @@ Private Member Variables</h2></td></tr>
 <p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00426">426</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00438">438</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -840,7 +842,7 @@ Private Member Variables</h2></td></tr>
 <p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00406">406</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00418">418</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +867,7 @@ Private Member Variables</h2></td></tr>
 
 <p>The size of a block, in bytes. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00359">359</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00374">374</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -889,7 +891,29 @@ Private Member Variables</h2></td></tr>
 
 <p>The number of blocks in the pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00354">354</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00369">369</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29c6d9080d9335a3e731e3600d3c0629"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>&amp; os::rtos::Memory_pool::clock_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00351">351</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -913,7 +937,7 @@ Private Member Variables</h2></td></tr>
 
 <p>The current number of blocks allocated from the pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00364">364</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00379">379</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +961,7 @@ Private Member Variables</h2></td></tr>
 
 <p>Pointer to the first free block, or nullptr. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00372">372</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00387">387</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -961,7 +985,7 @@ Private Member Variables</h2></td></tr>
 
 <p>Internal status bits. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00377">377</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00392">392</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -983,7 +1007,7 @@ Private Member Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00336">336</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00350">350</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +1032,7 @@ Private Member Variables</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1057,7 @@ Private Member Variables</h2></td></tr>
 <p>Memory address where the pool is located. </p>
 <p>If the pool was dynamically allocated, the <code>flags_allocated</code> bit will be set in <code>flags_</code> and the destructor will deallocate.. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00344">344</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00359">359</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>

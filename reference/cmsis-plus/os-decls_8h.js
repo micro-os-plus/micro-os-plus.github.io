@@ -1,5 +1,6 @@
 var os_decls_8h =
 [
+    [ "Clocked_attribute", "classos_1_1rtos_1_1_clocked__attribute.html", "classos_1_1rtos_1_1_clocked__attribute" ],
     [ "Named_object", "classos_1_1rtos_1_1_named__object.html", "classos_1_1rtos_1_1_named__object" ],
     [ "os_assert_err", "os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39", null ],
     [ "os_assert_throw", "os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137", null ],

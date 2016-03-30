@@ -3,7 +3,7 @@ var classos_1_1rtos_1_1_systick__clock =
     [ "current_t", "classos_1_1rtos_1_1_systick__clock.html#a86be53558c6f19eafc0721a5ee701d2b", null ],
     [ "Systick_clock", "classos_1_1rtos_1_1_systick__clock.html#aa0c7cf1f1dd428d1eb81438c8dc72788", null ],
     [ "~Systick_clock", "classos_1_1rtos_1_1_systick__clock.html#ab50360f16ef2aa9fa68415a44694f256", null ],
-    [ "_wait", "classos_1_1rtos_1_1_systick__clock.html#a3e4c2b535e7d9109f2a08e8f83031e26", null ],
+    [ "_wait_until", "classos_1_1rtos_1_1_systick__clock.html#a60f3f9c2a35dd37458b1b59d4b1188d7", null ],
     [ "interrupt_service_routine", "classos_1_1rtos_1_1_systick__clock.html#aae5801d41791513092df4702cfab5bce", null ],
     [ "now", "classos_1_1rtos_1_1_systick__clock.html#a61d411d1a5e51e536daa37e3ee5faa01", null ],
     [ "now", "classos_1_1rtos_1_1_systick__clock.html#a4fe0716286f0b5f2426a7d3c03101be5", null ],
@@ -14,14 +14,14 @@ var classos_1_1rtos_1_1_systick__clock =
     [ "steady_now", "classos_1_1rtos_1_1_systick__clock.html#ae0b8b08d8db52720c93475bd51a35f56", null ],
     [ "ticks_cast", "classos_1_1rtos_1_1_systick__clock.html#abfd02e91207b5351fc799c02f0d96d11", null ],
     [ "ticks_cast", "classos_1_1rtos_1_1_systick__clock.html#a7d95a604e2c0eaefa029a07ce11e893d", null ],
-    [ "wait_for", "classos_1_1rtos_1_1_systick__clock.html#af986a73c61fa0909186fedc993fd8d16", null ],
+    [ "wait_for", "classos_1_1rtos_1_1_systick__clock.html#ad829f97066fc116d2009e4b9279aa8cd", null ],
+    [ "adjusted_list_", "classos_1_1rtos_1_1_systick__clock.html#add0977fd6b4cb34478e395f81cfcdf48", null ],
     [ "core_frequency_hz", "classos_1_1rtos_1_1_systick__clock.html#a45559d7b700003ea96b419f30a2e5391", null ],
     [ "cycles", "classos_1_1rtos_1_1_systick__clock.html#a943c04fad6cfefd2fdbec4e4875d63f0", null ],
     [ "divisor", "classos_1_1rtos_1_1_systick__clock.html#ad5136b2c7e390f892b65baa12d2391e8", null ],
     [ "frequency_hz", "classos_1_1rtos_1_1_systick__clock.html#adb0ec36bc0ec0046d668ca5c22e5dccf", null ],
     [ "offset_", "classos_1_1rtos_1_1_systick__clock.html#a736f265fb3c4ce92559f1cd833083d42", null ],
     [ "sleep_count_", "classos_1_1rtos_1_1_systick__clock.html#ab76c42bb964e1e1634c32c020d201105", null ],
-    [ "sleep_for_list_", "classos_1_1rtos_1_1_systick__clock.html#ad7d19b7d348654572429a8370c4a29e8", null ],
-    [ "sleep_until_list_", "classos_1_1rtos_1_1_systick__clock.html#a8a2ff61b6c34469524285eeea5643b43", null ],
-    [ "steady_count_", "classos_1_1rtos_1_1_systick__clock.html#a290fb647db5868696ca6a9e165f297ed", null ]
+    [ "steady_count_", "classos_1_1rtos_1_1_systick__clock.html#a290fb647db5868696ca6a9e165f297ed", null ],
+    [ "steady_list_", "classos_1_1rtos_1_1_systick__clock.html#a84fd4bac67e766f17fba743ea93e26ec", null ]
 ];

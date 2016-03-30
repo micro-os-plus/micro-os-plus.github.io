@@ -47,14 +47,14 @@ var NAVTREEINDEX =
 "__sbrk_8c.html",
 "classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e",
 "classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96",
-"classos_1_1rtos_1_1_message__queue.html#a3e722f100e703c7f05275b5a4f75e6e0aa8b5e00f8ac9172a7288ffce9a68ab8c",
-"classos_1_1rtos_1_1mutex_1_1_attributes.html#a4fad6524f7c3d67e243b0726aae90d2d",
-"exception-handlers_8c.html#a6303e1f258cbdc1f970ce579cc015623",
-"namespaceos_1_1rtos_1_1condvar.html",
-"os-c-wrapper_8cpp.html#a2b6aa44100ade594e3f21c61a99f54b0",
-"os-timer_8cpp.html",
-"structos__mqueue__s.html#a2f03ab10e2c935fa9b4d8d4093a6e4d9",
-"usbd-wrapper_8h.html"
+"classos_1_1rtos_1_1_mutex.html#a1ced578ffc847e14547b02ee1473c44e",
+"classos_1_1rtos_1_1mqueue_1_1_attributes.html#a1ced578ffc847e14547b02ee1473c44e",
+"dir_c96b264f061306113475babfb20524ab.html",
+"namespaceos_1_1driver_1_1serial.html",
+"os-c-wrapper_8cpp.html#a156238f12fa5beb1cb0a29a934a5cc05",
+"os-thread_8cpp.html#a527cca157e8ac579442f34a1a88589c9",
+"structos__mempool__s.html#a87288e1ea06035ba07217b1fe105cda6",
+"usb_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

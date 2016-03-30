@@ -23,19 +23,19 @@ var hierarchy =
     [ "os::rtos::Clock_list_guard< CS_T, List_T, Node_T >", "classos_1_1rtos_1_1_clock__list__guard.html", null ],
     [ "os::estd::condition_variable", "classos_1_1estd_1_1condition__variable.html", null ],
     [ "os::estd::condition_variable_any", "classos_1_1estd_1_1condition__variable__any.html", null ],
-    [ "os::rtos::interrupts::Critical_section", "classos_1_1rtos_1_1interrupts_1_1_critical__section.html", null ],
     [ "os::rtos::scheduler::Critical_section", "classos_1_1rtos_1_1scheduler_1_1_critical__section.html", null ],
+    [ "os::rtos::interrupts::Critical_section", "classos_1_1rtos_1_1interrupts_1_1_critical__section.html", null ],
     [ "os::estd::defer_lock_t", "structos_1_1estd_1_1defer__lock__t.html", null ],
     [ "os::rtos::Double_list", "classos_1_1rtos_1_1_double__list.html", [
       [ "os::rtos::Clock_timestamps_list", "classos_1_1rtos_1_1_clock__timestamps__list.html", null ],
       [ "os::rtos::Waiting_threads_list", "classos_1_1rtos_1_1_waiting__threads__list.html", null ]
     ] ],
     [ "os::rtos::Double_list_links", "classos_1_1rtos_1_1_double__list__links.html", [
-      [ "os::rtos::Double_list_node_thread", "classos_1_1rtos_1_1_double__list__node__thread.html", null ],
-      [ "os::rtos::Double_list_node_timestamp", "classos_1_1rtos_1_1_double__list__node__timestamp.html", [
-        [ "os::rtos::Double_list_node_clock", "classos_1_1rtos_1_1_double__list__node__clock.html", null ],
-        [ "os::rtos::Double_list_node_timer", "classos_1_1rtos_1_1_double__list__node__timer.html", null ]
-      ] ]
+      [ "os::rtos::Timestamp_node", "classos_1_1rtos_1_1_timestamp__node.html", [
+        [ "os::rtos::Timeout_thread_node", "classos_1_1rtos_1_1_timeout__thread__node.html", null ],
+        [ "os::rtos::Timer_node", "classos_1_1rtos_1_1_timer__node.html", null ]
+      ] ],
+      [ "os::rtos::Waiting_thread_node", "classos_1_1rtos_1_1_waiting__thread__node.html", null ]
     ] ],
     [ "ExceptionStackFrame", "struct_exception_stack_frame.html", null ],
     [ "false_type", null, [
@@ -51,31 +51,34 @@ var hierarchy =
       [ "os::estd::timed_mutex", "classos_1_1estd_1_1timed__mutex.html", null ]
     ] ],
     [ "os::rtos::Named_object", "classos_1_1rtos_1_1_named__object.html", [
+      [ "os::rtos::Clocked_attribute", "classos_1_1rtos_1_1_clocked__attribute.html", [
+        [ "os::rtos::condvar::Attributes", "classos_1_1rtos_1_1condvar_1_1_attributes.html", null ],
+        [ "os::rtos::evflags::Attributes", "classos_1_1rtos_1_1evflags_1_1_attributes.html", null ],
+        [ "os::rtos::mempool::Attributes", "classos_1_1rtos_1_1mempool_1_1_attributes.html", null ],
+        [ "os::rtos::mqueue::Attributes", "classos_1_1rtos_1_1mqueue_1_1_attributes.html", null ],
+        [ "os::rtos::mutex::Attributes", "classos_1_1rtos_1_1mutex_1_1_attributes.html", [
+          [ "os::rtos::mutex::Recursive_attributes", "classos_1_1rtos_1_1mutex_1_1_recursive__attributes.html", null ]
+        ] ],
+        [ "os::rtos::semaphore::Attributes", "classos_1_1rtos_1_1semaphore_1_1_attributes.html", [
+          [ "os::rtos::semaphore::Binary_attributes", "classos_1_1rtos_1_1semaphore_1_1_binary__attributes.html", null ]
+        ] ],
+        [ "os::rtos::timer::Attributes", "classos_1_1rtos_1_1timer_1_1_attributes.html", [
+          [ "os::rtos::timer::Periodic_attributes", "classos_1_1rtos_1_1timer_1_1_periodic__attributes.html", null ]
+        ] ]
+      ] ],
       [ "os::rtos::Condition_variable", "classos_1_1rtos_1_1_condition__variable.html", null ],
-      [ "os::rtos::condvar::Attributes", "classos_1_1rtos_1_1condvar_1_1_attributes.html", null ],
       [ "os::rtos::Event_flags", "classos_1_1rtos_1_1_event__flags.html", null ],
-      [ "os::rtos::evflags::Attributes", "classos_1_1rtos_1_1evflags_1_1_attributes.html", null ],
       [ "os::rtos::Memory_pool", "classos_1_1rtos_1_1_memory__pool.html", null ],
-      [ "os::rtos::mempool::Attributes", "classos_1_1rtos_1_1mempool_1_1_attributes.html", null ],
       [ "os::rtos::Message_queue", "classos_1_1rtos_1_1_message__queue.html", null ],
-      [ "os::rtos::mqueue::Attributes", "classos_1_1rtos_1_1mqueue_1_1_attributes.html", null ],
       [ "os::rtos::Mutex", "classos_1_1rtos_1_1_mutex.html", null ],
-      [ "os::rtos::mutex::Attributes", "classos_1_1rtos_1_1mutex_1_1_attributes.html", [
-        [ "os::rtos::mutex::Recursive_attributes", "classos_1_1rtos_1_1mutex_1_1_recursive__attributes.html", null ]
-      ] ],
       [ "os::rtos::Semaphore", "classos_1_1rtos_1_1_semaphore.html", null ],
-      [ "os::rtos::semaphore::Attributes", "classos_1_1rtos_1_1semaphore_1_1_attributes.html", [
-        [ "os::rtos::semaphore::Binary_attributes", "classos_1_1rtos_1_1semaphore_1_1_binary__attributes.html", null ]
-      ] ],
       [ "os::rtos::Thread", "classos_1_1rtos_1_1_thread.html", null ],
       [ "os::rtos::thread::Attributes", "classos_1_1rtos_1_1thread_1_1_attributes.html", null ],
-      [ "os::rtos::Timer", "classos_1_1rtos_1_1_timer.html", null ],
-      [ "os::rtos::timer::Attributes", "classos_1_1rtos_1_1timer_1_1_attributes.html", [
-        [ "os::rtos::timer::Periodic_attributes", "classos_1_1rtos_1_1timer_1_1_periodic__attributes.html", null ]
-      ] ]
+      [ "os::rtos::Timer", "classos_1_1rtos_1_1_timer.html", null ]
     ] ],
     [ "os::estd::once_flag", "structos_1_1estd_1_1once__flag.html", null ],
     [ "os_clock_node_t", "structos__clock__node__t.html", null ],
+    [ "os_clock_t", "structos__clock__t.html", null ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", null ],
     [ "os_condvar_s", "structos__condvar__s.html", null ],
     [ "os_evflags_attr_s", "structos__evflags__attr__s.html", null ],
@@ -108,9 +111,9 @@ var hierarchy =
     [ "os::estd::recursive_mutex", "classos_1_1estd_1_1recursive__mutex.html", [
       [ "os::estd::recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html", null ]
     ] ],
-    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
     [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
     [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
+    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
     [ "os::estd::chrono::Systick_clock", "classos_1_1estd_1_1chrono_1_1_systick__clock.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],

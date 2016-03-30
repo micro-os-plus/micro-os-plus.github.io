@@ -175,9 +175,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6f7a57857cfb1806f6ffb7e139c0bcce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ac83bf77031e2c139bb553426b0805d2d">thread::state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a6f7a57857cfb1806f6ffb7e139c0bcce">sched_state</a> (void) const </td></tr>
 <tr class="memdesc:a6f7a57857cfb1806f6ffb7e139c0bcce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scheduler status of this thread.  <a href="#a6f7a57857cfb1806f6ffb7e139c0bcce">More...</a><br /></td></tr>
 <tr class="separator:a6f7a57857cfb1806f6ffb7e139c0bcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36e40610400fba15e445695974cd712e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a36e40610400fba15e445695974cd712e">wakeup</a> (void)</td></tr>
-<tr class="memdesc:a36e40610400fba15e445695974cd712e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake-up the thread.  <a href="#a36e40610400fba15e445695974cd712e">More...</a><br /></td></tr>
-<tr class="separator:a36e40610400fba15e445695974cd712e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a96f3878766f59048144ed98863f133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a1a96f3878766f59048144ed98863f133">resume</a> (void)</td></tr>
+<tr class="memdesc:a1a96f3878766f59048144ed98863f133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the thread.  <a href="#a1a96f3878766f59048144ed98863f133">More...</a><br /></td></tr>
+<tr class="separator:a1a96f3878766f59048144ed98863f133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6749ec40f4efc916b4616ccc1b28658"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#ab6749ec40f4efc916b4616ccc1b28658">function_args</a> (void) const </td></tr>
 <tr class="memdesc:ab6749ec40f4efc916b4616ccc1b28658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread function arguments.  <a href="#ab6749ec40f4efc916b4616ccc1b28658">More...</a><br /></td></tr>
 <tr class="separator:ab6749ec40f4efc916b4616ccc1b28658"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,18 +214,16 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a46b7138eee7bf69fd4785037c696aaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae309b8779ce2d831369fd545dd269882"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_thread.html">Thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#ae309b8779ce2d831369fd545dd269882">joiner_</a></td></tr>
 <tr class="separator:ae309b8779ce2d831369fd545dd269882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbafb07feb6d106667ea3cca6eba3818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#acbafb07feb6d106667ea3cca6eba3818">waiting_node_</a></td></tr>
-<tr class="separator:acbafb07feb6d106667ea3cca6eba3818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d01a6db56d0947b3642973b1fc80585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__node__clock.html">Double_list_node_clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a3d01a6db56d0947b3642973b1fc80585">clock_node_</a></td></tr>
-<tr class="separator:a3d01a6db56d0947b3642973b1fc80585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ab2188272e2eda1f27229a5bd3eca2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#ab8ab2188272e2eda1f27229a5bd3eca2">waiting_node_</a></td></tr>
+<tr class="separator:ab8ab2188272e2eda1f27229a5bd3eca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6001efb01f9dad9376470fcfbd817d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a6001efb01f9dad9376470fcfbd817d67">clock_node_</a></td></tr>
+<tr class="separator:a6001efb01f9dad9376470fcfbd817d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271099ccd0fa842d067aa89e2fd5a732"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a271099ccd0fa842d067aa89e2fd5a732">stack_size_bytes_</a></td></tr>
 <tr class="separator:a271099ccd0fa842d067aa89e2fd5a732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b767f10a973eb5640852b7e12ccd4e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ac83bf77031e2c139bb553426b0805d2d">thread::state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a5b767f10a973eb5640852b7e12ccd4e1">sched_state_</a></td></tr>
 <tr class="separator:a5b767f10a973eb5640852b7e12ccd4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6b86867c6dcc9e2e0cc088e365b9fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">thread::priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#acb6b86867c6dcc9e2e0cc088e365b9fe">prio_</a></td></tr>
 <tr class="separator:acb6b86867c6dcc9e2e0cc088e365b9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88f029af724c2c39ae1a5ee5132f237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#af88f029af724c2c39ae1a5ee5132f237">wakeup_reason_</a></td></tr>
-<tr class="separator:af88f029af724c2c39ae1a5ee5132f237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab36f37b895c94f45cac841c00e9f5722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#ab36f37b895c94f45cac841c00e9f5722">sig_mask_</a></td></tr>
 <tr class="separator:ab36f37b895c94f45cac841c00e9f5722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1e7318a3f64afaeb14d0be375d8823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structos_1_1rtos_1_1os__thread__user__storage__t.html">os_thread_user_storage_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a6c1e7318a3f64afaeb14d0be375d8823">user_storage_</a></td></tr>
@@ -248,8 +246,8 @@ Friends</h2></td></tr>
 <tr class="memitem:a3bda514deb3079a70f63da75bf1fe9fd"><td class="memTemplParams" colspan="2">template&lt;typename CS_T , typename List_T , typename Node_T &gt; </td></tr>
 <tr class="memitem:a3bda514deb3079a70f63da75bf1fe9fd"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a3bda514deb3079a70f63da75bf1fe9fd">Thread_list_guard</a></td></tr>
 <tr class="separator:a3bda514deb3079a70f63da75bf1fe9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ec1dce0c19254cf3cc7874e239eb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a63ec1dce0c19254cf3cc7874e239eb71">this_thread::sleep</a> (void)</td></tr>
-<tr class="separator:a63ec1dce0c19254cf3cc7874e239eb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5c1e7b3ff1a06a38dffa58a9bba11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a8b5c1e7b3ff1a06a38dffa58a9bba11c">this_thread::wait</a> (void)</td></tr>
+<tr class="separator:a8b5c1e7b3ff1a06a38dffa58a9bba11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95935cf5eaad0c4b3509049e814f06e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a95935cf5eaad0c4b3509049e814f06e7">this_thread::exit</a> (void *exit_ptr)</td></tr>
 <tr class="separator:a95935cf5eaad0c4b3509049e814f06e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d29917018290bb0f1de232d56e99a37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a5d29917018290bb0f1de232d56e99a37">this_thread::sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
@@ -261,26 +259,26 @@ Friends</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4d84e2244af0bcb191450accfbeb8cbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a4d84e2244af0bcb191450accfbeb8cbd">_sleep</a> (void)</td></tr>
-<tr class="memdesc:a4d84e2244af0bcb191450accfbeb8cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend this thread.  <a href="#a4d84e2244af0bcb191450accfbeb8cbd">More...</a><br /></td></tr>
-<tr class="separator:a4d84e2244af0bcb191450accfbeb8cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff00b11ac8009e8c93e4b6622befa64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64">exit</a> (void *exit_ptr=nullptr)</td></tr>
-<tr class="memdesc:a8ff00b11ac8009e8c93e4b6622befa64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate thread by itself.  <a href="#a8ff00b11ac8009e8c93e4b6622befa64">More...</a><br /></td></tr>
-<tr class="separator:a8ff00b11ac8009e8c93e4b6622befa64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a290fdad87e54541b91811d62a5f57f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a290fdad87e54541b91811d62a5f57f50">sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
-<tr class="memdesc:a290fdad87e54541b91811d62a5f57f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for signal flags.  <a href="#a290fdad87e54541b91811d62a5f57f50">More...</a><br /></td></tr>
-<tr class="separator:a290fdad87e54541b91811d62a5f57f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5bd5fb10f9a2e09f15820ac3f7bc08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a6f5bd5fb10f9a2e09f15820ac3f7bc08">try_sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
-<tr class="memdesc:a6f5bd5fb10f9a2e09f15820ac3f7bc08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for signal flags.  <a href="#a6f5bd5fb10f9a2e09f15820ac3f7bc08">More...</a><br /></td></tr>
-<tr class="separator:a6f5bd5fb10f9a2e09f15820ac3f7bc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1218fa4e0d976eb664f01c7184a02375"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a1218fa4e0d976eb664f01c7184a02375">timed_sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
-<tr class="memdesc:a1218fa4e0d976eb664f01c7184a02375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for signal flags.  <a href="#a1218fa4e0d976eb664f01c7184a02375">More...</a><br /></td></tr>
-<tr class="separator:a1218fa4e0d976eb664f01c7184a02375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af451f51da19ad1fe4f57aa23ba4a15ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#af451f51da19ad1fe4f57aa23ba4a15ba">_wait</a> (void)</td></tr>
+<tr class="memdesc:af451f51da19ad1fe4f57aa23ba4a15ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend this thread and wait for an event.  <a href="#af451f51da19ad1fe4f57aa23ba4a15ba">More...</a><br /></td></tr>
+<tr class="separator:af451f51da19ad1fe4f57aa23ba4a15ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb81fd25616e4dfb23bcd60e68d53ed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#acb81fd25616e4dfb23bcd60e68d53ed3">_exit</a> (void *exit_ptr=nullptr)</td></tr>
+<tr class="memdesc:acb81fd25616e4dfb23bcd60e68d53ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate thread by itself.  <a href="#acb81fd25616e4dfb23bcd60e68d53ed3">More...</a><br /></td></tr>
+<tr class="separator:acb81fd25616e4dfb23bcd60e68d53ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26f195d3ddae5acf28fc48359261557"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#ab26f195d3ddae5acf28fc48359261557">_sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
+<tr class="memdesc:ab26f195d3ddae5acf28fc48359261557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for signal flags.  <a href="#ab26f195d3ddae5acf28fc48359261557">More...</a><br /></td></tr>
+<tr class="separator:ab26f195d3ddae5acf28fc48359261557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91fdb18fa38076bd56c7daddcd0f8d1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a91fdb18fa38076bd56c7daddcd0f8d1e">_try_sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
+<tr class="memdesc:a91fdb18fa38076bd56c7daddcd0f8d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for signal flags.  <a href="#a91fdb18fa38076bd56c7daddcd0f8d1e">More...</a><br /></td></tr>
+<tr class="separator:a91fdb18fa38076bd56c7daddcd0f8d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a866de15e38c14c95f6c39f9e9d57b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a0a866de15e38c14c95f6c39f9e9d57b4">_timed_sig_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
+<tr class="memdesc:a0a866de15e38c14c95f6c39f9e9d57b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for signal flags.  <a href="#a0a866de15e38c14c95f6c39f9e9d57b4">More...</a><br /></td></tr>
+<tr class="separator:a0a866de15e38c14c95f6c39f9e9d57b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16553b693dc0aab46b9cd8812bb509dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#a16553b693dc0aab46b9cd8812bb509dc">_try_wait</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> mask, <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a> mode)</td></tr>
 <tr class="memdesc:a16553b693dc0aab46b9cd8812bb509dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal wait for signal.  <a href="#a16553b693dc0aab46b9cd8812bb509dc">More...</a><br /></td></tr>
 <tr class="separator:a16553b693dc0aab46b9cd8812bb509dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7cc69f15755c7cf0cf98314ab6e5901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#af7cc69f15755c7cf0cf98314ab6e5901">_destroy</a> (void)</td></tr>
-<tr class="memdesc:af7cc69f15755c7cf0cf98314ab6e5901"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual destructor, also called from <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a> and <a class="el" href="classos_1_1rtos_1_1_thread.html#aac3754078e72a953ec8f5ecda951a2ef" title="Force thread termination. ">kill()</a>.  <a href="#af7cc69f15755c7cf0cf98314ab6e5901">More...</a><br /></td></tr>
+<tr class="memdesc:af7cc69f15755c7cf0cf98314ab6e5901"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual destructor, also called from <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> and <a class="el" href="classos_1_1rtos_1_1_thread.html#aac3754078e72a953ec8f5ecda951a2ef" title="Force thread termination. ">kill()</a>.  <a href="#af7cc69f15755c7cf0cf98314ab6e5901">More...</a><br /></td></tr>
 <tr class="separator:af7cc69f15755c7cf0cf98314ab6e5901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffe0f65c42f83b02dc16ff3dd0bd33a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html#aeffe0f65c42f83b02dc16ff3dd0bd33a">_invoke_with_exit</a> (<a class="el" href="classos_1_1rtos_1_1_thread.html">Thread</a> *thread)</td></tr>
 <tr class="memdesc:aeffe0f65c42f83b02dc16ff3dd0bd33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke terminating thread function.  <a href="#aeffe0f65c42f83b02dc16ff3dd0bd33a">More...</a><br /></td></tr>
@@ -292,7 +290,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="os_8h.html">cmsis-plus/rtos/os.h</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceos_1_1rtos.html">os::rtos</a>;</div><div class="line"></div><div class="line"><span class="comment">// Thread function.</span></div><div class="line"><span class="keywordtype">void</span>*</div><div class="line">func(<span class="keywordtype">void</span>* args)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something.</span></div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="os-c-api_8h.html#adc9fe392fc6245784eb029f4eecfb8dd">os_main</a>(<span class="keywordtype">int</span> <a class="code" href="namespaceos_1_1rtos_1_1thread.html#a9738b5728fee3bfd489ca749671ebaee">argc</a>, <span class="keywordtype">char</span>* <a class="code" href="namespaceos_1_1rtos_1_1thread.html#a0400168a8152643d538cd5420ed8c4fc">argv</a>[])</div><div class="line">{</div><div class="line">  <span class="comment">// Create new thread, with function and no arguments.</span></div><div class="line">  <a class="code" href="classos_1_1rtos_1_1_thread.html">Thread</a> th { func, <span class="keyword">nullptr</span> };</div><div class="line"></div><div class="line">  <span class="comment">// Do something.</span></div><div class="line"></div><div class="line">  <span class="comment">// Wait for thread to terminate.</span></div><div class="line">  th.<a class="code" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518">join</a>();</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00263">263</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00272">272</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa6683ed71435ffac38839854a5a691ca"></a>
 <div class="memitem">
@@ -328,12 +326,12 @@ Private Member Functions</h2></td></tr>
 </dl>
 <p>This constructor shall initialise the thread object with default settings. The effect shall be equivalent to creating a thread object referring to the attributes in <code><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49" title="Default thread initialiser. ">thread::initializer</a></code>. Upon successful initialisation, the state of the thread object shall become initialised, and the thread is added to the ready list.</p>
 <p>Only the thread object itself may be used for running the function. It is not allowed to make copies of condition variable objects.</p>
-<p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
+<p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
 <p>For default thread objects, the stack is dynamically allocated, using the default size.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00242">242</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00251">251</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -379,11 +377,11 @@ Private Member Functions</h2></td></tr>
 <p>This constructor shall initialise the thread object with attributes referenced by <em>attr</em>. If the attributes specified by <em>attr</em> are modified later, the thread attributes shall not be affected. Upon successful initialisation, the state of the thread object shall become initialised, and the thread is added to the ready list.</p>
 <p>Only the thread object itself may be used for running the function. It is not allowed to make copies of thread objects.</p>
 <p>In cases where default thread attributes are appropriate, the variable <code><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49" title="Default thread initialiser. ">thread::initializer</a></code> can be used to initialise threads. The effect shall be equivalent to creating a thread object with the default constructor.</p>
-<p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
+<p>The thread is created to execute <em>function</em> with <em>args</em> as its sole argument. If the function returns, the effect shall be as if there was an implicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> using the return value of function as the exit status. Note that the thread in which <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> was originally invoked differs from this. When it returns from <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code>, the effect shall be as if there was an implicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> using the return value of <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> as the exit status.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00285">285</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00294">294</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +404,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00349">349</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00358">358</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -433,11 +431,49 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The actual destructor, also called from <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a> and <a class="el" href="classos_1_1rtos_1_1_thread.html#aac3754078e72a953ec8f5ecda951a2ef" title="Force thread termination. ">kill()</a>. </p>
+<p>The actual destructor, also called from <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> and <a class="el" href="classos_1_1rtos_1_1_thread.html#aac3754078e72a953ec8f5ecda951a2ef" title="Force thread termination. ">kill()</a>. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00360">360</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00369">369</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb81fd25616e4dfb23bcd60e68d53ed3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Thread::_exit </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>exit_ptr</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Terminate thread by itself. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">exit_ptr</td><td>Pointer to object to return (optional). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>Terminate the calling thread and make the value <em>value_ptr</em> available to any successful join with the terminating thread. Any cancellation cleanup handlers that have been pushed and not yet popped shall be popped in the reverse order that they were pushed and then executed. After all cancellation cleanup handlers have been executed, if the thread has any thread-specific data, appropriate destructor functions shall be called in an unspecified order. <a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> termination does not release any application visible process resources, including, but not limited to, mutexes and file descriptors, nor does it perform any process-level cleanup actions, including, but not limited to, calling any <code>atexit()</code> routines that may exist. An implicit call to <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> is made when a thread other than the thread in which <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a> was first invoked returns from the start routine that was used to create it. The function's return value shall serve as the thread's exit status. The behaviour of <code><a class="el" href="classos_1_1rtos_1_1_thread.html#acb81fd25616e4dfb23bcd60e68d53ed3" title="Terminate thread by itself. ">_exit()</a></code> is undefined if called from a cancellation cleanup handler or destructor function that was invoked as a result of either an implicit or explicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code>. After a thread has terminated, the result of access to local (auto) variables of the thread is undefined. Thus, references to local variables of the exiting thread should not be used for the <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> <em>value_ptr</em> parameter value.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_exit.html"><code>pthread_exit()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00670">670</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -471,14 +507,14 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Same as in POSIX, thread functions can return, and the behaviour should be as the thread called the <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a> function.</p>
-<p>This requires a proxy to run the thread function, get the result, and explicitly invoke <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a>. </p>
+<p>Same as in POSIX, thread functions can return, and the behaviour should be as the thread called the <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> function.</p>
+<p>This requires a proxy to run the thread function, get the result, and explicitly invoke <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a>. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00202">202</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00211">211</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4d84e2244af0bcb191450accfbeb8cbd"></a>
+<a class="anchor" id="ab26f195d3ddae5acf28fc48359261557"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -486,615 +522,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void os::rtos::Thread::_sleep </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Suspend this thread. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00391">391</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a16553b693dc0aab46b9cd8812bb509dc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::_try_wait </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
-          <td class="paramname"><em>oflags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Internal wait for signal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); may be zero. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Pointer where to store the current flags; may be <code>nullptr</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if either all or any flags are expected, and if the flags should be cleared. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>All expected flags are raised. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The mask is outside of the permitted range. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The expected condition did not occur. </td></tr>
-    <tr><td class="paramname">ENOTRECOVERABLE</td><td>Wait failed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Internal function used to test if the desired signal flags are raised. </p>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00855">855</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a69f3db9508cbf4faae64628eb0766ef8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::cancel </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cancel thread execution. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The cancel request was sent to the thread. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a69f3db9508cbf4faae64628eb0766ef8" title="Cancel thread execution. ">cancel()</a></code> function shall not return an error code of <code>EINTR</code>. If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error. error number is returned.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cancel.html"><code>pthread_cancel()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00627">627</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac209f38c6d73ec996286c83fc20b668b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::detach </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Detach a thread. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The thread was detached. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Indicate to the implementation that storage for the thread thread can be reclaimed when that thread terminates. If thread has not terminated, <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> shall not cause it to terminate. The behaviour is undefined if the value specified by the thread argument to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> does not refer to a joinable thread.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_detach.html"><code>pthread_detach()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00587">587</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8ff00b11ac8009e8c93e4b6622befa64"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::rtos::Thread::exit </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>exit_ptr</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Terminate thread by itself. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">exit_ptr</td><td>Pointer to object to return (optional). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Terminate the calling thread and make the value <em>value_ptr</em> available to any successful join with the terminating thread. Any cancellation cleanup handlers that have been pushed and not yet popped shall be popped in the reverse order that they were pushed and then executed. After all cancellation cleanup handlers have been executed, if the thread has any thread-specific data, appropriate destructor functions shall be called in an unspecified order. <a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> termination does not release any application visible process resources, including, but not limited to, mutexes and file descriptors, nor does it perform any process-level cleanup actions, including, but not limited to, calling any <code>atexit()</code> routines that may exist. An implicit call to <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a> is made when a thread other than the thread in which <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a> was first invoked returns from the start routine that was used to create it. The function's return value shall serve as the thread's exit status. The behaviour of <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> is undefined if called from a cancellation cleanup handler or destructor function that was invoked as a result of either an implicit or explicit call to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code>. After a thread has terminated, the result of access to local (auto) variables of the thread is undefined. Thus, references to local variables of the exiting thread should not be used for the <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a></code> <em>value_ptr</em> parameter value.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_exit.html"><code>pthread_exit()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00681">681</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab6749ec40f4efc916b4616ccc1b28658"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void * os::rtos::Thread::function_args </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the thread function arguments. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to arguments. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00799">799</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a707ddda84d350fe2371e0095ae5eddad"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool os::rtos::Thread::interrupted </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if interrupted. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>The thread was interrupted. </td></tr>
-    <tr><td class="paramname">false</td><td>The thread was not interrupted. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00638">638</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a957d4296bd3ba95e3f22b776a8c18518"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::join </td>
-          <td>(</td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>exit_ptr</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Wait for thread termination. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The thread was terminated. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Suspend execution of the calling thread until the target thread terminates, unless the target thread has already terminated. On return from a successful <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> call with a non-NULL <em>exit_ptr</em> argument, the value passed to <a class="el" href="classos_1_1rtos_1_1_thread.html#a8ff00b11ac8009e8c93e4b6622befa64" title="Terminate thread by itself. ">exit()</a> by the terminating thread shall be made available in the location referenced by <em>exit_ptr</em>. When a <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> returns successfully, the target thread has been terminated. The results of multiple simultaneous calls to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> specifying the same target thread are undefined. If the thread calling <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> is cancelled, then the target thread shall not be detached.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_join.html"><code>pthread_join()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<p>The <a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a> function may fail if: [EDEADLK] A deadlock was detected.</p>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> function shall not return an error code of [EINTR].</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00544">544</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aac3754078e72a953ec8f5ecda951a2ef"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::kill </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Force thread termination. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The tread was terminated.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_kill.html"><code>pthread_kill()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00717">717</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1ced578ffc847e14547b02ee1473c44e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char * os::rtos::Named_object::name </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get name. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
-<p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
-
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a13c4ed95ff23cdf8c05f8512b8e3f1db"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool os::rtos::Thread::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_thread.html">Thread</a> &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compare threads. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>The given thread is the same as this thread. </td></tr>
-    <tr><td class="paramname">false</td><td>The threads are different.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Identical threads should have the same memory address.</p>
-<p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
-
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00787">787</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adda417485c68f1af5c279f0e36dc6382"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sched_prio </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">thread::priority_t</a>&#160;</td>
-          <td class="paramname"><em>prio</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set dynamic scheduling priority. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The priority was set. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The value of prio is invalid for the scheduling policy of the specified thread.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Set the scheduling priority for the thread to the value given by <em>prio</em>.</p>
-<p>If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error.</p>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#af1118dae8826231c78f8805704f90a66" title="Get the current scheduling priority. ">sched_prio()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_setschedprio.html"><code>pthread_setschedprio()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00488">488</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af1118dae8826231c78f8805704f90a66"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">thread::priority_t</a> os::rtos::Thread::sched_prio </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current scheduling priority. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The thread priority.</dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00460">460</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6f7a57857cfb1806f6ffb7e139c0bcce"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ac83bf77031e2c139bb553426b0805d2d">thread::state_t</a> os::rtos::Thread::sched_state </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get scheduler status of this thread. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> scheduler state. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00793">793</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a684676c4acf5fe6ad4a7a0aa6ea4c854"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sig_clear </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
-          <td class="paramname"><em>oflags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear thread signal flags. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>nullptr</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to clear. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The flags were cleared. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The mask is zero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00829">829</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2661cc44d1b239382f95baba06ab2e3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> os::rtos::Thread::sig_get </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get/clear thread signal flags. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to get/clear; may be zero. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if the flags should be cleared (the other bits are ignored). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">flags</td><td>The selected bits from the current thread signal flags mask. </td></tr>
-    <tr><td class="paramname">sig::all</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Select the requested bits from the thread current signal mask and return them. If requested, clear the selected bits in the thread signal mask.</p>
-<p>If the mask is zero, return the full thread signal mask, without any masking or subsequent clearing.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00798">798</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2936cb3bffb587e83ec9d199ac1898c8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sig_raise </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
-          <td class="paramname"><em>oflags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Raise thread signal flags. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to raise. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>nullptr</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The flags were raised. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The mask is zero. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Set more bits in the thread current signal flags mask. Use OR at bit-mask level. Wake-up the thread to evaluate the signal flags.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00766">766</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a290fdad87e54541b91811d62a5f57f50"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sig_wait </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::_sig_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -1150,11 +578,11 @@ Private Member Functions</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the signal flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00913">913</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00902">902</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1218fa4e0d976eb664f01c7184a02375"></a>
+<a class="anchor" id="a0a866de15e38c14c95f6c39f9e9d57b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1162,7 +590,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::timed_sig_wait </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::_timed_sig_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -1229,11 +657,11 @@ Private Member Functions</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the signal flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01006">1006</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00995">995</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6f5bd5fb10f9a2e09f15820ac3f7bc08"></a>
+<a class="anchor" id="a91fdb18fa38076bd56c7daddcd0f8d1e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1241,7 +669,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::try_sig_wait </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::_try_sig_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -1293,7 +721,603 @@ Private Member Functions</h2></td></tr>
 <p>The function does not blocks, if the expected signal flags are not raised, but returns <code>EGAIN</code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00960">960</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00949">949</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16553b693dc0aab46b9cd8812bb509dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::_try_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
+          <td class="paramname"><em>oflags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal wait for signal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); may be zero. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Pointer where to store the current flags; may be <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if either all or any flags are expected, and if the flags should be cleared. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>All expected flags are raised. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The mask is outside of the permitted range. </td></tr>
+    <tr><td class="paramname">EAGAIN</td><td>The expected condition did not occur. </td></tr>
+    <tr><td class="paramname">ENOTRECOVERABLE</td><td>Wait failed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Internal function used to test if the desired signal flags are raised. </p>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00844">844</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af451f51da19ad1fe4f57aa23ba4a15ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Thread::_wait </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Suspend this thread and wait for an event. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00400">400</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69f3db9508cbf4faae64628eb0766ef8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::cancel </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cancel thread execution. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The cancel request was sent to the thread. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a69f3db9508cbf4faae64628eb0766ef8" title="Cancel thread execution. ">cancel()</a></code> function shall not return an error code of <code>EINTR</code>. If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error. error number is returned.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cancel.html"><code>pthread_cancel()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00616">616</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac209f38c6d73ec996286c83fc20b668b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::detach </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detach a thread. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The thread was detached. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Indicate to the implementation that storage for the thread thread can be reclaimed when that thread terminates. If thread has not terminated, <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> shall not cause it to terminate. The behaviour is undefined if the value specified by the thread argument to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> does not refer to a joinable thread.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_detach.html"><code>pthread_detach()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#ac209f38c6d73ec996286c83fc20b668b" title="Detach a thread. ">detach()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00576">576</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6749ec40f4efc916b4616ccc1b28658"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * os::rtos::Thread::function_args </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the thread function arguments. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to arguments. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00815">815</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a707ddda84d350fe2371e0095ae5eddad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::rtos::Thread::interrupted </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if interrupted. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The thread was interrupted. </td></tr>
+    <tr><td class="paramname">false</td><td>The thread was not interrupted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00627">627</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a957d4296bd3ba95e3f22b776a8c18518"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::join </td>
+          <td>(</td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>exit_ptr</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for thread termination. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The thread was terminated. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Suspend execution of the calling thread until the target thread terminates, unless the target thread has already terminated. On return from a successful <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> call with a non-NULL <em>exit_ptr</em> argument, the value passed to <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> by the terminating thread shall be made available in the location referenced by <em>exit_ptr</em>. When a <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> returns successfully, the target thread has been terminated. The results of multiple simultaneous calls to <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> specifying the same target thread are undefined. If the thread calling <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> is cancelled, then the target thread shall not be detached.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_join.html"><code>pthread_join()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<p>The <a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a> function may fail if: [EDEADLK] A deadlock was detected.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518" title="Wait for thread termination. ">join()</a></code> function shall not return an error code of [EINTR].</p>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00533">533</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac3754078e72a953ec8f5ecda951a2ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::kill </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force thread termination. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The tread was terminated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_kill.html"><code>pthread_kill()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00706">706</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ced578ffc847e14547b02ee1473c44e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * os::rtos::Named_object::name </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get name. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
+<p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13c4ed95ff23cdf8c05f8512b8e3f1db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::rtos::Thread::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_thread.html">Thread</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compare threads. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The given thread is the same as this thread. </td></tr>
+    <tr><td class="paramname">false</td><td>The threads are different.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Identical threads should have the same memory address.</p>
+<p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
+
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00803">803</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a96f3878766f59048144ed98863f133"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Thread::resume </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resume the thread. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
+<p>Internal, used in the implementation of synchronisation objects.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00425">425</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adda417485c68f1af5c279f0e36dc6382"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sched_prio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">thread::priority_t</a>&#160;</td>
+          <td class="paramname"><em>prio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set dynamic scheduling priority. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The priority was set. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The value of prio is invalid for the scheduling policy of the specified thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the scheduling priority for the thread to the value given by <em>prio</em>.</p>
+<p>If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_thread.html#af1118dae8826231c78f8805704f90a66" title="Get the current scheduling priority. ">sched_prio()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_setschedprio.html"><code>pthread_setschedprio()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00477">477</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1118dae8826231c78f8805704f90a66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">thread::priority_t</a> os::rtos::Thread::sched_prio </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current scheduling priority. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The thread priority.</dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00449">449</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f7a57857cfb1806f6ffb7e139c0bcce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ac83bf77031e2c139bb553426b0805d2d">thread::state_t</a> os::rtos::Thread::sched_state </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get scheduler status of this thread. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> scheduler state. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00809">809</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a684676c4acf5fe6ad4a7a0aa6ea4c854"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sig_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
+          <td class="paramname"><em>oflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear thread signal flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to clear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The flags were cleared. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The mask is zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00818">818</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2661cc44d1b239382f95baba06ab2e3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> os::rtos::Thread::sig_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac">flags::mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get/clear thread signal flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to get/clear; may be zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if the flags should be cleared (the other bits are ignored). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">flags</td><td>The selected bits from the current thread signal flags mask. </td></tr>
+    <tr><td class="paramname">sig::all</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Select the requested bits from the thread current signal mask and return them. If requested, clear the selected bits in the thread signal mask.</p>
+<p>If the mask is zero, return the full thread signal mask, without any masking or subsequent clearing.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00787">787</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2936cb3bffb587e83ec9d199ac1898c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::sig_raise </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ad726d18923d05ebbded9f22296b65c95">thread::sigset_t</a> *&#160;</td>
+          <td class="paramname"><em>oflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raise thread signal flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to raise. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>nullptr</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The flags were raised. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The mask is zero. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set more bits in the thread current signal flags mask. Use OR at bit-mask level. Wake-up the thread to evaluate the signal flags.</p>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00755">755</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -1325,33 +1349,7 @@ Private Member Functions</h2></td></tr>
 <p>The user storage is a custom structure defined in <code>&lt;os-app-config.h&gt;</code>, which is added to each and every thread storage. Applications can store here any data.</p>
 <p>Inspired by (actually a generalisation of) µC-OS III task user registers and FreeRTOS thread local storage, which proved useful when implementing CMSIS+ over FreeRTOS. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00823">823</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a36e40610400fba15e445695974cd712e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::rtos::Thread::wakeup </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Wake-up the thread. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
-<p>Internal, used in the implementation of synchronisation objects.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00416">416</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00839">839</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1374,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00524">524</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00538">538</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1396,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00521">521</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00535">535</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1455,30 +1453,6 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a63ec1dce0c19254cf3cc7874e239eb71"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ab28f722c1f3758200e2f615a647123ea">this_thread::sleep</a> </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
   </td>
@@ -1576,6 +1550,30 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a8b5c1e7b3ff1a06a38dffa58a9bba11c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a51171b707af828d3a3ce7b3cf89e7d4c">this_thread::wait</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3bda514deb3079a70f63da75bf1fe9fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1596,7 +1594,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00527">527</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00541">541</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1618,12 +1616,12 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00520">520</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00534">534</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a3d01a6db56d0947b3642973b1fc80585"></a>
+<a class="anchor" id="a6001efb01f9dad9376470fcfbd817d67"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1631,7 +1629,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_double__list__node__clock.html">Double_list_node_clock</a>* os::rtos::Thread::clock_node_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a>* os::rtos::Thread::clock_node_</td>
         </tr>
       </table>
   </td>
@@ -1641,7 +1639,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00667">667</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00686">686</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1661,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00655">655</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00674">674</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1683,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00656">656</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00675">675</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1705,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00657">657</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00676">676</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1729,7 +1727,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00665">665</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00684">684</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +1752,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1776,7 +1774,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00671">671</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00690">690</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1798,7 +1796,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00670">670</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00689">689</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1820,7 +1818,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00677">677</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00693">693</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1842,7 +1840,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00654">654</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00673">673</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1864,7 +1862,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00669">669</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00688">688</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1886,11 +1884,11 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00679">679</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00695">695</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acbafb07feb6d106667ea3cca6eba3818"></a>
+<a class="anchor" id="ab8ab2188272e2eda1f27229a5bd3eca2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1898,7 +1896,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_double__list__node__thread.html">Double_list_node_thread</a>* os::rtos::Thread::waiting_node_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a>* os::rtos::Thread::waiting_node_</td>
         </tr>
       </table>
   </td>
@@ -1908,29 +1906,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00666">666</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af88f029af724c2c39ae1a5ee5132f237"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Thread::wakeup_reason_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00674">674</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00685">685</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>

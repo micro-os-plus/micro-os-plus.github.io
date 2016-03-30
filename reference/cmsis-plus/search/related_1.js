@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['double_5flist_5fnode_5ftimer',['Double_list_node_timer',['../classos_1_1rtos_1_1_timer.html#a865b1e8c033b59814283596cff5433e6',1,'os::rtos::Timer']]]
+  ['operator_3c',['operator&lt;',['../classos_1_1estd_1_1thread_1_1id.html#aba72c9246b2537ccbb813d93ca3d6ca8',1,'os::estd::thread::id']]],
+  ['operator_3d_3d',['operator==',['../classos_1_1estd_1_1thread_1_1id.html#a3bba9f754bf31fb701c59b68d122027a',1,'os::estd::thread::id']]]
 ];

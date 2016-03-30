@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['clock_5fnode_5ftype_5ft',['clock_node_type_t',['../namespaceos_1_1rtos.html#ac9f23c8313cb2f4370828d498fef7c1e',1,'os::rtos']]],
-  ['clock_5ftimestamps_5flist_5fguard',['Clock_timestamps_list_guard',['../namespaceos_1_1rtos.html#a6b98e0b7d901d65f53fa2205c1ee5263',1,'os::rtos']]],
+  ['clock_5ftimestamps_5flist_5fguard',['Clock_timestamps_list_guard',['../namespaceos_1_1rtos.html#af436cc01a436cee642fae15762e71993',1,'os::rtos']]],
   ['config_5farg_5ft',['config_arg_t',['../namespaceos_1_1driver_1_1serial.html#a01a49c46795f92b60931c856f06109d9',1,'os::driver::serial']]],
   ['config_5ft',['config_t',['../namespaceos_1_1driver_1_1serial.html#a16d38c70ff077aeba035b60246f76ac1',1,'os::driver::serial']]],
   ['control_5farg_5ft',['control_arg_t',['../namespaceos_1_1driver_1_1serial.html#aa1a37580580c17d07e0793c5bbe183aa',1,'os::driver::serial']]],

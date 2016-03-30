@@ -13,12 +13,15 @@ var searchData=
   ['register_5fpipe_5fcallback',['register_pipe_callback',['../classos_1_1driver_1_1usb_1_1_host.html#af58e82f273166c5513b53de04b080e71',1,'os::driver::usb::Host']]],
   ['register_5fport_5fcallback',['register_port_callback',['../classos_1_1driver_1_1usb_1_1_host.html#a70ac146ce17aa07885d4154ef0a9ad9e',1,'os::driver::usb::Host']]],
   ['release',['release',['../classos_1_1estd_1_1unique__lock.html#a6e2f2b46cfe44f6f23d237f12f99a2e3',1,'os::estd::unique_lock']]],
-  ['remove',['remove',['../classos_1_1rtos_1_1_double__list__links.html#a8d50127b43ede89d1291c28325606f53',1,'os::rtos::Double_list_links::remove()'],['../classos_1_1rtos_1_1_double__list.html#a8246055ac8c3afa283a30759c5a6dd45',1,'os::rtos::Double_list::remove()']]],
+  ['remove',['remove',['../classos_1_1rtos_1_1_double__list.html#a8246055ac8c3afa283a30759c5a6dd45',1,'os::rtos::Double_list']]],
   ['report_5fexception',['report_exception',['../semihosting_8h.html#a27f61eca4d2390a3edaa7a5764d0938b',1,'semihosting.h']]],
   ['reset',['reset',['../classos_1_1rtos_1_1_memory__pool.html#a7cab32750c0bc81551516c22476d333a',1,'os::rtos::Memory_pool::reset()'],['../classos_1_1rtos_1_1_message__queue.html#abb494387f9dbea6bc91cf19410ecde4c',1,'os::rtos::Message_queue::reset()'],['../classos_1_1rtos_1_1_mutex.html#a0c9f58eb57bb73a20a8ecef6560c9ca5',1,'os::rtos::Mutex::reset()'],['../classos_1_1rtos_1_1_semaphore.html#ad855a37723270b019c47cc90d23cddff',1,'os::rtos::Semaphore::reset()']]],
   ['reset_5fhandler',['Reset_Handler',['../exception-handlers_8h.html#ae7ee340978f5c25f52f0cad1457c6616',1,'Reset_Handler(void):&#160;exception-handlers.c'],['../exception-handlers_8c.html#ae7ee340978f5c25f52f0cad1457c6616',1,'Reset_Handler(void):&#160;exception-handlers.c']]],
   ['reset_5fpipe',['reset_pipe',['../classos_1_1driver_1_1usb_1_1_host.html#acdbbdb9db2a54ff4adcc4076eb8cdc1b',1,'os::driver::usb::Host']]],
   ['reset_5fport',['reset_port',['../classos_1_1driver_1_1usb_1_1_host.html#a158bb4acc38c605980db0e43eef3f348',1,'os::driver::usb::Host']]],
+  ['resume',['resume',['../classos_1_1rtos_1_1_thread.html#a1a96f3878766f59048144ed98863f133',1,'os::rtos::Thread']]],
+  ['resume_5fall',['resume_all',['../classos_1_1rtos_1_1_waiting__threads__list.html#a6e9facea4d235dde9d3e6fca20aa1c60',1,'os::rtos::Waiting_threads_list']]],
+  ['resume_5fone',['resume_one',['../classos_1_1rtos_1_1_waiting__threads__list.html#a048e2b59a598e30cd961f3abd39fa272',1,'os::rtos::Waiting_threads_list']]],
   ['resume_5fport',['resume_port',['../classos_1_1driver_1_1usb_1_1_host.html#a9962c1b1acbced083276755717dcfc6c',1,'os::driver::usb::Host']]],
   ['run_5ffunction_5fobject',['run_function_object',['../classos_1_1estd_1_1thread.html#ad7809b5e8b548d515ffdf00086d4f6c2',1,'os::estd::thread']]]
 ];

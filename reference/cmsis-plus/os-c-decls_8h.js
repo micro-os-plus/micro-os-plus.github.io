@@ -1,6 +1,7 @@
 var os_c_decls_8h =
 [
     [ "os_clock_node_t", "structos__clock__node__t.html", "structos__clock__node__t" ],
+    [ "os_clock_t", "structos__clock__t.html", null ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
     [ "os_condvar_s", "structos__condvar__s.html", "structos__condvar__s" ],
     [ "os_evflags_attr_s", "structos__evflags__attr__s.html", "structos__evflags__attr__s" ],
@@ -53,7 +54,6 @@ var os_c_decls_8h =
     [ "os_semaphore_count_t", "os-c-decls_8h.html#ae4141b84b2ee40838c36b6c606cf7e5e", null ],
     [ "os_semaphore_t", "os-c-decls_8h.html#a6f43e7bfa993ee025cc7238390c91691", null ],
     [ "os_systick_clock_current_t", "os-c-decls_8h.html#abfe934a54705933d9fb887e494d5a202", null ],
-    [ "os_systicks_t", "os-c-decls_8h.html#aedf2838db92c8eb2d19cd62fbb009fff", null ],
     [ "os_thread_func_args_t", "os-c-decls_8h.html#a8b048f911624cd470f327cea02245790", null ],
     [ "os_thread_func_t", "os-c-decls_8h.html#a5c927d23d4ba368f34a1a73eefb2d6b3", null ],
     [ "os_thread_prio_t", "os-c-decls_8h.html#a314f97c14203c7ec9cabd3adc7b1d95d", null ],

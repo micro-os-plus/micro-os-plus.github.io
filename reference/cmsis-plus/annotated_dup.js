@@ -3,6 +3,7 @@ var annotated_dup =
     [ "os", "namespaceos.html", "namespaceos" ],
     [ "ExceptionStackFrame", "struct_exception_stack_frame.html", "struct_exception_stack_frame" ],
     [ "os_clock_node_t", "structos__clock__node__t.html", "structos__clock__node__t" ],
+    [ "os_clock_t", "structos__clock__t.html", null ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
     [ "os_condvar_s", "structos__condvar__s.html", "structos__condvar__s" ],
     [ "os_evflags_attr_s", "structos__evflags__attr__s.html", "structos__evflags__attr__s" ],

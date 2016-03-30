@@ -12,6 +12,5 @@ var structos__thread__t =
     [ "stack_size_bytes", "structos__thread__t.html#a40d32298d99f9319f9ea66978feddbd4", null ],
     [ "state", "structos__thread__t.html#a7eb357408c005d2461dee085e9239d82", null ],
     [ "user_storage", "structos__thread__t.html#ae6feca65a045b3369c33cc9b5d953317", null ],
-    [ "waiting_node", "structos__thread__t.html#a1ee6142e10d8fa0c54965e8f2f47c668", null ],
-    [ "wakeup_reason", "structos__thread__t.html#aac5e5bd894c4508b009760dc4896daa2", null ]
+    [ "waiting_node", "structos__thread__t.html#a1ee6142e10d8fa0c54965e8f2f47c668", null ]
 ];

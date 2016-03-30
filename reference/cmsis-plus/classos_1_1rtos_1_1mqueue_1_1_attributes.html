@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1mqueue_1_1_attribut
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html">os::rtos::Clocked_attribute</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -160,6 +160,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a56b5a1c45bfae21989506bd94043d28b"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#a56b5a1c45bfae21989506bd94043d28b">mq_queue_size_bytes</a></td></tr>
 <tr class="memdesc:a56b5a1c45bfae21989506bd94043d28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined message queue size.  <a href="#a56b5a1c45bfae21989506bd94043d28b">More...</a><br /></td></tr>
 <tr class="separator:a56b5a1c45bfae21989506bd94043d28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
+<tr class="memitem:acab0fbecb204f30b6d26228d706e6917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html#acab0fbecb204f30b6d26228d706e6917">clock</a></td></tr>
+<tr class="memdesc:acab0fbecb204f30b6d26228d706e6917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#acab0fbecb204f30b6d26228d706e6917">More...</a><br /></td></tr>
+<tr class="separator:acab0fbecb204f30b6d26228d706e6917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -174,7 +178,7 @@ Protected Attributes</h2></td></tr>
 <p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mq_attr</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00044">44</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00053">53</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a550893a733bfaa85bac98ea66cb21bdd"></a>
 <div class="memitem">
@@ -206,7 +210,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00488">488</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00503">503</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -263,11 +267,35 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="acab0fbecb204f30b6d26228d706e6917"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Clocked_attribute::clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to clock. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00881">881</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afa58365e8358c222c8288b386373ff51"></a>
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +310,7 @@ Protected Attributes</h2></td></tr>
 <p>Set this variable to a user defined memory area large enough to store the message queue. Usually this is a statically allocated array of structures.</p>
 <p>The default value is <code>nullptr</code>, which means there is no user defined message queue. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00093">93</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00102">102</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +328,7 @@ Protected Attributes</h2></td></tr>
 <p>The message queue size must match exactly the allocated size. It is used for validation; when the message queue is initialised, this size must be large enough to accommodate the desired message queue.</p>
 <p>If the <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#afa58365e8358c222c8288b386373ff51">mq_queue_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00098">98</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00107">107</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -325,7 +353,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

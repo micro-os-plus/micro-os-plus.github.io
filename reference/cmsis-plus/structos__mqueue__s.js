@@ -1,5 +1,6 @@
 var structos__mqueue__s =
 [
+    [ "clock", "structos__mqueue__s.html#afb9fd388b16d54f8a3fe7713e6032a44", null ],
     [ "count", "structos__mqueue__s.html#a7520ccd485dd9f125d73f918db42036c", null ],
     [ "first_free", "structos__mqueue__s.html#a9eedbe384c35c027fed9a20f51e65192", null ],
     [ "flags_", "structos__mqueue__s.html#a2f03ab10e2c935fa9b4d8d4093a6e4d9", null ],

@@ -13,7 +13,8 @@ var classos_1_1rtos_1_1_event__flags =
     [ "try_wait", "classos_1_1rtos_1_1_event__flags.html#aa6f55bd811d3a3f1c46190f0e7f3f96b", null ],
     [ "wait", "classos_1_1rtos_1_1_event__flags.html#a6a3d01e450c19488db25702a1f4ed567", null ],
     [ "waiting", "classos_1_1rtos_1_1_event__flags.html#afcf9ac510b8499a91d9356302ccf38fe", null ],
+    [ "clock_", "classos_1_1rtos_1_1_event__flags.html#a50b5b44b668d0997c403cc7926075a53", null ],
     [ "flags_", "classos_1_1rtos_1_1_event__flags.html#a6ac9c026e35c7d4855d77246cfe36b8d", null ],
-    [ "list_", "classos_1_1rtos_1_1_event__flags.html#a8019f1394de0ff629c7b98bbbf4ded20", null ],
+    [ "list_", "classos_1_1rtos_1_1_event__flags.html#a59e2fb5c4b20635c4dbcb12ea3ba84c7", null ],
     [ "name_", "classos_1_1rtos_1_1_event__flags.html#ad7667db8bf3171d900237500cb0e1e67", null ]
 ];

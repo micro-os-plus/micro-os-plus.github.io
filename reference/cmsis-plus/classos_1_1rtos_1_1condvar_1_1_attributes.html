@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1condvar_1_1_attribu
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html">os::rtos::Clocked_attribute</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,6 +151,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1ced578ffc847e14547b02ee1473c44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name.  <a href="#a1ced578ffc847e14547b02ee1473c44e">More...</a><br /></td></tr>
 <tr class="separator:a1ced578ffc847e14547b02ee1473c44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
+<tr class="memitem:acab0fbecb204f30b6d26228d706e6917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clocked__attribute.html#acab0fbecb204f30b6d26228d706e6917">clock</a></td></tr>
+<tr class="memdesc:acab0fbecb204f30b6d26228d706e6917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#acab0fbecb204f30b6d26228d706e6917">More...</a><br /></td></tr>
+<tr class="separator:acab0fbecb204f30b6d26228d706e6917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
@@ -163,7 +170,7 @@ Protected Attributes</h2></td></tr>
 <p>Allow to assign a name to the condition variable.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_condattr_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (IEEE Std 1003.1, 2013 Edition). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00044">44</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00053">53</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad77adfafdbf1987ec9c5fb702b14f367"></a>
 <div class="memitem">
@@ -195,7 +202,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00292">292</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8h_source.html#l00307">307</a> of file <a class="el" href="os-condvar_8h_source.html">os-condvar.h</a>.</p>
 
 </div>
 </div>
@@ -252,11 +259,35 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00835">835</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="acab0fbecb204f30b6d26228d706e6917"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Clocked_attribute::clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to clock. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00881">881</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad7667db8bf3171d900237500cb0e1e67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +309,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00797">797</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

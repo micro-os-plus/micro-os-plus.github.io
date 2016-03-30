@@ -199,7 +199,7 @@ Variables</h2></td></tr>
 <p>Type of a variable holding scheduler status codes. </p>
 <p>Usually a boolean telling if the scheduler is locked or not, but for recursive locks it might also be a numeric counter. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00207">207</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00231">231</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -229,7 +229,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines (obviously). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00085">85</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00094">94</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ Variables</h2></td></tr>
 <p>Create all RTOS internal objects and be ready to run.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00071">71</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00080">80</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +283,7 @@ Variables</h2></td></tr>
 <p><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html" title="Scheduler standard locker. ">Lock</a> the scheduler (prevent it for doing thread switches) and return the previous status, to be restored by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00118">118</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00127">127</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +320,7 @@ Variables</h2></td></tr>
 </dl>
 <p>Check if the scheduler is locked on the current thread or is switching threads from the ready list. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00489">489</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00514">514</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +350,7 @@ Variables</h2></td></tr>
 <p>The scheduler cannot be stopped, it will run forever, but thread switching can be locked/unlocked.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00098">98</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00107">107</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Variables</h2></td></tr>
 </dl>
 <p>Check if the scheduler was started, i.e. if <a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a1f95f21495b763252a4485078f82716b" title="Start the RTOS scheduler. ">scheduler::start()</a> was called. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00478">478</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00503">503</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ Variables</h2></td></tr>
 <p>Actually restore the scheduler status based on the given parameter, usually returned by a <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code>. This allows for embedded critical sections to preserve the locked status until the outer one completes and invokes <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00140">140</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00149">149</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +434,7 @@ Variables</h2></td></tr>
 <p>The scheduler status. </p>
 <p>Modified by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code> and restored to previous value by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00062">62</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00071">71</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +451,7 @@ Variables</h2></td></tr>
 <p>Variable set to true after the scheduler is started. </p>
 <p>No further changes allowed, the scheduler cannot be stopped, in can be only locked. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00055">55</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00064">64</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>

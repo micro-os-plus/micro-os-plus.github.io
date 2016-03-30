@@ -1,5 +1,6 @@
 var structos__mutex__s =
 [
+    [ "clock", "structos__mutex__s.html#ae132b9c4344d26a9cf27ceb3d1c17f59", null ],
     [ "count", "structos__mutex__s.html#a8e5d3f863ddb2895748e01466221785e", null ],
     [ "list", "structos__mutex__s.html#a4a85ee6898ca8b06aa3d584111a716c6", null ],
     [ "max_count", "structos__mutex__s.html#ad0a371b6e00dc8867b5f05e86a748c47", null ],

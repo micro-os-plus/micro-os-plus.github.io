@@ -21,6 +21,7 @@ var classos_1_1rtos_1_1_memory__pool =
     [ "try_alloc", "classos_1_1rtos_1_1_memory__pool.html#a109bae1e2cf390f7208c79a598808cb5", null ],
     [ "block_size_bytes_", "classos_1_1rtos_1_1_memory__pool.html#a54d48e4e81b01aa96f22f3bb2e16e28e", null ],
     [ "blocks_", "classos_1_1rtos_1_1_memory__pool.html#af80711efed7c6c918b62e3ababf75937", null ],
+    [ "clock_", "classos_1_1rtos_1_1_memory__pool.html#a29c6d9080d9335a3e731e3600d3c0629", null ],
     [ "count_", "classos_1_1rtos_1_1_memory__pool.html#a7ac5fce7023a313fa35daa84800c9cad", null ],
     [ "first_", "classos_1_1rtos_1_1_memory__pool.html#a48ad91b538ba95b5d30899a010a93382", null ],
     [ "flags_", "classos_1_1rtos_1_1_memory__pool.html#a1bbda4dd137134024cca44329b6f8ef6", null ],
