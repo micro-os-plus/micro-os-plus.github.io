@@ -130,6 +130,9 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_thread__list__guar
 </div><!--header-->
 <div class="contents">
 
+<p>RAII list guard.  
+ <a href="classos_1_1rtos_1_1_thread__list__guard.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="os-lists_8h_source.html">os-lists.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -146,22 +149,26 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:a5285606fa01b2a795aa1070244563a9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html#a5285606fa01b2a795aa1070244563a9d">Thread_list_guard</a> (<a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html#a5d38eb36be01166966ce86472ed32f9d">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:a5285606fa01b2a795aa1070244563a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII add() node to the list.  <a href="#a5285606fa01b2a795aa1070244563a9d">More...</a><br /></td></tr>
 <tr class="separator:a5285606fa01b2a795aa1070244563a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68990f81a7eb40b0799904cac131c38e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html#a68990f81a7eb40b0799904cac131c38e">~Thread_list_guard</a> ()</td></tr>
+<tr class="memdesc:a68990f81a7eb40b0799904cac131c38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII remove node from the list.  <a href="#a68990f81a7eb40b0799904cac131c38e">More...</a><br /></td></tr>
 <tr class="separator:a68990f81a7eb40b0799904cac131c38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
 <tr class="memitem:ac4624279b6cdca457cfbe7bb7dd19818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html#a5d38eb36be01166966ce86472ed32f9d">Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html#ac4624279b6cdca457cfbe7bb7dd19818">node_</a></td></tr>
+<tr class="memdesc:ac4624279b6cdca457cfbe7bb7dd19818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to node.  <a href="#ac4624279b6cdca457cfbe7bb7dd19818">More...</a><br /></td></tr>
 <tr class="separator:ac4624279b6cdca457cfbe7bb7dd19818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename CS_T, typename List_T, typename Node_T&gt;<br />
 class os::rtos::Thread_list_guard&lt; CS_T, List_T, Node_T &gt;</h3>
 
+<p>RAII list guard. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00762">762</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00765">765</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a7c74ea2cc071f3cc7e2095dd0faef501"></a>
 <div class="memitem">
@@ -175,7 +182,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00771">771</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00774">774</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -191,7 +198,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00772">772</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00775">775</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -207,7 +214,7 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00773">773</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00776">776</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +243,15 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00992">992</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>RAII add() node to the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Reference to node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01018">1018</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +278,9 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01003">1003</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>RAII remove node from the list. </p>
+
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01029">1029</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +305,9 @@ template&lt;typename CS_T , typename List_T , typename Node_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00814">814</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Reference to node. </p>
+
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00827">827</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
