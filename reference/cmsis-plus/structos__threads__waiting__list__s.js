@@ -1,5 +1,5 @@
 var structos__threads__waiting__list__s =
 [
-    [ "count", "structos__threads__waiting__list__s.html#a3f2c2d3a71472f5f8425c3ef6ea4b4c5", null ],
-    [ "head", "structos__threads__waiting__list__s.html#a4b691e8254f83021ab376cb04e946db3", null ]
+    [ "next", "structos__threads__waiting__list__s.html#a9eedbfc0f288e57c546990cfc4522910", null ],
+    [ "prev", "structos__threads__waiting__list__s.html#a55aaf627c0ce7ad6381292dd64aa717d", null ]
 ];

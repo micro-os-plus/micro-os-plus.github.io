@@ -6,6 +6,7 @@ var searchData=
   ['_5f_5fbss_5fstart_5f_5f',['__bss_start__',['../startup_8c.html#a2431ecc498e90c57e8281de8972c5af8',1,'startup.c']]],
   ['_5f_5fcall_5fexitprocs',['__call_exitprocs',['../atexit_8h.html#a12b1de11d1825f43a84c42975648d485',1,'atexit.h']]],
   ['_5f_5fcxa_5fpure_5fvirtual',['__cxa_pure_virtual',['../cxx_8cpp.html#a6be7d9ce80c86f5178635fa86c2dd5e7',1,'cxx.cpp']]],
+  ['_5f_5fdso_5fhandle',['__dso_handle',['../cxx_8cpp.html#a19df960d2907e9c08a720ae7683e632c',1,'cxx.cpp']]],
   ['_5f_5fet_5fatexit',['__et_atexit',['../atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8ae61f35f4d6da8a0b6b4fe229ddc9cae9',1,'atexit.h']]],
   ['_5f_5fet_5fcxa',['__et_cxa',['../atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad',1,'atexit.h']]],
   ['_5f_5fet_5fonexit',['__et_onexit',['../atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8a41239a04145107d1baaf18b936f0e2e6',1,'atexit.h']]],
@@ -37,6 +38,7 @@ var searchData=
   ['_5fexit',['_exit',['../classos_1_1rtos_1_1_thread.html#acb81fd25616e4dfb23bcd60e68d53ed3',1,'os::rtos::Thread']]],
   ['_5finit',['_init',['../classos_1_1rtos_1_1_memory__pool.html#a93f9534f4b7261f6092416502fd8e658',1,'os::rtos::Memory_pool::_init()'],['../classos_1_1rtos_1_1_message__queue.html#a6cd26ac848332ed9c88ffe66be39a28c',1,'os::rtos::Message_queue::_init()'],['../classos_1_1rtos_1_1_mutex.html#a2ea700789c27d2263933e41512172047',1,'os::rtos::Mutex::_init()'],['../classos_1_1rtos_1_1_semaphore.html#a1024f0a56bf28b5deabd24daad17fa74',1,'os::rtos::Semaphore::_init()']]],
   ['_5finvoke_5fwith_5fexit',['_invoke_with_exit',['../classos_1_1rtos_1_1_thread.html#aeffe0f65c42f83b02dc16ff3dd0bd33a',1,'os::rtos::Thread']]],
+  ['_5flink_5fnode',['_link_node',['../namespaceos_1_1rtos_1_1scheduler.html#a6ae2b86ad7426d5ffac213757c3f8eb9',1,'os::rtos::scheduler::_link_node(Waiting_threads_list &amp;list, Waiting_thread_node &amp;node)'],['../namespaceos_1_1rtos_1_1scheduler.html#a7313e80edf41aa7a11b0f6f4c912ed76',1,'os::rtos::scheduler::_link_node(Waiting_threads_list &amp;list, Waiting_thread_node &amp;node, Clock_timestamps_list &amp;timeout_list, Timeout_thread_node &amp;timeout_node)']]],
   ['_5flite_5fexit',['_LITE_EXIT',['../atexit_8h.html#ab8e8beb411c6404cf4ff3327a5703d99',1,'atexit.h']]],
   ['_5fmain_5ftrampoline',['_main_trampoline',['../namespaceos_1_1rtos_1_1thread.html#a67419a45b39218dd50c0139de9a551df',1,'os::rtos::thread']]],
   ['_5fsbrk_2ec',['_sbrk.c',['../__sbrk_8c.html',1,'']]],
@@ -51,6 +53,7 @@ var searchData=
   ['_5ftry_5fsend',['_try_send',['../classos_1_1rtos_1_1_message__queue.html#a175324ff6d383502338dcf8e2ae64092',1,'os::rtos::Message_queue']]],
   ['_5ftry_5fsig_5fwait',['_try_sig_wait',['../classos_1_1rtos_1_1_thread.html#a91fdb18fa38076bd56c7daddcd0f8d1e',1,'os::rtos::Thread']]],
   ['_5ftry_5fwait',['_try_wait',['../classos_1_1rtos_1_1_event__flags.html#af9b3a167d928316283da4b00ea4b6b4a',1,'os::rtos::Event_flags::_try_wait()'],['../classos_1_1rtos_1_1_semaphore.html#aedb63fab0c75a46efa3c9bc538b7a276',1,'os::rtos::Semaphore::_try_wait()'],['../classos_1_1rtos_1_1_thread.html#a16553b693dc0aab46b9cd8812bb509dc',1,'os::rtos::Thread::_try_wait()']]],
+  ['_5funlink_5fnode',['_unlink_node',['../namespaceos_1_1rtos_1_1scheduler.html#a33ae08e59dba8b3b3b98a551316704f2',1,'os::rtos::scheduler::_unlink_node(Waiting_thread_node &amp;node)'],['../namespaceos_1_1rtos_1_1scheduler.html#a0602687a93679d8b0def4a83e8069891',1,'os::rtos::scheduler::_unlink_node(Waiting_thread_node &amp;node, Timeout_thread_node &amp;timeout_node)']]],
   ['_5fwait',['_wait',['../classos_1_1rtos_1_1_thread.html#af451f51da19ad1fe4f57aa23ba4a15ba',1,'os::rtos::Thread']]],
   ['_5fwait_5funtil',['_wait_until',['../classos_1_1rtos_1_1_clock.html#a60f3f9c2a35dd37458b1b59d4b1188d7',1,'os::rtos::Clock']]]
 ];

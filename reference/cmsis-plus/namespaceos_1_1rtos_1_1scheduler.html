@@ -151,6 +151,14 @@ Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a6ae2b86ad7426d5ffac213757c3f8eb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a6ae2b86ad7426d5ffac213757c3f8eb9">_link_node</a> (<a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> &amp;list, <a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;node)</td></tr>
+<tr class="separator:a6ae2b86ad7426d5ffac213757c3f8eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7313e80edf41aa7a11b0f6f4c912ed76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a7313e80edf41aa7a11b0f6f4c912ed76">_link_node</a> (<a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> &amp;list, <a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;node, <a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html">Clock_timestamps_list</a> &amp;timeout_list, <a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a> &amp;timeout_node)</td></tr>
+<tr class="separator:a7313e80edf41aa7a11b0f6f4c912ed76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ae08e59dba8b3b3b98a551316704f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a33ae08e59dba8b3b3b98a551316704f2">_unlink_node</a> (<a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;node)</td></tr>
+<tr class="separator:a33ae08e59dba8b3b3b98a551316704f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0602687a93679d8b0def4a83e8069891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a0602687a93679d8b0def4a83e8069891">_unlink_node</a> (<a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;node, <a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a> &amp;timeout_node)</td></tr>
+<tr class="separator:a0602687a93679d8b0def4a83e8069891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72474ad9ad219abeb13fb3ed0b95a8b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a72474ad9ad219abeb13fb3ed0b95a8b3">in_handler_mode</a> (void)</td></tr>
 <tr class="memdesc:a72474ad9ad219abeb13fb3ed0b95a8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the CPU is in handler mode.  <a href="#a72474ad9ad219abeb13fb3ed0b95a8b3">More...</a><br /></td></tr>
 <tr class="separator:a72474ad9ad219abeb13fb3ed0b95a8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +212,120 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a6ae2b86ad7426d5ffac213757c3f8eb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::scheduler::_link_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00218">218</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7313e80edf41aa7a11b0f6f4c912ed76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::scheduler::_link_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html">Clock_timestamps_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>timeout_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>timeout_node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00242">242</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33ae08e59dba8b3b3b98a551316704f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::scheduler::_unlink_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00229">229</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0602687a93679d8b0def4a83e8069891"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::scheduler::_unlink_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_waiting__thread__node.html">Waiting_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">Timeout_thread_node</a> &amp;&#160;</td>
+          <td class="paramname"><em>timeout_node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00259">259</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a72474ad9ad219abeb13fb3ed0b95a8b3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +351,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines (obviously). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00094">94</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00090">90</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +381,7 @@ Variables</h2></td></tr>
 <p>Create all RTOS internal objects and be ready to run.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00080">80</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00076">76</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +405,7 @@ Variables</h2></td></tr>
 <p><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html" title="Scheduler standard locker. ">Lock</a> the scheduler (prevent it for doing thread switches) and return the previous status, to be restored by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00127">127</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00123">123</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +472,7 @@ Variables</h2></td></tr>
 <p>The scheduler cannot be stopped, it will run forever, but thread switching can be locked/unlocked.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00107">107</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00103">103</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +538,7 @@ Variables</h2></td></tr>
 <p>Actually restore the scheduler status based on the given parameter, usually returned by a <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code>. This allows for embedded critical sections to preserve the locked status until the outer one completes and invokes <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00149">149</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00145">145</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +556,7 @@ Variables</h2></td></tr>
 <p>The scheduler status. </p>
 <p>Modified by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code> and restored to previous value by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00071">71</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00067">67</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +573,7 @@ Variables</h2></td></tr>
 <p>Variable set to true after the scheduler is started. </p>
 <p>No further changes allowed, the scheduler cannot be stopped, in can be only locked. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00064">64</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00060">60</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>

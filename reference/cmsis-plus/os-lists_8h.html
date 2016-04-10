@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('os-lists_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Types</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">os-lists.h File Reference</div>  </div>
 </div><!--header-->
@@ -137,9 +137,6 @@ $(document).ready(function(){initNavTree('os-lists_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__list__guard.html">os::rtos::Clock_list_guard&lt; CS_T, List_T, Node_T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII list guard.  <a href="classos_1_1rtos_1_1_clock__list__guard.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html">os::rtos::Clock_timestamps_list</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered double linked circular list of time stamp nodes.  <a href="classos_1_1rtos_1_1_clock__timestamps__list.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,10 +144,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circular double linked list of nodes.  <a href="classos_1_1rtos_1_1_double__list.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">os::rtos::Double_list_links</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core of a double linked list, pointers to next, previous and list.  <a href="classos_1_1rtos_1_1_double__list__links.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__list__guard.html">os::rtos::Thread_list_guard&lt; CS_T, List_T, Node_T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII list guard.  <a href="classos_1_1rtos_1_1_thread__list__guard.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core of a double linked list, pointers to next, previous.  <a href="classos_1_1rtos_1_1_double__list__links.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html">os::rtos::Timeout_thread_node</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Double linked list node, with time stamp and thread.  <a href="classos_1_1rtos_1_1_timeout__thread__node.html#details">More...</a><br /></td></tr>
@@ -176,15 +170,20 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1rtos"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos.html">os::rtos</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTOS namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceos_1_1rtos_1_1scheduler"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html">os::rtos::scheduler</a></td></tr>
+<tr class="memdesc:namespaceos_1_1rtos_1_1scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Types</h2></td></tr>
-<tr class="memitem:af436cc01a436cee642fae15762e71993"><td class="memTemplParams" colspan="2">template&lt;typename CS_T &gt; </td></tr>
-<tr class="memitem:af436cc01a436cee642fae15762e71993"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos.html#af436cc01a436cee642fae15762e71993">os::rtos::Clock_timestamps_list_guard</a> = Clock_list_guard&lt; CS_T, Clock_timestamps_list, Timeout_thread_node &gt;</td></tr>
-<tr class="separator:af436cc01a436cee642fae15762e71993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4da8ea239b521605b44cfed4671c38b"><td class="memTemplParams" colspan="2">template&lt;typename CS_T &gt; </td></tr>
-<tr class="memitem:ae4da8ea239b521605b44cfed4671c38b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos.html#ae4da8ea239b521605b44cfed4671c38b">os::rtos::Waiting_threads_list_guard</a> = Thread_list_guard&lt; CS_T, Waiting_threads_list, Waiting_thread_node &gt;</td></tr>
-<tr class="separator:ae4da8ea239b521605b44cfed4671c38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6ae2b86ad7426d5ffac213757c3f8eb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a6ae2b86ad7426d5ffac213757c3f8eb9">os::rtos::scheduler::_link_node</a> (Waiting_threads_list &amp;list, Waiting_thread_node &amp;node)</td></tr>
+<tr class="separator:a6ae2b86ad7426d5ffac213757c3f8eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7313e80edf41aa7a11b0f6f4c912ed76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a7313e80edf41aa7a11b0f6f4c912ed76">os::rtos::scheduler::_link_node</a> (Waiting_threads_list &amp;list, Waiting_thread_node &amp;node, Clock_timestamps_list &amp;timeout_list, Timeout_thread_node &amp;timeout_node)</td></tr>
+<tr class="separator:a7313e80edf41aa7a11b0f6f4c912ed76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ae08e59dba8b3b3b98a551316704f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a33ae08e59dba8b3b3b98a551316704f2">os::rtos::scheduler::_unlink_node</a> (Waiting_thread_node &amp;node)</td></tr>
+<tr class="separator:a33ae08e59dba8b3b3b98a551316704f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0602687a93679d8b0def4a83e8069891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a0602687a93679d8b0def4a83e8069891">os::rtos::scheduler::_unlink_node</a> (Waiting_thread_node &amp;node, Timeout_thread_node &amp;timeout_node)</td></tr>
+<tr class="separator:a0602687a93679d8b0def4a83e8069891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

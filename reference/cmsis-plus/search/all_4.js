@@ -64,7 +64,7 @@ var searchData=
   ['do_5fwakeup_5fremote',['do_wakeup_remote',['../classos_1_1driver_1_1usb_1_1_device.html#a3b69b92432a0de8318d0121113f79767',1,'os::driver::usb::Device::do_wakeup_remote()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ade2fcaa097f424cca360d87d76bd58e5',1,'os::driver::Usbd_wrapper::do_wakeup_remote()']]],
   ['double_5flist',['Double_list',['../classos_1_1rtos_1_1_double__list.html#a00e08bf5a26fbf3627b5dc7cdda16b1e',1,'os::rtos::Double_list']]],
   ['double_5flist',['Double_list',['../classos_1_1rtos_1_1_double__list.html',1,'os::rtos']]],
-  ['double_5flist_5flinks',['Double_list_links',['../classos_1_1rtos_1_1_double__list__links.html#a7a7d5492f2f3de4cbeadb211eca98fad',1,'os::rtos::Double_list_links']]],
+  ['double_5flist_5flinks',['Double_list_links',['../classos_1_1rtos_1_1_double__list__links.html#a6d3ea70993a7b9ad213b7cf43e0cc6f9',1,'os::rtos::Double_list_links']]],
   ['double_5flist_5flinks',['Double_list_links',['../classos_1_1rtos_1_1_double__list__links.html',1,'os::rtos']]],
   ['driver_5f',['driver_',['../classos_1_1driver_1_1_usart__wrapper.html#ab251f7ed7a872c144fccc3211ba3993c',1,'os::driver::Usart_wrapper::driver_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ae79bf933f6f6417f0c9ca49d744361a2',1,'os::driver::Usbd_wrapper::driver_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#add619a55fb2359509c8f4d43763a5118',1,'os::driver::Usbh_wrapper::driver_()']]],
   ['drv_5f',['drv_',['../classos_1_1driver_1_1_version.html#a5f4f4bb94cbba08b22c74e8a1227e142',1,'os::driver::Version']]],

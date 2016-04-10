@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['acquired_5fmutexes',['acquired_mutexes',['../structos__thread__t.html#a5606517c12a1c131ce4759f49f7ea2bb',1,'os_thread_t']]],
+  ['acquired_5fmutexes_5f',['acquired_mutexes_',['../classos_1_1rtos_1_1_thread.html#a27ba7635ca2bc902faac1299f9f1a5f1',1,'os::rtos::Thread']]],
   ['active',['active',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#a43c3964bd05aa7cc3bc47ef00b69682c',1,'os::driver::usb::device::Status']]],
   ['adjusted_5flist_5f',['adjusted_list_',['../classos_1_1rtos_1_1_clock.html#add0977fd6b4cb34478e395f81cfcdf48',1,'os::rtos::Clock']]],
   ['adopt_5flock',['adopt_lock',['../namespaceos_1_1estd.html#ac343546aca6c8e136a0ac0a1fed06d3c',1,'os::estd']]],

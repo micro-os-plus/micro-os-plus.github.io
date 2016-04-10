@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 <p>For Cortex-M implementations using the standard SysTick, this clock is able to provide accuracy at CPU cycle level, by sampling the SysTick internal counter. For a CPU clock of 100 MHz, this gives a 10 ns resolution, quite high for accurate timing.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Get the current ticks counter.</span></div><div class="line">   <a class="code" href="namespaceos_1_1rtos_1_1clock.html#a7e1766f1fcca4517d63087b2073afd05">clock::timestamp_t</a> ticks = <a class="code" href="namespaceos_1_1rtos.html#ab04c435c09cf20cbc5f795c90650d674">systick_clock</a>.<a class="code" href="classos_1_1rtos_1_1_systick__clock.html#a4fe0716286f0b5f2426a7d3c03101be5">now</a>();</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of ticks.</span></div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#ab04c435c09cf20cbc5f795c90650d674">systick_clock</a>.<a class="code" href="classos_1_1rtos_1_1_clock.html#a135c3868815ebb602787d48acdd22a51">sleep_for</a>(7);</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of microseconds.</span></div><div class="line">   <span class="comment">// For a 1000 Hz clock, the actual value is 4 ticks.</span></div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#ab04c435c09cf20cbc5f795c90650d674">systick_clock</a>.<a class="code" href="classos_1_1rtos_1_1_clock.html#a135c3868815ebb602787d48acdd22a51">sleep_for</a>(<a class="code" href="classos_1_1rtos_1_1_systick__clock.html#abfd02e91207b5351fc799c02f0d96d11">Systick_clock::ticks_cast</a>(3500));</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00197">197</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00193">193</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a86be53558c6f19eafc0721a5ee701d2b"></a>
 <div class="memitem">
@@ -244,7 +244,7 @@ Public Member Functions</h2></td></tr>
 <p>When an accurate timestamp is needed, the current SysTick counter can be sampled to get the count of CPU cycles inside the tick. For a 100 MHz clock, this gives a 10 ns resolution.</p>
 <p>To simplify further processing of this timestamp, the structure also includes the CPU clock and the SysTick divider. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00230">230</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00226">226</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +262,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00303">303</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00317">317</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00308">308</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00322">322</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +340,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00233">233</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00234">234</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00474">474</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00411">411</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The clock specific timestamp.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00112">112</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00108">108</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +419,7 @@ Public Member Functions</h2></td></tr>
 <p>The function adjust for border conditions, when the SysTick counter is reloaded during the call.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00327">327</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00341">341</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +461,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00130">130</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00126">126</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00162">162</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00160">160</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -529,7 +529,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00101">101</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00097">97</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00439">439</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00433">433</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +581,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00121">121</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00117">117</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -643,7 +643,7 @@ template&lt;typename Rep_T &gt; </div>
 </div><div class="memdoc">
 <p>Round up the microseconds value and convert to a number of ticks, using the SysTick frequency in Hz. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00455">455</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00447">447</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -709,7 +709,7 @@ template&lt;typename Rep_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00170">170</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00167">167</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -725,7 +725,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>CPU clock frequency Hz. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00245">245</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00241">241</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -741,7 +741,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>Count of SysTick cycles since timer reload (24 bits). </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00235">235</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00231">231</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -757,7 +757,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>SysTick reload value (24 bits). </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00240">240</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00236">236</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -781,7 +781,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>SysTick frequency in Hz. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00209">209</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00205">205</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -805,7 +805,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>Adjustable offset to epoch. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00181">181</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00177">177</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -827,7 +827,7 @@ template&lt;typename Rep_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00169">169</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00166">166</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -851,7 +851,7 @@ template&lt;typename Rep_T &gt; </div>
 
 <p>Monotone ascending count. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00176">176</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00172">172</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -873,7 +873,7 @@ template&lt;typename Rep_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00168">168</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00165">165</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>

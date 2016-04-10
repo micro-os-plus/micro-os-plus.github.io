@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['_5flink_5fnode',['_link_node',['../classos_1_1rtos_1_1_thread.html#a13b183efce9e8c3697a96db780c7f818',1,'os::rtos::Thread::_link_node()'],['../classos_1_1rtos_1_1_thread.html#ab97a8075905cbb885caebdbd5f4d8525',1,'os::rtos::Thread::_link_node()']]],
+  ['_5funlink_5fnode',['_unlink_node',['../classos_1_1rtos_1_1_thread.html#a3d59fee9bcff8a4f9d3dcc403170a30f',1,'os::rtos::Thread::_unlink_node()'],['../classos_1_1rtos_1_1_thread.html#aa22b41907480f1b77681cd57e3124351',1,'os::rtos::Thread::_unlink_node()']]],
   ['sched_5fprio',['sched_prio',['../classos_1_1rtos_1_1_thread.html#adda417485c68f1af5c279f0e36dc6382',1,'os::rtos::Thread::sched_prio(thread::priority_t prio)'],['../classos_1_1rtos_1_1_thread.html#af1118dae8826231c78f8805704f90a66',1,'os::rtos::Thread::sched_prio(void)']]],
   ['sched_5fstate',['sched_state',['../classos_1_1rtos_1_1_thread.html#a6f7a57857cfb1806f6ffb7e139c0bcce',1,'os::rtos::Thread']]],
   ['sched_5fstate_5f',['sched_state_',['../classos_1_1rtos_1_1_thread.html#a5b767f10a973eb5640852b7e12ccd4e1',1,'os::rtos::Thread']]],
@@ -90,10 +92,10 @@ var searchData=
   ['state',['state',['../structos__thread__t.html#a7eb357408c005d2461dee085e9239d82',1,'os_thread_t::state()'],['../structos__timer__s.html#a184624ac4693f415b19f4f407f945dce',1,'os_timer_s::state()']]],
   ['state_5f',['state_',['../classos_1_1rtos_1_1_timer.html#af8eb45b959474a118e5a3ed3d581e505',1,'os::rtos::Timer::state_()'],['../structos_1_1estd_1_1once__flag.html#aafd0a6549d1f72b1c29b22a77cd8d064',1,'os::estd::once_flag::state_()']]],
   ['state_5ft',['state_t',['../namespaceos_1_1rtos_1_1thread.html#ac83bf77031e2c139bb553426b0805d2d',1,'os::rtos::thread::state_t()'],['../namespaceos_1_1rtos_1_1timer.html#ad1f12d1b9ed1ee5c5e25b0752f22aa89',1,'os::rtos::timer::state_t()']]],
-  ['status',['Status',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html',1,'os::driver::usb::device']]],
-  ['status',['Status',['../classos_1_1driver_1_1usb_1_1host_1_1_status.html',1,'os::driver::usb::host']]],
   ['status',['Status',['../classos_1_1driver_1_1serial_1_1_status.html',1,'os::driver::serial']]],
+  ['status',['Status',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html',1,'os::driver::usb::device']]],
   ['status',['status',['../structos_event.html#aafcd2cedd08e033f9df25fd9875caaf2',1,'osEvent']]],
+  ['status',['Status',['../classos_1_1driver_1_1usb_1_1host_1_1_status.html',1,'os::driver::usb::host']]],
   ['status_5f',['status_',['../classos_1_1driver_1_1_serial.html#ae6b841da44279d0abd02be6b66a53e8b',1,'os::driver::Serial::status_()'],['../classos_1_1driver_1_1_usart__wrapper.html#ae9a1af6f437b92ca7db5aac1b510041d',1,'os::driver::Usart_wrapper::status_()'],['../classos_1_1driver_1_1usb_1_1_device.html#a29083391f16f71582d48e069bd7e264d',1,'os::driver::usb::Device::status_()'],['../classos_1_1driver_1_1usb_1_1_host.html#adad442656488ddc80fc5bb19ef7850d0',1,'os::driver::usb::Host::status_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#aa2a5d689b0bca450afd1f60896056f87',1,'os::driver::Usbd_wrapper::status_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#ab92f9e0725bfcf5676d9435f8353a422',1,'os::driver::Usbh_wrapper::status_()'],['../classos_1_1rtos_1_1scheduler_1_1_critical__section.html#aee74c9cc197872af89d650731f87a50f',1,'os::rtos::scheduler::Critical_section::status_()'],['../classos_1_1rtos_1_1scheduler_1_1_lock.html#af77321a4c8a1f89811a94cd8aff30900',1,'os::rtos::scheduler::Lock::status_()'],['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a6426d6c7bb8d4ccfb7808a2855708463',1,'os::rtos::interrupts::Critical_section::status_()'],['../classos_1_1rtos_1_1interrupts_1_1_lock.html#a7fe459aba8f8263c8750ed7d4d421148',1,'os::rtos::interrupts::Lock::status_()']]],
   ['status_5ft',['status_t',['../namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83',1,'os::rtos::scheduler::status_t()'],['../namespaceos_1_1rtos_1_1interrupts.html#aa6f0b1defdbc8e7498bf7d475be5ddd4',1,'os::rtos::interrupts::status_t()']]],
   ['steady_5fclock',['steady_clock',['../namespaceos_1_1estd_1_1chrono.html#a4535e70924a65f0882603f36ef784f28',1,'os::estd::chrono']]],
@@ -120,8 +122,8 @@ var searchData=
   ['system_5fclock',['system_clock',['../classos_1_1estd_1_1chrono_1_1system__clock.html',1,'os::estd::chrono']]],
   ['system_5ferror',['system_error',['../system__error.html',1,'']]],
   ['systick_5fclock',['Systick_clock',['../classos_1_1rtos_1_1_systick__clock.html#aa0c7cf1f1dd428d1eb81438c8dc72788',1,'os::rtos::Systick_clock::Systick_clock()'],['../namespaceos_1_1rtos.html#ab04c435c09cf20cbc5f795c90650d674',1,'os::rtos::systick_clock()']]],
-  ['systick_5fclock',['Systick_clock',['../classos_1_1estd_1_1chrono_1_1_systick__clock.html',1,'os::estd::chrono']]],
   ['systick_5fclock',['Systick_clock',['../classos_1_1rtos_1_1_systick__clock.html',1,'os::rtos']]],
+  ['systick_5fclock',['Systick_clock',['../classos_1_1estd_1_1chrono_1_1_systick__clock.html',1,'os::estd::chrono']]],
   ['systick_5fhandler',['SysTick_Handler',['../exception-handlers_8h.html#ab5e09814056d617c521549e542639b7e',1,'SysTick_Handler(void):&#160;exception-handlers.c'],['../exception-handlers_8c.html#ab5e09814056d617c521549e542639b7e',1,'SysTick_Handler(void):&#160;exception-handlers.c']]],
   ['systicks',['systicks',['../namespaceos_1_1estd_1_1chrono.html#a4a628821f0b2dda391a1eb159283f09f',1,'os::estd::chrono']]],
   ['systicks_5ft',['systicks_t',['../namespaceos_1_1rtos_1_1clock.html#aa220d4a640b9774b48beec42f81fba32',1,'os::rtos::clock']]]

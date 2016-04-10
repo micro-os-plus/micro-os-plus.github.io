@@ -29,7 +29,7 @@ var searchData=
   ['power',['power',['../classos_1_1driver_1_1_base.html#a03dafced83724ad0e1b8124510b6a5c1',1,'os::driver::Base::power()'],['../namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dd',1,'os::driver::Power()']]],
   ['power_5fport_5fvbus',['power_port_vbus',['../classos_1_1driver_1_1usb_1_1_host.html#a8d38a38c19aa69db3ac692f8cfe534e6',1,'os::driver::usb::Host']]],
   ['power_5ft',['power_t',['../namespaceos_1_1driver.html#a4c1665b807c596e0c2d23d429e230202',1,'os::driver']]],
-  ['prev',['prev',['../structos__clock__node__t.html#a7f9775e9971b6457e003766bf62c669b',1,'os_clock_node_t::prev()'],['../classos_1_1rtos_1_1_double__list__links.html#afc078525fc3b5b399ddc765bc1732ee5',1,'os::rtos::Double_list_links::prev()']]],
+  ['prev',['prev',['../structos__threads__waiting__list__s.html#a55aaf627c0ce7ad6381292dd64aa717d',1,'os_threads_waiting_list_s::prev()'],['../structos__clock__node__t.html#a7f9775e9971b6457e003766bf62c669b',1,'os_clock_node_t::prev()'],['../classos_1_1rtos_1_1_double__list__links.html#afe33521aae2960db0b0226651876e293',1,'os::rtos::Double_list_links::prev()']]],
   ['prev_5farray',['prev_array',['../structos__mqueue__s.html#a33c36fd8dfc44bf6caebcf9787cc15a2',1,'os_mqueue_s']]],
   ['prev_5farray_5f',['prev_array_',['../classos_1_1rtos_1_1_message__queue.html#ad561546e8930505f2d71acb0f259eeed',1,'os::rtos::Message_queue']]],
   ['printf',['printf',['../group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee',1,'os::trace']]],

@@ -26,6 +26,7 @@ var annotated_dup =
     [ "os_thread_attr_t", "structos__thread__attr__t.html", "structos__thread__attr__t" ],
     [ "os_thread_def", "structos__thread__def.html", "structos__thread__def" ],
     [ "os_thread_t", "structos__thread__t.html", "structos__thread__t" ],
+    [ "os_thread_user_storage_t", "structos__thread__user__storage__t.html", null ],
     [ "os_threads_waiting_list_s", "structos__threads__waiting__list__s.html", "structos__threads__waiting__list__s" ],
     [ "os_timer_attr_s", "structos__timer__attr__s.html", "structos__timer__attr__s" ],
     [ "os_timer_def", "structos__timer__def.html", "structos__timer__def" ],

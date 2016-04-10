@@ -47,13 +47,13 @@ var NAVTREEINDEX =
 "__sbrk_8c.html",
 "classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e",
 "classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96",
-"classos_1_1rtos_1_1_mutex.html#a1ced578ffc847e14547b02ee1473c44e",
-"classos_1_1rtos_1_1mqueue_1_1_attributes.html#a1ced578ffc847e14547b02ee1473c44e",
-"dir_c96b264f061306113475babfb20524ab.html",
-"namespaceos_1_1driver_1_1serial.html",
-"os-c-wrapper_8cpp.html#a156238f12fa5beb1cb0a29a934a5cc05",
-"os-thread_8cpp.html#a527cca157e8ac579442f34a1a88589c9",
-"structos__mempool__s.html#a87288e1ea06035ba07217b1fe105cda6",
+"classos_1_1rtos_1_1_mutex.html#a84a88571e9bfcb1b5551b6f0082a6fa6",
+"classos_1_1rtos_1_1mutex_1_1_attributes.html#ad7667db8bf3171d900237500cb0e1e67",
+"dir_fc6e9c3f63ff4b657137cf8b6eab3c47.html",
+"namespaceos_1_1driver_1_1usb_1_1host.html",
+"os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2",
+"os-thread_8cpp.html#a6d6b2df07994ab81b2435596a93bbdb6",
+"structos__mempool__s.html#a9dfb09ab2fdce53f0817b278cce945ca",
 "usb_8h.html"
 ];
 

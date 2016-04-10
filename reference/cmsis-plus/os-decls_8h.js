@@ -2,6 +2,7 @@ var os_decls_8h =
 [
     [ "Clocked_attribute", "classos_1_1rtos_1_1_clocked__attribute.html", "classos_1_1rtos_1_1_clocked__attribute" ],
     [ "Named_object", "classos_1_1rtos_1_1_named__object.html", "classos_1_1rtos_1_1_named__object" ],
+    [ "os_thread_user_storage_t", "structos__thread__user__storage__t.html", null ],
     [ "os_assert_err", "os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39", null ],
     [ "os_assert_throw", "os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137", null ],
     [ "OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES", "os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca", null ],

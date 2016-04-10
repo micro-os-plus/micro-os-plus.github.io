@@ -1,7 +1,6 @@
 var os_thread_8h =
 [
     [ "Attributes", "classos_1_1rtos_1_1thread_1_1_attributes.html", "classos_1_1rtos_1_1thread_1_1_attributes" ],
-    [ "os_thread_user_storage_t", "structos_1_1rtos_1_1os__thread__user__storage__t.html", null ],
     [ "exit", "os-thread_8h.html#a9c68164be854d7fb8a2693726c6207ff", null ],
     [ "is_timeout", "os-thread_8h.html#ab5101a855f1eced8c611bfba34778c92", null ],
     [ "sig_wait", "os-thread_8h.html#a0074bbc6172d789c71439f6c432dc4ca", null ],

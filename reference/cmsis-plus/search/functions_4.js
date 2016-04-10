@@ -41,6 +41,6 @@ var searchData=
   ['do_5funconfigure_5fendpoint',['do_unconfigure_endpoint',['../classos_1_1driver_1_1usb_1_1_device.html#a45a2ca102e61cfd819da87adc6c83701',1,'os::driver::usb::Device::do_unconfigure_endpoint()'],['../classos_1_1driver_1_1_usbd__wrapper.html#aa5233c0240cd67a05237d39b0e540abb',1,'os::driver::Usbd_wrapper::do_unconfigure_endpoint()']]],
   ['do_5fwakeup_5fremote',['do_wakeup_remote',['../classos_1_1driver_1_1usb_1_1_device.html#a3b69b92432a0de8318d0121113f79767',1,'os::driver::usb::Device::do_wakeup_remote()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ade2fcaa097f424cca360d87d76bd58e5',1,'os::driver::Usbd_wrapper::do_wakeup_remote()']]],
   ['double_5flist',['Double_list',['../classos_1_1rtos_1_1_double__list.html#a00e08bf5a26fbf3627b5dc7cdda16b1e',1,'os::rtos::Double_list']]],
-  ['double_5flist_5flinks',['Double_list_links',['../classos_1_1rtos_1_1_double__list__links.html#a7a7d5492f2f3de4cbeadb211eca98fad',1,'os::rtos::Double_list_links']]],
+  ['double_5flist_5flinks',['Double_list_links',['../classos_1_1rtos_1_1_double__list__links.html#a6d3ea70993a7b9ad213b7cf43e0cc6f9',1,'os::rtos::Double_list_links']]],
   ['dump_5fargs',['dump_args',['../group__cmsis-plus-diag.html#gae52332a8c43778a8d61312fc4064647e',1,'os::trace']]]
 ];

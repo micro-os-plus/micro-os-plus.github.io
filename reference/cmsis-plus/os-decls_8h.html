@@ -151,6 +151,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for named objects.  <a href="classos_1_1rtos_1_1_named__object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__user__storage__t.html">os_thread_user_storage_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default empty thread user storage.  <a href="structos__thread__user__storage__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -224,7 +227,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a7ca7d74dfe5c184cdd627cc958564137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert or throw a system error exception.  <a href="#a7ca7d74dfe5c184cdd627cc958564137">More...</a><br /></td></tr>
 <tr class="separator:a7ca7d74dfe5c184cdd627cc958564137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2bd07321ee51c8de75ada8d6726cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca">OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES</a>&#160;&#160;&#160;(400)</td></tr>
-<tr class="memdesc:a1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> stack size, in bytes.  <a href="#a1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
+<tr class="memdesc:a1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a></code> stack size, in bytes.  <a href="#a1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
 <tr class="separator:a1e2bd07321ee51c8de75ada8d6726cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab657098ae141f5b84a1319f48c181052"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">OS_INTEGER_SYSTICK_FREQUENCY_HZ</a>&#160;&#160;&#160;(1000)</td></tr>
 <tr class="memdesc:ab657098ae141f5b84a1319f48c181052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the SysTick frequency, in Hz.  <a href="#ab657098ae141f5b84a1319f48c181052">More...</a><br /></td></tr>
@@ -432,7 +435,7 @@ Variables</h2></td></tr>
 <p>Assert or return an error. </p>
 <p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, the given error code is returned. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00978">978</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00994">994</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -463,7 +466,7 @@ Variables</h2></td></tr>
 <p>Assert or throw a system error exception. </p>
 <p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, a ssytem error exception is thrown (which is replaced by an <code><a class="el" href="abort_8c.html#a8dec7c95227ff149687066cf04029191">abort()</a></code> if exceptions are disabled). </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00993">993</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01009">1009</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -477,10 +480,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> stack size, in bytes. </p>
+<p>Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a></code> stack size, in bytes. </p>
 <p>Redefine it in <code>&lt;os-app-config.h&gt;</code> to the actual value. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01013">1013</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01029">1029</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +500,7 @@ Variables</h2></td></tr>
 <p>Default definition for the SysTick frequency, in Hz. </p>
 <p>Redefine it in <code>&lt;os-app-config.h&gt;</code> to the actual value. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01004">1004</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01020">1020</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +561,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The standard <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementaion of main(). ">main()</a></code> creates a dedicated thread to run this function.</p>
+<p>The standard <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a></code> creates a dedicated thread to run this function.</p>
 <p>The returned value is used in semihosted tests, to inform the host on the result of the test. </p>
 
 </div>

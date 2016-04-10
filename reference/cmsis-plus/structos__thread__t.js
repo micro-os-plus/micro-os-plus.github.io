@@ -1,5 +1,6 @@
 var structos__thread__t =
 [
+    [ "acquired_mutexes", "structos__thread__t.html#a5606517c12a1c131ce4759f49f7ea2bb", null ],
     [ "clock_node", "structos__thread__t.html#ae89d637cf4894ed69b8799d98e61a25a", null ],
     [ "func", "structos__thread__t.html#a5034ee4a70879c737f2c3c12b1eb7dfc", null ],
     [ "func_args", "structos__thread__t.html#a14db8df1fc9a0fd722c75ebde3dab55c", null ],

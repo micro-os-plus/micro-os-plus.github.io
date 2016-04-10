@@ -25,7 +25,7 @@ var searchData=
   ['os_5fthread_5fattr_5ft',['os_thread_attr_t',['../structos__thread__attr__t.html',1,'']]],
   ['os_5fthread_5fdef',['os_thread_def',['../structos__thread__def.html',1,'']]],
   ['os_5fthread_5ft',['os_thread_t',['../structos__thread__t.html',1,'']]],
-  ['os_5fthread_5fuser_5fstorage_5ft',['os_thread_user_storage_t',['../structos_1_1rtos_1_1os__thread__user__storage__t.html',1,'os::rtos']]],
+  ['os_5fthread_5fuser_5fstorage_5ft',['os_thread_user_storage_t',['../structos__thread__user__storage__t.html',1,'']]],
   ['os_5fthreads_5fwaiting_5flist_5fs',['os_threads_waiting_list_s',['../structos__threads__waiting__list__s.html',1,'']]],
   ['os_5ftimer_5fattr_5fs',['os_timer_attr_s',['../structos__timer__attr__s.html',1,'']]],
   ['os_5ftimer_5fdef',['os_timer_def',['../structos__timer__def.html',1,'']]],

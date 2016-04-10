@@ -1,12 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"namespaceos_1_1driver_1_1serial.html":[3,0,0,0,0],
-"namespaceos_1_1driver_1_1serial.html":[2,0,1,0,0],
-"namespaceos_1_1driver_1_1usb.html":[2,0,1,0,1],
-"namespaceos_1_1driver_1_1usb.html":[3,0,0,0,1],
-"namespaceos_1_1driver_1_1usb_1_1device.html":[3,0,0,0,1,0],
-"namespaceos_1_1driver_1_1usb_1_1device.html":[2,0,1,0,1,0],
-"namespaceos_1_1driver_1_1usb_1_1host.html":[2,0,1,0,1,1],
 "namespaceos_1_1driver_1_1usb_1_1host.html":[3,0,0,0,1,1],
 "namespaceos_1_1estd.html":[2,0,1,1],
 "namespaceos_1_1estd.html":[3,0,0,1],
@@ -16,10 +9,10 @@ var NAVTREEINDEX6 =
 "namespaceos_1_1rtos.html":[3,0,0,2],
 "namespaceos_1_1rtos.html":[2,0,1,2],
 "namespaceos_1_1rtos_1_1clock.html":[2,0,1,2,0],
-"namespaceos_1_1rtos_1_1condvar.html":[3,0,0,2,0],
 "namespaceos_1_1rtos_1_1condvar.html":[2,0,1,2,1],
-"namespaceos_1_1rtos_1_1evflags.html":[3,0,0,2,1],
+"namespaceos_1_1rtos_1_1condvar.html":[3,0,0,2,0],
 "namespaceos_1_1rtos_1_1evflags.html":[2,0,1,2,2],
+"namespaceos_1_1rtos_1_1evflags.html":[3,0,0,2,1],
 "namespaceos_1_1rtos_1_1flags.html":[2,0,1,2,3],
 "namespaceos_1_1rtos_1_1flags.html":[3,0,0,2,2],
 "namespaceos_1_1rtos_1_1flags_1_1mode.html":[2,0,1,2,3,0],
@@ -249,5 +242,12 @@ var NAVTREEINDEX6 =
 "os-c-wrapper_8cpp.html#a0dfb90ccf1f6e4b54b9251b12d1cbc8b":[4,0,2,0,4,0,112],
 "os-c-wrapper_8cpp.html#a10263428a13686cf779a6b439b38032f":[4,0,2,0,4,0,91],
 "os-c-wrapper_8cpp.html#a123ac596c6544709c48f93866afd52d3":[4,0,2,0,4,0,15],
-"os-c-wrapper_8cpp.html#a137aa53f9bbafc4ebad98aba9dd60773":[4,0,2,0,4,0,8]
+"os-c-wrapper_8cpp.html#a137aa53f9bbafc4ebad98aba9dd60773":[4,0,2,0,4,0,8],
+"os-c-wrapper_8cpp.html#a156238f12fa5beb1cb0a29a934a5cc05":[4,0,2,0,4,0,66],
+"os-c-wrapper_8cpp.html#a15c2d2b2bc33979949712ef1860d4aae":[4,0,2,0,4,0,70],
+"os-c-wrapper_8cpp.html#a17ba5e50e29e989de98e8ac979f2bf0d":[4,0,2,0,4,0,10],
+"os-c-wrapper_8cpp.html#a1a26c9b72ae4246b086a516244e480c8":[4,0,2,0,4,0,59],
+"os-c-wrapper_8cpp.html#a1ccab800c0b4c1b24a0378375627ed7e":[4,0,2,0,4,0,81],
+"os-c-wrapper_8cpp.html#a1fe9db3c9983868533bd0e5605d1b76f":[4,0,2,0,4,0,92],
+"os-c-wrapper_8cpp.html#a2107d849aad1300add2b693115c20ddd":[4,0,2,0,4,0,17]
 };

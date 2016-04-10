@@ -229,7 +229,7 @@ Protected Attributes</h2></td></tr>
 <p>Only the event flags object itself may be used for performing synchronisation. It is not allowed to make copies of event flags objects.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00134">134</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00130">130</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ Protected Attributes</h2></td></tr>
 <p>In cases where default event flags attributes are appropriate, the variable <code><a class="el" href="namespaceos_1_1rtos_1_1evflags.html#a7c8a4711c63c6a68b252cd0b4215271b" title="Default event flags initialiser. ">evflags::initializer</a></code> can be used to initialise event flags. The effect shall be equivalent to creating an event flags object with the default constructor.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00162">162</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00158">158</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ Protected Attributes</h2></td></tr>
 <p>It shall be safe to destroy an initialised event flags object upon which no threads are currently blocked. Attempting to destroy an event flags object upon which other threads are currently blocked results in undefined behaviour.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00198">198</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00196">196</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00497">497</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00544">544</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Protected Attributes</h2></td></tr>
 <p>If the mask is zero, return the status of all event flags, without any masking or subsequent clearing.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00534">534</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00581">581</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -532,7 +532,7 @@ Protected Attributes</h2></td></tr>
 <p>Set more bits in the thread current signal mask. Use OR at bit-mask level. Wake-up all waiting threads, if any.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00459">459</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00506">506</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ Protected Attributes</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the event flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00388">388</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00412">412</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +659,7 @@ Protected Attributes</h2></td></tr>
 <p>The function does not blocks, if the expected event flags are not raised, but returns EGAIN.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00333">333</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00352">352</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ Protected Attributes</h2></td></tr>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the event flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00274">274</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00272">272</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +748,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00569">569</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00620">620</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,12 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"dir_c96b264f061306113475babfb20524ab.html":[4,0,1,0,3],
-"dir_cae430f933a417897a2c3fb661b022de.html":[4,0,1,0,4],
-"dir_cfc86ef4a470e1f1c967c7573b4d9521.html":[4,0,1,0,2],
-"dir_d44c64559bbebec7f509842c48db8b23.html":[4,0,1],
-"dir_d9e0b5f760b38453464f599355c731bf.html":[4,0,2,0,6],
-"dir_dbae1a8135144c418845f35aa8289a73.html":[4,0,2,0],
-"dir_ec8a5beccc8630a1bbfe2c053fb5e476.html":[4,0,1,0,5],
 "dir_fc6e9c3f63ff4b657137cf8b6eab3c47.html":[4,0,1,0,1],
 "dirent_8h.html":[4,0,1,0,6,1],
 "dirent_8h_source.html":[4,0,1,0,6,1],
@@ -246,8 +239,15 @@ var NAVTREEINDEX5 =
 "namespacemembers_vars.html":[2,1,2],
 "namespacemembers_w.html":[2,1,0,20],
 "namespacemembers_y.html":[2,1,0,21],
-"namespaceos.html":[3,0,0],
 "namespaceos.html":[2,0,1],
+"namespaceos.html":[3,0,0],
+"namespaceos_1_1driver.html":[2,0,1,0],
 "namespaceos_1_1driver.html":[3,0,0,0],
-"namespaceos_1_1driver.html":[2,0,1,0]
+"namespaceos_1_1driver_1_1serial.html":[2,0,1,0,0],
+"namespaceos_1_1driver_1_1serial.html":[3,0,0,0,0],
+"namespaceos_1_1driver_1_1usb.html":[3,0,0,0,1],
+"namespaceos_1_1driver_1_1usb.html":[2,0,1,0,1],
+"namespaceos_1_1driver_1_1usb_1_1device.html":[2,0,1,0,1,0],
+"namespaceos_1_1driver_1_1usb_1_1device.html":[3,0,0,0,1,0],
+"namespaceos_1_1driver_1_1usb_1_1host.html":[2,0,1,0,1,1]
 };

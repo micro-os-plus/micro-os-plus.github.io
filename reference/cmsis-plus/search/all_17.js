@@ -6,11 +6,10 @@ var searchData=
   ['waiting',['waiting',['../classos_1_1rtos_1_1_event__flags.html#afcf9ac510b8499a91d9356302ccf38fe',1,'os::rtos::Event_flags']]],
   ['waiting_5fnode',['waiting_node',['../structos__thread__t.html#a1ee6142e10d8fa0c54965e8f2f47c668',1,'os_thread_t']]],
   ['waiting_5fnode_5f',['waiting_node_',['../classos_1_1rtos_1_1_thread.html#ab8ab2188272e2eda1f27229a5bd3eca2',1,'os::rtos::Thread']]],
-  ['waiting_5fthread_5fnode',['Waiting_thread_node',['../classos_1_1rtos_1_1_waiting__thread__node.html#a8f8203d9782a3e297fd609ff6e53ac22',1,'os::rtos::Waiting_thread_node']]],
+  ['waiting_5fthread_5fnode',['Waiting_thread_node',['../classos_1_1rtos_1_1_waiting__thread__node.html#ad4f01996dddfe49e0f4278d1dc57e213',1,'os::rtos::Waiting_thread_node']]],
   ['waiting_5fthread_5fnode',['Waiting_thread_node',['../classos_1_1rtos_1_1_waiting__thread__node.html',1,'os::rtos']]],
-  ['waiting_5fthreads_5flist',['Waiting_threads_list',['../classos_1_1rtos_1_1_waiting__threads__list.html',1,'os::rtos']]],
   ['waiting_5fthreads_5flist',['Waiting_threads_list',['../classos_1_1rtos_1_1_thread.html#af7da9704c52235658b971027c32f8106',1,'os::rtos::Thread::Waiting_threads_list()'],['../classos_1_1rtos_1_1_waiting__threads__list.html#ab0327aaa384a93cc686cd9fd453e784a',1,'os::rtos::Waiting_threads_list::Waiting_threads_list()']]],
-  ['waiting_5fthreads_5flist_5fguard',['Waiting_threads_list_guard',['../namespaceos_1_1rtos.html#ae4da8ea239b521605b44cfed4671c38b',1,'os::rtos']]],
+  ['waiting_5fthreads_5flist',['Waiting_threads_list',['../classos_1_1rtos_1_1_waiting__threads__list.html',1,'os::rtos']]],
   ['wakeup_5fremote',['wakeup_remote',['../classos_1_1driver_1_1usb_1_1_device.html#a62f47f0f6deed7375542dd4978e84d7c',1,'os::driver::usb::Device']]],
   ['write',['write',['../namespaceos_1_1trace.html#a5e626eea11f3605e19b207a68b13b822',1,'os::trace']]]
 ];
