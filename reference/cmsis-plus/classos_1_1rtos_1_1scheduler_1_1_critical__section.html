@@ -158,7 +158,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be nested as many times as required without problems, only the outer call will unlock the scheduler.</dd></dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   {</div><div class="line">     scheduler::Critical_section cs;  <span class="comment">// Critical section begins here.</span></div><div class="line"></div><div class="line">     <span class="comment">// Inside the critical section.</span></div><div class="line">     <span class="comment">// No scheduler switches will happen here.</span></div><div class="line"></div><div class="line">   } <span class="comment">// Critical section ends here.</span></div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00129">129</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00128">128</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa8f3747441f788e0abe33179b9c61583"></a>
 <div class="memitem">
@@ -185,7 +185,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None</dd></dl>
 <p><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html" title="Scheduler standard locker. ">Lock</a> the scheduler and remember the initial scheduler status. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00524">524</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00673">673</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@ Protected Attributes</h2></td></tr>
 <p>Exit a critical section. </p>
 <p>Restore the initial scheduler status and possibly unlock the scheduler. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00536">536</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00685">685</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ Protected Attributes</h2></td></tr>
 <p>The variable is constant, after being set by the constructor no further changes are possible.</p>
 <p>The variable type usually is a <code>bool</code>, but a counter is also possible if the scheduler uses a recursive lock. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00177">177</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00176">176</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>

@@ -708,7 +708,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -807,7 +807,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00840">840</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00845">845</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +838,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01136">1136</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01139">1139</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -898,7 +898,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00479">479</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00482">482</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +976,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01026">1026</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01034">1034</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1051,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00651">651</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00656">656</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1101,7 @@ Differences from the standard:<ul>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The message could not be dequeued (extension to POSIX). </td></tr>
     <tr><td class="paramname">EBADMSG</td><td>The implementation has detected a data corruption problem with the message. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The specified message queue is empty.</td></tr>
+    <tr><td class="paramname">EWOULDBLOCK</td><td>The specified message queue is empty.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1109,10 +1109,14 @@ Differences from the standard:<ul>
 <p>If the value of <em>nbytes</em> is greater than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a401673f901adbc7471dab89f4b51cee2">mqueue::max_size</a></code>, the result is implementation-defined.</p>
 <p>If the argument <em>mprio</em> is not nullptr, the priority of the selected message shall be stored in the location referenced by <em>mprio</em>.</p>
 <p>If the message queue is empty, no message shall be removed from the queue, and <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c" title="Try to receive a message from the queue. ">try_receive()</a></code> shall return an error.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
+Differences from the standard:<ul>
+<li>for consistency reasons, EWOULDBLOCK is used, instead of EAGAIN</li>
+</ul>
+</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00938">938</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00946">946</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1162,7 @@ Differences from the standard:<ul>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The specified message queue is full. </td></tr>
+    <tr><td class="paramname">EWOULDBLOCK</td><td>The specified message queue is full. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The message could not be enqueue (extension to POSIX).</td></tr>
@@ -1168,10 +1172,14 @@ Differences from the standard:<ul>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">Message_queue::try_send()</a></code> function shall try to add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> parameter of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall fail.</p>
 <p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
 <p>If the message queue is full, the message shall not be queued and <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall return an error.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
+Differences from the standard:<ul>
+<li>for consistency reasons, EWOULDBLOCK is used, instead of EAGAIN</li>
+</ul>
+</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00576">576</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00581">581</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1364,7 @@ Differences from the standard:<ul>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

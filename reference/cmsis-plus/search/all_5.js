@@ -13,7 +13,7 @@ var searchData=
   ['endpoint_5ft',['endpoint_t',['../namespaceos_1_1driver_1_1usb.html#a245347c8a58fc0bb5ea588b37f598865',1,'os::driver::usb']]],
   ['endpoint_5ftype',['Endpoint_type',['../namespaceos_1_1driver_1_1usb.html#ace9b3966f59cf1ba965cc5bcad04efd2',1,'os::driver::usb']]],
   ['endpoint_5ftype_5ft',['endpoint_type_t',['../namespaceos_1_1driver_1_1usb.html#a6a0d35b8e0f7946ab8d9ddddade13978',1,'os::driver::usb']]],
-  ['enter',['enter',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a4cfe5893a2e12caee6410b418dc858ac',1,'os::rtos::interrupts::Critical_section']]],
+  ['enter',['enter',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a4cfe5893a2e12caee6410b418dc858ac',1,'os::rtos::interrupts::Critical_section::enter()'],['../classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html#a4b370344ae1f85a8bada760e3f52ecb6',1,'os::rtos::interrupts::Uncritical_section::enter()']]],
   ['error',['error',['../group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c',1,'os::rtos::thread::priority::error()'],['../namespaceos_1_1driver.html#aa0c726a6c160b3f630ad0f45db91e789',1,'os::driver::ERROR()']]],
   ['error_5fbaudrate',['ERROR_BAUDRATE',['../namespaceos_1_1driver_1_1serial.html#ac9029ae92680c24acdaa4bc99cad32b2',1,'os::driver::serial']]],
   ['error_5fbusy',['ERROR_BUSY',['../namespaceos_1_1driver.html#ae2d4b937f6d9678989a0d5b33568b19b',1,'os::driver']]],
@@ -46,7 +46,7 @@ var searchData=
   ['exception_2dhandlers_2ec',['exception-handlers.c',['../exception-handlers_8c.html',1,'']]],
   ['exception_2dhandlers_2eh',['exception-handlers.h',['../exception-handlers_8h.html',1,'']]],
   ['exceptionstackframe',['ExceptionStackFrame',['../struct_exception_stack_frame.html',1,'']]],
-  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]],
+  ['exit',['exit',['../classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a',1,'os::rtos::interrupts::Critical_section::exit()'],['../classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html#aa1b59f7e17ef05f3f33492b5de113204',1,'os::rtos::interrupts::Uncritical_section::exit()'],['../namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff',1,'os::rtos::this_thread::exit()']]],
   ['exit_2ec',['exit.c',['../exit_8c.html',1,'']]],
   ['exit_5ffunc_5ft',['exit_func_t',['../atexit_8h.html#a075b063ab79e6c5aeef211291c25b5cd',1,'atexit.h']]]
 ];

@@ -48,13 +48,13 @@ var NAVTREEINDEX =
 "classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e",
 "classos_1_1estd_1_1recursive__mutex.html#a94f0b3a4f439c2ca6d14e39dce11ec96",
 "classos_1_1rtos_1_1_mutex.html#a84a88571e9bfcb1b5551b6f0082a6fa6",
-"classos_1_1rtos_1_1mutex_1_1_attributes.html#ad7667db8bf3171d900237500cb0e1e67",
-"dir_fc6e9c3f63ff4b657137cf8b6eab3c47.html",
-"namespaceos_1_1driver_1_1usb_1_1host.html",
-"os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2",
-"os-thread_8cpp.html#a6d6b2df07994ab81b2435596a93bbdb6",
-"structos__mempool__s.html#a9dfb09ab2fdce53f0817b278cce945ca",
-"usb_8h.html"
+"classos_1_1rtos_1_1mutex_1_1_attributes.html#a4fad6524f7c3d67e243b0726aae90d2d",
+"dir_8cf3aac9cd7db06c2a2047e53e2c35e1.html",
+"namespaceos.html",
+"os-c-wrapper_8cpp.html#a006e4744d741e8e132c3d5bbc295afe1",
+"os-mqueue_8h_source.html",
+"structos__evflags__s.html#af2f69dc60e5785c480c34358154733db",
+"usb-device_8h.html#ac271252f96010635939d3fcb301ba435aac4090e3bf988c69b10a3e7639742077"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

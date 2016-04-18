@@ -2,8 +2,8 @@ var classos_1_1rtos_1_1_clock =
 [
     [ "Clock", "classos_1_1rtos_1_1_clock.html#a7ba0fd24644521c01d6f5d041d31c2b2", null ],
     [ "~Clock", "classos_1_1rtos_1_1_clock.html#afc7a230988bda7e78cc77798c7e8b390", null ],
+    [ "_interrupt_service_routine", "classos_1_1rtos_1_1_clock.html#aec7db9547bedb909c55184b67c8947bf", null ],
     [ "_wait_until", "classos_1_1rtos_1_1_clock.html#a60f3f9c2a35dd37458b1b59d4b1188d7", null ],
-    [ "interrupt_service_routine", "classos_1_1rtos_1_1_clock.html#a5a27587cf1ca26181822b3acc767bdee", null ],
     [ "now", "classos_1_1rtos_1_1_clock.html#a61d411d1a5e51e536daa37e3ee5faa01", null ],
     [ "sleep_for", "classos_1_1rtos_1_1_clock.html#a135c3868815ebb602787d48acdd22a51", null ],
     [ "sleep_until", "classos_1_1rtos_1_1_clock.html#af42a3272d4fbdb5a277576e1b1ca3c4e", null ],

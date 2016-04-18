@@ -22,8 +22,8 @@ var hierarchy =
     ] ],
     [ "os::estd::condition_variable", "classos_1_1estd_1_1condition__variable.html", null ],
     [ "os::estd::condition_variable_any", "classos_1_1estd_1_1condition__variable__any.html", null ],
-    [ "os::rtos::interrupts::Critical_section", "classos_1_1rtos_1_1interrupts_1_1_critical__section.html", null ],
     [ "os::rtos::scheduler::Critical_section", "classos_1_1rtos_1_1scheduler_1_1_critical__section.html", null ],
+    [ "os::rtos::interrupts::Critical_section", "classos_1_1rtos_1_1interrupts_1_1_critical__section.html", null ],
     [ "os::estd::defer_lock_t", "structos_1_1estd_1_1defer__lock__t.html", null ],
     [ "os::rtos::Double_list", "classos_1_1rtos_1_1_double__list.html", [
       [ "os::rtos::Clock_timestamps_list", "classos_1_1rtos_1_1_clock__timestamps__list.html", null ],
@@ -110,13 +110,15 @@ var hierarchy =
     [ "os::estd::recursive_mutex", "classos_1_1estd_1_1recursive__mutex.html", [
       [ "os::estd::recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html", null ]
     ] ],
-    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
-    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
     [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
+    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
+    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
     [ "os::estd::chrono::Systick_clock", "classos_1_1estd_1_1chrono_1_1_systick__clock.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],
     [ "os::estd::try_to_lock_t", "structos_1_1estd_1_1try__to__lock__t.html", null ],
+    [ "os::rtos::interrupts::Uncritical_section", "classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html", null ],
+    [ "os::rtos::scheduler::Uncritical_section", "classos_1_1rtos_1_1scheduler_1_1_uncritical__section.html", null ],
     [ "os::estd::unique_lock< Mutex_T >", "classos_1_1estd_1_1unique__lock.html", null ],
     [ "os::driver::Version", "classos_1_1driver_1_1_version.html", null ]
 ];

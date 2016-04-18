@@ -142,6 +142,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html">Lock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler standard locker.  <a href="classos_1_1rtos_1_1scheduler_1_1_lock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_uncritical__section.html">Uncritical_section</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler uncritical section <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> helper.  <a href="classos_1_1rtos_1_1scheduler_1_1_uncritical__section.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
@@ -165,9 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab6cf4a77bd9f182fb9ee339e08b2289d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#ab6cf4a77bd9f182fb9ee339e08b2289d">initialize</a> (void)</td></tr>
 <tr class="memdesc:ab6cf4a77bd9f182fb9ee339e08b2289d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the RTOS scheduler.  <a href="#ab6cf4a77bd9f182fb9ee339e08b2289d">More...</a><br /></td></tr>
 <tr class="separator:ab6cf4a77bd9f182fb9ee339e08b2289d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28e5ae84a538bc5031a17a4665a14ca6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83">status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6">lock</a> (void)</td></tr>
-<tr class="memdesc:a28e5ae84a538bc5031a17a4665a14ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the scheduler.  <a href="#a28e5ae84a538bc5031a17a4665a14ca6">More...</a><br /></td></tr>
-<tr class="separator:a28e5ae84a538bc5031a17a4665a14ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192571f4400ae993fae3f589a9be128c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83">status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a192571f4400ae993fae3f589a9be128c">lock</a> (<a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83">status_t</a> status=true)</td></tr>
+<tr class="memdesc:a192571f4400ae993fae3f589a9be128c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the scheduler.  <a href="#a192571f4400ae993fae3f589a9be128c">More...</a><br /></td></tr>
+<tr class="separator:a192571f4400ae993fae3f589a9be128c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc237cecdf686cfb10780a29931166a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">locked</a> (void)</td></tr>
 <tr class="memdesc:adc237cecdf686cfb10780a29931166a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the scheduler is locked.  <a href="#adc237cecdf686cfb10780a29931166a4">More...</a><br /></td></tr>
 <tr class="separator:adc237cecdf686cfb10780a29931166a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +210,7 @@ Variables</h2></td></tr>
 <p>Type of a variable holding scheduler status codes. </p>
 <p>Usually a boolean telling if the scheduler is locked or not, but for recursive locks it might also be a numeric counter. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00231">231</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00232">232</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +239,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00218">218</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00225">225</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00242">242</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00249">249</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +297,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00229">229</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00236">236</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +325,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00259">259</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00266">266</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,22 +388,27 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a28e5ae84a538bc5031a17a4665a14ca6"></a>
+<a class="anchor" id="a192571f4400ae993fae3f589a9be128c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83">status_t</a> os::rtos::scheduler::lock </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83">status_t</a>&#160;</td>
+          <td class="paramname"><em>status</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Lock the scheduler. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>The new status of the scheduler (true for locked). </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous status of the scheduler.</dd></dl>
 <p><a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html" title="Scheduler standard locker. ">Lock</a> the scheduler (prevent it for doing thread switches) and return the previous status, to be restored by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
@@ -442,7 +450,7 @@ Variables</h2></td></tr>
 </dl>
 <p>Check if the scheduler is locked on the current thread or is switching threads from the ready list. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00514">514</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00663">663</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +517,7 @@ Variables</h2></td></tr>
 </dl>
 <p>Check if the scheduler was started, i.e. if <a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a1f95f21495b763252a4485078f82716b" title="Start the RTOS scheduler. ">scheduler::start()</a> was called. </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00503">503</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00652">652</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -530,15 +538,15 @@ Variables</h2></td></tr>
 <p>Unlock the scheduler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>The new status of the scheduler. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>The new status of the scheduler (false for unlocked). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Actually restore the scheduler status based on the given parameter, usually returned by a <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code>. This allows for embedded critical sections to preserve the locked status until the outer one completes and invokes <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
+<p>Actually restore the scheduler status based on the given parameter, usually returned by a <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a192571f4400ae993fae3f589a9be128c" title="Lock the scheduler. ">lock()</a></code>. This allows for embedded critical sections to preserve the locked status until the outer one completes and invokes <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00145">145</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00151">151</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -554,7 +562,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The scheduler status. </p>
-<p>Modified by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a28e5ae84a538bc5031a17a4665a14ca6" title="Lock the scheduler. ">lock()</a></code> and restored to previous value by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>. </p>
+<p>Modified by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a192571f4400ae993fae3f589a9be128c" title="Lock the scheduler. ">lock()</a></code> and restored to previous value by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>. </p>
 
 <p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00067">67</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 

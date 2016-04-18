@@ -145,7 +145,8 @@ Enumerations</h2></td></tr>
 <p>Currently in use are:</p><ul>
 <li><code>EPERM</code> - Operation not permitted. An attempt was made to perform an operation limited to processes with appropriate privileges or to the owner of a file or other resource. In CMSIS++ this usually means that the call is not available in handler mode.</li>
 <li><code>EINVAL</code> - Invalid argument. Some invalid argument was supplied;</li>
-<li><code>EAGAIN</code> - Resource temporarily unavailable. This is a temporary condition and later calls to the same routine may complete normally. In CMSIS++ case, this usually means that a call to <code>try_xxx()</code> found the resource busy.</li>
+<li><code>EWOULDBLOCK</code> - Operation would block. In CMSIS++ case, this usually means that a call to <code>try_xxx()</code> found the resource busy.</li>
+<li><code>EAGAIN</code> - Resource temporarily unavailable. This is a temporary condition and later calls to the same routine may complete normally.</li>
 <li><code>ENOTRECOVERABLE</code> - State not recoverable. In CMSIS++ this usually means an unrecoverable error occurred.</li>
 <li><code>EDEADLOCK</code> - Resource deadlock would occur. An attempt was made to lock a system resource that would have resulted in a deadlock situation.</li>
 <li><code>EMSGSIZE</code> - Message too large. A message sent on a transport provider was larger than an internal message buffer or some other network limit, or inappropriate message buffer length.</li>
@@ -155,7 +156,7 @@ Enumerations</h2></td></tr>
 <li><code>EOWNERDEAD</code> - Previous owner died. The owner of a robust mutex terminated while holding the mutex lock.</li>
 </ul>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   Mutex mx;</div><div class="line">   ...</div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> res = mx.try_lock();</div><div class="line">   <span class="keywordflow">if</span> (res == <a class="code" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>)</div><div class="line">     {</div><div class="line">       <span class="comment">// All is well, mutex locked.</span></div><div class="line">     }</div><div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (res == EAGAIN)</div><div class="line">     {</div><div class="line">       <span class="comment">// Mutex busy, try again later.</span></div><div class="line">     }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   Mutex mx;</div><div class="line">   ...</div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> res = mx.try_lock();</div><div class="line">   <span class="keywordflow">if</span> (res == <a class="code" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>)</div><div class="line">     {</div><div class="line">       <span class="comment">// All is well, mutex locked.</span></div><div class="line">     }</div><div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (res == EWOULDBLOCK)</div><div class="line">     {</div><div class="line">       <span class="comment">// Mutex busy, try again later.</span></div><div class="line">     }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a1f5b41a48ca4ac9f7aeb3bd1c702b45a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +176,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00166">166</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00167">167</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

@@ -337,7 +337,7 @@ Protected Attributes</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>All expected flags are raised. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mask is outside of the permitted range. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The expected condition did not occur. </td></tr>
+    <tr><td class="paramname">EWOULDBLOCK</td><td>The expected condition did not occur. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>Wait failed. </td></tr>
   </table>
   </dd>
@@ -388,7 +388,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00544">544</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00539">539</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Protected Attributes</h2></td></tr>
 <p>If the mask is zero, return the status of all event flags, without any masking or subsequent clearing.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00581">581</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00576">576</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +532,7 @@ Protected Attributes</h2></td></tr>
 <p>Set more bits in the thread current signal mask. Use OR at bit-mask level. Wake-up all waiting threads, if any.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00506">506</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00501">501</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Protected Attributes</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>All expected flags were raised. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mask is outside of the permitted range. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The expected condition did not occur. </td></tr>
+    <tr><td class="paramname">EWOULDBLOCK</td><td>The expected condition did not occur. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>Wait failed.</td></tr>
   </table>
   </dd>
@@ -748,7 +748,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00620">620</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00615">615</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -842,7 +842,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

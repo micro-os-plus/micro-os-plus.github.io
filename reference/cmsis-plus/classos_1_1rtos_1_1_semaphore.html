@@ -295,7 +295,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_destroy.html"><code>sem_destroy()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00241">241</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00243">243</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ Protected Attributes</h2></td></tr>
 <p>Internal initialisation. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00259">259</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00261">261</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +351,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00347">347</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00349">349</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00917">917</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ Protected Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The semaphore was posted. </td></tr>
-    <tr><td class="paramname">EOVERFLOW</td><td>The max count was exceeded. </td></tr>
+    <tr><td class="paramname">EAGAIN</td><td>The max count was exceeded. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The semaphore could not be posted (extension to POSIX).</td></tr>
   </table>
   </dd>
@@ -516,7 +516,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00315">315</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00317">317</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -547,7 +547,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00654">654</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00653">653</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -590,13 +590,14 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_timedwait.html"><code>sem_timedwait()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
 <li>the timeout is not expressed as an absolute time point, but as a relative number of timer ticks (by default, the SysTick clock for CMSIS).</li>
+<li>for consistency reasons, EWOULDBLOCK is used, instead of EAGAIN</li>
 </ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd>
 <dd>
 Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00532">532</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00535">535</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +621,7 @@ Applications using these functions may be subject to priority inversion. </dd></
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The calling process successfully performed the semaphore lock operation. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
-    <tr><td class="paramname">EAGAIN</td><td>The semaphore was already locked. </td></tr>
+    <tr><td class="paramname">EWOULDBLOCK</td><td>The semaphore was already locked. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td><a class="el" href="classos_1_1rtos_1_1_semaphore.html" title="POSIX compliant semaphore. ">Semaphore</a> wait failed (extension to POSIX). </td></tr>
     <tr><td class="paramname">EDEADLK</td><td>A deadlock condition was detected. </td></tr>
     <tr><td class="paramname">EINTR</td><td>The operation was interrupted.</td></tr>
@@ -633,7 +634,7 @@ Applications using these functions may be subject to priority inversion. </dd></
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00474">474</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00476">476</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -658,7 +659,7 @@ Applications using these functions may be subject to priority inversion. </dd></
 <p>If the semaphore is locked, then the returned value shall either be set to zero or to a negative number whose absolute value represents the number of processes waiting for the semaphore at some unspecified time during the call.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_getvalue.html"><code>sem_getvalue()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00635">635</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00634">634</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +699,7 @@ Applications using these functions may be subject to priority inversion. </dd></
 <dd>
 Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00388">388</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00390">390</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
 
 </div>
 </div>
@@ -834,7 +835,7 @@ Applications using these functions may be subject to priority inversion. </dd></
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00826">826</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

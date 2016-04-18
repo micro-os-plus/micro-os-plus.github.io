@@ -3,7 +3,7 @@ var classos_1_1rtos_1_1_timer =
     [ "Timer", "classos_1_1rtos_1_1_timer.html#a01614a4f7aed51c8d8b42b36ccb72ef8", null ],
     [ "Timer", "classos_1_1rtos_1_1_timer.html#a0dac907b28189247b7444711755a5646", null ],
     [ "~Timer", "classos_1_1rtos_1_1_timer.html#aa64b9d995d3137edd40ca15842cc190d", null ],
-    [ "interrupt_service_routine", "classos_1_1rtos_1_1_timer.html#acd22b5127918acb99e8f15f60bb18c37", null ],
+    [ "_interrupt_service_routine", "classos_1_1rtos_1_1_timer.html#a4c08beee089bf55f7ed9e7afbbd31c87", null ],
     [ "name", "classos_1_1rtos_1_1_timer.html#a1ced578ffc847e14547b02ee1473c44e", null ],
     [ "operator==", "classos_1_1rtos_1_1_timer.html#a4b98f99de4155ec52b8474e4a032c940", null ],
     [ "start", "classos_1_1rtos_1_1_timer.html#a13eae4fd14ea5d98fa1511f2883cc433", null ],
