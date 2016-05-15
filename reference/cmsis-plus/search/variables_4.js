@@ -11,11 +11,14 @@ var searchData=
   ['dcd',['dcd',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a799df20fc67c14ae9356734008c8c74f',1,'os::driver::serial::Modem_status::dcd()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#af688bc917b275cab9775760af342a404',1,'os::driver::serial::Capabilities::dcd()']]],
   ['def',['def',['../structos_event.html#a90f9650ceb8eb3a9481270a99caaa47f',1,'osEvent']]],
   ['default_5fpriority',['default_priority',['../namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf',1,'os::rtos::mqueue']]],
+  ['default_5fresource',['default_resource',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#a40405302f31f0052e9e7ff783cfbaf3b',1,'anonymous_namespace{memory-resource.cpp}::default_resource()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#af79d339755e9df6e0c026701bbb68590',1,'anonymous_namespace{os-memory.cpp}::default_resource()']]],
+  ['default_5fsize_5fbytes_5f',['default_size_bytes_',['../classos_1_1rtos_1_1thread_1_1_stack.html#a114244fa8b87279c0d1aaf9fbce2b62f',1,'os::rtos::thread::Stack']]],
   ['default_5ftx_5fvalue',['DEFAULT_TX_VALUE',['../namespaceos_1_1driver_1_1serial.html#a27f30f5c598402a4b03848ae4be7a649',1,'os::driver::serial']]],
   ['defer_5flock',['defer_lock',['../namespaceos_1_1estd.html#a5cd14457b0c5e499b1ac4be877c33f86',1,'os::estd']]],
   ['divisor',['divisor',['../structos__systick__clock__current__s.html#a9f2e2849170e7d6410d6239a22b56c31',1,'os_systick_clock_current_s::divisor()'],['../classos_1_1rtos_1_1_systick__clock.html#ad5136b2c7e390f892b65baa12d2391e8',1,'os::rtos::Systick_clock::divisor()']]],
   ['driver_5f',['driver_',['../classos_1_1driver_1_1_usart__wrapper.html#ab251f7ed7a872c144fccc3211ba3993c',1,'os::driver::Usart_wrapper::driver_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ae79bf933f6f6417f0c9ca49d744361a2',1,'os::driver::Usbd_wrapper::driver_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#add619a55fb2359509c8f4d43763a5118',1,'os::driver::Usbh_wrapper::driver_()']]],
   ['drv_5f',['drv_',['../classos_1_1driver_1_1_version.html#a5f4f4bb94cbba08b22c74e8a1227e142',1,'os::driver::Version']]],
   ['dsr',['dsr',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a715a25caa04951c817a50da357e19471',1,'os::driver::serial::Modem_status::dsr()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#a45b18cab553c67e12d221174b32c2ce8',1,'os::driver::serial::Capabilities::dsr()']]],
-  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]]
+  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]],
+  ['dummy',['dummy',['../structos__clock__t.html#abb7e4e382cd6b5eb95d711398ac3dd02',1,'os_clock_t::dummy()'],['../structos__thread__user__storage__t.html#a849878a1e08c704b6322cb53e26a3b2f',1,'os_thread_user_storage_t::dummy()']]]
 ];

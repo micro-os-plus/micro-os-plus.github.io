@@ -7,6 +7,7 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-decls.h", "os-decls_8h.html", "os-decls_8h" ],
     [ "os-evflags.h", "os-evflags_8h.html", "os-evflags_8h" ],
     [ "os-lists.h", "os-lists_8h.html", "os-lists_8h" ],
+    [ "os-memory.h", "os-memory_8h.html", "os-memory_8h" ],
     [ "os-mempool.h", "os-mempool_8h.html", "os-mempool_8h" ],
     [ "os-mqueue.h", "os-mqueue_8h.html", "os-mqueue_8h" ],
     [ "os-mutex.h", "os-mutex_8h.html", "os-mutex_8h" ],
@@ -14,5 +15,6 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-semaphore.h", "os-semaphore_8h.html", "os-semaphore_8h" ],
     [ "os-thread.h", "os-thread_8h.html", "os-thread_8h" ],
     [ "os-timer.h", "os-timer_8h.html", "os-timer_8h" ],
+    [ "os-types.h", "os-types_8h.html", "os-types_8h" ],
     [ "os.h", "os_8h.html", null ]
 ];

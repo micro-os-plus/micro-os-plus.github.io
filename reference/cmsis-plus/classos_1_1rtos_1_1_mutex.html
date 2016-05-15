@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -236,7 +237,7 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="comment">// Create a normal mutex. Same as using the default constructor.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> mx { <a class="code" href="namespaceos_1_1rtos_1_1mutex.html#a8f98fec4c3f9b170459aaabd975de69e">normal_initializer</a> };</div><div class="line"></div><div class="line"><span class="comment">// Create a recursive mutex.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> rmx { <a class="code" href="namespaceos_1_1rtos_1_1mutex.html#a993b1031f91e1417f95c473a68078588">recursive_initializer</a> };</div></div><!-- fragment --><dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Protected resource.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  <span class="keywordtype">int</span> count;</div><div class="line">} res_t;</div><div class="line"></div><div class="line">res_t res;</div><div class="line"></div><div class="line"><span class="comment">// Mutex to protect the resource.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41">Mutex</a> mx;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  mx.lock();</div><div class="line">  res.count++;</div><div class="line">  mx.unlock();</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutex_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00210">210</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00221">221</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad8dd37e9132a372809f3548868645e41"></a>
 <div class="memitem">
@@ -412,7 +413,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_consistent.html"><code>pthread_mutex_consistent()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01065">1065</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01073">1073</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +497,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01045">1045</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +533,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>Identical mutexes should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00529">529</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00561">561</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +563,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to thread or <code>nullptr</code> if not owned. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00535">535</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00567">567</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -587,7 +588,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_getprioceiling.html"><code>pthread_mutex_getprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00959">959</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00967">967</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +636,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_setprioceiling.html"><code>pthread_mutex_setprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00999">999</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01007">1007</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +665,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the mutex to initial unlocked state. If there were threads waiting for this mutex, wakeup all, then clear the waiting list.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01094">1094</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01102">1102</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -704,7 +705,8 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>Try to lock the mutex object referenced by mutex. If the mutex is already locked, the calling thread shall block until the mutex becomes available as in the <code><a class="el" href="classos_1_1rtos_1_1_mutex.html#a525b1d221c3ecfac6ccfbb4cc4457c92" title="Lock the mutex. ">lock()</a></code> function. If the mutex cannot be locked without waiting for another thread to unlock the mutex, this wait shall be terminated when the specified timeout expires.</p>
 <p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
-<p>Under no circumstance shall the function fail with a timeout if the mutex can be locked immediately.</p>
+<p>Under no circumstance shall the function fail with a timeout if the mutex can be locked immediately. The validity of the timeout need not be checked if the mutex can be locked immediately.</p>
+<p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>As a consequence of the priority inheritance rules (for mutexes initialized with the PRIO_INHERIT protocol), if a timed mutex wait is terminated because its timeout expires, the priority of the owner of the mutex shall be adjusted as necessary to reflect the fact that this thread is no longer among the threads waiting for the mutex.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_timedlock.html"><code>pthread_mutex_timedlock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
@@ -713,7 +715,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00777">777</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00784">784</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -755,7 +757,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00717">717</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00718">718</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +790,7 @@ Differences from the standard:<ul>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_unlock.html"><code>pthread_mutex_unlock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00887">887</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00895">895</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -811,7 +813,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00459">459</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00470">470</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -833,7 +835,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00468">468</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00479">479</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -855,7 +857,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00458">458</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00469">469</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -877,7 +879,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00478">478</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00489">489</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -902,7 +904,7 @@ Differences from the standard:<ul>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00873">873</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +926,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00455">455</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00466">466</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -946,7 +948,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00472">472</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00483">483</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -968,7 +970,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00471">471</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00482">482</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -990,7 +992,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00476">476</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00487">487</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1014,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00477">477</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00488">488</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1036,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00475">475</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00486">486</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

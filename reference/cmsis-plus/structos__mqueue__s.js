@@ -1,9 +1,11 @@
 var structos__mqueue__s =
 [
+    [ "allocated_queue_addr", "structos__mqueue__s.html#abc756bc434b6177331c253ee574167f2", null ],
+    [ "allocated_queue_size_elements", "structos__mqueue__s.html#a18b6c9ccbf2f88fc55253f07931f1efd", null ],
+    [ "allocator", "structos__mqueue__s.html#a09ccb210fa40086b904a47f734a06b62", null ],
     [ "clock", "structos__mqueue__s.html#afb9fd388b16d54f8a3fe7713e6032a44", null ],
     [ "count", "structos__mqueue__s.html#a7520ccd485dd9f125d73f918db42036c", null ],
     [ "first_free", "structos__mqueue__s.html#a9eedbe384c35c027fed9a20f51e65192", null ],
-    [ "flags_", "structos__mqueue__s.html#a2f03ab10e2c935fa9b4d8d4093a6e4d9", null ],
     [ "head", "structos__mqueue__s.html#a10eed622d69dfbe0f257d3ffd3de0c54", null ],
     [ "msg_size_bytes", "structos__mqueue__s.html#a21935e80d3206d5c957a92e4025471bb", null ],
     [ "msgs", "structos__mqueue__s.html#a9575398d10d64add887675e6e125ef55", null ],

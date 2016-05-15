@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -129,6 +130,8 @@ $(document).ready(function(){initNavTree('os-thread_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;new&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
 <code>#include &lt;cmsis-plus/rtos/port/os-inlines.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
@@ -155,11 +158,13 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa2db09a0f3dd2d48acd80ac17e2e0677"><td class="memItemLeft" align="right" valign="top">Thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#aa2db09a0f3dd2d48acd80ac17e2e0677">os::rtos::this_thread::_thread</a> (void)</td></tr>
+<tr class="separator:aa2db09a0f3dd2d48acd80ac17e2e0677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527cca157e8ac579442f34a1a88589c9"><td class="memItemLeft" align="right" valign="top">Thread &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a527cca157e8ac579442f34a1a88589c9">os::rtos::this_thread::thread</a> (void)</td></tr>
 <tr class="memdesc:a527cca157e8ac579442f34a1a88589c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a527cca157e8ac579442f34a1a88589c9">More...</a><br /></td></tr>
 <tr class="separator:a527cca157e8ac579442f34a1a88589c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d6b2df07994ab81b2435596a93bbdb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6">os::rtos::this_thread::yield</a> (void)</td></tr>
-<tr class="memdesc:a6d6b2df07994ab81b2435596a93bbdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield execution to the next thread ready thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6">More...</a><br /></td></tr>
+<tr class="memdesc:a6d6b2df07994ab81b2435596a93bbdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield execution to the next ready thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6">More...</a><br /></td></tr>
 <tr class="separator:a6d6b2df07994ab81b2435596a93bbdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

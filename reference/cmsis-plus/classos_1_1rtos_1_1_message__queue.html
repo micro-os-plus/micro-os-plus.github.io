@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -124,19 +125,25 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_message__queue.htm
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="classos_1_1rtos_1_1_message__queue-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">os::rtos::Message_queue Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>POSIX compliant <b>message queue</b>.  
+<p>POSIX compliant <b>message queue</b>; instance of the <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html" title="Template of a POSIX compliant message queue with allocator. ">Message_queue_allocated</a> template, using the default RTOS allocator.  
  <a href="classos_1_1rtos_1_1_message__queue.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html">os::rtos::Message_queue_allocated&lt;&gt;</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a10f8385ac702040c66d33e64a2b56fd8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a10f8385ac702040c66d33e64a2b56fd8">allocator_type</a> = <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html#a96d137eeb55c1f06712e930ddf018eee">Message_queue_allocated::allocator_type</a></td></tr>
+<tr class="separator:a10f8385ac702040c66d33e64a2b56fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
@@ -150,46 +157,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7b4fc1e9bbf3609ee100884754698130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the message queue.  <a href="#a7b4fc1e9bbf3609ee100884754698130">More...</a><br /></td></tr>
 <tr class="separator:a7b4fc1e9bbf3609ee100884754698130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operators</div></td></tr>
-<tr class="memitem:a90de1e24fdbe4d68bcb741cb0a64002e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a90de1e24fdbe4d68bcb741cb0a64002e">operator==</a> (const <a class="el" href="classos_1_1rtos_1_1_message__queue.html">Message_queue</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a90de1e24fdbe4d68bcb741cb0a64002e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare memory queues.  <a href="#a90de1e24fdbe4d68bcb741cb0a64002e">More...</a><br /></td></tr>
-<tr class="separator:a90de1e24fdbe4d68bcb741cb0a64002e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3dea2f07b16f4050495a3efdd1e7b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aff3dea2f07b16f4050495a3efdd1e7b3">operator==</a> (const <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html">Message_queue_base</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:aff3dea2f07b16f4050495a3efdd1e7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare memory queues.  <a href="#aff3dea2f07b16f4050495a3efdd1e7b3">More...</a><br /></td></tr>
+<tr class="separator:aff3dea2f07b16f4050495a3efdd1e7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:ab37f75b98a3efb5c129fc8d9a9475195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195">send</a> (const char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio)</td></tr>
-<tr class="memdesc:ab37f75b98a3efb5c129fc8d9a9475195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the queue.  <a href="#ab37f75b98a3efb5c129fc8d9a9475195">More...</a><br /></td></tr>
-<tr class="separator:ab37f75b98a3efb5c129fc8d9a9475195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a17dbca61f17bc7aae2b168b879dda6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6">try_send</a> (const char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio)</td></tr>
-<tr class="memdesc:a8a17dbca61f17bc7aae2b168b879dda6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to send a message to the queue.  <a href="#a8a17dbca61f17bc7aae2b168b879dda6">More...</a><br /></td></tr>
-<tr class="separator:a8a17dbca61f17bc7aae2b168b879dda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add603848e4e67aca1f003dceeed24067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067">timed_send</a> (const char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout)</td></tr>
-<tr class="memdesc:add603848e4e67aca1f003dceeed24067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the queue with timeout.  <a href="#add603848e4e67aca1f003dceeed24067">More...</a><br /></td></tr>
-<tr class="separator:add603848e4e67aca1f003dceeed24067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a6ccdc633aa1a034fade9e6038c5d5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f">receive</a> (char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio)</td></tr>
-<tr class="memdesc:a0a6ccdc633aa1a034fade9e6038c5d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from the queue.  <a href="#a0a6ccdc633aa1a034fade9e6038c5d5f">More...</a><br /></td></tr>
-<tr class="separator:a0a6ccdc633aa1a034fade9e6038c5d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37983832e4e2acabeb4680edae1bd4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c">try_receive</a> (char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio)</td></tr>
-<tr class="memdesc:af37983832e4e2acabeb4680edae1bd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to receive a message from the queue.  <a href="#af37983832e4e2acabeb4680edae1bd4c">More...</a><br /></td></tr>
-<tr class="separator:af37983832e4e2acabeb4680edae1bd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430054f416a53ac2c29595d58517cc87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87">timed_receive</a> (char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout)</td></tr>
-<tr class="memdesc:a430054f416a53ac2c29595d58517cc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from the queue with timeout.  <a href="#a430054f416a53ac2c29595d58517cc87">More...</a><br /></td></tr>
-<tr class="separator:a430054f416a53ac2c29595d58517cc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaba0b6ab3724a2eeddbb75480046a9a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#acaba0b6ab3724a2eeddbb75480046a9a">capacity</a> (void) const </td></tr>
-<tr class="memdesc:acaba0b6ab3724a2eeddbb75480046a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get queue capacity.  <a href="#acaba0b6ab3724a2eeddbb75480046a9a">More...</a><br /></td></tr>
-<tr class="separator:acaba0b6ab3724a2eeddbb75480046a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e7872d93dd56e1486467a8acda58a2"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a29e7872d93dd56e1486467a8acda58a2">length</a> (void) const </td></tr>
-<tr class="memdesc:a29e7872d93dd56e1486467a8acda58a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get queue length.  <a href="#a29e7872d93dd56e1486467a8acda58a2">More...</a><br /></td></tr>
-<tr class="separator:a29e7872d93dd56e1486467a8acda58a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac06946d49bb7b8e67d8dc05877ae8690"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ac06946d49bb7b8e67d8dc05877ae8690">msg_size</a> (void) const </td></tr>
-<tr class="memdesc:ac06946d49bb7b8e67d8dc05877ae8690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get message size.  <a href="#ac06946d49bb7b8e67d8dc05877ae8690">More...</a><br /></td></tr>
-<tr class="separator:ac06946d49bb7b8e67d8dc05877ae8690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5652693746ed5a14389f83b764e77cf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a5652693746ed5a14389f83b764e77cf2">empty</a> (void) const </td></tr>
-<tr class="memdesc:a5652693746ed5a14389f83b764e77cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the queue is empty.  <a href="#a5652693746ed5a14389f83b764e77cf2">More...</a><br /></td></tr>
-<tr class="separator:a5652693746ed5a14389f83b764e77cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a163fa561fee53d77c1d3044a3abe553e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a163fa561fee53d77c1d3044a3abe553e">full</a> (void) const </td></tr>
-<tr class="memdesc:a163fa561fee53d77c1d3044a3abe553e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the queue is full.  <a href="#a163fa561fee53d77c1d3044a3abe553e">More...</a><br /></td></tr>
-<tr class="separator:a163fa561fee53d77c1d3044a3abe553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb494387f9dbea6bc91cf19410ecde4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#abb494387f9dbea6bc91cf19410ecde4c">reset</a> (void)</td></tr>
-<tr class="memdesc:abb494387f9dbea6bc91cf19410ecde4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the message queue.  <a href="#abb494387f9dbea6bc91cf19410ecde4c">More...</a><br /></td></tr>
-<tr class="separator:abb494387f9dbea6bc91cf19410ecde4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55619e28a25996bd5dde58f7afa97727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727">send</a> (const void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio=<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>)</td></tr>
+<tr class="memdesc:a55619e28a25996bd5dde58f7afa97727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the queue.  <a href="#a55619e28a25996bd5dde58f7afa97727">More...</a><br /></td></tr>
+<tr class="separator:a55619e28a25996bd5dde58f7afa97727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc51e5f1813bb8acace827cd41e15aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#acdc51e5f1813bb8acace827cd41e15aa">try_send</a> (const void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio=<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>)</td></tr>
+<tr class="memdesc:acdc51e5f1813bb8acace827cd41e15aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to send a message to the queue.  <a href="#acdc51e5f1813bb8acace827cd41e15aa">More...</a><br /></td></tr>
+<tr class="separator:acdc51e5f1813bb8acace827cd41e15aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9bdf82d6b0695c1d4268e689b1b90e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ad9bdf82d6b0695c1d4268e689b1b90e8">timed_send</a> (const void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio=<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>)</td></tr>
+<tr class="memdesc:ad9bdf82d6b0695c1d4268e689b1b90e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the queue with timeout.  <a href="#ad9bdf82d6b0695c1d4268e689b1b90e8">More...</a><br /></td></tr>
+<tr class="separator:ad9bdf82d6b0695c1d4268e689b1b90e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc13a5314ae538d652be0c5b70814d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1">receive</a> (void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio=nullptr)</td></tr>
+<tr class="memdesc:a6dc13a5314ae538d652be0c5b70814d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from the queue.  <a href="#a6dc13a5314ae538d652be0c5b70814d1">More...</a><br /></td></tr>
+<tr class="separator:a6dc13a5314ae538d652be0c5b70814d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b260fde739c96d0b7c4cf303029100c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2b260fde739c96d0b7c4cf303029100c">try_receive</a> (void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio=nullptr)</td></tr>
+<tr class="memdesc:a2b260fde739c96d0b7c4cf303029100c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to receive a message from the queue.  <a href="#a2b260fde739c96d0b7c4cf303029100c">More...</a><br /></td></tr>
+<tr class="separator:a2b260fde739c96d0b7c4cf303029100c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf0f611a5c1fd4ff44e4867d8555094"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2bf0f611a5c1fd4ff44e4867d8555094">timed_receive</a> (void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio=nullptr)</td></tr>
+<tr class="memdesc:a2bf0f611a5c1fd4ff44e4867d8555094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from the queue with timeout.  <a href="#a2bf0f611a5c1fd4ff44e4867d8555094">More...</a><br /></td></tr>
+<tr class="separator:a2bf0f611a5c1fd4ff44e4867d8555094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a0f3cf5509e1f7723e28a30e5e294e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a22a0f3cf5509e1f7723e28a30e5e294e">capacity</a> (void) const </td></tr>
+<tr class="memdesc:a22a0f3cf5509e1f7723e28a30e5e294e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get queue capacity.  <a href="#a22a0f3cf5509e1f7723e28a30e5e294e">More...</a><br /></td></tr>
+<tr class="separator:a22a0f3cf5509e1f7723e28a30e5e294e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99199a3857e5267117a5a8b734b0f88a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a99199a3857e5267117a5a8b734b0f88a">length</a> (void) const </td></tr>
+<tr class="memdesc:a99199a3857e5267117a5a8b734b0f88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get queue length.  <a href="#a99199a3857e5267117a5a8b734b0f88a">More...</a><br /></td></tr>
+<tr class="separator:a99199a3857e5267117a5a8b734b0f88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa581e380bfc1d90da9a1310fd88ad28b"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aa581e380bfc1d90da9a1310fd88ad28b">msg_size</a> (void) const </td></tr>
+<tr class="memdesc:aa581e380bfc1d90da9a1310fd88ad28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get message size.  <a href="#aa581e380bfc1d90da9a1310fd88ad28b">More...</a><br /></td></tr>
+<tr class="separator:aa581e380bfc1d90da9a1310fd88ad28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288de0163af2f71566570eb637e842b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a288de0163af2f71566570eb637e842b3">empty</a> (void) const </td></tr>
+<tr class="memdesc:a288de0163af2f71566570eb637e842b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the queue is empty.  <a href="#a288de0163af2f71566570eb637e842b3">More...</a><br /></td></tr>
+<tr class="separator:a288de0163af2f71566570eb637e842b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c0764e0318275433ed2189126be86b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55c0764e0318275433ed2189126be86b">full</a> (void) const </td></tr>
+<tr class="memdesc:a55c0764e0318275433ed2189126be86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the queue is full.  <a href="#a55c0764e0318275433ed2189126be86b">More...</a><br /></td></tr>
+<tr class="separator:a55c0764e0318275433ed2189126be86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5172eec4976c22d8e5dbc41bf1ab82af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a5172eec4976c22d8e5dbc41bf1ab82af">reset</a> (void)</td></tr>
+<tr class="memdesc:a5172eec4976c22d8e5dbc41bf1ab82af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the message queue.  <a href="#a5172eec4976c22d8e5dbc41bf1ab82af">More...</a><br /></td></tr>
+<tr class="separator:a5172eec4976c22d8e5dbc41bf1ab82af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:a1ced578ffc847e14547b02ee1473c44e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#a1ced578ffc847e14547b02ee1473c44e">name</a> (void) const </td></tr>
 <tr class="memdesc:a1ced578ffc847e14547b02ee1473c44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name.  <a href="#a1ced578ffc847e14547b02ee1473c44e">More...</a><br /></td></tr>
@@ -198,92 +205,97 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
-<tr class="memitem:a6cd26ac848332ed9c88ffe66be39a28c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a6cd26ac848332ed9c88ffe66be39a28c">_init</a> (void)</td></tr>
-<tr class="memdesc:a6cd26ac848332ed9c88ffe66be39a28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal initialisation.  <a href="#a6cd26ac848332ed9c88ffe66be39a28c">More...</a><br /></td></tr>
-<tr class="separator:a6cd26ac848332ed9c88ffe66be39a28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a175324ff6d383502338dcf8e2ae64092"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a175324ff6d383502338dcf8e2ae64092">_try_send</a> (const char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio)</td></tr>
-<tr class="separator:a175324ff6d383502338dcf8e2ae64092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1906a948b66e8404d74081669bdb0f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3b1906a948b66e8404d74081669bdb0f">_try_receive</a> (char *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio)</td></tr>
-<tr class="separator:a3b1906a948b66e8404d74081669bdb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619a85646dbdf434d3e23e9f7409a809"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a619a85646dbdf434d3e23e9f7409a809">_construct</a> (const <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html">mqueue::Attributes</a> &amp;attr, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a> msgs, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a> msg_size_bytes, void *queue_address, std::size_t queue_size_bytes)</td></tr>
+<tr class="memdesc:a619a85646dbdf434d3e23e9f7409a809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used during message queue construction.  <a href="#a619a85646dbdf434d3e23e9f7409a809">More...</a><br /></td></tr>
+<tr class="separator:a619a85646dbdf434d3e23e9f7409a809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31da34d22461757f981850ee491fa903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a31da34d22461757f981850ee491fa903">_init</a> (void)</td></tr>
+<tr class="memdesc:a31da34d22461757f981850ee491fa903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used to initialise the queue to empty state.  <a href="#a31da34d22461757f981850ee491fa903">More...</a><br /></td></tr>
+<tr class="separator:a31da34d22461757f981850ee491fa903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb74bd0cabfc12aae28e71be45be404"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a7cb74bd0cabfc12aae28e71be45be404">_try_send</a> (const void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> mprio)</td></tr>
+<tr class="memdesc:a7cb74bd0cabfc12aae28e71be45be404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used to enqueue the message, if possible.  <a href="#a7cb74bd0cabfc12aae28e71be45be404">More...</a><br /></td></tr>
+<tr class="separator:a7cb74bd0cabfc12aae28e71be45be404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcf4786ad3e7e5b53af7ce7b9ca7a25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#abdcf4786ad3e7e5b53af7ce7b9ca7a25">_try_receive</a> (void *msg, std::size_t nbytes, <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *mprio)</td></tr>
+<tr class="memdesc:abdcf4786ad3e7e5b53af7ce7b9ca7a25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used to dequeue a message, if available.  <a href="#abdcf4786ad3e7e5b53af7ce7b9ca7a25">More...</a><br /></td></tr>
+<tr class="separator:abdcf4786ad3e7e5b53af7ce7b9ca7a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
+<tr class="memitem:aeb8b7e7416ff49a4bc82870b831bb69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aeb8b7e7416ff49a4bc82870b831bb69d">send_list_</a></td></tr>
+<tr class="memdesc:aeb8b7e7416ff49a4bc82870b831bb69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of threads waiting to send.  <a href="#aeb8b7e7416ff49a4bc82870b831bb69d">More...</a><br /></td></tr>
+<tr class="separator:aeb8b7e7416ff49a4bc82870b831bb69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190dc8468d9d2c79c513f30067e65811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a190dc8468d9d2c79c513f30067e65811">receive_list_</a></td></tr>
+<tr class="memdesc:a190dc8468d9d2c79c513f30067e65811"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of threads waiting to receive.  <a href="#a190dc8468d9d2c79c513f30067e65811">More...</a><br /></td></tr>
+<tr class="separator:a190dc8468d9d2c79c513f30067e65811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8678f5cb2df3ea8027c2652f340913b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#af8678f5cb2df3ea8027c2652f340913b">clock_</a> = nullptr</td></tr>
+<tr class="memdesc:af8678f5cb2df3ea8027c2652f340913b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock to be used for timeouts.  <a href="#af8678f5cb2df3ea8027c2652f340913b">More...</a><br /></td></tr>
+<tr class="separator:af8678f5cb2df3ea8027c2652f340913b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee54b3a7d18dca6192522ff1a4fa8ee8"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aee54b3a7d18dca6192522ff1a4fa8ee8">prev_array_</a> = nullptr</td></tr>
+<tr class="memdesc:aee54b3a7d18dca6192522ff1a4fa8ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to array with indices to previous nodes.  <a href="#aee54b3a7d18dca6192522ff1a4fa8ee8">More...</a><br /></td></tr>
+<tr class="separator:aee54b3a7d18dca6192522ff1a4fa8ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ca67771d83863eedd2290e603b713c"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ae8ca67771d83863eedd2290e603b713c">next_array_</a> = nullptr</td></tr>
+<tr class="memdesc:ae8ca67771d83863eedd2290e603b713c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to array with indices to next nodes.  <a href="#ae8ca67771d83863eedd2290e603b713c">More...</a><br /></td></tr>
+<tr class="separator:ae8ca67771d83863eedd2290e603b713c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceb7d74260484172ac1bfddf8b57564c"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aceb7d74260484172ac1bfddf8b57564c">prio_array_</a> = nullptr</td></tr>
+<tr class="memdesc:aceb7d74260484172ac1bfddf8b57564c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to array of priorities.  <a href="#aceb7d74260484172ac1bfddf8b57564c">More...</a><br /></td></tr>
+<tr class="separator:aceb7d74260484172ac1bfddf8b57564c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde7d5ab8ce4b928f3a49743feeb5ac4"><td class="memItemLeft" align="right" valign="top">void *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#afde7d5ab8ce4b928f3a49743feeb5ac4">first_free_</a> = nullptr</td></tr>
+<tr class="memdesc:afde7d5ab8ce4b928f3a49743feeb5ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the first free message, or <code>nullptr</code>.  <a href="#afde7d5ab8ce4b928f3a49743feeb5ac4">More...</a><br /></td></tr>
+<tr class="separator:afde7d5ab8ce4b928f3a49743feeb5ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030e0a573a1dc22da5425e698da4131c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a030e0a573a1dc22da5425e698da4131c">queue_addr_</a> = nullptr</td></tr>
+<tr class="memdesc:a030e0a573a1dc22da5425e698da4131c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The static address where the queue is stored (from <code>attr.mq_queue_address</code>).  <a href="#a030e0a573a1dc22da5425e698da4131c">More...</a><br /></td></tr>
+<tr class="separator:a030e0a573a1dc22da5425e698da4131c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add579b8b3b251f55692dc1d8a40edfd0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#add579b8b3b251f55692dc1d8a40edfd0">allocated_queue_addr_</a> = nullptr</td></tr>
+<tr class="memdesc:add579b8b3b251f55692dc1d8a40edfd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dynamic address if the queue was allocated (and must be deallocated)  <a href="#add579b8b3b251f55692dc1d8a40edfd0">More...</a><br /></td></tr>
+<tr class="separator:add579b8b3b251f55692dc1d8a40edfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77de036e38c55a5c1a84c40f86c3ab0f"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a77de036e38c55a5c1a84c40f86c3ab0f">allocator_</a> = nullptr</td></tr>
+<tr class="memdesc:a77de036e38c55a5c1a84c40f86c3ab0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to allocator.  <a href="#a77de036e38c55a5c1a84c40f86c3ab0f">More...</a><br /></td></tr>
+<tr class="separator:a77de036e38c55a5c1a84c40f86c3ab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08297cbc75461dd85a1dc6e160532ed4"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a08297cbc75461dd85a1dc6e160532ed4">queue_size_bytes_</a> = 0</td></tr>
+<tr class="memdesc:a08297cbc75461dd85a1dc6e160532ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size of the statically allocated queue storage (from <code>attr.mq_queue_size_bytes</code>).  <a href="#a08297cbc75461dd85a1dc6e160532ed4">More...</a><br /></td></tr>
+<tr class="separator:a08297cbc75461dd85a1dc6e160532ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267666c8d0dd18cc4862d69018c8ba2f"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a267666c8d0dd18cc4862d69018c8ba2f">allocated_queue_size_elements_</a> = 0</td></tr>
+<tr class="memdesc:a267666c8d0dd18cc4862d69018c8ba2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size of the dynamically allocated queue storage.  <a href="#a267666c8d0dd18cc4862d69018c8ba2f">More...</a><br /></td></tr>
+<tr class="separator:a267666c8d0dd18cc4862d69018c8ba2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3e12ad88d36e6c01d695ec9f415e02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a4b3e12ad88d36e6c01d695ec9f415e02">msg_size_bytes_</a> = 0</td></tr>
+<tr class="memdesc:a4b3e12ad88d36e6c01d695ec9f415e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message size (aligned to size of pointer)  <a href="#a4b3e12ad88d36e6c01d695ec9f415e02">More...</a><br /></td></tr>
+<tr class="separator:a4b3e12ad88d36e6c01d695ec9f415e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42eb7cb0d60070a933f732c12044acce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a42eb7cb0d60070a933f732c12044acce">msgs_</a> = 0</td></tr>
+<tr class="memdesc:a42eb7cb0d60070a933f732c12044acce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of messages.  <a href="#a42eb7cb0d60070a933f732c12044acce">More...</a><br /></td></tr>
+<tr class="separator:a42eb7cb0d60070a933f732c12044acce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c104681e75817ffcd33d610e66e692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a76c104681e75817ffcd33d610e66e692">count_</a> = 0</td></tr>
+<tr class="memdesc:a76c104681e75817ffcd33d610e66e692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of messages in the queue.  <a href="#a76c104681e75817ffcd33d610e66e692">More...</a><br /></td></tr>
+<tr class="separator:a76c104681e75817ffcd33d610e66e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebf3fec90d73b808082ca9a7db7c762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a4ebf3fec90d73b808082ca9a7db7c762">head_</a> = 0</td></tr>
+<tr class="memdesc:a4ebf3fec90d73b808082ca9a7db7c762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the first message in the queue.  <a href="#a4ebf3fec90d73b808082ca9a7db7c762">More...</a><br /></td></tr>
+<tr class="separator:a4ebf3fec90d73b808082ca9a7db7c762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
 <tr class="memitem:ad7667db8bf3171d900237500cb0e1e67"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#ad7667db8bf3171d900237500cb0e1e67">name_</a></td></tr>
 <tr class="memdesc:ad7667db8bf3171d900237500cb0e1e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to name.  <a href="#ad7667db8bf3171d900237500cb0e1e67">More...</a><br /></td></tr>
 <tr class="separator:ad7667db8bf3171d900237500cb0e1e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Private Member Variables</h2></td></tr>
-<tr class="memitem:a3e722f100e703c7f05275b5a4f75e6e0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3e722f100e703c7f05275b5a4f75e6e0aa8b5e00f8ac9172a7288ffce9a68ab8c">flags_allocated</a> = 1
- }<tr class="memdesc:a3e722f100e703c7f05275b5a4f75e6e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal bits.  <a href="classos_1_1rtos_1_1_message__queue.html#a3e722f100e703c7f05275b5a4f75e6e0">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:a3e722f100e703c7f05275b5a4f75e6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75f515ca29197a3cecfdeb6a9c049182"><td class="memItemLeft" align="right" valign="top">port::Waiting_threads_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a75f515ca29197a3cecfdeb6a9c049182">send_list_</a></td></tr>
-<tr class="separator:a75f515ca29197a3cecfdeb6a9c049182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3275bbd462d45e9ecddc8dc12d1b54ba"><td class="memItemLeft" align="right" valign="top">port::Waiting_threads_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3275bbd462d45e9ecddc8dc12d1b54ba">receive_list_</a></td></tr>
-<tr class="separator:a3275bbd462d45e9ecddc8dc12d1b54ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1393db5f75691ad76f56316342743d5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a1393db5f75691ad76f56316342743d5d">clock_</a></td></tr>
-<tr class="separator:a1393db5f75691ad76f56316342743d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad561546e8930505f2d71acb0f259eeed"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ad561546e8930505f2d71acb0f259eeed">prev_array_</a></td></tr>
-<tr class="separator:ad561546e8930505f2d71acb0f259eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a624f54ae1c8829f150f1207641de101c"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a624f54ae1c8829f150f1207641de101c">next_array_</a></td></tr>
-<tr class="separator:a624f54ae1c8829f150f1207641de101c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af241c5105947378e770f13de988b1af6"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#af241c5105947378e770f13de988b1af6">prio_array_</a></td></tr>
-<tr class="separator:af241c5105947378e770f13de988b1af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a844a14de75f7ae765e8b4615503ccceb"><td class="memItemLeft" align="right" valign="top">void *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a844a14de75f7ae765e8b4615503ccceb">first_free_</a></td></tr>
-<tr class="memdesc:a844a14de75f7ae765e8b4615503ccceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the first free message, or <code>nullptr</code>.  <a href="#a844a14de75f7ae765e8b4615503ccceb">More...</a><br /></td></tr>
-<tr class="separator:a844a14de75f7ae765e8b4615503ccceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95076eee0b5814e13ff273fb37833be"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ae95076eee0b5814e13ff273fb37833be">queue_addr_</a></td></tr>
-<tr class="separator:ae95076eee0b5814e13ff273fb37833be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92684510946adae82eb3d108344e53a5"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a92684510946adae82eb3d108344e53a5">queue_size_bytes_</a></td></tr>
-<tr class="separator:a92684510946adae82eb3d108344e53a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de2f20d678ec4652e5bcc3c2be5d211"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8de2f20d678ec4652e5bcc3c2be5d211">msg_size_bytes_</a></td></tr>
-<tr class="separator:a8de2f20d678ec4652e5bcc3c2be5d211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a764963ca49191d2c735e7bb6c2a14d8b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a764963ca49191d2c735e7bb6c2a14d8b">msgs_</a></td></tr>
-<tr class="separator:a764963ca49191d2c735e7bb6c2a14d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4e5b41bca3b7256c6f93dc427901819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#aa4e5b41bca3b7256c6f93dc427901819">count_</a></td></tr>
-<tr class="separator:aa4e5b41bca3b7256c6f93dc427901819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa91a270e51d2248f7b36b0021eddd2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#aaa91a270e51d2248f7b36b0021eddd2e">head_</a></td></tr>
-<tr class="separator:aaa91a270e51d2248f7b36b0021eddd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3217a2a5314001128622fd44748948b9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3217a2a5314001128622fd44748948b9">flags_</a></td></tr>
-<tr class="memdesc:a3217a2a5314001128622fd44748948b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal status bits.  <a href="#a3217a2a5314001128622fd44748948b9">More...</a><br /></td></tr>
-<tr class="separator:a3217a2a5314001128622fd44748948b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>POSIX compliant <b>message queue</b>. </p>
-<p>POSIX message queues allow threads to exchange data in the form of messages. Messages are transferred to and from a queue using <a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a> and <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">receive()</a>. Each message has an associated priority, and messages are always delivered to the receiving process highest priority first.</p>
+<div class="textblock"><p>POSIX compliant <b>message queue</b>; instance of the <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html" title="Template of a POSIX compliant message queue with allocator. ">Message_queue_allocated</a> template, using the default RTOS allocator. </p>
+<p>POSIX message queues allow threads to exchange data in the form of messages. Messages are transferred to and from a queue using <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a> and <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a>. Each message has an associated priority, and messages are always delivered to the receiving process highest priority first.</p>
+<p>The storage for the message queue is allocated dynamically, using the RTOS specific allocator (<code>os::memory::allocator</code>).</p>
+<p>For special cases, the storage can be allocated outside the class and specified via the <code>mq_queue_address</code> and <code>mq_queue_size_bytes</code> attributes.</p>
+<p><a class="el" href="classos_1_1rtos_1_1_message__queue.html" title="POSIX compliant message queue; instance of the Message_queue_allocated template, using the default RT...">Message_queue</a> is a representative instance of the <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html" title="Template of a POSIX compliant message queue with allocator. ">Message_queue_allocated</a> template; it is also used by the C API.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="comment">// Define the message type.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t id;</div><div class="line">} msg_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the queue size.</span></div><div class="line">constexpr uint32_t queue_size = 5;</div><div class="line"></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_message__queue.html#a9bed29533bcba2e88c8e3da4338d270f">Message_queue</a> mq { queue_size, <span class="keyword">sizeof</span>(msg_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">consumer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  <span class="keywordflow">for</span> (; some_condition();)</div><div class="line">    {</div><div class="line">      mq.receive(&amp;msg, <span class="keyword">sizeof</span>(msg), <span class="keyword">nullptr</span>);</div><div class="line">      <span class="comment">// Process message</span></div><div class="line">      <span class="keywordflow">if</span> (msg.id == 7)</div><div class="line">        {</div><div class="line">          <span class="comment">// Something special</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">producer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  msg.id = 7;</div><div class="line">  mq.send(&amp;msg, <span class="keyword">sizeof</span>(msg), <a class="code" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mqd_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Define the message type.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t id;</div><div class="line">} msg_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the queue size.</span></div><div class="line">constexpr uint32_t queue_size = 5;</div><div class="line"></div><div class="line"><span class="comment">// The queue storage is allocated dynamically on the heap.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_message__queue.html#a9bed29533bcba2e88c8e3da4338d270f">Message_queue</a> mq { queue_size, <span class="keyword">sizeof</span>(msg_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">consumer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  <span class="keywordflow">for</span> (; some_condition();)</div><div class="line">    {</div><div class="line">      mq.receive(&amp;msg, <span class="keyword">sizeof</span>(msg));</div><div class="line">      <span class="comment">// Process message</span></div><div class="line">      <span class="keywordflow">if</span> (msg.id == 7)</div><div class="line">        {</div><div class="line">          <span class="comment">// Something special</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">producer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  msg.id = 7;</div><div class="line">  mq.send(&amp;msg, <span class="keyword">sizeof</span>(msg), <a class="code" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a>);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mqd_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00136">136</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="a3e722f100e703c7f05275b5a4f75e6e0"></a>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00662">662</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+</div><h2 class="groupheader">Types</h2>
+<a class="anchor" id="a10f8385ac702040c66d33e64a2b56fd8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum : uint8_t</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a10f8385ac702040c66d33e64a2b56fd8">os::rtos::Message_queue::allocator_type</a> =  <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html#a96d137eeb55c1f06712e930ddf018eee">Message_queue_allocated::allocator_type</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Internal bits. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3e722f100e703c7f05275b5a4f75e6e0aa8b5e00f8ac9172a7288ffce9a68ab8c"></a>flags_allocated&#160;</td><td class="fielddoc">
-<p>Remember to free the allocated memory block. </p>
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00475">475</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00666">666</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -291,6 +303,9 @@ Private Member Variables</h2></td></tr>
 <a class="anchor" id="a9bed29533bcba2e88c8e3da4338d270f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::rtos::Message_queue::Message_queue </td>
@@ -310,6 +325,11 @@ Private Member Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Create a message queue with default settings. </p>
@@ -322,16 +342,19 @@ Private Member Variables</h2></td></tr>
 </dl>
 <p>This constructor shall initialise the message queue object with the given number of messages and default settings. The effect shall be equivalent to creating a message queue object referring to the attributes in <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3f5c6cf203328ef350ed67572727d7cc" title="Default message queue initialiser. ">mqueue::initializer</a></code>. Upon successful initialisation, the state of the message queue object shall become initialised, with no messages in the queue.</p>
 <p>Only the message queue object itself may be used for performing synchronisation. It is not allowed to make copies of message queue objects.</p>
-<p>For default message queue objects, the storage is dynamically allocated.</p>
+<p>For default message queue objects, the storage is dynamically allocated using the RTOS specific allocator (<code><a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">rtos::memory::allocator</a></code>).</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00172">172</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01363">1363</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a0eabcbe8411f873dd7cfb41d22f8aff1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::rtos::Message_queue::Message_queue </td>
@@ -357,6 +380,11 @@ Private Member Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Create a message queue with custom settings. </p>
@@ -371,16 +399,20 @@ Private Member Variables</h2></td></tr>
 <p>This constructor shall initialise the message queue object with attributes referenced by <em>attr</em>. If the attributes specified by <em>attr</em> are modified later, the memory pool attributes shall not be affected. Upon successful initialisation, the state of the message queue object shall become initialised.</p>
 <p>Only the message queue itself may be used for performing synchronisation. It is not allowed to make copies of message queue objects.</p>
 <p>In cases where default message queue attributes are appropriate, the variable <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3f5c6cf203328ef350ed67572727d7cc" title="Default message queue initialiser. ">mqueue::initializer</a></code> can be used to initialise message queue. The effect shall be equivalent to creating a message queue object with the simple constructor.</p>
-<p>If the attributes define a storage area, it is used, otherwise it is dynamically allocated.</p>
+<p>If the attributes define a storage area (via <code>mq_queue_address</code> and <code>mq_queue_size_bytes</code>), that storage is used, otherwise the storage is dynamically allocated.</p>
+<p>For these message queue objects, the storage is dynamically allocated using the RTOS specific allocator (<code><a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">rtos::memory::allocator</a></code>).</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00203">203</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01400">1400</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a7b4fc1e9bbf3609ee100884754698130"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::rtos::Message_queue::~Message_queue </td>
@@ -389,19 +421,22 @@ Private Member Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destroy the message queue. </p>
-<p>This destructor shall destroy the message queue object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
-<p>It shall be safe to destroy an initialised message queue object upon which no threads are currently blocked. Attempting to destroy a message queue object upon which other threads are currently blocked results in undefined behaviour.</p>
-<p>If the storage for the message queue was dynamically allocated, it is deallocated. </p>
+<p>Deallocate memory using the RTOS specific allocator (<code><a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">rtos::memory::allocator</a></code>). </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00287">287</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01414">1414</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6cd26ac848332ed9c88ffe66be39a28c"></a>
+<a class="anchor" id="a619a85646dbdf434d3e23e9f7409a809"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -409,7 +444,74 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void os::rtos::Message_queue::_init </td>
+          <td class="memname">void os::rtos::Message_queue_base::_construct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html">mqueue::Attributes</a> &amp;&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a>&#160;</td>
+          <td class="paramname"><em>msgs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a>&#160;</td>
+          <td class="paramname"><em>msg_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>queue_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>queue_size_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal function used during message queue construction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Reference to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msgs</td><td>The number of messages. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_size_bytes</td><td>The message size, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_address</td><td>Pointer to queue storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue_size_bytes</td><td>Size of queue storage. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00363">363</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31da34d22461757f981850ee491fa903"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Message_queue_base::_init </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -418,19 +520,20 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Internal initialisation. </p>
+<p>Internal function used to initialise the queue to empty state. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00311">311</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00487">487</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3b1906a948b66e8404d74081669bdb0f"></a>
+<a class="anchor" id="abdcf4786ad3e7e5b53af7ce7b9ca7a25"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -438,9 +541,9 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Message_queue::_try_receive </td>
+          <td class="memname">bool os::rtos::Message_queue_base::_try_receive </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -463,16 +566,33 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00745">745</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Internal function used to dequeue a message, if available. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">msg</td><td>The address where to store the dequeued message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The size of the destination buffer. Must be lower than the value used when creating the queue. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The message was dequeued. </td></tr>
+    <tr><td class="paramname">false</td><td>There are not messages in the queue. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00934">934</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a175324ff6d383502338dcf8e2ae64092"></a>
+<a class="anchor" id="a7cb74bd0cabfc12aae28e71be45be404"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -480,9 +600,9 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Message_queue::_try_send </td>
+          <td class="memname">bool os::rtos::Message_queue_base::_try_send </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -505,16 +625,33 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00356">356</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Internal function used to enqueue the message, if possible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>The address of the message to enqueue. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The length of the message. Must be not higher than the value used when creating the queue. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname">false</td><td>The message queue is full. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00539">539</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acaba0b6ab3724a2eeddbb75480046a9a"></a>
+<a class="anchor" id="a22a0f3cf5509e1f7723e28a30e5e294e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -522,7 +659,7 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::Message_queue::capacity </td>
+          <td class="memname">std::size_t os::rtos::Message_queue_base::capacity </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -531,7 +668,7 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -541,11 +678,11 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The max number of messages that can be queued.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00544">544</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01164">1164</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5652693746ed5a14389f83b764e77cf2"></a>
+<a class="anchor" id="a288de0163af2f71566570eb637e842b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -553,7 +690,7 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Message_queue::empty </td>
+          <td class="memname">bool os::rtos::Message_queue_base::empty </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -562,7 +699,7 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -578,11 +715,11 @@ Private Member Variables</h2></td></tr>
 </dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00566">566</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01186">1186</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a163fa561fee53d77c1d3044a3abe553e"></a>
+<a class="anchor" id="a55c0764e0318275433ed2189126be86b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -590,7 +727,7 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Message_queue::full </td>
+          <td class="memname">bool os::rtos::Message_queue_base::full </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -599,7 +736,7 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -615,11 +752,11 @@ Private Member Variables</h2></td></tr>
 </dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00577">577</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01197">1197</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a29e7872d93dd56e1486467a8acda58a2"></a>
+<a class="anchor" id="a99199a3857e5267117a5a8b734b0f88a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -627,7 +764,7 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::Message_queue::length </td>
+          <td class="memname">std::size_t os::rtos::Message_queue_base::length </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -636,7 +773,7 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -646,11 +783,11 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The number of messages in the queue.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00533">533</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01153">1153</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac06946d49bb7b8e67d8dc05877ae8690"></a>
+<a class="anchor" id="aa581e380bfc1d90da9a1310fd88ad28b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -658,7 +795,7 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::Message_queue::msg_size </td>
+          <td class="memname">std::size_t os::rtos::Message_queue_base::msg_size </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -667,7 +804,7 @@ Private Member Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -677,7 +814,7 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The message size, in bytes.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00555">555</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01175">1175</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -708,11 +845,11 @@ Private Member Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01045">1045</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a90de1e24fdbe4d68bcb741cb0a64002e"></a>
+<a class="anchor" id="aff3dea2f07b16f4050495a3efdd1e7b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -720,16 +857,16 @@ Private Member Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Message_queue::operator== </td>
+          <td class="memname">bool os::rtos::Message_queue_base::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_message__queue.html">Message_queue</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html">Message_queue_base</a> &amp;&#160;</td>
           <td class="paramname"><em>rhs</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -745,18 +882,21 @@ Private Member Variables</h2></td></tr>
 <p>Identical message queues should have the same memory address.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00522">522</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01142">1142</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0a6ccdc633aa1a034fade9e6038c5d5f"></a>
+<a class="anchor" id="a6dc13a5314ae538d652be0c5b70814d1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::receive </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::receive </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -769,7 +909,7 @@ Private Member Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td>
-          <td class="paramname"><em>mprio</em>&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -777,6 +917,11 @@ Private Member Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Receive a message from the queue. </p>
@@ -784,7 +929,7 @@ Private Member Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">msg</td><td>The address where to store the dequeued message. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The size of the destination buffer. Must be lower than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. May be <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. The default is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -800,29 +945,37 @@ Private Member Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">Message_queue::receive()</a></code> function shall receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the <em>nbytes</em> argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a></code> function shall receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the <em>nbytes</em> argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
 <p>If the value of <em>nbytes</em> is greater than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a401673f901adbc7471dab89f4b51cee2">mqueue::max_size</a></code>, the result is implementation-defined.</p>
 <p>If the argument <em>mprio</em> is not nullptr, the priority of the selected message shall be stored in the location referenced by <em>mprio</em>.</p>
-<p>If the message queue is empty, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">receive()</a></code> shall block until a message is enqueued on the message queue or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">receive()</a></code> is cancelled/interrupted. If more than one thread is waiting to receive a message when a message arrives at an empty queue and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to receive the message. Otherwise, it is unspecified which waiting thread receives the message.</p>
+<p>If the message queue is empty, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a></code> shall block until a message is enqueued on the message queue or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a></code> is cancelled/interrupted. If more than one thread is waiting to receive a message when a message arrives at an empty queue and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to receive the message. Otherwise, it is unspecified which waiting thread receives the message.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00845">845</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01035">1035</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abb494387f9dbea6bc91cf19410ecde4c"></a>
+<a class="anchor" id="a5172eec4976c22d8e5dbc41bf1ab82af"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::reset </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::reset </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Reset the message queue. </p>
@@ -838,18 +991,21 @@ Private Member Variables</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01139">1139</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01335">1335</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab37f75b98a3efb5c129fc8d9a9475195"></a>
+<a class="anchor" id="a55619e28a25996bd5dde58f7afa97727"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::send </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::send </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -862,7 +1018,7 @@ Private Member Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>&#160;</td>
-          <td class="paramname"><em>mprio</em>&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -870,6 +1026,11 @@ Private Member Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Send a message to the queue. </p>
@@ -877,7 +1038,7 @@ Private Member Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>The address of the message to enqueue. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The length of the message. Must be not higher than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. The default is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -892,24 +1053,27 @@ Private Member Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">Message_queue::send()</a></code> function shall add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> parameter of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a></code> shall fail.</p>
-<p>If the specified message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
-<p>If the specified message queue is full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a></code> shall block until space becomes available to enqueue the message, or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a></code> is cancelled/interrupted. If more than one thread is waiting to send when space becomes available in the message queue and the Priority Scheduling option is supported, then the thread of the highest priority that has been waiting the longest shall be unblocked to send its message. Otherwise, it is unspecified which waiting thread is unblocked.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> function shall add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> parameter of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> shall fail.</p>
+<p>If the specified message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
+<p>If the specified message queue is full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> shall block until space becomes available to enqueue the message, or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> is cancelled/interrupted. If more than one thread is waiting to send when space becomes available in the message queue and the Priority Scheduling option is supported, then the thread of the highest priority that has been waiting the longest shall be unblocked to send its message. Otherwise, it is unspecified which waiting thread is unblocked.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00482">482</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00665">665</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a430054f416a53ac2c29595d58517cc87"></a>
+<a class="anchor" id="a2bf0f611a5c1fd4ff44e4867d8555094"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::timed_receive </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::timed_receive </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -921,14 +1085,14 @@ Private Member Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td>
-          <td class="paramname"><em>mprio</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a>&#160;</td>
-          <td class="paramname"><em>timeout</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -936,6 +1100,11 @@ Private Member Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Receive a message from the queue with timeout. </p>
@@ -943,8 +1112,8 @@ Private Member Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">msg</td><td>The address where to store the dequeued message. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The size of the destination buffer. Must be lower than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. May be <code>nullptr</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>The timeout duration. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. The default is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -961,13 +1130,14 @@ Private Member Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87" title="Receive a message from the queue with timeout. ">Message_queue::timed_receive()</a></code> function shall receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the <em>nbytes</em> argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2bf0f611a5c1fd4ff44e4867d8555094" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> function shall receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the <em>nbytes</em> argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
 <p>If the value of <em>nbytes</em> is greater than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a401673f901adbc7471dab89f4b51cee2">mqueue::max_size</a></code>, the result is implementation-defined.</p>
 <p>If the argument <em>mprio</em> is not nullptr, the priority of the selected message shall be stored in the location referenced by <em>mprio</em>.</p>
-<p>If the message queue is empty, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> shall block until a message is enqueued on the message queue or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> is cancelled/interrupted. If more than one thread is waiting to receive a message when a message arrives at an empty queue and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to receive the message. Otherwise, it is unspecified which waiting thread receives the message.</p>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a430054f416a53ac2c29595d58517cc87" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> function shall receive the oldest of the highest priority messages from the message queue as described for the <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">receive()</a></code> function. However, if no message exists on the queue to satisfy the receive, the wait for such a message shall be terminated when the specified timeout expires.</p>
+<p>If the message queue is empty, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2bf0f611a5c1fd4ff44e4867d8555094" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> shall block until a message is enqueued on the message queue or until <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2bf0f611a5c1fd4ff44e4867d8555094" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> is cancelled/interrupted. If more than one thread is waiting to receive a message when a message arrives at an empty queue and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to receive the message. Otherwise, it is unspecified which waiting thread receives the message.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2bf0f611a5c1fd4ff44e4867d8555094" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> function shall receive the oldest of the highest priority messages from the message queue as described for the <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a></code> function. However, if no message exists on the queue to satisfy the receive, the wait for such a message shall be terminated when the specified timeout expires.</p>
 <p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
 <p>Under no circumstance shall the operation fail with a timeout if a message can be removed from the message queue immediately.</p>
+<p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>Compatible with POSIX <code>mq_receive()</code> with O_NONBLOCK set. <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html#">http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html#</a></p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_timedreceive.html"><code>mq_timedreceive()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
@@ -976,18 +1146,21 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01034">1034</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01229">1229</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="add603848e4e67aca1f003dceeed24067"></a>
+<a class="anchor" id="ad9bdf82d6b0695c1d4268e689b1b90e8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::timed_send </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::timed_send </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -999,14 +1172,14 @@ Differences from the standard:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>&#160;</td>
-          <td class="paramname"><em>mprio</em>, </td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a>&#160;</td>
-          <td class="paramname"><em>timeout</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1014,6 +1187,11 @@ Differences from the standard:<ul>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Send a message to the queue with timeout. </p>
@@ -1021,8 +1199,8 @@ Differences from the standard:<ul>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>The address of the message to enqueue. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The length of the message. Must be not higher than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>The timeout duration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. The default is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1038,11 +1216,12 @@ Differences from the standard:<ul>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067" title="Send a message to the queue with timeout. ">Message_queue::timed_send()</a></code> function shall add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> attribute of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall fail.</p>
-<p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#add603848e4e67aca1f003dceeed24067" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ad9bdf82d6b0695c1d4268e689b1b90e8" title="Send a message to the queue with timeout. ">timed_send()</a></code> function shall add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> attribute of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ad9bdf82d6b0695c1d4268e689b1b90e8" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall fail.</p>
+<p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ad9bdf82d6b0695c1d4268e689b1b90e8" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
 <p>If the message queue is full, the wait for sufficient room in the queue shall be terminated when the specified timeout expires.</p>
 <p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+timeout). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
 <p>Under no circumstance shall the operation fail with a timeout if there is sufficient room in the queue to add the message immediately.</p>
+<p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>If there is not sufficient room in the queue, the</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_timedsend.html"><code>mq_timedsend()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
@@ -1051,18 +1230,21 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00656">656</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00844">844</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af37983832e4e2acabeb4680edae1bd4c"></a>
+<a class="anchor" id="a2b260fde739c96d0b7c4cf303029100c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::try_receive </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::try_receive </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1075,7 +1257,7 @@ Differences from the standard:<ul>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a> *&#160;</td>
-          <td class="paramname"><em>mprio</em>&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1083,6 +1265,11 @@ Differences from the standard:<ul>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Try to receive a message from the queue. </p>
@@ -1090,7 +1277,7 @@ Differences from the standard:<ul>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">msg</td><td>The address where to store the dequeued message. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The size of the destination buffer. Must be lower than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. May be <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mprio</td><td>The address where to store the message priority. The default is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1105,10 +1292,10 @@ Differences from the standard:<ul>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c" title="Try to receive a message from the queue. ">Message_queue::try_receive()</a></code> function shall try to receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the nbytes argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2b260fde739c96d0b7c4cf303029100c" title="Try to receive a message from the queue. ">try_receive()</a></code> function shall try to receive the oldest of the highest priority message(s) from the message queue. If the size of the buffer in bytes, specified by the nbytes argument, is less than the <em>msg_size_bytes</em> attribute of the message queue, the function shall fail and return an error. Otherwise, the selected message shall be removed from the queue and copied to the buffer pointed to by the <em>msg</em> argument.</p>
 <p>If the value of <em>nbytes</em> is greater than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a401673f901adbc7471dab89f4b51cee2">mqueue::max_size</a></code>, the result is implementation-defined.</p>
 <p>If the argument <em>mprio</em> is not nullptr, the priority of the selected message shall be stored in the location referenced by <em>mprio</em>.</p>
-<p>If the message queue is empty, no message shall be removed from the queue, and <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#af37983832e4e2acabeb4680edae1bd4c" title="Try to receive a message from the queue. ">try_receive()</a></code> shall return an error.</p>
+<p>If the message queue is empty, no message shall be removed from the queue, and <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a2b260fde739c96d0b7c4cf303029100c" title="Try to receive a message from the queue. ">try_receive()</a></code> shall return an error.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
 <li>for consistency reasons, EWOULDBLOCK is used, instead of EAGAIN</li>
@@ -1116,18 +1303,21 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00946">946</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01137">1137</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8a17dbca61f17bc7aae2b168b879dda6"></a>
+<a class="anchor" id="acdc51e5f1813bb8acace827cd41e15aa"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue::try_send </td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::Message_queue_base::try_send </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1140,7 +1330,7 @@ Differences from the standard:<ul>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>&#160;</td>
-          <td class="paramname"><em>mprio</em>&#160;</td>
+          <td class="paramname"><em>mprio</em> = <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a8cbf9bd9ab0dbb9a5718140e775a2bbf">mqueue::default_priority</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1148,6 +1338,11 @@ Differences from the standard:<ul>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Try to send a message to the queue. </p>
@@ -1155,7 +1350,7 @@ Differences from the standard:<ul>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>The address of the message to enqueue. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nbytes</td><td>The length of the message. Must be not higher than the value used when creating the queue. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mprio</td><td>The message priority. The default is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1169,9 +1364,9 @@ Differences from the standard:<ul>
   </table>
   </dd>
 </dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">Message_queue::try_send()</a></code> function shall try to add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> parameter of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall fail.</p>
-<p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
-<p>If the message queue is full, the message shall not be queued and <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8a17dbca61f17bc7aae2b168b879dda6" title="Try to send a message to the queue. ">try_send()</a></code> shall return an error.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#acdc51e5f1813bb8acace827cd41e15aa" title="Try to send a message to the queue. ">try_send()</a></code> function shall try to add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> parameter of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#acdc51e5f1813bb8acace827cd41e15aa" title="Try to send a message to the queue. ">try_send()</a></code> shall fail.</p>
+<p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#acdc51e5f1813bb8acace827cd41e15aa" title="Try to send a message to the queue. ">try_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3c960636a1a0da6dfc2fa201dfa7fde7" title="Maximum message priority. ">mqueue::max_priority</a></code>.</p>
+<p>If the message queue is full, the message shall not be queued and <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#acdc51e5f1813bb8acace827cd41e15aa" title="Try to send a message to the queue. ">try_send()</a></code> shall return an error.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
 <li>for consistency reasons, EWOULDBLOCK is used, instead of EAGAIN</li>
@@ -1179,12 +1374,12 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00581">581</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00765">765</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a1393db5f75691ad76f56316342743d5d"></a>
+<a class="anchor" id="add579b8b3b251f55692dc1d8a40edfd0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1192,21 +1387,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>&amp; os::rtos::Message_queue::clock_</td>
+          <td class="memname">void* os::rtos::Message_queue_base::allocated_queue_addr_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00430">430</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>The dynamic address if the queue was allocated (and must be deallocated) </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00541">541</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa4e5b41bca3b7256c6f93dc427901819"></a>
+<a class="anchor" id="a267666c8d0dd18cc4862d69018c8ba2f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1214,21 +1411,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a> os::rtos::Message_queue::count_</td>
+          <td class="memname">std::size_t os::rtos::Message_queue_base::allocated_queue_size_elements_ = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00461">461</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Total size of the dynamically allocated queue storage. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00560">560</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a844a14de75f7ae765e8b4615503ccceb"></a>
+<a class="anchor" id="a77de036e38c55a5c1a84c40f86c3ab0f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1236,24 +1435,96 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* volatile os::rtos::Message_queue::first_free_</td>
+          <td class="memname">const void* os::rtos::Message_queue_base::allocator_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to allocator. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00545">545</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8678f5cb2df3ea8027c2652f340913b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Message_queue_base::clock_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to clock to be used for timeouts. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00503">503</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76c104681e75817ffcd33d610e66e692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a> os::rtos::Message_queue_base::count_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current number of messages in the queue. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00573">573</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afde7d5ab8ce4b928f3a49743feeb5ac4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* volatile os::rtos::Message_queue_base::first_free_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Pointer to the first free message, or <code>nullptr</code>. </p>
-<p>The free messages are in a single linked list, and the allocation strategy is LIFO, messages freed by <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0a6ccdc633aa1a034fade9e6038c5d5f" title="Receive a message from the queue. ">receive()</a></code> are added to the beginning, and messages requested by <code><a class="el" href="classos_1_1rtos_1_1_message__queue.html#ab37f75b98a3efb5c129fc8d9a9475195" title="Send a message to the queue. ">send()</a></code> are allocated also from the beginning, so only a pointer to the beginning is required. </p>
+<p>The free messages are in a single linked list, and the allocation strategy is LIFO, messages freed by <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a6dc13a5314ae538d652be0c5b70814d1" title="Receive a message from the queue. ">receive()</a></code> are added to the beginning, and messages requested by <code><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55619e28a25996bd5dde58f7afa97727" title="Send a message to the queue. ">send()</a></code> are allocated also from the beginning, so only a pointer to the beginning is required. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00447">447</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00529">529</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3217a2a5314001128622fd44748948b9"></a>
+<a class="anchor" id="a4ebf3fec90d73b808082ca9a7db7c762"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1261,23 +1532,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t os::rtos::Message_queue::flags_</td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> os::rtos::Message_queue_base::head_ = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Internal status bits. </p>
+<p>Index of the first message in the queue. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00470">470</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00579">579</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aaa91a270e51d2248f7b36b0021eddd2e"></a>
+<a class="anchor" id="a4b3e12ad88d36e6c01d695ec9f415e02"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1285,21 +1556,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a> os::rtos::Message_queue::head_</td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a> os::rtos::Message_queue_base::msg_size_bytes_ = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00464">464</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Message size (aligned to size of pointer) </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00565">565</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8de2f20d678ec4652e5bcc3c2be5d211"></a>
+<a class="anchor" id="a42eb7cb0d60070a933f732c12044acce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1307,39 +1580,19 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a35c92dd783ba70cdb603dc7ea25b8c49">mqueue::msg_size_t</a> os::rtos::Message_queue::msg_size_bytes_</td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a> os::rtos::Message_queue_base::msgs_ = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00459">459</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Max number of messages. </p>
 
-</div>
-</div>
-<a class="anchor" id="a764963ca49191d2c735e7bb6c2a14d8b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a568b5c4f8dead4f2ca1af4e8de81fe66">mqueue::size_t</a> os::rtos::Message_queue::msgs_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00460">460</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00569">569</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1364,11 +1617,11 @@ Differences from the standard:<ul>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00873">873</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a624f54ae1c8829f150f1207641de101c"></a>
+<a class="anchor" id="ae8ca67771d83863eedd2290e603b713c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1376,21 +1629,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>* os::rtos::Message_queue::next_array_</td>
+          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>* os::rtos::Message_queue_base::next_array_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00435">435</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Pointer to array with indices to next nodes. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00514">514</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad561546e8930505f2d71acb0f259eeed"></a>
+<a class="anchor" id="aee54b3a7d18dca6192522ff1a4fa8ee8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1398,21 +1653,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>* os::rtos::Message_queue::prev_array_</td>
+          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>* os::rtos::Message_queue_base::prev_array_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00434">434</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Pointer to array with indices to previous nodes. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00510">510</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af241c5105947378e770f13de988b1af6"></a>
+<a class="anchor" id="aceb7d74260484172ac1bfddf8b57564c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1420,21 +1677,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>* os::rtos::Message_queue::prio_array_</td>
+          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>* os::rtos::Message_queue_base::prio_array_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00436">436</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Pointer to array of priorities. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00518">518</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae95076eee0b5814e13ff273fb37833be"></a>
+<a class="anchor" id="a030e0a573a1dc22da5425e698da4131c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1442,21 +1701,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* os::rtos::Message_queue::queue_addr_</td>
+          <td class="memname">void* os::rtos::Message_queue_base::queue_addr_ = nullptr</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00450">450</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>The static address where the queue is stored (from <code>attr.mq_queue_address</code>). </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00536">536</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a92684510946adae82eb3d108344e53a5"></a>
+<a class="anchor" id="a08297cbc75461dd85a1dc6e160532ed4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1464,21 +1725,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::Message_queue::queue_size_bytes_</td>
+          <td class="memname">std::size_t os::rtos::Message_queue_base::queue_size_bytes_ = 0</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00457">457</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Total size of the statically allocated queue storage (from <code>attr.mq_queue_size_bytes</code>). </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00556">556</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3275bbd462d45e9ecddc8dc12d1b54ba"></a>
+<a class="anchor" id="a190dc8468d9d2c79c513f30067e65811"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1486,21 +1749,23 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">port::Waiting_threads_list os::rtos::Message_queue::receive_list_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> os::rtos::Message_queue_base::receive_list_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00429">429</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>List of threads waiting to receive. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00499">499</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a75f515ca29197a3cecfdeb6a9c049182"></a>
+<a class="anchor" id="aeb8b7e7416ff49a4bc82870b831bb69d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1508,23 +1773,24 @@ Differences from the standard:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">port::Waiting_threads_list os::rtos::Message_queue::send_list_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a> os::rtos::Message_queue_base::send_list_</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00428">428</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>List of threads waiting to send. </p>
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00495">495</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

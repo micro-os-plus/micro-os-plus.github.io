@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -149,6 +150,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1rtos_1_1thread_1_1priority"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread_1_1priority.html">os::rtos::thread::priority</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos_1_1thread_1_1priority"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priorities namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceos_1_1rtos_1_1timer"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1timer.html">os::rtos::timer</a></td></tr>
+<tr class="memdesc:namespaceos_1_1rtos_1_1timer"><td class="mdescLeft">&#160;</td><td class="mdescRight">User timer namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -162,7 +166,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronised <b>memory pool</b>.  <a href="classos_1_1rtos_1_1_memory__pool.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html">os::rtos::Message_queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>message queue</b>.  <a href="classos_1_1rtos_1_1_message__queue.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>message queue</b>; instance of the <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html" title="Template of a POSIX compliant message queue with allocator. ">Message_queue_allocated</a> template, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1_message__queue.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html">os::rtos::Message_queue_allocated&lt; Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with allocator.  <a href="classos_1_1rtos_1_1_message__queue__allocated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__static.html">os::rtos::Message_queue_static&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and local storage.  <a href="classos_1_1rtos_1_1_message__queue__static.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__typed.html">os::rtos::Message_queue_typed&lt; T, Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and allocator.  <a href="classos_1_1rtos_1_1_message__queue__typed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_mutex.html">os::rtos::Mutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>mutex</b>.  <a href="classos_1_1rtos_1_1_mutex.html#details">More...</a><br /></td></tr>
@@ -260,7 +273,7 @@ Variables</h2></td></tr>
 <p>An unsigned type large enough to store all the flags, usually 32-bits wide.</p>
 <p>Both thread signal flags and event flags use this definition. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00271">271</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00295">295</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +291,7 @@ Variables</h2></td></tr>
 <p>An unsigned type used to hold the mode bits passed to functions returning flags.</p>
 <p>Both thread signal flags and event flags use this definition. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00282">282</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00306">306</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +309,7 @@ Variables</h2></td></tr>
 <p>A numeric type used to hold thread priorities, affecting the thread behaviour, like scheduling and thread wakeup due to events; usually an unsigned 8-bits type.</p>
 <p>Higher values represent higher priorities. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00332">332</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00356">356</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -324,7 +337,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00296">296</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00320">320</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -373,7 +386,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00364">364</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00388">388</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -392,7 +405,7 @@ Variables</h2></td></tr>
 <p>Decreasing this value narrows the range of allowed priorities. It is recommended to keep it low to give the scheduler a chance to optimise accesses to the ready list with an array of priorities, which will require some pointers and counters for each priority level.</p>
 <p>The default value of 4 gives the full range of 256 priorities; 0 gives 16 priorities, 1 gives 32 priorities, 2 gives 64 priorities, 3 gives 128 priorities. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00358">358</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00382">382</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

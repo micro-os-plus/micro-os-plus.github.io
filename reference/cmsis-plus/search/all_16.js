@@ -2,6 +2,7 @@ var searchData=
 [
   ['v',['v',['../structos_event.html#a5d2bb38f7be9c75f508646c24d2de4b1',1,'osEvent']]],
   ['value',['value',['../structos_event.html#a6ab3a136fcbc038e555992db3d3e95ba',1,'osEvent::value()'],['../classos_1_1rtos_1_1_semaphore.html#afaad1f1047d7d46f5baf5329d35ca78d',1,'os::rtos::Semaphore::value()']]],
+  ['value_5ftype',['value_type',['../classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#aee800519a3f519956ce83abfb84b622b',1,'os::rtos::memory::new_delete_allocator::value_type()'],['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a92fe79d130853a7d4b18be047c49d796',1,'os::rtos::memory::polymorphic_allocator::value_type()'],['../classos_1_1rtos_1_1_message__queue__typed.html#a5a7a8880677a4fa290c38b99b55529e0',1,'os::rtos::Message_queue_typed::value_type()'],['../classos_1_1rtos_1_1_message__queue__static.html#a1b4c4147d3cf0b1123c10d4afe6c7162',1,'os::rtos::Message_queue_static::value_type()']]],
   ['vbus',['vbus',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#ada10f037070a196c8e133864a3b7c942',1,'os::driver::usb::device::Status']]],
   ['vbus_5fdetection',['vbus_detection',['../classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html#a869e20e571da3439c6b36d4c4c293f00',1,'os::driver::usb::device::Capabilities']]],
   ['vbus_5foff',['vbus_off',['../namespaceos_1_1driver_1_1usb_1_1device.html#ac271252f96010635939d3fcb301ba435aac4090e3bf988c69b10a3e7639742077',1,'os::driver::usb::device']]],

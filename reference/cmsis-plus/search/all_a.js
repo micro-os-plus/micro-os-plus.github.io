@@ -2,6 +2,6 @@ var searchData=
 [
   ['join',['join',['../classos_1_1rtos_1_1_thread.html#a957d4296bd3ba95e3f22b776a8c18518',1,'os::rtos::Thread::join()'],['../classos_1_1estd_1_1thread.html#ad9a79f3504272f19b393b5ae42073192',1,'os::estd::thread::join()']]],
   ['joinable',['joinable',['../classos_1_1estd_1_1thread.html#aa9544e521093c78b7438a26a828290df',1,'os::estd::thread']]],
-  ['joiner',['joiner',['../structos__thread__t.html#af7fb446ba8f3ae7bbc0fc4b2b3301d38',1,'os_thread_t']]],
+  ['joiner',['joiner',['../structos__thread__s.html#a0bf2f480322a2d603233e6454beb785a',1,'os_thread_s']]],
   ['joiner_5f',['joiner_',['../classos_1_1rtos_1_1_thread.html#ae309b8779ce2d831369fd545dd269882',1,'os::rtos::Thread']]]
 ];

@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -133,6 +134,9 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1stack.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
+<tr class="memitem:a80c8a3f47c5067f368bf730ac90d03a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1stack.html#a80c8a3f47c5067f368bf730ac90d03a9">allocation_element_t</a> = os::rtos::port::stack::allocation_element_t</td></tr>
+<tr class="memdesc:a80c8a3f47c5067f368bf730ac90d03a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a stack allocation element.  <a href="#a80c8a3f47c5067f368bf730ac90d03a9">More...</a><br /></td></tr>
+<tr class="separator:a80c8a3f47c5067f368bf730ac90d03a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d62c2c988b5901f8346a44a826798c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1stack.html#a90d62c2c988b5901f8346a44a826798c">element_t</a> = os::rtos::port::stack::element_t</td></tr>
 <tr class="memdesc:a90d62c2c988b5901f8346a44a826798c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a stack element.  <a href="#a90d62c2c988b5901f8346a44a826798c">More...</a><br /></td></tr>
 <tr class="separator:a90d62c2c988b5901f8346a44a826798c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,6 +145,23 @@ Types</h2></td></tr>
 <div class="textblock"><p>Stack namespace. </p>
 <p>The <a class="el" href="namespaceos_1_1rtos_1_1stack.html" title="Stack namespace. ">os::rtos::stack</a> namespace groups declarations related to the thread stack. </p>
 </div><h2 class="groupheader">Types</h2>
+<a class="anchor" id="a80c8a3f47c5067f368bf730ac90d03a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceos_1_1rtos_1_1stack.html#a80c8a3f47c5067f368bf730ac90d03a9">os::rtos::stack::allocation_element_t</a> = typedef os::rtos::port::stack::allocation_element_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of a stack allocation element. </p>
+<p>For alignment reasons, the stack is allocated in larger chunks, usually 8-bytes long on Cortex-M cores. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00538">538</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a90d62c2c988b5901f8346a44a826798c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,9 +173,9 @@ Types</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type of a stack element. </p>
-<p>For alignment reasons, the stack is allocated in larger chunks, usually 8-bytes long on Cortex-M cores. </p>
+<p>The stack is organised as platform words (usually 4-bytes long on Cortex-M cores). </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00500">500</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00530">530</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

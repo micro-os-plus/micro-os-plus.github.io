@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -146,12 +147,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3f87b90b374ca94fc67b46ae435cf860"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-clocks_8cpp.html#a3f87b90b374ca94fc67b46ae435cf860">os_port_rtc_handler</a> (void)</td></tr>
-<tr class="memdesc:a3f87b90b374ca94fc67b46ae435cf860"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC implementation hook.  <a href="#a3f87b90b374ca94fc67b46ae435cf860">More...</a><br /></td></tr>
-<tr class="separator:a3f87b90b374ca94fc67b46ae435cf860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaba1252ce95ed036135b3730e841826b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-clocks_8cpp.html#aaba1252ce95ed036135b3730e841826b">os_port_systick_handler</a> (void)</td></tr>
-<tr class="memdesc:aaba1252ce95ed036135b3730e841826b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysTick implementation hook.  <a href="#aaba1252ce95ed036135b3730e841826b">More...</a><br /></td></tr>
-<tr class="separator:aaba1252ce95ed036135b3730e841826b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-clocks_8cpp.html#aa943fd3a7e6071e9dc7f9fd3e055d01a">os_rtc_handler</a> (void)</td></tr>
 <tr class="memdesc:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC interrupt handler.  <a href="#aa943fd3a7e6071e9dc7f9fd3e055d01a">More...</a><br /></td></tr>
 <tr class="separator:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,47 +155,6 @@ Functions</h2></td></tr>
 <tr class="separator:a6d30b43ae4c7f98b2b51e420b5a04849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a3f87b90b374ca94fc67b46ae435cf860"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os_port_rtc_handler </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>RTC implementation hook. </p>
-
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00071">71</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aaba1252ce95ed036135b3730e841826b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os_port_systick_handler </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>SysTick implementation hook. </p>
-<p>It is called from <code><a class="el" href="os-c-decls_8h.html#a6d30b43ae4c7f98b2b51e420b5a04849" title="SysTick interrupt handler. ">os_systick_handler()</a></code> after the scheduler was started. </p>
-
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00065">65</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa943fd3a7e6071e9dc7f9fd3e055d01a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +172,7 @@ Functions</h2></td></tr>
 <p>RTC interrupt handler. </p>
 <p>Must be called from the physical RTC interrupt handler. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00052">52</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00064">64</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +193,7 @@ Functions</h2></td></tr>
 <p>SysTick interrupt handler. </p>
 <p>Must be called from the physical interrupt handler. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00039">39</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00042">42</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>

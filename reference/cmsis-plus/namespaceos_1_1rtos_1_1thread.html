@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -149,6 +150,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html">Attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread attributes.  <a href="classos_1_1rtos_1_1thread_1_1_attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_context.html">Context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html">Stack</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
@@ -158,10 +163,8 @@ Types</h2></td></tr>
 <tr class="memitem:af6b0d4a09e097f97dbd9766054e8f3aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#af6b0d4a09e097f97dbd9766054e8f3aa">func_t</a> = void *(*)(<a class="el" href="namespaceos_1_1rtos_1_1thread.html#abbcff6db915a1e4cfaa769d355efd8b5">func_args_t</a> args)</td></tr>
 <tr class="memdesc:af6b0d4a09e097f97dbd9766054e8f3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> function.  <a href="#af6b0d4a09e097f97dbd9766054e8f3aa">More...</a><br /></td></tr>
 <tr class="separator:af6b0d4a09e097f97dbd9766054e8f3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb75648a6b92928b6aed4f4bb9c1882c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#adb75648a6b92928b6aed4f4bb9c1882c">main_args_t</a> = struct{<a class="el" href="namespaceos_1_1rtos_1_1thread.html#aa0dbc23eb4e83cec552995989288f07b">main_func_t</a> func</td></tr>
-<tr class="separator:adb75648a6b92928b6aed4f4bb9c1882c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0dbc23eb4e83cec552995989288f07b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#aa0dbc23eb4e83cec552995989288f07b">main_func_t</a> = int(*)(int <a class="el" href="namespaceos_1_1rtos_1_1thread.html#a9738b5728fee3bfd489ca749671ebaee">argc</a>, char *<a class="el" href="namespaceos_1_1rtos_1_1thread.html#a0400168a8152643d538cd5420ed8c4fc">argv</a>[])</td></tr>
-<tr class="separator:aa0dbc23eb4e83cec552995989288f07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae188cb3941d1d34a6c3eab799621cf86"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ae188cb3941d1d34a6c3eab799621cf86">main_args_t</a> = struct{int argc</td></tr>
+<tr class="separator:ae188cb3941d1d34a6c3eab799621cf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1257cd2ea834219f38831bcf66485103"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">priority_t</a> = uint8_t</td></tr>
 <tr class="memdesc:ga1257cd2ea834219f38831bcf66485103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a variable holding thread priorities.  <a href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">More...</a><br /></td></tr>
 <tr class="separator:ga1257cd2ea834219f38831bcf66485103"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,18 +177,18 @@ Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a67419a45b39218dd50c0139de9a551df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a67419a45b39218dd50c0139de9a551df">_main_trampoline</a> (<a class="el" href="namespaceos_1_1rtos_1_1thread.html#adb75648a6b92928b6aed4f4bb9c1882c">main_args_t</a> *args)</td></tr>
-<tr class="separator:a67419a45b39218dd50c0139de9a551df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1118861a0cd7a549f60134bae776430e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a1118861a0cd7a549f60134bae776430e">_main_trampoline</a> (void)</td></tr>
+<tr class="separator:a1118861a0cd7a549f60134bae776430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9738b5728fee3bfd489ca749671ebaee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a9738b5728fee3bfd489ca749671ebaee">argc</a></td></tr>
-<tr class="separator:a9738b5728fee3bfd489ca749671ebaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0400168a8152643d538cd5420ed8c4fc"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a0400168a8152643d538cd5420ed8c4fc">argv</a></td></tr>
 <tr class="separator:a0400168a8152643d538cd5420ed8c4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eabec0905b196a09d3431e942eb5d49"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html">Attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">initializer</a> { nullptr }</td></tr>
 <tr class="memdesc:a7eabec0905b196a09d3431e942eb5d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default thread initialiser.  <a href="#a7eabec0905b196a09d3431e942eb5d49">More...</a><br /></td></tr>
 <tr class="separator:a7eabec0905b196a09d3431e942eb5d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3563716926fdd0b47ca2ffa082741e2d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ae188cb3941d1d34a6c3eab799621cf86">main_args_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a3563716926fdd0b47ca2ffa082741e2d">main_args</a></td></tr>
+<tr class="separator:a3563716926fdd0b47ca2ffa082741e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread namespace. </p>
@@ -204,7 +207,7 @@ Variables</h2></td></tr>
 <p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> function arguments. </p>
 <p>Type of thread function arguments. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00477">477</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00501">501</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -221,35 +224,21 @@ Variables</h2></td></tr>
 <p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> function. </p>
 <p>Type of thread functions. Useful to cast other similar types to silence the compiler warnings. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00485">485</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00509">509</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adb75648a6b92928b6aed4f4bb9c1882c"></a>
+<a class="anchor" id="ae188cb3941d1d34a6c3eab799621cf86"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespaceos_1_1rtos_1_1thread.html#adb75648a6b92928b6aed4f4bb9c1882c">os::rtos::thread::main_args_t</a> = typedef struct { <a class="el" href="namespaceos_1_1rtos_1_1thread.html#aa0dbc23eb4e83cec552995989288f07b">main_func_t</a> func</td>
+          <td class="memname">using <a class="el" href="namespaceos_1_1rtos_1_1thread.html#ae188cb3941d1d34a6c3eab799621cf86">os::rtos::thread::main_args_t</a> = typedef struct { int argc</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00051">51</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa0dbc23eb4e83cec552995989288f07b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespaceos_1_1rtos_1_1thread.html#aa0dbc23eb4e83cec552995989288f07b">os::rtos::thread::main_func_t</a> = typedef int (*) (int <a class="el" href="namespaceos_1_1rtos_1_1thread.html#a9738b5728fee3bfd489ca749671ebaee">argc</a>, char* <a class="el" href="namespaceos_1_1rtos_1_1thread.html#a0400168a8152643d538cd5420ed8c4fc">argv</a>[])</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00047">47</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00057">57</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +255,7 @@ Variables</h2></td></tr>
 <p>Type of a variable holding a signal set. </p>
 <p>An unsigned type large enough to store all the signal flags, actually a reuse of the more generic flags mask type <a class="el" href="group__cmsis-plus-rtos.html#ga87571a2d62e491d2af4e4390eb1aca06">flags::mask_t</a>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00444">444</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00468">468</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -283,12 +272,12 @@ Variables</h2></td></tr>
 <p>Type of a variable holding the thread state. </p>
 <p>An enumeration with the possible thread states. The enumeration is restricted to one of these values. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00435">435</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00459">459</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a67419a45b39218dd50c0139de9a551df"></a>
+<a class="anchor" id="a1118861a0cd7a549f60134bae776430e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -298,8 +287,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void os::rtos::thread::_main_trampoline </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#adb75648a6b92928b6aed4f4bb9c1882c">main_args_t</a> *&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -310,25 +299,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00059">59</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00066">66</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a9738b5728fee3bfd489ca749671ebaee"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::rtos::thread::argc</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00052">52</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0400168a8152643d538cd5420ed8c4fc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -339,7 +314,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00053">53</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00058">58</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +330,29 @@ Variables</h2></td></tr>
 
 <p>Default thread initialiser. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00135">135</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00167">167</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3563716926fdd0b47ca2ffa082741e2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#ae188cb3941d1d34a6c3eab799621cf86">main_args_t</a> os::rtos::thread::main_args</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00059">59</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
 
 </div>
 </div>

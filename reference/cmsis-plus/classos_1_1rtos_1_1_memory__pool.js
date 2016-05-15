@@ -1,6 +1,5 @@
 var classos_1_1rtos_1_1_memory__pool =
 [
-    [ "flags_allocated", "classos_1_1rtos_1_1_memory__pool.html#a728d69104be7165a0af33d13eb7f49e3a71b7b8404da49404bda9946227cd37e8", null ],
     [ "Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f", null ],
     [ "Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#a0e93a08a4b8914c08dec51d3d4bfd65f", null ],
     [ "~Memory_pool", "classos_1_1rtos_1_1_memory__pool.html#a81f08979403e5ad8313b8e45cdfb6707", null ],
@@ -19,13 +18,13 @@ var classos_1_1rtos_1_1_memory__pool =
     [ "reset", "classos_1_1rtos_1_1_memory__pool.html#a7cab32750c0bc81551516c22476d333a", null ],
     [ "timed_alloc", "classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf", null ],
     [ "try_alloc", "classos_1_1rtos_1_1_memory__pool.html#a109bae1e2cf390f7208c79a598808cb5", null ],
+    [ "allocated_pool_addr_", "classos_1_1rtos_1_1_memory__pool.html#ae76a464bafdba7e65ed42d2f306e1c32", null ],
     [ "block_size_bytes_", "classos_1_1rtos_1_1_memory__pool.html#a54d48e4e81b01aa96f22f3bb2e16e28e", null ],
     [ "blocks_", "classos_1_1rtos_1_1_memory__pool.html#af80711efed7c6c918b62e3ababf75937", null ],
     [ "clock_", "classos_1_1rtos_1_1_memory__pool.html#a29c6d9080d9335a3e731e3600d3c0629", null ],
     [ "count_", "classos_1_1rtos_1_1_memory__pool.html#a7ac5fce7023a313fa35daa84800c9cad", null ],
     [ "first_", "classos_1_1rtos_1_1_memory__pool.html#a48ad91b538ba95b5d30899a010a93382", null ],
-    [ "flags_", "classos_1_1rtos_1_1_memory__pool.html#a1bbda4dd137134024cca44329b6f8ef6", null ],
-    [ "list_", "classos_1_1rtos_1_1_memory__pool.html#aa172792b51a3a5e85f9261a757480011", null ],
+    [ "list_", "classos_1_1rtos_1_1_memory__pool.html#adb028a45fd5949a3c592bad1cfe7fc89", null ],
     [ "name_", "classos_1_1rtos_1_1_memory__pool.html#ad7667db8bf3171d900237500cb0e1e67", null ],
-    [ "pool_addr_", "classos_1_1rtos_1_1_memory__pool.html#ae82a7ba6f5b86ce646380546d3e17c1b", null ]
+    [ "pool_addr_", "classos_1_1rtos_1_1_memory__pool.html#a4269bf0adfad4acad2b98d4dd442ac3b", null ]
 ];

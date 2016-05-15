@@ -9,5 +9,5 @@ var atexit_8h =
     ] ],
     [ "__call_exitprocs", "atexit_8h.html#a12b1de11d1825f43a84c42975648d485", null ],
     [ "__register_exitproc", "atexit_8h.html#aae7c08f3db773cecf5c46a1326d81974", null ],
-    [ "__run_fini_array", "atexit_8h.html#a1580250883cbb7e6dbc5c0c8c72030a0", null ]
+    [ "os_run_fini_array", "atexit_8h.html#a653592d5e5599c5837ecb978acd6d75d", null ]
 ];

@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -99,7 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
-      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -175,21 +175,13 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 : <a class="el" href="structos__mqueue__s.html#a9eedbe384c35c027fed9a20f51e65192">os_mqueue_s</a>
 </li>
 <li>first_free_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a844a14de75f7ae765e8b4615503ccceb">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#afde7d5ab8ce4b928f3a49743feeb5ac4">os::rtos::Message_queue_base</a>
 </li>
 <li>flags
 : <a class="el" href="structos__evflags__s.html#a4fcc699a6bad448e7231180c7870c002">os_evflags_s</a>
 </li>
 <li>flags_
 : <a class="el" href="classos_1_1rtos_1_1_event__flags.html#a6ac9c026e35c7d4855d77246cfe36b8d">os::rtos::Event_flags</a>
-, <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a1bbda4dd137134024cca44329b6f8ef6">os::rtos::Memory_pool</a>
-, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3217a2a5314001128622fd44748948b9">os::rtos::Message_queue</a>
-, <a class="el" href="structos__mempool__s.html#a9a5da6fe93f26cbdbe75758465c6a92d">os_mempool_s</a>
-, <a class="el" href="structos__mqueue__s.html#a2f03ab10e2c935fa9b4d8d4093a6e4d9">os_mqueue_s</a>
-</li>
-<li>flags_allocated
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a728d69104be7165a0af33d13eb7f49e3a71b7b8404da49404bda9946227cd37e8">os::rtos::Memory_pool</a>
-, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3e722f100e703c7f05275b5a4f75e6e0aa8b5e00f8ac9172a7288ffce9a68ab8c">os::rtos::Message_queue</a>
 </li>
 <li>flow_control_cts
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_capabilities.html#a77f8633c4edbf3205c678bd3217b10f6">os::driver::serial::Capabilities</a>
@@ -209,10 +201,10 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 </li>
 <li>full()
 : <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#acf5cb4d62f0051ddd2affc2d8e35f03a">os::rtos::Memory_pool</a>
-, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a163fa561fee53d77c1d3044a3abe553e">os::rtos::Message_queue</a>
+, <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a55c0764e0318275433ed2189126be86b">os::rtos::Message_queue_base</a>
 </li>
 <li>func
-: <a class="el" href="structos__thread__t.html#a5034ee4a70879c737f2c3c12b1eb7dfc">os_thread_t</a>
+: <a class="el" href="structos__thread__s.html#a3a70ad86a845e74536bad835b2a42e66">os_thread_s</a>
 , <a class="el" href="structos__timer__s.html#a8cf92ab56602af205a5a2048ffca5145">os_timer_s</a>
 </li>
 <li>func_
@@ -220,7 +212,7 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 , <a class="el" href="classos_1_1rtos_1_1_timer.html#a597b75a2653c6e9b057ac98954837660">os::rtos::Timer</a>
 </li>
 <li>func_args
-: <a class="el" href="structos__thread__t.html#a14db8df1fc9a0fd722c75ebde3dab55c">os_thread_t</a>
+: <a class="el" href="structos__thread__s.html#a154b4e6558e7d701049015133945a78f">os_thread_s</a>
 , <a class="el" href="structos__timer__s.html#aca72ce7efabe764ce8582e9d8fe7645d">os_timer_s</a>
 </li>
 <li>func_args_
@@ -229,7 +221,10 @@ $(document).ready(function(){initNavTree('functions_f.html','');});
 </li>
 <li>func_result_
 : <a class="el" href="classos_1_1rtos_1_1_thread.html#a46b7138eee7bf69fd4785037c696aaa8">os::rtos::Thread</a>
-, <a class="el" href="structos__thread__t.html#a0a225aa956fc3a9ef9426e503da53abb">os_thread_t</a>
+, <a class="el" href="structos__thread__s.html#ae7c46c47eca62d225028bd2e7ad32c05">os_thread_s</a>
+</li>
+<li>func_t
+: <a class="el" href="classos_1_1rtos_1_1port_1_1thread_1_1_context.html#a15092ed5c4ca57ef9fbe5b36d8953228">os::rtos::port::thread::Context</a>
 </li>
 <li>function_args()
 : <a class="el" href="classos_1_1rtos_1_1_thread.html#ab6749ec40f4efc916b4616ccc1b28658">os::rtos::Thread</a>

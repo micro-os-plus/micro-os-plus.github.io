@@ -3,6 +3,7 @@ var searchData=
   ['os_5fassert_5ferr',['os_assert_err',['../os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39',1,'os-decls.h']]],
   ['os_5fassert_5fthrow',['os_assert_throw',['../os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137',1,'os-decls.h']]],
   ['os_5finclude_5fstartup_5fguard_5fchecks',['OS_INCLUDE_STARTUP_GUARD_CHECKS',['../startup_8c.html#a1507dad2f28c44dc9361cc34615db7ad',1,'startup.c']]],
+  ['os_5finteger_5frtos_5fidle_5fstack_5fsize_5fbytes',['OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES',['../os-decls_8h.html#aa8fdfffcd4b6d58c260d5dd4730b44d0',1,'os-decls.h']]],
   ['os_5finteger_5frtos_5fmain_5fstack_5fsize_5fbytes',['OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES',['../os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca',1,'os-decls.h']]],
   ['os_5finteger_5fsystick_5ffrequency_5fhz',['OS_INTEGER_SYSTICK_FREQUENCY_HZ',['../os-decls_8h.html#ab657098ae141f5b84a1319f48c181052',1,'os-decls.h']]],
   ['os_5finteger_5ftrace_5fprintf_5ftmp_5farray_5fsize',['OS_INTEGER_TRACE_PRINTF_TMP_ARRAY_SIZE',['../trace_8cpp.html#a0fd8f6e6808c27fc3e21d3e3f888d36f',1,'trace.cpp']]],

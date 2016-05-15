@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -388,7 +389,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00539">539</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00547">547</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +430,7 @@ Protected Attributes</h2></td></tr>
 <p>If the mask is zero, return the status of all event flags, without any masking or subsequent clearing.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00576">576</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00584">584</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +461,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00918">918</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01045">1045</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +533,7 @@ Protected Attributes</h2></td></tr>
 <p>Set more bits in the thread current signal mask. Use OR at bit-mask level. Wake-up all waiting threads, if any.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00501">501</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00509">509</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -599,11 +600,12 @@ Protected Attributes</h2></td></tr>
 <p>When the parameter mask is 0, the current thread is suspended until any event flag is raised. In this case, if any event flags are already raised, the function returns instantly.</p>
 <p>The wait shall be terminated when the specified timeout expires.</p>
 <p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based (the SysTick clock for CMSIS).</p>
-<p>Under no circumstance shall the operation fail with a timeout if the event flags are already raised.</p>
+<p>Under no circumstance shall the operation fail with a timeout if the event flags are already raised. The validity of the timeout need not be checked if the expected flags are already raised and the call can return immediately.</p>
+<p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>If the <a class="el" href="group__cmsis-plus-rtos.html#gga281c59461b101136f3907463bd025e63a71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the event flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00412">412</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00419">419</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +661,7 @@ Protected Attributes</h2></td></tr>
 <p>The function does not blocks, if the expected event flags are not raised, but returns EGAIN.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00352">352</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00353">353</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +750,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00615">615</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-evflags_8cpp_source.html#l00623">623</a> of file <a class="el" href="os-evflags_8cpp_source.html">os-evflags.cpp</a>.</p>
 
 </div>
 </div>
@@ -842,7 +844,7 @@ Protected Attributes</h2></td></tr>
 <p>Pointer to name. </p>
 <p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00827">827</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00873">873</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

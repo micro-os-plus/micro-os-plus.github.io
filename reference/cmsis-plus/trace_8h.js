@@ -1,9 +1,9 @@
 var trace_8h =
 [
-    [ "__initialize_trace", "trace_8h.html#abfbe48265e98d7332ca12c2bb2668408", null ],
     [ "dbg_bkpt", "trace_8h.html#a1d2bb05142676e6d1d50bef14538ed23", null ],
     [ "dump_args", "trace_8h.html#gae52332a8c43778a8d61312fc4064647e", null ],
     [ "initialize", "trace_8h.html#a412dbb6aeb8348a73eedd73a6494c35d", null ],
+    [ "os_initialize_trace", "trace_8h.html#a779ad226bcffb6a108ca636424308693", null ],
     [ "printf", "trace_8h.html#gab99139b69af4fe6f063b4a236133b2ee", null ],
     [ "putchar", "trace_8h.html#gad3e35a5ce4981b2c40ed6fb69814477e", null ],
     [ "puts", "trace_8h.html#ga7a7b4734b5d3db0422fffe79a44ca7dc", null ],

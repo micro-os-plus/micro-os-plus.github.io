@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -124,22 +125,39 @@ $(document).ready(function(){initNavTree('os-mqueue_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">os-mqueue.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="os-decls_8h_source.html">cmsis-plus/rtos/os-decls.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="os-memory_8h_source.html">cmsis-plus/rtos/os-memory.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 </div>
 <p><a href="os-mqueue_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena&lt; T, msgs, msg_size_bytes &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html">os::rtos::mqueue::Attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message queue attributes.  <a href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue.html">os::rtos::Message_queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>message queue</b>.  <a href="classos_1_1rtos_1_1_message__queue.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>message queue</b>; instance of the <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html" title="Template of a POSIX compliant message queue with allocator. ">Message_queue_allocated</a> template, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1_message__queue.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html">os::rtos::Message_queue_allocated&lt; Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with allocator.  <a href="classos_1_1rtos_1_1_message__queue__allocated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__base.html">os::rtos::Message_queue_base</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for POSIX compliant <b>message queue</b>.  <a href="classos_1_1rtos_1_1_message__queue__base.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__static.html">os::rtos::Message_queue_static&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and local storage.  <a href="classos_1_1rtos_1_1_message__queue__static.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_message__queue__typed.html">os::rtos::Message_queue_typed&lt; T, Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and allocator.  <a href="classos_1_1rtos_1_1_message__queue__typed.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -153,6 +171,12 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1rtos_1_1mqueue"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html">os::rtos::mqueue</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos_1_1mqueue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message queue namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0d4113943fe201393937e4878f8fc23b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0d4113943fe201393937e4878f8fc23b"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a0d4113943fe201393937e4878f8fc23b">os::rtos::mqueue::compute_allocated_size_bytes</a> (std::size_t msgs, std::size_t msg_size_bytes)</td></tr>
+<tr class="separator:a0d4113943fe201393937e4878f8fc23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

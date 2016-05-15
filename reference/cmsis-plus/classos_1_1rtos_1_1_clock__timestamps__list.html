@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -130,7 +131,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_clock__timestamps_
 </div><!--header-->
 <div class="contents">
 
-<p>Ordered double linked circular list of time stamp nodes.  
+<p>Ordered list of time stamp nodes.  
  <a href="classos_1_1rtos_1_1_clock__timestamps__list.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os-lists_8h_source.html">os-lists.h</a>&gt;</code></p>
@@ -150,31 +151,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbf87665be4e785bf0b013085a7673cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html#acbf87665be4e785bf0b013085a7673cd">link</a> (<a class="el" href="classos_1_1rtos_1_1_timestamp__node.html">Timestamp_node</a> &amp;node)</td></tr>
 <tr class="memdesc:acbf87665be4e785bf0b013085a7673cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new thread node to the list.  <a href="#acbf87665be4e785bf0b013085a7673cd">More...</a><br /></td></tr>
 <tr class="separator:acbf87665be4e785bf0b013085a7673cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bbecdf90db9158f435cdbdc90fdbf9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_timestamp__node.html">Timestamp_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html#a8bbecdf90db9158f435cdbdc90fdbf9c">head</a> (void)</td></tr>
-<tr class="memdesc:a8bbecdf90db9158f435cdbdc90fdbf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list head.  <a href="#a8bbecdf90db9158f435cdbdc90fdbf9c">More...</a><br /></td></tr>
-<tr class="separator:a8bbecdf90db9158f435cdbdc90fdbf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac80e40363bf2f6584bb2391b207220"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="classos_1_1rtos_1_1_timestamp__node.html">Timestamp_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html#a5ac80e40363bf2f6584bb2391b207220">head</a> (void) const </td></tr>
+<tr class="memdesc:a5ac80e40363bf2f6584bb2391b207220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list head.  <a href="#a5ac80e40363bf2f6584bb2391b207220">More...</a><br /></td></tr>
+<tr class="separator:a5ac80e40363bf2f6584bb2391b207220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a166083f80f46f14ae66138c660aa17d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clock__timestamps__list.html#a166083f80f46f14ae66138c660aa17d0">check_timestamp</a> (<a class="el" href="namespaceos_1_1rtos_1_1clock.html#a7e1766f1fcca4517d63087b2073afd05">clock::timestamp_t</a> now)</td></tr>
 <tr class="memdesc:a166083f80f46f14ae66138c660aa17d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check list time stamps.  <a href="#a166083f80f46f14ae66138c660aa17d0">More...</a><br /></td></tr>
 <tr class="separator:a166083f80f46f14ae66138c660aa17d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:a05565932d3505be379248bb5b7630486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a05565932d3505be379248bb5b7630486">clear</a> (void)</td></tr>
-<tr class="memdesc:a05565932d3505be379248bb5b7630486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the list.  <a href="#a05565932d3505be379248bb5b7630486">More...</a><br /></td></tr>
-<tr class="separator:a05565932d3505be379248bb5b7630486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#ad18e572f011472feb0f3bc3a6a2e47b8">empty</a> (void) const </td></tr>
-<tr class="memdesc:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list is empty.  <a href="#ad18e572f011472feb0f3bc3a6a2e47b8">More...</a><br /></td></tr>
-<tr class="separator:ad18e572f011472feb0f3bc3a6a2e47b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d944f803476a213078846418641e995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_static__double__list.html#a0d944f803476a213078846418641e995">clear</a> (void)</td></tr>
+<tr class="memdesc:a0d944f803476a213078846418641e995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the list.  <a href="#a0d944f803476a213078846418641e995">More...</a><br /></td></tr>
+<tr class="separator:a0d944f803476a213078846418641e995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc34055ff11bc8cd873599db0070992"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_static__double__list.html#a6cc34055ff11bc8cd873599db0070992">empty</a> (void) const </td></tr>
+<tr class="memdesc:a6cc34055ff11bc8cd873599db0070992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the list is empty.  <a href="#a6cc34055ff11bc8cd873599db0070992">More...</a><br /></td></tr>
+<tr class="separator:a6cc34055ff11bc8cd873599db0070992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20b9845a71396ec4cf7f0190f02d427"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_static__double__list.html#ab20b9845a71396ec4cf7f0190f02d427">tail</a> (void) const </td></tr>
+<tr class="memdesc:ab20b9845a71396ec4cf7f0190f02d427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list tail.  <a href="#ab20b9845a71396ec4cf7f0190f02d427">More...</a><br /></td></tr>
+<tr class="separator:ab20b9845a71396ec4cf7f0190f02d427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
+<tr class="memitem:a15de4f1383a4bf343653bf16c2993a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_static__double__list.html#a15de4f1383a4bf343653bf16c2993a05">insert_after</a> (<a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> &amp;node, <a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> *after)</td></tr>
+<tr class="memdesc:a15de4f1383a4bf343653bf16c2993a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new node after existing node.  <a href="#a15de4f1383a4bf343653bf16c2993a05">More...</a><br /></td></tr>
+<tr class="separator:a15de4f1383a4bf343653bf16c2993a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
-<tr class="memitem:a6220739cd68c78c60ed6811094e97d60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_double__list.html#a6220739cd68c78c60ed6811094e97d60">head_</a></td></tr>
-<tr class="memdesc:a6220739cd68c78c60ed6811094e97d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list node used to point to head and tail.  <a href="#a6220739cd68c78c60ed6811094e97d60">More...</a><br /></td></tr>
-<tr class="separator:a6220739cd68c78c60ed6811094e97d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f4c01e093009a622f5219a84a51407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_static__double__list.html#ad3f4c01e093009a622f5219a84a51407">head_</a></td></tr>
+<tr class="memdesc:ad3f4c01e093009a622f5219a84a51407"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list node used to point to head and tail.  <a href="#ad3f4c01e093009a622f5219a84a51407">More...</a><br /></td></tr>
+<tr class="separator:ad3f4c01e093009a622f5219a84a51407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ordered double linked circular list of time stamp nodes. </p>
+<div class="textblock"><p>Ordered list of time stamp nodes. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00663">663</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00976">976</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6fabdf1c53911365e99aa78b73528e9e"></a>
 <div class="memitem">
@@ -199,7 +210,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Create a list of clock time stamps. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00856">856</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01345">1345</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +237,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destroy the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00862">862</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01351">1351</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -256,11 +267,11 @@ Protected Attributes</h2></td></tr>
 <p>With the list ordered, check if the list head time stamp was reached and run the node action.</p>
 <p>Repeat for all nodes that have overdue time stamps. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00365">365</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00556">556</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a05565932d3505be379248bb5b7630486"></a>
+<a class="anchor" id="a0d944f803476a213078846418641e995"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,7 +279,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void os::rtos::Double_list::clear </td>
+          <td class="memname">void os::rtos::Static_double_list::clear </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -285,13 +296,13 @@ Protected Attributes</h2></td></tr>
 <p>Clear the list. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Reset the count and clear the head pointer. </p>
+<p>Initialise the mandatory node with links to itself. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00092">92</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00111">111</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad18e572f011472feb0f3bc3a6a2e47b8"></a>
+<a class="anchor" id="a6cc34055ff11bc8cd873599db0070992"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -299,7 +310,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool os::rtos::Double_list::empty </td>
+          <td class="memname">bool os::rtos::Static_double_list::empty </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -323,11 +334,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00813">813</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01225">1225</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8bbecdf90db9158f435cdbdc90fdbf9c"></a>
+<a class="anchor" id="a5ac80e40363bf2f6584bb2391b207220"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -335,11 +346,11 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_timestamp__node.html">Timestamp_node</a> * os::rtos::Clock_timestamps_list::head </td>
+          <td class="memname">volatile <a class="el" href="classos_1_1rtos_1_1_timestamp__node.html">Timestamp_node</a> * os::rtos::Clock_timestamps_list::head </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -353,7 +364,53 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted pointer to head node. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00868">868</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01357">1357</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15de4f1383a4bf343653bf16c2993a05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Static_double_list::insert_after </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> *&#160;</td>
+          <td class="paramname"><em>after</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insert a new node after existing node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Reference to node to insert. </td></tr>
+    <tr><td class="paramname">after</td><td>Reference to existing node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00118">118</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,14 +442,13 @@ Protected Attributes</h2></td></tr>
 <li>at the beginning of the list,</li>
 <li>in the middle of the list, which requires a partial list traversal (done from the end).</li>
 </ul>
-<p>If the list is empty, the new node is added with references to itself, to satisfy the circular double linked list requirements. </p>
+<p>To satisfy the circular double linked list requirements, an empty list still contains the head node with references to itself. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00315">315</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00498">498</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a6220739cd68c78c60ed6811094e97d60"></a>
+<a class="anchor" id="ab20b9845a71396ec4cf7f0190f02d427"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -400,7 +456,38 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_double__list__links.html">Double_list_links</a> volatile os::rtos::Double_list::head_</td>
+          <td class="memname">volatile <a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> * os::rtos::Static_double_list::tail </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list tail. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to tail node. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01238">1238</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ad3f4c01e093009a622f5219a84a51407"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html">Static_double_list_links</a> volatile os::rtos::Static_double_list::head_</td>
         </tr>
       </table>
   </td>
@@ -413,7 +500,7 @@ Protected Attributes</h2></td></tr>
 <p>A list node used to point to head and tail. </p>
 <p>To simplify processing, the list always has a node. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00549">549</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00624">624</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['waiting_5fthreads_5flist',['Waiting_threads_list',['../classos_1_1rtos_1_1_thread.html#af7da9704c52235658b971027c32f8106',1,'os::rtos::Thread']]]
+  ['_5fidle_5ffunc',['_idle_func',['../classos_1_1rtos_1_1_thread.html#a0f35489f52822c315890569259e18822',1,'os::rtos::Thread']]],
+  ['_5flink_5fnode',['_link_node',['../classos_1_1rtos_1_1_thread.html#a13b183efce9e8c3697a96db780c7f818',1,'os::rtos::Thread::_link_node()'],['../classos_1_1rtos_1_1_thread.html#ab97a8075905cbb885caebdbd5f4d8525',1,'os::rtos::Thread::_link_node()']]],
+  ['_5funlink_5fnode',['_unlink_node',['../classos_1_1rtos_1_1_thread.html#a3d59fee9bcff8a4f9d3dcc403170a30f',1,'os::rtos::Thread::_unlink_node()'],['../classos_1_1rtos_1_1_thread.html#aa22b41907480f1b77681cd57e3124351',1,'os::rtos::Thread::_unlink_node()']]]
 ];

@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -99,7 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
-      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -172,6 +172,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mail_id
 : <a class="el" href="structos_event.html#aeeccddfa51120e20a2316e73bdba099a">osEvent</a>
 </li>
+<li>max_align
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#af8258a63966f621605804691ae4d2179">os::rtos::memory::memory_resource</a>
+</li>
 <li>max_count
 : <a class="el" href="structos__mutex__s.html#ad0a371b6e00dc8867b5f05e86a748c47">os_mutex_s</a>
 , <a class="el" href="structos__semaphore__s.html#a0d0caab1913a5563e5c8dc64f928a916">os_semaphore_s</a>
@@ -179,6 +182,10 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>max_count_
 : <a class="el" href="classos_1_1rtos_1_1_mutex.html#aba293f0645e775f3750ab7116f17b163">os::rtos::Mutex</a>
 , <a class="el" href="classos_1_1rtos_1_1_semaphore.html#a189e07ad643c937c8f705bce4c48bac1">os::rtos::Semaphore</a>
+</li>
+<li>max_size()
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#a1fcf82f80d3320108400ffee8a099a37">os::rtos::memory::new_delete_allocator&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#af543c6c83532cb86c09a98990686d1e9">os::rtos::memory::polymorphic_allocator&lt; T &gt;</a>
 </li>
 <li>max_value()
 : <a class="el" href="classos_1_1rtos_1_1_semaphore.html#ab0892c8cd78d99100a3cb17e797cd17c">os::rtos::Semaphore</a>
@@ -190,7 +197,25 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="structos_event.html#af759bde42477c29f56ed1bf8a19c4db8">osEvent</a>
 </li>
 <li>Message_queue()
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a9bed29533bcba2e88c8e3da4338d270f">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a0eabcbe8411f873dd7cfb41d22f8aff1">os::rtos::Message_queue</a>
+</li>
+<li>Message_queue_allocated()
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html#a065fee46fdf8e7585cf13ba874efe0b6">os::rtos::Message_queue_allocated&lt; Allocator &gt;</a>
+</li>
+<li>Message_queue_base()
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#ac977ea70c29333939f4b55a6ce4010e1">os::rtos::Message_queue_base</a>
+</li>
+<li>Message_queue_static()
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__static.html#a37ef7399ab9ecb2af90789a81b4277a7">os::rtos::Message_queue_static&lt; T, N &gt;</a>
+</li>
+<li>Message_queue_typed()
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__typed.html#af57bb27c3ea7beef06fb3b565276e6ad">os::rtos::Message_queue_typed&lt; T, Allocator &gt;</a>
+</li>
+<li>min_size()
+: <a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html#a80f78ddfeaaf870dc7ef01cea6aa5aec">os::rtos::thread::Stack</a>
+</li>
+<li>min_size_bytes_
+: <a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html#a208103c40fec274d600251fa66b00e58">os::rtos::thread::Stack</a>
 </li>
 <li>modem_status_
 : <a class="el" href="classos_1_1driver_1_1_serial.html#a1216b22c2742b1761e05a9b2a469ae8d">os::driver::Serial</a>
@@ -214,22 +239,23 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#a56b5a1c45bfae21989506bd94043d28b">os::rtos::mqueue::Attributes</a>
 </li>
 <li>msg_size()
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#ac06946d49bb7b8e67d8dc05877ae8690">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#aa581e380bfc1d90da9a1310fd88ad28b">os::rtos::Message_queue_base</a>
 </li>
 <li>msg_size_bytes
 : <a class="el" href="structos__mqueue__s.html#a21935e80d3206d5c957a92e4025471bb">os_mqueue_s</a>
 </li>
 <li>msg_size_bytes_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a8de2f20d678ec4652e5bcc3c2be5d211">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a4b3e12ad88d36e6c01d695ec9f415e02">os::rtos::Message_queue_base</a>
 </li>
 <li>msgs
-: <a class="el" href="structos__mqueue__s.html#a9575398d10d64add887675e6e125ef55">os_mqueue_s</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__static.html#acde98fcd195f15c564e651e87d04f85f">os::rtos::Message_queue_static&lt; T, N &gt;</a>
+, <a class="el" href="structos__mqueue__s.html#a9575398d10d64add887675e6e125ef55">os_mqueue_s</a>
 </li>
 <li>msgs_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a764963ca49191d2c735e7bb6c2a14d8b">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a42eb7cb0d60070a933f732c12044acce">os::rtos::Message_queue_base</a>
 </li>
 <li>mutex()
-: <a class="el" href="classos_1_1estd_1_1mutex.html#ad3fbd0971e672dafd88fdd516a9ae029">os::estd::mutex</a>
+: <a class="el" href="classos_1_1estd_1_1mutex.html#abf220fb05c1e6255b8a75914c28eda96">os::estd::mutex</a>
 , <a class="el" href="classos_1_1estd_1_1unique__lock.html#aa7f883416dc7068f13f39def08614a97">os::estd::unique_lock&lt; Mutex_T &gt;</a>
 </li>
 <li>Mutex()

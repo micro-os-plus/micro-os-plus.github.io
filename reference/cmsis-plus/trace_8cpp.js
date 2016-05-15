@@ -1,9 +1,9 @@
 var trace_8cpp =
 [
     [ "OS_INTEGER_TRACE_PRINTF_TMP_ARRAY_SIZE", "trace_8cpp.html#a0fd8f6e6808c27fc3e21d3e3f888d36f", null ],
-    [ "__initialize_trace", "trace_8cpp.html#abfbe48265e98d7332ca12c2bb2668408", null ],
     [ "dump_args", "trace_8cpp.html#gae52332a8c43778a8d61312fc4064647e", null ],
     [ "initialize", "trace_8cpp.html#a412dbb6aeb8348a73eedd73a6494c35d", null ],
+    [ "os_initialize_trace", "trace_8cpp.html#a779ad226bcffb6a108ca636424308693", null ],
     [ "printf", "trace_8cpp.html#gab99139b69af4fe6f063b4a236133b2ee", null ],
     [ "putchar", "trace_8cpp.html#gad3e35a5ce4981b2c40ed6fb69814477e", null ],
     [ "puts", "trace_8cpp.html#ga7a7b4734b5d3db0422fffe79a44ca7dc", null ],

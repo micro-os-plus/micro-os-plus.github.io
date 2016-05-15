@@ -1,8 +1,9 @@
 var exception_handlers_8h =
 [
-    [ "ExceptionStackFrame", "struct_exception_stack_frame.html", "struct_exception_stack_frame" ],
+    [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
+    [ "exception_stack_frame_t", "exception-handlers_8h.html#a01d21df787c54b04e011eb8401fe2e0c", null ],
     [ "HardFault_Handler", "exception-handlers_8h.html#a2bffc10d5bd4106753b7c30e86903bea", null ],
-    [ "HardFault_Handler_C", "exception-handlers_8h.html#a03fbe826a26c57c9182d3d7c1c283564", null ],
+    [ "HardFault_Handler_C", "exception-handlers_8h.html#a4ba78f8ed935db412d82624817946eab", null ],
     [ "NMI_Handler", "exception-handlers_8h.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc", null ],
     [ "PendSV_Handler", "exception-handlers_8h.html#a6303e1f258cbdc1f970ce579cc015623", null ],
     [ "Reset_Handler", "exception-handlers_8h.html#ae7ee340978f5c25f52f0cad1457c6616", null ],

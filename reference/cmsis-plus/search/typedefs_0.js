@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['allocation_5felement_5ft',['allocation_element_t',['../namespaceos_1_1rtos_1_1stack.html#a80c8a3f47c5067f368bf730ac90d03a9',1,'os::rtos::stack']]],
+  ['allocator',['allocator',['../namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45',1,'os::rtos::memory']]],
+  ['allocator_5ftype',['allocator_type',['../classos_1_1rtos_1_1_message__queue__allocated.html#a96d137eeb55c1f06712e930ddf018eee',1,'os::rtos::Message_queue_allocated::allocator_type()'],['../classos_1_1rtos_1_1_message__queue.html#a10f8385ac702040c66d33e64a2b56fd8',1,'os::rtos::Message_queue::allocator_type()'],['../classos_1_1rtos_1_1_message__queue__typed.html#ac53abd4357e837069b03f5c1c528ce86',1,'os::rtos::Message_queue_typed::allocator_type()']]],
   ['arm_5fdriver_5fusart',['ARM_DRIVER_USART',['../usart-wrapper_8h.html#a71661a90b39aa927b405b4bd22311f92',1,'usart-wrapper.h']]],
   ['arm_5fdriver_5fusbd',['ARM_DRIVER_USBD',['../usbd-wrapper_8h.html#a9b321a89cdf5993b1e08dcfc700b084c',1,'usbd-wrapper.h']]],
   ['arm_5fdriver_5fusbh',['ARM_DRIVER_USBH',['../usbh-wrapper_8h.html#ae94ee33af48ded85a95eb7213f06520a',1,'usbh-wrapper.h']]],
