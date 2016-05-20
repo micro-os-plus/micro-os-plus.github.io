@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -132,6 +131,7 @@ $(document).ready(function(){initNavTree('os-thread_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="os-decls_8h_source.html">cmsis-plus/rtos/os-decls.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 </div>
 <p><a href="os-thread_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -145,7 +145,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html">os::rtos::thread::Stack</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html">os::rtos::Thread</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>thread</b>.  <a href="classos_1_1rtos_1_1_thread.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>thread</b>, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1_thread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__allocated.html">os::rtos::Thread_allocated&lt; Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with allocator.  <a href="classos_1_1rtos_1_1_thread__allocated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__static.html">os::rtos::Thread_static&lt; N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with local stack.  <a href="classos_1_1rtos_1_1_thread__static.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -165,8 +171,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa2db09a0f3dd2d48acd80ac17e2e0677"><td class="memItemLeft" align="right" valign="top">Thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#aa2db09a0f3dd2d48acd80ac17e2e0677">os::rtos::this_thread::_thread</a> (void)</td></tr>
-<tr class="separator:aa2db09a0f3dd2d48acd80ac17e2e0677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b767ac998b9c30c5d54530b76d0376"><td class="memItemLeft" align="right" valign="top">Thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a76b767ac998b9c30c5d54530b76d0376">os::rtos::this_thread::_thread</a> (void)</td></tr>
+<tr class="separator:a76b767ac998b9c30c5d54530b76d0376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c889c1521abca1ffb23bc42bd6ccc10"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a3c889c1521abca1ffb23bc42bd6ccc10">os::rtos::this_thread::error</a> (void)</td></tr>
 <tr class="separator:a3c889c1521abca1ffb23bc42bd6ccc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c68164be854d7fb8a2693726c6207ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff">os::rtos::this_thread::exit</a> (void *exit_ptr=nullptr)</td></tr>
@@ -178,9 +184,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0074bbc6172d789c71439f6c432dc4ca"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a0074bbc6172d789c71439f6c432dc4ca">os::rtos::this_thread::sig_wait</a> (thread::sigset_t mask, thread::sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
 <tr class="memdesc:a0074bbc6172d789c71439f6c432dc4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a0074bbc6172d789c71439f6c432dc4ca">More...</a><br /></td></tr>
 <tr class="separator:a0074bbc6172d789c71439f6c432dc4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527cca157e8ac579442f34a1a88589c9"><td class="memItemLeft" align="right" valign="top">Thread &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a527cca157e8ac579442f34a1a88589c9">os::rtos::this_thread::thread</a> (void)</td></tr>
-<tr class="memdesc:a527cca157e8ac579442f34a1a88589c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a527cca157e8ac579442f34a1a88589c9">More...</a><br /></td></tr>
-<tr class="separator:a527cca157e8ac579442f34a1a88589c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2207667c138fd0412bdec2c6ba432dc2"><td class="memItemLeft" align="right" valign="top">Thread &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a2207667c138fd0412bdec2c6ba432dc2">os::rtos::this_thread::thread</a> (void)</td></tr>
+<tr class="memdesc:a2207667c138fd0412bdec2c6ba432dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a2207667c138fd0412bdec2c6ba432dc2">More...</a><br /></td></tr>
+<tr class="separator:a2207667c138fd0412bdec2c6ba432dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f1b8277ff3148c19abea593195f16af"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6f1b8277ff3148c19abea593195f16af">os::rtos::this_thread::timed_sig_wait</a> (thread::sigset_t mask, clock::duration_t timeout, thread::sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
 <tr class="memdesc:a6f1b8277ff3148c19abea593195f16af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a6f1b8277ff3148c19abea593195f16af">More...</a><br /></td></tr>
 <tr class="separator:a6f1b8277ff3148c19abea593195f16af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,7 +202,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7eabec0905b196a09d3431e942eb5d49"><td class="memItemLeft" align="right" valign="top">const Attributes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">os::rtos::thread::initializer</a> { nullptr }</td></tr>
+<tr class="memitem:a7eabec0905b196a09d3431e942eb5d49"><td class="memItemLeft" align="right" valign="top">const Attributes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">os::rtos::thread::initializer</a></td></tr>
 <tr class="memdesc:a7eabec0905b196a09d3431e942eb5d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default thread initialiser.  <a href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">More...</a><br /></td></tr>
 <tr class="separator:a7eabec0905b196a09d3431e942eb5d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

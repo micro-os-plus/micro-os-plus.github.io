@@ -68,7 +68,7 @@ var group__cmsis_plus_iso =
     ] ],
     [ "free", "group__cmsis-plus-iso.html#ga800730f656f908066925a653e09d59a3", null ],
     [ "get_id", "group__cmsis-plus-iso.html#ga4cdd27328fdf1dee2e48eed9596eb768", null ],
-    [ "malloc", "group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4", null ],
+    [ "malloc", "group__cmsis-plus-iso.html#ga23af78f3e7f578a8aeeaf64d47ec9c97", null ],
     [ "notify_all_at_thread_exit", "group__cmsis-plus-iso.html#ga7a2aae48fd29daf2b726b2bb96175d43", null ],
     [ "sleep_for", "group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058", null ],
     [ "sleep_until", "group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631", null ],

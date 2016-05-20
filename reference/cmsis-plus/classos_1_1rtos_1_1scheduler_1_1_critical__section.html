@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -155,10 +154,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Scheduler critical section <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> helper. </p>
-<p>Use this class to define a critical section protected to scheduler switches. The beginning of the critical section is exactly the place where this class is instantiated (the constructor will lock the scheduler). The end of the critical section is the end of the surrounding block (the destructor will unlock the scheduler).</p>
-<dl class="section note"><dt>Note</dt><dd>Can be nested as many times as required without problems, only the outer call will unlock the scheduler.</dd></dl>
-<dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   {</div><div class="line">     scheduler::Critical_section cs;  <span class="comment">// Critical section begins here.</span></div><div class="line"></div><div class="line">     <span class="comment">// Inside the critical section.</span></div><div class="line">     <span class="comment">// No scheduler switches will happen here.</span></div><div class="line"></div><div class="line">   } <span class="comment">// Critical section ends here.</span></div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
+
 <p>Definition at line <a class="el" href="os-sched_8h_source.html#l00145">145</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa8f3747441f788e0abe33179b9c61583"></a>
@@ -238,16 +234,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Variable to store the initial scheduler status. </p>
-<p>The variable is constant, after being set by the constructor no further changes are possible.</p>
-<p>The variable type usually is a <code>bool</code>, but a counter is also possible if the scheduler uses a recursive lock. </p>
 
 <p>Definition at line <a class="el" href="os-sched_8h_source.html#l00193">193</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-sched_8h_source.html">os-sched.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-core_8cpp_source.html">os-core.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

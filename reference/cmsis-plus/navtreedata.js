@@ -2,7 +2,6 @@ var NAVTREE =
 [
   [ "CMSIS++ Reference", "index.html", [
     [ "Overview", "index.html", null ],
-    [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -31,8 +30,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
-        [ "Variables", "globals_vars.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
@@ -44,19 +42,18 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"__sbrk_8c.html",
-"classos_1_1driver_1_1_usbh__wrapper.html#af01c3c1cffee9c783219d1486603b3c2",
-"classos_1_1estd_1_1condition__variable__any.html#abffbd7ec4e028ca2689ebe7bfeaff4df",
-"classos_1_1rtos_1_1_message__queue.html#a55619e28a25996bd5dde58f7afa97727",
-"classos_1_1rtos_1_1_realtime__clock.html#a2a9e909278a0a352c57316067f2229d0",
-"classos_1_1rtos_1_1evflags_1_1_attributes.html#adb181340695de97564e5e7a6a67568c7",
-"cmsis__os_8h.html#a7f2b42f1983b9107775ec2a1c69a849aa193b650117c209b4a203954542bcc3e6",
-"globals_func_h.html",
-"os-c-api_8h.html#a6500e80629a3f314ab2ddecae91c9a74",
-"os-c-wrapper_8cpp.html#ab8ea7b1711a8504a38d51e8ad6977ab3",
-"os_8h_source.html",
-"structos__mqueue__s.html#a02d8ac66608bcac763b109b08723c77f",
-"usb_8h.html#a0408b7a0c96bebcf6c5d34d2160e4f38"
+"annotated.html",
+"classos_1_1driver_1_1serial_1_1_status.html#ae0d9fc4d84c0ef53af955b4813f83310",
+"classos_1_1estd_1_1thread.html#a1a68ce5eeb2e2a473ff8219f6b3b6d5f",
+"classos_1_1rtos_1_1_memory__pool__static.html#ad0acbd86a7293b218c0ef2d894a48c41",
+"classos_1_1rtos_1_1_mutex.html#a7b1d10a9a21aac45d959afe028a439ea",
+"classos_1_1rtos_1_1_thread__allocated.html#ac403644442b53259133526e8cf073771",
+"classos_1_1rtos_1_1mutex_1_1_attributes.html#a4fad6524f7c3d67e243b0726aae90d2d",
+"cmsis__os_8h.html#aee93d929beb350f16e5cc7fa602e229f",
+"namespaceos.html",
+"os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca74f02da6ce7c326070ea0a545d42b9b2",
+"serial_8h.html#aa1a37580580c17d07e0793c5bbe183aa",
+"structos__thread__s.html#a72751bb9462d6f9334fdc731c92ad226"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

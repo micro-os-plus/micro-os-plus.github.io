@@ -2,9 +2,9 @@ var classos_1_1rtos_1_1_systick__clock =
 [
     [ "current_t", "classos_1_1rtos_1_1_systick__clock.html#a86be53558c6f19eafc0721a5ee701d2b", null ],
     [ "Systick_clock", "classos_1_1rtos_1_1_systick__clock.html#aa0c7cf1f1dd428d1eb81438c8dc72788", null ],
-    [ "~Systick_clock", "classos_1_1rtos_1_1_systick__clock.html#ab50360f16ef2aa9fa68415a44694f256", null ],
+    [ "~Systick_clock", "classos_1_1rtos_1_1_systick__clock.html#aef17f873af0f8cee371c9c24b722a227", null ],
     [ "_interrupt_service_routine", "classos_1_1rtos_1_1_systick__clock.html#a397d7a78d6bbf964e4610ddd42c87306", null ],
-    [ "_wait_until", "classos_1_1rtos_1_1_systick__clock.html#a60f3f9c2a35dd37458b1b59d4b1188d7", null ],
+    [ "_wait_until", "classos_1_1rtos_1_1_systick__clock.html#a29bfc5631b0346a76ef653ef5c02aef8", null ],
     [ "now", "classos_1_1rtos_1_1_systick__clock.html#a61d411d1a5e51e536daa37e3ee5faa01", null ],
     [ "now", "classos_1_1rtos_1_1_systick__clock.html#a4fe0716286f0b5f2426a7d3c03101be5", null ],
     [ "sleep_for", "classos_1_1rtos_1_1_systick__clock.html#a135c3868815ebb602787d48acdd22a51", null ],

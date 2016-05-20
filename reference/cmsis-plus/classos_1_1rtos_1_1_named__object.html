@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -136,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_named__object.html
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="classos_1_1rtos_1_1_condition__variable.html">os::rtos::Condition_variable</a>, <a class="el" href="classos_1_1rtos_1_1_event__flags.html">os::rtos::Event_flags</a>, <a class="el" href="classos_1_1rtos_1_1_memory__pool.html">os::rtos::Memory_pool</a>, <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html">os::rtos::Message_queue_base</a>, <a class="el" href="classos_1_1rtos_1_1_mutex.html">os::rtos::Mutex</a>, <a class="el" href="classos_1_1rtos_1_1_semaphore.html">os::rtos::Semaphore</a>, <a class="el" href="classos_1_1rtos_1_1_thread.html">os::rtos::Thread</a>, and <a class="el" href="classos_1_1rtos_1_1_timer.html">os::rtos::Timer</a>.</p>
+<p>Inherited by <a class="el" href="classos_1_1rtos_1_1_condition__variable.html">os::rtos::Condition_variable</a>, <a class="el" href="classos_1_1rtos_1_1_event__flags.html">os::rtos::Event_flags</a>, <a class="el" href="classos_1_1rtos_1_1_memory__pool.html">os::rtos::Memory_pool</a>, <a class="el" href="classos_1_1rtos_1_1_message__queue.html">os::rtos::Message_queue</a>, <a class="el" href="classos_1_1rtos_1_1_mutex.html">os::rtos::Mutex</a>, <a class="el" href="classos_1_1rtos_1_1_semaphore.html">os::rtos::Semaphore</a>, <a class="el" href="classos_1_1rtos_1_1_thread.html">os::rtos::Thread</a>, and <a class="el" href="classos_1_1rtos_1_1_timer.html">os::rtos::Timer</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -146,6 +145,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1af2fd6d40c45916ecbb2713e39bf7da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#a1af2fd6d40c45916ecbb2713e39bf7da">Named_object</a> (const char *<a class="el" href="classos_1_1rtos_1_1_named__object.html#a1ced578ffc847e14547b02ee1473c44e">name</a>)</td></tr>
 <tr class="memdesc:a1af2fd6d40c45916ecbb2713e39bf7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named object.  <a href="#a1af2fd6d40c45916ecbb2713e39bf7da">More...</a><br /></td></tr>
 <tr class="separator:a1af2fd6d40c45916ecbb2713e39bf7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1319e3542827cb284ec4727b2c9119ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#a1319e3542827cb284ec4727b2c9119ad">Named_object</a> (const char *given_name, const char *attr_name)</td></tr>
+<tr class="memdesc:a1319e3542827cb284ec4727b2c9119ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named object.  <a href="#a1319e3542827cb284ec4727b2c9119ad">More...</a><br /></td></tr>
+<tr class="separator:a1319e3542827cb284ec4727b2c9119ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad60c9d586dd60f703c8ca0590fbe8691"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#ad60c9d586dd60f703c8ca0590fbe8691">~Named_object</a> ()=default</td></tr>
 <tr class="memdesc:ad60c9d586dd60f703c8ca0590fbe8691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the named object.  <a href="#ad60c9d586dd60f703c8ca0590fbe8691">More...</a><br /></td></tr>
 <tr class="separator:ad60c9d586dd60f703c8ca0590fbe8691"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,14 +159,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
-<tr class="memitem:ad7667db8bf3171d900237500cb0e1e67"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#ad7667db8bf3171d900237500cb0e1e67">name_</a></td></tr>
-<tr class="memdesc:ad7667db8bf3171d900237500cb0e1e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to name.  <a href="#ad7667db8bf3171d900237500cb0e1e67">More...</a><br /></td></tr>
-<tr class="separator:ad7667db8bf3171d900237500cb0e1e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6435f5bbc1c2793664672cbf420d70"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#a7c6435f5bbc1c2793664672cbf420d70">name_</a></td></tr>
+<tr class="memdesc:a7c6435f5bbc1c2793664672cbf420d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to name.  <a href="#a7c6435f5bbc1c2793664672cbf420d70">More...</a><br /></td></tr>
+<tr class="separator:a7c6435f5bbc1c2793664672cbf420d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for named objects. </p>
-<p>This class serves as a base class for all objects that have a name (most of the RTOS classes do have a name).</p>
-<p>Attributes use a separate constexpr object. </p>
 
 <p>Definition at line <a class="el" href="os-decls_8h_source.html#l00804">804</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -180,8 +180,6 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00459">459</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -202,13 +200,45 @@ Protected Attributes</h2></td></tr>
 <p>Create a named object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned. </td></tr>
   </table>
   </dd>
 </dl>
-<p>To save space, instead of copying the null terminated string locally, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00473">473</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a1319e3542827cb284ec4727b2c9119ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">os::rtos::Named_object::Named_object </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>given_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>attr_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a named object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">given_name</td><td>Null terminated name. If <code>nullptr</code>, attr_name is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr_name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -265,12 +295,12 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01045">1045</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01055">1055</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ad7667db8bf3171d900237500cb0e1e67"></a>
+<a class="anchor" id="a7c6435f5bbc1c2793664672cbf420d70"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -278,7 +308,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char *const os::rtos::Named_object::name_</td>
+          <td class="memname">const char* const os::rtos::Named_object::name_</td>
         </tr>
       </table>
   </td>
@@ -289,15 +319,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to name. </p>
-<p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00873">873</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00883">883</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-decls_8h_source.html">os-decls.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-core_8cpp_source.html">os-core.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

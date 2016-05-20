@@ -1,11 +1,8 @@
 var annotated_dup =
 [
-    [ "anonymous_namespace{memory-resource.cpp}", "namespaceanonymous__namespace_02memory-resource_8cpp_03.html", "namespaceanonymous__namespace_02memory-resource_8cpp_03" ],
-    [ "anonymous_namespace{os-memory.cpp}", "namespaceanonymous__namespace_02os-memory_8cpp_03.html", "namespaceanonymous__namespace_02os-memory_8cpp_03" ],
     [ "os", "namespaceos.html", "namespaceos" ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
-    [ "os_clock_t", "structos__clock__t.html", "structos__clock__t" ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
     [ "os_condvar_s", "structos__condvar__s.html", "structos__condvar__s" ],
     [ "os_double_list_links_s", "structos__double__list__links__s.html", "structos__double__list__links__s" ],

@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -125,45 +124,59 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1_memory__pool.html'
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classos_1_1rtos_1_1_memory__pool-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">os::rtos::Memory_pool Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Synchronised <b>memory pool</b>.  
+<p>Synchronised <b>memory pool</b>, using the default RTOS allocator.  
  <a href="classos_1_1rtos_1_1_memory__pool.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
 <p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__object.html">os::rtos::Named_object</a>.</p>
+
+<p>Inherited by <a class="el" href="classos_1_1rtos_1_1_memory__pool__allocated.html">os::rtos::Memory_pool_allocated&lt; Allocator &gt;</a>, and <a class="el" href="classos_1_1rtos_1_1_memory__pool__static.html">os::rtos::Memory_pool_static&lt; T, N &gt;</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3a937f2482663a451e356b6df0911dbf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> = <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt; <a class="el" href="namespaceos_1_1rtos_1_1stack.html#a80c8a3f47c5067f368bf730ac90d03a9">stack::allocation_element_t</a> &gt;</td></tr>
+<tr class="separator:a3a937f2482663a451e356b6df0911dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:adda40166e1164eef680e42d4847d3e9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f">Memory_pool</a> (<a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes)</td></tr>
-<tr class="memdesc:adda40166e1164eef680e42d4847d3e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory pool with default settings.  <a href="#adda40166e1164eef680e42d4847d3e9f">More...</a><br /></td></tr>
-<tr class="separator:adda40166e1164eef680e42d4847d3e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e93a08a4b8914c08dec51d3d4bfd65f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a0e93a08a4b8914c08dec51d3d4bfd65f">Memory_pool</a> (const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;attr, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes)</td></tr>
-<tr class="memdesc:a0e93a08a4b8914c08dec51d3d4bfd65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory pool with custom settings.  <a href="#a0e93a08a4b8914c08dec51d3d4bfd65f">More...</a><br /></td></tr>
-<tr class="separator:a0e93a08a4b8914c08dec51d3d4bfd65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f08979403e5ad8313b8e45cdfb6707"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a81f08979403e5ad8313b8e45cdfb6707">~Memory_pool</a> ()</td></tr>
-<tr class="memdesc:a81f08979403e5ad8313b8e45cdfb6707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the memory pool.  <a href="#a81f08979403e5ad8313b8e45cdfb6707">More...</a><br /></td></tr>
-<tr class="separator:a81f08979403e5ad8313b8e45cdfb6707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Operators</div></td></tr>
 <tr class="memitem:af41f7756fc59e907efee2b39a268c142"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#af41f7756fc59e907efee2b39a268c142">operator==</a> (const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html">Memory_pool</a> &amp;rhs) const </td></tr>
 <tr class="memdesc:af41f7756fc59e907efee2b39a268c142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare memory pools.  <a href="#af41f7756fc59e907efee2b39a268c142">More...</a><br /></td></tr>
 <tr class="separator:af41f7756fc59e907efee2b39a268c142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
+<tr class="memitem:a22b3ac66e773d7fc49ec13ae23c46d58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a22b3ac66e773d7fc49ec13ae23c46d58">Memory_pool</a> (<a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>())</td></tr>
+<tr class="memdesc:a22b3ac66e773d7fc49ec13ae23c46d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory pool with default settings.  <a href="#a22b3ac66e773d7fc49ec13ae23c46d58">More...</a><br /></td></tr>
+<tr class="separator:a22b3ac66e773d7fc49ec13ae23c46d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593446379c94f1b4227ae01e8ea8e2d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a593446379c94f1b4227ae01e8ea8e2d8">Memory_pool</a> (const char *<a class="el" href="classos_1_1rtos_1_1_named__object.html#a1ced578ffc847e14547b02ee1473c44e">name</a>, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>())</td></tr>
+<tr class="memdesc:a593446379c94f1b4227ae01e8ea8e2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named memory pool with default settings.  <a href="#a593446379c94f1b4227ae01e8ea8e2d8">More...</a><br /></td></tr>
+<tr class="separator:a593446379c94f1b4227ae01e8ea8e2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd8a0e822c77b721f6e348d664673a3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#acd8a0e822c77b721f6e348d664673a3f">Memory_pool</a> (const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;attr, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>())</td></tr>
+<tr class="memdesc:acd8a0e822c77b721f6e348d664673a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory pool with custom settings.  <a href="#acd8a0e822c77b721f6e348d664673a3f">More...</a><br /></td></tr>
+<tr class="separator:acd8a0e822c77b721f6e348d664673a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab5fa2f9ae2a000082bdcdf41f7a09a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a7ab5fa2f9ae2a000082bdcdf41f7a09a">Memory_pool</a> (const char *<a class="el" href="classos_1_1rtos_1_1_named__object.html#a1ced578ffc847e14547b02ee1473c44e">name</a>, const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;attr, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>())</td></tr>
+<tr class="memdesc:a7ab5fa2f9ae2a000082bdcdf41f7a09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named memory pool with custom settings.  <a href="#a7ab5fa2f9ae2a000082bdcdf41f7a09a">More...</a><br /></td></tr>
+<tr class="separator:a7ab5fa2f9ae2a000082bdcdf41f7a09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51e3ffd2989c91b252c1ff86ab81fbc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae51e3ffd2989c91b252c1ff86ab81fbc">~Memory_pool</a> ()</td></tr>
+<tr class="memdesc:ae51e3ffd2989c91b252c1ff86ab81fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the memory pool.  <a href="#ae51e3ffd2989c91b252c1ff86ab81fbc">More...</a><br /></td></tr>
+<tr class="separator:ae51e3ffd2989c91b252c1ff86ab81fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:a74c3f9e2c59cd7d8d109deaa708a4550"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550">alloc</a> (void)</td></tr>
-<tr class="memdesc:a74c3f9e2c59cd7d8d109deaa708a4550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block.  <a href="#a74c3f9e2c59cd7d8d109deaa708a4550">More...</a><br /></td></tr>
-<tr class="separator:a74c3f9e2c59cd7d8d109deaa708a4550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109bae1e2cf390f7208c79a598808cb5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a109bae1e2cf390f7208c79a598808cb5">try_alloc</a> (void)</td></tr>
-<tr class="memdesc:a109bae1e2cf390f7208c79a598808cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block.  <a href="#a109bae1e2cf390f7208c79a598808cb5">More...</a><br /></td></tr>
-<tr class="separator:a109bae1e2cf390f7208c79a598808cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a07be73677fd490a58b6ec9ed2c2cf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf">timed_alloc</a> (<a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout)</td></tr>
-<tr class="memdesc:aa2a07be73677fd490a58b6ec9ed2c2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block with timeout.  <a href="#aa2a07be73677fd490a58b6ec9ed2c2cf">More...</a><br /></td></tr>
-<tr class="separator:aa2a07be73677fd490a58b6ec9ed2c2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54604c7f2211440c58dcee53af5e5685"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a54604c7f2211440c58dcee53af5e5685">alloc</a> (void)</td></tr>
+<tr class="memdesc:a54604c7f2211440c58dcee53af5e5685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block.  <a href="#a54604c7f2211440c58dcee53af5e5685">More...</a><br /></td></tr>
+<tr class="separator:a54604c7f2211440c58dcee53af5e5685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3a75bd9803f51b62fe37821d53b359"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a6d3a75bd9803f51b62fe37821d53b359">try_alloc</a> (void)</td></tr>
+<tr class="memdesc:a6d3a75bd9803f51b62fe37821d53b359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block.  <a href="#a6d3a75bd9803f51b62fe37821d53b359">More...</a><br /></td></tr>
+<tr class="separator:a6d3a75bd9803f51b62fe37821d53b359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d236739043b41ecaf8d563b205a29a5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a9d236739043b41ecaf8d563b205a29a5">timed_alloc</a> (<a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a> timeout)</td></tr>
+<tr class="memdesc:a9d236739043b41ecaf8d563b205a29a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a memory block with timeout.  <a href="#a9d236739043b41ecaf8d563b205a29a5">More...</a><br /></td></tr>
+<tr class="separator:a9d236739043b41ecaf8d563b205a29a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd453c05903c5941cc2f8026e754b130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#acd453c05903c5941cc2f8026e754b130">free</a> (void *block)</td></tr>
 <tr class="memdesc:acd453c05903c5941cc2f8026e754b130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory block.  <a href="#acd453c05903c5941cc2f8026e754b130">More...</a><br /></td></tr>
 <tr class="separator:acd453c05903c5941cc2f8026e754b130"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,52 +208,78 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
+<tr class="memitem:a9fbe7be5d58dc9e9fc6ffceb57ceea16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a9fbe7be5d58dc9e9fc6ffceb57ceea16">_construct</a> (const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;attr, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> blocks, <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> block_size_bytes, void *pool_address, std::size_t pool_size_bytes)</td></tr>
+<tr class="memdesc:a9fbe7be5d58dc9e9fc6ffceb57ceea16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used during memory pool construction.  <a href="#a9fbe7be5d58dc9e9fc6ffceb57ceea16">More...</a><br /></td></tr>
+<tr class="separator:a9fbe7be5d58dc9e9fc6ffceb57ceea16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f9534f4b7261f6092416502fd8e658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a93f9534f4b7261f6092416502fd8e658">_init</a> (void)</td></tr>
 <tr class="memdesc:a93f9534f4b7261f6092416502fd8e658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal initialisation.  <a href="#a93f9534f4b7261f6092416502fd8e658">More...</a><br /></td></tr>
 <tr class="separator:a93f9534f4b7261f6092416502fd8e658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2670b899849d7575924195c264568f81"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a2670b899849d7575924195c264568f81">_try_first</a> (void)</td></tr>
-<tr class="memdesc:a2670b899849d7575924195c264568f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used to get the first linked block.  <a href="#a2670b899849d7575924195c264568f81">More...</a><br /></td></tr>
-<tr class="separator:a2670b899849d7575924195c264568f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601c942fe94616ca39e4670a5863a04c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a601c942fe94616ca39e4670a5863a04c">_try_first</a> (void)</td></tr>
+<tr class="memdesc:a601c942fe94616ca39e4670a5863a04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function used to get the first linked block.  <a href="#a601c942fe94616ca39e4670a5863a04c">More...</a><br /></td></tr>
+<tr class="separator:a601c942fe94616ca39e4670a5863a04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
 <tr class="memitem:adb028a45fd5949a3c592bad1cfe7fc89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_waiting__threads__list.html">Waiting_threads_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#adb028a45fd5949a3c592bad1cfe7fc89">list_</a></td></tr>
+<tr class="memdesc:adb028a45fd5949a3c592bad1cfe7fc89"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of threads waiting to alloc.  <a href="#adb028a45fd5949a3c592bad1cfe7fc89">More...</a><br /></td></tr>
 <tr class="separator:adb028a45fd5949a3c592bad1cfe7fc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c6d9080d9335a3e731e3600d3c0629"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a29c6d9080d9335a3e731e3600d3c0629">clock_</a></td></tr>
-<tr class="separator:a29c6d9080d9335a3e731e3600d3c0629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4269bf0adfad4acad2b98d4dd442ac3b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a4269bf0adfad4acad2b98d4dd442ac3b">pool_addr_</a></td></tr>
-<tr class="memdesc:a4269bf0adfad4acad2b98d4dd442ac3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory address where the pool is located.  <a href="#a4269bf0adfad4acad2b98d4dd442ac3b">More...</a><br /></td></tr>
+<tr class="memitem:ab33bf6b11ddff767b669a0af119c3ff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ab33bf6b11ddff767b669a0af119c3ff6">clock_</a> = nullptr</td></tr>
+<tr class="memdesc:ab33bf6b11ddff767b669a0af119c3ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock to be used for timeouts.  <a href="#ab33bf6b11ddff767b669a0af119c3ff6">More...</a><br /></td></tr>
+<tr class="separator:ab33bf6b11ddff767b669a0af119c3ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4269bf0adfad4acad2b98d4dd442ac3b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a4269bf0adfad4acad2b98d4dd442ac3b">pool_addr_</a> = nullptr</td></tr>
+<tr class="memdesc:a4269bf0adfad4acad2b98d4dd442ac3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The static address where the pool is stored (from <code>attr.mp_pool_address</code>).  <a href="#a4269bf0adfad4acad2b98d4dd442ac3b">More...</a><br /></td></tr>
 <tr class="separator:a4269bf0adfad4acad2b98d4dd442ac3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae76a464bafdba7e65ed42d2f306e1c32"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae76a464bafdba7e65ed42d2f306e1c32">allocated_pool_addr_</a></td></tr>
-<tr class="separator:ae76a464bafdba7e65ed42d2f306e1c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80711efed7c6c918b62e3ababf75937"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#af80711efed7c6c918b62e3ababf75937">blocks_</a></td></tr>
-<tr class="memdesc:af80711efed7c6c918b62e3ababf75937"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of blocks in the pool.  <a href="#af80711efed7c6c918b62e3ababf75937">More...</a><br /></td></tr>
-<tr class="separator:af80711efed7c6c918b62e3ababf75937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54d48e4e81b01aa96f22f3bb2e16e28e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a54d48e4e81b01aa96f22f3bb2e16e28e">block_size_bytes_</a></td></tr>
-<tr class="memdesc:a54d48e4e81b01aa96f22f3bb2e16e28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of a block, in bytes.  <a href="#a54d48e4e81b01aa96f22f3bb2e16e28e">More...</a><br /></td></tr>
-<tr class="separator:a54d48e4e81b01aa96f22f3bb2e16e28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac5fce7023a313fa35daa84800c9cad"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a7ac5fce7023a313fa35daa84800c9cad">count_</a></td></tr>
+<tr class="memitem:ad0acbd86a7293b218c0ef2d894a48c41"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ad0acbd86a7293b218c0ef2d894a48c41">allocated_pool_addr_</a> = nullptr</td></tr>
+<tr class="memdesc:ad0acbd86a7293b218c0ef2d894a48c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dynamic address if the pool was allocated (and must be deallocated)  <a href="#ad0acbd86a7293b218c0ef2d894a48c41">More...</a><br /></td></tr>
+<tr class="separator:ad0acbd86a7293b218c0ef2d894a48c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6720ee9ae08cf680eee0f1ad6d4184"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a2f6720ee9ae08cf680eee0f1ad6d4184">allocator_</a> = nullptr</td></tr>
+<tr class="memdesc:a2f6720ee9ae08cf680eee0f1ad6d4184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to allocator.  <a href="#a2f6720ee9ae08cf680eee0f1ad6d4184">More...</a><br /></td></tr>
+<tr class="separator:a2f6720ee9ae08cf680eee0f1ad6d4184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae910bd460e2ef9dcd186b25b79018bff"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae910bd460e2ef9dcd186b25b79018bff">pool_size_bytes_</a> = 0</td></tr>
+<tr class="memdesc:ae910bd460e2ef9dcd186b25b79018bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size of the statically allocated pool storage (from <code>attr.mp_pool_size_bytes</code>).  <a href="#ae910bd460e2ef9dcd186b25b79018bff">More...</a><br /></td></tr>
+<tr class="separator:ae910bd460e2ef9dcd186b25b79018bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaf910392dab7430bcf229f469658ec"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a7eaf910392dab7430bcf229f469658ec">allocated_pool_size_elements_</a> = 0</td></tr>
+<tr class="memdesc:a7eaf910392dab7430bcf229f469658ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size of the dynamically allocated pool storage.  <a href="#a7eaf910392dab7430bcf229f469658ec">More...</a><br /></td></tr>
+<tr class="separator:a7eaf910392dab7430bcf229f469658ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2637130a2dcbab9486db995707cb3a04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a2637130a2dcbab9486db995707cb3a04">blocks_</a> = 0</td></tr>
+<tr class="memdesc:a2637130a2dcbab9486db995707cb3a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of blocks in the pool.  <a href="#a2637130a2dcbab9486db995707cb3a04">More...</a><br /></td></tr>
+<tr class="separator:a2637130a2dcbab9486db995707cb3a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf666447ce3917d22abd200d06a143f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#adf666447ce3917d22abd200d06a143f1">block_size_bytes_</a> = 0</td></tr>
+<tr class="memdesc:adf666447ce3917d22abd200d06a143f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of a block, in bytes.  <a href="#adf666447ce3917d22abd200d06a143f1">More...</a><br /></td></tr>
+<tr class="separator:adf666447ce3917d22abd200d06a143f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac5fce7023a313fa35daa84800c9cad"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a7ac5fce7023a313fa35daa84800c9cad">count_</a> = 0</td></tr>
 <tr class="memdesc:a7ac5fce7023a313fa35daa84800c9cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current number of blocks allocated from the pool.  <a href="#a7ac5fce7023a313fa35daa84800c9cad">More...</a><br /></td></tr>
 <tr class="separator:a7ac5fce7023a313fa35daa84800c9cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48ad91b538ba95b5d30899a010a93382"><td class="memItemLeft" align="right" valign="top">void *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a48ad91b538ba95b5d30899a010a93382">first_</a></td></tr>
+<tr class="memitem:a48ad91b538ba95b5d30899a010a93382"><td class="memItemLeft" align="right" valign="top">void *volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a48ad91b538ba95b5d30899a010a93382">first_</a> = nullptr</td></tr>
 <tr class="memdesc:a48ad91b538ba95b5d30899a010a93382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the first free block, or nullptr.  <a href="#a48ad91b538ba95b5d30899a010a93382">More...</a><br /></td></tr>
 <tr class="separator:a48ad91b538ba95b5d30899a010a93382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
-<tr class="memitem:ad7667db8bf3171d900237500cb0e1e67"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#ad7667db8bf3171d900237500cb0e1e67">name_</a></td></tr>
-<tr class="memdesc:ad7667db8bf3171d900237500cb0e1e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to name.  <a href="#ad7667db8bf3171d900237500cb0e1e67">More...</a><br /></td></tr>
-<tr class="separator:ad7667db8bf3171d900237500cb0e1e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6435f5bbc1c2793664672cbf420d70"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_named__object.html#a7c6435f5bbc1c2793664672cbf420d70">name_</a></td></tr>
+<tr class="memdesc:a7c6435f5bbc1c2793664672cbf420d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to name.  <a href="#a7c6435f5bbc1c2793664672cbf420d70">More...</a><br /></td></tr>
+<tr class="separator:a7c6435f5bbc1c2793664672cbf420d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Synchronised <b>memory pool</b>. </p>
-<p>Manage a pool of same size blocks. Fast and deterministic allocation and dealocation behaviour, suitable for use even in ISRs.</p>
-<dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Create the pool object.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1_memory__pool.html#adda40166e1164eef680e42d4847d3e9f">Memory_pool</a> mp { pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  <span class="keywordtype">void</span>* buf;</div><div class="line"></div><div class="line">  <span class="comment">// Get one block from pool.</span></div><div class="line">  buf = mp.alloc();</div><div class="line"></div><div class="line">  <span class="comment">// ... use the buffer</span></div><div class="line"></div><div class="line">  <span class="comment">// Free the buffer.</span></div><div class="line">  mp.free(buf);</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is no equivalent of calloc(); to initialise to zero a memory block, use: <div class="fragment"><div class="line">block = mp.alloc();</div><div class="line">memset (block, 0, mp.block_size ());</div></div><!-- fragment --></dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. Current functionality inspired by ARM CMSIS, with extensions. </dd></dl>
+<div class="textblock"><p>Synchronised <b>memory pool</b>, using the default RTOS allocator. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00146">146</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="adda40166e1164eef680e42d4847d3e9f"></a>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00171">171</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+</div><h2 class="groupheader">Types</h2>
+<a class="anchor" id="a3a937f2482663a451e356b6df0911dbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">os::rtos::Memory_pool::Allocator</a> =  <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt;<a class="el" href="namespaceos_1_1rtos_1_1stack.html#a80c8a3f47c5067f368bf730ac90d03a9">stack::allocation_element_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00175">175</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a22b3ac66e773d7fc49ec13ae23c46d58"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -254,7 +293,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
-          <td class="paramname"><em>block_size_bytes</em>&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -268,20 +313,64 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>Reference to allocator. Default a local temporary instance. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor shall initialise the memory pool object with the given number of blocks and default settings. The effect shall be equivalent to creating a memory pool object referring to the attributes in <code><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#ad4893ef077f7289499ed5957b938a7e6" title="Default memory pool initialiser. ">mempool::initializer</a></code>. Upon successful initialisation, the state of the memory pool shall become initialised, with all blocks available.</p>
-<p>Only the memory pool itself may be used for allocations. It is not allowed to make copies of condition variable objects.</p>
-<p>For default memory pool objects, the storage is dynamically allocated.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00206">206</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0e93a08a4b8914c08dec51d3d4bfd65f"></a>
+<a class="anchor" id="a593446379c94f1b4227ae01e8ea8e2d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">os::rtos::Memory_pool::Memory_pool </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a named memory pool with default settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>Reference to allocator. Default a local temporary instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acd8a0e822c77b721f6e348d664673a3f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -301,7 +390,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
-          <td class="paramname"><em>block_size_bytes</em>&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,44 +411,160 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Reference to attributes. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>Reference to allocator. Default a local temporary instance. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor shall initialise the memory pool object with attributes referenced by <em>attr</em>. If the attributes specified by <em>attr</em> are modified later, the memory pool attributes shall not be affected. Upon successful initialisation, the state of the memory pool variable shall become initialised.</p>
-<p>Only the memory pool itself may be used for allocations. It is not allowed to make copies of condition variable objects.</p>
-<p>In cases where default memory pool attributes are appropriate, the variable <code><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#ad4893ef077f7289499ed5957b938a7e6" title="Default memory pool initialiser. ">mempool::initializer</a></code> can be used to initialise condition variables. The effect shall be equivalent to creating a memory pool object with the simple constructor.</p>
-<p>If the attributes define a storage area, it is used, otherwise it is dynamically allocated.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00237">237</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a81f08979403e5ad8313b8e45cdfb6707"></a>
+<a class="anchor" id="a7ab5fa2f9ae2a000082bdcdf41f7a09a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">os::rtos::Memory_pool::~Memory_pool </td>
+          <td class="memname">os::rtos::Memory_pool::Memory_pool </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">Allocator</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a named memory pool with custom settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Reference to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>Reference to allocator. Default a local temporary instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae51e3ffd2989c91b252c1ff86ab81fbc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual os::rtos::Memory_pool::~Memory_pool </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Destroy the memory pool. </p>
-<p>This destructor shall destroy the memory pool object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
-<p>It shall be safe to destroy an initialised memory pool object upon which no threads are currently blocked. Attempting to destroy a memory pool object upon which other threads are currently blocked results in undefined behaviour.</p>
-<p>If the storage for the memory pool was dynamically allocated, it is deallocated.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00314">314</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9fbe7be5d58dc9e9fc6ffceb57ceea16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::rtos::Memory_pool::_construct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">mempool::Attributes</a> &amp;&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a>&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pool_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>pool_size_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal function used during memory pool construction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Reference to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_size_bytes</td><td>The size of an item, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_address</td><td>Pointer to queue storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pool_size_bytes</td><td>Size of queue storage. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a93f9534f4b7261f6092416502fd8e658"></a>
 <div class="memitem">
 <div class="memproto">
@@ -379,11 +590,9 @@ Protected Attributes</h2></td></tr>
 <p>Internal initialisation. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00330">330</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a2670b899849d7575924195c264568f81"></a>
+<a class="anchor" id="a601c942fe94616ca39e4670a5863a04c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -391,7 +600,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::Memory_pool::_try_first </td>
+          <td class="memname">void* os::rtos::Memory_pool::_try_first </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -409,16 +618,14 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to block or <code>nullptr</code> if no more blocks available. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00360">360</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a74c3f9e2c59cd7d8d109deaa708a4550"></a>
+<a class="anchor" id="a54604c7f2211440c58dcee53af5e5685"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::Memory_pool::alloc </td>
+          <td class="memname">void* os::rtos::Memory_pool::alloc </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -429,13 +636,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Allocate a memory block. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if interrupted.</dd></dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550" title="Allocate a memory block. ">Memory_pool::alloc()</a></code> function shall allocate a fixed size memory block from the memory pool.</p>
-<p>If the memory pool is empty, <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550" title="Allocate a memory block. ">alloc()</a></code> shall block until a block is freed or until <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550" title="Allocate a memory block. ">alloc()</a></code> is cancelled/interrupted. If more than one thread is waiting to allocate a block, when a block is freed and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to allocate the block. Otherwise, it is unspecified which waiting thread allocates the block.</p>
-<p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00393">393</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if interrupted. </dd></dl>
 
 </div>
 </div>
@@ -465,7 +666,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The block size, in bytes. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00444">444</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00907">907</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -495,7 +696,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The max number of blocks in the pool. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00438">438</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00901">901</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -525,7 +726,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of blocks used from the queue. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00450">450</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00913">913</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -561,7 +762,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00456">456</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00919">919</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -584,15 +785,10 @@ Protected Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The memory block was released. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The block does not belong to the memory pool.</td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The block does not belong to the memory pool. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Return a memory block previously allocated by <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550" title="Allocate a memory block. ">alloc()</a></code> back to the memory pool.</p>
-<p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00611">611</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +824,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00462">462</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00925">925</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -659,7 +855,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01045">1045</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01055">1055</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +891,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>Identical memory pools should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00432">432</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00895">895</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -722,7 +918,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00468">468</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00931">931</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -745,23 +941,19 @@ Protected Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The memory pool was reset. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Reset the memory pool to the initial state, with all blocks free.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00654">654</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa2a07be73677fd490a58b6ec9ed2c2cf"></a>
+<a class="anchor" id="a9d236739043b41ecaf8d563b205a29a5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::Memory_pool::timed_alloc </td>
+          <td class="memname">void* os::rtos::Memory_pool::timed_alloc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287">clock::duration_t</a>&#160;</td>
           <td class="paramname"><em>timeout</em></td><td>)</td>
@@ -777,26 +969,16 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if timeout.</dd></dl>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">Memory_pool::timed_alloc()</a></code> function shall allocate a fixed size memory block from the memory pool.</p>
-<p>If the memory pool is empty, <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">timed_alloc()</a></code> shall block until a block is freed or until <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">timed_alloc()</a></code> is cancelled/interrupted. If more than one thread is waiting to allocate a block, when a block is freed and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to allocate the block. Otherwise, it is unspecified which waiting thread allocates the block.</p>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">timed_alloc()</a></code> function shall allocate any of the available blocks, regardless of their age and the order they were freed. However, if no blocks are available, the wait for such a block shall be terminated when the specified timeout expires.</p>
-<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
-<p>Under no circumstance shall the operation fail with a timeout if a block can be allocated from the memory pool immediately. The validity of the timeout need not be checked if the block can be allocated immediately.</p>
-<p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
-<p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00525">525</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if timeout. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a109bae1e2cf390f7208c79a598808cb5"></a>
+<a class="anchor" id="a6d3a75bd9803f51b62fe37821d53b359"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::Memory_pool::try_alloc </td>
+          <td class="memname">void* os::rtos::Memory_pool::try_alloc </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -807,19 +989,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Allocate a memory block. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if no memory available.</dd></dl>
-<p>Try to allocate a fixed size memory block from the memory pool, if available, return it, otherwise return <code>nullptr</code>.</p>
-<p>The <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">Memory_pool::timed_alloc()</a></code> function shall try to allocate a fixed size memory block from the memory pool.</p>
-<p>If the memory pool is empty, <code><a class="el" href="classos_1_1rtos_1_1_memory__pool.html#aa2a07be73677fd490a58b6ec9ed2c2cf" title="Allocate a memory block with timeout. ">timed_alloc()</a></code> shall immediately return 'nullptr'.</p>
-<p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00472">472</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if no memory available. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae76a464bafdba7e65ed42d2f306e1c32"></a>
+<a class="anchor" id="ad0acbd86a7293b218c0ef2d894a48c41"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -827,7 +1002,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char* os::rtos::Memory_pool::allocated_pool_addr_</td>
+          <td class="memname">void* os::rtos::Memory_pool::allocated_pool_addr_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -837,11 +1012,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00365">365</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>The dynamic address if the pool was allocated (and must be deallocated) </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00455">455</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a54d48e4e81b01aa96f22f3bb2e16e28e"></a>
+<a class="anchor" id="a7eaf910392dab7430bcf229f469658ec"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -849,7 +1026,55 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::block_size_bytes_</td>
+          <td class="memname">std::size_t os::rtos::Memory_pool::allocated_pool_size_elements_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total size of the dynamically allocated pool storage. </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00475">475</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f6720ee9ae08cf680eee0f1ad6d4184"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void* os::rtos::Memory_pool::allocator_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to allocator. </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00460">460</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf666447ce3917d22abd200d06a143f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::block_size_bytes_ = 0</td>
         </tr>
       </table>
   </td>
@@ -861,11 +1086,11 @@ Protected Attributes</h2></td></tr>
 
 <p>The size of a block, in bytes. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00380">380</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00485">485</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af80711efed7c6c918b62e3ababf75937"></a>
+<a class="anchor" id="a2637130a2dcbab9486db995707cb3a04"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -873,7 +1098,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::blocks_</td>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::blocks_ = 0</td>
         </tr>
       </table>
   </td>
@@ -885,11 +1110,11 @@ Protected Attributes</h2></td></tr>
 
 <p>The number of blocks in the pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00375">375</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00480">480</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a29c6d9080d9335a3e731e3600d3c0629"></a>
+<a class="anchor" id="ab33bf6b11ddff767b669a0af119c3ff6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -897,7 +1122,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>&amp; os::rtos::Memory_pool::clock_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Memory_pool::clock_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -907,7 +1132,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00356">356</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Pointer to clock to be used for timeouts. </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00444">444</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -919,7 +1146,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::count_</td>
+          <td class="memname">volatile <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">mempool::size_t</a> os::rtos::Memory_pool::count_ = 0</td>
         </tr>
       </table>
   </td>
@@ -931,7 +1158,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The current number of blocks allocated from the pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00385">385</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00490">490</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +1170,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* volatile os::rtos::Memory_pool::first_</td>
+          <td class="memname">void* volatile os::rtos::Memory_pool::first_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -955,7 +1182,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to the first free block, or nullptr. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00393">393</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00498">498</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -977,11 +1204,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00355">355</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>List of threads waiting to alloc. </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00440">440</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad7667db8bf3171d900237500cb0e1e67"></a>
+<a class="anchor" id="a7c6435f5bbc1c2793664672cbf420d70"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -989,7 +1218,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char *const os::rtos::Named_object::name_</td>
+          <td class="memname">const char* const os::rtos::Named_object::name_</td>
         </tr>
       </table>
   </td>
@@ -1000,9 +1229,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to name. </p>
-<p>To save space, the null terminated string passed to the constructor is not copied locally. Instead, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00873">873</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00883">883</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1242,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* os::rtos::Memory_pool::pool_addr_</td>
+          <td class="memname">void* os::rtos::Memory_pool::pool_addr_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -1024,16 +1252,38 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Memory address where the pool is located. </p>
-<p>If the pool was dynamically allocated, the <code>flags_allocated</code> bit will be set in <code>flags_</code> and the destructor will deallocate.. </p>
+<p>The static address where the pool is stored (from <code>attr.mp_pool_address</code>). </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00364">364</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00450">450</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a class="anchor" id="ae910bd460e2ef9dcd186b25b79018bff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t os::rtos::Memory_pool::pool_size_bytes_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total size of the statically allocated pool storage (from <code>attr.mp_pool_size_bytes</code>). </p>
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00471">471</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mempool_8h_source.html">os-mempool.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

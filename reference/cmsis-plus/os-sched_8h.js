@@ -14,9 +14,9 @@ var os_sched_8h =
     [ "start", "os-sched_8h.html#a447a6a5aa512129d0ab5a28b0fce6890", null ],
     [ "started", "os-sched_8h.html#a6b69515f09f9b87c1488f1684aec5afa", null ],
     [ "unlock", "os-sched_8h.html#a02960f99e1e2aee1a748f46cab8545fd", null ],
-    [ "current_thread_", "os-sched_8h.html#a332daf20282a8d23006f8f9ecc548321", null ],
+    [ "current_thread_", "os-sched_8h.html#a3adae3b90b8b64301544b1df453e3688", null ],
     [ "is_locked_", "os-sched_8h.html#ae76578625b79775f6f678550810ae7c3", null ],
-    [ "is_started_", "os-sched_8h.html#a9f4008a90461affde61c0e4c26adf740", null ],
+    [ "is_started_", "os-sched_8h.html#a75e74889e5af33ebb83db536cc5999e4", null ],
     [ "ready_threads_list_", "os-sched_8h.html#ae60a2af0c20bd220bb79558130e6c637", null ],
     [ "terminated_threads_list_", "os-sched_8h.html#a8000855dc02692cc1c43e51e5417d442", null ],
     [ "top_threads_list_", "os-sched_8h.html#aa248a5dd6abb9c6df03c816c90a00a96", null ]

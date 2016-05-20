@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -136,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1thread_1_1_attribut
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1_named__attributes.html">os::rtos::Named_attributes</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1_clocked__attributes.html">os::rtos::Clocked_attributes</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -155,15 +154,19 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
-<tr class="memitem:ab15f221ba36de3f123324af02511e2a4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#ab15f221ba36de3f123324af02511e2a4">th_stack_address</a></td></tr>
-<tr class="memdesc:ab15f221ba36de3f123324af02511e2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> user stack address attribute.  <a href="#ab15f221ba36de3f123324af02511e2a4">More...</a><br /></td></tr>
+<tr class="memitem:ab15f221ba36de3f123324af02511e2a4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#ab15f221ba36de3f123324af02511e2a4">th_stack_address</a> = 0</td></tr>
+<tr class="memdesc:ab15f221ba36de3f123324af02511e2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> user stack address attribute.  <a href="#ab15f221ba36de3f123324af02511e2a4">More...</a><br /></td></tr>
 <tr class="separator:ab15f221ba36de3f123324af02511e2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fcfa9f8948d184128c51630bd006c39"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#a4fcfa9f8948d184128c51630bd006c39">th_stack_size_bytes</a></td></tr>
-<tr class="memdesc:a4fcfa9f8948d184128c51630bd006c39"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> user stack size attribute.  <a href="#a4fcfa9f8948d184128c51630bd006c39">More...</a><br /></td></tr>
+<tr class="memitem:a4fcfa9f8948d184128c51630bd006c39"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#a4fcfa9f8948d184128c51630bd006c39">th_stack_size_bytes</a> = 0</td></tr>
+<tr class="memdesc:a4fcfa9f8948d184128c51630bd006c39"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> user stack size attribute.  <a href="#a4fcfa9f8948d184128c51630bd006c39">More...</a><br /></td></tr>
 <tr class="separator:a4fcfa9f8948d184128c51630bd006c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69fd2a7f58d6edaf33d67ee251af42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#ad69fd2a7f58d6edaf33d67ee251af42e">th_priority</a></td></tr>
-<tr class="memdesc:ad69fd2a7f58d6edaf33d67ee251af42e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> priority attribute.  <a href="#ad69fd2a7f58d6edaf33d67ee251af42e">More...</a><br /></td></tr>
+<tr class="memitem:ad69fd2a7f58d6edaf33d67ee251af42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#ad69fd2a7f58d6edaf33d67ee251af42e">th_priority</a> = <a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ad92eafd06437bfec575bb7c47244e93c">thread::priority::normal</a></td></tr>
+<tr class="memdesc:ad69fd2a7f58d6edaf33d67ee251af42e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> priority attribute.  <a href="#ad69fd2a7f58d6edaf33d67ee251af42e">More...</a><br /></td></tr>
 <tr class="separator:ad69fd2a7f58d6edaf33d67ee251af42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
+<tr class="memitem:aeb8afa1677ff35e90bd3d03f3e2dabdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clocked__attributes.html#aeb8afa1677ff35e90bd3d03f3e2dabdd">clock</a></td></tr>
+<tr class="memdesc:aeb8afa1677ff35e90bd3d03f3e2dabdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#aeb8afa1677ff35e90bd3d03f3e2dabdd">More...</a><br /></td></tr>
+<tr class="separator:aeb8afa1677ff35e90bd3d03f3e2dabdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -174,11 +177,8 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread attributes. </p>
-<p>Allow to assign a name and custom attributes (like stack address, stack size, priority) to the thread.</p>
-<p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_attr_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (IEEE Std 1003.1, 2013 Edition). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00178">178</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00181">181</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6f6437e586b9c1bbc985077b95d9c8d0"></a>
 <div class="memitem">
@@ -202,7 +202,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01166">1166</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01418">1418</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -259,11 +259,35 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01073">1073</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01083">1083</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aeb8afa1677ff35e90bd3d03f3e2dabdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a>* os::rtos::Clocked_attributes::clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to clock. </p>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01019">1019</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adb181340695de97564e5e7a6a67568c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +308,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to name. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00954">954</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00964">964</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -293,14 +317,14 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">priority_t</a> os::rtos::thread::Attributes::th_priority</td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos.html#ga1257cd2ea834219f38831bcf66485103">priority_t</a> os::rtos::thread::Attributes::th_priority = <a class="el" href="group__cmsis-plus-rtos.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154ad92eafd06437bfec575bb7c47244e93c">thread::priority::normal</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> priority attribute. </p>
+<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> priority attribute. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00238">238</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00241">241</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -309,14 +333,14 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* os::rtos::thread::Attributes::th_stack_address</td>
+          <td class="memname">void* os::rtos::thread::Attributes::th_stack_address = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> user stack address attribute. </p>
+<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> user stack address attribute. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00228">228</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00231">231</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -325,14 +349,14 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t os::rtos::thread::Attributes::th_stack_size_bytes</td>
+          <td class="memname">std::size_t os::rtos::thread::Attributes::th_stack_size_bytes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread. ">Thread</a> user stack size attribute. </p>
+<p><a class="el" href="classos_1_1rtos_1_1_thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">Thread</a> user stack size attribute. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00233">233</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00236">236</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>

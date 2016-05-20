@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -164,8 +163,6 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Statically allocated core of a double linked list, pointers to next, previous. </p>
-<p>This is the simplest list node, used as base class for other list nodes and as storage for <a class="el" href="classos_1_1rtos_1_1_static__double__list.html" title="Statically allocated circular double linked list of nodes. ">Static_double_list</a>, that must be available for any statically constructed objects while still avoiding the 'static initialisation order fiasco'.</p>
-<p>The idea is to design the object in such a way as to benefit from the standard BSS initialisation, in other words take <code>nullptr</code> as starting values. </p>
 
 <p>Definition at line <a class="el" href="os-lists_8h_source.html#l00059">59</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -239,11 +236,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove the node from the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Update the neighbours to point to each other, skipping the node.</p>
-<p>For more robustness, to prevent unexpected accesses, the links in the removed node are nullified. </p>
-
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00063">63</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 </div>
 </div>
@@ -280,9 +273,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-lists_8h_source.html">os-lists.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

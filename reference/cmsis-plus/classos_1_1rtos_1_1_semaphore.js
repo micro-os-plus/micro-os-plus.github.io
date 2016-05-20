@@ -1,7 +1,9 @@
 var classos_1_1rtos_1_1_semaphore =
 [
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#ad8b005eb3618fb0c9b5fa7eeda019a0d", null ],
+    [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#a6e1368fe778c1c710ee9923174e9e2d7", null ],
     [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#a016fd0cc042a53b898ba8c18a250fcbc", null ],
+    [ "Semaphore", "classos_1_1rtos_1_1_semaphore.html#a26bd0d260a59b5e99c6ef8210e356dc7", null ],
     [ "~Semaphore", "classos_1_1rtos_1_1_semaphore.html#a4c4f278ca1cfb213b416f31720a30f04", null ],
     [ "_init", "classos_1_1rtos_1_1_semaphore.html#a1024f0a56bf28b5deabd24daad17fa74", null ],
     [ "_try_wait", "classos_1_1rtos_1_1_semaphore.html#aedb63fab0c75a46efa3c9bc538b7a276", null ],
@@ -15,10 +17,10 @@ var classos_1_1rtos_1_1_semaphore =
     [ "try_wait", "classos_1_1rtos_1_1_semaphore.html#ace789052a8b3f0b1bfdf3bf81a83ae04", null ],
     [ "value", "classos_1_1rtos_1_1_semaphore.html#afaad1f1047d7d46f5baf5329d35ca78d", null ],
     [ "wait", "classos_1_1rtos_1_1_semaphore.html#ae8dc97a2f1b41efda85dd6b9631a36b0", null ],
-    [ "clock_", "classos_1_1rtos_1_1_semaphore.html#a938db2aa3cff0926c0b45726289b0db4", null ],
+    [ "clock_", "classos_1_1rtos_1_1_semaphore.html#a2c3df3c6df877836bba9e16d21ac269d", null ],
     [ "count_", "classos_1_1rtos_1_1_semaphore.html#ad7a6486c35b35956d9a0fb729719121a", null ],
     [ "initial_count_", "classos_1_1rtos_1_1_semaphore.html#a1038bfe269c0f83b11b9c8c359c24640", null ],
     [ "list_", "classos_1_1rtos_1_1_semaphore.html#aa1a5065f48f4298d10fb124d61e53d4b", null ],
     [ "max_count_", "classos_1_1rtos_1_1_semaphore.html#a189e07ad643c937c8f705bce4c48bac1", null ],
-    [ "name_", "classos_1_1rtos_1_1_semaphore.html#ad7667db8bf3171d900237500cb0e1e67", null ]
+    [ "name_", "classos_1_1rtos_1_1_semaphore.html#a7c6435f5bbc1c2793664672cbf420d70", null ]
 ];

@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -187,14 +186,6 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Priority ordered list of threads. </p>
-<p>There are at least two strategies:</p><ul>
-<li>keep the list ordered by priorities and have the top node easily accessible the head</li>
-<li>preserve the insertion order and perform a full list traversal to determine the top node.</li>
-</ul>
-<p>The first strategy requires a partial list traverse with each insert, to find the place to insert the node, but makes retrieving the top priority node trivial, by a single access to the list head.</p>
-<p>The second strategy might minimise the overall processing time, but always requires a full list traversal to determine the top priority node.</p>
-<p>On the other hand, typical waiting lists contain only one element, and in this case there is no distinction. <a class="el" href="classos_1_1rtos_1_1_mutex.html" title="POSIX compliant mutex. ">Mutex</a> objects occasionally might have two entries (and rarely more). Condition variables might also have several waiting threads, the number is usually small. In these cases, the distinction between the two strategies is also minimal.</p>
-<p>In the rare cases when the waiting list is large, the first strategy favours top node retrieval, possibly improving the response time, and is thus preferred. </p>
 
 <p>Definition at line <a class="el" href="os-lists_8h_source.html#l00886">886</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -278,10 +269,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Clear the list. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Initialise the mandatory node with links to itself. </p>
-
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00111">111</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 </div>
 </div>
@@ -393,8 +381,6 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00118">118</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="af70196e156ade1bfd54c3a2a6f5a6419"></a>
@@ -418,15 +404,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Based on priority, the node is inserted</p><ul>
-<li>at the end of the list,</li>
-<li>at the beginning of the list,</li>
-<li>in the middle of the list, which requires a partial list traversal (done from the end).</li>
-</ul>
-<p>To satisfy the circular double linked list requirements, an empty list still contains the head node with references to itself. </p>
-
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00310">310</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 </div>
 </div>
@@ -448,8 +426,6 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00389">389</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a048e2b59a598e30cd961f3abd39fa272"></a>
@@ -468,10 +444,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Wake-up one thread (the oldest with the highest priority) </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Atomically get the top thread from the list, remove the node and wake-up the thread. </p>
-
-<p>Definition at line <a class="el" href="os-lists_8cpp_source.html#l00356">356</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
 </div>
 </div>
@@ -531,9 +504,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-lists_8h_source.html">os-lists.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

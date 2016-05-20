@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['main_2emarkdown',['main.markdown',['../main_8markdown.html',1,'']]],
-  ['malloc_2ecpp',['malloc.cpp',['../malloc_8cpp.html',1,'']]],
-  ['malloc_2eh',['malloc.h',['../malloc_8h.html',1,'']]],
-  ['memory_2dresource_2ecpp',['memory-resource.cpp',['../memory-resource_8cpp.html',1,'']]],
-  ['modules_2edoxygen',['modules.doxygen',['../modules_8doxygen.html',1,'']]],
-  ['mutex',['mutex',['../mutex.html',1,'']]]
+  ['select_2eh',['select.h',['../select_8h.html',1,'']]],
+  ['semihosting_2eh',['semihosting.h',['../semihosting_8h.html',1,'']]],
+  ['serial_2eh',['serial.h',['../serial_8h.html',1,'']]],
+  ['socket_2eh',['socket.h',['../socket_8h.html',1,'']]],
+  ['stropts_2eh',['stropts.h',['../stropts_8h.html',1,'']]],
+  ['system_5ferror',['system_error',['../system__error.html',1,'']]]
 ];

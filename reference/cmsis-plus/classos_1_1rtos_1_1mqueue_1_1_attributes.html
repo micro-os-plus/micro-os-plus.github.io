@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -155,9 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
-<tr class="memitem:afa58365e8358c222c8288b386373ff51"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#afa58365e8358c222c8288b386373ff51">mq_queue_address</a> = nullptr</td></tr>
-<tr class="memdesc:afa58365e8358c222c8288b386373ff51"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined message queue address.  <a href="#afa58365e8358c222c8288b386373ff51">More...</a><br /></td></tr>
-<tr class="separator:afa58365e8358c222c8288b386373ff51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927f566eb7ac8853335cc1eaf2edea51"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#a927f566eb7ac8853335cc1eaf2edea51">mq_queue_address</a> = nullptr</td></tr>
+<tr class="memdesc:a927f566eb7ac8853335cc1eaf2edea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined message queue address.  <a href="#a927f566eb7ac8853335cc1eaf2edea51">More...</a><br /></td></tr>
+<tr class="separator:a927f566eb7ac8853335cc1eaf2edea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b5a1c45bfae21989506bd94043d28b"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#a56b5a1c45bfae21989506bd94043d28b">mq_queue_size_bytes</a> = 0</td></tr>
 <tr class="memdesc:a56b5a1c45bfae21989506bd94043d28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined message queue size.  <a href="#a56b5a1c45bfae21989506bd94043d28b">More...</a><br /></td></tr>
 <tr class="separator:a56b5a1c45bfae21989506bd94043d28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,9 +174,6 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Message queue attributes. </p>
-<p>Allow to assign a name and custom attributes (like a static address) to the message queue.</p>
-<p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mq_attr</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
 <p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00061">61</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -203,7 +199,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01123">1123</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01177">1177</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +256,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01073">1073</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01083">1083</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -285,23 +281,21 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to clock. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01009">1009</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01019">1019</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afa58365e8358c222c8288b386373ff51"></a>
+<a class="anchor" id="a927f566eb7ac8853335cc1eaf2edea51"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::mqueue::Attributes::mq_queue_address = nullptr</td>
+          <td class="memname">void* os::rtos::mqueue::Attributes::mq_queue_address = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>User defined message queue address. </p>
-<p>Set this variable to a user defined memory area large enough to store the message queue. Usually this is a statically allocated array of structures.</p>
-<p>The default value is <code>nullptr</code>, which means there is no user defined message queue. </p>
 
 <p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00111">111</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
@@ -318,8 +312,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>User defined message queue size. </p>
-<p>The message queue size must match exactly the allocated size. It is used for validation; when the message queue is initialised, this size must be large enough to accommodate the desired message queue.</p>
-<p>If the <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#afa58365e8358c222c8288b386373ff51">mq_queue_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
 <p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00116">116</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
@@ -345,13 +337,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to name. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00954">954</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00964">964</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

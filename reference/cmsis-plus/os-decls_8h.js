@@ -66,7 +66,7 @@ var os_decls_8h =
     [ "error", "os-decls_8h.html#ggae5d3cbe95bd71d0a7fd8e77bfa710154a3f38937bb7063900c3328df07da44c0c", null ],
     [ "any", "os-decls_8h.html#a401cf4d8bc6b555ae0c5cd1dde760241a7a8cd63401f99b9a2052981acc955ab4", null ],
     [ "all", "os-decls_8h.html#a401cf4d8bc6b555ae0c5cd1dde760241aa834b8f5bbec9b190e63a75f1bae3502", null ],
-    [ "_idle_func", "os-decls_8h.html#a4052b2da27424a43ae650386f0af6363", null ],
+    [ "_idle_func", "os-decls_8h.html#a71f413bf28a75a7d5ff8fad8adc95f57", null ],
     [ "_wait_for_interrupt", "os-decls_8h.html#abe7a9f008a89b5b8c49c8dc70df4bff0", null ],
     [ "greeting", "os-decls_8h.html#a4e71e8d21383d22f271e442f3e83da3e", null ],
     [ "in_handler_mode", "os-decls_8h.html#a5b5495ad336fa2c7c186508901d5f503", null ],

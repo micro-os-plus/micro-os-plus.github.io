@@ -1,6 +1,6 @@
 var classos_1_1rtos_1_1mqueue_1_1_arena =
 [
-    [ "links", "classos_1_1rtos_1_1mqueue_1_1_arena.html#a3833b2bed506befe82135ebea174fbe2", null ],
-    [ "prios", "classos_1_1rtos_1_1mqueue_1_1_arena.html#ab31950cadd4356a927a0b56b75047940", null ],
-    [ "queue", "classos_1_1rtos_1_1mqueue_1_1_arena.html#a54c36ed343f3805522014fa8376dd0b6", null ]
+    [ "links", "classos_1_1rtos_1_1mqueue_1_1_arena.html#acbae69f4acf8137a36c2d274a72ce08a", null ],
+    [ "prios", "classos_1_1rtos_1_1mqueue_1_1_arena.html#a2fcf6e7bfceb3a01b6cdf2478feb9091", null ],
+    [ "queue", "classos_1_1rtos_1_1mqueue_1_1_arena.html#a10e53e8aedc322cdad2783bd34bda562", null ]
 ];

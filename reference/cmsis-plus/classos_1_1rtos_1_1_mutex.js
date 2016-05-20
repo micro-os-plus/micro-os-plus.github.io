@@ -1,7 +1,9 @@
 var classos_1_1rtos_1_1_mutex =
 [
     [ "Mutex", "classos_1_1rtos_1_1_mutex.html#ad8dd37e9132a372809f3548868645e41", null ],
+    [ "Mutex", "classos_1_1rtos_1_1_mutex.html#aef6438f1ea99fb01f259dbd6b9cf3dfb", null ],
     [ "Mutex", "classos_1_1rtos_1_1_mutex.html#a2c0fd06460ecc869e747936b347a6d62", null ],
+    [ "Mutex", "classos_1_1rtos_1_1_mutex.html#acbcd88cf6909387db70d7e0197e1eab1", null ],
     [ "~Mutex", "classos_1_1rtos_1_1_mutex.html#a9a18d00cf61df606519eefb88fd34290", null ],
     [ "_init", "classos_1_1rtos_1_1_mutex.html#a2ea700789c27d2263933e41512172047", null ],
     [ "_try_lock", "classos_1_1rtos_1_1_mutex.html#a0dc1b2d6b18f353d1738ec3e0d66ed5b", null ],
@@ -16,11 +18,11 @@ var classos_1_1rtos_1_1_mutex =
     [ "timed_lock", "classos_1_1rtos_1_1_mutex.html#a7b1d10a9a21aac45d959afe028a439ea", null ],
     [ "try_lock", "classos_1_1rtos_1_1_mutex.html#ac2ca0fafa0ca551bdabe8ca91132df77", null ],
     [ "unlock", "classos_1_1rtos_1_1_mutex.html#a746365b2ec3520b0795fce1d40937d29", null ],
-    [ "clock_", "classos_1_1rtos_1_1_mutex.html#a93af70475313c039bec0e685ab9987f3", null ],
+    [ "clock_", "classos_1_1rtos_1_1_mutex.html#a9bb6b28ffa94b19da529975166775003", null ],
     [ "count_", "classos_1_1rtos_1_1_mutex.html#a76cd88a36e581a1f273affcae7ab4b40", null ],
     [ "list_", "classos_1_1rtos_1_1_mutex.html#ab94d1648f802e491e9c01fa4e08e5691", null ],
     [ "max_count_", "classos_1_1rtos_1_1_mutex.html#aba293f0645e775f3750ab7116f17b163", null ],
-    [ "name_", "classos_1_1rtos_1_1_mutex.html#ad7667db8bf3171d900237500cb0e1e67", null ],
+    [ "name_", "classos_1_1rtos_1_1_mutex.html#a7c6435f5bbc1c2793664672cbf420d70", null ],
     [ "owner_", "classos_1_1rtos_1_1_mutex.html#a974b7004fe2325cb1560fb7a3301ae5c", null ],
     [ "owner_prio_", "classos_1_1rtos_1_1_mutex.html#a45a04175eec6fe100b4255355490dfc3", null ],
     [ "prio_ceiling_", "classos_1_1rtos_1_1_mutex.html#aa3887353afd8a7cfa4190996b49ad3a6", null ],

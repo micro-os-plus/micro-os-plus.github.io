@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -125,6 +124,7 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1mempool.html','
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Types</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">os::rtos::mempool Namespace Reference</div>  </div>
@@ -136,6 +136,8 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1mempool.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_arena.html">Arena</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">Attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory pool attributes.  <a href="classos_1_1rtos_1_1mempool_1_1_attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,9 +148,15 @@ Types</h2></td></tr>
 <tr class="memdesc:a1638d8f5599ef06c8626ac9b8bd819ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of memory pool size.  <a href="#a1638d8f5599ef06c8626ac9b8bd819ce">More...</a><br /></td></tr>
 <tr class="separator:a1638d8f5599ef06c8626ac9b8bd819ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5c1467fdee2eddeaa91cc5c9f9c2f613"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5c1467fdee2eddeaa91cc5c9f9c2f613"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a5c1467fdee2eddeaa91cc5c9f9c2f613">compute_allocated_size_bytes</a> (std::size_t blocks, std::size_t block_size_bytes)</td></tr>
+<tr class="separator:a5c1467fdee2eddeaa91cc5c9f9c2f613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad4893ef077f7289499ed5957b938a7e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">Attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#ad4893ef077f7289499ed5957b938a7e6">initializer</a> { nullptr }</td></tr>
+<tr class="memitem:ad4893ef077f7289499ed5957b938a7e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">Attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#ad4893ef077f7289499ed5957b938a7e6">initializer</a></td></tr>
 <tr class="memdesc:ad4893ef077f7289499ed5957b938a7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default memory pool initialiser.  <a href="#ad4893ef077f7289499ed5957b938a7e6">More...</a><br /></td></tr>
 <tr class="separator:ad4893ef077f7289499ed5957b938a7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ab2f5a0f17e344ea49cacb2d411205"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a50ab2f5a0f17e344ea49cacb2d411205">max_size</a> = static_cast&lt;<a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">size_t</a>&gt; (0 - 1)</td></tr>
@@ -157,7 +165,6 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory pool namespace. </p>
-<p>The <a class="el" href="namespaceos_1_1rtos_1_1mempool.html" title="Memory pool namespace. ">os::rtos::mempool</a> namespace groups memory pool attributes and initialisers. </p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a1638d8f5599ef06c8626ac9b8bd819ce"></a>
 <div class="memitem">
@@ -176,20 +183,49 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5c1467fdee2eddeaa91cc5c9f9c2f613"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t os::rtos::mempool::compute_allocated_size_bytes </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>block_size_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00148">148</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="ad4893ef077f7289499ed5957b938a7e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">Attributes</a> os::rtos::mempool::initializer { nullptr }</td>
+          <td class="memname">const <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html">Attributes</a> os::rtos::mempool::initializer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Default memory pool initialiser. </p>
-
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00130">130</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>

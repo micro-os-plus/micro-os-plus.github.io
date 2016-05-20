@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -1085,7 +1084,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__mutex__s.html">osMutex</a> os_mutex_data_##name; \</div><div class="line">const <a class="code" href="structos__mutex__def.html">osMutexDef_t</a> os_mutex_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_mutex_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__mutex__def_html"><div class="ttname"><a href="structos__mutex__def.html">os_mutex_def</a></div><div class="ttdoc">Mutex definition structure contains setup information for a mutex. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00302">cmsis_os.h:302</a></div></div>
-<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00314">os-c-decls.h:314</a></div></div>
+<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00316">os-c-decls.h:316</a></div></div>
 </div><!-- fragment -->
 <p>Define a Mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1283,7 +1282,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00368">os-c-decls.h:368</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00370">os-c-decls.h:370</a></div></div>
 <div class="ttc" id="structos__semaphore__def_html"><div class="ttname"><a href="structos__semaphore__def.html">os_semaphore_def</a></div><div class="ttdoc">Semaphore definition structure contains setup information for a semaphore. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00312">cmsis_os.h:312</a></div></div>
 </div><!-- fragment -->
 <p>Define a Semaphore object. </p>
@@ -2144,16 +2143,10 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">osEventTimeout</td><td>The time delay is executed. </td></tr>
-    <tr><td class="paramname">osErrorISR</td><td><a class="el" href="os-c-wrapper_8cpp.html#a02e19d5e723bfb06ba9324d625162255" title="Time Delay. ">osDelay()</a> cannot be called from interrupt service routines.</td></tr>
+    <tr><td class="paramname">osErrorISR</td><td><a class="el" href="cmsis__os_8h.html#a02e19d5e723bfb06ba9324d625162255" title="Time Delay. ">osDelay()</a> cannot be called from interrupt service routines. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Wait for a specified time period in <em>millisec</em>.</p>
-<p>The millisec value specifies the number of timer ticks and is therefore an upper bound. The exact time delay depends on the actual time elapsed since the last timer tick.</p>
-<p>For a value of 1, the system waits until the next timer tick occurs. That means that the actual time delay may be up to one timer tick less.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01156">1156</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2179,21 +2172,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osKernelInitialize</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Initialise of the RTOS Kernel to allow peripheral setup and creation of other RTOS objects with the functions:</p><ul>
-<li>osThreadCreate : Create a thread function.</li>
-<li>osTimerCreate : Define attributes of the timer callback function.</li>
-<li>osMutexCreate : Define and initialise a mutex.</li>
-<li>osSemaphoreCreate : Define and initialise a semaphore.</li>
-<li>osPoolCreate : Define and initialise a fix-size memory pool.</li>
-<li>osMessageCreate : Define and initialise a message queue.</li>
-<li>osMailCreate : Define and initialise a mail queue with fix-size memory blocks.</li>
-</ul>
-<p>The RTOS scheduler does not start thread switching until the function osKernelStart is called.</p>
-<dl class="section note"><dt>Note</dt><dd>In case that the RTOS Kernel starts thread execution with the function main the function osKernelInitialize stops thread switching. This allows you to setup the system to a defined state before thread switching is resumed with osKernelStart.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00842">842</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osKernelInitialize</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -2215,14 +2194,10 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>The RTOS is not started. </td></tr>
-    <tr><td class="paramname">1</td><td>The RTOS is started.</td></tr>
+    <tr><td class="paramname">1</td><td>The RTOS is started. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Identifies if the RTOS scheduler is started. For systems with the option to start the main function as a thread this allows you to identify that the RTOS scheduler is already running.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00879">879</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2246,12 +2221,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osKernelStart</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Start the RTOS Kernel and begin thread switching.</p>
-<dl class="section note"><dt>Note</dt><dd>When the CMSIS-RTOS starts thread execution with the function main this function resumes thread switching. The main thread will continue executing after osKernelStart.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00864">864</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osKernelStart</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -2377,7 +2347,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">queue_def</td><td>reference to the mail queue definition obtain with <a class="el" href="cmsis__os_8h.html#a874689464239e386a1f4d74bffc3ef40">osMailQ</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>) or NULL. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>) or NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2547,7 +2517,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">queue_def</td><td>queue definition referenced with <a class="el" href="cmsis__os_8h.html#a3738f34ef383deaa8e52e4ae6d3e873a">osMessageQ</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>) or NULL. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID (obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>) or NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2675,11 +2645,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mutex ID for reference by other functions or NULL in case of error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexCreate</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Create and initialize a mutex object.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01503">1503</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -2700,7 +2666,7 @@ Functions</h2></td></tr>
 <p>Delete the mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="cmsis__os_8h.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2713,11 +2679,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexDelete</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Delete a mutex object. The function releases internal memory obtained for mutex handling. After this call the mutex_id is no longer valid and cannot be used. The mutex may be created again using the function osMutexCreate.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01650">1650</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexDelete</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -2738,7 +2700,7 @@ Functions</h2></td></tr>
 <p>Release the mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="cmsis__os_8h.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2751,11 +2713,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexRelease</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Release a Mutex that was obtained with osMutexWait. Other threads that currently wait for the same mutex will be now put into the state READY.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01611">1611</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexRelease</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -2786,7 +2744,7 @@ Functions</h2></td></tr>
 <p>Wait for mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex_id</td><td>mutex ID obtained by <a class="el" href="cmsis__os_8h.html#a5c9de56e717016e39e788064e9a291cc">osMutexCreate</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>Timeout value or 0 in case of no time-out. </td></tr>
   </table>
   </dd>
@@ -2801,17 +2759,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexWait</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Wait until a Mutex becomes available. If no other thread has obtained the Mutex, the function instantly returns and blocks the mutex object.</p>
-<p>The argument millisec specifies how long the system waits for a mutex. While the system waits the thread that is calling this function is put into the state WAITING. The millisec timeout can have the following values:</p>
-<ul>
-<li>when millisec is 0, the function returns instantly.</li>
-<li>when millisec is set to osWaitForever the function will wait for an infinite time until the mutex becomes available.</li>
-<li>all other values specify a time in millisecond for a timeout.</li>
-</ul>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01542">1542</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osMutexWait</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3105,17 +3053,13 @@ Functions</h2></td></tr>
 <p>Clear the specified Signal Flags of an active thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">signals</td><td>specifies the signal flags of the thread that shall be cleared. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>previous signal flags of the specified thread or 0x80000000 in case of incorrect parameters or call from ISR.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalClear</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Clear the signal flags of an active thread.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01383">1383</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalClear</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3146,17 +3090,13 @@ Functions</h2></td></tr>
 <p>Set signal flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">signals</td><td>specifies the signal flags of the thread that should be set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>previous signal flags of the specified thread or 0x80000000 in case of incorrect parameters.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalSet</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Set the signal flags of an active thread.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01359">1359</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalSet</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3202,17 +3142,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalWait</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Suspend the execution of the current RUNNING thread until all specified signal flags with the parameter signals are set. When the parameter signals is 0 the current RUNNING thread is suspended until any signal is set. When these signal flags are already set, the function returns instantly. Otherwise the thread is put into the state WAITING. Signal flags that are reported as event are automatically cleared.</p>
-<p>The argument millisec specifies how long the system waits for the specified signal flags. While the system waits the tread calling this function is put into the state WAITING. The timeout value can have the following values:</p>
-<ul>
-<li>when millisec is 0, the function returns instantly.</li>
-<li>when millisec is set to osWaitForever the function will wait an infinite time until a specified signal is set.</li>
-<li>all other values specify a time in millisecond for a timeout.</li>
-</ul>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01427">1427</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osSignalWait</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3249,12 +3179,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>thread ID for reference by other functions or NULL in case of error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadCreate</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Find a free slot in the array of thread definitions and initialise the thread.</p>
-<p>Start the thread function by adding it to the Active Threads list and set it to state READY. The thread function receives the argument pointer as function argument when the function is started. When the priority of the created thread function is higher than the current RUNNING thread, the created thread function starts instantly and becomes the new RUNNING thread.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00932">932</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3274,11 +3199,7 @@ Functions</h2></td></tr>
 
 <p>Get the current thread. </p>
 <dl class="section return"><dt>Returns</dt><dd>thread ID for reference by other functions or NULL in case of error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadGetId</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Get the thread ID of the current running thread.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00984">984</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadGetId</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3299,16 +3220,12 @@ Functions</h2></td></tr>
 <p>Get thread priority. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The current priority value of the thread, or osPriorityError if error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadGetPriority</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Get the priority of an active thread. In case of a failure the value osPriorityError is returned.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01121">1121</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadGetPriority</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3339,7 +3256,7 @@ Functions</h2></td></tr>
 <p>Change thread priority. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>new priority value for the thread function. </td></tr>
   </table>
   </dd>
@@ -3354,11 +3271,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadSetPriority</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Change the priority of a running thread. There is no need for an extra yield after it, if the priorities require, there is an implicit reschedule.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01068">1068</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadSetPriority</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3379,7 +3292,7 @@ Functions</h2></td></tr>
 <p>Terminate a thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="os-c-wrapper_8cpp.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>thread ID obtained by <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">osThreadCreate</a> or <a class="el" href="cmsis__os_8h.html#ab1df2a28925862ef8f9cf4e1c995c5a7">osThreadGetId</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3392,12 +3305,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadTerminate</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Remove the thread function from the active thread list. If the thread is currently RUNNING the execution will stop.</p>
-<dl class="section note"><dt>Note</dt><dd>In case that osThreadTerminate terminates the currently running task, the function never returns and other threads that are in the READY state are started.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01006">1006</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadTerminate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3423,11 +3331,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadYield</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Pass control to the next thread that is in state READY. If there is no other thread in the state READY, the current thread continues execution and no thread switching occurs.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01047">1047</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osThreadYield</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3471,11 +3375,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>timer ID for reference by other functions or NULL in case of error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerCreate</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Create a one-shot or periodic timer and associate it with a callback function argument. The timer is initially stopped and must be started with <code><a class="el" href="os-c-wrapper_8cpp.html#a27a797a401b068e2644d1125f22a07ca" title="Start the timer. ">osTimerStart()</a></code>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01241">1241</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerCreate</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3496,7 +3396,7 @@ Functions</h2></td></tr>
 <p>Delete the timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="cmsis__os_8h.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3508,11 +3408,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerDelete</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Delete the timer object that was created by <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01333">1333</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerDelete</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3543,7 +3439,7 @@ Functions</h2></td></tr>
 <p>Start the timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="cmsis__os_8h.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">millisec</td><td>Timeout value "time delay" value of the timer. </td></tr>
   </table>
   </dd>
@@ -3556,11 +3452,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerStart</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<p>Start or restart the timer.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01268">1268</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerStart</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>
@@ -3581,7 +3473,7 @@ Functions</h2></td></tr>
 <p>Stop the timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer_id</td><td>timer ID obtained by <a class="el" href="cmsis__os_8h.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3594,10 +3486,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerStop</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01299">1299</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerStop</b> shall be consistent in every CMSIS-RTOS. </dd></dl>
 
 </div>
 </div>

@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -176,8 +175,8 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="classos_1_1rtos_1_1_thread.html#aa9045f223f8cf59c36a2f7ef8c07b1fd">os::rtos::Thread</a>
 </li>
 <li>action()
-: <a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html#acc32f1738669c10a2ef3ead733cee073">os::rtos::Timeout_thread_node</a>
-, <a class="el" href="classos_1_1rtos_1_1_timer__node.html#ad9b8202b1bbc351f4922a666d5796118">os::rtos::Timer_node</a>
+: <a class="el" href="classos_1_1rtos_1_1_timeout__thread__node.html#acd1ecaf4fdfba9069689f69d1373721e">os::rtos::Timeout_thread_node</a>
+, <a class="el" href="classos_1_1rtos_1_1_timer__node.html#ab5bcffc9fbbb820db9bd972ff692fae1">os::rtos::Timer_node</a>
 , <a class="el" href="classos_1_1rtos_1_1_timestamp__node.html#a89677fd20e48d8553eb958df95cd4076">os::rtos::Timestamp_node</a>
 </li>
 <li>active
@@ -187,10 +186,12 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="classos_1_1rtos_1_1_clock.html#add0977fd6b4cb34478e395f81cfcdf48">os::rtos::Clock</a>
 </li>
 <li>alloc()
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a74c3f9e2c59cd7d8d109deaa708a4550">os::rtos::Memory_pool</a>
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a54604c7f2211440c58dcee53af5e5685">os::rtos::Memory_pool</a>
+, <a class="el" href="classos_1_1rtos_1_1_memory__pool__static.html#af25926fc3d7d78ede344bcec6fc705fe">os::rtos::Memory_pool_static&lt; T, N &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1_memory__pool__typed.html#a9d3005ec0915f2f0b5243d35bc8c2f72">os::rtos::Memory_pool_typed&lt; T, Allocator &gt;</a>
 </li>
 <li>allocate()
-: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a6e88870fde228d6277d16558f4a84763">os::rtos::memory::memory_resource</a>
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815">os::rtos::memory::memory_resource</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#aa8a92cf8c51dfba472b97dc6d78924d3">os::rtos::memory::new_delete_allocator&lt; T &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a15bd96e371989374c21680c4d60f5009">os::rtos::memory::polymorphic_allocator&lt; T &gt;</a>
 </li>
@@ -198,33 +199,54 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="structos__mempool__s.html#a9b2a85620c175ab4f256067a00306fbc">os_mempool_s</a>
 </li>
 <li>allocated_pool_addr_
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae76a464bafdba7e65ed42d2f306e1c32">os::rtos::Memory_pool</a>
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ad0acbd86a7293b218c0ef2d894a48c41">os::rtos::Memory_pool</a>
+</li>
+<li>allocated_pool_size_elements_
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a7eaf910392dab7430bcf229f469658ec">os::rtos::Memory_pool</a>
+, <a class="el" href="structos__mempool__s.html#ac24c2d3922cfc5f9ee460b2e345ae9ab">os_mempool_s</a>
 </li>
 <li>allocated_queue_addr
 : <a class="el" href="structos__mqueue__s.html#abc756bc434b6177331c253ee574167f2">os_mqueue_s</a>
 </li>
 <li>allocated_queue_addr_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#add579b8b3b251f55692dc1d8a40edfd0">os::rtos::Message_queue_base</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a3166a988b24ae30dc3d57c1c644d6abc">os::rtos::Message_queue</a>
 </li>
 <li>allocated_queue_size_elements
 : <a class="el" href="structos__mqueue__s.html#a18b6c9ccbf2f88fc55253f07931f1efd">os_mqueue_s</a>
 </li>
 <li>allocated_queue_size_elements_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a267666c8d0dd18cc4862d69018c8ba2f">os::rtos::Message_queue_base</a>
+: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a80367ca2800637a33179be05e43c27a2">os::rtos::Message_queue</a>
 </li>
 <li>allocated_stack_address_
 : <a class="el" href="classos_1_1rtos_1_1_thread.html#aeb7bc272beb20d0b701d90b8df968da3">os::rtos::Thread</a>
 </li>
+<li>allocated_stack_size_elements
+: <a class="el" href="structos__thread__s.html#abe92a055d4f7e6048d7e3a94acbb3a0f">os_thread_s</a>
+</li>
+<li>allocated_stack_size_elements_
+: <a class="el" href="classos_1_1rtos_1_1_thread.html#a05ea840a1c5a96c90943c16cc1091847">os::rtos::Thread</a>
+</li>
+<li>Allocator
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a3a937f2482663a451e356b6df0911dbf">os::rtos::Memory_pool</a>
+, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a7d9206cb7e11719881a6b2c11eae0750">os::rtos::Message_queue</a>
+, <a class="el" href="classos_1_1rtos_1_1_thread.html#a874b4bcd2a56511cf5bd8559bce87b16">os::rtos::Thread</a>
+</li>
 <li>allocator
-: <a class="el" href="structos__mqueue__s.html#a09ccb210fa40086b904a47f734a06b62">os_mqueue_s</a>
+: <a class="el" href="structos__mempool__s.html#a83e5105276e58f6d3374a23c204bf474">os_mempool_s</a>
+, <a class="el" href="structos__mqueue__s.html#a09ccb210fa40086b904a47f734a06b62">os_mqueue_s</a>
+, <a class="el" href="structos__thread__s.html#a5a2a63ba576f07a513809b321171e5c1">os_thread_s</a>
 </li>
 <li>allocator_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue__base.html#a77de036e38c55a5c1a84c40f86c3ab0f">os::rtos::Message_queue_base</a>
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a2f6720ee9ae08cf680eee0f1ad6d4184">os::rtos::Memory_pool</a>
+, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a6a9127de98855da7b777f3a8fce547a6">os::rtos::Message_queue</a>
+, <a class="el" href="classos_1_1rtos_1_1_thread.html#adb40a7cb60bcc7bdd3dcb6057cae6194">os::rtos::Thread</a>
 </li>
 <li>allocator_type
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a10f8385ac702040c66d33e64a2b56fd8">os::rtos::Message_queue</a>
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool__allocated.html#a5889f6fe51cd16d1aa9af68fa1b12445">os::rtos::Memory_pool_allocated&lt; Allocator &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1_memory__pool__typed.html#a40bda042a84af5abee9afc5912067730">os::rtos::Memory_pool_typed&lt; T, Allocator &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1_message__queue__allocated.html#a96d137eeb55c1f06712e930ddf018eee">os::rtos::Message_queue_allocated&lt; Allocator &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1_message__queue__typed.html#ac53abd4357e837069b03f5c1c528ce86">os::rtos::Message_queue_typed&lt; T, Allocator &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1_thread__allocated.html#ad28b5fda670a7c17f0badd41477fc1bf">os::rtos::Thread_allocated&lt; Allocator &gt;</a>
 </li>
 <li>allocted_stack_address
 : <a class="el" href="structos__thread__s.html#a14b8e49dda4df16c465ffe9e6364af41">os_thread_s</a>
@@ -233,7 +255,8 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="classos_1_1driver_1_1_version.html#ab69bb56c6d40fd05b0b6318f2f45f215">os::driver::Version</a>
 </li>
 <li>arena_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue__static.html#aee090e666bb5983b4e419531574a80d1">os::rtos::Message_queue_static&lt; T, N &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1_memory__pool__static.html#af5eaa670123100793ad94db3eeb74c55">os::rtos::Memory_pool_static&lt; T, N &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1_message__queue__static.html#a1dd047dd614e96e580f8adefce425fdd">os::rtos::Message_queue_static&lt; T, N &gt;</a>
 </li>
 <li>asynchronous
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_capabilities.html#ac113f6b560665c49d18699ea26a19d37">os::driver::serial::Capabilities</a>
@@ -243,7 +266,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 , <a class="el" href="classos_1_1rtos_1_1evflags_1_1_attributes.html#abe25cb447e620b558648a25deed61fc4">os::rtos::evflags::Attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#af1da366b256b94e06093d345f3ab00f5">os::rtos::mempool::Attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_attributes.html#af3bf5e56872b9fd99e61876e34ee527a">os::rtos::mqueue::Attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1mutex_1_1_attributes.html#a799cc2b70e7c76105e6ce4763a730fe1">os::rtos::mutex::Attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1mutex_1_1_attributes.html#aeaac6eb1bec0bd188a91a65497fbebba">os::rtos::mutex::Attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1semaphore_1_1_attributes.html#a385ba1ed0511a78eae9b854887f30019">os::rtos::semaphore::Attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html#a6f6437e586b9c1bbc985077b95d9c8d0">os::rtos::thread::Attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1timer_1_1_attributes.html#ad7fa2582591c7273de3d705df8de2bad">os::rtos::timer::Attributes</a>

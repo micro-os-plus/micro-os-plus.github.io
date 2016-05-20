@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['operationnumber',['OperationNumber',['../semihosting_8h.html#a368e5417dfc8239b696ecf3233a6a955',1,'semihosting.h']]],
-  ['os_5ftimer_5ftype',['os_timer_type',['../cmsis__os_8h.html#adac860eb9e1b4b0619271e6595ed83d9',1,'cmsis_os.h']]],
-  ['ospriority',['osPriority',['../cmsis__os_8h.html#a7f2b42f1983b9107775ec2a1c69a849a',1,'cmsis_os.h']]],
-  ['osstatus',['osStatus',['../cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99e',1,'cmsis_os.h']]]
+  ['pipe_5fevent',['Pipe_event',['../namespaceos_1_1driver_1_1usb_1_1host.html#a8cf450dc5595614f8414e5e6f9970205',1,'os::driver::usb::host']]],
+  ['port_5fevent',['Port_event',['../namespaceos_1_1driver_1_1usb_1_1host.html#a29f43829f9945aefa55c484f4e3021a0',1,'os::driver::usb::host']]],
+  ['power',['Power',['../namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dd',1,'os::driver']]]
 ];

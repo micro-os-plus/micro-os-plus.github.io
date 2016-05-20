@@ -1,5 +1,6 @@
 var structos__thread__attr__s =
 [
+    [ "clock", "structos__thread__attr__s.html#a8e316a66358b1978b9064ee3bf0af739", null ],
     [ "name", "structos__thread__attr__s.html#a63aa28802492850e1c84cd92d09a237a", null ],
     [ "th_priority", "structos__thread__attr__s.html#a16679040f25d405fe1fab78b6a0b6c8b", null ],
     [ "th_stack_address", "structos__thread__attr__s.html#a691fccf786502a84d1fcb0d45f563a89", null ],

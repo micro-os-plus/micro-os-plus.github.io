@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -138,12 +137,18 @@ $(document).ready(function(){initNavTree('structos__thread__s.html','');});
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6fef3ce4ffdb718093de1dcc8bb50fcd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a6fef3ce4ffdb718093de1dcc8bb50fcd">acquired_mutexes</a></td></tr>
 <tr class="separator:a6fef3ce4ffdb718093de1dcc8bb50fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe92a055d4f7e6048d7e3a94acbb3a0f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#abe92a055d4f7e6048d7e3a94acbb3a0f">allocated_stack_size_elements</a></td></tr>
+<tr class="separator:abe92a055d4f7e6048d7e3a94acbb3a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2a63ba576f07a513809b321171e5c1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a5a2a63ba576f07a513809b321171e5c1">allocator</a></td></tr>
+<tr class="separator:a5a2a63ba576f07a513809b321171e5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14b8e49dda4df16c465ffe9e6364af41"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a14b8e49dda4df16c465ffe9e6364af41">allocted_stack_address</a></td></tr>
 <tr class="separator:a14b8e49dda4df16c465ffe9e6364af41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262d29c98c35be62ff31af83e29fdc24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="os-c-decls_8h.html#aad6d8fcdd869056358a2c1b5ce95315f">os_double_list_links_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a262d29c98c35be62ff31af83e29fdc24">child_links</a></td></tr>
 <tr class="separator:a262d29c98c35be62ff31af83e29fdc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4b398fb066e459d07b3bfda5fb2f98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="os-c-decls_8h.html#a41533ce605cb1cc606c382dd3ec6e7ad">os_thread_children_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a7f4b398fb066e459d07b3bfda5fb2f98">children</a></td></tr>
 <tr class="separator:a7f4b398fb066e459d07b3bfda5fb2f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf089c091d8f980bad5c594465160964"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#acf089c091d8f980bad5c594465160964">clock</a></td></tr>
+<tr class="separator:acf089c091d8f980bad5c594465160964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5f0a259e87d276ad1e4b11635f2e70"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a3c5f0a259e87d276ad1e4b11635f2e70">clock_node</a></td></tr>
 <tr class="separator:a3c5f0a259e87d276ad1e4b11635f2e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310286febc5abc843ef09cc3b722c685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="os-c-decls_8h.html#ab2decc4b2cd1b7a5678b2b3cc5a294f4">os_thread_context_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a310286febc5abc843ef09cc3b722c685">context</a></td></tr>
@@ -156,6 +161,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a154b4e6558e7d701049015133945a78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c46c47eca62d225028bd2e7ad32c05"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#ae7c46c47eca62d225028bd2e7ad32c05">func_result_</a></td></tr>
 <tr class="separator:ae7c46c47eca62d225028bd2e7ad32c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9098d965a36a2a65caded6e654c0439"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#ac9098d965a36a2a65caded6e654c0439">interrupted</a></td></tr>
+<tr class="separator:ac9098d965a36a2a65caded6e654c0439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf2f480322a2d603233e6454beb785a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a0bf2f480322a2d603233e6454beb785a">joiner</a></td></tr>
 <tr class="separator:a0bf2f480322a2d603233e6454beb785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72751bb9462d6f9334fdc731c92ad226"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a72751bb9462d6f9334fdc731c92ad226">name</a></td></tr>
@@ -172,12 +179,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a24455ea041cf96e3981d30cf5cbfa048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1947b7a248441e9d800bb0712bc684e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structos__thread__user__storage__t.html">os_thread_user_storage_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#ae1947b7a248441e9d800bb0712bc684e">user_storage</a></td></tr>
 <tr class="separator:ae1947b7a248441e9d800bb0712bc684e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cb1b9149861710e2d748969f1cd181"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#ae9cb1b9149861710e2d748969f1cd181">vtbl</a></td></tr>
+<tr class="separator:ae9cb1b9149861710e2d748969f1cd181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f41fcd295ebcb692975bef0030c4ab"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__s.html#a99f41fcd295ebcb692975bef0030c4ab">waiting_node</a></td></tr>
 <tr class="separator:a99f41fcd295ebcb692975bef0030c4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00163">163</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00167">167</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a6fef3ce4ffdb718093de1dcc8bb50fcd"></a>
 <div class="memitem">
@@ -189,7 +198,35 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00183">183</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00190">190</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe92a055d4f7e6048d7e3a94acbb3a0f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t os_thread_s::allocated_stack_size_elements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00191">191</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a2a63ba576f07a513809b321171e5c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* os_thread_s::allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00188">188</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -203,7 +240,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00182">182</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00189">189</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -217,7 +254,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00178">178</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00183">183</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +268,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00177">177</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00182">182</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf089c091d8f980bad5c594465160964"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* os_thread_s::clock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00187">187</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -245,7 +296,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00181">181</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00186">186</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +310,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00188">188</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00197">197</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +324,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00169">169</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00174">174</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +338,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00170">170</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00175">175</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +352,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00171">171</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00176">176</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +366,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00172">172</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00177">177</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9098d965a36a2a65caded6e654c0439"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os_thread_s::interrupted</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00196">196</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +394,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00179">179</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00184">184</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -343,7 +408,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00165">165</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00169">169</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +422,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00176">176</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00181">181</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +436,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00185">185</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00193">193</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +450,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00167">167</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00172">172</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +464,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00186">186</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00194">194</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -413,7 +478,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00184">184</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00192">192</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -427,7 +492,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00187">187</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00195">195</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9cb1b9149861710e2d748969f1cd181"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* os_thread_s::vtbl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00170">170</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +520,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00180">180</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00185">185</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>

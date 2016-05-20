@@ -1,7 +1,6 @@
 var os_c_decls_8h =
 [
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
-    [ "os_clock_t", "structos__clock__t.html", "structos__clock__t" ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
     [ "os_condvar_s", "structos__condvar__s.html", "structos__condvar__s" ],
     [ "os_double_list_links_s", "structos__double__list__links__s.html", "structos__double__list__links__s" ],

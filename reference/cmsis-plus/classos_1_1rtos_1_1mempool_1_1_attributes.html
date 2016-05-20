@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -155,12 +154,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
-<tr class="memitem:a0166305d8df8c98ec7c3376abe5817b8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#a0166305d8df8c98ec7c3376abe5817b8">mp_pool_address</a></td></tr>
-<tr class="memdesc:a0166305d8df8c98ec7c3376abe5817b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined memory pool address.  <a href="#a0166305d8df8c98ec7c3376abe5817b8">More...</a><br /></td></tr>
-<tr class="separator:a0166305d8df8c98ec7c3376abe5817b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0ab9f08882bc891904f84df9c2644ed"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#ad0ab9f08882bc891904f84df9c2644ed">mp_pool_size_bytes</a></td></tr>
-<tr class="memdesc:ad0ab9f08882bc891904f84df9c2644ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined memory pool size.  <a href="#ad0ab9f08882bc891904f84df9c2644ed">More...</a><br /></td></tr>
-<tr class="separator:ad0ab9f08882bc891904f84df9c2644ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03622062f53b73c6464dc210d41f1b1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#af03622062f53b73c6464dc210d41f1b1">mp_pool_address</a> = nullptr</td></tr>
+<tr class="memdesc:af03622062f53b73c6464dc210d41f1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined memory pool address.  <a href="#af03622062f53b73c6464dc210d41f1b1">More...</a><br /></td></tr>
+<tr class="separator:af03622062f53b73c6464dc210d41f1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d15b0dff113d6eaf20d4f8d01809415"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#a5d15b0dff113d6eaf20d4f8d01809415">mp_pool_size_bytes</a> = 0</td></tr>
+<tr class="memdesc:a5d15b0dff113d6eaf20d4f8d01809415"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined memory pool size.  <a href="#a5d15b0dff113d6eaf20d4f8d01809415">More...</a><br /></td></tr>
+<tr class="separator:a5d15b0dff113d6eaf20d4f8d01809415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:aeb8afa1677ff35e90bd3d03f3e2dabdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1_clock.html">Clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_clocked__attributes.html#aeb8afa1677ff35e90bd3d03f3e2dabdd">clock</a></td></tr>
 <tr class="memdesc:aeb8afa1677ff35e90bd3d03f3e2dabdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#aeb8afa1677ff35e90bd3d03f3e2dabdd">More...</a><br /></td></tr>
@@ -175,13 +174,8 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory pool attributes. </p>
-<p>Allow to assign a name and custom attributes (like a static address) to the memory pool.</p>
-<p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
-<dl class="section user"><dt>Example</dt><dd></dd></dl>
-<p>Define an array of structures and pass its address and size via the attributes.</p>
-<div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Allocate static storage for the pool.</span></div><div class="line">properties_t pool[pool_size];</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Define pool attributes.</span></div><div class="line">   mempool::Attributes attr { <span class="stringliteral">&quot;properties&quot;</span> };</div><div class="line">   attr.mp_pool_address = pool;</div><div class="line">   attr.mp_pool_size_bytes = <span class="keyword">sizeof</span>(pool);</div><div class="line"></div><div class="line">   <span class="comment">// Create the pool object.</span></div><div class="line">   Memory_pool mp { attr, pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified, but inspired by POSIX attributes used in <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (IEEE Std 1003.1, 2013 Edition). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00060">60</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00064">64</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af1da366b256b94e06093d345f3ab00f5"></a>
 <div class="memitem">
@@ -205,7 +199,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00414">414</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00879">879</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +256,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01073">1073</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01083">1083</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -287,43 +281,39 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to clock. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01009">1009</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01019">1019</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0166305d8df8c98ec7c3376abe5817b8"></a>
+<a class="anchor" id="af03622062f53b73c6464dc210d41f1b1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * os::rtos::mempool::Attributes::mp_pool_address</td>
+          <td class="memname">void* os::rtos::mempool::Attributes::mp_pool_address = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>User defined memory pool address. </p>
-<p>Set this variable to a user defined memory area large enough to store the memory pool. Usually this is a statically allocated array of structures.</p>
-<p>The default value is <code>nullptr</code>, which means there is no user defined memory pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00110">110</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00114">114</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad0ab9f08882bc891904f84df9c2644ed"></a>
+<a class="anchor" id="a5d15b0dff113d6eaf20d4f8d01809415"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1mempool.html#a1638d8f5599ef06c8626ac9b8bd819ce">size_t</a> os::rtos::mempool::Attributes::mp_pool_size_bytes</td>
+          <td class="memname">std::size_t os::rtos::mempool::Attributes::mp_pool_size_bytes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>User defined memory pool size. </p>
-<p>The memory pool size must match exactly the allocated size. It is used for validation; when the memory pool is initialised, this size must be large enough to accommodate the desired memory pool.</p>
-<p>If the <a class="el" href="classos_1_1rtos_1_1mempool_1_1_attributes.html#a0166305d8df8c98ec7c3376abe5817b8">mp_pool_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00115">115</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00119">119</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -347,13 +337,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to name. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00954">954</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00964">964</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mempool_8h_source.html">os-mempool.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

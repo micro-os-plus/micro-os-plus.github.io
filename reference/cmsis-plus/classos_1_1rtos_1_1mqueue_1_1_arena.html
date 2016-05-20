@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -136,12 +135,12 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1mqueue_1_1_arena.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3833b2bed506befe82135ebea174fbe2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#a3833b2bed506befe82135ebea174fbe2">links</a> [(2 *msgs)*sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>)/sizeof(T)]</td></tr>
-<tr class="separator:a3833b2bed506befe82135ebea174fbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab31950cadd4356a927a0b56b75047940"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#ab31950cadd4356a927a0b56b75047940">prios</a> [msgs *sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>)/sizeof(T)]</td></tr>
-<tr class="separator:ab31950cadd4356a927a0b56b75047940"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c36ed343f3805522014fa8376dd0b6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#a54c36ed343f3805522014fa8376dd0b6">queue</a> [msgs *msg_size_bytes/sizeof(T)]</td></tr>
-<tr class="separator:a54c36ed343f3805522014fa8376dd0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbae69f4acf8137a36c2d274a72ce08a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#acbae69f4acf8137a36c2d274a72ce08a">links</a> [((2 *msgs)*sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>)+sizeof(T)-1)                                               /sizeof(T)]</td></tr>
+<tr class="separator:acbae69f4acf8137a36c2d274a72ce08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcf6e7bfceb3a01b6cdf2478feb9091"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#a2fcf6e7bfceb3a01b6cdf2478feb9091">prios</a> [(msgs *sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>)+sizeof(T)-1)                                               /sizeof(T)]</td></tr>
+<tr class="separator:a2fcf6e7bfceb3a01b6cdf2478feb9091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e53e8aedc322cdad2783bd34bda562"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#a10e53e8aedc322cdad2783bd34bda562">queue</a> [(msgs *msg_size_bytes+sizeof(T)-1)/sizeof(T)]</td></tr>
+<tr class="separator:a10e53e8aedc322cdad2783bd34bda562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt;<br />
@@ -150,30 +149,14 @@ class os::rtos::mqueue::Arena&lt; T, msgs, msg_size_bytes &gt;</h3>
 
 <p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00134">134</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a3833b2bed506befe82135ebea174fbe2"></a>
+<a class="anchor" id="acbae69f4acf8137a36c2d274a72ce08a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::links[(2 *msgs)*sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>)/sizeof(T)]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00138">138</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab31950cadd4356a927a0b56b75047940"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::prios[msgs *sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>)/sizeof(T)]</td>
+          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::links[((2 *msgs)*sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#a3859033c4aaac381eff961d3c2eea3c1">mqueue::index_t</a>)+sizeof(T)-1)                         /sizeof(T)]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,14 +165,30 @@ template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a54c36ed343f3805522014fa8376dd0b6"></a>
+<a class="anchor" id="a2fcf6e7bfceb3a01b6cdf2478feb9091"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::queue[msgs *msg_size_bytes/sizeof(T)]</td>
+          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::prios[(msgs *sizeof(<a class="el" href="namespaceos_1_1rtos_1_1mqueue.html#ab8c3a3c5f3335515de44bc536826c92d">mqueue::priority_t</a>)+sizeof(T)-1)                         /sizeof(T)]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00141">141</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10e53e8aedc322cdad2783bd34bda562"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, std::size_t msgs, std::size_t msg_size_bytes&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html">os::rtos::mqueue::Arena</a>&lt; T, msgs, msg_size_bytes &gt;::queue[(msgs *msg_size_bytes+sizeof(T)-1)/sizeof(T)]</td>
         </tr>
       </table>
 </div><div class="memdoc">

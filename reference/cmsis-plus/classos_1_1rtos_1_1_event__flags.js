@@ -1,7 +1,9 @@
 var classos_1_1rtos_1_1_event__flags =
 [
     [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#a8cbd40a6d2ddd17bf9f9d05e91ea9133", null ],
+    [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#a28bd87548ee85871c63b11c36f619d09", null ],
     [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#a9f33766b508de8456784801d096499a9", null ],
+    [ "Event_flags", "classos_1_1rtos_1_1_event__flags.html#ae5f44beb3452fa020143c67ac625ad62", null ],
     [ "~Event_flags", "classos_1_1rtos_1_1_event__flags.html#a531f92e4f6f2a5bd89cef0d79aab117d", null ],
     [ "_try_wait", "classos_1_1rtos_1_1_event__flags.html#af9b3a167d928316283da4b00ea4b6b4a", null ],
     [ "clear", "classos_1_1rtos_1_1_event__flags.html#adfb373cebc193d4317b876836cf9c398", null ],
@@ -16,5 +18,5 @@ var classos_1_1rtos_1_1_event__flags =
     [ "clock_", "classos_1_1rtos_1_1_event__flags.html#a50b5b44b668d0997c403cc7926075a53", null ],
     [ "flags_", "classos_1_1rtos_1_1_event__flags.html#a6ac9c026e35c7d4855d77246cfe36b8d", null ],
     [ "list_", "classos_1_1rtos_1_1_event__flags.html#a59e2fb5c4b20635c4dbcb12ea3ba84c7", null ],
-    [ "name_", "classos_1_1rtos_1_1_event__flags.html#ad7667db8bf3171d900237500cb0e1e67", null ]
+    [ "name_", "classos_1_1rtos_1_1_event__flags.html#a7c6435f5bbc1c2793664672cbf420d70", null ]
 ];

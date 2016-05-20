@@ -63,7 +63,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -149,12 +148,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:a4cfe5893a2e12caee6410b418dc858ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a4cfe5893a2e12caee6410b418dc858ac">enter</a> (void)</td></tr>
-<tr class="memdesc:a4cfe5893a2e12caee6410b418dc858ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter interrupts critical section.  <a href="#a4cfe5893a2e12caee6410b418dc858ac">More...</a><br /></td></tr>
-<tr class="separator:a4cfe5893a2e12caee6410b418dc858ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7666d642834fcd37496830c13454f66a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a7666d642834fcd37496830c13454f66a">exit</a> (<a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a> status)</td></tr>
-<tr class="memdesc:a7666d642834fcd37496830c13454f66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit interrupts critical section.  <a href="#a7666d642834fcd37496830c13454f66a">More...</a><br /></td></tr>
-<tr class="separator:a7666d642834fcd37496830c13454f66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee388d14fb6040f9956151804e36d2bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#aee388d14fb6040f9956151804e36d2bb">enter</a> (void)</td></tr>
+<tr class="memdesc:aee388d14fb6040f9956151804e36d2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter interrupts critical section.  <a href="#aee388d14fb6040f9956151804e36d2bb">More...</a><br /></td></tr>
+<tr class="separator:aee388d14fb6040f9956151804e36d2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af968900a605419fe9426761b70d2cdd6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#af968900a605419fe9426761b70d2cdd6">exit</a> (<a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a> status)</td></tr>
+<tr class="memdesc:af968900a605419fe9426761b70d2cdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit interrupts critical section.  <a href="#af968900a605419fe9426761b70d2cdd6">More...</a><br /></td></tr>
+<tr class="separator:af968900a605419fe9426761b70d2cdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -165,10 +164,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interrupts critical section <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> helper. </p>
-<p>Use this class to define a critical section protected to interrupts service routines. The begining of the critical section is exactly the place where this class is instantiated (the constructor will disable interrupts below the scheduler priority). The end of the critical section is the end of the surrounding block (the destructor will enable the interrupts).</p>
-<dl class="section note"><dt>Note</dt><dd>Can be nested as many times as required without problems, only the outer call will re-enable the interrupts.</dd></dl>
-<dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   {</div><div class="line">     interrupts::Critical_section ics;  <span class="comment">// Critical section begins here.</span></div><div class="line"></div><div class="line">     <span class="comment">// Inside the critical section.</span></div><div class="line">     <span class="comment">// No scheduler switches will happen here.</span></div><div class="line"></div><div class="line">   } <span class="comment">// Critical section ends here.</span></div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
+
 <p>Definition at line <a class="el" href="os-sched_8h_source.html#l00377">377</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3b73855c2ce205c82a489bb2dea2cd18"></a>
@@ -227,7 +223,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4cfe5893a2e12caee6410b418dc858ac"></a>
+<a class="anchor" id="aee388d14fb6040f9956151804e36d2bb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -235,7 +231,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a> os::rtos::interrupts::Critical_section::enter </td>
+          <td class="memname">static <a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a> os::rtos::interrupts::Critical_section::enter </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -253,11 +249,9 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The current interrupts status register. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00385">385</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a7666d642834fcd37496830c13454f66a"></a>
+<a class="anchor" id="af968900a605419fe9426761b70d2cdd6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -265,7 +259,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void os::rtos::interrupts::Critical_section::exit </td>
+          <td class="memname">static void os::rtos::interrupts::Critical_section::exit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a>&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
@@ -287,8 +281,6 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00392">392</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -312,16 +304,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Variable to store the interrupts status. </p>
-<p>The variable is constant, after being set by the constructor no further changes are possible.</p>
-<p>The variable type usually is an unsigned integer where the status register is saved. </p>
 
 <p>Definition at line <a class="el" href="os-sched_8h_source.html#l00453">453</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-sched_8h_source.html">os-sched.h</a></li>
-<li>src/cmsis-plus/rtos/<a class="el" href="os-core_8cpp_source.html">os-core.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
