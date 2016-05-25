@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['device_5faddress_5ft',['device_address_t',['../namespaceos_1_1driver_1_1usb.html#a67795d2b813bc491f7f1ffdcd4375310',1,'os::driver::usb']]],
-  ['duration',['duration',['../classos_1_1estd_1_1chrono_1_1_systick__clock.html#a0a6cc9cd05cb6c1693ad8aceba0124cc',1,'os::estd::chrono::Systick_clock::duration()'],['../classos_1_1estd_1_1chrono_1_1_realtime__clock.html#a88dd4b3d34d95ec4363ce9425affc633',1,'os::estd::chrono::Realtime_clock::duration()'],['../classos_1_1estd_1_1chrono_1_1system__clock.html#a6b22fb30c0f89d1557561525eeb8a8e7',1,'os::estd::chrono::system_clock::duration()'],['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#a2ca601c7114813a1cf742cdaac9cc1be',1,'os::estd::chrono::high_resolution_clock::duration()']]],
-  ['duration_5ft',['duration_t',['../namespaceos_1_1rtos_1_1clock.html#a61ab6fb2482ab2d9ef03f6e0aa445287',1,'os::rtos::clock']]]
+  ['config_5farg_5ft',['config_arg_t',['../namespaceos_1_1driver_1_1serial.html#a01a49c46795f92b60931c856f06109d9',1,'os::driver::serial']]],
+  ['config_5ft',['config_t',['../namespaceos_1_1driver_1_1serial.html#a16d38c70ff077aeba035b60246f76ac1',1,'os::driver::serial']]],
+  ['control_5farg_5ft',['control_arg_t',['../namespaceos_1_1driver_1_1serial.html#aa1a37580580c17d07e0793c5bbe183aa',1,'os::driver::serial']]],
+  ['control_5ft',['control_t',['../namespaceos_1_1driver_1_1serial.html#acf05806ddf2bf72af492bf430d8de0c1',1,'os::driver::serial']]],
+  ['count_5ft',['count_t',['../classos_1_1rtos_1_1mutex.html#a31a6f2d64eb598ccb0f8152e2bf20504',1,'os::rtos::mutex::count_t()'],['../classos_1_1rtos_1_1semaphore.html#ad6dc71df534fae5ff113a4a010511df1',1,'os::rtos::semaphore::count_t()']]],
+  ['current_5ft',['current_t',['../classos_1_1rtos_1_1clock__systick.html#a3fe4b0d134c10d217fb7444be7061dc8',1,'os::rtos::clock_systick']]]
 ];

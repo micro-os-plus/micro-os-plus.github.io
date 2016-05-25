@@ -1,10 +1,6 @@
 var os_core_8cpp =
 [
-    [ "__error", "os-core_8cpp.html#acd1274564a12e4054b2b4532becaff85", null ],
-    [ "_link_node", "os-core_8cpp.html#a6ae2b86ad7426d5ffac213757c3f8eb9", null ],
-    [ "_link_node", "os-core_8cpp.html#a7313e80edf41aa7a11b0f6f4c912ed76", null ],
-    [ "_unlink_node", "os-core_8cpp.html#a33ae08e59dba8b3b3b98a551316704f2", null ],
-    [ "_unlink_node", "os-core_8cpp.html#a0602687a93679d8b0def4a83e8069891", null ],
+    [ "__error", "group__cmsis-plus-rtos.html#gacd1274564a12e4054b2b4532becaff85", null ],
     [ "in_handler_mode", "os-core_8cpp.html#a72474ad9ad219abeb13fb3ed0b95a8b3", null ],
     [ "initialize", "os-core_8cpp.html#ab6cf4a77bd9f182fb9ee339e08b2289d", null ],
     [ "lock", "os-core_8cpp.html#a192571f4400ae993fae3f589a9be128c", null ],

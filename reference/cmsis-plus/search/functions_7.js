@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['get',['get',['../classos_1_1rtos_1_1_event__flags.html#a8042f19d252370032e8ff27c67b89fe7',1,'os::rtos::Event_flags']]],
+  ['get',['get',['../classos_1_1rtos_1_1event__flags.html#abb673856df1e5291bd7b3e4bcd49a734',1,'os::rtos::event_flags']]],
   ['get_5fapi',['get_api',['../classos_1_1driver_1_1_version.html#a84a4d0366c81658dba6f1bf047aeff30',1,'os::driver::Version']]],
   ['get_5fcapabilities',['get_capabilities',['../classos_1_1driver_1_1_serial.html#ae928e4e39aff2bdc29b2c0c66c692cb7',1,'os::driver::Serial::get_capabilities()'],['../classos_1_1driver_1_1usb_1_1_device.html#a7a069a3179bf58628bc0e48a88886045',1,'os::driver::usb::Device::get_capabilities()'],['../classos_1_1driver_1_1usb_1_1_host.html#a354da0b3ca915fb873bb3ea312360f6d',1,'os::driver::usb::Host::get_capabilities()']]],
-  ['get_5fdefault_5fresource',['get_default_resource',['../namespaceos_1_1rtos_1_1memory.html#a30f3c750f753790d679a5bf20635cee5',1,'os::rtos::memory']]],
+  ['get_5fdefault_5fresource',['get_default_resource',['../namespaceos_1_1rtos_1_1memory.html#a61c4946b90c917a9fc2a0b0f1c43ad89',1,'os::rtos::memory::get_default_resource()'],['../namespaceos_1_1estd.html#aed4e03057f2185217b27b606679607de',1,'os::estd::get_default_resource()']]],
   ['get_5fdrv',['get_drv',['../classos_1_1driver_1_1_version.html#ab5856bacdd8325a61ffc158672f06350',1,'os::driver::Version']]],
   ['get_5fframe_5fnumber',['get_frame_number',['../classos_1_1driver_1_1usb_1_1_device.html#ad09cd9fedcd8d8ca22940f57f37d266c',1,'os::driver::usb::Device::get_frame_number()'],['../classos_1_1driver_1_1usb_1_1_host.html#ad8e7726f38718e9dfd1f4c63878c6094',1,'os::driver::usb::Host::get_frame_number()']]],
   ['get_5fid',['get_id',['../classos_1_1estd_1_1thread.html#a5c68baef042ea6880432841602fa304d',1,'os::estd::thread::get_id()'],['../group__cmsis-plus-iso.html#ga4cdd27328fdf1dee2e48eed9596eb768',1,'os::estd::this_thread::get_id()']]],
   ['get_5fmodem_5fstatus',['get_modem_status',['../classos_1_1driver_1_1_serial.html#ae6522b26ed0e69a011123060abe4d64f',1,'os::driver::Serial']]],
+  ['get_5fnew_5fhandler',['get_new_handler',['../namespacestd.html#a2aab280c9a87214e453f8f598827d13b',1,'std']]],
   ['get_5fport_5fstatus',['get_port_status',['../classos_1_1driver_1_1usb_1_1_host.html#a5c3a289f982732d91f34cb1646071592',1,'os::driver::usb::Host']]],
   ['get_5frx_5fcount',['get_rx_count',['../classos_1_1driver_1_1_serial.html#ab8606fd830ffb61685b6358d9c3c5751',1,'os::driver::Serial']]],
   ['get_5fspeed',['get_speed',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#ae2d61fbb0a882934cd73325b8e06f2a9',1,'os::driver::usb::device::Status::get_speed()'],['../classos_1_1driver_1_1usb_1_1host_1_1_status.html#a0aa0e3544c262c32eaf2e9cc42d6fb48',1,'os::driver::usb::host::Status::get_speed()']]],

@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -132,7 +133,7 @@ $(document).ready(function(){initNavTree('os-c-decls_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cmsis-plus/rtos/os-app-config.h&gt;</code><br />
-<code>#include &lt;cmsis-plus/rtos/port/os-c-decls.h&gt;</code><br />
+<code>#include &lt;cmsis-plus/rtos/port/os-decls.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
@@ -142,6 +143,10 @@ $(document).ready(function(){initNavTree('os-c-decls_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__clock__node__s.html">os_clock_node_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__clock__s.html">os_clock_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__clock__timestamps__list__s.html">os_clock_timestamps_list_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__condvar__attr__s.html">os_condvar_attr_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +176,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__semaphore__s.html">os_semaphore_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__systick__clock__current__s.html">os_systick_clock_current_s</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__sysclock__current__s.html">os_sysclock_current_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__attr__s.html">os_thread_attr_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,12 +202,18 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
-<tr class="memitem:a3c1a46a75f3f50125f64e584c46b6a2b"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a3c1a46a75f3f50125f64e584c46b6a2b">os_clock_duration_t</a></td></tr>
-<tr class="separator:a3c1a46a75f3f50125f64e584c46b6a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb56a88a7ee3a52c479d68da8d042feb"><td class="memItemLeft" align="right" valign="top">typedef os_port_clock_duration_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#aeb56a88a7ee3a52c479d68da8d042feb">os_clock_duration_t</a></td></tr>
+<tr class="separator:aeb56a88a7ee3a52c479d68da8d042feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a892f944ead023f350a78d42d9f3a46cf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__clock__node__s.html">os_clock_node_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a892f944ead023f350a78d42d9f3a46cf">os_clock_node_t</a></td></tr>
 <tr class="separator:a892f944ead023f350a78d42d9f3a46cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700b6e1e0695c182285142f7b82ad323"><td class="memItemLeft" align="right" valign="top">typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a700b6e1e0695c182285142f7b82ad323">os_clock_timestamp_t</a></td></tr>
-<tr class="separator:a700b6e1e0695c182285142f7b82ad323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabb40f479e1bed29ec21e8151e09ed1"><td class="memItemLeft" align="right" valign="top">typedef os_port_clock_offset_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#acabb40f479e1bed29ec21e8151e09ed1">os_clock_offset_t</a></td></tr>
+<tr class="separator:acabb40f479e1bed29ec21e8151e09ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1c36bd6f6421b3565c262b5d77874e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__clock__s.html">os_clock_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a6e1c36bd6f6421b3565c262b5d77874e">os_clock_t</a></td></tr>
+<tr class="separator:a6e1c36bd6f6421b3565c262b5d77874e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef683ba40ccd6fbd8a5c8c3e86459d65"><td class="memItemLeft" align="right" valign="top">typedef os_port_clock_timestamp_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#aef683ba40ccd6fbd8a5c8c3e86459d65">os_clock_timestamp_t</a></td></tr>
+<tr class="separator:aef683ba40ccd6fbd8a5c8c3e86459d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ec1200dcdf2541b89b3c7f419778ee"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__clock__timestamps__list__s.html">os_clock_timestamps_list_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a59ec1200dcdf2541b89b3c7f419778ee">os_clock_timestamps_list_t</a></td></tr>
+<tr class="separator:a59ec1200dcdf2541b89b3c7f419778ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a6f7a54b218d4b85cbfae52572737c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__condvar__attr__s.html">os_condvar_attr_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#af3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a></td></tr>
 <tr class="separator:af3a6f7a54b218d4b85cbfae52572737c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7127e71b04816bab6ae79484a8dccbec"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__condvar__s.html">os_condvar_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a></td></tr>
@@ -261,8 +272,8 @@ Types</h2></td></tr>
 <tr class="separator:ae4141b84b2ee40838c36b6c606cf7e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f43e7bfa993ee025cc7238390c91691"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__semaphore__s.html">os_semaphore_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a></td></tr>
 <tr class="separator:a6f43e7bfa993ee025cc7238390c91691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfe934a54705933d9fb887e494d5a202"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__systick__clock__current__s.html">os_systick_clock_current_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#abfe934a54705933d9fb887e494d5a202">os_systick_clock_current_t</a></td></tr>
-<tr class="separator:abfe934a54705933d9fb887e494d5a202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ecb1426e579c3de5f22c14347280087"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__sysclock__current__s.html">os_sysclock_current_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a5ecb1426e579c3de5f22c14347280087">os_sysclock_current_t</a></td></tr>
+<tr class="separator:a5ecb1426e579c3de5f22c14347280087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7463811ae4dc1ffddd0a9de81dafcafa"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__thread__attr__s.html">os_thread_attr_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a7463811ae4dc1ffddd0a9de81dafcafa">os_thread_attr_t</a></td></tr>
 <tr class="separator:a7463811ae4dc1ffddd0a9de81dafcafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41533ce605cb1cc606c382dd3ec6e7ad"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__thread__children__list__s.html">os_thread_children_list_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a41533ce605cb1cc606c382dd3ec6e7ad">os_thread_children_list_t</a></td></tr>
@@ -300,94 +311,103 @@ Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a385c44f6fb256e5716a2302a5b940388"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a385c44f6fb256e5716a2302a5b940388ae01682a77d20c8dfc7b1939a715bc3d9">os_mutex_type_normal</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a385c44f6fb256e5716a2302a5b940388a4a8b83241117f715c282d7c1a6a3b63d">os_mutex_type_errorcheck</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a385c44f6fb256e5716a2302a5b940388a331b47521255a14c72ff4b60ed8b71af">os_mutex_type_recursive</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a385c44f6fb256e5716a2302a5b940388a855afe18464e4d1733c821ff862fb151">os_mutex_type_default</a> = os_mutex_type_normal
+<br />
+ }</td></tr>
+<tr class="separator:a385c44f6fb256e5716a2302a5b940388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6126af1d45847bc59afa0aa3216b04"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04ada7705c17634f3c17f4e9bbbfaeeb3af">os_priority_none</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04ae750ae8ecd6f4d8a260e8260717edb13">os_flags_mode_all</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04aaf3670a073b26d7241935ae6f6b98316">os_priority_idle</a> = (1 &lt;&lt; (4) ), 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04af7ec1d29630af1d78281385db2d9cbd3">os_flags_mode_any</a> = 2, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a5f984204031d94b76a1ddc27294b5987">os_priority_lowest</a> = (2 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a0bb20e0ecdb0d2629ba48d771e7215cd">os_priority_low</a> = (2 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a4e51bf6e0e7ba5518e27164109bee7e5">os_priority_below_normal</a> = (4 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a73c018600ee1fd5155c203d0c28e886d">os_priority_normal</a> = (6 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04ae732136cf926c8c795c8beec9705e7d7">os_priority_above_normal</a> = (8 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04adcb4f909b7a028507add755f6aa74fef">os_priority_high</a> = (10 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a4de249c8290f4181b04f00a29635a422">os_priority_realtime</a> = (12 &lt;&lt; (4) ), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a9484b91c95585c0dcc96149b2e67911f">os_priority_highest</a> = (((13 + 1) &lt;&lt; (4) ) - 1), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04ae367eac1980daa19da574d597363458a">os_priority_isr</a> = (((14 + 1) &lt;&lt; (4) ) - 1), 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04ad10ff5145bcd462a36ef7fab12df9cf9">os_priority_error</a> = (((15 + 1) &lt;&lt; (4) ) - 1)
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abc6126af1d45847bc59afa0aa3216b04a4cc5c722c75c3f296025f7b542282d48">os_flags_mode_clear</a> = 4
 <br />
  }</td></tr>
 <tr class="separator:abc6126af1d45847bc59afa0aa3216b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca668b99dc7ddfa9f29c5f20d4171c8220">os_thread_inactive</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06cada7705c17634f3c17f4e9bbbfaeeb3af">os_priority_none</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4d4ecdff2ef4dd9a9a0304503a6d4aaf">os_thread_ready</a>, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06caaf3670a073b26d7241935ae6f6b98316">os_priority_idle</a> = (1 &lt;&lt; (4) ), 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca74f02da6ce7c326070ea0a545d42b9b2">os_thread_running</a>, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca5f984204031d94b76a1ddc27294b5987">os_priority_lowest</a> = (2 &lt;&lt; (4) ), 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca34a30a084f537109f11ce1eb554ff4b5">os_thread_waiting</a>
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca0bb20e0ecdb0d2629ba48d771e7215cd">os_priority_low</a> = (2 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4e51bf6e0e7ba5518e27164109bee7e5">os_priority_below_normal</a> = (4 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca73c018600ee1fd5155c203d0c28e886d">os_priority_normal</a> = (6 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06cae732136cf926c8c795c8beec9705e7d7">os_priority_above_normal</a> = (8 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06cadcb4f909b7a028507add755f6aa74fef">os_priority_high</a> = (10 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4de249c8290f4181b04f00a29635a422">os_priority_realtime</a> = (12 &lt;&lt; (4) ), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9484b91c95585c0dcc96149b2e67911f">os_priority_highest</a> = (((13 + 1) &lt;&lt; (4) ) - 1), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06cae367eac1980daa19da574d597363458a">os_priority_isr</a> = (((14 + 1) &lt;&lt; (4) ) - 1), 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#adc29c2ff13d900c2f185ee95427fb06cad10ff5145bcd462a36ef7fab12df9cf9">os_priority_error</a> = (((15 + 1) &lt;&lt; (4) ) - 1)
 <br />
  }</td></tr>
 <tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ead398637227195168fce4373ac5f060d6">os_timer_once</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ea668b99dc7ddfa9f29c5f20d4171c8220">os_thread_inactive</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ead7ced35a84d9449c3df8f399a0a2b115">os_timer_periodic</a> = 1
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ea4d4ecdff2ef4dd9a9a0304503a6d4aaf">os_thread_ready</a>, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ea74f02da6ce7c326070ea0a545d42b9b2">os_thread_running</a>, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a61dadd085c1777f559549e05962b2c9ea34a30a084f537109f11ce1eb554ff4b5">os_thread_waiting</a>
 <br />
  }</td></tr>
 <tr class="separator:a61dadd085c1777f559549e05962b2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a726ca809ffd3d67ab4b8476646f26635a5c653dfe51835b1f4e38f90315cff674">os_timer_run_once</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a726ca809ffd3d67ab4b8476646f26635ad398637227195168fce4373ac5f060d6">os_timer_once</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a726ca809ffd3d67ab4b8476646f26635a6a34c59f474de145e63cb2fb31fb8e86">os_timer_run_periodic</a> = 1
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a726ca809ffd3d67ab4b8476646f26635ad7ced35a84d9449c3df8f399a0a2b115">os_timer_periodic</a> = 1
 <br />
  }</td></tr>
 <tr class="separator:a726ca809ffd3d67ab4b8476646f26635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daa0b813f55aa683d73fe2eae3ce92c4b9">os_mutex_protocol_none</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da5c653dfe51835b1f4e38f90315cff674">os_timer_run_once</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da1db0193befd5f5b6932ad1dec14b9f0f">os_mutex_protocol_inherit</a> = 1, 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da833c6218717a9f577e97ad4567968f45">os_mutex_protocol_protect</a> = 2
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da6a34c59f474de145e63cb2fb31fb8e86">os_timer_run_periodic</a> = 1
 <br />
  }</td></tr>
 <tr class="separator:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed82baf7f470b522273a3e37c24c600"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a84385ef4f64d839d6b80d713da91ec8a">os_mutex_robustness_stalled</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600aa0b813f55aa683d73fe2eae3ce92c4b9">os_mutex_protocol_none</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a7db883b22fbdfcdffd20b3b618a10ded">os_mutex_robustness_robust</a> = 1
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a1db0193befd5f5b6932ad1dec14b9f0f">os_mutex_protocol_inherit</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#abed82baf7f470b522273a3e37c24c600a833c6218717a9f577e97ad4567968f45">os_mutex_protocol_protect</a> = 2
 <br />
  }</td></tr>
 <tr class="separator:abed82baf7f470b522273a3e37c24c600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57ae01682a77d20c8dfc7b1939a715bc3d9">os_mutex_type_normal</a> = 0, 
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a84385ef4f64d839d6b80d713da91ec8a">os_mutex_robustness_stalled</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a4a8b83241117f715c282d7c1a6a3b63d">os_mutex_type_errorcheck</a> = 1, 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af">os_mutex_type_recursive</a> = 2, 
-<br />
-&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a855afe18464e4d1733c821ff862fb151">os_mutex_type_default</a> = os_mutex_type_normal
+&#160;&#160;<a class="el" href="os-c-decls_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a7db883b22fbdfcdffd20b3b618a10ded">os_mutex_robustness_robust</a> = 1
 <br />
  }</td></tr>
 <tr class="separator:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#aa943fd3a7e6071e9dc7f9fd3e055d01a">os_rtc_handler</a> (void)</td></tr>
-<tr class="memdesc:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC interrupt handler.  <a href="#aa943fd3a7e6071e9dc7f9fd3e055d01a">More...</a><br /></td></tr>
-<tr class="separator:aa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d30b43ae4c7f98b2b51e420b5a04849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a6d30b43ae4c7f98b2b51e420b5a04849">os_systick_handler</a> (void)</td></tr>
-<tr class="memdesc:a6d30b43ae4c7f98b2b51e420b5a04849"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysTick interrupt handler.  <a href="#a6d30b43ae4c7f98b2b51e420b5a04849">More...</a><br /></td></tr>
-<tr class="separator:a6d30b43ae4c7f98b2b51e420b5a04849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#gaa943fd3a7e6071e9dc7f9fd3e055d01a">os_rtc_handler</a> (void)</td></tr>
+<tr class="memdesc:gaa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTC interrupt handler.  <a href="group__cmsis-plus-rtos.html#gaa943fd3a7e6071e9dc7f9fd3e055d01a">More...</a><br /></td></tr>
+<tr class="separator:gaa943fd3a7e6071e9dc7f9fd3e055d01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d30b43ae4c7f98b2b51e420b5a04849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos.html#ga6d30b43ae4c7f98b2b51e420b5a04849">os_systick_handler</a> (void)</td></tr>
+<tr class="memdesc:ga6d30b43ae4c7f98b2b51e420b5a04849"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysTick interrupt handler.  <a href="group__cmsis-plus-rtos.html#ga6d30b43ae4c7f98b2b51e420b5a04849">More...</a><br /></td></tr>
+<tr class="separator:ga6d30b43ae4c7f98b2b51e420b5a04849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a775a0a8af9e10662654cb4e4799d28f9"></a>
@@ -400,7 +420,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00095">95</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00107">107</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -419,17 +439,17 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Types</h2>
-<a class="anchor" id="a3c1a46a75f3f50125f64e584c46b6a2b"></a>
+<a class="anchor" id="aeb56a88a7ee3a52c479d68da8d042feb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uint32_t <a class="el" href="os-c-decls_8h.html#a3c1a46a75f3f50125f64e584c46b6a2b">os_clock_duration_t</a></td>
+          <td class="memname">typedef os_port_clock_duration_t <a class="el" href="os-c-decls_8h.html#aeb56a88a7ee3a52c479d68da8d042feb">os_clock_duration_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00144">144</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00158">158</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -445,17 +465,55 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a700b6e1e0695c182285142f7b82ad323"></a>
+<a class="anchor" id="acabb40f479e1bed29ec21e8151e09ed1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uint64_t <a class="el" href="os-c-decls_8h.html#a700b6e1e0695c182285142f7b82ad323">os_clock_timestamp_t</a></td>
+          <td class="memname">typedef os_port_clock_offset_t <a class="el" href="os-c-decls_8h.html#acabb40f479e1bed29ec21e8151e09ed1">os_clock_offset_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00143">143</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00159">159</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e1c36bd6f6421b3565c262b5d77874e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structos__clock__s.html">os_clock_s</a>  <a class="el" href="os-c-decls_8h.html#a6e1c36bd6f6421b3565c262b5d77874e">os_clock_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef683ba40ccd6fbd8a5c8c3e86459d65"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef os_port_clock_timestamp_t <a class="el" href="os-c-decls_8h.html#aef683ba40ccd6fbd8a5c8c3e86459d65">os_clock_timestamp_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00157">157</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59ec1200dcdf2541b89b3c7f419778ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structos__clock__timestamps__list__s.html">os_clock_timestamps_list_s</a>  <a class="el" href="os-c-decls_8h.html#a59ec1200dcdf2541b89b3c7f419778ee">os_clock_timestamps_list_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -557,7 +615,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00091">91</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00103">103</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -595,7 +653,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00389">389</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00411">411</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +691,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00431">431</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00452">452</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -647,7 +705,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00429">429</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00450">450</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -661,7 +719,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00430">430</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00451">451</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -675,7 +733,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00428">428</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00449">449</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -713,7 +771,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00273">273</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00298">298</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -727,7 +785,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00275">275</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00300">300</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -741,7 +799,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00276">276</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00301">301</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -767,7 +825,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00274">274</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00299">299</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -795,7 +853,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00090">90</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00102">102</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -821,7 +879,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00357">357</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00380">380</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -837,12 +895,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abfe934a54705933d9fb887e494d5a202"></a>
+<a class="anchor" id="a5ecb1426e579c3de5f22c14347280087"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structos__systick__clock__current__s.html">os_systick_clock_current_s</a>  <a class="el" href="os-c-decls_8h.html#abfe934a54705933d9fb887e494d5a202">os_systick_clock_current_t</a></td>
+          <td class="memname">typedef struct <a class="el" href="structos__sysclock__current__s.html">os_sysclock_current_s</a>  <a class="el" href="os-c-decls_8h.html#a5ecb1426e579c3de5f22c14347280087">os_sysclock_current_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -895,7 +953,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00128">128</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00140">140</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -909,7 +967,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00130">130</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00142">142</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -923,7 +981,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00133">133</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00145">145</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +995,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00134">134</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00146">146</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -951,7 +1009,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00132">132</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00144">144</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1061,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00219">219</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00245">245</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1075,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00221">221</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00247">247</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1089,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00224">224</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00250">250</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1115,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00223">223</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00249">249</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1074,6 +1132,30 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a385c44f6fb256e5716a2302a5b940388"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a385c44f6fb256e5716a2302a5b940388ae01682a77d20c8dfc7b1939a715bc3d9"></a>os_mutex_type_normal&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a385c44f6fb256e5716a2302a5b940388a4a8b83241117f715c282d7c1a6a3b63d"></a>os_mutex_type_errorcheck&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a385c44f6fb256e5716a2302a5b940388a331b47521255a14c72ff4b60ed8b71af"></a>os_mutex_type_recursive&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a385c44f6fb256e5716a2302a5b940388a855afe18464e4d1733c821ff862fb151"></a>os_mutex_type_default&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00318">318</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1084,33 +1166,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04ada7705c17634f3c17f4e9bbbfaeeb3af"></a>os_priority_none&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04ae750ae8ecd6f4d8a260e8260717edb13"></a>os_flags_mode_all&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04aaf3670a073b26d7241935ae6f6b98316"></a>os_priority_idle&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04af7ec1d29630af1d78281385db2d9cbd3"></a>os_flags_mode_any&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a5f984204031d94b76a1ddc27294b5987"></a>os_priority_lowest&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a0bb20e0ecdb0d2629ba48d771e7215cd"></a>os_priority_low&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a4e51bf6e0e7ba5518e27164109bee7e5"></a>os_priority_below_normal&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a73c018600ee1fd5155c203d0c28e886d"></a>os_priority_normal&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04ae732136cf926c8c795c8beec9705e7d7"></a>os_priority_above_normal&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04adcb4f909b7a028507add755f6aa74fef"></a>os_priority_high&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a4de249c8290f4181b04f00a29635a422"></a>os_priority_realtime&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a9484b91c95585c0dcc96149b2e67911f"></a>os_priority_highest&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04ae367eac1980daa19da574d597363458a"></a>os_priority_isr&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04ad10ff5145bcd462a36ef7fab12df9cf9"></a>os_priority_error&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="abc6126af1d45847bc59afa0aa3216b04a4cc5c722c75c3f296025f7b542282d48"></a>os_flags_mode_clear&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00097">97</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00088">88</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1124,17 +1188,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca668b99dc7ddfa9f29c5f20d4171c8220"></a>os_thread_inactive&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06cada7705c17634f3c17f4e9bbbfaeeb3af"></a>os_priority_none&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca4d4ecdff2ef4dd9a9a0304503a6d4aaf"></a>os_thread_ready&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06caaf3670a073b26d7241935ae6f6b98316"></a>os_priority_idle&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca74f02da6ce7c326070ea0a545d42b9b2"></a>os_thread_running&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca5f984204031d94b76a1ddc27294b5987"></a>os_priority_lowest&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca34a30a084f537109f11ce1eb554ff4b5"></a>os_thread_waiting&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca0bb20e0ecdb0d2629ba48d771e7215cd"></a>os_priority_low&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca4e51bf6e0e7ba5518e27164109bee7e5"></a>os_priority_below_normal&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca73c018600ee1fd5155c203d0c28e886d"></a>os_priority_normal&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06cae732136cf926c8c795c8beec9705e7d7"></a>os_priority_above_normal&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06cadcb4f909b7a028507add755f6aa74fef"></a>os_priority_high&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca4de249c8290f4181b04f00a29635a422"></a>os_priority_realtime&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06ca9484b91c95585c0dcc96149b2e67911f"></a>os_priority_highest&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06cae367eac1980daa19da574d597363458a"></a>os_priority_isr&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adc29c2ff13d900c2f185ee95427fb06cad10ff5145bcd462a36ef7fab12df9cf9"></a>os_priority_error&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00114">114</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00109">109</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1148,13 +1228,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ead398637227195168fce4373ac5f060d6"></a>os_timer_once&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ea668b99dc7ddfa9f29c5f20d4171c8220"></a>os_thread_inactive&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ead7ced35a84d9449c3df8f399a0a2b115"></a>os_timer_periodic&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ea4d4ecdff2ef4dd9a9a0304503a6d4aaf"></a>os_thread_ready&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ea74f02da6ce7c326070ea0a545d42b9b2"></a>os_thread_running&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61dadd085c1777f559549e05962b2c9ea34a30a084f537109f11ce1eb554ff4b5"></a>os_thread_waiting&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00122">122</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00126">126</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1168,13 +1252,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a726ca809ffd3d67ab4b8476646f26635a5c653dfe51835b1f4e38f90315cff674"></a>os_timer_run_once&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a726ca809ffd3d67ab4b8476646f26635ad398637227195168fce4373ac5f060d6"></a>os_timer_once&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a726ca809ffd3d67ab4b8476646f26635a6a34c59f474de145e63cb2fb31fb8e86"></a>os_timer_run_periodic&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a726ca809ffd3d67ab4b8476646f26635ad7ced35a84d9449c3df8f399a0a2b115"></a>os_timer_periodic&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00226">226</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00134">134</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1188,15 +1272,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0411cd49bb5b71852cecd93bcbf0ca2daa0b813f55aa683d73fe2eae3ce92c4b9"></a>os_mutex_protocol_none&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0411cd49bb5b71852cecd93bcbf0ca2da5c653dfe51835b1f4e38f90315cff674"></a>os_timer_run_once&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a0411cd49bb5b71852cecd93bcbf0ca2da1db0193befd5f5b6932ad1dec14b9f0f"></a>os_mutex_protocol_inherit&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a0411cd49bb5b71852cecd93bcbf0ca2da833c6218717a9f577e97ad4567968f45"></a>os_mutex_protocol_protect&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a0411cd49bb5b71852cecd93bcbf0ca2da6a34c59f474de145e63cb2fb31fb8e86"></a>os_timer_run_periodic&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00278">278</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00252">252</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1210,13 +1292,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abed82baf7f470b522273a3e37c24c600a84385ef4f64d839d6b80d713da91ec8a"></a>os_mutex_robustness_stalled&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abed82baf7f470b522273a3e37c24c600aa0b813f55aa683d73fe2eae3ce92c4b9"></a>os_mutex_protocol_none&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="abed82baf7f470b522273a3e37c24c600a7db883b22fbdfcdffd20b3b618a10ded"></a>os_mutex_robustness_robust&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="abed82baf7f470b522273a3e37c24c600a1db0193befd5f5b6932ad1dec14b9f0f"></a>os_mutex_protocol_inherit&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abed82baf7f470b522273a3e37c24c600a833c6218717a9f577e97ad4567968f45"></a>os_mutex_protocol_protect&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00286">286</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00303">303</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -1230,56 +1314,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57ae01682a77d20c8dfc7b1939a715bc3d9"></a>os_mutex_type_normal&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57a84385ef4f64d839d6b80d713da91ec8a"></a>os_mutex_robustness_stalled&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57a4a8b83241117f715c282d7c1a6a3b63d"></a>os_mutex_type_errorcheck&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af"></a>os_mutex_type_recursive&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57a855afe18464e4d1733c821ff862fb151"></a>os_mutex_type_default&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="ab04a0655cd1e3bcac5e8f48c18df1a57a7db883b22fbdfcdffd20b3b618a10ded"></a>os_mutex_robustness_robust&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00293">293</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa943fd3a7e6071e9dc7f9fd3e055d01a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os_rtc_handler </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>RTC interrupt handler. </p>
-<p>Must be called from the physical RTC interrupt handler. </p>
-
-</div>
-</div>
-<a class="anchor" id="a6d30b43ae4c7f98b2b51e420b5a04849"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os_systick_handler </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>SysTick interrupt handler. </p>
-<p>Must be called from the physical interrupt handler. </p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00311">311</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>

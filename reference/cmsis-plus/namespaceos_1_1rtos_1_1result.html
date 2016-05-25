@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -133,10 +134,10 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1result.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a1f5b41a48ca4ac9f7aeb3bd1c702b45a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: result_t { <a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">ok</a> = 0
- }<tr class="memdesc:a1f5b41a48ca4ac9f7aeb3bd1c702b45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom enumerated values.  <a href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45a">More...</a><br /></td></tr>
+<tr class="memitem:a3d19f716a55045807932fbda5ad85724"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: result_t { <a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b">ok</a> = 0
+ }<tr class="memdesc:a3d19f716a55045807932fbda5ad85724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom enumerated values.  <a href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724">More...</a><br /></td></tr>
 </td></tr>
-<tr class="separator:a1f5b41a48ca4ac9f7aeb3bd1c702b45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3d19f716a55045807932fbda5ad85724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Values returned by RTOS functions. </p>
@@ -156,8 +157,8 @@ Enumerations</h2></td></tr>
 <li><code>EOWNERDEAD</code> - Previous owner died. The owner of a robust mutex terminated while holding the mutex lock.</li>
 </ul>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   Mutex mx;</div><div class="line">   ...</div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> res = mx.try_lock();</div><div class="line">   <span class="keywordflow">if</span> (res == <a class="code" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>)</div><div class="line">     {</div><div class="line">       <span class="comment">// All is well, mutex locked.</span></div><div class="line">     }</div><div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (res == EWOULDBLOCK)</div><div class="line">     {</div><div class="line">       <span class="comment">// Mutex busy, try again later.</span></div><div class="line">     }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a1f5b41a48ca4ac9f7aeb3bd1c702b45a"></a>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   mutex mx;</div><div class="line">   ...</div><div class="line">   <a class="code" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> res = mx.try_lock();</div><div class="line">   <span class="keywordflow">if</span> (res == <a class="code" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b">result::ok</a>)</div><div class="line">     {</div><div class="line">       <span class="comment">// All is well, mutex locked.</span></div><div class="line">     }</div><div class="line">   <span class="keywordflow">else</span> <span class="keywordflow">if</span> (res == EWOULDBLOCK)</div><div class="line">     {</div><div class="line">       <span class="comment">// Mutex busy, try again later.</span></div><div class="line">     }</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a3d19f716a55045807932fbda5ad85724"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -171,12 +172,12 @@ Enumerations</h2></td></tr>
 <p>There are not many custom values returned by CMSIS++ RTOS functions, currently there is only one, <code>ok</code>, represented by <code>0</code>.</p>
 <p>If more custom codes will be needed and are not present in POSIX, this is the place where to add them. Just be sure their numeric values do not overlap POSIX values (check for a definition with the last allocated POSIX error number). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b"></a>ok&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b"></a>ok&#160;</td><td class="fielddoc">
 <p>Function completed; no errors or events occurred. </p>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00189">189</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00186">186</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

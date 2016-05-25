@@ -1,8 +1,13 @@
 var annotated_dup =
 [
+    [ "anonymous_namespace{memory-resource.cpp}", "namespaceanonymous__namespace_02memory-resource_8cpp_03.html", "namespaceanonymous__namespace_02memory-resource_8cpp_03" ],
+    [ "anonymous_namespace{os-memory.cpp}", "namespaceanonymous__namespace_02os-memory_8cpp_03.html", "namespaceanonymous__namespace_02os-memory_8cpp_03" ],
     [ "os", "namespaceos.html", "namespaceos" ],
+    [ "binary_attributes", "classbinary__attributes.html", null ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
+    [ "os_clock_s", "structos__clock__s.html", "structos__clock__s" ],
+    [ "os_clock_timestamps_list_s", "structos__clock__timestamps__list__s.html", "structos__clock__timestamps__list__s" ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
     [ "os_condvar_s", "structos__condvar__s.html", "structos__condvar__s" ],
     [ "os_double_list_links_s", "structos__double__list__links__s.html", "structos__double__list__links__s" ],
@@ -22,7 +27,7 @@ var annotated_dup =
     [ "os_semaphore_attr_s", "structos__semaphore__attr__s.html", "structos__semaphore__attr__s" ],
     [ "os_semaphore_def", "structos__semaphore__def.html", "structos__semaphore__def" ],
     [ "os_semaphore_s", "structos__semaphore__s.html", "structos__semaphore__s" ],
-    [ "os_systick_clock_current_s", "structos__systick__clock__current__s.html", "structos__systick__clock__current__s" ],
+    [ "os_sysclock_current_s", "structos__sysclock__current__s.html", "structos__sysclock__current__s" ],
     [ "os_thread_attr_s", "structos__thread__attr__s.html", "structos__thread__attr__s" ],
     [ "os_thread_children_list_s", "structos__thread__children__list__s.html", "structos__thread__children__list__s" ],
     [ "os_thread_context_s", "structos__thread__context__s.html", "structos__thread__context__s" ],
@@ -33,5 +38,6 @@ var annotated_dup =
     [ "os_timer_def", "structos__timer__def.html", "structos__timer__def" ],
     [ "os_timer_s", "structos__timer__s.html", "structos__timer__s" ],
     [ "os_waiting_thread_node_s", "structos__waiting__thread__node__s.html", "structos__waiting__thread__node__s" ],
-    [ "osEvent", "structos_event.html", "structos_event" ]
+    [ "osEvent", "structos_event.html", "structos_event" ],
+    [ "periodic_attributes", "classperiodic__attributes.html", null ]
 ];

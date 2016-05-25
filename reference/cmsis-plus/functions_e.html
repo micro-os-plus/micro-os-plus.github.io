@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -99,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -164,20 +166,25 @@ $(document).ready(function(){initNavTree('functions_e.html','');});
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>element_t
+: <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a705e915f3c3b8047559a414fb03138c4">os::rtos::thread::stack</a>
+</li>
 <li>empty()
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#af9564feab38340dec5cb676783d8d73c">os::rtos::Memory_pool</a>
-, <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a5652693746ed5a14389f83b764e77cf2">os::rtos::Message_queue</a>
-, <a class="el" href="classos_1_1rtos_1_1_static__double__list.html#a6cc34055ff11bc8cd873599db0070992">os::rtos::Static_double_list</a>
+: <a class="el" href="classos_1_1rtos_1_1memory__pool.html#aff658fc36d6061b2f7294b5a824c0cf0">os::rtos::memory_pool</a>
+, <a class="el" href="classos_1_1rtos_1_1message__queue.html#ae5f62d011ae11c87de47ebb528b17432">os::rtos::message_queue</a>
+, <a class="el" href="classos_1_1rtos_1_1static__double__list.html#af0817145a118719101aeeee0a6010d96">os::rtos::static_double_list</a>
 </li>
 <li>enter()
-: <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#aee388d14fb6040f9956151804e36d2bb">os::rtos::interrupts::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html#a63b5c61a5dba3d471056547c8fd5f31c">os::rtos::interrupts::Uncritical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1_critical__section.html#ac58f7295200d9f710571db22f6a58699">os::rtos::port::interrupts::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1_uncritical__section.html#ac2c3e9e47b18eda362d0eaccd0bbce9b">os::rtos::port::interrupts::Uncritical_section</a>
+: <a class="el" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#a87df6b4778d7e8e0bbe95071d3437da8">os::rtos::interrupts::critical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#ad6236b6d3fc0e600b68e302f53279367">os::rtos::interrupts::uncritical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html#a26d3efa238512eb228971b777fa4efe8">os::rtos::port::interrupts::critical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#ae1ef2bf6ad2b9d7aa8093c142ea53e83">os::rtos::port::interrupts::uncritical_section</a>
 </li>
 <li>errno_
-: <a class="el" href="classos_1_1rtos_1_1_thread.html#ade3798793787ed86246fc3cbc09964b9">os::rtos::Thread</a>
-, <a class="el" href="structos__thread__s.html#a4943c7930f21ea027578b708c0b2f749">os_thread_s</a>
+: <a class="el" href="structos__thread__s.html#a4943c7930f21ea027578b708c0b2f749">os_thread_s</a>
+</li>
+<li>error
+: <a class="el" href="group__cmsis-plus-rtos.html#gga944584d8132e97683777c927204951b1a3f38937bb7063900c3328df07da44c0c">os::rtos::thread::priority</a>
 </li>
 <li>event_connect
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a3ef265fae35d54a43ff51bd724e5b066">os::driver::usb::host::Capabilities</a>
@@ -194,8 +201,8 @@ $(document).ready(function(){initNavTree('functions_e.html','');});
 <li>event_dsr
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_capabilities.html#a651a22214ea9f9ee1d1a819091bf4d2b">os::driver::serial::Capabilities</a>
 </li>
-<li>Event_flags()
-: <a class="el" href="classos_1_1rtos_1_1_event__flags.html#a28bd87548ee85871c63b11c36f619d09">os::rtos::Event_flags</a>
+<li>event_flags()
+: <a class="el" href="classos_1_1rtos_1_1event__flags.html#a6916d0c8b77fc7c41d172c9d21158c04">os::rtos::event_flags</a>
 </li>
 <li>event_overcurrent
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a49e6b4a8404345cf79e969e50c6fed77">os::driver::usb::host::Capabilities</a>
@@ -216,10 +223,10 @@ $(document).ready(function(){initNavTree('functions_e.html','');});
 : <a class="el" href="classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html#aaa5bdd3f1c220e0996b7b06b307d7333">os::driver::usb::device::Capabilities</a>
 </li>
 <li>exit()
-: <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#af968900a605419fe9426761b70d2cdd6">os::rtos::interrupts::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html#a23e52ef83c100e2be236093ad93c53fa">os::rtos::interrupts::Uncritical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1_critical__section.html#ac031900e046c55fa6ed304c5ea97ae05">os::rtos::port::interrupts::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1_uncritical__section.html#ac2435d2f2c1542d458688e86919d4a08">os::rtos::port::interrupts::Uncritical_section</a>
+: <a class="el" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#adf823f9b10805e04afb333fc3988bc5f">os::rtos::interrupts::critical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#a330cf150daa8b37adb20c05625ccc2f6">os::rtos::interrupts::uncritical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html#aeb0294bf82ec26fe8494d5595234fdf5">os::rtos::port::interrupts::critical_section</a>
+, <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#a3fe09ef983e7a7cfcebdd6c71b659969">os::rtos::port::interrupts::uncritical_section</a>
 </li>
 </ul>
 </div><!-- contents -->

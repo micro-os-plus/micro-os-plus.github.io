@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -124,34 +125,43 @@ $(document).ready(function(){initNavTree('os-thread_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#typedef-members">Types</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">os-thread.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="os-decls_8h_source.html">cmsis-plus/rtos/os-decls.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="os-clocks_8h_source.html">cmsis-plus/rtos/os-clocks.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 </div>
 <p><a href="os-thread_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_attributes.html">os::rtos::thread::Attributes</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread attributes.  <a href="classos_1_1rtos_1_1thread_1_1_attributes.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">os::rtos::thread::attributes</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread attributes.  <a href="classos_1_1rtos_1_1thread_1_1attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_context.html">os::rtos::thread::Context</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1context.html">os::rtos::thread::context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread context.  <a href="classos_1_1rtos_1_1thread_1_1context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html">os::rtos::thread::Stack</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1thread_1_1priority.html">os::rtos::thread::priority</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priorities.  <a href="structos_1_1rtos_1_1thread_1_1priority.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread.html">os::rtos::Thread</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>thread</b>, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1_thread.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1thread_1_1sig.html">os::rtos::thread::sig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread signals.  <a href="structos_1_1rtos_1_1thread_1_1sig.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__allocated.html">os::rtos::Thread_allocated&lt; Allocator &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with allocator.  <a href="classos_1_1rtos_1_1_thread__allocated.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html">os::rtos::thread::stack</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread stack.  <a href="classos_1_1rtos_1_1thread_1_1stack.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1_thread__static.html">os::rtos::Thread_static&lt; N &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with local stack.  <a href="classos_1_1rtos_1_1_thread__static.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html">os::rtos::thread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>thread</b>, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1thread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread__allocated.html">os::rtos::thread_allocated&lt; Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with allocator.  <a href="classos_1_1rtos_1_1thread__allocated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread__static.html">os::rtos::thread_static&lt; N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with local stack.  <a href="classos_1_1rtos_1_1thread__static.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -162,18 +172,24 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1rtos"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos.html">os::rtos</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTOS namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceos_1_1rtos_1_1anonymous__namespace_02os-thread_8h_03"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1anonymous__namespace_02os-thread_8h_03.html">os::rtos::anonymous_namespace{os-thread.h}</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceos_1_1rtos_1_1scheduler"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html">os::rtos::scheduler</a></td></tr>
+<tr class="memdesc:namespaceos_1_1rtos_1_1scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceos_1_1rtos_1_1this__thread"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html">os::rtos::this_thread</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos_1_1this__thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience namespace to access the current running thread. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceos_1_1rtos_1_1thread"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html">os::rtos::thread</a></td></tr>
-<tr class="memdesc:namespaceos_1_1rtos_1_1thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Types</h2></td></tr>
+<tr class="memitem:a62b80cce0fe52b5540534ea198da61b7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1anonymous__namespace_02os-thread_8h_03.html#a62b80cce0fe52b5540534ea198da61b7">os::rtos::anonymous_namespace{os-thread.h}::_func_args_t</a> = void *</td></tr>
+<tr class="separator:a62b80cce0fe52b5540534ea198da61b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a76b767ac998b9c30c5d54530b76d0376"><td class="memItemLeft" align="right" valign="top">Thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a76b767ac998b9c30c5d54530b76d0376">os::rtos::this_thread::_thread</a> (void)</td></tr>
-<tr class="separator:a76b767ac998b9c30c5d54530b76d0376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c889c1521abca1ffb23bc42bd6ccc10"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a3c889c1521abca1ffb23bc42bd6ccc10">os::rtos::this_thread::error</a> (void)</td></tr>
+<tr class="memdesc:a3c889c1521abca1ffb23bc42bd6ccc10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the library <code><a class="el" href="group__cmsis-plus-rtos.html#gacd1274564a12e4054b2b4532becaff85" title="Per-thread error support. ">__error()</a></code> function.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a3c889c1521abca1ffb23bc42bd6ccc10">More...</a><br /></td></tr>
 <tr class="separator:a3c889c1521abca1ffb23bc42bd6ccc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c68164be854d7fb8a2693726c6207ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff">os::rtos::this_thread::exit</a> (void *exit_ptr=nullptr)</td></tr>
 <tr class="memdesc:a9c68164be854d7fb8a2693726c6207ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff">More...</a><br /></td></tr>
@@ -181,30 +197,27 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5101a855f1eced8c611bfba34778c92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ab5101a855f1eced8c611bfba34778c92">os::rtos::this_thread::is_timeout</a> (void)</td></tr>
 <tr class="memdesc:ab5101a855f1eced8c611bfba34778c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the wake-up is due to a timeout.  <a href="namespaceos_1_1rtos_1_1this__thread.html#ab5101a855f1eced8c611bfba34778c92">More...</a><br /></td></tr>
 <tr class="separator:ab5101a855f1eced8c611bfba34778c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0074bbc6172d789c71439f6c432dc4ca"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a0074bbc6172d789c71439f6c432dc4ca">os::rtos::this_thread::sig_wait</a> (thread::sigset_t mask, thread::sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
-<tr class="memdesc:a0074bbc6172d789c71439f6c432dc4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a0074bbc6172d789c71439f6c432dc4ca">More...</a><br /></td></tr>
-<tr class="separator:a0074bbc6172d789c71439f6c432dc4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2207667c138fd0412bdec2c6ba432dc2"><td class="memItemLeft" align="right" valign="top">Thread &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a2207667c138fd0412bdec2c6ba432dc2">os::rtos::this_thread::thread</a> (void)</td></tr>
-<tr class="memdesc:a2207667c138fd0412bdec2c6ba432dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a2207667c138fd0412bdec2c6ba432dc2">More...</a><br /></td></tr>
-<tr class="separator:a2207667c138fd0412bdec2c6ba432dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f1b8277ff3148c19abea593195f16af"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6f1b8277ff3148c19abea593195f16af">os::rtos::this_thread::timed_sig_wait</a> (thread::sigset_t mask, clock::duration_t timeout, thread::sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
-<tr class="memdesc:a6f1b8277ff3148c19abea593195f16af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a6f1b8277ff3148c19abea593195f16af">More...</a><br /></td></tr>
-<tr class="separator:a6f1b8277ff3148c19abea593195f16af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c892db9aa59f89ebe8a81f88f990416"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a4c892db9aa59f89ebe8a81f88f990416">os::rtos::this_thread::try_sig_wait</a> (thread::sigset_t mask, thread::sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
-<tr class="memdesc:a4c892db9aa59f89ebe8a81f88f990416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a4c892db9aa59f89ebe8a81f88f990416">More...</a><br /></td></tr>
-<tr class="separator:a4c892db9aa59f89ebe8a81f88f990416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23a950fc1aba831bbe97a0ae612d43f"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#aa23a950fc1aba831bbe97a0ae612d43f">os::rtos::this_thread::join</a> (rtos::thread &amp;thread, void **exit_ptr=nullptr)</td></tr>
+<tr class="memdesc:aa23a950fc1aba831bbe97a0ae612d43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for thread termination.  <a href="namespaceos_1_1rtos_1_1this__thread.html#aa23a950fc1aba831bbe97a0ae612d43f">More...</a><br /></td></tr>
+<tr class="separator:aa23a950fc1aba831bbe97a0ae612d43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f1f205a2cc6d9e2e0def9bf0a20002"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a95f1f205a2cc6d9e2e0def9bf0a20002">os::rtos::this_thread::sig_wait</a> (sigset_t mask, sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
+<tr class="memdesc:a95f1f205a2cc6d9e2e0def9bf0a20002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a95f1f205a2cc6d9e2e0def9bf0a20002">More...</a><br /></td></tr>
+<tr class="separator:a95f1f205a2cc6d9e2e0def9bf0a20002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60661f0e3a2380c9afbec42c3b505bc4"><td class="memItemLeft" align="right" valign="top">thread &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a60661f0e3a2380c9afbec42c3b505bc4">os::rtos::this_thread::thread</a> (void)</td></tr>
+<tr class="memdesc:a60661f0e3a2380c9afbec42c3b505bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a60661f0e3a2380c9afbec42c3b505bc4">More...</a><br /></td></tr>
+<tr class="separator:a60661f0e3a2380c9afbec42c3b505bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7c062b71bf2789732a8d5fad934db6"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a4f7c062b71bf2789732a8d5fad934db6">os::rtos::this_thread::timed_sig_wait</a> (sigset_t mask, clock::duration_t timeout, sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
+<tr class="memdesc:a4f7c062b71bf2789732a8d5fad934db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a4f7c062b71bf2789732a8d5fad934db6">More...</a><br /></td></tr>
+<tr class="separator:a4f7c062b71bf2789732a8d5fad934db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0340892d2f41a4ac6895b555a8ff549f"><td class="memItemLeft" align="right" valign="top">result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a0340892d2f41a4ac6895b555a8ff549f">os::rtos::this_thread::try_sig_wait</a> (sigset_t mask, sigset_t *oflags=nullptr, flags::mode_t mode=flags::mode::all|flags::mode::clear)</td></tr>
+<tr class="memdesc:a0340892d2f41a4ac6895b555a8ff549f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for signal flags.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a0340892d2f41a4ac6895b555a8ff549f">More...</a><br /></td></tr>
+<tr class="separator:a0340892d2f41a4ac6895b555a8ff549f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51171b707af828d3a3ce7b3cf89e7d4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a51171b707af828d3a3ce7b3cf89e7d4c">os::rtos::this_thread::wait</a> (void)</td></tr>
 <tr class="memdesc:a51171b707af828d3a3ce7b3cf89e7d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend the current running thread to wait for an event.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a51171b707af828d3a3ce7b3cf89e7d4c">More...</a><br /></td></tr>
 <tr class="separator:a51171b707af828d3a3ce7b3cf89e7d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d6b2df07994ab81b2435596a93bbdb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6">os::rtos::this_thread::yield</a> (void)</td></tr>
 <tr class="memdesc:a6d6b2df07994ab81b2435596a93bbdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield execution to the next ready thread.  <a href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6">More...</a><br /></td></tr>
 <tr class="separator:a6d6b2df07994ab81b2435596a93bbdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a7eabec0905b196a09d3431e942eb5d49"><td class="memItemLeft" align="right" valign="top">const Attributes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">os::rtos::thread::initializer</a></td></tr>
-<tr class="memdesc:a7eabec0905b196a09d3431e942eb5d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default thread initialiser.  <a href="namespaceos_1_1rtos_1_1thread.html#a7eabec0905b196a09d3431e942eb5d49">More...</a><br /></td></tr>
-<tr class="separator:a7eabec0905b196a09d3431e942eb5d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

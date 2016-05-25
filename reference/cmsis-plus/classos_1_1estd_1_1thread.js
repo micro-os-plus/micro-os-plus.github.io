@@ -19,7 +19,7 @@ var classos_1_1estd_1_1thread =
     [ "joinable", "classos_1_1estd_1_1thread.html#aa9544e521093c78b7438a26a828290df", null ],
     [ "native_handle", "classos_1_1estd_1_1thread.html#a00ff293662eceb7f21e7153aee686dce", null ],
     [ "operator=", "classos_1_1estd_1_1thread.html#a3476e4499198c867f4f2e7a7370f98d7", null ],
-    [ "operator=", "classos_1_1estd_1_1thread.html#a94712af854b2460044c3f1e34a133a21", null ],
+    [ "operator=", "classos_1_1estd_1_1thread.html#aa486cd1b36b67677187bb473581b9095", null ],
     [ "run_function_object", "classos_1_1estd_1_1thread.html#ad7809b5e8b548d515ffdf00086d4f6c2", null ],
     [ "swap", "classos_1_1estd_1_1thread.html#a234ae8b36cc7862a4e7ccbe16762c7ad", null ],
     [ "function_object_deleter_", "classos_1_1estd_1_1thread.html#a8dffb4a15a25c21e4039fd1cf5a9dd7a", null ],

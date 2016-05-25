@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['native_5fclock',['Native_clock',['../classos_1_1estd_1_1condition__variable.html#a00f9a40195629a9c31363e04eba86282',1,'os::estd::condition_variable::Native_clock()'],['../classos_1_1estd_1_1condition__variable__any.html#a3847ca7ecc304287b72484746497ae88',1,'os::estd::condition_variable_any::Native_clock()']]],
-  ['native_5fhandle_5ftype',['native_handle_type',['../classos_1_1estd_1_1condition__variable.html#ad8ee07e0840e9eabac861d11bb367da4',1,'os::estd::condition_variable::native_handle_type()'],['../classos_1_1estd_1_1mutex.html#a695e43bee3a458cd9cb09f6e0d546fff',1,'os::estd::mutex::native_handle_type()'],['../classos_1_1estd_1_1recursive__mutex.html#a843c26b3591859391d319f4210fb454d',1,'os::estd::recursive_mutex::native_handle_type()'],['../classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9',1,'os::estd::thread::native_handle_type()']]],
-  ['native_5ftype',['native_type',['../classos_1_1estd_1_1condition__variable.html#a150397e1a9b4a88f3c812cc0d7342e12',1,'os::estd::condition_variable::native_type()'],['../classos_1_1estd_1_1mutex.html#aae932072968a69c4ebe79e0d4e15a9da',1,'os::estd::mutex::native_type()'],['../classos_1_1estd_1_1recursive__mutex.html#ab6737b2126d18d29d929e3ea46542209',1,'os::estd::recursive_mutex::native_type()']]]
+  ['main_5fargs_5ft',['main_args_t',['../namespaceanonymous__namespace_02os-main_8cpp_03.html#afbce66bb61edbda05f5789e4eae97f43',1,'anonymous_namespace{os-main.cpp}']]],
+  ['mask_5ft',['mask_t',['../group__cmsis-plus-rtos.html#ga87571a2d62e491d2af4e4390eb1aca06',1,'os::rtos::flags']]],
+  ['mode_5ft',['mode_t',['../group__cmsis-plus-rtos.html#ga49c1da8337c9d32697fefbdf0412cdac',1,'os::rtos::flags']]],
+  ['modem_5fconfig_5ft',['modem_config_t',['../namespaceos_1_1driver_1_1serial.html#a97c477c99b3ba154395a50827b19bac9',1,'os::driver::serial']]],
+  ['msg_5fsize_5ft',['msg_size_t',['../classos_1_1rtos_1_1message__queue.html#aee507fd1f777940280b9246bff1018d3',1,'os::rtos::message_queue']]],
+  ['mutex_5ftype',['mutex_type',['../classos_1_1estd_1_1lock__guard.html#aee651e0193a55431241a5af82808a9a0',1,'os::estd::lock_guard::mutex_type()'],['../classos_1_1estd_1_1unique__lock.html#ada85ff65ec3aea78b1aefa232067d6e3',1,'os::estd::unique_lock::mutex_type()']]]
 ];

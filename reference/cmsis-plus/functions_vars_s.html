@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -99,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -160,17 +162,8 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>sched_state_
-: <a class="el" href="classos_1_1rtos_1_1_thread.html#a5377f778e9434bba90dd701f14905f43">os::rtos::Thread</a>
-</li>
 <li>send_list
 : <a class="el" href="structos__mqueue__s.html#af8e172d52869dc0e40afd991f4dee247">os_mqueue_s</a>
-</li>
-<li>send_list_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#a382770b91ae02f9af3e8f9836cd2b9ed">os::rtos::Message_queue</a>
-</li>
-<li>sig_mask_
-: <a class="el" href="classos_1_1rtos_1_1_thread.html#a4c14083908a3b4407e3c40a5d3da9873">os::rtos::Thread</a>
 </li>
 <li>signals
 : <a class="el" href="structos__thread__s.html#a3d512200bcd25c76b4a282ab07897b9a">os_thread_s</a>
@@ -179,18 +172,15 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 <li>single_wire
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4">os::driver::serial::Capabilities</a>
 </li>
-<li>size_bytes_
-: <a class="el" href="classos_1_1rtos_1_1thread_1_1_stack.html#ab30a3609b03be04f60469920dd583b71">os::rtos::thread::Stack</a>
-</li>
-<li>sleep_count_
-: <a class="el" href="classos_1_1rtos_1_1_clock.html#ab76c42bb964e1e1634c32c020d201105">os::rtos::Clock</a>
+<li>sleep_count
+: <a class="el" href="structos__clock__s.html#aed023879d1a83df5967c691a72f72b13">os_clock_s</a>
 </li>
 <li>sm_initial_count
-: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1_attributes.html#a6fc92f4e465875fa3fdafcb58d580cb6">os::rtos::semaphore::Attributes</a>
+: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a18d01d93ed52be648800e7e1221b9ff2">os::rtos::semaphore::attributes</a>
 , <a class="el" href="structos__semaphore__attr__s.html#a9ed9b2e7e5616099980dc2d37f68f997">os_semaphore_attr_s</a>
 </li>
 <li>sm_max_count
-: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1_attributes.html#adc8d721789e51e7ca673ed95070dc76f">os::rtos::semaphore::Attributes</a>
+: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#aa9e269dcce01315daa86ddc0a68e5b38">os::rtos::semaphore::attributes</a>
 , <a class="el" href="structos__semaphore__attr__s.html#ac91c27fd833a1629689012444118f854">os_semaphore_attr_s</a>
 </li>
 <li>smart_card
@@ -206,22 +196,18 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 <li>stack
 : <a class="el" href="structos__thread__def.html#a268b54cbfcfabd6f34c8012bae94d7d7">os_thread_def</a>
 </li>
-<li>stack_
-: <a class="el" href="classos_1_1rtos_1_1thread_1_1_context.html#a96001e35038f1cdc03ff6dd2c21ff41a">os::rtos::thread::Context</a>
-, <a class="el" href="classos_1_1rtos_1_1_thread__static.html#ab2a5c74cc10e7e2fa9df2ab9fca99015">os::rtos::Thread_static&lt; N &gt;</a>
-</li>
 <li>stack_addr
 : <a class="el" href="structos__thread__context__s.html#ac61ca1fd5d23bdfa0b4bd29cb4258d86">os_thread_context_s</a>
 </li>
 <li>stack_size_bytes
-: <a class="el" href="classos_1_1rtos_1_1_thread__static.html#a2461a10321f062376873fd8f6b1a9b05">os::rtos::Thread_static&lt; N &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1thread__static.html#a6f06b3f0f9168f42ca9ca45460de5342">os::rtos::thread_static&lt; N &gt;</a>
 , <a class="el" href="structos__thread__context__s.html#a43b8a2c8aa606b0a3443926edbe4f872">os_thread_context_s</a>
 </li>
 <li>stacksize
 : <a class="el" href="structos__thread__def.html#aa0dd2cff64a499a08f422dd159fe5780">os_thread_def</a>
 </li>
 <li>startup_time_point
-: <a class="el" href="classos_1_1estd_1_1chrono_1_1_realtime__clock.html#a96f993caa21642499b9e8d83564f64d0">os::estd::chrono::Realtime_clock</a>
+: <a class="el" href="classos_1_1estd_1_1chrono_1_1_realtime__clock.html#a26e9825647cb75c8b66effa2e3491f66">os::estd::chrono::Realtime_clock</a>
 </li>
 <li>state
 : <a class="el" href="structos__thread__s.html#a24455ea041cf96e3981d30cf5cbfa048">os_thread_s</a>
@@ -229,7 +215,6 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>state_
 : <a class="el" href="structos_1_1estd_1_1once__flag.html#aafd0a6549d1f72b1c29b22a77cd8d064">os::estd::once_flag</a>
-, <a class="el" href="classos_1_1rtos_1_1_timer.html#af8eb45b959474a118e5a3ed3d581e505">os::rtos::Timer</a>
 </li>
 <li>status
 : <a class="el" href="structos_event.html#aafcd2cedd08e033f9df25fd9875caaf2">osEvent</a>
@@ -241,18 +226,12 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 , <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#adad442656488ddc80fc5bb19ef7850d0">os::driver::usb::Host</a>
 , <a class="el" href="classos_1_1driver_1_1_usbd__wrapper.html#aa2a5d689b0bca450afd1f60896056f87">os::driver::Usbd_wrapper</a>
 , <a class="el" href="classos_1_1driver_1_1_usbh__wrapper.html#ab92f9e0725bfcf5676d9435f8353a422">os::driver::Usbh_wrapper</a>
-, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_critical__section.html#a6426d6c7bb8d4ccfb7808a2855708463">os::rtos::interrupts::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_lock.html#a7fe459aba8f8263c8750ed7d4d421148">os::rtos::interrupts::Lock</a>
-, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1_uncritical__section.html#a8b64ddf98053c16e9e20231d154a6d2b">os::rtos::interrupts::Uncritical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1_critical__section.html#aee74c9cc197872af89d650731f87a50f">os::rtos::scheduler::Critical_section</a>
-, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1_lock.html#af77321a4c8a1f89811a94cd8aff30900">os::rtos::scheduler::Lock</a>
-, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1_uncritical__section.html#a321efe374b7407e10f14b8f61772cf91">os::rtos::scheduler::Uncritical_section</a>
 </li>
-<li>steady_count_
-: <a class="el" href="classos_1_1rtos_1_1_clock.html#a290fb647db5868696ca6a9e165f297ed">os::rtos::Clock</a>
+<li>steady_count
+: <a class="el" href="structos__clock__s.html#a48a96dd87f90632f3994727cb8bce908">os_clock_s</a>
 </li>
-<li>steady_list_
-: <a class="el" href="classos_1_1rtos_1_1_clock.html#a84fd4bac67e766f17fba743ea93e26ec">os::rtos::Clock</a>
+<li>steady_list
+: <a class="el" href="structos__clock__s.html#a8bc8c76edff77b3c07f38584f0478eff">os_clock_s</a>
 </li>
 <li>synchronous_master
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_capabilities.html#a8d33b4503a5041c6fa0bf89342f1bcb7">os::driver::serial::Capabilities</a>

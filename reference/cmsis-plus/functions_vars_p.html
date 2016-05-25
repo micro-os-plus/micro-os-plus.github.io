@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -99,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
@@ -166,20 +168,17 @@ $(document).ready(function(){initNavTree('functions_vars_p.html','');});
 <li>parent
 : <a class="el" href="structos__thread__s.html#a4db7d0dfcc509a4f75de39315bd18601">os_thread_s</a>
 </li>
-<li>parent_
-: <a class="el" href="classos_1_1rtos_1_1_thread.html#ae471e6686a9df4c8fd2ad2eabbed4cc8">os::rtos::Thread</a>
-</li>
 <li>pc
 : <a class="el" href="structexception__stack__frame__s.html#a7c09154074b5650e7e261b3e970e86f3">exception_stack_frame_s</a>
 </li>
 <li>period
 : <a class="el" href="structos__timer__s.html#afa2bfbdb06b080891ed0caf6648cfb62">os_timer_s</a>
 </li>
-<li>period_
-: <a class="el" href="classos_1_1rtos_1_1_timer.html#a996193fcab38d4dc5e8dec7cd33fecea">os::rtos::Timer</a>
+<li>periodic_initializer
+: <a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f">os::rtos::timer</a>
 </li>
 <li>pool
-: <a class="el" href="classos_1_1rtos_1_1mempool_1_1_arena.html#a14ddcc54689a42beb095dd25da996ed7">os::rtos::mempool::Arena&lt; T, blocks, block_size_bytes &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1arena.html#ac890bbd143cbd47a2a1cda296d285d24">os::rtos::memory_pool::arena&lt; T, blocks, block_size_bytes &gt;</a>
 , <a class="el" href="structos__mail__queue__s.html#a9a1d839f0090344d06f62359aa05e2c0">os_mail_queue_s</a>
 , <a class="el" href="structos__mail_q__def.html#ad101580200e8c5ff720ff6545531901c">os_mailQ_def</a>
 , <a class="el" href="structos__pool__def.html#acf74f1070644e33a567bc13a944fcb87">os_pool_def</a>
@@ -187,17 +186,11 @@ $(document).ready(function(){initNavTree('functions_vars_p.html','');});
 <li>pool_addr
 : <a class="el" href="structos__mempool__s.html#aca6a58c528dfa1cab282115a1c400fab">os_mempool_s</a>
 </li>
-<li>pool_addr_
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#a4269bf0adfad4acad2b98d4dd442ac3b">os::rtos::Memory_pool</a>
-</li>
 <li>pool_item_sz
 : <a class="el" href="structos__mail_q__def.html#acb56289aa3aa6c7604c7cd74c7ba52e5">os_mailQ_def</a>
 </li>
 <li>pool_size_bytes
 : <a class="el" href="structos__mempool__s.html#abe75e5de659cf734ca7ed0cac0786b27">os_mempool_s</a>
-</li>
-<li>pool_size_bytes_
-: <a class="el" href="classos_1_1rtos_1_1_memory__pool.html#ae910bd460e2ef9dcd186b25b79018bff">os::rtos::Memory_pool</a>
 </li>
 <li>pool_sz
 : <a class="el" href="structos__mail_q__def.html#aa3cea447ed62fbe28be8862e64662e4b">os_mailQ_def</a>
@@ -206,49 +199,31 @@ $(document).ready(function(){initNavTree('functions_vars_p.html','');});
 <li>port
 : <a class="el" href="structos__thread__context__s.html#a1783d5b31349bd90c7a8e17d4dabd880">os_thread_context_s</a>
 </li>
-<li>port_
-: <a class="el" href="classos_1_1rtos_1_1thread_1_1_context.html#a34a1d64822dc1ea485f9d9bf8191df92">os::rtos::thread::Context</a>
-</li>
 <li>port_mask
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a57abb95c041cc6c140303dd3313acdc9">os::driver::usb::host::Capabilities</a>
 </li>
 <li>prev
-: <a class="el" href="classos_1_1rtos_1_1_static__double__list__links.html#aa9f293087da6004d65eafe977c9f5138">os::rtos::Static_double_list_links</a>
+: <a class="el" href="classos_1_1rtos_1_1static__double__list__links.html#a273b966cf9a5671172f478786ce549dd">os::rtos::static_double_list_links</a>
 , <a class="el" href="structos__clock__node__s.html#a919f956c2b84125f841d6b99e45876b0">os_clock_node_s</a>
 , <a class="el" href="structos__double__list__links__s.html#a587d6f591aa5e257f5b5233d81e485e2">os_double_list_links_s</a>
 </li>
 <li>prev_array
 : <a class="el" href="structos__mqueue__s.html#a33c36fd8dfc44bf6caebcf9787cc15a2">os_mqueue_s</a>
 </li>
-<li>prev_array_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#ad561546e8930505f2d71acb0f259eeed">os::rtos::Message_queue</a>
-</li>
 <li>prio
 : <a class="el" href="structos__thread__s.html#a355a9dc29319520d4749b07c79b2be6b">os_thread_s</a>
-</li>
-<li>prio_
-: <a class="el" href="classos_1_1rtos_1_1_thread.html#ae92bdacdb28ae81f392a711f2c11806d">os::rtos::Thread</a>
 </li>
 <li>prio_array
 : <a class="el" href="structos__mqueue__s.html#a02d8ac66608bcac763b109b08723c77f">os_mqueue_s</a>
 </li>
-<li>prio_array_
-: <a class="el" href="classos_1_1rtos_1_1_message__queue.html#af241c5105947378e770f13de988b1af6">os::rtos::Message_queue</a>
-</li>
 <li>prio_ceiling
 : <a class="el" href="structos__mutex__s.html#a5da8c82e9626eb017defb8dd378acbe8">os_mutex_s</a>
 </li>
-<li>prio_ceiling_
-: <a class="el" href="classos_1_1rtos_1_1_mutex.html#aa3887353afd8a7cfa4190996b49ad3a6">os::rtos::Mutex</a>
-</li>
 <li>prios
-: <a class="el" href="classos_1_1rtos_1_1mqueue_1_1_arena.html#a2fcf6e7bfceb3a01b6cdf2478feb9091">os::rtos::mqueue::Arena&lt; T, msgs, msg_size_bytes &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1message__queue_1_1arena.html#a679a09fb4e24817fa97e3c7f6085804e">os::rtos::message_queue::arena&lt; T, msgs, msg_size_bytes &gt;</a>
 </li>
 <li>protocol
 : <a class="el" href="structos__mutex__s.html#a3e7442c7ac262d38f58855e76c95d720">os_mutex_s</a>
-</li>
-<li>protocol_
-: <a class="el" href="classos_1_1rtos_1_1_mutex.html#a671575343eaa2fbaab379756663f19f0">os::rtos::Mutex</a>
 </li>
 <li>psr
 : <a class="el" href="structexception__stack__frame__s.html#acb44bbe2250a13a138e3f4276a33a62b">exception_stack_frame_s</a>

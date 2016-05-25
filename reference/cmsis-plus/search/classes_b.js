@@ -2,6 +2,8 @@ var searchData=
 [
   ['once_5fflag',['once_flag',['../structos_1_1estd_1_1once__flag.html',1,'os::estd']]],
   ['os_5fclock_5fnode_5fs',['os_clock_node_s',['../structos__clock__node__s.html',1,'']]],
+  ['os_5fclock_5fs',['os_clock_s',['../structos__clock__s.html',1,'']]],
+  ['os_5fclock_5ftimestamps_5flist_5fs',['os_clock_timestamps_list_s',['../structos__clock__timestamps__list__s.html',1,'']]],
   ['os_5fcondvar_5fattr_5fs',['os_condvar_attr_s',['../structos__condvar__attr__s.html',1,'']]],
   ['os_5fcondvar_5fs',['os_condvar_s',['../structos__condvar__s.html',1,'']]],
   ['os_5fdouble_5flist_5flinks_5fs',['os_double_list_links_s',['../structos__double__list__links__s.html',1,'']]],
@@ -21,7 +23,7 @@ var searchData=
   ['os_5fsemaphore_5fattr_5fs',['os_semaphore_attr_s',['../structos__semaphore__attr__s.html',1,'']]],
   ['os_5fsemaphore_5fdef',['os_semaphore_def',['../structos__semaphore__def.html',1,'']]],
   ['os_5fsemaphore_5fs',['os_semaphore_s',['../structos__semaphore__s.html',1,'']]],
-  ['os_5fsystick_5fclock_5fcurrent_5fs',['os_systick_clock_current_s',['../structos__systick__clock__current__s.html',1,'']]],
+  ['os_5fsysclock_5fcurrent_5fs',['os_sysclock_current_s',['../structos__sysclock__current__s.html',1,'']]],
   ['os_5fthread_5fattr_5fs',['os_thread_attr_s',['../structos__thread__attr__s.html',1,'']]],
   ['os_5fthread_5fchildren_5flist_5fs',['os_thread_children_list_s',['../structos__thread__children__list__s.html',1,'']]],
   ['os_5fthread_5fcontext_5fs',['os_thread_context_s',['../structos__thread__context__s.html',1,'']]],

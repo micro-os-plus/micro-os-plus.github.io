@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['hub_5faddr_5ft',['hub_addr_t',['../namespaceos_1_1driver_1_1usb.html#a3e4148235524a381072840100a1a7d94',1,'os::driver::usb']]],
-  ['hub_5fport_5ft',['hub_port_t',['../namespaceos_1_1driver_1_1usb.html#ab26f1e6bb0eada0e15736ef1481d6601',1,'os::driver::usb']]]
+  ['frame_5fnumber_5ft',['frame_number_t',['../namespaceos_1_1driver_1_1usb.html#ab63f90a8ff7ba91b64d07baf621e72bc',1,'os::driver::usb']]],
+  ['func_5fargs_5ft',['func_args_t',['../classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808',1,'os::rtos::thread::func_args_t()'],['../classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263',1,'os::rtos::timer::func_args_t()']]],
+  ['func_5ft',['func_t',['../classos_1_1rtos_1_1port_1_1context.html#a14d5987a651763eefc64817b5fa1c230',1,'os::rtos::port::context::func_t()'],['../classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc',1,'os::rtos::thread::func_t()'],['../classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1',1,'os::rtos::timer::func_t()']]],
+  ['function_5fobject_5fdeleter_5ft',['function_object_deleter_t',['../classos_1_1estd_1_1thread.html#a1a68ce5eeb2e2a473ff8219f6b3b6d5f',1,'os::estd::thread']]]
 ];
