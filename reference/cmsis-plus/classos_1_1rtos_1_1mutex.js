@@ -1,11 +1,14 @@
 var classos_1_1rtos_1_1mutex =
 [
     [ "attributes", "classos_1_1rtos_1_1mutex_1_1attributes.html", "classos_1_1rtos_1_1mutex_1_1attributes" ],
+    [ "protocol", "structos_1_1rtos_1_1mutex_1_1protocol.html", "structos_1_1rtos_1_1mutex_1_1protocol" ],
     [ "recursive_attributes", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html", "classos_1_1rtos_1_1mutex_1_1recursive__attributes" ],
+    [ "robustness", "structos_1_1rtos_1_1mutex_1_1robustness.html", "structos_1_1rtos_1_1mutex_1_1robustness" ],
+    [ "type", "structos_1_1rtos_1_1mutex_1_1type.html", "structos_1_1rtos_1_1mutex_1_1type" ],
     [ "count_t", "classos_1_1rtos_1_1mutex.html#a31a6f2d64eb598ccb0f8152e2bf20504", null ],
-    [ "protocol_t", "classos_1_1rtos_1_1mutex.html#a1e88f46f2a57278deb8eb93c8902a478", null ],
-    [ "robustness_t", "classos_1_1rtos_1_1mutex.html#a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd", null ],
-    [ "type_t", "classos_1_1rtos_1_1mutex.html#a44809780c4f47991c0ef1ffa6fe794b1", null ],
+    [ "protocol_t", "classos_1_1rtos_1_1mutex.html#a65bfef6cd463aac910d5c93d5828fe7f", null ],
+    [ "robustness_t", "classos_1_1rtos_1_1mutex.html#a763c7134e2f479dcc4b21912c0af89c7", null ],
+    [ "type_t", "classos_1_1rtos_1_1mutex.html#a16cfc618bf9be9be363fc28bd72b3200", null ],
     [ "mutex", "classos_1_1rtos_1_1mutex.html#ad71564da6bf47bb2280a5516761aca65", null ],
     [ "mutex", "classos_1_1rtos_1_1mutex.html#a9a3709230c5f6eadea08bbd7fbf9da53", null ],
     [ "~mutex", "classos_1_1rtos_1_1mutex.html#ad0cd0d2915a52d1f6d59867c6288793a", null ],

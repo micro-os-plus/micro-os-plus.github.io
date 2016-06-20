@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: CMSIS++ ISO Standard Threads</title>
+<title>CMSIS++ Reference: CMSIS++ ISO Standard C++ Threads</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-iso.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">CMSIS++ ISO Standard Threads</div>  </div>
+<div class="title">CMSIS++ ISO Standard C++ Threads</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -140,7 +140,7 @@ Namespaces</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1mutex.html">os::estd::mutex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1chrono_1_1_systick__clock.html">os::estd::chrono::Systick_clock</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1chrono_1_1systick__clock.html">os::estd::chrono::systick_clock</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html">os::estd::thread</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard thread.  <a href="classos_1_1estd_1_1thread.html#details">More...</a><br /></td></tr>
@@ -164,7 +164,7 @@ Classes</h2></td></tr>
 <tr class="memitem:ga842731dce88575e1dada90478fa85da2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">os::estd::this_thread::yield</a> () noexcept</td></tr>
 <tr class="memdesc:ga842731dce88575e1dada90478fa85da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield the CPU to the next ready thread.  <a href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">More...</a><br /></td></tr>
 <tr class="separator:ga842731dce88575e1dada90478fa85da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = chrono::Systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
+<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = chrono::systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
 <tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">os::estd::this_thread::sleep_for</a> (const std::chrono::duration&lt; Rep_T, Period_T &gt; &amp;rel_time)</td></tr>
 <tr class="memdesc:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a given duration.  <a href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">More...</a><br /></td></tr>
 <tr class="separator:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,7 +262,7 @@ Classes</h2></td></tr>
 
 <p>Return the <b>id</b> of the current running thread. </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00451">451</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00418">418</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ Classes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00082">82</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<p>Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00084">84</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
 
 </div>
 </div>
@@ -326,7 +326,7 @@ Classes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Clock_T  = chrono::Systick_clock, typename Rep_T , typename Period_T &gt; </div>
+template&lt;typename Clock_T  = chrono::systick_clock, typename Rep_T , typename Period_T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr void os::estd::this_thread::sleep_for </td>
@@ -341,13 +341,13 @@ template&lt;typename Clock_T  = chrono::Systick_clock, typename Rep_T , typename
 <p>Sleep for a given duration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rel_time</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rel_time</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <p>extra Clock_T is an extension to the standard </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00503">503</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00473">473</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -370,12 +370,12 @@ template&lt;typename Clock_T , typename Duration_T &gt; </div>
 <p>Sleep until a given time point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">abs_time</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">abs_time</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00521">521</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00493">493</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ template&lt;typename Clock_T , typename Duration_T &gt; </div>
 <p>Yield the CPU to the next ready thread. </p>
 <p>Yield execution to the next ready thread. </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00445">445</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00412">412</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>

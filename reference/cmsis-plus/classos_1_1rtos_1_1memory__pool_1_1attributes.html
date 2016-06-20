@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -170,7 +170,7 @@ Public Attributes</h2></td></tr>
 <p>Define an array of structures and pass its address and size via the attributes.</p>
 <div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Allocate static storage for the pool.</span></div><div class="line">properties_t <a class="code" href="classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87">pool</a>[pool_size];</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Define pool attributes.</span></div><div class="line">   memory_pool::attributes attr { <span class="stringliteral">&quot;properties&quot;</span> };</div><div class="line">   attr.mp_pool_address = <a class="code" href="classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87">pool</a>;</div><div class="line">   attr.mp_pool_size_bytes = <span class="keyword">sizeof</span>(<a class="code" href="classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87">pool</a>);</div><div class="line"></div><div class="line">   <span class="comment">// Create the pool object.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1memory__pool.html#a7fb9d6254e71976f36541a4239e4a058">memory_pool</a> mp { attr, pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified, but inspired by POSIX attributes used in <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html">&lt;pthread.h&gt;</a> (IEEE Std 1003.1, 2013 Edition). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00092">92</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00091">91</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac4bde4a3c9d0f66fbe8a35d43262cb3d"></a>
 <div class="memitem">
@@ -188,7 +188,7 @@ Public Attributes</h2></td></tr>
 <p>Create a memory pool attributes object. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00877">877</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00875">875</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -237,9 +237,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer to clock. </p>
-<p>If <code>nullptr</code>, the default clock is the <a class="el" href="group__cmsis-plus-rtos.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a>. </p>
+<p>If <code>nullptr</code>, the default clock is the <a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00465">465</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00478">478</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Public Attributes</h2></td></tr>
 <p>Set this variable to a user defined memory area large enough to store the memory pool. Usually this is a statically allocated array of structures.</p>
 <p>The default value is <code>nullptr</code>, which means there is no user defined memory pool. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00143">143</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00142">142</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Public Attributes</h2></td></tr>
 <p>The memory pool size must match exactly the allocated size. It is used for validation; when the memory pool is initialised, this size must be large enough to accommodate the desired memory pool.</p>
 <p>If the <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html#a0ba240ee88246605ea081a7d881ae24c">mp_pool_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
-<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00148">148</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00147">147</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>

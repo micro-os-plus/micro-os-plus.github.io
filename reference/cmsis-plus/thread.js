@@ -11,8 +11,8 @@ var thread =
     [ "operator>=", "thread.html#a0d6ecee23a6a697b44ebc4b75eabf292", null ],
     [ "sleep_for", "thread.html#ga55cae14b5431f6b55ee0bdae86ccc058", null ],
     [ "sleep_until", "thread.html#ga03ee0667f80c91ef149b810bfd487631", null ],
-    [ "sleep_until", "thread.html#aee570ac3316088e6a079cb54e7e7d455", null ],
-    [ "sleep_until", "thread.html#a6dfeb884cb9f55b88a5e99a54ee338fc", null ],
+    [ "sleep_until", "thread.html#ab094814dcb121739e0e9287d538d2bae", null ],
+    [ "sleep_until", "thread.html#a193ad6a6b51c48e2967e9de3462adfb1", null ],
     [ "swap", "thread.html#af16fff9147064db064b361580ceb5ae2", null ],
     [ "yield", "thread.html#ga842731dce88575e1dada90478fa85da2", null ]
 ];

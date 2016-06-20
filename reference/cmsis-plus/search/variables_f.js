@@ -1,8 +1,20 @@
 var searchData=
 [
-  ['queue',['queue',['../structos__message_q__def.html#a6156f0eb76ac76dd24e9f50425f2cc89',1,'os_messageQ_def::queue()'],['../structos__mail_q__def.html#a467621f6bcb23a6d4de0908517a670a8',1,'os_mailQ_def::queue()'],['../structos__mail__queue__s.html#a107db7ac9469a767f8d512c382f2c933',1,'os_mail_queue_s::queue()'],['../classos_1_1rtos_1_1message__queue_1_1arena.html#a47415e39c28d986aa92b69ffdd352610',1,'os::rtos::message_queue::arena::queue()']]],
-  ['queue_5faddr',['queue_addr',['../structos__mqueue__s.html#a3102f439c4eb558f8226a7083c3166ea',1,'os_mqueue_s']]],
-  ['queue_5fitem_5fsz',['queue_item_sz',['../structos__mail_q__def.html#a9e24a300acba966809bbe121dec2acbf',1,'os_mailQ_def']]],
-  ['queue_5fsize_5fbytes',['queue_size_bytes',['../structos__mqueue__s.html#a4e325398f11ff07c3a2cfad6c4a29ace',1,'os_mqueue_s']]],
-  ['queue_5fsz',['queue_sz',['../structos__message_q__def.html#afc8e51d4d45e959fab77977baf8eb970',1,'os_messageQ_def::queue_sz()'],['../structos__mail_q__def.html#a2614df3d7904500621666abc01808f22',1,'os_mailQ_def::queue_sz()']]]
+  ['r0',['r0',['../structexception__stack__frame__s.html#a4f0cd51a7d1df883d6e70db8eb06eed8',1,'exception_stack_frame_s']]],
+  ['r1',['r1',['../structexception__stack__frame__s.html#ae28e6cdd7bec9849c9254098f5b5c589',1,'exception_stack_frame_s']]],
+  ['r12',['r12',['../structexception__stack__frame__s.html#a662ddc688b9bae7903c9e1513fd7ddc3',1,'exception_stack_frame_s']]],
+  ['r2',['r2',['../structexception__stack__frame__s.html#acc4d022f30404d81a80a5e24e1b84b8b',1,'exception_stack_frame_s']]],
+  ['r3',['r3',['../structexception__stack__frame__s.html#a87b4c3699526d548651abe9503aec0df',1,'exception_stack_frame_s']]],
+  ['range',['range',['../structos_1_1rtos_1_1thread_1_1priority.html#ac6eda42298fb0342b8aa20ecf8096cbd',1,'os::rtos::thread::priority']]],
+  ['recursive_5finitializer',['recursive_initializer',['../classos_1_1rtos_1_1mutex.html#a9ff513834ed7545c8b978edfa51f88bb',1,'os::rtos::mutex']]],
+  ['res_5f',['res_',['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#aaaca5dfb506220669ccb17736b965df1',1,'os::rtos::memory::polymorphic_allocator']]],
+  ['return_5fok',['RETURN_OK',['../namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497',1,'os::driver']]],
+  ['ri',['ri',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b',1,'os::driver::serial::Modem_status::ri()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#aabdcd81f18c0daeff729367e22a87306',1,'os::driver::serial::Capabilities::ri()']]],
+  ['rtclock',['rtclock',['../group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a',1,'os::rtos']]],
+  ['rts',['rts',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a6421e78157d0f6daa7af4a1761c96a4f',1,'os::driver::serial::Capabilities']]],
+  ['rx_5fbreak',['rx_break',['../classos_1_1driver_1_1serial_1_1_status.html#af9a39a9f0afa08587df69fa2f0d6ecc2',1,'os::driver::serial::Status']]],
+  ['rx_5fbusy',['rx_busy',['../classos_1_1driver_1_1serial_1_1_status.html#a62248d07854afc94575f6aa577724174',1,'os::driver::serial::Status']]],
+  ['rx_5fframing_5ferror',['rx_framing_error',['../classos_1_1driver_1_1serial_1_1_status.html#a6bd02482695b63b97edb70710524eec0',1,'os::driver::serial::Status']]],
+  ['rx_5foverflow',['rx_overflow',['../classos_1_1driver_1_1serial_1_1_status.html#a31be58a1890037a36187a9700cfdbea9',1,'os::driver::serial::Status']]],
+  ['rx_5fparity_5ferror',['rx_parity_error',['../classos_1_1driver_1_1serial_1_1_status.html#aeb97bc3a167f2ae0fe089620f79f0373',1,'os::driver::serial::Status']]]
 ];

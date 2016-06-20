@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('classos_1_1estd_1_1thread.html','');})
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classos_1_1estd_1_1thread-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::estd::thread Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-iso.html">CMSIS++ ISO Standard Threads</a></div></div>  </div>
+<div class="title">os::estd::thread Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-iso.html">CMSIS++ ISO Standard C++ Threads</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -149,22 +149,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:adac6ec40b000c099fd4996435b3744a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9">native_handle_type</a> = os::rtos::Thread *</td></tr>
-<tr class="separator:adac6ec40b000c099fd4996435b3744a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a16bfe18e9b70d49344f49017bae016"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a1a16bfe18e9b70d49344f49017bae016">native_handle_type</a> = <a class="el" href="classos_1_1rtos_1_1thread.html">os::rtos::thread</a> *</td></tr>
+<tr class="separator:a1a16bfe18e9b70d49344f49017bae016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a54a27680b7b9cd669444f6300d25ef0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a54a27680b7b9cd669444f6300d25ef0d">thread</a> () noexcept=default</td></tr>
 <tr class="separator:a54a27680b7b9cd669444f6300d25ef0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16732e2bcb35e4eb4b72d76969b3e345"><td class="memTemplParams" colspan="2">template&lt;typename Callable_T , typename  = typename std::enable_if&lt;              !std::is_same&lt;Callable_T, std::nullptr_t&gt;::value&gt;::type, typename... Args_T&gt; </td></tr>
-<tr class="memitem:a16732e2bcb35e4eb4b72d76969b3e345"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a16732e2bcb35e4eb4b72d76969b3e345">thread</a> (Callable_T &amp;&amp;f, Args_T &amp;&amp;...args)</td></tr>
-<tr class="separator:a16732e2bcb35e4eb4b72d76969b3e345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7550d5ae07abed801a67bac254dc0655"><td class="memTemplParams" colspan="2">template&lt;typename Attr_T , typename  = typename std::enable_if&lt;              std::is_same&lt;Attr_T, os::rtos::thread::Attributes&gt;::value&gt;::type, typename Callable_T , typename... Args_T&gt; </td></tr>
-<tr class="memitem:a7550d5ae07abed801a67bac254dc0655"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a7550d5ae07abed801a67bac254dc0655">thread</a> (Attr_T &amp;attr, Callable_T &amp;&amp;f, Args_T &amp;&amp;...args)</td></tr>
-<tr class="separator:a7550d5ae07abed801a67bac254dc0655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44bd6ecd1662e07a465c61c1df00f095"><td class="memTemplParams" colspan="2">template&lt;typename Attr_T , typename  = typename std::enable_if&lt;              std::is_same&lt;Attr_T, os::rtos::thread::Attributes&gt;::value&gt;::type, typename Callable_T , typename... Args_T&gt; </td></tr>
-<tr class="memitem:a44bd6ecd1662e07a465c61c1df00f095"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a44bd6ecd1662e07a465c61c1df00f095">thread</a> (const Attr_T &amp;attr, Callable_T &amp;&amp;f, Args_T &amp;&amp;...args)</td></tr>
-<tr class="separator:a44bd6ecd1662e07a465c61c1df00f095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992f4297f1688afab71a1a6a4216de2d"><td class="memTemplParams" colspan="2">template&lt;typename Callable_T , typename... Args_T&gt; </td></tr>
+<tr class="memitem:a992f4297f1688afab71a1a6a4216de2d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a992f4297f1688afab71a1a6a4216de2d">thread</a> (Callable_T &amp;&amp;f, Args_T &amp;&amp;...args)</td></tr>
+<tr class="separator:a992f4297f1688afab71a1a6a4216de2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac8a3d6b58b82db3f6a32e2948a18d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a9ac8a3d6b58b82db3f6a32e2948a18d1">thread</a> (const <a class="el" href="classos_1_1estd_1_1thread.html">thread</a> &amp;)=delete</td></tr>
 <tr class="separator:a9ac8a3d6b58b82db3f6a32e2948a18d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe21b7327ad2fc03839490bb4a63af6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#abe21b7327ad2fc03839490bb4a63af6d">thread</a> (<a class="el" href="classos_1_1estd_1_1thread.html">thread</a> &amp;&amp;t) noexcept</td></tr>
@@ -179,7 +173,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad9a79f3504272f19b393b5ae42073192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9544e521093c78b7438a26a828290df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#aa9544e521093c78b7438a26a828290df">joinable</a> () const  noexcept</td></tr>
 <tr class="separator:aa9544e521093c78b7438a26a828290df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ff293662eceb7f21e7153aee686dce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9">native_handle_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a00ff293662eceb7f21e7153aee686dce">native_handle</a> ()</td></tr>
+<tr class="memitem:a00ff293662eceb7f21e7153aee686dce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1thread.html#a1a16bfe18e9b70d49344f49017bae016">native_handle_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a00ff293662eceb7f21e7153aee686dce">native_handle</a> ()</td></tr>
 <tr class="separator:a00ff293662eceb7f21e7153aee686dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3476e4499198c867f4f2e7a7370f98d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1thread.html">thread</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html#a3476e4499198c867f4f2e7a7370f98d7">operator=</a> (const <a class="el" href="classos_1_1estd_1_1thread.html">thread</a> &amp;)=delete</td></tr>
 <tr class="separator:a3476e4499198c867f4f2e7a7370f98d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,7 +216,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Standard thread. </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00066">66</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00063">63</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a1a68ce5eeb2e2a473ff8219f6b3b6d5f"></a>
 <div class="memitem">
@@ -242,21 +236,21 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00179">179</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00158">158</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adac6ec40b000c099fd4996435b3744a9"></a>
+<a class="anchor" id="a1a16bfe18e9b70d49344f49017bae016"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9">os::estd::thread::native_handle_type</a> =  os::rtos::Thread*</td>
+          <td class="memname">using <a class="el" href="classos_1_1estd_1_1thread.html#a1a16bfe18e9b70d49344f49017bae016">os::estd::thread::native_handle_type</a> =  <a class="el" href="classos_1_1rtos_1_1thread.html">os::rtos::thread</a>*</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00070">70</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00067">67</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -284,11 +278,11 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a16732e2bcb35e4eb4b72d76969b3e345"></a>
+<a class="anchor" id="a992f4297f1688afab71a1a6a4216de2d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Callable_T , typename T , typename... Args_T&gt; </div>
+template&lt;typename Callable_T , typename... Args_T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -318,95 +312,7 @@ template&lt;typename Callable_T , typename T , typename... Args_T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00388">388</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7550d5ae07abed801a67bac254dc0655"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Attr_T , typename T , typename Callable_T, typename... Args_T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">os::estd::thread::thread </td>
-          <td>(</td>
-          <td class="paramtype">Attr_T &amp;&#160;</td>
-          <td class="paramname"><em>attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Callable_T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args_T &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_source.html#l00408">408</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a44bd6ecd1662e07a465c61c1df00f095"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Attr_T , typename T , typename Callable_T, typename... Args_T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">os::estd::thread::thread </td>
-          <td>(</td>
-          <td class="paramtype">const Attr_T &amp;&#160;</td>
-          <td class="paramname"><em>attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Callable_T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args_T &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="thread_source.html#l00398">398</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00372">372</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -502,7 +408,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00374">374</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00355">355</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -571,7 +477,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00345">345</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00324">324</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -596,7 +502,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00357">357</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00336">336</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -650,7 +556,7 @@ template&lt;typename F_T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9">thread::native_handle_type</a> os::estd::thread::native_handle </td>
+          <td class="memname"><a class="el" href="classos_1_1estd_1_1thread.html#a1a16bfe18e9b70d49344f49017bae016">thread::native_handle_type</a> os::estd::thread::native_handle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -663,7 +569,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00351">351</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00330">330</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -741,7 +647,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00364">364</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00343">343</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -790,7 +696,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00180">180</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00159">159</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -812,7 +718,7 @@ template&lt;typename F_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="thread_source.html#l00177">177</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00156">156</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>

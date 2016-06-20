@@ -1,27 +1,4 @@
 var searchData=
 [
-  ['anonymous_5fnamespace_7bos_2dthread_2eh_7d',['anonymous_namespace{os-thread.h}',['../namespaceos_1_1rtos_1_1anonymous__namespace_02os-thread_8h_03.html',1,'os::rtos']]],
-  ['chrono',['chrono',['../namespaceos_1_1estd_1_1chrono.html',1,'os::estd']]],
-  ['clock',['clock',['../namespaceos_1_1rtos_1_1port_1_1clock.html',1,'os::rtos::port']]],
-  ['device',['device',['../namespaceos_1_1driver_1_1usb_1_1device.html',1,'os::driver::usb']]],
-  ['driver',['driver',['../namespaceos_1_1driver.html',1,'os']]],
-  ['estd',['estd',['../namespaceos_1_1estd.html',1,'os']]],
-  ['flags',['flags',['../namespaceos_1_1rtos_1_1flags.html',1,'os::rtos']]],
-  ['host',['host',['../namespaceos_1_1driver_1_1usb_1_1host.html',1,'os::driver::usb']]],
-  ['interrupts',['interrupts',['../namespaceos_1_1rtos_1_1port_1_1interrupts.html',1,'os::rtos::port']]],
-  ['interrupts',['interrupts',['../namespaceos_1_1rtos_1_1interrupts.html',1,'os::rtos']]],
-  ['memory',['memory',['../namespaceos_1_1rtos_1_1memory.html',1,'os::rtos']]],
-  ['mode',['mode',['../namespaceos_1_1rtos_1_1flags_1_1mode.html',1,'os::rtos::flags']]],
-  ['os',['os',['../namespaceos.html',1,'']]],
-  ['port',['port',['../namespaceos_1_1rtos_1_1port.html',1,'os::rtos']]],
-  ['result',['result',['../namespaceos_1_1rtos_1_1result.html',1,'os::rtos']]],
-  ['rtos',['rtos',['../namespaceos_1_1rtos.html',1,'os']]],
-  ['scheduler',['scheduler',['../namespaceos_1_1rtos_1_1port_1_1scheduler.html',1,'os::rtos::port']]],
-  ['scheduler',['scheduler',['../namespaceos_1_1rtos_1_1scheduler.html',1,'os::rtos']]],
-  ['serial',['serial',['../namespaceos_1_1driver_1_1serial.html',1,'os::driver']]],
-  ['this_5fthread',['this_thread',['../namespaceos_1_1estd_1_1this__thread.html',1,'os::estd']]],
-  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1port_1_1this__thread.html',1,'os::rtos::port']]],
-  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1this__thread.html',1,'os::rtos']]],
-  ['trace',['trace',['../namespaceos_1_1trace.html',1,'os']]],
-  ['usb',['usb',['../namespaceos_1_1driver_1_1usb.html',1,'os::driver']]]
+  ['std',['std',['../namespacestd.html',1,'']]]
 ];

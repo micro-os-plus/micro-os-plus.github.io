@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -135,7 +135,6 @@ $(document).ready(function(){initNavTree('thread.html','');});
 <code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="chrono_source.html">cmsis-plus/iso/chrono</a>&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 </div>
@@ -168,12 +167,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aee570ac3316088e6a079cb54e7e7d455"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
-<tr class="memitem:aee570ac3316088e6a079cb54e7e7d455"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#aee570ac3316088e6a079cb54e7e7d455">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::Realtime_clock, Duration_T &gt; &amp;abs_time)</td></tr>
-<tr class="separator:aee570ac3316088e6a079cb54e7e7d455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfeb884cb9f55b88a5e99a54ee338fc"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
-<tr class="memitem:a6dfeb884cb9f55b88a5e99a54ee338fc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a6dfeb884cb9f55b88a5e99a54ee338fc">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::Systick_clock, Duration_T &gt; &amp;abs_time)</td></tr>
-<tr class="separator:a6dfeb884cb9f55b88a5e99a54ee338fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab094814dcb121739e0e9287d538d2bae"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
+<tr class="memitem:ab094814dcb121739e0e9287d538d2bae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#ab094814dcb121739e0e9287d538d2bae">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::realtime_clock, Duration_T &gt; &amp;abs_time)</td></tr>
+<tr class="separator:ab094814dcb121739e0e9287d538d2bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
+<tr class="memitem:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a193ad6a6b51c48e2967e9de3462adfb1">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::systick_clock, Duration_T &gt; &amp;abs_time)</td></tr>
+<tr class="separator:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:af16fff9147064db064b361580ceb5ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#af16fff9147064db064b361580ceb5ae2">os::estd::swap</a> (thread &amp;x, thread &amp;y) noexcept</td></tr>
 <tr class="separator:af16fff9147064db064b361580ceb5ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,7 +195,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga842731dce88575e1dada90478fa85da2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">os::estd::this_thread::yield</a> () noexcept</td></tr>
 <tr class="memdesc:ga842731dce88575e1dada90478fa85da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield the CPU to the next ready thread.  <a href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">More...</a><br /></td></tr>
 <tr class="separator:ga842731dce88575e1dada90478fa85da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = chrono::Systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
+<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = chrono::systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
 <tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">os::estd::this_thread::sleep_for</a> (const std::chrono::duration&lt; Rep_T, Period_T &gt; &amp;rel_time)</td></tr>
 <tr class="memdesc:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a given duration.  <a href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">More...</a><br /></td></tr>
 <tr class="separator:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memSeparator" colspan="2">&#160;</td></tr>

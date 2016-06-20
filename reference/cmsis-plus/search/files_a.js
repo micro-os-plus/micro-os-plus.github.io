@@ -5,6 +5,7 @@ var searchData=
   ['serial_2ecpp',['serial.cpp',['../serial_8cpp.html',1,'']]],
   ['serial_2eh',['serial.h',['../serial_8h.html',1,'']]],
   ['socket_2eh',['socket.h',['../socket_8h.html',1,'']]],
+  ['standard_2daliases_2eh',['standard-aliases.h',['../standard-aliases_8h.html',1,'']]],
   ['startup_2ec',['startup.c',['../startup_8c.html',1,'']]],
   ['stropts_2eh',['stropts.h',['../stropts_8h.html',1,'']]],
   ['system_2derror_2ecpp',['system-error.cpp',['../system-error_8cpp.html',1,'']]],

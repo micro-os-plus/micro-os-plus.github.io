@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -124,56 +124,24 @@ $(document).ready(function(){initNavTree('structos__condvar__s.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structos__condvar__s-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os_condvar_s Struct Reference</div>  </div>
+<div class="title">os_condvar_s Struct Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos-c.html">CMSIS++ RTOS C API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-c-condvar.html">Condition variables</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aff87aef33771ab94f4801d7dadf80e2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="os-c-decls_8h.html#a556a8ea5f9e1f5fa90cd0f759de0a351">os_threads_waiting_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__condvar__s.html#aff87aef33771ab94f4801d7dadf80e2c">list</a></td></tr>
-<tr class="separator:aff87aef33771ab94f4801d7dadf80e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4c5235a3c5d45e9f8911c7f5ddac2b5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__condvar__s.html#ac4c5235a3c5d45e9f8911c7f5ddac2b5">name</a></td></tr>
-<tr class="separator:ac4c5235a3c5d45e9f8911c7f5ddac2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p>Condition variable object storage.  
+ <a href="structos__condvar__s.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="os-c-api_8h_source.html">cmsis-plus/rtos/os-c-api.h</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00369">369</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aff87aef33771ab94f4801d7dadf80e2c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="os-c-decls_8h.html#a556a8ea5f9e1f5fa90cd0f759de0a351">os_threads_waiting_list_t</a> os_condvar_s::list</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<div class="textblock"><p>Condition variable object storage. </p>
+<p>This C structure has the same size as the C++ <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> object and must be initialised with <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga8fa33feb8d72126562b81e79a13fc32f" title="Create a timer object. ">os_timer_create()</a>.</p>
+<p>Later on a pointer to it can be used both in C and C++ to refer to the timer object.</p>
+<p>The members of this structure are hidden and should not be used directly, but only through specific functions.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html" title="POSIX compliant condition variable. ">os::rtos::condition_variable</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00373">373</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac4c5235a3c5d45e9f8911c7f5ddac2b5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* os_condvar_s::name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00371">371</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00885">885</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a></li>
 </ul>
 </div><!-- contents -->

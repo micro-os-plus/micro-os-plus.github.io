@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1timer.html','');});
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classos_1_1rtos_1_1timer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::timer Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a></div></div>  </div>
+<div class="title">os::rtos::timer Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-timer.html">Timers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -150,6 +150,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer_1_1periodic__attributes.html">periodic_attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Periodic timer attributes.  <a href="classos_1_1rtos_1_1timer_1_1periodic__attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1timer_1_1run.html">run</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1timer_1_1state.html">state</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -159,12 +163,12 @@ Public Types</h2></td></tr>
 <tr class="memitem:a1e9a6b8d96858701da3240203d991fa1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1">func_t</a> = void(*)(<a class="el" href="classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263">func_args_t</a> args)</td></tr>
 <tr class="memdesc:a1e9a6b8d96858701da3240203d991fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point of a timer call back function.  <a href="#a1e9a6b8d96858701da3240203d991fa1">More...</a><br /></td></tr>
 <tr class="separator:a1e9a6b8d96858701da3240203d991fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3d42ffc1b3a22f09b3dfe948d41dd7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a5e3d42ffc1b3a22f09b3dfe948d41dd7">state_t</a> = enum class state:uint8_t{undefined=0, initialized=1, running=2, completed=3, stopped=4, destroyed=5}</td></tr>
-<tr class="memdesc:a5e3d42ffc1b3a22f09b3dfe948d41dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer state type.  <a href="#a5e3d42ffc1b3a22f09b3dfe948d41dd7">More...</a><br /></td></tr>
-<tr class="separator:a5e3d42ffc1b3a22f09b3dfe948d41dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad21ff74b202299020b24d8e2377589bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#ad21ff74b202299020b24d8e2377589bb">type_t</a> = enum class run:uint8_t{once=0, periodic=1}</td></tr>
-<tr class="memdesc:ad21ff74b202299020b24d8e2377589bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer run type.  <a href="#ad21ff74b202299020b24d8e2377589bb">More...</a><br /></td></tr>
-<tr class="separator:ad21ff74b202299020b24d8e2377589bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e48d616daaa96d91fb6b9aa7a46d88"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a46e48d616daaa96d91fb6b9aa7a46d88">state_t</a> = uint8_t</td></tr>
+<tr class="memdesc:a46e48d616daaa96d91fb6b9aa7a46d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer state type.  <a href="#a46e48d616daaa96d91fb6b9aa7a46d88">More...</a><br /></td></tr>
+<tr class="separator:a46e48d616daaa96d91fb6b9aa7a46d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1c96f00f980128bc0fd677e6993ee0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a3b1c96f00f980128bc0fd677e6993ee0">type_t</a> = uint8_t</td></tr>
+<tr class="memdesc:a3b1c96f00f980128bc0fd677e6993ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer run type.  <a href="#a3b1c96f00f980128bc0fd677e6993ee0">More...</a><br /></td></tr>
+<tr class="separator:a3b1c96f00f980128bc0fd677e6993ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -172,12 +176,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a10f338d447a46b5ba4a4ec00924bb738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare timers.  <a href="#a10f338d447a46b5ba4a4ec00924bb738">More...</a><br /></td></tr>
 <tr class="separator:a10f338d447a46b5ba4a4ec00924bb738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:ab4055965fe60d85a322d0a2b9212d1e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#ab4055965fe60d85a322d0a2b9212d1e8">timer</a> (<a class="el" href="classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f">periodic_initializer</a>)</td></tr>
-<tr class="memdesc:ab4055965fe60d85a322d0a2b9212d1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a timer object.  <a href="#ab4055965fe60d85a322d0a2b9212d1e8">More...</a><br /></td></tr>
-<tr class="separator:ab4055965fe60d85a322d0a2b9212d1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34259c1a1f95e2fea60a5621b9bb8276"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a34259c1a1f95e2fea60a5621b9bb8276">timer</a> (const char *<a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a>, <a class="el" href="classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f">periodic_initializer</a>)</td></tr>
-<tr class="memdesc:a34259c1a1f95e2fea60a5621b9bb8276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named timer object.  <a href="#a34259c1a1f95e2fea60a5621b9bb8276">More...</a><br /></td></tr>
-<tr class="separator:a34259c1a1f95e2fea60a5621b9bb8276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad0a9258bd868752b3fbf7369d8f088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a3ad0a9258bd868752b3fbf7369d8f088">timer</a> (<a class="el" href="classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343">once_initializer</a>)</td></tr>
+<tr class="memdesc:a3ad0a9258bd868752b3fbf7369d8f088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a timer object.  <a href="#a3ad0a9258bd868752b3fbf7369d8f088">More...</a><br /></td></tr>
+<tr class="separator:a3ad0a9258bd868752b3fbf7369d8f088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c3599acea758eec0997b1803ea2c1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#ab6c3599acea758eec0997b1803ea2c1c">timer</a> (const char *<a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a>, <a class="el" href="classos_1_1rtos_1_1timer.html#a1e9a6b8d96858701da3240203d991fa1">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343">once_initializer</a>)</td></tr>
+<tr class="memdesc:ab6c3599acea758eec0997b1803ea2c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named timer object.  <a href="#ab6c3599acea758eec0997b1803ea2c1c">More...</a><br /></td></tr>
+<tr class="separator:ab6c3599acea758eec0997b1803ea2c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7ef59be85cbc662d0d7abad1b9caf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html#a1c7ef59be85cbc662d0d7abad1b9caf5">~timer</a> ()</td></tr>
 <tr class="memdesc:a1c7ef59be85cbc662d0d7abad1b9caf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the timer object.  <a href="#a1c7ef59be85cbc662d0d7abad1b9caf5">More...</a><br /></td></tr>
 <tr class="separator:a1c7ef59be85cbc662d0d7abad1b9caf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +210,7 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><p>User single-shot or periodic <b>timer</b>. </p>
 <p>The CMISIS++ timer schedules the execution of a user function after a programmable interval. If the timer is periodic, the function is rescheduled automatically until the timer is stopped.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="os_8h.html">cmsis-plus/rtos/os.h</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceos_1_1rtos.html">os::rtos</a>;</div><div class="line"></div><div class="line"><span class="comment">// Thread function.</span></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>* args)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something.</span></div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <a class="code" href="namespaceanonymous__namespace_02os-main_8cpp_03.html#a53e15f51fa58a7a739a94f5ae6826312">argv</a>[])</div><div class="line">{</div><div class="line">  <span class="comment">// Create new thread, with function and no arguments.</span></div><div class="line">  <a class="code" href="classos_1_1rtos_1_1timer.html">timer</a> tm { func, <span class="keyword">nullptr</span> };</div><div class="line"></div><div class="line">  <span class="comment">// Schedule func() to be executed after 100 ticks.</span></div><div class="line">  tm.<a class="code" href="classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730">start</a>(100);</div><div class="line"></div><div class="line">  <span class="comment">// Do something.</span></div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. </dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="os_8h.html">cmsis-plus/rtos/os.h</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespaceos_1_1rtos.html">os::rtos</a>;</div><div class="line"></div><div class="line"><span class="comment">// Thread function.</span></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>* args)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something.</span></div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">  <span class="comment">// Create new thread, with function and no arguments.</span></div><div class="line">  <a class="code" href="classos_1_1rtos_1_1timer.html">timer</a> tm { func, <span class="keyword">nullptr</span> };</div><div class="line"></div><div class="line">  <span class="comment">// Schedule func() to be executed after 100 ticks.</span></div><div class="line">  tm.<a class="code" href="classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730">start</a>(100);</div><div class="line"></div><div class="line">  <span class="comment">// Do something.</span></div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. </dd></dl>
 
 <p>Definition at line <a class="el" href="os-timer_8h_source.html#l00058">58</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
@@ -242,40 +246,40 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5e3d42ffc1b3a22f09b3dfe948d41dd7"></a>
+<a class="anchor" id="a46e48d616daaa96d91fb6b9aa7a46d88"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1timer.html#a5e3d42ffc1b3a22f09b3dfe948d41dd7">os::rtos::timer::state_t</a> =  enum class state : uint8_t { undefined = 0, initialized = 1, running = 2, completed = 3, stopped = 4, destroyed = 5 }</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1timer.html#a46e48d616daaa96d91fb6b9aa7a46d88">os::rtos::timer::state_t</a> =  uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Timer state type. </p>
 
-<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00102">102</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00096">96</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad21ff74b202299020b24d8e2377589bb"></a>
+<a class="anchor" id="a3b1c96f00f980128bc0fd677e6993ee0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1timer.html#ad21ff74b202299020b24d8e2377589bb">os::rtos::timer::type_t</a> =  enum class run : uint8_t { once = 0, periodic = 1 }</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1timer.html#a3b1c96f00f980128bc0fd677e6993ee0">os::rtos::timer::type_t</a> =  uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Timer run type. </p>
 
-<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00086">86</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00075">75</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab4055965fe60d85a322d0a2b9212d1e8"></a>
+<a class="anchor" id="a3ad0a9258bd868752b3fbf7369d8f088"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -295,7 +299,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;&#160;</td>
-          <td class="paramname"><em>attr</em> = <code><a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f">periodic_initializer</a></code>&#160;</td>
+          <td class="paramname"><em>attr</em> = <code><a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343">once_initializer</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -320,11 +324,11 @@ Static Public Attributes</h2></td></tr>
 <p>In cases where default condition variable attributes are appropriate, the variables <code><a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343" title="Default one shot timer initialiser. ">timer::once_initializer</a></code> or <code><a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f" title="Default periodic timer initialiser. ">timer::periodic_initializer</a></code> can be used to initialise timers. The effect shall be equivalent to creating a timer object with the simple constructor.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00144">144</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00143">143</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a34259c1a1f95e2fea60a5621b9bb8276"></a>
+<a class="anchor" id="ab6c3599acea758eec0997b1803ea2c1c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -350,7 +354,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html">attributes</a> &amp;&#160;</td>
-          <td class="paramname"><em>attr</em> = <code><a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f">periodic_initializer</a></code>&#160;</td>
+          <td class="paramname"><em>attr</em> = <code><a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343">once_initializer</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -376,7 +380,7 @@ Static Public Attributes</h2></td></tr>
 <p>In cases where default condition variable attributes are appropriate, the variables <code><a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343" title="Default one shot timer initialiser. ">timer::once_initializer</a></code> or <code><a class="el" href="classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f" title="Default periodic timer initialiser. ">timer::periodic_initializer</a></code> can be used to initialise timers. The effect shall be equivalent to creating a timer object with the simple constructor.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00174">174</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00173">173</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -398,7 +402,7 @@ Static Public Attributes</h2></td></tr>
 <p>If the timer is running, it must be automatically stopped.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00216">216</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00215">215</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -428,9 +432,10 @@ Static Public Attributes</h2></td></tr>
 <p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
-<p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
+<p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00501">501</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +471,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <p>Identical timers should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00464">464</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00474">474</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
 </div>
 </div>
@@ -493,7 +498,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The timer has been started or restarted. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The timer has been started or restarted. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>Timer could not be started. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
   </table>
@@ -502,7 +507,7 @@ Static Public Attributes</h2></td></tr>
 <p>If the period is 0, it is automatically adjusted to 1.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00248">248</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8cpp_source.html#l00247">247</a> of file <a class="el" href="os-timer_8cpp_source.html">os-timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -524,7 +529,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The timer has been stopped. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The timer has been stopped. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The timer is not yet started. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>Timer could not be stopped.</td></tr>
@@ -561,7 +566,7 @@ Static Public Attributes</h2></td></tr>
 <p>Default one shot timer initialiser. </p>
 <p>This variable can be used to create a single run timer. </p>
 
-<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00183">183</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00193">193</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
 </div>
 </div>
@@ -586,7 +591,7 @@ Static Public Attributes</h2></td></tr>
 <p>Default periodic timer initialiser. </p>
 <p>This variable can be used to create a periodic timer. </p>
 
-<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00235">235</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p>Definition at line <a class="el" href="os-timer_8h_source.html#l00245">245</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
 </div>
 </div>

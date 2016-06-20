@@ -17,8 +17,9 @@ var hierarchy =
     ] ],
     [ "binary_attributes", "classbinary__attributes.html", null ],
     [ "os::driver::usb::device::Capabilities", "classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html", null ],
-    [ "os::driver::usb::host::Capabilities", "classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html", null ],
     [ "os::driver::serial::Capabilities", "classos_1_1driver_1_1serial_1_1_capabilities.html", null ],
+    [ "os::driver::usb::host::Capabilities", "classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html", null ],
+    [ "os::rtos::port::clock_highres", "classos_1_1rtos_1_1port_1_1clock__highres.html", null ],
     [ "os::rtos::port::clock_rtc", "classos_1_1rtos_1_1port_1_1clock__rtc.html", null ],
     [ "os::rtos::port::clock_systick", "classos_1_1rtos_1_1port_1_1clock__systick.html", null ],
     [ "os::rtos::clocked_attributes", "classos_1_1rtos_1_1clocked__attributes.html", [
@@ -39,11 +40,11 @@ var hierarchy =
     ] ],
     [ "os::estd::condition_variable", "classos_1_1estd_1_1condition__variable.html", null ],
     [ "os::estd::condition_variable_any", "classos_1_1estd_1_1condition__variable__any.html", null ],
-    [ "os::rtos::thread::context", "classos_1_1rtos_1_1thread_1_1context.html", null ],
     [ "os::rtos::port::context", "classos_1_1rtos_1_1port_1_1context.html", null ],
+    [ "os::rtos::thread::context", "classos_1_1rtos_1_1thread_1_1context.html", null ],
+    [ "os::rtos::port::interrupts::critical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html", null ],
     [ "os::rtos::scheduler::critical_section", "classos_1_1rtos_1_1scheduler_1_1critical__section.html", null ],
     [ "os::rtos::interrupts::critical_section", "classos_1_1rtos_1_1interrupts_1_1critical__section.html", null ],
-    [ "os::rtos::port::interrupts::critical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html", null ],
     [ "os::estd::defer_lock_t", "structos_1_1estd_1_1defer__lock__t.html", null ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", null ],
     [ "false_type", null, [
@@ -51,6 +52,7 @@ var hierarchy =
     ] ],
     [ "os::estd::chrono::high_resolution_clock", "classos_1_1estd_1_1chrono_1_1high__resolution__clock.html", null ],
     [ "os::estd::thread::id", "classos_1_1estd_1_1thread_1_1id.html", null ],
+    [ "os::rtos::intrusive_list_iterator< T, N, MP, U >", "classos_1_1rtos_1_1intrusive__list__iterator.html", null ],
     [ "os::estd::lock_guard< Mutex_T >", "classos_1_1estd_1_1lock__guard.html", null ],
     [ "os::rtos::scheduler::lockable", "classos_1_1rtos_1_1scheduler_1_1lockable.html", null ],
     [ "os::rtos::interrupts::lockable", "classos_1_1rtos_1_1interrupts_1_1lockable.html", null ],
@@ -68,7 +70,10 @@ var hierarchy =
     ] ],
     [ "os::rtos::named_object", "classos_1_1rtos_1_1named__object.html", [
       [ "os::rtos::clock", "classos_1_1rtos_1_1clock.html", [
-        [ "os::rtos::clock_rtc", "classos_1_1rtos_1_1clock__rtc.html", null ],
+        [ "os::rtos::adjustable_clock", "classos_1_1rtos_1_1adjustable__clock.html", [
+          [ "os::rtos::clock_rtc", "classos_1_1rtos_1_1clock__rtc.html", null ]
+        ] ],
+        [ "os::rtos::clock_highres", "classos_1_1rtos_1_1clock__highres.html", null ],
         [ "os::rtos::clock_systick", "classos_1_1rtos_1_1clock__systick.html", null ]
       ] ],
       [ "os::rtos::condition_variable", "classos_1_1rtos_1_1condition__variable.html", null ],
@@ -117,13 +122,13 @@ var hierarchy =
     [ "os_semaphore_attr_s", "structos__semaphore__attr__s.html", null ],
     [ "os_semaphore_def", "structos__semaphore__def.html", null ],
     [ "os_semaphore_s", "structos__semaphore__s.html", null ],
-    [ "os_sysclock_current_s", "structos__sysclock__current__s.html", null ],
     [ "os_thread_attr_s", "structos__thread__attr__s.html", null ],
     [ "os_thread_children_list_s", "structos__thread__children__list__s.html", null ],
     [ "os_thread_context_s", "structos__thread__context__s.html", null ],
     [ "os_thread_def", "structos__thread__def.html", null ],
     [ "os_thread_s", "structos__thread__s.html", null ],
-    [ "os_thread_user_storage_t", "structos__thread__user__storage__t.html", null ],
+    [ "os_thread_stack_s", "structos__thread__stack__s.html", null ],
+    [ "os_thread_statistics_s", "structos__thread__statistics__s.html", null ],
     [ "os_timer_attr_s", "structos__timer__attr__s.html", null ],
     [ "os_timer_def", "structos__timer__def.html", null ],
     [ "os_timer_s", "structos__timer__s.html", null ],
@@ -132,21 +137,26 @@ var hierarchy =
     [ "periodic_attributes", "classperiodic__attributes.html", null ],
     [ "os::rtos::memory::polymorphic_allocator< T >", "classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html", null ],
     [ "os::rtos::thread::priority", "structos_1_1rtos_1_1thread_1_1priority.html", null ],
-    [ "os::estd::chrono::Realtime_clock", "classos_1_1estd_1_1chrono_1_1_realtime__clock.html", null ],
+    [ "os::rtos::mutex::protocol", "structos_1_1rtos_1_1mutex_1_1protocol.html", null ],
+    [ "os::estd::chrono::realtime_clock", "classos_1_1estd_1_1chrono_1_1realtime__clock.html", null ],
     [ "os::estd::recursive_mutex", "classos_1_1estd_1_1recursive__mutex.html", [
       [ "os::estd::recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html", null ]
     ] ],
+    [ "os::rtos::mutex::robustness", "structos_1_1rtos_1_1mutex_1_1robustness.html", null ],
+    [ "os::rtos::timer::run", "structos_1_1rtos_1_1timer_1_1run.html", null ],
     [ "os::rtos::thread::sig", "structos_1_1rtos_1_1thread_1_1sig.html", null ],
     [ "os::rtos::thread::stack", "classos_1_1rtos_1_1thread_1_1stack.html", null ],
+    [ "os::rtos::timer::state", "structos_1_1rtos_1_1timer_1_1state.html", null ],
+    [ "os::rtos::thread::state", "structos_1_1rtos_1_1thread_1_1state.html", null ],
     [ "os::rtos::static_double_list", "classos_1_1rtos_1_1static__double__list.html", [
       [ "os::rtos::double_list", "classos_1_1rtos_1_1double__list.html", [
         [ "os::rtos::clock_timestamps_list", "classos_1_1rtos_1_1clock__timestamps__list.html", null ],
         [ "os::rtos::thread_children_list", "classos_1_1rtos_1_1thread__children__list.html", null ],
         [ "os::rtos::waiting_threads_list", "classos_1_1rtos_1_1waiting__threads__list.html", null ]
       ] ],
+      [ "os::rtos::intrusive_list< T, N, MP >", "classos_1_1rtos_1_1intrusive__list.html", null ],
       [ "os::rtos::ready_threads_list", "classos_1_1rtos_1_1ready__threads__list.html", null ],
-      [ "os::rtos::terminated_threads_list", "classos_1_1rtos_1_1terminated__threads__list.html", null ],
-      [ "os::rtos::top_threads_list", "classos_1_1rtos_1_1top__threads__list.html", null ]
+      [ "os::rtos::terminated_threads_list", "classos_1_1rtos_1_1terminated__threads__list.html", null ]
     ] ],
     [ "os::rtos::static_double_list_links", "classos_1_1rtos_1_1static__double__list__links.html", [
       [ "os::rtos::double_list_links", "classos_1_1rtos_1_1double__list__links.html", [
@@ -157,14 +167,16 @@ var hierarchy =
         [ "os::rtos::waiting_thread_node", "classos_1_1rtos_1_1waiting__thread__node.html", null ]
       ] ]
     ] ],
-    [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
-    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
+    [ "os::rtos::thread::statistics", "classos_1_1rtos_1_1thread_1_1statistics.html", null ],
     [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
+    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
+    [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
-    [ "os::estd::chrono::Systick_clock", "classos_1_1estd_1_1chrono_1_1_systick__clock.html", null ],
-    [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
+    [ "os::estd::chrono::systick_clock", "classos_1_1estd_1_1chrono_1_1systick__clock.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],
+    [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
     [ "os::estd::try_to_lock_t", "structos_1_1estd_1_1try__to__lock__t.html", null ],
+    [ "os::rtos::mutex::type", "structos_1_1rtos_1_1mutex_1_1type.html", null ],
     [ "os::rtos::scheduler::uncritical_section", "classos_1_1rtos_1_1scheduler_1_1uncritical__section.html", null ],
     [ "os::rtos::port::interrupts::uncritical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html", null ],
     [ "os::rtos::interrupts::uncritical_section", "classos_1_1rtos_1_1interrupts_1_1uncritical__section.html", null ],

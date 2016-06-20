@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -169,6 +169,9 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <li>tail()
 : <a class="el" href="classos_1_1rtos_1_1static__double__list.html#a6640d1fdaff38c79759643146781be7e">os::rtos::static_double_list</a>
 </li>
+<li>terminated
+: <a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a687ce37e394dc7cf1e7529158c8ec498ab28a7fb1c80b69c2fa9252cddaa840ec">os::rtos::thread::state</a>
+</li>
 <li>terminated_threads_list()
 : <a class="el" href="classos_1_1rtos_1_1terminated__threads__list.html#a41c2a1e16e9617b9e382477e34767ce7">os::rtos::terminated_threads_list</a>
 </li>
@@ -186,7 +189,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 </li>
 <li>thread
 : <a class="el" href="classos_1_1estd_1_1thread_1_1id.html#adb314a48b19f4325e5e69e8a60091fce">os::estd::thread::id</a>
-, <a class="el" href="classos_1_1estd_1_1thread.html#a16732e2bcb35e4eb4b72d76969b3e345">os::estd::thread</a>
+, <a class="el" href="classos_1_1estd_1_1thread.html#a54a27680b7b9cd669444f6300d25ef0d">os::estd::thread</a>
 , <a class="el" href="classos_1_1rtos_1_1port_1_1thread.html#a30e7c2a1d4d03a2bca20105d768498ed">os::rtos::port::thread</a>
 , <a class="el" href="classos_1_1rtos_1_1thread.html#a0d38968972ad36281ca8c8ed40a84073">os::rtos::thread</a>
 , <a class="el" href="classos_1_1rtos_1_1timeout__thread__node.html#a96b4e0423b31300ecb556b8f26ff2731">os::rtos::timeout_thread_node</a>
@@ -204,17 +207,14 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <li>thread_static()
 : <a class="el" href="classos_1_1rtos_1_1thread__static.html#a0fbedd9480a69b878e9a7159a576754e">os::rtos::thread_static&lt; N &gt;</a>
 </li>
-<li>ticks
-: <a class="el" href="structos__sysclock__current__s.html#ad7fd576a7ff24a84b6bb7361263e218e">os_sysclock_current_s</a>
-</li>
 <li>ticks_cast()
 : <a class="el" href="classos_1_1rtos_1_1clock__systick.html#a3b3b4d4aa0bba2e7f5934f950f0c7e31">os::rtos::clock_systick</a>
 </li>
 <li>time_point
 : <a class="el" href="classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#a013cc3c4a21edb2e5e7656abdb4a488e">os::estd::chrono::high_resolution_clock</a>
-, <a class="el" href="classos_1_1estd_1_1chrono_1_1_realtime__clock.html#af4488ffa4510184bf7841f421809982d">os::estd::chrono::Realtime_clock</a>
+, <a class="el" href="classos_1_1estd_1_1chrono_1_1realtime__clock.html#a68e7e058704d82bcf9cd0a1d32edc474">os::estd::chrono::realtime_clock</a>
 , <a class="el" href="classos_1_1estd_1_1chrono_1_1system__clock.html#a3d3e5026d714facdcf56c3bb1c63ca0d">os::estd::chrono::system_clock</a>
-, <a class="el" href="classos_1_1estd_1_1chrono_1_1_systick__clock.html#aebcec233ee1e0a866757efe7072bcf62">os::estd::chrono::Systick_clock</a>
+, <a class="el" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a4e95cfc049a638e31bdd6bd148f6ef96">os::estd::chrono::systick_clock</a>
 </li>
 <li>timed_alloc()
 : <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a368b3eeaa2c28df26b6f3970fd209f3b">os::rtos::memory_pool</a>
@@ -246,7 +246,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 : <a class="el" href="classos_1_1rtos_1_1timeout__thread__node.html#a5fa7734080b3ee6d6cd0cdce1253090b">os::rtos::timeout_thread_node</a>
 </li>
 <li>timer()
-: <a class="el" href="classos_1_1rtos_1_1timer.html#ab4055965fe60d85a322d0a2b9212d1e8">os::rtos::timer</a>
+: <a class="el" href="classos_1_1rtos_1_1timer.html#a3ad0a9258bd868752b3fbf7369d8f088">os::rtos::timer</a>
 , <a class="el" href="structos__clock__node__s.html#a2be5718bf41018febddee38cc90ed08b">os_clock_node_s</a>
 </li>
 <li>timer_node()
@@ -272,8 +272,8 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <li>to_time_t()
 : <a class="el" href="classos_1_1estd_1_1chrono_1_1system__clock.html#a7d95ef8bfc96997fa68ee5bff4e9ec09">os::estd::chrono::system_clock</a>
 </li>
-<li>top_threads_list()
-: <a class="el" href="classos_1_1rtos_1_1top__threads__list.html#abf590087064921bfb71af3fe9e27a303">os::rtos::top_threads_list</a>
+<li>top()
+: <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#aef3f2aecef35feecf01b9c4b53e92b4b">os::rtos::thread::stack</a>
 </li>
 <li>tpriority
 : <a class="el" href="structos__thread__def.html#a5e4e35a5f44d174a558a289688022e64">os_thread_def</a>
@@ -326,13 +326,9 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <li>tx_underflow
 : <a class="el" href="classos_1_1driver_1_1serial_1_1_status.html#a3e3f4274120334f284f3a556a078ea35">os::driver::serial::Status</a>
 </li>
-<li>type
-: <a class="el" href="structos__mutex__s.html#af91fc32c4b1b1c0be8f9d0e444c578a0">os_mutex_s</a>
-, <a class="el" href="structos__timer__s.html#abf7fa58d46f32fe3ec7b3c1e1fa87bb0">os_timer_s</a>
-</li>
 <li>type_t
-: <a class="el" href="classos_1_1rtos_1_1mutex.html#a44809780c4f47991c0ef1ffa6fe794b1">os::rtos::mutex</a>
-, <a class="el" href="classos_1_1rtos_1_1timer.html#ad21ff74b202299020b24d8e2377589bb">os::rtos::timer</a>
+: <a class="el" href="classos_1_1rtos_1_1mutex.html#a16cfc618bf9be9be363fc28bd72b3200">os::rtos::mutex</a>
+, <a class="el" href="classos_1_1rtos_1_1timer.html#a3b1c96f00f980128bc0fd677e6993ee0">os::rtos::timer</a>
 </li>
 </ul>
 </div><!-- contents -->

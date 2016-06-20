@@ -1,5 +1,6 @@
 var cmsis__os_8h =
 [
+    [ "os_mail_queue_s", "structos__mail__queue__s.html", "structos__mail__queue__s" ],
     [ "os_mailQ_def", "structos__mail_q__def.html", "structos__mail_q__def" ],
     [ "os_messageQ_def", "structos__message_q__def.html", "structos__message_q__def" ],
     [ "os_mutex_def", "structos__mutex__def.html", "structos__mutex__def" ],
@@ -44,6 +45,7 @@ var cmsis__os_8h =
     [ "osTimer", "cmsis__os_8h.html#a1b8d670eaf964b2910fa06885e650678", null ],
     [ "osTimerDef", "cmsis__os_8h.html#a1c720627e08d1cc1afcad44e799ed492", null ],
     [ "osWaitForever", "cmsis__os_8h.html#a9eb9a7a797a42e4b55eb171ecc609ddb", null ],
+    [ "os_mail_queue_t", "cmsis__os_8h.html#ad4c76b32057b40a4c9f8a813d82019e8", null ],
     [ "os_pthread", "cmsis__os_8h.html#a3a96994ab8318050b476d72d890ce765", null ],
     [ "os_ptimer", "cmsis__os_8h.html#a7904cad2180c6b3a0ac112fe8ff273e7", null ],
     [ "osMailQ", "cmsis__os_8h.html#a874689464239e386a1f4d74bffc3ef40", null ],

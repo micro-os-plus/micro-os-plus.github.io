@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1message__queue__sta
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classos_1_1rtos_1_1message__queue__static-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::message_queue_static&lt; T, N &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a></div></div>  </div>
+<div class="title">os::rtos::message_queue_static&lt; T, N &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mqueue.html">Message queues</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -279,7 +279,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 <p>For convenience, <code><a class="el" href="classos_1_1rtos_1_1message__queue__static.html" title="Template of a POSIX compliant message queue with message type and local storage. ">message_queue_static</a></code> are also typed, so the message size is handled automatically.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Define the message type.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t id;</div><div class="line">} msg_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the queue size.</span></div><div class="line">constexpr uint32_t queue_size = 5;</div><div class="line"></div><div class="line"><span class="comment">// The queue storage is allocated statically inside this instance.</span></div><div class="line">message_queue_static&lt;msg_t, queue_size&gt; mq;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">consumer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  <span class="keywordflow">for</span> (; some_condition();)</div><div class="line">    {</div><div class="line">      mq.receive(&amp;msg);</div><div class="line">      <span class="comment">// Process message</span></div><div class="line">      <span class="keywordflow">if</span> (msg.id == 7)</div><div class="line">        {</div><div class="line">          <span class="comment">// Something special</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">producer(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line">  msg_t msg;</div><div class="line">  msg.id = 7;</div><div class="line">  mq.send(&amp;msg);</div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01013">1013</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01012">1012</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="aa57e7067de5d741a6f90c60a0af30397"></a>
 <div class="memitem">
@@ -301,7 +301,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 
 <p>Default RTOS allocator. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00214">214</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00213">213</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 
 <p>Type of list index storage. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00101">101</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00100">100</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +349,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 
 <p>Type of message size storage. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00091">91</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00090">90</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +374,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 <p>Type of message priority storage. </p>
 <p>A numeric value to hold the message priority, which controls the order in which messages are added to the queue (higher values represent higher priorities). </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00115">115</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00114">114</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +399,7 @@ class os::rtos::message_queue_static&lt; T, N &gt;</h3>
 <p>Type of a queue size storage. </p>
 <p>A numeric value to hold the message queue size, usually an 8-bits value, possibly a 16-bits value if longer queues are needed. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00080">80</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00079">79</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 
 <p>Local type of message. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01020">1020</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01019">1019</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -462,7 +462,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Implemented as a wrapper over the parent constructor, automatically passing the message size and the storage details.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01695">1695</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01704">1704</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Implemented as a wrapper over the parent constructor, automatically passing the message size and the storage details.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01737">1737</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01746">1746</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -541,7 +541,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>It shall be safe to destroy an initialised message queue object upon which no threads are currently blocked. Attempting to destroy a message queue object upon which other threads are currently blocked results in undefined behaviour.</p>
 <p>Implemented as a wrapper over the parent destructor. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01758">1758</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01767">1767</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -571,9 +571,10 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Get queue capacity. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The max number of messages that can be queued.</dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01277">1277</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01280">1280</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +622,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Total required storage in bytes, including internal alignment. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00242">242</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00241">241</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -656,9 +657,10 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01299">1299</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01306">1306</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -693,9 +695,10 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01310">1310</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01319">1319</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -724,9 +727,10 @@ template&lt;typename T &gt; </div>
 <p>Get queue length. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of messages in the queue.</dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01266">1266</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01267">1267</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -755,9 +759,10 @@ template&lt;typename T &gt; </div>
 <p>Get message size. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The message size, in bytes.</dd></dl>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01288">1288</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01293">1293</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -786,9 +791,10 @@ template&lt;typename T &gt; </div>
 <p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
-<p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
+<p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00501">501</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -825,7 +831,7 @@ template&lt;typename T &gt; </div>
 <p>Identical message queues should have the same memory address.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01255">1255</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01254">1254</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -878,7 +884,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -895,7 +901,7 @@ template&lt;typename T &gt; </div>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html"><code>mq_receive()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01152">1152</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01155">1155</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +949,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -956,7 +962,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a0a1a56c91c116aeedcc0a6da9f09ee7d" title="Receive a message from the queue. ">message_queue::receive()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01820">1820</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01829">1829</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -986,7 +992,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The queue was reset. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The queue was reset. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
   </table>
   </dd>
@@ -995,7 +1001,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01448">1448</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01453">1453</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1054,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1063,7 +1069,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_send.html"><code>mq_send()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00855">855</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00856">856</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1117,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1123,7 +1129,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a3e6feb26468955f0eef1251a94f04091" title="Send a message to the queue. ">message_queue::send()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01772">1772</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01781">1781</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1189,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1199,7 +1205,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>If the argument <em>mprio</em> is not nullptr, the priority of the selected message shall be stored in the location referenced by <em>mprio</em>.</p>
 <p>If the message queue is empty, <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a6a86c028b46b689fbc50a035639200ba" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> shall block until a message is enqueued on the message queue or until <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a6a86c028b46b689fbc50a035639200ba" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> is cancelled/interrupted. If more than one thread is waiting to receive a message when a message arrives at an empty queue and the Priority Scheduling option is supported, then the thread of highest priority that has been waiting the longest shall be selected to receive the message. Otherwise, it is unspecified which waiting thread receives the message.</p>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a6a86c028b46b689fbc50a035639200ba" title="Receive a message from the queue with timeout. ">timed_receive()</a></code> function shall receive the oldest of the highest priority messages from the message queue as described for the <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a0a1a56c91c116aeedcc0a6da9f09ee7d" title="Receive a message from the queue. ">receive()</a></code> function. However, if no message exists on the queue to satisfy the receive, the wait for such a message shall be terminated when the specified timeout expires.</p>
-<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (<a class="el" href="namespaceos_1_1estd_1_1chrono.html#aa72a3cdebba9461616eb9cd1295bf666">now()</a>+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
+<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
 <p>Under no circumstance shall the operation fail with a timeout if a message can be removed from the message queue immediately.</p>
 <p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>Compatible with POSIX <code>mq_receive()</code> with O_NONBLOCK set. <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html#">http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_receive.html#</a></p>
@@ -1210,7 +1216,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01345">1345</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01350">1350</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1265,7 +1271,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1279,7 +1285,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a6a86c028b46b689fbc50a035639200ba" title="Receive a message from the queue with timeout. ">message_queue::timed_receive()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01851">1851</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01860">1860</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1339,7 +1345,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1352,7 +1358,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a8bea78cd3cc3a5b6111f841bb049e668" title="Send a message to the queue with timeout. ">timed_send()</a></code> function shall add the message pointed to by the argument <em>msg</em> to the message queue. The <em>nbytes</em> argument specifies the length of the message, in bytes, pointed to by <em>msg</em>. The value of <em>nbytes</em> shall be less than or equal to the <em>msg_size_bytes</em> attribute of the message queue object, or <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a8bea78cd3cc3a5b6111f841bb049e668" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall fail.</p>
 <p>If the message queue is not full, <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a8bea78cd3cc3a5b6111f841bb049e668" title="Send a message to the queue with timeout. ">timed_send()</a></code> shall behave as if the message is inserted into the message queue at the position indicated by the <em>mprio</em> argument. A message with a larger numeric value of <em>mprio</em> shall be inserted before messages with lower values of <em>mprio</em>. A message shall be inserted after other messages in the queue, if any, with equal <em>mprio</em>. The value of <em>mprio</em> shall be less than <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a242b5035f07fb9deedd6739e26edef3f" title="Maximum message priority. ">message_queue::max_priority</a></code>.</p>
 <p>If the message queue is full, the wait for sufficient room in the queue shall be terminated when the specified timeout expires.</p>
-<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (<a class="el" href="namespaceos_1_1estd_1_1chrono.html#aa72a3cdebba9461616eb9cd1295bf666">now()</a>+timeout). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
+<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+timeout). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
 <p>Under no circumstance shall the operation fail with a timeout if there is sufficient room in the queue to add the message immediately.</p>
 <p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mq_timedsend.html"><code>mq_timedsend()</code></a> with <code>O_NONBLOCK</code> not set, from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
@@ -1362,7 +1368,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01031">1031</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01034">1034</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1417,7 +1423,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
@@ -1430,7 +1436,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a8bea78cd3cc3a5b6111f841bb049e668" title="Send a message to the queue with timeout. ">message_queue::timed_send()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01803">1803</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01812">1812</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1483,7 +1489,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The message could not be dequeued (extension to POSIX). </td></tr>
@@ -1503,7 +1509,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01253">1253</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l01256">1256</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1557,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was received. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, is greater than the message size attribute of the message queue. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The message could not be dequeued (extension to POSIX). </td></tr>
@@ -1563,7 +1569,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a22bd67fcd9fce69ba35179d0c9be10fe" title="Try to receive a message from the queue. ">message_queue::try_receive()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01835">1835</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01844">1844</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1616,7 +1622,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EWOULDBLOCK</td><td>The specified message queue is full. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
@@ -1634,7 +1640,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00954">954</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8cpp_source.html#l00955">955</a> of file <a class="el" href="os-mqueue_8cpp_source.html">os-mqueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1688,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The message was enqueued. </td></tr>
     <tr><td class="paramname">EWOULDBLOCK</td><td>The specified message queue is full. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>A parameter is invalid or outside of a permitted range. </td></tr>
     <tr><td class="paramname">EMSGSIZE</td><td>The specified message length, nbytes, exceeds the message size attribute of the message queue. </td></tr>
@@ -1693,7 +1699,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the message size.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1message__queue.html#a19cb3d7014f09cc497a953e9052b7b57" title="Try to send a message to the queue. ">message_queue::try_send()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01787">1787</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01796">1796</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1725,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Default message priority. </p>
 <p>Use this value with <code><a class="el" href="classos_1_1rtos_1_1message__queue.html#a3e6feb26468955f0eef1251a94f04091" title="Send a message to the queue. ">send()</a></code> if no special priorities are required. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00122">122</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00121">121</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1744,7 +1750,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Default message queue initialiser. </p>
 <p>This variable is used by the default constructor. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00209">209</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00208">208</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1768,7 +1774,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 
 <p>Maximum message size. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00096">96</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00095">95</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1793,7 +1799,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Maximum message priority. </p>
 <p>The maximum value allowed by the type, usually used for validation. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00130">130</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00129">129</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1817,7 +1823,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 
 <p>Maximum queue size. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00086">86</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00085">85</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1843,7 +1849,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 
 <p>Local constant based on template definition. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01025">1025</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l01024">1024</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -1867,7 +1873,7 @@ template&lt;typename T , std::size_t N&gt; </div>
 
 <p>Index value to represent an illegal index. </p>
 
-<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00106">106</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mqueue_8h_source.html#l00105">105</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>

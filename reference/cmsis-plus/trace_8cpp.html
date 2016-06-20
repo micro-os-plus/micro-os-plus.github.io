@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -130,7 +130,8 @@ $(document).ready(function(){initNavTree('trace_8cpp.html','');});
 <div class="title">trace.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;cmsis-plus/os-app-config.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 <code>#include &lt;cstdarg&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
@@ -156,10 +157,11 @@ Functions</h2></td></tr>
 <tr class="memitem:gae52332a8c43778a8d61312fc4064647e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-diag.html#gae52332a8c43778a8d61312fc4064647e">os::trace::dump_args</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:gae52332a8c43778a8d61312fc4064647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the argv[] array to the trace device.  <a href="group__cmsis-plus-diag.html#gae52332a8c43778a8d61312fc4064647e">More...</a><br /></td></tr>
 <tr class="separator:gae52332a8c43778a8d61312fc4064647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae512538888b36cc78fddc542eba9453"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1trace.html#aae512538888b36cc78fddc542eba9453">os::trace::flush</a> (void)</td></tr>
+<tr class="memdesc:aae512538888b36cc78fddc542eba9453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the output.  <a href="namespaceos_1_1trace.html#aae512538888b36cc78fddc542eba9453">More...</a><br /></td></tr>
+<tr class="separator:aae512538888b36cc78fddc542eba9453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412dbb6aeb8348a73eedd73a6494c35d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1trace.html#a412dbb6aeb8348a73eedd73a6494c35d">os::trace::initialize</a> (void)</td></tr>
 <tr class="separator:a412dbb6aeb8348a73eedd73a6494c35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a779ad226bcffb6a108ca636424308693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a779ad226bcffb6a108ca636424308693">os_initialize_trace</a> (void)</td></tr>
-<tr class="separator:a779ad226bcffb6a108ca636424308693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab99139b69af4fe6f063b4a236133b2ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a> (const char *format,...)</td></tr>
 <tr class="memdesc:gab99139b69af4fe6f063b4a236133b2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a formatted string to the trace device.  <a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">More...</a><br /></td></tr>
 <tr class="separator:gab99139b69af4fe6f063b4a236133b2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +173,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga7a7b4734b5d3db0422fffe79a44ca7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54406dbae553f77eebddb84da4a960d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a54406dbae553f77eebddb84da4a960d5">trace_dump_args</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a54406dbae553f77eebddb84da4a960d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8ae17d824fe5cba4aa3b9a6bf3d4e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a0c8ae17d824fe5cba4aa3b9a6bf3d4e6">trace_flush</a> (void)</td></tr>
+<tr class="separator:a0c8ae17d824fe5cba4aa3b9a6bf3d4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a06d8d6b7fb09eb75de348b3f0d79a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a3a06d8d6b7fb09eb75de348b3f0d79a6">trace_initialize</a> (void)</td></tr>
+<tr class="separator:a3a06d8d6b7fb09eb75de348b3f0d79a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a6492d4a967fc866e4825f6146cec37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (const char *format,...)</td></tr>
 <tr class="separator:a6a6492d4a967fc866e4825f6146cec37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a58d8674f578e4f8fa90ee7c3ebb071"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace_8cpp.html#a0a58d8674f578e4f8fa90ee7c3ebb071">trace_putchar</a> (int c)</td></tr>
@@ -199,30 +205,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00037">37</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00038">38</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a779ad226bcffb6a108ca636424308693"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os_initialize_trace </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Called from startup. </p>
-
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00158">158</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a54406dbae553f77eebddb84da4a960d5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +234,44 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00229">229</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00242">242</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c8ae17d824fe5cba4aa3b9a6bf3d4e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trace_flush </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00177">177</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a06d8d6b7fb09eb75de348b3f0d79a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trace_initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Called from startup. </p>
+
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00165">165</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +299,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00199">199</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00212">212</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +317,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00223">223</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00236">236</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +335,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00217">217</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00230">230</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +363,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00211">211</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00224">224</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +391,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00164">164</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00171">171</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>

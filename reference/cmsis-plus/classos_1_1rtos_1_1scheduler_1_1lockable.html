@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -160,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Scheduler standard locker. </p>
 <p>Locker meeting the standard <code>Lockable</code> requirements (30.2.5.3). </p>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00303">303</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00293">293</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a36f5361fc46e8c6d3ba2d3be429a220d"></a>
 <div class="memitem">
@@ -176,9 +176,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a lock. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section user"><dt>Parameters</dt><dd>None</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00806">806</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00873">873</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -204,8 +205,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy the lock. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00813">813</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00885">885</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -234,9 +236,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Lock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00819">819</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00896">896</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -270,9 +273,10 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Somehow redundant, since the lock will always succeed; but used to meet the lockableable requirements. </p>
+<p>Somehow redundant, since the lock will always succeed; but used to meet the lockableable requirements.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00830">830</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00909">909</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>
@@ -300,9 +304,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Unlock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00837">837</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00921">921</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>

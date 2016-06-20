@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -124,9 +124,10 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1interrupts.html
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Types</a>  </div>
+<a href="#typedef-members">Types</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::interrupts Namespace Reference</div>  </div>
+<div class="title">os::rtos::interrupts Namespace Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-core.html">Core &amp; scheduler</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -148,8 +149,14 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
 <tr class="memitem:a16dbebdd78fcfe5822e9c39f6e7157f1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1">status_t</a> = port::interrupts::status_t</td></tr>
-<tr class="memdesc:a16dbebdd78fcfe5822e9c39f6e7157f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a variable holding interrupts status.  <a href="#a16dbebdd78fcfe5822e9c39f6e7157f1">More...</a><br /></td></tr>
+<tr class="memdesc:a16dbebdd78fcfe5822e9c39f6e7157f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding interrupts statu codes.  <a href="#a16dbebdd78fcfe5822e9c39f6e7157f1">More...</a><br /></td></tr>
 <tr class="separator:a16dbebdd78fcfe5822e9c39f6e7157f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acb9f50dd130d6226b861ffaee191ee5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">in_handler_mode</a> (void)</td></tr>
+<tr class="memdesc:acb9f50dd130d6226b861ffaee191ee5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the CPU is in handler mode.  <a href="#acb9f50dd130d6226b861ffaee191ee5a">More...</a><br /></td></tr>
+<tr class="separator:acb9f50dd130d6226b861ffaee191ee5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interrupts namespace. </p>
@@ -165,11 +172,49 @@ Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Type of a variable holding interrupts status. </p>
+<p>Type of variables holding interrupts statu codes. </p>
 <p>Usually an integer large enough to hold the CPU status register where the interrupt status is stored.</p>
-<p>It is used to temporarily store the CPU status register during critical sections. </p>
+<p>Used to temporarily store the CPU status register during critical sections. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00245">245</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00259">259</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="acb9f50dd130d6226b861ffaee191ee5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::rtos::interrupts::in_handler_mode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the CPU is in handler mode. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Execution is in an exception handler context. </td></tr>
+    <tr><td class="paramname">false</td><td>Execution is in a thread context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines (obviously). </dd></dl>
+
+<p>Definition at line <a class="el" href="os-sched_8h_source.html#l00992">992</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 
 </div>
 </div>

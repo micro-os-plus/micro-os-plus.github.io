@@ -2,7 +2,6 @@ var classos_1_1estd_1_1recursive__timed__mutex =
 [
     [ "native_handle_type", "classos_1_1estd_1_1recursive__timed__mutex.html#a843c26b3591859391d319f4210fb454d", null ],
     [ "recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html#a912b251d7cc571518a2e8a348a6259ce", null ],
-    [ "recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html#aeb5afd6795521477efbaff77492ad3d8", null ],
     [ "~recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html#a7746c73a10d06e67006c2be6e49def06", null ],
     [ "recursive_timed_mutex", "classos_1_1estd_1_1recursive__timed__mutex.html#a19842b3d555fff2e89bc023f80c07cde", null ],
     [ "lock", "classos_1_1estd_1_1recursive__timed__mutex.html#a9d041e25cfb22d9f47451dcb107b641e", null ],

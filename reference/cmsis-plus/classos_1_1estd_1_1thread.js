@@ -2,11 +2,9 @@ var classos_1_1estd_1_1thread =
 [
     [ "id", "classos_1_1estd_1_1thread_1_1id.html", "classos_1_1estd_1_1thread_1_1id" ],
     [ "function_object_deleter_t", "classos_1_1estd_1_1thread.html#a1a68ce5eeb2e2a473ff8219f6b3b6d5f", null ],
-    [ "native_handle_type", "classos_1_1estd_1_1thread.html#adac6ec40b000c099fd4996435b3744a9", null ],
+    [ "native_handle_type", "classos_1_1estd_1_1thread.html#a1a16bfe18e9b70d49344f49017bae016", null ],
     [ "thread", "classos_1_1estd_1_1thread.html#a54a27680b7b9cd669444f6300d25ef0d", null ],
-    [ "thread", "classos_1_1estd_1_1thread.html#a16732e2bcb35e4eb4b72d76969b3e345", null ],
-    [ "thread", "classos_1_1estd_1_1thread.html#a7550d5ae07abed801a67bac254dc0655", null ],
-    [ "thread", "classos_1_1estd_1_1thread.html#a44bd6ecd1662e07a465c61c1df00f095", null ],
+    [ "thread", "classos_1_1estd_1_1thread.html#a992f4297f1688afab71a1a6a4216de2d", null ],
     [ "~thread", "classos_1_1estd_1_1thread.html#ad850be5ee34d1694543f4f482abc95b2", null ],
     [ "thread", "classos_1_1estd_1_1thread.html#a9ac8a3d6b58b82db3f6a32e2948a18d1", null ],
     [ "thread", "classos_1_1estd_1_1thread.html#abe21b7327ad2fc03839490bb4a63af6d", null ],

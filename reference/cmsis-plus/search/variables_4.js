@@ -14,10 +14,8 @@ var searchData=
   ['default_5fresource',['default_resource',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#a40405302f31f0052e9e7ff783cfbaf3b',1,'anonymous_namespace{memory-resource.cpp}::default_resource()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#af79d339755e9df6e0c026701bbb68590',1,'anonymous_namespace{os-memory.cpp}::default_resource()']]],
   ['default_5ftx_5fvalue',['DEFAULT_TX_VALUE',['../namespaceos_1_1driver_1_1serial.html#a27f30f5c598402a4b03848ae4be7a649',1,'os::driver::serial']]],
   ['defer_5flock',['defer_lock',['../namespaceos_1_1estd.html#a5cd14457b0c5e499b1ac4be877c33f86',1,'os::estd']]],
-  ['divisor',['divisor',['../structos__sysclock__current__s.html#a5df9e0aa801c4b5c720d0583dcc7a02a',1,'os_sysclock_current_s::divisor()'],['../classos_1_1rtos_1_1clock__systick.html#a0c2bbf256d5db283b20250abc6d60573',1,'os::rtos::clock_systick::divisor()']]],
   ['driver_5f',['driver_',['../classos_1_1driver_1_1_usart__wrapper.html#ab251f7ed7a872c144fccc3211ba3993c',1,'os::driver::Usart_wrapper::driver_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ae79bf933f6f6417f0c9ca49d744361a2',1,'os::driver::Usbd_wrapper::driver_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#add619a55fb2359509c8f4d43763a5118',1,'os::driver::Usbh_wrapper::driver_()']]],
   ['drv_5f',['drv_',['../classos_1_1driver_1_1_version.html#a5f4f4bb94cbba08b22c74e8a1227e142',1,'os::driver::Version']]],
   ['dsr',['dsr',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a715a25caa04951c817a50da357e19471',1,'os::driver::serial::Modem_status::dsr()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#a45b18cab553c67e12d221174b32c2ce8',1,'os::driver::serial::Capabilities::dsr()']]],
-  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]],
-  ['dummy',['dummy',['../structos__thread__user__storage__t.html#a849878a1e08c704b6322cb53e26a3b2f',1,'os_thread_user_storage_t']]]
+  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]]
 ];

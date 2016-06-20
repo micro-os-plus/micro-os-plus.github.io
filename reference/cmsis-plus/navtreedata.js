@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "CMSIS++ Reference", "index.html", [
     [ "Overview", "index.html", null ],
+    [ "Change log", "md_doxygen_pages_change-log.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
@@ -46,18 +47,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__sbrk_8c.html",
-"classos_1_1driver_1_1_usbh__wrapper.html#add619a55fb2359509c8f4d43763a5118",
-"classos_1_1estd_1_1condition__variable__any.html#aac209f398996e7234efc9bdcb0e6fed0",
-"classos_1_1rtos_1_1interrupts_1_1lockable.html#a611e2d4f36e98664c5aef07bb729287c",
-"classos_1_1rtos_1_1message__queue__static.html#aee507fd1f777940280b9246bff1018d3",
-"classos_1_1rtos_1_1thread__allocated.html#a98c3bf1f055b3ade852feba23c989d1a",
-"cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99ead604f3673359dd4ac643b16dc5a2c342",
-"group__cmsis-plus-rtos-c.html#ga10263428a13686cf779a6b439b38032f",
-"group__cmsis-plus-rtos-c.html#gab2274e409d6ba3530d01ebe766ffeca0",
-"namespacemembers_v.html",
-"os-memory_8cpp.html#ab225a6f29f49e12c68458faa4dd42216",
-"structos_1_1estd_1_1once__flag.html#a7a0b5ce1ef496321e1c3c53c7fb4e215",
-"todo.html"
+"classos_1_1driver_1_1_version.html#ab0e427865a69c26d4d2079d6351a4baa",
+"classos_1_1estd_1_1lock__guard.html#ab3eb7d4edc0783414234fa573db22fcf",
+"classos_1_1rtos_1_1event__flags.html#afc2027838d333aa0cdb4e2488b4cf741",
+"classos_1_1rtos_1_1message__queue__allocated.html#a6106138213cbf09c034242aa6a32509e",
+"classos_1_1rtos_1_1terminated__threads__list.html#ac398ad02b949ced4aa29446ddea8be2a",
+"cmsis__os_8h.html#a3b571de44cd3094c643247a7397f86b5",
+"functions_vars_l.html",
+"group__cmsis-plus-rtos-c-clock.html#gaf181c99133fc85695d38debea7bf862a",
+"group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20",
+"group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca8c40f1dcd1d01ad795d0febb02277aab",
+"newlib-aliases_8h.html#a1fd116a5c6d658acbe5e5786fa3e1868",
+"semihosting_8h.html#a368e5417dfc8239b696ecf3233a6a955a0ec256df1f87ed648561fc9af71e607f",
+"structos__clock__node__s.html#a919f956c2b84125f841d6b99e45876b0",
+"usart-wrapper_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

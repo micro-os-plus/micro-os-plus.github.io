@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -135,9 +135,6 @@ Functions</h2></td></tr>
 <tr class="separator:abe7a9f008a89b5b8c49c8dc70df4bff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e71e8d21383d22f271e442f3e83da3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a4e71e8d21383d22f271e442f3e83da3e">greeting</a> (void)</td></tr>
 <tr class="separator:a4e71e8d21383d22f271e442f3e83da3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b5495ad336fa2c7c186508901d5f503"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a5b5495ad336fa2c7c186508901d5f503">in_handler_mode</a> (void)</td></tr>
-<tr class="memdesc:a5b5495ad336fa2c7c186508901d5f503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the CPU is in handler mode.  <a href="#a5b5495ad336fa2c7c186508901d5f503">More...</a><br /></td></tr>
-<tr class="separator:a5b5495ad336fa2c7c186508901d5f503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a138fd5ba3ed7f75a0794a190136d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#ad4a138fd5ba3ed7f75a0794a190136d0">initialize</a> (void)</td></tr>
 <tr class="memdesc:ad4a138fd5ba3ed7f75a0794a190136d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the RTOS scheduler.  <a href="#ad4a138fd5ba3ed7f75a0794a190136d0">More...</a><br /></td></tr>
 <tr class="separator:ad4a138fd5ba3ed7f75a0794a190136d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,35 +182,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5b5495ad336fa2c7c186508901d5f503"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool os::rtos::port::scheduler::in_handler_mode </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if the CPU is in handler mode. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>Execution is in an exception handler context. </td></tr>
-    <tr><td class="paramname">false</td><td>Execution is in a thread context.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines (obviously). </dd></dl>
-
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00137">137</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ad4a138fd5ba3ed7f75a0794a190136d0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -232,15 +200,16 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The scheduler was initialised. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The scheduler was initialised. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Create all RTOS internal objects and be ready to run.</p>
+<p>Must be called only once, usually in <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00049">49</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
+<p>Definition at line <a class="el" href="trace_8cpp_source.html#l00050">50</a> of file <a class="el" href="trace_8cpp_source.html">trace.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +238,7 @@ Functions</h2></td></tr>
 <p>Lock the scheduler (prevent it for doing thread switches) and return the previous status, to be restored by <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a02960f99e1e2aee1a748f46cab8545fd" title="Unlock the scheduler. ">unlock()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00174">174</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00188">188</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +278,7 @@ Functions</h2></td></tr>
 <p>The scheduler cannot be stopped, it will run forever, but thread switching can be locked/unlocked.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00150">150</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00148">148</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>

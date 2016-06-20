@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -105,10 +105,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="#index__"><span>_</span></a></li>
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
-      <li class="current"><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li class="current"><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -142,13 +144,6 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 
 <div class="contents">
 &#160;
-
-<h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
-<li>_LITE_EXIT
-: <a class="el" href="atexit_8h.html#ab8e8beb411c6404cf4ff3327a5703d99">atexit.h</a>
-</li>
-</ul>
-
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>AngelSWI
@@ -185,6 +180,20 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DEBUG
+: <a class="el" href="group__cmsis-plus-app-config-cmdline.html#gad72dbcf6d0153db1b8d8a58001feed83">os-app-config.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NDEBUG
+: <a class="el" href="group__cmsis-plus-app-config-cmdline.html#ga8de3ed741dadc9c979a4ff17c0a9116e">os-app-config.h</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
 <li>os_assert_err
 : <a class="el" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os-decls.h</a>
@@ -192,27 +201,177 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 <li>os_assert_throw
 : <a class="el" href="os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137">os-decls.h</a>
 </li>
-<li>OS_INCLUDE_STARTUP_GUARD_CHECKS
-: <a class="el" href="startup_8c.html#a1507dad2f28c44dc9361cc34615db7ad">startup.c</a>
+<li>OS_BOOL_RTOS_MESSAGE_QUEUE_SIZE_16BITS
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga8b8d4cff816a87836292f6a70a0cfc94">os-app-config.h</a>
+</li>
+<li>OS_BOOL_RTOS_PORT_CONTEXT_CREATE_ZERO_LR
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga20b7aa5c5dbff8b57e7e0252c48c7b7a">os-app-config.h</a>
+</li>
+<li>OS_BOOL_RTOS_THREAD_IDLE_PRIORITY_BELOW_IDLE
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gac3d21d69ffeb83966538e51598e19828">os-app-config.h</a>
+</li>
+<li>OS_BOOL_STARTUP_GUARD_CHECKS
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#ga425f65080a3b89e3c42e571a5cd0215a">os-app-config.h</a>
+</li>
+<li>OS_EXCLUDE_RTOS_IDLE_SLEEP
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga2be577ef06cbd48ea7a9713b86540346">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_NEWLIB_POSIX_FUNCTIONS
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#gae3b0d99ce5c780aca15f5eb91d1d6391">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_RTOS_CUSTOM_THREAD_USER_STORAGE
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gad2477c712a5637add86f8a5c481ce546">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga2b3f040276e2b24324bec4cf8bea21b3">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga98b9ee74f2cc3a619c4f7ec7529692d4">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_STANDARD_POSIX_FUNCTIONS
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#ga6a887403ec2d132ffb57dfc8eb06943d">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_STARTUP_INIT_FP
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#ga97f7d6839621fe1d72173a5afca65df4">os-app-config.h</a>
+</li>
+<li>OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#gaa4acd307521faf4f1746471aa8265b48">os-app-config.h</a>
+</li>
+<li>OS_INTEGER_ATEXIT_ARRAY_SIZE
+: <a class="el" href="group__cmsis-plus-app-config-lib.html#gae98c5da8f0a9d07ff1898736ab411992">os-app-config.h</a>
+</li>
+<li>OS_INTEGER_DIRENT_NAME_MAX
+: <a class="el" href="group__cmsis-plus-app-config-lib.html#ga5e007aea157a97e520b579680113ac35">os-app-config.h</a>
+</li>
+<li>OS_INTEGER_RTOS_CRITICAL_SECTION_INTERRUPT_PRIORITY
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gae563c41aa21f771722c3e38e0115bd1b">os-app-config.h</a>
+</li>
+<li>OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">os-app-config.h</a>
 </li>
 <li>OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES
-: <a class="el" href="os-decls_8h.html#aa8fdfffcd4b6d58c260d5dd4730b44d0">os-decls.h</a>
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gaa8fdfffcd4b6d58c260d5dd4730b44d0">os-app-config.h</a>
+, <a class="el" href="os-decls_8h.html#aa8fdfffcd4b6d58c260d5dd4730b44d0">os-decls.h</a>
 </li>
 <li>OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES
-: <a class="el" href="os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca">os-decls.h</a>
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca">os-app-config.h</a>
+, <a class="el" href="os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca">os-decls.h</a>
+</li>
+<li>OS_INTEGER_SEMIHOSTING_MAX_OPEN_FILES
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#gafe68f549f40c6e4247ba8e59ffc8ebb3">os-app-config.h</a>
 </li>
 <li>OS_INTEGER_SYSTICK_FREQUENCY_HZ
-: <a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">os-decls.h</a>
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#gab657098ae141f5b84a1319f48c181052">os-app-config.h</a>
+, <a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">os-decls.h</a>
+</li>
+<li>OS_INTEGER_TRACE_ITM_STIMULUS_PORT
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gada6c107c82cb8cb1452b2c12317fbe6f">os-app-config.h</a>
 </li>
 <li>OS_INTEGER_TRACE_PRINTF_TMP_ARRAY_SIZE
 : <a class="el" href="trace_8cpp.html#a0fd8f6e6808c27fc3e21d3e3f888d36f">trace.cpp</a>
 </li>
+<li>OS_INTEGER_TRACE_SEMIHOSTING_BUFF_ARRAY_SIZE
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga781848869981aae7eafaa4542023b5d5">os-app-config.h</a>
+</li>
 <li>OS_THREAD_PRIO_SHIFT
 : <a class="el" href="os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9">os-c-decls.h</a>
+</li>
+<li>OS_TRACE_LIBC_ATEXIT
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga87e19e856f58bcf1d1ca4dffbd5e693e">os-app-config.h</a>
+</li>
+<li>OS_TRACE_LIBC_MALLOC
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gafd0340b1f1853fd7cad6e3a730cbadea">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_CLOCKS
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gab300223c6a13a1bd271d5c269791ce24">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_CONDVAR
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gadc3abe71d1469164239b90c00ff63456">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_EVFLAGS
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gad064d6489f2fa913f322fe37be684e9e">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_LISTS
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga860bf237bc7e64c17ec3422437aa7032">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_MEMPOOL
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gad91e5b247b295adf2e5dc5422735cd1b">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_MQUEUE
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga75f695340608f38b8a0b238ef87a0bd9">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_MUTEX
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga9ac677b44592e9696a3cc7954ad0bfeb">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_RTC_TICK
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga5bd8773e8d6c5db769b7936ecb112541">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_SCHEDULER
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga812d5625eff1fa1e742904fcd1deb0df">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_SEMAPHORE
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gab785125128a110d270bc946392d534b7">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_SYSCLOCK_TICK
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga48866b89110f8e75c2b99e34d4e646cc">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_THREAD
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gace2dc3105c18c670c09567686521341c">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_THREAD_CONTEXT
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga7fb5ff380a08c210ed16b294271e4f95">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_THREAD_SIG
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga5520a4afbc5e9c39d01b624df65b9e41">os-app-config.h</a>
+</li>
+<li>OS_TRACE_RTOS_TIMER
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gabeb270812a276322b493be1b18bd48fe">os-app-config.h</a>
 </li>
 <li>OS_USE_CMSIS_PLUS
 : <a class="el" href="os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae">os-c-decls.h</a>
 , <a class="el" href="os-decls_8h.html#a841b874bf63424159693407fe668c6ae">os-decls.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_CONDITION_VARIABLE
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga176b3b9f9d5c76cd2fadfd0666d299ed">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_EVENT_FLAGS
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga8b73c43dd89f077294ee1d4999ceec61">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_MESSAGE_QUEUE
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga7ef18967492f6ed530cce5d39af2f55b">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_MUTEX
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga89b44234c2977fd87435ba7be5c0ec6d">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_REALTIME_CLOCK_SLEEP_FOR
+: <a class="el" href="group__cmsis-plus-app-config-port.html#gae86e3cdc96ff2adcf4520bf0bd28ca0a">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_SCHEDULER
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga8a603caff17c5b94c51baa8e1d5fc7bf">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_SEMAPHORE
+: <a class="el" href="group__cmsis-plus-app-config-port.html#gacbf8aeea392aedd25bf283661615f7cd">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_SYSTICK_CLOCK_SLEEP_FOR
+: <a class="el" href="group__cmsis-plus-app-config-port.html#gad17fdc9133f5aa89da1e67f5a5154abb">os-app-config.h</a>
+</li>
+<li>OS_USE_RTOS_PORT_TIMER
+: <a class="el" href="group__cmsis-plus-app-config-port.html#ga4ce12f00cdfcde18ad2e4354c17dd052">os-app-config.h</a>
+</li>
+<li>OS_USE_SEMIHOSTING_SYSCALLS
+: <a class="el" href="group__cmsis-plus-app-config-startup.html#ga133680f49dc70d2e183f8ee0b381e9f7">os-app-config.h</a>
+</li>
+<li>OS_USE_TRACE_ITM
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga1eef4714134677247530eb58af9282fb">os-app-config.h</a>
+</li>
+<li>OS_USE_TRACE_SEGGER_RTT
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga0ced5ab4cd2a68835b0340e5d1e763b0">os-app-config.h</a>
+</li>
+<li>OS_USE_TRACE_SEMIHOSTING_DEBUG
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#gaa765edfa50b4e54df6e1b36e36ac6832">os-app-config.h</a>
+</li>
+<li>OS_USE_TRACE_SEMIHOSTING_STDOUT
+: <a class="el" href="group__cmsis-plus-app-config-trace.html#ga5135483197df824b82993a2a975e27b8">os-app-config.h</a>
 </li>
 <li>osCMSIS
 : <a class="el" href="cmsis__os_8h.html#a702196bacccbb978620c736b209387f1">cmsis_os.h</a>
@@ -321,6 +480,13 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 </li>
 <li>osWaitForever
 : <a class="el" href="cmsis__os_8h.html#a9eb9a7a797a42e4b55eb171ecc609ddb">cmsis_os.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TRACE
+: <a class="el" href="group__cmsis-plus-app-config-cmdline.html#gaad9cc64d45a76ba0d37c00f8cd9caa37">os-app-config.h</a>
 </li>
 </ul>
 </div><!-- contents -->

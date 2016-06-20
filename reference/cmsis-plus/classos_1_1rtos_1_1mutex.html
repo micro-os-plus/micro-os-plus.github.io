@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.1.1</span>
+     &#160;<span id="projectnumber">0.2.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1mutex.html','');});
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classos_1_1rtos_1_1mutex-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a></div></div>  </div>
+<div class="title">os::rtos::mutex Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -147,8 +147,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html">attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex attributes.  <a href="classos_1_1rtos_1_1mutex_1_1attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html">protocol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex_1_1recursive__attributes.html">recursive_attributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive mutex attributes.  <a href="classos_1_1rtos_1_1mutex_1_1recursive__attributes.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html">robustness</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html">type</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -156,15 +162,15 @@ Public Types</h2></td></tr>
 <tr class="memitem:a31a6f2d64eb598ccb0f8152e2bf20504"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a31a6f2d64eb598ccb0f8152e2bf20504">count_t</a> = uint16_t</td></tr>
 <tr class="memdesc:a31a6f2d64eb598ccb0f8152e2bf20504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex recursion counter.  <a href="#a31a6f2d64eb598ccb0f8152e2bf20504">More...</a><br /></td></tr>
 <tr class="separator:a31a6f2d64eb598ccb0f8152e2bf20504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e88f46f2a57278deb8eb93c8902a478"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a1e88f46f2a57278deb8eb93c8902a478">protocol_t</a> = enum class protocol:uint8_t{none=0, inherit=1, protect=2}</td></tr>
-<tr class="memdesc:a1e88f46f2a57278deb8eb93c8902a478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex protocol.  <a href="#a1e88f46f2a57278deb8eb93c8902a478">More...</a><br /></td></tr>
-<tr class="separator:a1e88f46f2a57278deb8eb93c8902a478"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd">robustness_t</a> = enum class robustness:uint8_t{stalled=0, robust=1}</td></tr>
-<tr class="memdesc:a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex robustness.  <a href="#a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd">More...</a><br /></td></tr>
-<tr class="separator:a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44809780c4f47991c0ef1ffa6fe794b1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a44809780c4f47991c0ef1ffa6fe794b1">type_t</a> = enum class type:uint8_t{normal=0, errorcheck=1, recursive=2, _default=normal,}</td></tr>
-<tr class="memdesc:a44809780c4f47991c0ef1ffa6fe794b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex behaviour.  <a href="#a44809780c4f47991c0ef1ffa6fe794b1">More...</a><br /></td></tr>
-<tr class="separator:a44809780c4f47991c0ef1ffa6fe794b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bfef6cd463aac910d5c93d5828fe7f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a65bfef6cd463aac910d5c93d5828fe7f">protocol_t</a> = uint8_t</td></tr>
+<tr class="memdesc:a65bfef6cd463aac910d5c93d5828fe7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex protocol.  <a href="#a65bfef6cd463aac910d5c93d5828fe7f">More...</a><br /></td></tr>
+<tr class="separator:a65bfef6cd463aac910d5c93d5828fe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763c7134e2f479dcc4b21912c0af89c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a763c7134e2f479dcc4b21912c0af89c7">robustness_t</a> = uint8_t</td></tr>
+<tr class="memdesc:a763c7134e2f479dcc4b21912c0af89c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex robustness.  <a href="#a763c7134e2f479dcc4b21912c0af89c7">More...</a><br /></td></tr>
+<tr class="separator:a763c7134e2f479dcc4b21912c0af89c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cfc618bf9be9be363fc28bd72b3200"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a16cfc618bf9be9be363fc28bd72b3200">type_t</a> = uint8_t</td></tr>
+<tr class="memdesc:a16cfc618bf9be9be363fc28bd72b3200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of mutex behaviour.  <a href="#a16cfc618bf9be9be363fc28bd72b3200">More...</a><br /></td></tr>
+<tr class="separator:a16cfc618bf9be9be363fc28bd72b3200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -194,10 +200,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afeb6e546c4dc95c96d8f81aba64638cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb">unlock</a> (void)</td></tr>
 <tr class="memdesc:afeb6e546c4dc95c96d8f81aba64638cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the mutex.  <a href="#afeb6e546c4dc95c96d8f81aba64638cb">More...</a><br /></td></tr>
 <tr class="separator:afeb6e546c4dc95c96d8f81aba64638cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3486b0293f3416bd47068c44dbd85877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a3486b0293f3416bd47068c44dbd85877">prio_ceiling</a> (void) const </td></tr>
+<tr class="memitem:a3486b0293f3416bd47068c44dbd85877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#a3486b0293f3416bd47068c44dbd85877">prio_ceiling</a> (void) const </td></tr>
 <tr class="memdesc:a3486b0293f3416bd47068c44dbd85877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the priority ceiling of a mutex.  <a href="#a3486b0293f3416bd47068c44dbd85877">More...</a><br /></td></tr>
 <tr class="separator:a3486b0293f3416bd47068c44dbd85877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a2c6bbb2d30714f8eee0070e5d0ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#af0a2c6bbb2d30714f8eee0070e5d0ac0">prio_ceiling</a> (<a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> prio_ceiling, <a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> *old_prio_ceiling=nullptr)</td></tr>
+<tr class="memitem:af0a2c6bbb2d30714f8eee0070e5d0ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#af0a2c6bbb2d30714f8eee0070e5d0ac0">prio_ceiling</a> (<a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> prio_ceiling, <a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> *old_prio_ceiling=nullptr)</td></tr>
 <tr class="memdesc:af0a2c6bbb2d30714f8eee0070e5d0ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the priority ceiling of a mutex.  <a href="#af0a2c6bbb2d30714f8eee0070e5d0ac0">More...</a><br /></td></tr>
 <tr class="separator:af0a2c6bbb2d30714f8eee0070e5d0ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9bec2b176e4a9e5714bd8c70bc0aab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab">consistent</a> (void)</td></tr>
@@ -251,55 +257,55 @@ Static Public Attributes</h2></td></tr>
 
 <p>Type of mutex recursion counter. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00126">126</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00141">141</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1e88f46f2a57278deb8eb93c8902a478"></a>
+<a class="anchor" id="a65bfef6cd463aac910d5c93d5828fe7f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a1e88f46f2a57278deb8eb93c8902a478">os::rtos::mutex::protocol_t</a> =  enum class protocol : uint8_t { none = 0, inherit = 1, protect = 2 }</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a65bfef6cd463aac910d5c93d5828fe7f">os::rtos::mutex::protocol_t</a> =  uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Type of mutex protocol. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00085">85</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00065">65</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd"></a>
+<a class="anchor" id="a763c7134e2f479dcc4b21912c0af89c7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a3f5c6c7d8e8bfbdd3affd1c7b2ea07dd">os::rtos::mutex::robustness_t</a> =  enum class robustness : uint8_t { stalled = 0, robust = 1 }</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a763c7134e2f479dcc4b21912c0af89c7">os::rtos::mutex::robustness_t</a> =  uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Type of mutex robustness. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00100">100</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00095">95</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a44809780c4f47991c0ef1ffa6fe794b1"></a>
+<a class="anchor" id="a16cfc618bf9be9be363fc28bd72b3200"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a44809780c4f47991c0ef1ffa6fe794b1">os::rtos::mutex::type_t</a> =  enum class type : uint8_t { normal = 0, errorcheck = 1, recursive = 2, _default = normal, }</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1mutex.html#a16cfc618bf9be9be363fc28bd72b3200">os::rtos::mutex::type_t</a> =  uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Type of mutex behaviour. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00121">121</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00116">116</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +337,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_init.html"><code>pthread_mutex_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00373">373</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00372">372</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +379,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_init.html"><code>pthread_mutex_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00407">407</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00406">406</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -392,11 +398,11 @@ Static Public Attributes</h2></td></tr>
 
 <p>Destroy the mutex object. </p>
 <p>This destructor shall destroy the mutex object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
-<p>It shall be safe to destroy an initialised mutex that is unlocked. Attempting to destroy a locked mutex or a mutex that is referenced (for example, while being used in a <code>timed_wait()</code> or <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a51171b707af828d3a3ce7b3cf89e7d4c" title="Suspend the current running thread to wait for an event. ">wait()</a></code>) by another thread results in undefined behaviour.</p>
+<p>It shall be safe to destroy an initialised mutex that is unlocked. Attempting to destroy a locked mutex or a mutex that is referenced (for example, while being used in a <code>timed_wait()</code> or <code><a class="el" href="standard-aliases_8h.html#a1b535bc16327bd87c7f9c1331c3d2bd7">wait()</a></code>) by another thread results in undefined behaviour.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_destroy.html"><code>pthread_mutex_destroy()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00461">461</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00460">460</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +425,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was marked as consistent. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was marked as consistent. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mutex object referenced by mutex is not robust or does not protect an inconsistent state.</td></tr>
   </table>
@@ -431,7 +437,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_consistent.html"><code>pthread_mutex_consistent()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01092">1092</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01091">1091</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -453,13 +459,13 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable.. </td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mutex was created with the protocol attribute having the value PTHREAD_PRIO_PROTECT and the calling thread's priority is higher than the mutex's current priority ceiling. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code>mutex::type::errorcheck</code> and the current thread already owns the mutex.</td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex.</td></tr>
   </table>
   </dd>
 </dl>
@@ -484,7 +490,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_lock.html"><code>pthread_mutex_lock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00620">620</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00619">619</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -513,9 +519,10 @@ Static Public Attributes</h2></td></tr>
 <p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
-<p>All objects return a non-null string; anonymous objects return <code>"-"</code>. </p>
+<p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00501">501</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +558,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <p>Identical mutexes should have the same memory address. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00627">627</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00642">642</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -579,9 +586,10 @@ Static Public Attributes</h2></td></tr>
 
 <p>Get the thread that owns the mutex. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to thread or <code>nullptr</code> if not owned. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to thread or <code>nullptr</code> if not owned.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00633">633</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00653">653</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -590,7 +598,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> os::rtos::mutex::prio_ceiling </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> os::rtos::mutex::prio_ceiling </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -606,7 +614,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_getprioceiling.html"><code>pthread_mutex_getprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00986">986</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00985">985</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -617,13 +625,13 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::mutex::prio_ceiling </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a>&#160;</td>
           <td class="paramname"><em>prio_ceiling</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> *&#160;</td>
           <td class="paramname"><em>old_prio_ceiling</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -644,7 +652,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The priority was changed. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The priority was changed. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
   </table>
   </dd>
@@ -654,7 +662,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_setprioceiling.html"><code>pthread_mutex_setprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01026">1026</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01025">1025</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -676,14 +684,15 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was reset.</td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was reset.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Return the mutex to initial unlocked state. If there were threads waiting for this mutex, wakeup all, then clear the waiting list.</p>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01121">1121</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01122">1122</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -710,19 +719,19 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
     <tr><td class="paramname">ETIMEDOUT</td><td>The mutex could not be locked before the specified timeout expired. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable. </td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code>mutex::type::errorcheck</code> and the current thread already owns the mutex. </td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The process or thread would have blocked, and the abstime parameter specified a nanoseconds field value less than zero or greater than or equal to 1000 million. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Try to lock the mutex object referenced by mutex. If the mutex is already locked, the calling thread shall block until the mutex becomes available as in the <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock the mutex. ">lock()</a></code> function. If the mutex cannot be locked without waiting for another thread to unlock the mutex, this wait shall be terminated when the specified timeout expires.</p>
-<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (<a class="el" href="namespaceos_1_1estd_1_1chrono.html#aa72a3cdebba9461616eb9cd1295bf666">now()</a>+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
+<p>The timeout shall expire after the number of time units (that is when the value of that clock equals or exceeds (now()+duration). The resolution of the timeout shall be the resolution of the clock on which it is based.</p>
 <p>Under no circumstance shall the function fail with a timeout if the mutex can be locked immediately. The validity of the timeout need not be checked if the mutex can be locked immediately.</p>
 <p>The clock used for timeouts can be specified via the <code>clock</code> attribute. By default, the clock derived from the scheduler timer is used, and the durations are expressed in ticks.</p>
 <p>As a consequence of the priority inheritance rules (for mutexes initialized with the PRIO_INHERIT protocol), if a timed mutex wait is terminated because its timeout expires, the priority of the owner of the mutex shall be adjusted as necessary to reflect the fact that this thread is no longer among the threads waiting for the mutex.</p>
@@ -733,7 +742,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00798">798</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00797">797</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -755,18 +764,18 @@ Differences from the standard:<ul>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was locked. </td></tr>
     <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable.. </td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mutex was created with the protocol attribute having the value PTHREAD_PRIO_PROTECT and the calling thread's priority is higher than the mutex's current priority ceiling. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code>mutex::type::errorcheck</code> and the current thread already owns the mutex. </td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
     <tr><td class="paramname">EWOULDBLOCK</td><td>The mutex could not be acquired because it was already locked.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Try to lock the mutex as <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock the mutex. ">lock()</a></code>, except that if the mutex object referenced by mutex is currently locked (by any thread, including the current thread), the call shall return immediately. If the mutex type is <code>mutex::type::recursive</code> and the mutex is currently owned by the calling thread, the mutex lock count shall be incremented by one and the <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> function shall immediately return success.</p>
+<p>Try to lock the mutex as <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock the mutex. ">lock()</a></code>, except that if the mutex object referenced by mutex is currently locked (by any thread, including the current thread), the call shall return immediately. If the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> and the mutex is currently owned by the calling thread, the mutex lock count shall be incremented by one and the <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> function shall immediately return success.</p>
 <p>If <em>mutex</em> is a robust mutex and the process containing the owning thread terminated while holding the mutex lock, a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> shall return the error value <code>EOWNERDEAD</code>. If <em>mutex</em> is a robust mutex and the owning thread terminated while holding the mutex lock, a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> may return the error value <code>EOWNERDEAD</code> even if the process in which the owning thread resides has not terminated. In these cases, the mutex is locked by the thread but the state it protects is marked as inconsistent. The application should ensure that the state is made consistent for reuse and when that is complete call <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">consistent()</a></code>. If the application is unable to recover the state, it should unlock the mutex without a prior call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">consistent()</a></code>, after which the mutex is marked permanently unusable.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_trylock.html"><code>pthread_mutex_trylock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
@@ -775,7 +784,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00732">732</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00731">731</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -797,18 +806,18 @@ Differences from the standard:<ul>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a3d19f716a55045807932fbda5ad85724ac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was unlocked. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routine; the mutex type is <code>mutex::type::errorcheck</code> or <code>mutex::type::recursive</code>, or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was unlocked. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routine; the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code>, or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The mutex was not unlocked.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Release the mutex object referenced by <em>mutex</em>. The manner in which a mutex is released is dependent upon the mutex's type attribute. If there are threads blocked on the mutex object referenced by mutex when <code><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb" title="Unlock the mutex. ">unlock()</a></code> is called, resulting in the mutex becoming available, the scheduling policy shall determine which thread shall acquire the mutex.</p>
-<p>(In the case of <code>mutex::type::recursive</code> mutexes, the mutex shall become available when the count reaches zero and the calling thread no longer has any locks on this mutex.)</p>
+<p>(In the case of <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> mutexes, the mutex shall become available when the count reaches zero and the calling thread no longer has any locks on this mutex.)</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_unlock.html"><code>pthread_mutex_unlock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00913">913</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00912">912</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -831,7 +840,7 @@ Differences from the standard:<ul>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00128">128</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00143">143</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -856,7 +865,7 @@ Differences from the standard:<ul>
 <p>Default normal mutex initialiser. </p>
 <p>This variable is used by the default constructor. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00229">229</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00244">244</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -881,7 +890,7 @@ Differences from the standard:<ul>
 <p>Default recursive mutex initialiser. </p>
 <p>This variable can be used to create a recursive mutex. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00283">283</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00298">298</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

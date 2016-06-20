@@ -19,8 +19,9 @@ var structos__thread__s =
     [ "parent", "structos__thread__s.html#a4db7d0dfcc509a4f75de39315bd18601", null ],
     [ "prio", "structos__thread__s.html#a355a9dc29319520d4749b07c79b2be6b", null ],
     [ "ready_node", "structos__thread__s.html#a3c874f59ee9e8028682b1cbfd8456aa1", null ],
-    [ "signals", "structos__thread__s.html#a3d512200bcd25c76b4a282ab07897b9a", null ],
+    [ "signals", "structos__thread__s.html#a091f45ab6a9f27dcf553005598511db1", null ],
     [ "state", "structos__thread__s.html#a24455ea041cf96e3981d30cf5cbfa048", null ],
+    [ "statistics", "structos__thread__s.html#a1c81cf1601a453eb8584eda200d53a2e", null ],
     [ "user_storage", "structos__thread__s.html#ae1947b7a248441e9d800bb0712bc684e", null ],
     [ "vtbl", "structos__thread__s.html#ae9cb1b9149861710e2d748969f1cd181", null ],
     [ "waiting_node", "structos__thread__s.html#a99f41fcd295ebcb692975bef0030c4ab", null ]
