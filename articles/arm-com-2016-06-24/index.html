@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>(Article) CMSIS++ RTOS: reference implementation fully functional</title>
+  <title>[Article] CMSIS++ RTOS: reference implementation fully functional</title>
   <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
 
-  <meta property="og:title" content="(Article) CMSIS++ RTOS: reference implementation fully functional" />
+  <meta property="og:title" content="[Article] CMSIS++ RTOS: reference implementation fully functional" />
   <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
 
   <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
@@ -214,8 +214,8 @@
       <div class="site-content">
 
         
-<h1 class="page-title">(Article) CMSIS++ RTOS: reference implementation fully functional</h1>
-<p class="last-modified">Last modified on Thu Jun 23 15:28:18 2016 UTC.</p>
+<h1 class="page-title">[Article] CMSIS++ RTOS: reference implementation fully functional</h1>
+<p class="last-modified">Last modified on Thu Jun 23 21:15:46 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -254,24 +254,27 @@
 <a href="#the-cortex-m-scheduler-port"><span class="tocnumber">6</span> <span class="toctext">The Cortex-M scheduler port</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#tests"><span class="tocnumber">7</span> <span class="toctext">Tests</span></a>
-<ul>
-<li class="toc_level-2 toc_section-10">
-<a href="#the-arm-cmsis-rtos-validation-suite"><span class="tocnumber">7.1</span> <span class="toctext">The ARM CMSIS RTOS validation suite</span></a>
+<a href="#static-vs-dynamic-memory-allocation"><span class="tocnumber">7</span> <span class="toctext">Static vs dynamic memory allocation</span></a>
 </li>
+<li class="toc_level-1 toc_section-10">
+<a href="#tests"><span class="tocnumber">8</span> <span class="toctext">Tests</span></a>
+<ul>
 <li class="toc_level-2 toc_section-11">
-<a href="#the-mutex-stress-test"><span class="tocnumber">7.2</span> <span class="toctext">The mutex stress test</span></a>
+<a href="#the-arm-cmsis-rtos-validation-suite"><span class="tocnumber">8.1</span> <span class="toctext">The ARM CMSIS RTOS validation suite</span></a>
 </li>
 <li class="toc_level-2 toc_section-12">
-<a href="#the-semaphore-stress-test"><span class="tocnumber">7.3</span> <span class="toctext">The semaphore stress test</span></a>
+<a href="#the-mutex-stress-test"><span class="tocnumber">8.2</span> <span class="toctext">The mutex stress test</span></a>
+</li>
+<li class="toc_level-2 toc_section-13">
+<a href="#the-semaphore-stress-test"><span class="tocnumber">8.3</span> <span class="toctext">The semaphore stress test</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-13">
-<a href="#conclusions"><span class="tocnumber">8</span> <span class="toctext">Conclusions</span></a>
-</li>
 <li class="toc_level-1 toc_section-14">
-<a href="#more-info"><span class="tocnumber">9</span> <span class="toctext">More info</span></a>
+<a href="#conclusions"><span class="tocnumber">9</span> <span class="toctext">Conclusions</span></a>
+</li>
+<li class="toc_level-1 toc_section-15">
+<a href="#more-info"><span class="tocnumber">10</span> <span class="toctext">More info</span></a>
 </li>
 </ul>
 </td>
@@ -296,11 +299,11 @@
 
 <h2 id="the-cmsis-rtos-c-api-as-a-wrapper-on-top-of-an-existing-rtos">The CMSIS++ RTOS C++ API as a wrapper on top of an existing RTOS</h2>
 
-<p>In the second phase of the project, the C++ API was validated by implementing it as a wrapper on top of the popular open source project FreeRTOS. Full functionality was achieved, and the entire system passed the ARM CMSIS RTOS validation suite.</p>
+<p>Initially, the C++ API was validated by implementing it as a wrapper on top of the popular open source project FreeRTOS. Full functionality was achieved, and the entire system passed the ARM CMSIS RTOS validation suite.</p>
 
 <h2 id="the-cmsis-rtos-reference-synchronisation-objects-semaphores-queues-etc">The CMSIS++ RTOS reference synchronisation objects (semaphores, queues, etc)</h2>
 
-<p>With the native C++ API validated, while still running on top of an existing scheduler, the next phase was to implement, in a highly portable way, the synchronisation objects defined by the CMSIS++ RTOS.</p>
+<p>With the native C++ API validated, while still using the safety net provided by an existing scheduler, the next step toward a grand design was to implement, in a highly portable way, the synchronisation objects defined by the CMSIS++ RTOS.</p>
 
 <p>The result was a highly portable implementation, that requires a very simple interaction with the scheduler, basically a thread <code>suspend()</code> and <code>resume()</code>.</p>
 
@@ -345,11 +348,11 @@
 
 <h2 id="the-cortex-m-scheduler-port">The Cortex-M scheduler port</h2>
 
-<p>This 32-bits ARM thumb port is specifically designed to run on Cortex-M devices. It currently supports ARMv6M and ARMv7M architectures, with or without FPU. Support for ARMv8M will be added on an as needed basis.</p>
+<p>This 32-bits ARM thumb port is specifically designed to run on Cortex-M devices. It currently supports ARMv6M and ARMv7M architectures, with or without FPU. Support for ARMv8M will be added when needed.</p>
 
 <p>The implementation uses the ARM specific features, like PendSV, which greatly simplify things.</p>
 
-<p>For example, the context switching is performed by a very simple function:</p>
+<p>For example, the context switching is performed by a rather simple function:</p>
 
 <pre>
 <code>void
@@ -370,15 +373,15 @@ PendSV_Handler (void)
 }
 </code></pre>
 
-<p>Apart from saving/returning, this function does exactly what such a function is expected to do:</p>
+<p>Apart from saving/returning, this function does exactly what it is expected to do:</p>
 
 <ul>
-  <li><code>save_on_stack ()</code> - saves the context of the current thread on stack and return the stack address;</li>
+  <li><code>save_on_stack ()</code> - saves the context of the current thread on the thread stack and returns the stack address;</li>
   <li><code>switch_stacks ()</code> - saves the above stack address in the current thread control block, selects the next thread waiting to run and returns the address of its stack context;</li>
   <li><code>restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
 </ul>
 
-<p>The two save/restore functions are the only one requiring assembly code in the context switching part of the Cortex-M port:</p>
+<p>The two save/restore functions are among the very few in the Cortex-M port requiring assembly code:</p>
 
 <pre>
 <code>inline stack::element_t*
@@ -396,14 +399,14 @@ save_on_stack (void)
 #if defined (__VFP_FP__) &amp;&amp; !defined (__SOFTFP__)
 
       // Is the thread using the FPU context?
-      " tst lr, #0x10                      \n"
+      " tst lr, #0x10                       \n"
       " it eq                               \n"
       // If so, push high vfp registers.
       " vstmdbeq %[r]!, {s16-s31}           \n"
       // Save the core registers r4-r11,r14.
       // Also save EXC_RETURN to be able to test
       // again this condition in the restore sequence.
-      " stmdb %[r]!, {r4-r9,sl,fp,lr}          \n"
+      " stmdb %[r]!, {r4-r9,sl,fp,lr}       \n"
 
 #else
 
@@ -478,13 +481,86 @@ restore_from_stack (stack::element_t* sp)
 
 </code></pre>
 
+<h2 id="static-vs-dynamic-memory-allocation">Static vs dynamic memory allocation</h2>
+
+<p>One of the initial CMSIS++ RTOS design requirements was to give the user full control over the memory allocation.</p>
+
+<p>The implementation fulfilled this requirement, allowing any possible memory allocation scheme, from the simplicity of using fully static allocation to the extreme of using separate custom allocators for each object requiring dynamic memory.</p>
+
+<p>The objects requiring dynamic memory are:</p>
+
+<ul>
+  <li>threads, for the stacks</li>
+  <li>message queues, for the queues (arrays of messages)</li>
+  <li>memory pools, for the pools (arrays of blocks)</li>
+</ul>
+
+<p>All these objects have a last parameter in their constructors that default to the system allocator <code>memory::allocator&lt;T&gt;</code>.</p>
+
+<p>For example one of the thread constructors is:</p>
+
+<pre>
+<code>/**
+ * &lt;a href='https://github.com/brief' class='user-mention'&gt;@brief&lt;/a&gt; Default RTOS allocator.
+ */
+ using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
+
+/**
+  * &lt;a href='https://github.com/brief' class='user-mention'&gt;@brief&lt;/a&gt; Create a named thread object.
+  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] name Pointer to name.
+  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] function Pointer to thread function.
+  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] args Pointer to thread function arguments.
+  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] attr Reference to attributes.
+  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] allocator Reference to allocator. Default a local temporary instance.
+  */
+  thread (const char* name, func_t function, func_args_t args,
+          const attributes&amp; attr = initializer, const Allocator&amp; allocator =
+                  Allocator ());
+</code></pre>
+
+<p>By default the <code>memory::allocator&lt;T&gt;</code> is defined as:</p>
+
+<pre>
+<code>template&lt;typename T&gt;
+  using allocator = new_delete_allocator&lt;T&gt;;
+</code></pre>
+
+<p>but the user can define it as any standard C++ allocator, and so the behaviour of all objects requiring dynamic memory can be customised at once.</p>
+
+<p>Even more, each such object has a separate template version, that takes a last allocator parameter, so at the limit each such object can be allocated using a separate allocator.</p>
+
+<p>Given the magic of C++, using such allocators is straightforward:</p>
+
+<pre>
+<code>template&lt;typename T&gt;
+  class my_allocator;
+
+thread_allocated&lt;my_allocator&gt; thread { "th", func, nullptr };
+
+message_queue_allocated&lt;my_allocator&gt; queue1 { "q1", 7, sizeof(msg_t) };
+message_queue_typed&lt;msg_t, my_allocator&gt; queue2 { "q2", 7 };
+
+memory_pool_allocated&lt;my_allocator&gt; pool1 { "p1", 7, sizeof(blk_t) };
+memory_pool_typed&lt;blk_t, my_allocator&gt; pool2 { "p2", 7 };
+</code></pre>
+
+<p>Static allocation is handled using exactly the same method, but different templates:</p>
+
+<pre>
+<code>thread_static&lt;2500&gt; thread { "th", func, nullptr };
+
+message_queue_static&lt;7, msg_t&gt; queue { "q" };
+
+memory_pool_static&lt;7, blk_t&gt; pool { "p" };
+</code></pre>
+
 <h2 id="tests">Tests</h2>
 
 <p>Writing RTOS unit tests was always tricky and the results debatable. This does not mean it should not be attempted; actually, if done properly, these tests can be very useful.</p>
 
 <p>To improve testability, the synthetic POSIX platform was implemented. It allows to run most RTOS tests within a very convenient environment like macOS or GNU/Linux.</p>
 
-<p>Another greatly helpful tool used to run the RTOS tests is the GNU ARM Eclipse QEMU, which emulates the STM32F4DISCOVERY board well enough for most test to be relevant.</p>
+<p>Another greatly helpful tool used to run the RTOS tests is the GNU ARM Eclipse QEMU, which emulates the STM32F4DISCOVERY board well enough for most tests to be relevant.</p>
 
 <p>Actually most of the times the tests were performed either on macOS or on QEMU, and only rarely, usually at the end, as a final validation, the tests were also performed on physical hardware.</p>
 
@@ -568,7 +644,7 @@ Test Result: PASSED
 
 <p>This test exercises the scheduler and the thread synchronisation primitives. It creates 10 threads that compete for a mutex, simulate random activities and compute statistics on how many times each thread acquired the mutex, to validate the fairness of the scheduler.</p>
 
-<p>The test is automatically performed by the test scripts on the STM32F4DISCOVERY board running under GNU ARM Eclipse QEMU and on the synthetic POSIX platform.</p>
+<p>The test is automatically performed by the scripts on the STM32F4DISCOVERY board running under GNU ARM Eclipse QEMU and on the synthetic POSIX platform.</p>
 
 <p>A typical result of the run is:</p>
 
