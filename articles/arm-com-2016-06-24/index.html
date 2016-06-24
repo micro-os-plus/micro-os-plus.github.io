@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>[Article] CMSIS++ RTOS: reference implementation fully functional</title>
+  <title>[Article] CMSIS++ RTOS: fully functional reference implementation</title>
   <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
 
-  <meta property="og:title" content="[Article] CMSIS++ RTOS: reference implementation fully functional" />
+  <meta property="og:title" content="[Article] CMSIS++ RTOS: fully functional reference implementation" />
   <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
 
   <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
@@ -190,6 +190,7 @@
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
   <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
 </ul>
 
@@ -214,8 +215,8 @@
       <div class="site-content">
 
         
-<h1 class="page-title">[Article] CMSIS++ RTOS: reference implementation fully functional</h1>
-<p class="last-modified">Last modified on Thu Jun 23 21:20:22 2016 UTC.</p>
+<h1 class="page-title">[Article] CMSIS++ RTOS: fully functional reference implementation</h1>
+<p class="last-modified">Last modified on Fri Jun 24 04:40:05 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -282,20 +283,20 @@
 </tbody>
 </table>
 </div><p>
-<small>(This article was published in the <a href="TODO">ARM Connected Community </a> blog, on 24.06.2016).</small>
+<small>(This article was published in the <a href="https://community.arm.com/groups/tools/blog/2016/06/23/cmsis-rtos-reference-implementation-fully-functional">ARM Connected Community </a> blog, on 24.06.2016).</small>
 </p>
 
 <h2 id="overview">Overview</h2>
 
-<p><strong>CMSIS++</strong>, or rather <strong>POSIX++</strong>, is a POSIX-like, portable, vendor-independent hardware abstraction layer intended for <strong>C++/C embedded applications</strong>, designed with special consideration for the industry standard <strong>ARM Cortex-M</strong> processor series. Originally intended as a proposal for the next generation CMSIS,  <strong>CMSIS++</strong> can probably be more accurately defined as <em>“C++ CMSIS”</em>, and <strong>POSIX++</strong> as <em>“C++ POSIX”</em>.</p>
+<p><strong>CMSIS++</strong>, or rather <strong>POSIX++</strong>, is a POSIX-like, portable, vendor-independent, hardware abstraction layer intended for <strong>C++/C embedded applications</strong>, designed with special consideration for the industry standard <strong>ARM Cortex-M</strong> processor series. Originally intended as a proposal for the next generation CMSIS,  <strong>CMSIS++</strong> can probably be more accurately defined as <em>“C++ CMSIS”</em>, and <strong>POSIX++</strong> as <em>“C++ POSIX”</em>.</p>
 
 <h2 id="cmsis-rtos-apis-vs-reference-implementations">CMSIS++ RTOS: APIs vs reference implementations</h2>
 
-<p>The CMSIS++ cornerstone is the RTOS, and in this respect CMSIS++ can be analysed from two perspectives: the <strong>CMSIS++ RTOS APIs</strong> and the <strong>CMSIS++ RTOS reference implementation</strong>.</p>
+<p>The CMSIS++ cornerstone is the RTOS, and in this respect CMSIS++ RTOS can be analysed from two perspectives: the <strong>CMSIS++ RTOS APIs</strong>, with a modern design and the <strong>CMSIS++ RTOS reference implementation</strong> with a clean and efficient code.</p>
 
 <p>In the first phase of the project, the CMSIS++ RTOS APIs were designed, with POSIX threads in mind, but from a C++ point of view.</p>
 
-<p>The RTOS C++ API is the native interface for CMSIS++ RTOS, with a C API implemented as a wrapper, and an ISO C++ Threads API implemented also on top of the native C++ API.</p>
+<p>The native CMSIS++ RTOS interface is the C++ API, with a C API implemented as a wrapper, and an ISO C++ Threads API implemented also on top of the native C++ API.</p>
 
 <h2 id="the-cmsis-rtos-c-api-as-a-wrapper-on-top-of-an-existing-rtos">The CMSIS++ RTOS C++ API as a wrapper on top of an existing RTOS</h2>
 
@@ -303,7 +304,7 @@
 
 <h2 id="the-cmsis-rtos-reference-synchronisation-objects-semaphores-queues-etc">The CMSIS++ RTOS reference synchronisation objects (semaphores, queues, etc)</h2>
 
-<p>With the native C++ API validated, while still using the safety net provided by an existing scheduler, the next step toward a grand design was to implement, in a highly portable way, the synchronisation objects defined by the CMSIS++ RTOS.</p>
+<p>With the native C++ API validated, while still using the safety net provided by an existing scheduler, the next step toward a grand design was to implement, in a portable way, the synchronisation objects defined by the CMSIS++ RTOS.</p>
 
 <p>The result was a highly portable implementation, that requires a very simple interaction with the scheduler, basically a thread <code>suspend()</code> and <code>resume()</code>.</p>
 
@@ -325,7 +326,7 @@
 
 <p>As such, the scheduler’s main responsibility is to manage the list of threads ready for execution and to switch their execution contexts in an orderly manner.</p>
 
-<p>Not absolutely mandatory for its functionality, the scheduler also keeps track of all registered threads, and provides iterators to walk these lists.</p>
+<p>Although not mandatory for its functionality, the scheduler also keeps track of all registered threads, and provides iterators to walk these lists.</p>
 
 <p>For a better modularity, the scheduler itself does not keep track of threads waiting for various events; this is delegated to the various synchronisation objects, that are expected to implement their own policy of suspending and resuming execution of threads waiting for common resources.</p>
 
@@ -341,14 +342,14 @@
 
 <ul>
   <li>a 32-bits ARM thumb port, running on Cortex-M devices;</li>
-  <li>a 64-bits synthetic POSIX port, running as a user process on macOS and GNU/Linux.</li>
+  <li>a 64-bits synthetic POSIX port, running as a user process on <strong>macOS</strong> and <strong>GNU/Linux</strong>.</li>
 </ul>
 
 <p>These ports are actually not part of the CMSIS++ package itself, which is highly portable, but are part of separate <strong>µOS++</strong> packages.</p>
 
 <h2 id="the-cortex-m-scheduler-port">The Cortex-M scheduler port</h2>
 
-<p>This 32-bits ARM thumb port is specifically designed to run on Cortex-M devices. It currently supports ARMv6M and ARMv7M architectures, with or without FPU. Support for ARMv8M will be added when needed.</p>
+<p>This 32-bits ARM thumb port is specifically designed to run on Cortex-M devices. It currently supports ARMv6-M and ARMv7-M architectures, with or without FPU. Support for ARMv8-M will be added when needed.</p>
 
 <p>The implementation uses the ARM specific features, like PendSV, which greatly simplify things.</p>
 
@@ -381,7 +382,7 @@ PendSV_Handler (void)
   <li><code>restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
 </ul>
 
-<p>The two save/restore functions are among the very few in the Cortex-M port requiring assembly code:</p>
+<p>The two save/restore functions are among the very few in the Cortex-M port that require assembly code:</p>
 
 <pre>
 <code>inline stack::element_t*
@@ -465,7 +466,7 @@ restore_from_stack (stack::element_t* sp)
 }
 </code></pre>
 
-<p>The generated code (for Cortex-M3) is extremely neat and tidy:</p>
+<p>The generated code (for Cortex-M3) is remarkably neat and tidy:</p>
 
 <pre>
 <code>08000198 &lt;PendSV_Handler&gt;:
@@ -500,22 +501,11 @@ restore_from_stack (stack::element_t* sp)
 <p>For example one of the thread constructors is:</p>
 
 <pre>
-<code>/**
- * &lt;a href='https://github.com/brief' class='user-mention'&gt;@brief&lt;/a&gt; Default RTOS allocator.
- */
- using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
+<code>using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
 
-/**
-  * &lt;a href='https://github.com/brief' class='user-mention'&gt;@brief&lt;/a&gt; Create a named thread object.
-  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] name Pointer to name.
-  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] function Pointer to thread function.
-  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] args Pointer to thread function arguments.
-  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] attr Reference to attributes.
-  * &lt;a href='https://github.com/param' class='user-mention'&gt;@param&lt;/a&gt; [in] allocator Reference to allocator. Default a local temporary instance.
-  */
-  thread (const char* name, func_t function, func_args_t args,
-          const attributes&amp; attr = initializer, const Allocator&amp; allocator =
-                  Allocator ());
+thread (const char* name, func_t function, func_args_t args,
+        const attributes&amp; attr = initializer, const Allocator&amp; allocator =
+              Allocator ());
 </code></pre>
 
 <p>By default the <code>memory::allocator&lt;T&gt;</code> is defined as:</p>
@@ -566,7 +556,7 @@ memory_pool_static&lt;7, blk_t&gt; pool { "p" };
 
 <h3 id="the-arm-cmsis-rtos-validation-suite">The ARM CMSIS RTOS validation suite</h3>
 
-<p>The main test used was the ARM CMSIS RTOS validation, that exercises quite thoroughly the interface published in the <code>cmsis_os.h</code> file.</p>
+<p>The main test was the ARM CMSIS RTOS validation suite, that exercises quite thoroughly the interface published in the <code>cmsis_os.h</code> file.</p>
 
 <p>This test is automatically performed by the test scripts on the STM32F4DISCOVERY board running under GNU ARM Eclipse QEMU and on the synthetic POSIX platform.</p>
 
@@ -695,13 +685,13 @@ Seed 832262406
 
 <p>CMSIS++ is still a young project, and many things need to be addressed, but the core component, the RTOS, is pretty well defined and functional.</p>
 
-<p>For now it may not be perfect (as it tries to be), but it definitely provides a more standard set of primitives, closer to POSIX, and a wider set of APIs, covering both C++ and C applications; at the same time it does its best to preserve compatibility with the original ARM CMSIS APIs.</p>
+<p>For now it may not be perfect (as it tries to be), but it definitely provides a more standard set of primitives, closer to POSIX, and a wider set of APIs, covering both C++ and C applications than many other existing RTOSes; at the same time it does its best to preserve compatibility with the original ARM CMSIS APIs.</p>
 
 <p>Any contributions to improve CMSIS++ will be highly appreciated.</p>
 
 <h2 id="more-info">More info</h2>
 
-<p>CMSIS++ is an open source project, maintained by Liviu Ionescu.</p>
+<p>CMSIS++ is an open source project, maintained by Liviu Ionescu. The project is released under the terms of the MIT license.</p>
 
 <p>The main source of information for CMSIS++ is the <a href="http://micro-os-plus.github.io/cmsis-plus/">project web</a>.</p>
 
