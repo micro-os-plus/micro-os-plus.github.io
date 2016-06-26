@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Interrupt service routines</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="Interrupt service routines" />
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+
+
+  <meta property="article:published_time" content="2011-03-09">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Interrupt_service_routines/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">Interrupt service routines</h1>
+<p class="last-modified">Page date Wed Mar  9 20:47:09 2011 UTC.</p>
+
+
+<h1 id="overview">Overview</h1>
+
+<p>The µOS++ framework provides special support for adding context switch functionality to interrupt service routines.</p>
+
+<p>The main idea requires two steps:</p>
+
+<ul>
+  <li>to inform the compiler that the routines to be used as interrupt service routines should not have the standard entry/exit code, (i.e. to be naked), and</li>
+  <li>instead of the compiler generated code, to use the system defined code to enter/exit managed interrupt service routines.</li>
+</ul>
+
+<h1 id="naked-functions">Naked functions</h1>
+
+<p>One very important notice: the naked interrupts run in a special environment, without a properly initialised link register. This makes the use of local variables, i.e. variables allocated on the stack of the naked routine, impossible. Calls to other functions are safe, and this is one of the reasons why in µOS++ the functionality is split between context handlers and interrupt service routines.</p>
+
+<h1 id="context-handlers-vs-interrupt-service-routines">Context handlers vs. interrupt service routines</h1>
+
+<p>As mentioned above, in µOS++ the functionality is split between context handlers and interrupt service routines. Context handlers are non portable, and should be implemented in the HAL part for each architecture or family, sometimes in plain C. When written in C++, they should be static methods.</p>
+
+<p>Opposed to them, in µOS++, interrupt service routines are (or should be) portable and can be written in C++ without problems.</p>
+
+<h1 id="the-pointer-to-the-current-object">The pointer to the current object</h1>
+
+<p>Regardless of the complexity of the class hierarchy, with multiple classes inheriting from a common base, driver classes should have separate instances, to be able to use distinct interrupts context handlers.</p>
+
+<p>As an example, even if the platform allows to define a common base for all Usart ports, it is still necessary to derive distinct Usart0, Usart1, etc. classed from the common base, and each and every one to configure separate interrupts.</p>
+
+<p>The actual interrupt service routine can be a C++ method defined in the base class, but to be able to call it, the pointer to the actual objects should be used to differentiate between instances.</p>
+
+<p>Exactly for this purpose, each implementation class should define a static member (like ms_pThis), where the constructor will store the pointer to the object.</p>
+
+<p>Calling the common interrupt service routine from the context handler should be done using his pointer:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ms_pThis-&gt;interruptRxServiceRoutine();
+</code></pre>
+</div>
+
+<h1 id="c-context-handlers">C++ context handlers</h1>
+
+<p>If the architecture allows to register any function as interrupt service routines, then it can be written in C++ without problems.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class MyClass
+{
+public:
+  MyClass();
+  ...
+  static void __attribute__((naked))
+  contextHandler(void);
+  ...
+  void interruptRxServiceRoutine(void);
+  ...
+  static MyClass * ms_pThis;
+}
+
+MyClass::MyClass(void)
+{
+  ...
+  ms_pThis = this;
+  ...
+}
+
+void
+MyClass::contextHandler(void)
+{
+  OSScheduler::interruptEnter();
+  {
+    ms_pThis-&gt;interruptRxServiceRoutine();
+  }
+  OSScheduler::interruptExit();
+}
+
+void
+MyClass::interruptRxServiceRoutine(void)
+{
+  // Here the interesting things happen
+}
+</code></pre>
+</div>
+
+<h1 id="c-context-handlers-1">C context handlers</h1>
+
+<p>For architectures that mandate interrupt service routines to be written in C, the code outline is slightly different.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>extern "C" void __attribute__((naked))
+MyClass_contextHandler(void);
+
+class MyClass
+{
+public:
+  MyClass();
+  ...
+  void interruptServiceRoutine(void);
+  ...
+  static MyClass * ms_pThis;
+}
+
+MyClass::MyClass(void)
+{
+  ...
+  ms_pThis = this;
+  ...
+}
+
+void
+MyClass_contextHandler(void)
+{
+  OSScheduler::interruptEnter();
+  {
+    MyClass::ms_pThis-&gt;interruptServiceRoutine();
+  }
+  OSScheduler::interruptExit();
+}
+
+void
+MyClass::interruptServiceRoutine(void)
+{
+  // Here the interesting things happen
+}
+</code></pre>
+</div>
+
+<h1 id="configurable-preemption">Configurable preemption</h1>
+
+<p>The µOS++ does not mandate for interrupts to implement preemption. When running in cooperative mode, i.e. when OS_EXCLUDE_PREEMPTION is defined, the code behind interruptEnter()/Exit() automatically skips the context switch code, so the interrupts will behave as usual (except they will do a full context save and context restore).</p>
+
+<p>When running in preemptive mode, i.e. the OS_EXCLUDE_PREEMPTION is not defined, all interrupts declared as naked and using the interruptEnter()/Exit() code, will perform the context switch code.</p>
+
+<p>For increased flexibility, and some more debugging opportunities, it is recommended to allow for each interrupt service routine to include or not the preemption code.</p>
+
+<p>The configuration variables used to do this should conform to the following convention:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OS_EXCLUDE_MYCLASS_ISR_PREEMPTION
+OS_EXCLUDE_MYCLASS_MYCONDITION_ISR_PREEMPTION
+</code></pre>
+</div>
+
+<p>The MYCONDITION name adds some more specificity in case there are several interrupt service routines in a class, for example distinct RX and TX routines in the Usart driver.</p>
+
+<p>A complete C++ code with configurable preemptions should configure the attribute used for the several interrupt service routine between naked and interrupt (or signal) on some platforms, like AVR8), and if naked is not used, be sure to completely exclude the interruptEnter()/Exit() code.</p>
+
+<p>When the interruptEnter()/Exit() code is included, it also handles the activity LED (i.e. turn it on when interrupts are entered). To preserve the usefulness of the activity LED, when the interruptEnter()/Exit() code is not included, it is necessary to explicitly turn the LED on. In all cases it will be turned off when the processor enters the idle/sleep mode.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class MyClass
+{
+public:
+  MyClass();
+  ...
+  static void
+#if !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION)
+  __attribute__((naked))
+#else
+  __attribute__((interrupt))
+#endif /* !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION) */
+  contextHandler(void);
+  ...
+  void interruptServiceRoutine(void);
+  ...
+  static MyClass * ms_pThis;
+}
+
+MyClass::MyClass(void)
+{
+  ...
+  ms_pThis = this;
+  ...
+}
+
+void
+MyClass::contextHandler(void)
+{
+#if !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION)
+  OSScheduler::interruptEnter();
+#else
+  OSScheduler::ISR_ledActiveOn();
+#endif /* !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION) */
+  {
+    ms_pThis-&gt;interruptServiceRoutine();
+  }
+#if !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION)
+  OSScheduler::interruptExit();
+#endif /* !defined(OS_EXCLUDE_MYCLASS_ISR_PREEMPTION) */
+ }
+
+void
+MyClass::interruptServiceRoutine(void)
+{
+  // Here the interesting things happen
+}
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/Interrupt_service_routines/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

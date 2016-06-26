@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>The µOS++ IIIe Wiki</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="The µOS++ IIIe Wiki">
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe">
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml">
+
+
+  <meta property="article:published_time" content="2015-09-28">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/ii/The_%C2%B5OS++_IIIe_Wiki/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">The µOS++ IIIe Wiki</h1>
+<p class="last-modified">Page date Mon Sep 28 11:05:47 2015 UTC.</p>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#style-guides"><span class="tocnumber">2</span> <span class="toctext">Style guides</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#how-to-evaluate"><span class="tocnumber">3</span> <span class="toctext">How to evaluate</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#license"><span class="tocnumber">4</span> <span class="toctext">License</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#links--references"><span class="tocnumber">5</span> <span class="toctext">Links &amp; References</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#miscellaneous"><span class="tocnumber">6</span> <span class="toctext">Miscellaneous</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#mediawiki-links"><span class="tocnumber">7</span> <span class="toctext">MediaWiki links</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#final-thoughts"><span class="tocnumber">8</span> <span class="toctext">Final thoughts</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <strong><em>µOS++ IIIe</em></strong> (micro oh ɛs plus plus third edition) project (affectionately called <em>Ilie</em>, Romanian for <a href="http://en.wikipedia.org/wiki/Elijah">Eliyahu/Илия́/Elijah</a>, also the protector of aviators) is the third iteration of <strong><em>µOS++</em></strong>, a <a href="http://sourceforge.net/projects/micro-os-plus/">SourceForge hosted</a> open source, royalty-free, multi-tasking operating system intended for 8/16/32/64 bit embedded systems. It will be based on a simple preemptive scheduler specifically designed for ARM Cortex-M devices and also ported on AVR8 devices. It will be written in a subset of C11 and C++11 to be compiled with modern GNU GCC and LLVM Clang compilers. By using templates for compile time polymorphism and inlines as much as possible, the code will be highly optimised and easily testable.</p>
+
+<p><strong>Note:</strong> This new version is currently an early concept, with major design choices to be taken; for those interested in a functional version, please read:</p>
+
+<ul>
+  <li>
+<a href="http://micro-os-plus.sourceforge.net/old-wiki/">the µOS++ wiki</a> (first edition)</li>
+  <li>
+<a href="http://micro-os-plus.sourceforge.net/wiki/The_%C2%B5OS%2B%2B_Second_Edition_Wiki">the µOS++ Second Edition wiki</a> and <a href="http://micro-os-plus.sourceforge.net/doc/">Doxygen</a>.</li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The <strong><em>µOS++ III</em></strong> is the second major redesign of the <strong><em>µOS++</em></strong> project, intending better observance of both the C11 and C++11 standards and integration into Eclipse.</p>
+
+<h2 id="style-guides">Style guides</h2>
+
+<ul>
+  <li><a href="/micro-os-plus/ii/Coding_style" title="wikilink">Coding style</a></li>
+  <li><a href="/micro-os-plus/ii/Naming_conventions" title="wikilink">Naming conventions</a></li>
+  <li><a href="/micro-os-plus/ii/Predefined_macros" title="wikilink">Predefined macros</a></li>
+  <li><a href="/micro-os-plus/ii/Wiki_pages_style_guide" title="wikilink">Wiki pages style guide</a></li>
+  <li><a href="/micro-os-plus/ii/Doxygen_style_guide" title="wikilink">Doxygen style guide</a></li>
+  <li><a href="/micro-os-plus/ii/Deviations_from_standards" title="wikilink">Deviations from standards</a></li>
+</ul>
+
+<h2 id="how-to-evaluate">How to evaluate</h2>
+
+<p>TBD</p>
+
+<h2 id="license">License</h2>
+
+<p>The µOS++ software is released under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT License</a>.</p>
+
+<h2 id="links--references">Links &amp; References</h2>
+
+<ul>
+  <li><a href="/micro-os-plus/ii/References#Standards_and_style" title="wikilink">Standards and style</a></li>
+  <li><a href="/micro-os-plus/ii/References#Embedded_operating_systems" title="wikilink">Embedded operating systems</a></li>
+  <li><a href="/micro-os-plus/ii/References#C.2FC.2B.2B_language_libraries" title="wikilink">C/C++ language libraries</a></li>
+  <li><a href="/micro-os-plus/ii/References#TCP.2FIP_libraries" title="wikilink">TCP/IP libraries</a></li>
+  <li><a href="/micro-os-plus/ii/References#Testing" title="wikilink">Testing</a></li>
+  <li><a href="/micro-os-plus/ii/References#Multi-tasking_related_links" title="wikilink">Multi-tasking related links</a></li>
+  <li><a href="/micro-os-plus/ii/References#Miscellaneous" title="wikilink">Miscellaneous</a></li>
+  <li><a href="/micro-os-plus/ii/References#Books" title="wikilink">Books</a></li>
+  <li><a href="/micro-os-plus/ii/References_notes" title="wikilink">References notes</a></li>
+</ul>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<ul>
+  <li><a href="/micro-os-plus/ii/Support" title="wikilink">Support</a></li>
+  <li><a href="/micro-os-plus/ii/Project_history" title="wikilink">Project history</a></li>
+  <li><a href="/micro-os-plus/ii/Criticism_of_previous_versions" title="wikilink">Criticism of previous versions</a></li>
+</ul>
+
+<h2 id="mediawiki-links">MediaWiki links</h2>
+
+<p>Consult the [//meta.wikimedia.org/wiki/Help:Contents User’s Guide] for information on using the wiki software.</p>
+
+<ul>
+  <li>[//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]</li>
+  <li>[//www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]</li>
+  <li><a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce">MediaWiki release mailing list</a></li>
+</ul>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>Althought not required by the license, I would be very happy if you could drop me a notice after reading these pages and eventually downloading any sources.</p>
+
+<p>Any comments/criticism/suggestions/etc will be highly appreciated.</p>
+
+<p>Enjoy,</p>
+
+<p>Liviu Ionescu <a href="mailto:ilg@livius.net">ilg@livius.net</a></p>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/ii/The_µOS++_IIIe_Wiki/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

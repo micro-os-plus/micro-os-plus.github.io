@@ -158,10 +158,10 @@
   <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
 </ul>
 
-<h4 id="os-iiiecmsis-plus"><a href="/cmsis-plus/">µOS++ IIIe</a></h4>
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
 
 <ul>
-  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/micro-os-plus/">Overview</a></li>
 </ul>
 
 <h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
@@ -216,7 +216,7 @@
 
         
 <h1 class="page-title">[Article] CMSIS++ RTOS: fully functional reference implementation</h1>
-<p class="last-modified">Last modified on Fri Jun 24 04:40:05 2016 UTC.</p>
+<p class="last-modified">Last modified on Fri Jun 24 04:51:18 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -306,7 +306,7 @@
 
 <p>With the native C++ API validated, while still using the safety net provided by an existing scheduler, the next step toward a grand design was to implement, in a portable way, the synchronisation objects defined by the CMSIS++ RTOS.</p>
 
-<p>The result was a highly portable implementation, that requires a very simple interaction with the scheduler, basically a thread <code>suspend()</code> and <code>resume()</code>.</p>
+<p>The result was a highly portable implementation, that requires a very simple interaction with the scheduler, basically a thread <code class="highlighter-rouge">suspend()</code> and <code class="highlighter-rouge">resume()</code>.</p>
 
 <p>Using this model, all RTOS objects were implemented (semaphores, mutexes, condition variables, message queues, memory pools, event flags, clocks and timers); full functionality was achieved, and again the entire system passed the ARM CMSIS RTOS validation suite.</p>
 
@@ -355,8 +355,7 @@
 
 <p>For example, the context switching is performed by a rather simple function:</p>
 
-<pre>
-<code>void
+<div class="highlighter-rouge"><pre class="highlight"><code>void
 __attribute__ ((section(".after_vectors"), naked, used, optimize("s")))
 PendSV_Handler (void)
 {
@@ -373,19 +372,19 @@ PendSV_Handler (void)
   asm volatile ("pop {pc}");
 }
 </code></pre>
+</div>
 
 <p>Apart from saving/returning, this function does exactly what it is expected to do:</p>
 
 <ul>
-  <li><code>save_on_stack ()</code> - saves the context of the current thread on the thread stack and returns the stack address;</li>
-  <li><code>switch_stacks ()</code> - saves the above stack address in the current thread control block, selects the next thread waiting to run and returns the address of its stack context;</li>
-  <li><code>restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
+  <li><code class="highlighter-rouge">save_on_stack ()</code> - saves the context of the current thread on the thread stack and returns the stack address;</li>
+  <li><code class="highlighter-rouge">switch_stacks ()</code> - saves the above stack address in the current thread control block, selects the next thread waiting to run and returns the address of its stack context;</li>
+  <li><code class="highlighter-rouge">restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
 </ul>
 
 <p>The two save/restore functions are among the very few in the Cortex-M port that require assembly code:</p>
 
-<pre>
-<code>inline stack::element_t*
+<div class="highlighter-rouge"><pre class="highlight"><code>inline stack::element_t*
 __attribute__((always_inline))
 save_on_stack (void)
 {
@@ -465,11 +464,11 @@ restore_from_stack (stack::element_t* sp)
   );
 }
 </code></pre>
+</div>
 
 <p>The generated code (for Cortex-M3) is remarkably neat and tidy:</p>
 
-<pre>
-<code>08000198 &lt;PendSV_Handler&gt;:
+<div class="highlighter-rouge"><pre class="highlight"><code>08000198 &lt;PendSV_Handler&gt;:
  8000198:	b500      	push	{lr}
  800019a:	f3ef 8009 	mrs	r0, PSP
  800019e:	f3bf 8f6f 	isb	sy
@@ -481,6 +480,7 @@ restore_from_stack (stack::element_t* sp)
  80001b6:	bd00      	pop	{pc}
 
 </code></pre>
+</div>
 
 <h2 id="static-vs-dynamic-memory-allocation">Static vs dynamic memory allocation</h2>
 
@@ -496,24 +496,24 @@ restore_from_stack (stack::element_t* sp)
   <li>memory pools, for the pools (arrays of blocks)</li>
 </ul>
 
-<p>All these objects have a last <code>allocator</code> parameter in their constructors that defaults to the system allocator <code>memory::allocator&lt;T&gt;</code>.</p>
+<p>All these objects have a last <code class="highlighter-rouge">allocator</code> parameter in their constructors that defaults to the system allocator <code class="highlighter-rouge">memory::allocator&lt;T&gt;</code>.</p>
 
 <p>For example one of the thread constructors is:</p>
 
-<pre>
-<code>using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
+<div class="highlighter-rouge"><pre class="highlight"><code>using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
 
 thread (const char* name, func_t function, func_args_t args,
         const attributes&amp; attr = initializer, const Allocator&amp; allocator =
               Allocator ());
 </code></pre>
+</div>
 
-<p>By default the <code>memory::allocator&lt;T&gt;</code> is defined as:</p>
+<p>By default the <code class="highlighter-rouge">memory::allocator&lt;T&gt;</code> is defined as:</p>
 
-<pre>
-<code>template&lt;typename T&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>template&lt;typename T&gt;
   using allocator = new_delete_allocator&lt;T&gt;;
 </code></pre>
+</div>
 
 <p>but the user can define it as any standard C++ allocator, and so the behaviour of all objects requiring dynamic memory can be customised at once.</p>
 
@@ -521,8 +521,7 @@ thread (const char* name, func_t function, func_args_t args,
 
 <p>Given the magic of C++, using such allocators is straightforward:</p>
 
-<pre>
-<code>template&lt;typename T&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>template&lt;typename T&gt;
   class my_allocator;
 
 thread_allocated&lt;my_allocator&gt; thread { "th", func, nullptr };
@@ -533,16 +532,17 @@ message_queue_typed&lt;msg_t, my_allocator&gt; queue2 { "q2", 7 };
 memory_pool_allocated&lt;my_allocator&gt; pool1 { "p1", 7, sizeof(blk_t) };
 memory_pool_typed&lt;blk_t, my_allocator&gt; pool2 { "p2", 7 };
 </code></pre>
+</div>
 
 <p>Static allocation is handled using exactly the same method, but different templates:</p>
 
-<pre>
-<code>thread_static&lt;2500&gt; thread { "th", func, nullptr };
+<div class="highlighter-rouge"><pre class="highlight"><code>thread_static&lt;2500&gt; thread { "th", func, nullptr };
 
 message_queue_static&lt;7, msg_t&gt; queue { "q" };
 
 memory_pool_static&lt;7, blk_t&gt; pool { "p" };
 </code></pre>
+</div>
 
 <h2 id="tests">Tests</h2>
 
@@ -556,14 +556,13 @@ memory_pool_static&lt;7, blk_t&gt; pool { "p" };
 
 <h3 id="the-arm-cmsis-rtos-validation-suite">The ARM CMSIS RTOS validation suite</h3>
 
-<p>The main test was the ARM CMSIS RTOS validation suite, that exercises quite thoroughly the interface published in the <code>cmsis_os.h</code> file.</p>
+<p>The main test was the ARM CMSIS RTOS validation suite, that exercises quite thoroughly the interface published in the <code class="highlighter-rouge">cmsis_os.h</code> file.</p>
 
 <p>This test is automatically performed by the test scripts on the STM32F4DISCOVERY board running under GNU ARM Eclipse QEMU and on the synthetic POSIX platform.</p>
 
 <p>The result of a run is:</p>
 
-<pre>
-<code>CMSIS-RTOS Test Suite   Jun 23 2016   16:03:42
+<div class="highlighter-rouge"><pre class="highlight"><code>CMSIS-RTOS Test Suite   Jun 23 2016   16:03:42
 
 TEST 01: TC_ThreadCreate                  PASSED
 TEST 02: TC_ThreadMultiInstance           PASSED
@@ -629,6 +628,7 @@ TEST 60: TC_MailFromISRToThread           PASSED
 Test Summary: 60 Tests, 60 Executed, 60 Passed, 0 Failed, 0 Warnings.
 Test Result: PASSED
 </code></pre>
+</div>
 
 <h3 id="the-mutex-stress-test">The mutex stress test</h3>
 
@@ -638,8 +638,7 @@ Test Result: PASSED
 
 <p>A typical result of the run is:</p>
 
-<pre>
-<code>Mutex stress &amp; uniformity test.
+<div class="highlighter-rouge"><pre class="highlight"><code>Mutex stress &amp; uniformity test.
 Built with GCC 5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589].
 Seed 3761791254
 [  5s] t0:39   t1:42   t2:37   t3:41   t4:38   t5:37   t6:36   t7:41   t8:40   t9:34   sum=385, avg=39, delta in [-5,3] [-12%,8%]
@@ -651,6 +650,7 @@ Seed 3761791254
 [ 35s] t0:270  t1:281  t2:277  t3:284  t4:266  t5:273  t6:279  t7:278  t8:273  t9:277  sum=2758, avg=276, delta in [-10,8] [-3%,3%]
 Done.
 </code></pre>
+</div>
 
 <h3 id="the-semaphore-stress-test">The semaphore stress test</h3>
 
@@ -660,8 +660,7 @@ Done.
 
 <p>A typical result of the run shows that on this platform the scheduler can stand about 250.000 context switches per second:</p>
 
-<pre>
-<code>Semaphore stress test.
+<div class="highlighter-rouge"><pre class="highlight"><code>Semaphore stress test.
 Built with GCC 5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589].
 
 Iteration 0
@@ -680,6 +679,7 @@ Seed 832262406
      20 cy 2100 kHz  999 late
      10 cy 4200 kHz  999 late
 </code></pre>
+</div>
 
 <h2 id="conclusions">Conclusions</h2>
 

@@ -158,10 +158,10 @@
   <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
 </ul>
 
-<h4 id="os-iiiecmsis-plus"><a href="/cmsis-plus/">µOS++ IIIe</a></h4>
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
 
 <ul>
-  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/micro-os-plus/">Overview</a></li>
 </ul>
 
 <h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
@@ -216,7 +216,7 @@
 
         
 <h1 class="page-title">[Article] CMSIS++: a proposal for a future CMSIS, written in C++</h1>
-<p class="last-modified">Last modified on Fri Mar 11 13:10:26 2016 UTC.</p>
+<p class="last-modified">Last modified on Fri Jun 24 04:51:18 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -317,7 +317,7 @@
 
 <p>This is the native RTOS interface, implemented in C++, and providing access to the entire RTOS functionality.</p>
 
-<p>The classes are grouped under the <code>os::rtos</code> namespace, and, to access them, C++ applications need to include the <code>&lt;cmsis-plus/rtos/os.h&gt;</code> header.</p>
+<p>The classes are grouped under the <code class="highlighter-rouge">os::rtos</code> namespace, and, to access them, C++ applications need to include the <code class="highlighter-rouge">&lt;cmsis-plus/rtos/os.h&gt;</code> header.</p>
 
 <p>Objects can be instantiated from native classes in the usual C++ way, and can be allocated statically, dynamically on the caller stack or dynamically on the heap.</p>
 
@@ -332,8 +332,7 @@
 
 <p>Here is a short example with a thread that counts 5 seconds and quits:</p>
 
-<pre>
-<code>#include &lt;cmsis-plus/rtos/os.h&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis-plus/rtos/os.h&gt;
 #include &lt;cmsis-plus/diag/trace.h&gt;
 
 using namespace os;
@@ -369,13 +368,13 @@ os_main(int argc, char* argv[])
   return 0;
 }
 </code></pre>
+</div>
 
 <p>The native CMSIS++ thread is basically a POSIX thread, with some additional functionality (see the <a href="http://micro-os-plus.github.io/reference/cmsis-plus/classos_1_1rtos_1_1_thread.html">os::rtos::Thread</a> reference page for more details).</p>
 
 <p>Similarly, synchronisation objects can be created with the usual C++ approach; for example a piece of code that uses a mutex to protects a counter looks like this:</p>
 
-<pre>
-<code>#include &lt;cmsis-plus/rtos/os.h&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis-plus/rtos/os.h&gt;
 
 // Protected resource (a counter).
 typedef struct {
@@ -397,6 +396,7 @@ count(void)
   mx.unlock();
 }
 </code></pre>
+</div>
 
 <h3 id="the-iso-c-threads-api">The ISO C++ Threads API</h3>
 
@@ -404,12 +404,11 @@ count(void)
 
 <p>With the ISO standard threads defined as wrappers over POSIX threads, and with the CMSIS++ native threads functionally compatible with POSIX threads, the implementation of the CMSIS++ ISO threads was quite straightforward.</p>
 
-<p>The classes are grouped under the <code>os::estd</code> namespace, and, to access them, C++ applications have to include headers from the <code>cmsis-plus/iso</code> folder, like <code>&lt;cmsis-plus/iso/thread&gt;</code>. The namespace <code>std::</code> and the standard header names (like <code>&lt;thread&gt;</code>) could not be used, to avoid clashes with system definitions when building CMSIS++ applications on POSIX host systems. The <strong>e</strong> in <code>estd</code> stands for <strong>embedded</strong>, so the namespace is dedicated to <strong>embedded standard</strong> definitions.</p>
+<p>The classes are grouped under the <code class="highlighter-rouge">os::estd</code> namespace, and, to access them, C++ applications have to include headers from the <code class="highlighter-rouge">cmsis-plus/iso</code> folder, like <code class="highlighter-rouge">&lt;cmsis-plus/iso/thread&gt;</code>. The namespace <code class="highlighter-rouge">std::</code> and the standard header names (like <code class="highlighter-rouge">&lt;thread&gt;</code>) could not be used, to avoid clashes with system definitions when building CMSIS++ applications on POSIX host systems. The <strong>e</strong> in <code class="highlighter-rouge">estd</code> stands for <strong>embedded</strong>, so the namespace is dedicated to <strong>embedded standard</strong> definitions.</p>
 
 <p>A similar example using the standard C++ threads:</p>
 
-<pre>
-<code>#include &lt;cmsis-plus/iso/thread&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis-plus/iso/thread&gt;
 #include &lt;cmsis-plus/iso/chrono&gt;
 #include &lt;cmsis-plus/diag/trace.h&gt;
 
@@ -449,11 +448,11 @@ os_main(int argc, char* argv[])
   return 0;
 }
 </code></pre>
+</div>
 
 <p>Most of the goodies of the C++ 11 standard can be used, for example <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> mutex locks, condition variables, lambdas:</p>
 
-<pre>
-<code>#include &lt;cmsis-plus/iso/mutex&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis-plus/iso/mutex&gt;
 #include &lt;cmsis-plus/iso/condition_variable&gt;
 
 using namespace os;
@@ -496,17 +495,17 @@ wait_for_limit()
   );
 }
 </code></pre>
+</div>
 
 <h3 id="the-new-cmsis-rtos-c-api">The new CMSIS++ RTOS C API</h3>
 
 <p>Although fully written in C++, <strong>CMSIS++ also provides a C API</strong>, to be used by C applications. Yes, that’s correct, plain C applications can use CMSIS++ without any problems. Only that function names are a bit longer and some of the C++ magic (like running the constructors and the destructors) needs to be done by hand, but otherwise the entire functionality is available.</p>
 
-<p>The C API is defined in the <code>&lt;cmsis-plus/rtos/os-c-api.h&gt;</code> header.</p>
+<p>The C API is defined in the <code class="highlighter-rouge">&lt;cmsis-plus/rtos/os-c-api.h&gt;</code> header.</p>
 
 <p>The same simple example that counts 5 seconds and quits, in C would look like:</p>
 
-<pre>
-<code>#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 #include &lt;cmsis-plus/diag/trace.h&gt;
 
 // Define the thread function.
@@ -545,15 +544,15 @@ os_main(int argc, char* argv[])
   return 0;
 }
 </code></pre>
+</div>
 
 <h3 id="the-arm-cmsis-rtos-c-api-compatibility-layer">The ARM CMSIS RTOS C API (compatibility layer)</h3>
 
 <p>Even more, the CMSIS++ C wrapper also implements <strong>the original ARM CMSIS API</strong>. This is a full and accurate implementation, since this API already passed the ARM CMSIS RTOS validation test.</p>
 
-<p>To access this API, include the <code>&lt;cmsis_os.h&gt;</code> header provided in the CMSIS++ package.</p>
+<p>To access this API, include the <code class="highlighter-rouge">&lt;cmsis_os.h&gt;</code> header provided in the CMSIS++ package.</p>
 
-<pre>
-<code>#include &lt;cmsis_os.h&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;cmsis_os.h&gt;
 #include &lt;cmsis-plus/diag/trace.h&gt;
 
 // Define the thread function.
@@ -594,6 +593,7 @@ os_main(int argc, char* argv[])
   return 0;
 }
 </code></pre>
+</div>
 
 <h2 id="the-cmsis-rtos-reference">The CMSIS++ RTOS Reference</h2>
 
@@ -609,7 +609,7 @@ os_main(int argc, char* argv[])
 
 <ul>
   <li><strong>CMSIS++ Drivers</strong> - a C++ rewrite of ARM CMSIS Drivers, with extensions;</li>
-  <li><strong>CMSIS++ POSIX I/O</strong> - a layer bringing together access to terminal devices, files and sockets, via a unified and standard API, using <code>open()</code>, <code>close()</code>, <code>read()</code>, <code>write()</code> as main functions;</li>
+  <li><strong>CMSIS++ POSIX I/O</strong> - a layer bringing together access to terminal devices, files and sockets, via a unified and standard API, using <code class="highlighter-rouge">open()</code>, <code class="highlighter-rouge">close()</code>, <code class="highlighter-rouge">read()</code>, <code class="highlighter-rouge">write()</code> as main functions;</li>
   <li><strong>CMSIS++ Startup</strong> - a portable startup code, replacing non-portable vendor assembly code;</li>
   <li><strong>CMSIS++ Core</strong> - C++ API for the ARM Cortex-M processors core and peripherals;</li>
   <li><strong>CMSIS++ Diagnostics</strong> - a C++/C API providing support for diagnostics and instrumentation.</li>

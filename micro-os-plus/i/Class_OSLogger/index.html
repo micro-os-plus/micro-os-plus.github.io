@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Class OSLogger</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="Class OSLogger" />
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+
+
+  <meta property="article:published_time" content="2011-05-03">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Class_OSLogger/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">Class OSLogger</h1>
+<p class="last-modified">Page date Tue May  3 09:34:03 2011 UTC.</p>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#osloggerconst-char-name"><span class="tocnumber">1</span> <span class="toctext">OSLogger(const char* name)</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#void-logerrorlogcodet-code-const-char-msg"><span class="tocnumber">2</span> <span class="toctext">void logError(logCode_t code, const char* msg)</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#void-logwarninglogcodet-code-const-char-msg"><span class="tocnumber">3</span> <span class="toctext">void logWarning(logCode_t code, const char* msg)</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#void-loginfologcodet-code-const-char-msg"><span class="tocnumber">4</span> <span class="toctext">void logInfo(logCode_t code, const char* msg)</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#void-logtracelogcodet-code-const-char-msg"><span class="tocnumber">5</span> <span class="toctext">void logTrace(logCode_t code, const char* msg)</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#char-getnamevoid"><span class="tocnumber">6</span> <span class="toctext">char* getName(void)</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#loglevelt-getlevelvoid"><span class="tocnumber">7</span> <span class="toctext">logLevel_t getLevel(void)</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#void-setlevelloglevelt-level"><span class="tocnumber">8</span> <span class="toctext">void setLevel(logLevel_t level)</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#static-const-char-convertleveltostringloglevelt-level"><span class="tocnumber">9</span> <span class="toctext">static const char* convertLevelToString(logLevel_t level)</span></a>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#logmanager-logmanager"><span class="tocnumber">10</span> <span class="toctext">LogManager *logManager</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#loglevelt-mminlevel"><span class="tocnumber">11</span> <span class="toctext">logLevel_t m_minLevel</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#const-char-mname"><span class="tocnumber">12</span> <span class="toctext">const char* m_name</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><h1 id="overview">Overview</h1>
+
+<p>This class allows separate modules to set their own log level. Each module must have an instance of this class in order to log messages.</p>
+
+<h1 id="constructors">Constructors</h1>
+
+<h2 id="osloggerconst-char-name">OSLogger(const char* name)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Initialise the object with the specified name.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* name - name of this logger instance.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none</p>
+
+<h1 id="methods">Methods</h1>
+
+<h2 id="void-logerrorlogcodet-code-const-char-msg">void logError(logCode_t code, const char* msg)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Log an error message. The Logger object must be register to the LogManager prior to use this method.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* code - error code.</p>
+
+<p>:* msg - message to be logged. It’s maximal size is 255 characters.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none</p>
+
+<h2 id="void-logwarninglogcodet-code-const-char-msg">void logWarning(logCode_t code, const char* msg)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Log a warning message. The Logger object must be register to the LogManager prior to use this method.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* code - error code.</p>
+
+<p>:* msg - message to be logged. It’s maximal size is 255 characters.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none</p>
+
+<h2 id="void-loginfologcodet-code-const-char-msg">void logInfo(logCode_t code, const char* msg)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Log an info message. The Logger object must be register to the LogManager prior to use this method.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* code - error code.</p>
+
+<p>:* msg - message to be logged. It’s maximal size is 255 characters.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none</p>
+
+<h2 id="void-logtracelogcodet-code-const-char-msg">void logTrace(logCode_t code, const char* msg)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Log a trace message. The Logger object must be register to the LogManager prior to use this method.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* code - error code.</p>
+
+<p>:* msg - message to be logged. It’s maximal size is 255 characters.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none</p>
+
+<h2 id="char-getnamevoid">char* getName(void)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Return logger’s name.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* none</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* The logger’s name.</p>
+
+<h2 id="loglevelt-getlevelvoid">logLevel_t getLevel(void)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Return logger’s log level.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* none</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* The logger’s log level.</p>
+
+<h2 id="void-setlevelloglevelt-level">void setLevel(logLevel_t level)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Set logger’s log level.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* level - the logger’s log level.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* none.</p>
+
+<h2 id="static-const-char-convertleveltostringloglevelt-level">static const char* convertLevelToString(logLevel_t level)</h2>
+
+<p>
+<strong>Description</strong>
+</p>
+
+<p>Convert log level for this logger to string, e.g. OS_ERROR to “error”.</p>
+
+<p>
+<strong>Parameters</strong>
+</p>
+
+<p>:* level - the log level to be translated.</p>
+
+<p>
+<strong>Return value</strong>
+</p>
+
+<p>:* The string which contains the translated log level.</p>
+
+<h1 id="member-variables">Member Variables</h1>
+
+<h2 id="logmanager-logmanager">LogManager *logManager</h2>
+
+<p>Pointer to the logManager at which this logger is registered.</p>
+
+<h2 id="loglevelt-mminlevel">logLevel_t m_minLevel</h2>
+
+<p>Minimum log level for the line to be logged.</p>
+
+<h2 id="const-char-mname">const char* m_name</h2>
+
+<p>Logger’s name.</p>
+
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/Class_OSLogger/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Class LargeCircularStorage</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="Class LargeCircularStorage" />
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+
+
+  <meta property="article:published_time" content="2011-04-14">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Class_LargeCircularStorage/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">Class LargeCircularStorage</h1>
+<p class="last-modified">Page date Thu Apr 14 18:01:52 2011 UTC.</p>
+
+
+<h1 id="overview">Overview</h1>
+
+<p>The LargeCircularStorage class manages a large circular buffer, based on a random access block device, like a flash memory, with a fixed block size of BLK_SIZE bytes and a fixed capacity of NUM_BLOCKS blocks, addressed from 0 to (NUM_BLOCKS-1).</p>
+
+<p>Managing a circular buffer is usually trivial, by sequentially writing data blocks and restarting from the beginning when the last available block is used.</p>
+
+<p>The only challenge is at power-up, to determine which is the first free block, or, in other words, which was the last written block. One could claim that such a mechanism is not needed, by always writing the last block address on an external persistent device.</p>
+
+<p>Although this might work, it has two drawbacks:</p>
+
+<ul>
+  <li>the persistent device must allow a huge number of write cycles</li>
+  <li>due to external reasons (power failure, unexpected reset) the saved value might not be accurate</li>
+</ul>
+
+<p>For a high reliability device, determining the address of the next free block is mandatory. Being, by definition, a large storage, let’s say millions of blocks, a linear search is out of question, and a binary search should be possible.</p>
+
+<p>Originally designed for linear structures, the binary search does not work directly on circular buffers, but with some carefully designed details, the binary search can be tailored on circular buffers too.</p>
+
+<p>There are probably many possible implementations, one of them being described below.</p>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>One assumption intended to simplify things is that data block are grouped by a certain criteria, let’s say by sessions with identical characteristics (for example a measurement session with a given acquisition rate, precision, etc).</p>
+
+<p>Writing blocks to the storage is always done at the end, the only decision being</p>
+
+<ul>
+  <li>append the block to the previous session</li>
+  <li>start a new session</li>
+</ul>
+
+<p>The grouping by sessions can be easily implemented by adding a pointer to each block, referring to the first block of the session, identified by referring to itself.</p>
+
+<p>Assuming the sessions have a significant number of blocks, when a search is needed, instead of linearly scanning the entire storage it is much faster to scan session by session.</p>
+
+<p>The second field required in each block is a monotone increasing unique ID, to simplify the detection of the last used block, since the next block should be an older one, so with a lower ID. The range of this ID should be at least two times larger than the total number of blocks, to accommodate the situation when this ID rolls over.</p>
+
+<p>In conclusion, the overhead of the circular buffer is a two field header, added to each block, containing the following:</p>
+
+<ul>
+  <li>a block number (with a 1KB block size, a long integer covers about 4 TB, a value more than enough for regular embedded applications)</li>
+  <li>a monotone increasing unique ID (a long integer usually would be enough)</li>
+</ul>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/Class_LargeCircularStorage/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

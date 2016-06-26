@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>The xCDL software requirements specifications</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="The xCDL software requirements specifications" />
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+
+
+  <meta property="article:published_time" content="2011-11-14">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/The_xCDL_software_requirements_specifications/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">The xCDL software requirements specifications</h1>
+<p class="last-modified">Page date Mon Nov 14 22:59:16 2011 UTC.</p>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#purpose"><span class="tocnumber">1</span> <span class="toctext">Purpose</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#scope"><span class="tocnumber">2</span> <span class="toctext">Scope</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#definitions-and-acronyms"><span class="tocnumber">3</span> <span class="toctext">Definitions and acronyms</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#references"><span class="tocnumber">4</span> <span class="toctext">References</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#overview"><span class="tocnumber">5</span> <span class="toctext">Overview</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#product-perspective"><span class="tocnumber">6</span> <span class="toctext">Product perspective</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#product-functions"><span class="tocnumber">7</span> <span class="toctext">Product functions</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#user-characteristics"><span class="tocnumber">8</span> <span class="toctext">User characteristics</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#constraints"><span class="tocnumber">9</span> <span class="toctext">Constraints</span></a>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#assumptions-and-dependencies"><span class="tocnumber">10</span> <span class="toctext">Assumptions and dependencies</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><h1 id="introduction">Introduction</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>This document is intended for software architects, designers, and developers, and should provide with the necessary input required during the design, implementation and maintenance of the xCDL framework.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>This document refers to the xCDL configuration definitions and the associated build process.</p>
+
+<h2 id="definitions-and-acronyms">Definitions and acronyms</h2>
+
+<ul>
+  <li>CDL - Configuration Definition Language, the configuration mechanism used by eCos</li>
+  <li>xCDL - an XML based configuration mechanism, inspired by CDL</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<h2 id="overview">Overview</h2>
+
+<h1 id="overall-description">Overall description</h1>
+
+<h2 id="product-perspective">Product perspective</h2>
+
+<h2 id="product-functions">Product functions</h2>
+
+<h2 id="user-characteristics">User characteristics</h2>
+
+<h2 id="constraints">Constraints</h2>
+
+<h2 id="assumptions-and-dependencies">Assumptions and dependencies</h2>
+
+<h1 id="specific-requirements">Specific requirements</h1>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/The_xCDL_software_requirements_specifications/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

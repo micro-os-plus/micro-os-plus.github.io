@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>System Timers</title>
+  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+
+  <meta property="og:title" content="System Timers" />
+  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+
+  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+
+
+  <meta property="article:published_time" content="2010-11-10">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/System_Timers/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">CMSIS++ / µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
+  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
+  <li><a href="/blog/2016/03/03/web-new-look/">The µOS++ IIIe new web site (using GitHub Pages)</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="cmsiscmsis-plus"><a href="/cmsis-plus/">CMSIS++</a></h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="os-iiiemicro-os-plus"><a href="/micro-os-plus/">µOS++ IIIe</a></h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="xpacksxcdlxpacks"><a href="/xpacks/">xPacks/XCDL</a></h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+  <li><a href="/reference/cmsis-plus/">CMSIS++</a></li>
+</ul>
+
+<h4 id="supportsupport"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="aboutabout"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">System Timers</h1>
+<p class="last-modified">Page date Wed Nov 10 16:19:54 2010 UTC.</p>
+
+
+<p>The main function of µOS++ system timers is to schedule the generation of events after a number of ticks.</p>
+
+<p>There are at least two timers, one using scheduler ticks and the other using seconds. The variables used to store ticks should be of type <strong>OSTimerTicks_t</strong>. Usually this is an unsigned short, giving a range of max 65535 ticks. For the timer counting seconds this means about 18 hours, and for the timer counting scheduler ticks, at, let’s say, 1000 ticks/second, this means about 65 seconds.</p>
+
+<p>If a hardware 32 KHz oscillator is available, the timer counting seconds will run independently of the scheduler timer, and eventually will run even when the processor is put to a deep sleep. Otherwise the second event is triggered every OS_CFGINT_TICK_RATE_HZ ticks, which, due to roundings when setting the registers of the hardware timer, might be slightly inacurate.</p>
+
+<p>The two timers are static members of the <strong>os.sched</strong> object and the recommended way to access them is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>os.sched.timerTicks
+os.sched.timerSeconds
+</code></pre>
+</div>
+
+<p>Please note that the seconds timer is optional. To include it in the build please add the following line to the system configuration header:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#define OS_INCLUDE_OSSCHEDULER_TIMERSECONDS                1
+</code></pre>
+</div>
+
+<p>Since specifying scheduler ticks might not be as intuitive as usual time units, the following macro was defined in OS.h and can be used whenever needed. However two issues should be considered: first, the result is aproximative, the higher the tick rate the better the approximation, and second, the result should fit the range of <strong>OSTimerTicks_t</strong>, otherwise results are erroneous. To increase precission it is recommended to define the parameter of this macro as long (by using the L suffix, like 15000L).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#define OS_MICROS_TO_TICKS(x) (((x)+(OS_CFGINT_TICK_RATE_HZ-1))/OS_CFGINT_TICK_RATE_HZ)
+</code></pre>
+</div>
+
+<p>If the above excessive rounding is not necessarry, the user can always define and use a customized version of this macro.</p>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="sleep-method">Sleep method</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OSEventWaitReturn_t sleep(OSTimerTicks_t ticks);
+</code></pre>
+</div>
+
+<p>Put the current task to sleep for the number of ticks. A value of 1 means ‘next’ tick, so it might be less than one full tick.</p>
+
+<p>Return: OS_EVENT_WAIT_RETURN_VOID if the call ended normally, or the value notified by eventNotify().</p>
+
+<h3 id="event-methods">Event methods</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>void eventNotify(OSTimerTicks_t ticks, OSEvent_t event, OSEventWaitReturn_t ret);
+</code></pre>
+</div>
+
+<p>Schedule a notification after a number of ticks. It is functionally equivalent with os.sched.eventNotify(event, ret) executed exactly after the given number of ticks.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int eventRemove(OSEvent_t event);
+</code></pre>
+</div>
+
+<p>Remove all notifications scheduled for the given event, regardless the task that issued them. Usefull when a timeout is set and the expected event occurs, making the timeout useless or even harmfull.</p>
+
+<p>Return: the number of notifications removed.</p>
+
+<h3 id="get-ticks-method">Get Ticks method</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OSTimerTicks_t getTicks(void);
+</code></pre>
+</div>
+
+<p>Return the current value of the ticks counter. Ticks are automatically counted by the interrupt service routine. Due to the nature of unsigned arithmetic, you can safely compute the duration of an operation by subtracting the counter at the begining of the operation from the counter at the end of the operation, as long as the duration is not higher than the max range of the OSTimerTicks_t (usually an unsigned short).</p>
+
+<hr />
+
+<h2 id="examples">Examples</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// ...
+os.sched.timerTicks.sleep(OS_MICROS_TO_TICKS(15000L)); // 15 ms
+// ...
+</code></pre>
+</div>
+
+<p>Put the current task to sleep for 15 miliseconds.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// ...
+os.sched.timerSeconds.sleep(3); // 3 sec
+// ...
+</code></pre>
+</div>
+
+<p>Put the current task to sleep for 3 seconds.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// ...
+OSEventWaitReturn_t startSeconds;
+startTicks = os.sched.timerSeconds.getTicks();
+  {
+    // ...
+  }
+OSEventWaitReturn_t durationSeconds;
+durationSeconds = os.sched.timerSeconds.getTicks() - startSeconds;
+// ...
+</code></pre>
+</div>
+
+<p>Compute the duration in seconds of a block of code.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// ...
+OSEvent_t event;
+event = ...;
+os.sched.timerTicks.eventNotify(OS_MICROS_TO_TICKS(25000L), event, OS_EVENT_WAIT_RETURN_TIMEOUT);
+OSEventWaitReturn_t ret;
+ret = os.sched.eventWait(event);
+if (ret != OS_EVENT_WAIT_RETURN_TIMEOUT)
+  os.sched.timerTicks.eventRemove(event);
+// ...
+</code></pre>
+</div>
+
+<p>Add a 25 miliseconds timeout to an <strong>eventWait()</strong>.</p>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/System_Timers/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2016 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
