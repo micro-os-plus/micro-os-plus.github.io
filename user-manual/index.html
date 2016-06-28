@@ -217,216 +217,214 @@
 
         
 <h1 class="page-title">User's manual</h1>
-<p class="last-modified">Last modified on Tue Jun 28 20:28:19 2016 UTC.</p>
+<p class="last-modified">Last modified on Tue Jun 28 20:37:24 2016 UTC.</p>
 
 
 <p>Note: The Users’s Manual is currently work in progress, actually in an early planning stage.</p>
 
 <h2 id="rtos">RTOS</h2>
 
+<h3 id="getting-started-with-os">Getting started with µOS++</h3>
 <ul>
-  <li>Getting started with µOS++
+  <li>The main thread</li>
+  <li>Multiple thread applications</li>
+</ul>
+
+<h3 id="basic-concepts">Basic concepts</h3>
+<ul>
+  <li>Tasks / threads / processes</li>
+  <li>Context switching
     <ul>
-      <li>The main thread</li>
-      <li>Multiple thread applications</li>
+      <li>Cooperative vs preemptive thread switching</li>
     </ul>
   </li>
-  <li>Basic concepts
+  <li>Scheduling
     <ul>
-      <li>Tasks / threads / processes</li>
-      <li>Context switching
-        <ul>
-          <li>Cooperative vs preemptive thread switching</li>
-        </ul>
-      </li>
-      <li>Scheduling
-        <ul>
-          <li>Round-robin vs priority scheduling</li>
-          <li>Priority inversion / priority inheritance</li>
-        </ul>
-      </li>
-      <li>Static vs. dynamically allocated objects</li>
-      <li>Communication between threads
-        <ul>
-          <li>Periodic polling</li>
-          <li>Passing messages</li>
-          <li>Event flags</li>
-          <li>Semaphores</li>
-        </ul>
-      </li>
-      <li>Managing common resources
-        <ul>
-          <li>Disable/enable interrupts</li>
-          <li>Lock/unlock the scheduler</li>
-          <li>Use semaphores</li>
-          <li>Use mutual exclusion (mutex)</li>
-          <li>Should a semaphore or a mutex be used?</li>
-          <li>Deadlock (or deadly embrace)</li>
-        </ul>
-      </li>
+      <li>Round-robin vs priority scheduling</li>
+      <li>Priority inversion / priority inheritance</li>
     </ul>
   </li>
-  <li>Threads
+  <li>Static vs. dynamically allocated objects</li>
+  <li>Communication between threads
     <ul>
-      <li>Overview</li>
-      <li>Thread functions</li>
-      <li>Thread priorities</li>
-      <li>Creating threads</li>
-      <li>Changing thread priorities</li>
-      <li>Other thread functions</li>
-      <li>Destroying threads</li>
-      <li>The current thread</li>
-      <li>Thread states</li>
-      <li>Determining the size of a thread stack</li>
-      <li>Detecting stack overflow</li>
+      <li>Periodic polling</li>
+      <li>Passing messages</li>
+      <li>Event flags</li>
+      <li>Semaphores</li>
     </ul>
   </li>
-  <li>Thread signal flags
+  <li>Managing common resources
     <ul>
-      <li>Overview</li>
-      <li>Raising thread signal flags</li>
-      <li>Waiting for thread signal flags</li>
-      <li>Other signal flags functions</li>
-    </ul>
-  </li>
-  <li>Semaphores
-    <ul>
-      <li>Overview
-        <ul>
-          <li>Binary semaphores</li>
-          <li>Counting semaphores</li>
-        </ul>
-      </li>
-      <li>Creating semaphores</li>
-      <li>Posting tokens to semaphores
-        <ul>
-          <li>Posting tokens from ISRs</li>
-        </ul>
-      </li>
-      <li>Waiting on semaphores</li>
-      <li>Other semaphore functions</li>
-      <li>Destroying semaphores</li>
-    </ul>
-  </li>
-  <li>Mutexes
-    <ul>
-      <li>Overview
-        <ul>
-          <li>Normal mutexes</li>
-          <li>Recursive mutexes</li>
-        </ul>
-      </li>
-      <li>Creating mutexes</li>
-      <li>Acquiring a mutex</li>
-      <li>Releasing a mutex</li>
-      <li>Other mutex functions</li>
-      <li>Destroying mutexes</li>
-      <li>Priority inversion</li>
-      <li>Priority inheritance</li>
+      <li>Disable/enable interrupts</li>
+      <li>Lock/unlock the scheduler</li>
+      <li>Use semaphores</li>
+      <li>Use mutual exclusion (mutex)</li>
+      <li>Should a semaphore or a mutex be used?</li>
       <li>Deadlock (or deadly embrace)</li>
     </ul>
   </li>
-  <li>Condition variables
-    <ul>
-      <li>Overview</li>
-      <li>TODO</li>
-    </ul>
-  </li>
-  <li>Event flags
-    <ul>
-      <li>Overview</li>
-      <li>Creating event flags</li>
-      <li>Raising event flags
-        <ul>
-          <li>Raising event flags from ISRs</li>
-        </ul>
-      </li>
-      <li>Waiting for event flags</li>
-      <li>Other event flags functions</li>
-      <li>Destroying event flags</li>
-    </ul>
-  </li>
-  <li>Message queues
-    <ul>
-      <li>Overview</li>
-      <li>Queue storage</li>
-      <li>Message priorities</li>
-      <li>Creating queues</li>
-      <li>Sending messages to queues
-        <ul>
-          <li>Sending messages from ISRs</li>
-        </ul>
-      </li>
-      <li>Receiving messages from queues</li>
-      <li>Other message queue functions</li>
-      <li>Destroying queues</li>
-    </ul>
-  </li>
-  <li>Fixed size memory pools
-    <ul>
-      <li>Overview</li>
-      <li>Pool storage</li>
-      <li>Creating memory pools</li>
-      <li>Getting a memory block
-        <ul>
-          <li>Getting a memory block from ISRs</li>
-        </ul>
-      </li>
-      <li>Returning a memory block</li>
-      <li>Other memory pools functions</li>
-      <li>Destroying memory pools</li>
-    </ul>
-  </li>
-  <li>Software timers
-    <ul>
-      <li>Overview</li>
-      <li>Timer functions</li>
-      <li>Creating timers</li>
-      <li>Start a timer</li>
-      <li>Stop a timer</li>
-      <li>Other timer functions</li>
-      <li>Destroying timers</li>
-    </ul>
-  </li>
-  <li>Clocks
-    <ul>
-      <li>Overview</li>
-      <li>The system clock</li>
-      <li>The real time clock</li>
-      <li>The high resolution clock</li>
-    </ul>
-  </li>
-  <li>Interrupts &amp; critical sections
-    <ul>
-      <li>Overview</li>
-      <li>High/low priority interrupts</li>
-      <li>Interrupt nesting</li>
-      <li>Critical sections</li>
-      <li>Uncritical sections</li>
-    </ul>
-  </li>
-  <li>Memory allocators
-    <ul>
-      <li>TODO</li>
-    </ul>
-  </li>
-  <li>The scheduler
-    <ul>
-      <li>Scheduling points</li>
-      <li>The ready list</li>
-      <li>The scheduling algorithm</li>
-      <li>Waiting lists</li>
-      <li>The idle thread</li>
-    </ul>
-  </li>
-  <li>Run-time statistics
-    <ul>
-      <li>Per-thread number of context switches</li>
-      <li>Per-thread number of CPU clocks used</li>
-    </ul>
-  </li>
-  <li>Iterating threads</li>
 </ul>
+
+<h3 id="threads">Threads</h3>
+<ul>
+  <li>Overview</li>
+  <li>Thread functions</li>
+  <li>Thread priorities</li>
+  <li>Creating threads</li>
+  <li>Changing thread priorities</li>
+  <li>Other thread functions</li>
+  <li>Destroying threads</li>
+  <li>The current thread</li>
+  <li>Thread states</li>
+  <li>Determining the size of a thread stack</li>
+  <li>Detecting stack overflow</li>
+</ul>
+
+<h3 id="thread-signal-flags">Thread signal flags</h3>
+<ul>
+  <li>Overview</li>
+  <li>Raising thread signal flags</li>
+  <li>Waiting for thread signal flags</li>
+  <li>Other signal flags functions</li>
+</ul>
+
+<h3 id="semaphores">Semaphores</h3>
+<ul>
+  <li>Overview
+    <ul>
+      <li>Binary semaphores</li>
+      <li>Counting semaphores</li>
+    </ul>
+  </li>
+  <li>Creating semaphores</li>
+  <li>Posting tokens to semaphores
+    <ul>
+      <li>Posting tokens from ISRs</li>
+    </ul>
+  </li>
+  <li>Waiting on semaphores</li>
+  <li>Other semaphore functions</li>
+  <li>Destroying semaphores</li>
+</ul>
+
+<h3 id="mutexes">Mutexes</h3>
+<ul>
+  <li>Overview
+    <ul>
+      <li>Normal mutexes</li>
+      <li>Recursive mutexes</li>
+    </ul>
+  </li>
+  <li>Creating mutexes</li>
+  <li>Acquiring a mutex</li>
+  <li>Releasing a mutex</li>
+  <li>Other mutex functions</li>
+  <li>Destroying mutexes</li>
+  <li>Priority inversion</li>
+  <li>Priority inheritance</li>
+  <li>Deadlock (or deadly embrace)</li>
+</ul>
+
+<h3 id="condition-variables">Condition variables</h3>
+<ul>
+  <li>Overview</li>
+  <li>TODO</li>
+</ul>
+
+<h3 id="event-flags">Event flags</h3>
+<ul>
+  <li>Overview</li>
+  <li>Creating event flags</li>
+  <li>Raising event flags
+    <ul>
+      <li>Raising event flags from ISRs</li>
+    </ul>
+  </li>
+  <li>Waiting for event flags</li>
+  <li>Other event flags functions</li>
+  <li>Destroying event flags</li>
+</ul>
+
+<h3 id="message-queues">Message queues</h3>
+<ul>
+  <li>Overview</li>
+  <li>Queue storage</li>
+  <li>Message priorities</li>
+  <li>Creating queues</li>
+  <li>Sending messages to queues
+    <ul>
+      <li>Sending messages from ISRs</li>
+    </ul>
+  </li>
+  <li>Receiving messages from queues</li>
+  <li>Other message queue functions</li>
+  <li>Destroying queues</li>
+</ul>
+
+<h3 id="fixed-size-memory-pools">Fixed size memory pools</h3>
+<ul>
+  <li>Overview</li>
+  <li>Pool storage</li>
+  <li>Creating memory pools</li>
+  <li>Getting a memory block
+    <ul>
+      <li>Getting a memory block from ISRs</li>
+    </ul>
+  </li>
+  <li>Returning a memory block</li>
+  <li>Other memory pools functions</li>
+  <li>Destroying memory pools</li>
+</ul>
+
+<h3 id="software-timers">Software timers</h3>
+<ul>
+  <li>Overview</li>
+  <li>Timer functions</li>
+  <li>Creating timers</li>
+  <li>Start a timer</li>
+  <li>Stop a timer</li>
+  <li>Other timer functions</li>
+  <li>Destroying timers</li>
+</ul>
+
+<h3 id="clocks">Clocks</h3>
+<ul>
+  <li>Overview</li>
+  <li>The system clock</li>
+  <li>The real time clock</li>
+  <li>The high resolution clock</li>
+</ul>
+
+<h3 id="interrupts--critical-sections">Interrupts &amp; critical sections</h3>
+<ul>
+  <li>Overview</li>
+  <li>High/low priority interrupts</li>
+  <li>Interrupt nesting</li>
+  <li>Critical sections</li>
+  <li>Uncritical sections</li>
+</ul>
+
+<h3 id="memory-allocators">Memory allocators</h3>
+<ul>
+  <li>TODO</li>
+</ul>
+
+<h3 id="the-scheduler">The scheduler</h3>
+<ul>
+  <li>Scheduling points</li>
+  <li>The ready list</li>
+  <li>The scheduling algorithm</li>
+  <li>Waiting lists</li>
+  <li>The idle thread</li>
+</ul>
+
+<h3 id="run-time-statistics">Run-time statistics</h3>
+<ul>
+  <li>Per-thread number of context switches</li>
+  <li>Per-thread number of CPU clocks used</li>
+</ul>
+
+<h3 id="iterating-threads">Iterating threads</h3>
 
 
 
