@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Developer resources</title>
+  <title>Jekyll style guide</title>
   <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
 
-  <meta property="og:title" content="Developer resources" />
+  <meta property="og:title" content="Jekyll style guide" />
   <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
 
   <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
 
 
-  <meta property="article:published_time" content="2016-03-09">
+  <meta property="article:published_time" content="2016-06-29">
 
 
 
@@ -29,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/">
+  <link rel="canonical" href="http://micro-os-plus.github.io/develop/jekyll-style-guide/">
 
 
 
@@ -216,60 +216,68 @@
       <div class="site-content">
 
         
-<h1 class="page-title">Developer resources</h1>
+<h1 class="page-title">Jekyll style guide</h1>
 <p class="last-modified">Last modified on Thu Jun 30 10:25:17 2016 UTC.</p>
 
 
-<div id="toc-container">
-<table class="toc" id="toc">
+<p><a href="https://jekyllrb.com">Jekyll</a> is a simple, blog-aware, static site generator.</p>
+
+<p>The content is written in the GitHub-flavoured <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>, as implemented by the <a href="http://kramdown.gettalong.org/syntax.html">kramdown</a> converter. Syntax highlighting is provided by <a href="http://rouge.jneen.net">Rouge</a>.</p>
+
+<h2 id="centered-images">Centered images</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div style="text-align:center"&gt;
+&lt;img src="/assets/images/2016/micro-os-plus-collection.png" /&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<figure class="highlight">
+<pre>
+<code class="language-cpp" data-lang="cpp">
+<table style="border-spacing: 0">
 <tbody>
 <tr>
-<td>
-<div id="toctitle">
-<h2>Contents</h2>
-</div>
-<ul>
-<li class="toc_level-1 toc_section-1">
-<a href="#coding-styles"><span class="tocnumber">1</span> <span class="toctext">Coding styles</span></a>
-</li>
-<li class="toc_level-1 toc_section-2">
-<a href="#misc"><span class="tocnumber">2</span> <span class="toctext">Misc</span></a>
-</li>
-<li class="toc_level-1 toc_section-3">
-<a href="#links--references"><span class="tocnumber">3</span> <span class="toctext">Links &amp; References</span></a>
-</li>
-</ul>
+<td class="gutter gl" style="text-align: right">
+<pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre>
+</td>
+<td class="code">
+<pre><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
+</span>
+<span class="kt">int</span>
+<span class="nf">os_main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span><span class="w">
+</span></pre>
 </td>
 </tr>
 </tbody>
 </table>
-</div><h2 id="coding-styles">Coding styles</h2>
+</code></pre>
+</figure>
 
-<ul>
-  <li><a href="/develop/coding-style/">C++ coding style</a></li>
-  <li><a href="/develop/naming-conventions/">C/C++ naming conventions</a></li>
-  <li><a href="/develop/doxygen-style-guide/">Doxygen style</a></li>
-  <li><a href="/develop/jekyll-style-guide/">Jekyll style</a></li>
-</ul>
+<p>Currently this is not acceptable.</p>
 
-<h2 id="misc">Misc</h2>
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
+</span>
+<span class="kt">int</span>
+<span class="nf">os_main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
-<ul>
-  <li><a href="/develop/predefined-macros/">Predefined compiler macros</a></li>
-</ul>
-
-<h2 id="links--references">Links &amp; References</h2>
-
-<ul>
-  <li><a href="/develop/references#standards-and-style">Standards and style</a></li>
-  <li><a href="/develop/references#embedded-operating-systems">Embedded operating systems</a></li>
-  <li><a href="/develop/references#cc-language--libraries">C/C++ language libraries</a></li>
-  <li><a href="/develop/references#tcpip-libraries">TCP/IP libraries</a></li>
-  <li><a href="/develop/references#testing">Testing</a></li>
-  <li><a href="/develop/references#multi-tasking-related-links">Multi-tasking related links</a></li>
-  <li><a href="/develop/references#miscellaneous">Miscellaneous</a></li>
-  <li><a href="/develop/references#books">Books</a></li>
-</ul>
+<p>The <code class="highlighter-rouge">highlight</code> would be preferable, but since it does not work properly, the second version will be used.</p>
 
 
 
@@ -279,7 +287,7 @@
 
 
 <ul class="share-buttons">
-  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/develop/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/develop/jekyll-style-guide/" data-layout="button"></div></li>
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
 </ul>
 
