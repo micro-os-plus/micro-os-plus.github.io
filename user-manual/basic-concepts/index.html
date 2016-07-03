@@ -217,7 +217,7 @@
 
         
 <h1 class="page-title">Basic concepts</h1>
-<p class="last-modified">Last modified on Sat Jul  2 10:34:01 2016 UTC.</p>
+<p class="last-modified">Last modified on Sat Jul  2 22:02:35 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -242,89 +242,104 @@
 <a href="#tasks"><span class="tocnumber">3.1</span> <span class="toctext">Tasks</span></a>
 </li>
 <li class="toc_level-2 toc_section-5">
-<a href="#threads--processes"><span class="tocnumber">3.2</span> <span class="toctext">Threads &amp; processes</span></a>
+<a href="#why-multiple-threads"><span class="tocnumber">3.2</span> <span class="toctext">Why multiple threads?</span></a>
 </li>
 <li class="toc_level-2 toc_section-6">
-<a href="#context-switching"><span class="tocnumber">3.3</span> <span class="toctext">Context switching</span></a>
+<a href="#threads-vs-processes"><span class="tocnumber">3.3</span> <span class="toctext">Threads vs processes</span></a>
 </li>
 <li class="toc_level-2 toc_section-7">
-<a href="#thread-stacks"><span class="tocnumber">3.4</span> <span class="toctext">Thread stacks</span></a>
+<a href="#blocking-io"><span class="tocnumber">3.4</span> <span class="toctext">Blocking I/O</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#cooperative-vs-preemptive-multi-tasking"><span class="tocnumber">3.5</span> <span class="toctext">Cooperative vs preemptive multi-tasking</span></a>
+<a href="#the-idle-thread"><span class="tocnumber">3.5</span> <span class="toctext">The idle thread</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#sleep-modes-and-power-savings"><span class="tocnumber">3.6</span> <span class="toctext">Sleep modes and power savings</span></a>
+</li>
+<li class="toc_level-2 toc_section-10">
+<a href="#context-switching"><span class="tocnumber">3.7</span> <span class="toctext">Context switching</span></a>
+</li>
+<li class="toc_level-2 toc_section-11">
+<a href="#thread-stacks"><span class="tocnumber">3.8</span> <span class="toctext">Thread stacks</span></a>
+</li>
+<li class="toc_level-2 toc_section-12">
+<a href="#cooperative-vs-preemptive-multi-tasking"><span class="tocnumber">3.9</span> <span class="toctext">Cooperative vs preemptive multi-tasking</span></a>
+</li>
+<li class="toc_level-2 toc_section-13">
+<a href="#thread-interruptioncancellation"><span class="tocnumber">3.10</span> <span class="toctext">Thread interruption/cancellation</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-9">
+<li class="toc_level-1 toc_section-14">
 <a href="#scheduling"><span class="tocnumber">4</span> <span class="toctext">Scheduling</span></a>
 <ul>
-<li class="toc_level-2 toc_section-10">
+<li class="toc_level-2 toc_section-15">
 <a href="#thread-states"><span class="tocnumber">4.1</span> <span class="toctext">Thread states</span></a>
 </li>
-<li class="toc_level-2 toc_section-11">
+<li class="toc_level-2 toc_section-16">
 <a href="#the-ready-list"><span class="tocnumber">4.2</span> <span class="toctext">The READY list</span></a>
 </li>
-<li class="toc_level-2 toc_section-12">
+<li class="toc_level-2 toc_section-17">
 <a href="#scheduling-algorithms"><span class="tocnumber">4.3</span> <span class="toctext">Scheduling algorithms</span></a>
 </li>
-<li class="toc_level-2 toc_section-13">
+<li class="toc_level-2 toc_section-18">
 <a href="#round-robin-vs-priority-scheduling"><span class="tocnumber">4.4</span> <span class="toctext">Round-robin vs priority scheduling</span></a>
 </li>
-<li class="toc_level-2 toc_section-14">
+<li class="toc_level-2 toc_section-19">
 <a href="#selecting-thread-priorities"><span class="tocnumber">4.5</span> <span class="toctext">Selecting thread priorities</span></a>
 </li>
-<li class="toc_level-2 toc_section-15">
+<li class="toc_level-2 toc_section-20">
 <a href="#priority-inversion--priority-inheritance"><span class="tocnumber">4.6</span> <span class="toctext">Priority inversion / priority inheritance</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-16">
+<li class="toc_level-1 toc_section-21">
 <a href="#communicating-between-threads-andor-isrs"><span class="tocnumber">5</span> <span class="toctext">Communicating between threads and/or ISRs</span></a>
 <ul>
-<li class="toc_level-2 toc_section-17">
+<li class="toc_level-2 toc_section-22">
 <a href="#periodic-polling-vs-event-waiting"><span class="tocnumber">5.1</span> <span class="toctext">Periodic polling vs event waiting</span></a>
 </li>
-<li class="toc_level-2 toc_section-18">
+<li class="toc_level-2 toc_section-23">
 <a href="#passing-messages"><span class="tocnumber">5.2</span> <span class="toctext">Passing messages</span></a>
 </li>
-<li class="toc_level-2 toc_section-19">
+<li class="toc_level-2 toc_section-24">
 <a href="#event-flags"><span class="tocnumber">5.3</span> <span class="toctext">Event flags</span></a>
 </li>
-<li class="toc_level-2 toc_section-20">
+<li class="toc_level-2 toc_section-25">
 <a href="#semaphores"><span class="tocnumber">5.4</span> <span class="toctext">Semaphores</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-21">
+<li class="toc_level-1 toc_section-26">
 <a href="#managing-common-resources"><span class="tocnumber">6</span> <span class="toctext">Managing common resources</span></a>
 <ul>
-<li class="toc_level-2 toc_section-22">
+<li class="toc_level-2 toc_section-27">
 <a href="#disableenable-interrupts"><span class="tocnumber">6.1</span> <span class="toctext">Disable/enable interrupts</span></a>
 </li>
-<li class="toc_level-2 toc_section-23">
+<li class="toc_level-2 toc_section-28">
 <a href="#lockunlock-the-scheduler"><span class="tocnumber">6.2</span> <span class="toctext">Lock/unlock the scheduler</span></a>
 </li>
-<li class="toc_level-2 toc_section-24">
+<li class="toc_level-2 toc_section-29">
 <a href="#counting-semaphores"><span class="tocnumber">6.3</span> <span class="toctext">Counting semaphores</span></a>
 </li>
-<li class="toc_level-2 toc_section-25">
+<li class="toc_level-2 toc_section-30">
 <a href="#mutual-exclusion-mutex"><span class="tocnumber">6.4</span> <span class="toctext">Mutual exclusion (mutex)</span></a>
 </li>
-<li class="toc_level-2 toc_section-26">
+<li class="toc_level-2 toc_section-31">
 <a href="#should-a-semaphore-or-a-mutex-be-used"><span class="tocnumber">6.5</span> <span class="toctext">Should a semaphore or a mutex be used?</span></a>
 </li>
-<li class="toc_level-2 toc_section-27">
+<li class="toc_level-2 toc_section-32">
 <a href="#deadlock-or-deadly-embrace"><span class="tocnumber">6.6</span> <span class="toctext">Deadlock (or deadly embrace)</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-28">
+<li class="toc_level-1 toc_section-33">
 <a href="#statically-vs-dynamically-allocated-objects"><span class="tocnumber">7</span> <span class="toctext">Statically vs. dynamically allocated objects</span></a>
 <ul>
-<li class="toc_level-2 toc_section-29">
+<li class="toc_level-2 toc_section-34">
 <a href="#the-system-allocator"><span class="tocnumber">7.1</span> <span class="toctext">The system allocator</span></a>
 </li>
-<li class="toc_level-2 toc_section-30">
+<li class="toc_level-2 toc_section-35">
 <a href="#fragmentation"><span class="tocnumber">7.2</span> <span class="toctext">Fragmentation</span></a>
 </li>
 </ul>
@@ -385,7 +400,15 @@
 
 <p>Multi-tasking is the technique of running multiple tasks in parallel.</p>
 
-<h3 id="threads--processes">Threads &amp; processes</h3>
+<h3 id="why-multiple-threads">Why multiple threads?</h3>
+
+<p>The <a href="http://www.amazon.com/Java-Threads-Scott-Oaks/dp/0596007825/">Java Threads</a> book (one of the inspiration source for the early versions of this project) states:</p>
+
+<blockquote>
+  <p>Historically, threading was first exploited to make certain programs easier to write: if a program can be split into separate tasks, it’s often easier to program the algorithm as separate tasks or threads… while it is possible to write a single-threaded program to perform multiple tasks, it’s easier and more elegant to place each task in its own thread.</p>
+</blockquote>
+
+<h3 id="threads-vs-processes">Threads vs processes</h3>
 
 <p>Threads and processes are the operating system mechanisms for running multiple tasks in parallel.</p>
 
@@ -396,6 +419,44 @@
 <p>Smaller devices, like the ARM Cortex-M devices, can still run multiple tasks in parallel, but, without a MMU and the benefits of virtual memory, these multiple tasks are performed by multiple threads, all sharing the same memory space.</p>
 
 <p>As such, µOS++ is a <strong>multi-threaded system</strong>, supporting <strong>any number of threads</strong>, with the actual number limited only by the amount of available memory.</p>
+
+<h3 id="blocking-io">Blocking I/O</h3>
+
+<p>One of the most encountered scenario when implementing tasks, is to wait for some kind of input data, for example by performing a <code class="highlighter-rouge">read()</code>, then process the data and, most of the times, repeat this sequence in a loop. When the system executes the <code class="highlighter-rouge">read()</code> call, the thread might need to wait for the required data to become available before it can continue to the next statement. This type of I/O is called <strong>blocking I/O</strong>: the thread blocks until some data is available to satisfy the <code class="highlighter-rouge">read()</code> function.</p>
+
+<p>One possible implementation is to loop until the data becomes available, but this type of behaviour simply wastes resources (CPU cycles and implicitly power) and should be avoided by all means.</p>
+
+<p>Well behaved applications should never enter (long) busy loops waiting for conditions to occur, but instead suspend the thread and arrange for an it to be resumed when the condition is met. During this waiting period the thread completely releases the CPU, so the CPU will be fully available for the other active threads.</p>
+
+<p>For the sake of completeness, it should be noted that the only exception to the rule applies to short delays, where short means delays with durations comparable with the multitasking overhead. On most modern microcontrollers this is usually in the range of microseconds.</p>
+
+<h3 id="the-idle-thread">The idle thread</h3>
+
+<p>As seen before, at thread level the goal is to process the available data as soon as possible and suspend itself to wait for more data. In other words, the thread ideal way of life should be… to do nothing!</p>
+
+<p>But what happens if all threads accomplish this goal and there is nothing else to do?</p>
+
+<p>Well, enter the <strong>idle</strong> thread. This internal thread is always created before the scheduler is started; it has the lowest possible priority, and is always running when there are no more other threads to run.</p>
+
+<p>The idle thread can perform various low priority maintenance chores (like destroying terminated threads), but at a certain moment even the idle thread will have nothing else to do.</p>
+
+<h3 id="sleep-modes-and-power-savings">Sleep modes and power savings</h3>
+
+<p>When the idle thread has nothing to do, it still can do something useful: it can put the CPU to a shallow sleep, and wait for the next interrupt (the Cortex-M devices use the Wait For Interrupt instruction for this).</p>
+
+<p>In this mode the CPU is fully functional, with all internal peripherals active, but it does not run any instructions, so it is able to save a certain amount of power.</p>
+
+<p>If the application has relatively long inactive moments, further savings are possible, i.e. power down all peripherals except a low frequency real time timer, usually triggered once a second. In this case the idle task can arrange for the CPU to enter a deep sleep mode, saving a significantly higher amount of power.</p>
+
+<p>As a summary, the multilevel strategy used to reduce power consumption implies:</p>
+
+<ul>
+  <li>if nothing to do, each thread should enter the waiting state as soon as possible, and release the CPU to the other active tasks;</li>
+  <li>if no active threads are available, the idle thread should arrange for the CPU to enter the sleep mode as soon as possible;</li>
+  <li>if all tasks know they will be inactive for a longer period, the idle task should arrange for the CPU to enter a deep sleep mode.</li>
+</ul>
+
+<p>In conclusion, by using a wide range of power management techniques, an RTOS can be successfully used in very low power applications.</p>
 
 <h3 id="context-switching">Context switching</h3>
 
@@ -423,7 +484,7 @@
 
 <p>In this case, yielding the CPU from one thread to another is done implicitly by the system function called to wait for the resource.</p>
 
-<p>In case of long computations, a well behaved thread would not hold the CPU for  the entire computation period, but explicitly yield the CPU from time to time, to give other threads a chance to run.</p>
+<p>In case of long computations, a well behaved thread would not hold the CPU for the entire computation period, but explicitly yield the CPU from time to time, to give other threads a chance to run.</p>
 
 <p>This polite behaviour, when the switch is performed by the thread itself, is called <strong>cooperative</strong> multi-tasking, since it depends on a the good-will of all tasks running in parallel.</p>
 
@@ -448,7 +509,17 @@
 <p>Preemptive context switching with periodic timer</p>
 </div>
 
+<p>In general cooperative multitasking is easier to implement, and, since the CPU is released under the application control, inter-thread synchronisation race conditions are avoided. However, at a more thorough analysis, this is not necessarily a feature, but a subtle way to hide other application synchronisation bugs, like the lack of explicit critical sections. In other words, a well behaved application should protect a shared resource by use of a critical section anyway, since although another task cannot execute inside another task, interrupt service routines can, and without the critical section it is very likely that a race condition may occur.</p>
+
+<p>One special useful application of the cooperative mode is for debugging possible inter-thread race conditions. In case of strange behaviours that might be associated with synchronisation problems, if disabling preemption solves the problem, then an inter-thread race condition is highly probable. It the problem is still present in cooperative mode, than most probably the race condition involves the interrupt service routines. In both cases, the cure is to use critical sections where needed.</p>
+
 <p>µOS++ implements both cooperative and preemptive multi-tasking.</p>
+
+<h3 id="thread-interruptioncancellation">Thread interruption/cancellation</h3>
+
+<p>In real life applications, there are cases when some threads, for various reasons, must be interrupted.</p>
+
+<p>µOS++ threads include support for interruption, but this support is cooperative, i.e. threads that might be interrupted should check for interruption requests and quit inner loops in an ordered manner.</p>
 
 <h2 id="scheduling">Scheduling</h2>
 
@@ -587,7 +658,7 @@
 
 <p>The overhead to disable/enable interrupts is usually low, and for some devices, like the Cortex-M[347] ones, it is even possible to disable interrupts only partially, from a given priority level down, keeping high priority interrupts enabled.</p>
 
-<p>Although apparently simple, this technique is often misused in cases of nested critical sections, when the inner critical section inadvertently enable interrupts, leading to very hard to trace bugs. The correct and bullet proof method to implement the critical sections in to always save the initial interrupt state and restore it when the critical section is exited.</p>
+<p>Although apparently simple, this technique is often misused in cases of nested critical sections, when the inner critical section inadvertently enables interrupts, leading to very hard to trace bugs. The correct and bullet proof method to implement the critical sections is to always save the initial interrupt state and restore it when the critical section is exited.</p>
 
 <p>This method must be used with caution, since keeping the interrupts disabled too long impacts the system responsiveness.</p>
 
@@ -653,7 +724,7 @@
 
 <h2 id="statically-vs-dynamically-allocated-objects">Statically vs. dynamically allocated objects</h2>
 
-<p>Most system objects are self-contained, and the rule is that if the storage requirements are known, constant and the same for all instances, the storage is  allocated in the object instance data.</p>
+<p>Most system objects are self-contained, and the rule is that if the storage requirements are known, constant and identical for all instances, then the storage is allocated in the object instance data.</p>
 
 <p>However some system objects require additional memory, different from one instance to the other. Examples for such objects are threads (which require stacks), message queues and memory pools.</p>
 
