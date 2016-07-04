@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>µOS++ IIIe features</title>
-  <meta name="description" content="CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.">
+  <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
   <meta property="og:title" content="µOS++ IIIe features" />
-  <meta property="og:site_name" content="CMSIS++ / µOS++ IIIe" />
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
 
-  <link rel="alternate" type="application/rss+xml" title="CMSIS++ / µOS++ IIIe" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
 
 
   <meta property="article:published_time" content="2016-07-02">
@@ -96,7 +96,7 @@
         <table class="site-title" style="width:100%">
           <tr>
             <td class="site-title">
-              <a href="/">CMSIS++ / µOS++ IIIe</a>
+              <a href="/">µOS++ IIIe / CMSIS++</a>
             </td>
             <td class="site-motto" align="right">
               “Perfekt ist nicht gut genug”
@@ -104,7 +104,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              CMSIS++, a proposal for the next generation CMSIS, written in C++, and the third edition of µOS++.
+              The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.
             </td>
           </tr>
         </table>
@@ -143,17 +143,17 @@
     <div class="boxed-group-inner">
       <h4 id="home"><a href="/">Home</a></h4>
 
+<h4 id="os-iiie">µOS++ IIIe</h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
 <h4 id="cmsis">CMSIS++</h4>
 
 <ul>
   <li><a href="/cmsis-plus/">Overview</a></li>
   <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
-</ul>
-
-<h4 id="os-iiie">µOS++ IIIe</h4>
-
-<ul>
-  <li><a href="/micro-os-plus/">Overview</a></li>
 </ul>
 
 <h4 id="xpacksxcdl">xPacks/XCDL</h4>
@@ -217,7 +217,7 @@
 
         
 <h1 class="page-title">µOS++ IIIe features</h1>
-<p class="last-modified">Last modified on Sun Jul  3 09:57:50 2016 UTC.</p>
+<p class="last-modified">Last modified on Mon Jul  4 18:17:39 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -260,7 +260,7 @@
 <a href="#low-interrupt-disable-time"><span class="tocnumber">2.8</span> <span class="toctext">Low interrupt disable time</span></a>
 </li>
 <li class="toc_level-2 toc_section-11">
-<a href="#nested-critical-sections"><span class="tocnumber">2.9</span> <span class="toctext">Nested critical sections</span></a>
+<a href="#safe-nested-critical-sections"><span class="tocnumber">2.9</span> <span class="toctext">Safe nested critical sections</span></a>
 </li>
 <li class="toc_level-2 toc_section-12">
 <a href="#configurable"><span class="tocnumber">2.10</span> <span class="toctext">Configurable</span></a>
@@ -319,6 +319,9 @@
 <li class="toc_level-2 toc_section-30">
 <a href="#support-for-instrumentation"><span class="tocnumber">2.28</span> <span class="toctext">Support for instrumentation</span></a>
 </li>
+<li class="toc_level-2 toc_section-31">
+<a href="#multiple-clocks"><span class="tocnumber">2.29</span> <span class="toctext">Multiple clocks</span></a>
+</li>
 </ul>
 </li>
 </ul>
@@ -328,7 +331,7 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>µOS++ IIIe is a POSIX-like, portable, open source, royalty-free, multi-tasking system intended for 32/64-bits embedded applications.</p>
+<p>µOS++ IIIe is a POSIX-like, portable, open source, royalty-free, multi-tasking real-time operating system intended for 32/64-bits embedded applications.</p>
 
 <p>µOS++ IIIe is written in <strong>modern C++ 11</strong>, with C++ applications in mind, but also provides equally functional C APIs.</p>
 
@@ -357,33 +360,57 @@
   <li>ARM CMSIS RTOS v1 API - a compatibility layer with ARM CMSIS RTOS</li>
 </ul>
 
+<p>The CMSIS++ RTOS C API allows to write plain C applications, even if the RTOS core is written in C++.</p>
+
+<p>The ARM CMSIS RTOS API allows to run legacy applications, written for the ARM RTOS API.</p>
+
+<p>The ISO C++ Threads API provides a convenient way to run ISO standard code with almost no changes.</p>
+
 <h3 id="posix-like-apis">POSIX-like APIs</h3>
 
-<p>The design of the core APIs was heavily influenced by the POSIX threads specs. From this point of view, µOS++ can also be seen as <strong>POSIX++</strong>, a C++ version of many POSIX calls.</p>
+<p>The design of the core APIs was heavily influenced by the POSIX threads specs. From this point of view, µOS++ can also be seen as <strong>POSIX++</strong>, a C++ version of POSIX.</p>
+
+<p>POSIX compatibility is a very important feature, since POSIX is a mature and well established portable standard, and the experience gained while using POSIX on larger systems can improve productivity of embedded application developers too.</p>
 
 <h3 id="iso-thread-c-api">ISO thread C++ API</h3>
 
 <p>µOS++ also implements the standard ISO C++ thread API, including the <code class="highlighter-rouge">chrono</code> functionality.</p>
 
+<p>The ISO C++ 14882:2011 introduced a standard API for threads, mutexes, condition variables, locks, time related functions, etc.</p>
+
+<p>This API is relatively easy to use, the overhead is low, and, if sharing code with some server environments is required, this may be a very interesting solution.</p>
+
 <h3 id="consistent-apis">Consistent APIs</h3>
 
-<p>The APIs used by µOS++ are highly consistent. Once familiar with the coding conventions used, it is simple to predict the functions to call for the services required, and even predict which arguments are needed. For example, a pointer to an object is always the first argument, most functions return a POSIX error code, etc.</p>
+<p>The APIs used by µOS++ are highly consistent. Once familiar with the coding conventions used, it is simple to predict the functions to call for the services required, and even predict which arguments are needed. For example, in the C API a pointer to an object is always the first argument, most functions return a POSIX error code, etc.</p>
+
+<p>This translates into increased productivity and improved code readability over time.</p>
 
 <h3 id="preemptive-multi-tasking">Preemptive multi-tasking</h3>
 
 <p>µOS++ implements a priority based, preemptive, multi-tasking scheduler and therefore, µOS++ always runs the most important ready-to-run thread.</p>
 
+<p>For real-time systems, this improves the reaction speed and helps meeting the required deadlines.</p>
+
 <h3 id="round-robin-scheduling">Round robin scheduling</h3>
 
 <p>µOS++ allows multiple threads to run at the same priority level. When multiple threads at the same priority are ready to run, they are scheduled in a round-robin way.</p>
+
+<p>This scheduling algorithm provides a fair distribution of the CPU time to common threads that do not have special needs, and can all share a common priority.</p>
 
 <h3 id="low-interrupt-disable-time">Low interrupt disable time</h3>
 
 <p>µOS++ has a number of internal data structures and variables that it needs to access atomically. To ensure this, µOS++ disables interrupts for very short periods, to ensure minimal interrupt latency.</p>
 
-<h3 id="nested-critical-sections">Nested critical sections</h3>
+<p>Keeping the critical sections short gives a chance to fast interrupts to occur and system responsiveness is increased.</p>
+
+<h3 id="safe-nested-critical-sections">Safe nested critical sections</h3>
 
 <p>To avoid subtle bugs, the µOS++ critical sections are designed to be easily nested, saving the initial status during enter and restoring it while exiting.</p>
+
+<p>This save implementation allows to invoke µOS++ system calls from any environment, including from callbacks coming from code using poorly implemented critical sections (for example those using counters to tell when to re-enable interrupts).</p>
+
+<p>To be noted that the reverse is not true, calling library functions that implement critical sections using counters from environments where the interrupts are disabled possibly introduces a synchronisation problem, since the those functions will erroneously enable the interrupts.</p>
 
 <h3 id="configurable">Configurable</h3>
 
@@ -395,11 +422,13 @@
 
 <h3 id="portable">Portable</h3>
 
-<p>By design µOS++/CMSIS++ is highly portable, was developed and its tests are constantly run on both 32 and 64-bits platforms.</p>
+<p>By design µOS++/CMSIS++ is highly portable; it was developed mostly on macOS and its tests are constantly run on both 32 and 64-bits platforms.</p>
 
 <h3 id="romable">ROMable</h3>
 
 <p>µOS++ was designed especially for embedded systems and can be ROMed along with the application code.</p>
+
+<p>This is important for modern microcontrollers, which include large amounts of flash internally, and can execute code from there, without having to copy it to RAM.</p>
 
 <h3 id="fully-statically-allocated">Fully statically allocated</h3>
 
@@ -408,6 +437,8 @@
 <h3 id="users-choice-of-memory-allocation">Users choice of memory allocation</h3>
 
 <p>For objects that require additional memory, the user has full control on using either <strong>statically</strong> or <strong>dynamically</strong> allocated memory.</p>
+
+<p>µOS++ can be used to build special applications that are not allowed to use dynamic allocations.</p>
 
 <h3 id="custom-memory-allocators">Custom memory allocators</h3>
 
@@ -422,6 +453,8 @@
 <h3 id="unlimited-number-of-system-objects">Unlimited number of system objects</h3>
 
 <p>µOS++ allows for any number of threads, semaphores, mutexes, event flags, message queues, timers, memory pools, etc. The user at run-time allocates all system objects, either as global static objects, stack objects, or dynamically allocated objects.</p>
+
+<p>Not having to statically define at compile time the maximum number of objects is very convenient.</p>
 
 <h3 id="posix-mutexes">POSIX mutexes</h3>
 
@@ -439,13 +472,19 @@
 
 <p>Threads can include a user-definable user data structure, where the application can store any custom data.</p>
 
+<p>The definition of this data structure is a plain C <code class="highlighter-rouge">struct</code>, and the content is fully under user control.</p>
+
 <h3 id="error-checking">Error checking</h3>
 
 <p>µOS++ verifies that NULL pointers are not passed, that the user is not calling thread-level services from ISRs, that arguments are within allowable range, that options specified are valid, that a handler is passed to the proper object as part of the arguments to services that manipulate the desired object, and more.</p>
 
+<p>Generally these additional validations are enabled in the Debug configurations, and disabled in Release, to save significant space and some run-time.</p>
+
 <h3 id="thread-statistics">Thread statistics</h3>
 
 <p>µOS++ has built-in features to measure the execution time of each thread, stack usage, the number of times a thread executes, CPU usage, and more.</p>
+
+<p>This can be used monitor the system behaviour at run-time, and detect possible busy wait inefficient implementations.</p>
 
 <h3 id="deadlock-prevention">Deadlock prevention</h3>
 
@@ -455,6 +494,8 @@
 
 <p>Each µOS++ system object can have a name associated with it. This makes it easy to recognize what the object is assigned to. Assign a name to a thread, a semaphore, a mutex, an event flag group, a message queue, a memory pool, and a timer. The object name can have any length, but must be NULL terminated.</p>
 
+<p>These names can be inspected during debug sessions, to identify objects, and can also be displayed by advanced instrumentation tools.</p>
+
 <h3 id="support-for-thread-aware-debuggers">Support for thread aware debuggers</h3>
 
 <p>This feature allows thread aware debuggers to examine and display µOS++ variables and data structures in a user-friendly way. (Work in progress).</p>
@@ -462,6 +503,16 @@
 <h3 id="support-for-instrumentation">Support for instrumentation</h3>
 
 <p>This feature allows integration with instrumentation tools like SEGGER SystemView. (Work in progress).</p>
+
+<h3 id="multiple-clocks">Multiple clocks</h3>
+
+<p>The classic solution for handling time in most embedded systems is to use the scheduler timer. By default in µOS++ the resolution for this clock is 1 ms, acceptable for most applications.</p>
+
+<p>µOS++ also defines a standard API to access the real-time clock, which has a resolution of 1 sec, and can be used to configure timeouts even when the CPU is in deep sleep.</p>
+
+<p>For accurate time measurements, down to the CPU cycle level, a high resolution timer derived from the scheduler timer, is also available.</p>
+
+<p>µOS++ provides a common API for all clocks, and all synchronisation objects that can be configured to use any of the available clocks.</p>
 
 
 
