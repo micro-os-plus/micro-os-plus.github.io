@@ -165,7 +165,14 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s manual</a></li>
+  <li><a href="/user-manual/">User’s manual</a>
+    <ul>
+      <li><a href="/user-manual/getting-started/">Getting started</a></li>
+      <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
+      <li><a href="/user-manual/features/">Features</a></li>
+      <li><a href="/user-manual/threads/">Threads</a></li>
+    </ul>
+  </li>
   <li><a href="/reference/cmsis-plus/">CMSIS++ reference</a></li>
 </ul>
 
@@ -217,7 +224,7 @@
 
         
 <h1 class="page-title">Basic concepts</h1>
-<p class="last-modified">Last modified on Mon Jul  4 18:18:32 2016 UTC.</p>
+<p class="last-modified">Last modified on Wed Jul  6 21:26:50 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -266,97 +273,103 @@
 <a href="#sleep-modes-and-power-savings"><span class="tocnumber">6.6</span> <span class="toctext">Sleep modes and power savings</span></a>
 </li>
 <li class="toc_level-2 toc_section-13">
-<a href="#context-switching"><span class="tocnumber">6.7</span> <span class="toctext">Context switching</span></a>
+<a href="#running-vs-suspended-threads"><span class="tocnumber">6.7</span> <span class="toctext">Running vs suspended threads</span></a>
 </li>
 <li class="toc_level-2 toc_section-14">
-<a href="#thread-stacks"><span class="tocnumber">6.8</span> <span class="toctext">Thread stacks</span></a>
+<a href="#context-switching"><span class="tocnumber">6.8</span> <span class="toctext">Context switching</span></a>
 </li>
 <li class="toc_level-2 toc_section-15">
-<a href="#cooperative-vs-preemptive-multi-tasking"><span class="tocnumber">6.9</span> <span class="toctext">Cooperative vs preemptive multi-tasking</span></a>
+<a href="#thread-stacks"><span class="tocnumber">6.9</span> <span class="toctext">Thread stacks</span></a>
 </li>
 <li class="toc_level-2 toc_section-16">
-<a href="#the-scheduler-timer"><span class="tocnumber">6.10</span> <span class="toctext">The scheduler timer</span></a>
+<a href="#cooperative-vs-preemptive-multi-tasking"><span class="tocnumber">6.10</span> <span class="toctext">Cooperative vs preemptive multi-tasking</span></a>
 </li>
 <li class="toc_level-2 toc_section-17">
-<a href="#thread-interruptioncancellation"><span class="tocnumber">6.11</span> <span class="toctext">Thread interruption/cancellation</span></a>
+<a href="#the-scheduler-timer"><span class="tocnumber">6.11</span> <span class="toctext">The scheduler timer</span></a>
+</li>
+<li class="toc_level-2 toc_section-18">
+<a href="#thread-interruptioncancellation"><span class="tocnumber">6.12</span> <span class="toctext">Thread interruption/cancellation</span></a>
+</li>
+<li class="toc_level-2 toc_section-19">
+<a href="#thread-control-blocks-tcbs"><span class="tocnumber">6.13</span> <span class="toctext">Thread Control Blocks (TCBs)</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-18">
+<li class="toc_level-1 toc_section-20">
 <a href="#scheduling"><span class="tocnumber">7</span> <span class="toctext">Scheduling</span></a>
 <ul>
-<li class="toc_level-2 toc_section-19">
+<li class="toc_level-2 toc_section-21">
 <a href="#thread-states"><span class="tocnumber">7.1</span> <span class="toctext">Thread states</span></a>
 </li>
-<li class="toc_level-2 toc_section-20">
+<li class="toc_level-2 toc_section-22">
 <a href="#the-ready-list"><span class="tocnumber">7.2</span> <span class="toctext">The READY list</span></a>
 </li>
-<li class="toc_level-2 toc_section-21">
+<li class="toc_level-2 toc_section-23">
 <a href="#scheduling-algorithms"><span class="tocnumber">7.3</span> <span class="toctext">Scheduling algorithms</span></a>
 </li>
-<li class="toc_level-2 toc_section-22">
+<li class="toc_level-2 toc_section-24">
 <a href="#round-robin-vs-priority-scheduling"><span class="tocnumber">7.4</span> <span class="toctext">Round-robin vs priority scheduling</span></a>
 </li>
-<li class="toc_level-2 toc_section-23">
+<li class="toc_level-2 toc_section-25">
 <a href="#selecting-thread-priorities"><span class="tocnumber">7.5</span> <span class="toctext">Selecting thread priorities</span></a>
 </li>
-<li class="toc_level-2 toc_section-24">
+<li class="toc_level-2 toc_section-26">
 <a href="#priority-inversion--priority-inheritance"><span class="tocnumber">7.6</span> <span class="toctext">Priority inversion / priority inheritance</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-25">
+<li class="toc_level-1 toc_section-27">
 <a href="#communicating-between-threads-andor-isrs"><span class="tocnumber">8</span> <span class="toctext">Communicating between threads and/or ISRs</span></a>
 <ul>
-<li class="toc_level-2 toc_section-26">
+<li class="toc_level-2 toc_section-28">
 <a href="#periodic-polling-vs-event-waiting"><span class="tocnumber">8.1</span> <span class="toctext">Periodic polling vs event waiting</span></a>
 </li>
-<li class="toc_level-2 toc_section-27">
+<li class="toc_level-2 toc_section-29">
 <a href="#passing-messages"><span class="tocnumber">8.2</span> <span class="toctext">Passing messages</span></a>
 </li>
-<li class="toc_level-2 toc_section-28">
+<li class="toc_level-2 toc_section-30">
 <a href="#event-flags"><span class="tocnumber">8.3</span> <span class="toctext">Event flags</span></a>
 </li>
-<li class="toc_level-2 toc_section-29">
+<li class="toc_level-2 toc_section-31">
 <a href="#semaphores"><span class="tocnumber">8.4</span> <span class="toctext">Semaphores</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-30">
+<li class="toc_level-1 toc_section-32">
 <a href="#managing-common-resources"><span class="tocnumber">9</span> <span class="toctext">Managing common resources</span></a>
 <ul>
-<li class="toc_level-2 toc_section-31">
+<li class="toc_level-2 toc_section-33">
 <a href="#disableenable-interrupts"><span class="tocnumber">9.1</span> <span class="toctext">Disable/enable interrupts</span></a>
 </li>
-<li class="toc_level-2 toc_section-32">
+<li class="toc_level-2 toc_section-34">
 <a href="#lockunlock-the-scheduler"><span class="tocnumber">9.2</span> <span class="toctext">Lock/unlock the scheduler</span></a>
 </li>
-<li class="toc_level-2 toc_section-33">
+<li class="toc_level-2 toc_section-35">
 <a href="#counting-semaphores"><span class="tocnumber">9.3</span> <span class="toctext">Counting semaphores</span></a>
 </li>
-<li class="toc_level-2 toc_section-34">
+<li class="toc_level-2 toc_section-36">
 <a href="#mutual-exclusion-mutex"><span class="tocnumber">9.4</span> <span class="toctext">Mutual exclusion (mutex)</span></a>
 </li>
-<li class="toc_level-2 toc_section-35">
+<li class="toc_level-2 toc_section-37">
 <a href="#should-a-semaphore-or-a-mutex-be-used"><span class="tocnumber">9.5</span> <span class="toctext">Should a semaphore or a mutex be used?</span></a>
 </li>
-<li class="toc_level-2 toc_section-36">
+<li class="toc_level-2 toc_section-38">
 <a href="#deadlock-or-deadly-embrace"><span class="tocnumber">9.6</span> <span class="toctext">Deadlock (or deadly embrace)</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-37">
+<li class="toc_level-1 toc_section-39">
 <a href="#statically-vs-dynamically-allocated-objects"><span class="tocnumber">10</span> <span class="toctext">Statically vs. dynamically allocated objects</span></a>
 <ul>
-<li class="toc_level-2 toc_section-38">
+<li class="toc_level-2 toc_section-40">
 <a href="#the-system-allocator"><span class="tocnumber">10.1</span> <span class="toctext">The system allocator</span></a>
 </li>
-<li class="toc_level-2 toc_section-39">
+<li class="toc_level-2 toc_section-41">
 <a href="#fragmentation"><span class="tocnumber">10.2</span> <span class="toctext">Fragmentation</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-40">
+<li class="toc_level-1 toc_section-42">
 <a href="#real-time-clock"><span class="tocnumber">11</span> <span class="toctext">Real-time clock</span></a>
 </li>
 </ul>
@@ -471,7 +484,7 @@
 
 <h3 id="the-idle-thread">The idle thread</h3>
 
-<p>As seen before, at thread level the goal is to process the available data as soon as possible and suspend itself to wait for more data. In other words, the thread ideal way of life should be… to do nothing!</p>
+<p>As seen before, at thread level, the goal is to process the available data as soon as possible and suspend itself to wait for more data. In other words, the thread ideal way of life should be… to do nothing!</p>
 
 <p>But what happens if all threads accomplish this goal and there is nothing else to do?</p>
 
@@ -481,7 +494,7 @@
 
 <h3 id="sleep-modes-and-power-savings">Sleep modes and power savings</h3>
 
-<p>When the idle thread has nothing to do, it still can do something useful: it can put the CPU to a shallow sleep, and wait for the next interrupt (the Cortex-M devices use the Wait For Interrupt instruction for this).</p>
+<p>When the idle thread has nothing to do, it still can do something useful: it can put the CPU to a shallow sleep, and wait for the next interrupt (the Cortex-M devices use the <strong>Wait For Interrupt</strong> instruction for this).</p>
 
 <p>In this mode the CPU is fully functional, with all internal peripherals active, but it does not run any instructions, so it is able to save a certain amount of power.</p>
 
@@ -490,16 +503,20 @@
 <p>As a summary, the multilevel strategy used to reduce power consumption implies:</p>
 
 <ul>
-  <li>if nothing to do, each thread should enter the waiting state as soon as possible, and release the CPU to the other active tasks;</li>
+  <li>if nothing to do, each thread should suspend itself as soon as possible, and release the CPU to the other active threads;</li>
   <li>if no active threads are available, the idle thread should arrange for the CPU to enter the sleep mode as soon as possible;</li>
   <li>if all tasks know they will be inactive for a longer period, the idle task should arrange for the CPU to enter a deep sleep mode.</li>
 </ul>
 
 <p>In conclusion, by using a wide range of power management techniques, an RTOS can be successfully used in very low power applications.</p>
 
-<h3 id="context-switching">Context switching</h3>
+<h3 id="running-vs-suspended-threads">Running vs suspended threads</h3>
 
-<p>Running multiple threads in parallel is only apparent, since under the hood the threads are decomposed in small sequences of operations, serialised in a certain order, on the available CPU cores. Threads are <em>frozen</em> and put aside; when the conditions are again favourable, they are <em>revived</em> and, for a while, are allowed to use the CPU.</p>
+<p>Running multiple threads in parallel is only apparent, since under the hood the threads are decomposed in small sequences of operations, serialised in a certain order, on the available CPU cores. If there is only one CPU core, there is only one <strong>running</strong> thread at a certain moment. The other threads are <strong>suspended</strong>, in a sense are <em>frozen</em> and put aside for later use; when the conditions are again favourable, each one may be <em>revived</em> and, for a while, allowed to use the CPU.</p>
+
+<p>Suspended threads are sometimes called sleeping, or dormant; these terms are also correct, but it must be clearly understood that the thread status is only a software status, that has nothing to do with the CPU sleep modes, which are hardware related; the existence of suspended threads means only that the threads are not scheduled for execution; they do not imply that the CPU will enter any of the sleep modes, which may happen only when all threads are suspended.</p>
+
+<h3 id="context-switching">Context switching</h3>
 
 <p>Restarting a suspended thread requires restoring exactly the internal CPU state existing at the moment when the thread was suspended. Physically, this state is usually stored in a certain number of CPU registers. When the thread is suspended, the content of these registers must be stored in a separate RAM area, specific to each thread. When the thread is resumed, the same registers must be restored with the saved values.</p>
 
@@ -570,6 +587,14 @@
 
 <p>µOS++ threads include support for interruption, but this support is cooperative, i.e. threads that might be interrupted should check for interruption requests and quit inner loops in an ordered manner.</p>
 
+<h3 id="thread-control-blocks-tcbs">Thread Control Blocks (TCBs)</h3>
+
+<p>A thread control block (TCB) is a data structure used by the scheduler to maintain information about a thread. Each thread requires its own TCB.</p>
+
+<p>Being implemented in a structured, object oriented language like C++, the µOS++ threads implicitly have instance data structures associated with the objects, which are functionally equivalent to common TCBs; in other words, the µOS++ TCBs are the actual thread instances themselves.</p>
+
+<p>The thread internal variables are protected, and cannot be directly accessed from user code, but for all relevant members there are public accessor and mutator functions defined.</p>
+
 <h2 id="scheduling">Scheduling</h2>
 
 <p>The mechanism that performs the context switches is also called <strong>scheduling</strong>, and the code implementing this mechanism is also called <strong>scheduler</strong>.</p>
@@ -583,12 +608,12 @@
 <ul>
   <li><strong>running</strong> - a thread is marked as running when it is using the CPU;</li>
   <li><strong>ready</strong> - a thread that is ready to run, but does not use the CPU yet;</li>
-  <li><strong>waiting</strong> - a thread that is not ready to run since it must wait for a resource that is not yet available, or for an event that will occur in the future.</li>
+  <li><strong>suspended</strong> - a thread that is not ready to run since it must wait for a resource that is not yet available, or for an event that will occur in the future.</li>
 </ul>
 
 <h3 id="the-ready-list">The READY list</h3>
 
-<p>To performs its duties efficiently, the scheduler needs to keep track only of the threads ready to run. Threads that for a little while wait for various events can be considered to momentarily exit the scheduler jurisdiction, and other mechanisms, like timers, synchronisation objects, notifications, etc are expected to return them to the scheduler when ready to run.</p>
+<p>To performs its duties efficiently, the scheduler needs to keep track only of the threads ready to run. Threads that for a little while must wait for various events can be considered to momentarily exit the scheduler jurisdiction, and other mechanisms, like timers, synchronisation objects, notifications, etc are expected to return them to the scheduler when ready to run.</p>
 
 <p>In order to keep track of the ready threads, the scheduler maintains a ready list. The term list is generic, regardless of the actual implementation, which might be anything from a simple array to multiple double linked lists.</p>
 
