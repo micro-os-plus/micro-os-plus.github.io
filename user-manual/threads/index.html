@@ -226,7 +226,7 @@
 
         
 <h1 class="page-title">Threads</h1>
-<p class="last-modified">Last modified on Wed Jul  6 21:27:58 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Jul  7 18:21:57 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -551,7 +551,7 @@
 </code></pre>
 </div>
 
-<p>The scheduler service used in this example is waiting to receive a message from a queue. The thread will have nothing to do until the message is received. Once a message will be send to the queue, the thread will be resumed and the message  consumed.</p>
+<p>The µOS++ service used in this example to pass control back to the scheduler is the queue receive function. The thread will have nothing to do until the message is received. Once a message is send to the queue, the thread will be resumed and the message consumed.</p>
 
 <p>Another common situation the thread might be waiting for is the passage of time. For example, a design may need to scan a keyboard every 100 ticks. In this case, simply delay the thread for 100 ticks (<code class="highlighter-rouge">sysclock.sleep_for(100)</code>) then see if a key was pressed on the keyboard and, possibly perform some action based on which key was pressed.</p>
 
@@ -1151,7 +1151,7 @@
 
 <h3 id="getting-the-thread-stack">Getting the thread stack</h3>
 
-<p>The thread stack is a separate object, managing the thread stack; the stack storage itself is not included in this object, but only a pointer to it is available.</p>
+<p>The <code class="highlighter-rouge">thread::stack</code> is a separate object, managing the thread stack; the stack storage itself is not included in this object, but only a pointer to it is available.</p>
 
 <p>The APIs is simple:</p>
 
