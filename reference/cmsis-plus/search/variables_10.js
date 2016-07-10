@@ -2,8 +2,8 @@ var searchData=
 [
   ['signals',['signals',['../structos_event.html#ad63c33b8b5d3bb37b45433d7c67d1e09',1,'osEvent']]],
   ['single_5fwire',['single_wire',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4',1,'os::driver::serial::Capabilities']]],
-  ['sm_5finitial_5fcount',['sm_initial_count',['../structos__semaphore__attr__s.html#a9ed9b2e7e5616099980dc2d37f68f997',1,'os_semaphore_attr_s::sm_initial_count()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a18d01d93ed52be648800e7e1221b9ff2',1,'os::rtos::semaphore::attributes::sm_initial_count()']]],
-  ['sm_5fmax_5fcount',['sm_max_count',['../structos__semaphore__attr__s.html#ac91c27fd833a1629689012444118f854',1,'os_semaphore_attr_s::sm_max_count()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#aa9e269dcce01315daa86ddc0a68e5b38',1,'os::rtos::semaphore::attributes::sm_max_count()']]],
+  ['sm_5finitial_5fvalue',['sm_initial_value',['../structos__semaphore__attr__s.html#a9e8fa44e93d32703646f22450822278c',1,'os_semaphore_attr_s::sm_initial_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a93a004acdd6591ddef9e0f49be403635',1,'os::rtos::semaphore::attributes::sm_initial_value()']]],
+  ['sm_5fmax_5fvalue',['sm_max_value',['../structos__semaphore__attr__s.html#a908d1dc68226404282ca687042a05017',1,'os_semaphore_attr_s::sm_max_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a0b166731dc11931d76a03e1a99e37aad',1,'os::rtos::semaphore::attributes::sm_max_value()']]],
   ['smart_5fcard',['smart_card',['../classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e',1,'os::driver::serial::Capabilities']]],
   ['smart_5fcard_5fclock',['smart_card_clock',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8ce53df3a5931bda5922e149dcd2c80b',1,'os::driver::serial::Capabilities::smart_card_clock()'],['../namespaceos_1_1driver_1_1serial.html#a832badbe07e2b0b998fe77646adbd2c8',1,'os::driver::serial::SMART_CARD_CLOCK()']]],
   ['smart_5fcard_5fguard_5ftime',['SMART_CARD_GUARD_TIME',['../namespaceos_1_1driver_1_1serial.html#ac69bf6cdc9e5d90cd6a665e93a51270b',1,'os::driver::serial']]],

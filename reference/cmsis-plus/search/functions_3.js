@@ -36,6 +36,7 @@ var searchData=
   ['control',['control',['../classos_1_1driver_1_1_serial.html#a1039278de866bcedb8d300bf150a578c',1,'os::driver::Serial']]],
   ['control_5fmodem_5fline',['control_modem_line',['../classos_1_1driver_1_1_serial.html#a5580f88dc65525369331e4f9d78605d4',1,'os::driver::Serial']]],
   ['count',['count',['../classos_1_1rtos_1_1memory__pool.html#afa9663b5a6a5133d64a37bdb98634dc3',1,'os::rtos::memory_pool']]],
+  ['counting_5fattributes',['counting_attributes',['../classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a2ad3fa8c49a29af1271d4d3e8ecc94e5',1,'os::rtos::semaphore::counting_attributes']]],
   ['cpu_5fcycles',['cpu_cycles',['../classos_1_1rtos_1_1thread_1_1statistics.html#a789a41ac20fff4b8a37eeba367070d84',1,'os::rtos::thread::statistics::cpu_cycles()'],['../namespaceos_1_1rtos_1_1scheduler_1_1statistics.html#a52e675e601f071a951a43146744ad1a9',1,'os::rtos::scheduler::statistics::cpu_cycles()']]],
   ['create',['create',['../classos_1_1rtos_1_1port_1_1context.html#a61842d0b9380a3a7bd3ca297e2d2b501',1,'os::rtos::port::context']]],
   ['create_5fpipe',['create_pipe',['../classos_1_1driver_1_1usb_1_1_host.html#a64b8400160c3a4badfe3e6f8baa97970',1,'os::driver::usb::Host']]],

@@ -30,6 +30,8 @@ var namespaceos_1_1rtos =
     [ "named_object", "classos_1_1rtos_1_1named__object.html", "classos_1_1rtos_1_1named__object" ],
     [ "ready_threads_list", "classos_1_1rtos_1_1ready__threads__list.html", "classos_1_1rtos_1_1ready__threads__list" ],
     [ "semaphore", "classos_1_1rtos_1_1semaphore.html", "classos_1_1rtos_1_1semaphore" ],
+    [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html", "classos_1_1rtos_1_1semaphore__binary" ],
+    [ "semaphore_counting", "classos_1_1rtos_1_1semaphore__counting.html", "classos_1_1rtos_1_1semaphore__counting" ],
     [ "static_double_list", "classos_1_1rtos_1_1static__double__list.html", "classos_1_1rtos_1_1static__double__list" ],
     [ "static_double_list_links", "classos_1_1rtos_1_1static__double__list__links.html", "classos_1_1rtos_1_1static__double__list__links" ],
     [ "terminated_threads_list", "classos_1_1rtos_1_1terminated__threads__list.html", "classos_1_1rtos_1_1terminated__threads__list" ],

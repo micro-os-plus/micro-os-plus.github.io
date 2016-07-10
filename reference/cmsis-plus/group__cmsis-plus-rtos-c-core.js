@@ -1,5 +1,7 @@
 var group__cmsis_plus_rtos_c_core =
 [
+    [ "os_flags_all", "group__cmsis-plus-rtos-c-core.html#ga05b4355d261cd176a03edcc83dc56fb4", null ],
+    [ "os_flags_any", "group__cmsis-plus-rtos-c-core.html#ga84611c2a8bb7cd483729253c74cf2cec", null ],
     [ "os_clock_duration_t", "group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb", null ],
     [ "os_clock_offset_t", "group__cmsis-plus-rtos-c-core.html#gacabb40f479e1bed29ec21e8151e09ed1", null ],
     [ "os_clock_timestamp_t", "group__cmsis-plus-rtos-c-core.html#gaef683ba40ccd6fbd8a5c8c3e86459d65", null ],

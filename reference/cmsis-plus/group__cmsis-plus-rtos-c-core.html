@@ -117,6 +117,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-c-core.html',''
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Types</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
@@ -127,6 +128,14 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-c-core.html',''
 <p>C API core &amp; scheduler definitions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga05b4355d261cd176a03edcc83dc56fb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga05b4355d261cd176a03edcc83dc56fb4">os_flags_all</a>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:ga05b4355d261cd176a03edcc83dc56fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84611c2a8bb7cd483729253c74cf2cec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga84611c2a8bb7cd483729253c74cf2cec">os_flags_any</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga84611c2a8bb7cd483729253c74cf2cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special mask to represent any flag.  <a href="#ga84611c2a8bb7cd483729253c74cf2cec">More...</a><br /></td></tr>
+<tr class="separator:ga84611c2a8bb7cd483729253c74cf2cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Types</h2></td></tr>
 <tr class="memitem:gaeb56a88a7ee3a52c479d68da8d042feb"><td class="memItemLeft" align="right" valign="top">typedef os_port_clock_duration_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb">os_clock_duration_t</a></td></tr>
@@ -235,7 +244,39 @@ Interrupts functions</h2></td></tr>
 <p>C API core &amp; scheduler definitions. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-core.html">RTOS C++ API</a></dd></dl>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
-<div class="fragment"><div class="line">  flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga56c6a381c9ced86c2819df7ac4cb778f">os_sched_is_started</a> ();</div><div class="line">  assert(flag);</div><div class="line"></div><div class="line">  <span class="comment">// ...</span></div><div class="line">    {</div><div class="line">      <span class="comment">// Scheduler critical section</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga311e9d290aff86f245b7944dd13b43a3">os_sched_status_t</a> st;</div><div class="line">      st = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga2c2ad60bbb83ac0a6d2c71ce4a5538a4">os_sched_lock</a> (<span class="keyword">true</span>);</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">      flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os_sched_is_locked</a> ();</div><div class="line">      assert(flag);</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga33a540cc6b1d39572fa234c41b796999">os_sched_unlock</a> (st);</div><div class="line">    }</div><div class="line"></div><div class="line">  <span class="comment">// ...</span></div><div class="line">  flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os_sched_is_locked</a> ();</div><div class="line">  assert(!flag);</div><div class="line">}</div><div class="line"></div><div class="line">{</div><div class="line">  <span class="comment">// Interrupts critical section</span></div><div class="line">  <a class="code" href="group__cmsis-plus-rtos-c-core.html#gadbacbf86961d3b7b1d6a7095700e31ee">os_irq_status_t</a> st;</div><div class="line">  st = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga2107d849aad1300add2b693115c20ddd">os_irq_critical_enter</a> ();</div><div class="line">  <span class="comment">// ...</span></div><div class="line">    {</div><div class="line">      <span class="comment">// Interrupts uncritical section</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#gadbacbf86961d3b7b1d6a7095700e31ee">os_irq_status_t</a> st2;</div><div class="line">      st2 = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga8d5d1992522a4d95a4b5c7b37151129b">os_irq_uncritical_enter</a> ();</div><div class="line">      <span class="comment">// ...</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#gae58ebf08f00b5970d93bb5e61c3dd52a">os_irq_uncritical_exit</a> (st2);</div><div class="line">    }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga5579774c796f644a2bdfde4c72cbd1b8">os_irq_critical_exit</a> (st);</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Types</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga56c6a381c9ced86c2819df7ac4cb778f">os_sched_is_started</a> ();</div><div class="line">      assert(flag);</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">        {</div><div class="line">          <span class="comment">// Scheduler critical section</span></div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga311e9d290aff86f245b7944dd13b43a3">os_sched_status_t</a> st;</div><div class="line">          st = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga2c2ad60bbb83ac0a6d2c71ce4a5538a4">os_sched_lock</a> (<span class="keyword">true</span>);</div><div class="line"></div><div class="line">          <span class="comment">// ...</span></div><div class="line">          flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os_sched_is_locked</a> ();</div><div class="line">          assert(flag);</div><div class="line"></div><div class="line">          <span class="comment">// ...</span></div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga33a540cc6b1d39572fa234c41b796999">os_sched_unlock</a> (st);</div><div class="line">        }</div><div class="line"></div><div class="line">      <span class="comment">// ...</span></div><div class="line">      flag = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os_sched_is_locked</a> ();</div><div class="line">      assert(!flag);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Interrupts critical section</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#gadbacbf86961d3b7b1d6a7095700e31ee">os_irq_status_t</a> st;</div><div class="line">      st = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga2107d849aad1300add2b693115c20ddd">os_irq_critical_enter</a> ();</div><div class="line">      <span class="comment">// ...</span></div><div class="line">        {</div><div class="line">          <span class="comment">// Interrupts uncritical section</span></div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-core.html#gadbacbf86961d3b7b1d6a7095700e31ee">os_irq_status_t</a> st2;</div><div class="line">          st2 = <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga8d5d1992522a4d95a4b5c7b37151129b">os_irq_uncritical_enter</a> ();</div><div class="line">          <span class="comment">// ...</span></div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-core.html#gae58ebf08f00b5970d93bb5e61c3dd52a">os_irq_uncritical_exit</a> (st2);</div><div class="line">        }</div><div class="line">      <span class="comment">// ...</span></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-core.html#ga5579774c796f644a2bdfde4c72cbd1b8">os_irq_critical_exit</a> (st);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga05b4355d261cd176a03edcc83dc56fb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_flags_all&#160;&#160;&#160;0xFFFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Special mask to represent all flags. </p>
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00156">156</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga84611c2a8bb7cd483729253c74cf2cec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_flags_any&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Special mask to represent any flag. </p>
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00151">151</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Types</h2>
 <a class="anchor" id="gaeb56a88a7ee3a52c479d68da8d042feb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +291,7 @@ Interrupts functions</h2></td></tr>
 <p>A numeric type intended to store a clock duration, either in ticks cycles, or seconds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1clock.html#a149d8b5cea55224ef5cfede8a81df04c" title="Type of variables holding clock durations. ">os::rtos::clock::duration_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00196">196</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00206">206</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +309,7 @@ Interrupts functions</h2></td></tr>
 <p>A numeric type intended to store a clock offset (difference to epoch), either in ticks or in seconds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1clock.html#a149d8b5cea55224ef5cfede8a81df04c" title="Type of variables holding clock durations. ">os::rtos::clock::duration_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00207">207</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00217">217</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -286,7 +327,7 @@ Interrupts functions</h2></td></tr>
 <p>A numeric type intended to store a clock timestamp, either in ticks cycles or seconds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1clock.html#a4f6ee5cdd07c87db11f64d02e1c354d1" title="Type of variables holding clock time stamps. ">os::rtos::clock::timestamp_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00186">186</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00196">196</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -343,7 +384,7 @@ Interrupts functions</h2></td></tr>
 <p>Used to temporarily store the CPU status register during critical sections.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1interrupts.html#a16dbebdd78fcfe5822e9c39f6e7157f1" title="Type of variables holding interrupts statu codes. ">os::rtos::interrupts::status_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00172">172</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00182">182</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -360,7 +401,7 @@ Interrupts functions</h2></td></tr>
 <p>Generic iterator, implemented as a pointer. </p>
 <p>To simplify things, the C implementation of iterators includes a single pointer to a C++ object. Internally, the functions used to iterate must cast this pointer properly, but this should be transparent for the user. </p>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00220">220</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00230">230</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -396,7 +437,7 @@ Interrupts functions</h2></td></tr>
 <p>Usually a boolean telling if the scheduler is locked or not, but for recursive locks it might also be a numeric counter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#abcfc8855a2378f4808c089de15aefb83" title="Type of variables holding scheduler status codes. ">os::rtos::scheduler::status_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00159">159</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00169">169</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -413,7 +454,7 @@ Interrupts functions</h2></td></tr>
 <p>Type of variables holding context switches counters. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1statistics.html#a1d1572b5e0742d0e4942819c3d3b232a" title="Type of variables holding context switches counters. ">os::rtos::statistics::counter_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00229">229</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00239">239</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +471,7 @@ Interrupts functions</h2></td></tr>
 <p>Type of variables holding durations in CPU cycles. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1statistics.html#a0b143d63968082a8b6e73ecba956ac07" title="Type of variables holding durations in CPU cycles. ">os::rtos::statistics::duration_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00236">236</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00246">246</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>

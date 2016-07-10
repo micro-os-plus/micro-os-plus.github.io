@@ -10,7 +10,7 @@ var classos_1_1rtos_1_1thread__static =
     [ "~thread_static", "classos_1_1rtos_1_1thread__static.html#aa0b03e85ee3d8a4c0f3044f4a12ff9bb", null ],
     [ "cancel", "classos_1_1rtos_1_1thread__static.html#a5bd4a092dc5a5113c4e9b9c466039c3a", null ],
     [ "detach", "classos_1_1rtos_1_1thread__static.html#a09b7123d2088c979ec43d5daf9c9ae02", null ],
-    [ "flags_raise", "classos_1_1rtos_1_1thread__static.html#a19d614476bd8688a77ebfe4a457382c2", null ],
+    [ "flags_raise", "classos_1_1rtos_1_1thread__static.html#a34e7b2be9b9104142374399120e04589", null ],
     [ "function_args", "classos_1_1rtos_1_1thread__static.html#a6b9a7475275a84d9692404497ae0fb28", null ],
     [ "interrupt", "classos_1_1rtos_1_1thread__static.html#abb636140c240ca8ff1bad5977ae2925b", null ],
     [ "interrupted", "classos_1_1rtos_1_1thread__static.html#a68ced1bf0b2cb14d6b41a54aa5c648bd", null ],
