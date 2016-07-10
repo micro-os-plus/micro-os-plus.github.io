@@ -12,9 +12,9 @@ var group__cmsis_plus_rtos_mutex =
         [ "mx_type", "classos_1_1rtos_1_1mutex_1_1attributes.html#a2f2d0f166ed193d5da4ac5f0da655f17", null ]
       ] ],
       [ "protocol", "structos_1_1rtos_1_1mutex_1_1protocol.html", [
-        [ "none", "structos_1_1rtos_1_1mutex_1_1protocol.html#a56353515f34a143d68c7d658f1e74dbea89f31cb2b1c5b230b8ba0bcad0c8c39b", null ],
-        [ "inherit", "structos_1_1rtos_1_1mutex_1_1protocol.html#a56353515f34a143d68c7d658f1e74dbeac288479da49bf12ecbb0e31cb4d5fde4", null ],
-        [ "protect", "structos_1_1rtos_1_1mutex_1_1protocol.html#a56353515f34a143d68c7d658f1e74dbeaebac25e02252bdd4f038dd200b2ef7cb", null ]
+        [ "none", "structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b", null ],
+        [ "inherit", "structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4", null ],
+        [ "protect", "structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb", null ]
       ] ],
       [ "recursive_attributes", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html", [
         [ "recursive_attributes", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html#a85dc13e56d84473c85e20a8034e15ecd", null ],
@@ -27,14 +27,14 @@ var group__cmsis_plus_rtos_mutex =
         [ "mx_type", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html#a2f2d0f166ed193d5da4ac5f0da655f17", null ]
       ] ],
       [ "robustness", "structos_1_1rtos_1_1mutex_1_1robustness.html", [
-        [ "stalled", "structos_1_1rtos_1_1mutex_1_1robustness.html#a492f5cedd132df235767940e09521b74a41e4c3e4193c9e9b0f7802e2f7531dd6", null ],
-        [ "robust", "structos_1_1rtos_1_1mutex_1_1robustness.html#a492f5cedd132df235767940e09521b74ae3dbc178c25550d13df1f9761b97031f", null ]
+        [ "stalled", "structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6", null ],
+        [ "robust", "structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f", null ]
       ] ],
       [ "type", "structos_1_1rtos_1_1mutex_1_1type.html", [
-        [ "normal", "structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba13f0f971d2e78a3df70abd60e559f939", null ],
-        [ "errorcheck", "structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26", null ],
-        [ "recursive", "structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f", null ],
-        [ "_default", "structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba9f0739f65b7c391818b4aef908552aaf", null ]
+        [ "normal", "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939", null ],
+        [ "errorcheck", "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26", null ],
+        [ "recursive", "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f", null ],
+        [ "_default", "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf", null ]
       ] ],
       [ "count_t", "classos_1_1rtos_1_1mutex.html#a31a6f2d64eb598ccb0f8152e2bf20504", null ],
       [ "protocol_t", "classos_1_1rtos_1_1mutex.html#a65bfef6cd463aac910d5c93d5828fe7f", null ],

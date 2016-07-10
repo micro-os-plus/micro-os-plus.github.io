@@ -424,10 +424,10 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Create the thread. Stack is dynamically allocated.
-</span>  <span class="kr">thread</span> <span class="n">my_thread</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+</span>  <span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
   <span class="c1">// Wait for the thread to terminate.
-</span>  <span class="n">my_thread</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
+</span>  <span class="n">th</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
   <span class="c1">// ...
 </span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -456,20 +456,20 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Local storage for the thread object.
-</span>  <span class="n">os_thread_t</span> <span class="n">my_thread</span><span class="p">;</span>
+</span>  <span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_thread</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// Wait for the thread to terminate.
-</span>  <span class="n">os_thread_join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_thread</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">my_thread</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -964,7 +964,7 @@
 
 <h2 id="changing-thread-priorities">Changing thread priorities</h2>
 
-<p>By default, threads are created with <code class="highlighter-rouge">thread::priority::normal</code> which is a middle value priority, but it can be changed at any time during the thread lifetime.</p>
+<p>By default, threads are created with <code class="highlighter-rouge">thread::priority::normal</code> which is a middle value priority, but it can be changed at any moment during the thread lifetime.</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="c1">/// @file app-main.cpp

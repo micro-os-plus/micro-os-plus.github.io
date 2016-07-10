@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: os::rtos::condition_variable Class Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::condition_variable Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -381,7 +381,7 @@ Static Public Attributes</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +491,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The condition change was signalled. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines, or the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines, or the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
     <tr><td class="paramname">ETIMEDOUT</td><td>The timeout has passed. </td></tr>
@@ -499,7 +499,7 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>The function shall not fail with an error code of <code>EINTR</code>.</dd></dl>
-<p>Block on a condition variable. The application shall ensure that this function is called with <em>mutex</em> locked by the calling thread; otherwise, an error (for <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and robust mutexes) or undefined behaviour (for other mutexes) results.</p>
+<p>Block on a condition variable. The application shall ensure that this function is called with <em>mutex</em> locked by the calling thread; otherwise, an error (for <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and robust mutexes) or undefined behaviour (for other mutexes) results.</p>
 <p>These functions atomically release <em>mutex</em> and cause the calling thread to block on the condition variable cond; atomically here means "atomically with respect to access
 by another thread to the mutex and then the condition variable". That is, if another thread is able to acquire the mutex after the about-to-block thread has released it, then a subsequent call to <code><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81" title="Notify all threads waiting for a condition variable. ">broadcast()</a></code> or <code><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766" title="Notify one thread waiting for a condition variable. ">signal()</a></code> in that thread shall behave as if it were issued after the about-to-block thread has blocked.</p>
 <p>Upon successful return, the mutex shall have been locked and shall be owned by the calling thread. If <em>mutex</em> is a robust mutex where an owner terminated while holding the lock and the state is recoverable, the mutex shall be acquired even though the function returns an error code.</p>
@@ -512,7 +512,7 @@ by another thread to the mutex and then the condition variable". That is, if ano
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cond_timedwait.html"><code>pthread_cond_timedwait()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00646">646</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-condvar_8cpp_source.html#l00647">647</a> of file <a class="el" href="os-condvar_8cpp_source.html">os-condvar.cpp</a>.</p>
 
 </div>
 </div>
@@ -540,14 +540,14 @@ by another thread to the mutex and then the condition variable". That is, if ano
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The condition change was signalled. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines, or the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines, or the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Errors</dt><dd>The function shall not fail with an error code of <code>EINTR</code>.</dd></dl>
-<p>Block on a condition variable. The application shall ensure that this function is called with <em>mutex</em> locked by the calling thread; otherwise, an error (for <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and robust mutexes) or undefined behaviour (for other mutexes) results.</p>
+<p>Block on a condition variable. The application shall ensure that this function is called with <em>mutex</em> locked by the calling thread; otherwise, an error (for <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and robust mutexes) or undefined behaviour (for other mutexes) results.</p>
 <p>These functions atomically release <em>mutex</em> and cause the calling thread to block on the condition variable; atomically here means "atomically with respect to access
 by another thread to the mutex and then the condition variable". That is, if another thread is able to acquire the mutex after the about-to-block thread has released it, then a subsequent call to <code><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81" title="Notify all threads waiting for a condition variable. ">broadcast()</a></code> or <code><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766" title="Notify one thread waiting for a condition variable. ">signal()</a></code> in that thread shall behave as if it were issued after the about-to-block thread has blocked.</p>
 <p>Upon successful return, the mutex shall have been locked and shall be owned by the calling thread. If <em>mutex</em> is a robust mutex where an owner terminated while holding the lock and the state is recoverable, the mutex shall be acquired even though the function returns an error code.</p>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: include/cmsis-plus/legacy/cmsis_os.h File Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/legacy/cmsis_os.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -202,7 +202,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a47cf03658f01cdffca688e9096b58289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os_8h.html#a47cf03658f01cdffca688e9096b58289">osKernelSystemId</a>&#160;&#160;&#160;&quot;CMSIS++ V1.00&quot;</td></tr>
 <tr class="memdesc:a47cf03658f01cdffca688e9096b58289"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTOS identification string.  <a href="#a47cf03658f01cdffca688e9096b58289">More...</a><br /></td></tr>
 <tr class="separator:a47cf03658f01cdffca688e9096b58289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e0954d52722673e2031233a2ab99960"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os_8h.html#a9e0954d52722673e2031233a2ab99960">osKernelSysTickFrequency</a>&#160;&#160;&#160;(1000)</td></tr>
+<tr class="memitem:a9e0954d52722673e2031233a2ab99960"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os_8h.html#a9e0954d52722673e2031233a2ab99960">osKernelSysTickFrequency</a>&#160;&#160;&#160;(<a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">OS_INTEGER_SYSTICK_FREQUENCY_HZ</a>)</td></tr>
 <tr class="memdesc:a9e0954d52722673e2031233a2ab99960"><td class="mdescLeft">&#160;</td><td class="mdescRight">The RTOS kernel system timer frequency.  <a href="#a9e0954d52722673e2031233a2ab99960">More...</a><br /></td></tr>
 <tr class="separator:a9e0954d52722673e2031233a2ab99960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae12c190af42d7310d8006d64f4ed5a88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmsis__os_8h.html#ae12c190af42d7310d8006d64f4ed5a88">osKernelSysTickMicroSec</a>(microsec)&#160;&#160;&#160;(((uint64_t)microsec * (<a class="el" href="cmsis__os_8h.html#a9e0954d52722673e2031233a2ab99960">osKernelSysTickFrequency</a>)) / 1000000)</td></tr>
@@ -721,7 +721,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define osKernelSysTickFrequency&#160;&#160;&#160;(1000)</td>
+          <td class="memname">#define osKernelSysTickFrequency&#160;&#160;&#160;(<a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">OS_INTEGER_SYSTICK_FREQUENCY_HZ</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1089,7 +1089,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__mutex__s.html">osMutex</a> os_mutex_data_##name; \</div><div class="line">const <a class="code" href="structos__mutex__def.html">osMutexDef_t</a> os_mutex_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_mutex_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__mutex__def_html"><div class="ttname"><a href="structos__mutex__def.html">os_mutex_def</a></div><div class="ttdoc">Mutex definition structure contains setup information for a mutex. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00308">cmsis_os.h:308</a></div></div>
-<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdoc">Mutex object storage. </div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00810">os-c-decls.h:810</a></div></div>
+<div class="ttc" id="structos__mutex__s_html"><div class="ttname"><a href="structos__mutex__s.html">os_mutex_s</a></div><div class="ttdoc">Mutex object storage. </div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00836">os-c-decls.h:836</a></div></div>
 </div><!-- fragment -->
 <p>Define a mutex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1287,7 +1287,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdoc">Semaphore object storage. </div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00966">os-c-decls.h:966</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structos__semaphore__s.html">osSemaphore</a> os_semaphore_data_##name; \</div><div class="line">const <a class="code" href="structos__semaphore__def.html">osSemaphoreDef_t</a> os_semaphore_def_##name = \</div><div class="line">{ \</div><div class="line"><span class="preprocessor">    #name, \</span></div><div class="line"><span class="preprocessor">    &amp;os_semaphore_data_##name \</span></div><div class="line"><span class="preprocessor">}</span></div><div class="ttc" id="structos__semaphore__s_html"><div class="ttname"><a href="structos__semaphore__s.html">os_semaphore_s</a></div><div class="ttdoc">Semaphore object storage. </div><div class="ttdef"><b>Definition:</b> <a href="os-c-decls_8h_source.html#l00992">os-c-decls.h:992</a></div></div>
 <div class="ttc" id="structos__semaphore__def_html"><div class="ttname"><a href="structos__semaphore__def.html">os_semaphore_def</a></div><div class="ttdoc">Semaphore definition structure contains setup information for a semaphore. </div><div class="ttdef"><b>Definition:</b> <a href="cmsis__os_8h_source.html#l00318">cmsis_os.h:318</a></div></div>
 </div><!-- fragment -->
 <p>Define a Semaphore object. </p>
@@ -2169,7 +2169,7 @@ Functions</h2></td></tr>
 <p>For a value of 1, the system waits until the next timer tick occurs. That means that the actual time delay may be up to one timer tick less.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02761">2761</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02812">2812</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2209,7 +2209,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>In case that the RTOS Kernel starts thread execution with the function main the function osKernelInitialize stops thread switching. This allows you to setup the system to a defined state before thread switching is resumed with osKernelStart.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02452">2452</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02503">2503</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2238,7 @@ Functions</h2></td></tr>
 <p>Identifies if the RTOS scheduler is started. For systems with the option to start the main function as a thread this allows you to identify that the RTOS scheduler is already running.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02489">2489</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02540">2540</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2267,7 +2267,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When the CMSIS-RTOS starts thread execution with the function main this function resumes thread switching. The main thread will continue executing after osKernelStart.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02474">2474</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02525">2525</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2695,7 +2695,7 @@ Functions</h2></td></tr>
 <p>Create and initialise a mutex object.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03107">3107</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03165">3165</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2733,7 +2733,7 @@ Functions</h2></td></tr>
 <p>Delete a mutex object. The function releases internal memory obtained for mutex handling. After this call the mutex_id is no longer valid and cannot be used. The mutex may be created again using the function osMutexCreate.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03254">3254</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03312">3312</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2771,7 +2771,7 @@ Functions</h2></td></tr>
 <p>Release a mutex that was obtained with osMutexWait. Other threads that currently wait for the same mutex will be now put into the state READY.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03215">3215</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03273">3273</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2827,7 +2827,7 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03146">3146</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03204">3204</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3131,7 +3131,7 @@ Functions</h2></td></tr>
 <p>Clear the signal flags of an active thread.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02988">2988</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03039">3039</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3172,7 +3172,7 @@ Functions</h2></td></tr>
 <p>Set the signal flags of an active thread.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02964">2964</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03015">3015</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3228,7 +3228,7 @@ Functions</h2></td></tr>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03032">3032</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03089">3089</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3270,7 +3270,7 @@ Functions</h2></td></tr>
 <p>Start the thread function by adding it to the Active Threads list and set it to state READY. The thread function receives the argument pointer as function argument when the function is started. When the priority of the created thread function is higher than the current RUNNING thread, the created thread function starts instantly and becomes the new RUNNING thread.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02536">2536</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02587">2587</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3294,7 @@ Functions</h2></td></tr>
 <p>Get the thread ID of the current running thread.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02588">2588</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02639">2639</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3324,7 +3324,7 @@ Functions</h2></td></tr>
 <p>Get the priority of an active thread. In case of a failure the value osPriorityError is returned.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02726">2726</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02777">2777</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3374,7 +3374,7 @@ Functions</h2></td></tr>
 <p>Change the priority of a running thread. There is no need for an extra yield after it, if the priorities require, there is an implicit reschedule.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02672">2672</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02723">2723</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3413,7 +3413,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>In case that osThreadTerminate terminates the currently running task, the function never returns and other threads that are in the READY state are started.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02610">2610</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02661">2661</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3443,7 +3443,7 @@ Functions</h2></td></tr>
 <p>Pass control to the next thread that is in state READY. If there is no other thread in the state READY, the current thread continues execution and no thread switching occurs.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02651">2651</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02702">2702</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3491,7 +3491,7 @@ Functions</h2></td></tr>
 <p>Create a one-shot or periodic timer and associate it with a callback function argument. The timer is initially stopped and must be started with <code><a class="el" href="os-c-wrapper_8cpp.html#a27a797a401b068e2644d1125f22a07ca" title="Start the timer. ">osTimerStart()</a></code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02846">2846</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02897">2897</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3528,7 +3528,7 @@ Functions</h2></td></tr>
 <p>Delete the timer object that was created by <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">osTimerCreate</a>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02938">2938</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02989">2989</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3576,7 +3576,7 @@ Functions</h2></td></tr>
 <p>Start or restart the timer.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02873">2873</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02924">2924</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3613,7 +3613,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>MUST REMAIN UNCHANGED: <b>osTimerStop</b> shall be consistent in every CMSIS-RTOS.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02904">2904</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02955">2955</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

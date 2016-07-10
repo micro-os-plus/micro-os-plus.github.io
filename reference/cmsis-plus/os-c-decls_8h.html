@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: include/cmsis-plus/rtos/os-c-decls.h File Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/rtos/os-c-decls.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -131,7 +131,8 @@ $(document).ready(function(){initNavTree('os-c-decls_8h.html','');});
 <div class="title">os-c-decls.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cmsis-plus/os-app-config.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="os-versions_8h_source.html">cmsis-plus/os-versions.h</a>&gt;</code><br />
+<code>#include &lt;cmsis-plus/os-app-config.h&gt;</code><br />
 <code>#include &lt;cmsis-plus/rtos/port/os-decls.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
@@ -217,6 +218,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a775a0a8af9e10662654cb4e4799d28f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9">OS_THREAD_PRIO_SHIFT</a>&#160;&#160;&#160;(4)</td></tr>
 <tr class="separator:a775a0a8af9e10662654cb4e4799d28f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841b874bf63424159693407fe668c6ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae">OS_USE_CMSIS_PLUS</a></td></tr>
+<tr class="memdesc:a841b874bf63424159693407fe668c6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the world that CMSIS++ is in use.  <a href="#a841b874bf63424159693407fe668c6ae">More...</a><br /></td></tr>
 <tr class="separator:a841b874bf63424159693407fe668c6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -338,6 +340,12 @@ Types</h2></td></tr>
 <tr class="memitem:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">os_thread_prio_t</a></td></tr>
 <tr class="memdesc:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding thread priorities.  <a href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">More...</a><br /></td></tr>
 <tr class="separator:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga202e37a07547181b57632a3194c9fa60"><td class="memItemLeft" align="right" valign="top">typedef os_port_thread_stack_allocation_element_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60">os_thread_stack_allocation_element_t</a></td></tr>
+<tr class="memdesc:ga202e37a07547181b57632a3194c9fa60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding aligned stack elements.  <a href="group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60">More...</a><br /></td></tr>
+<tr class="separator:ga202e37a07547181b57632a3194c9fa60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89006097f69cd675294822c8859f75ce"><td class="memItemLeft" align="right" valign="top">typedef os_port_thread_stack_element_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a></td></tr>
+<tr class="memdesc:ga89006097f69cd675294822c8859f75ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding stack words.  <a href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">More...</a><br /></td></tr>
+<tr class="separator:ga89006097f69cd675294822c8859f75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__thread__stack__s.html">os_thread_stack_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a></td></tr>
 <tr class="memdesc:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread stack.  <a href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">More...</a><br /></td></tr>
 <tr class="separator:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,7 +430,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eacec117cb3d2b0202237758218626b710">os_thread_state_running</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eac11cf56324d715f45bbd9a0f85b35f32">os_thread_state_waiting</a> = 4, 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea201933dc6dbb707984de3152769e6860">os_thread_state_suspended</a> = 4, 
 <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea1a7f66671b3b41e9de7184bfac09f2ad">os_thread_state_terminated</a> = 5, 
 <br />
@@ -491,7 +499,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00236">236</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00243">243</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -504,6 +512,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tell the world that CMSIS++ is in use. </p>
+<p>Macro to inform including files that CMSIS++ RTOS definitions are available. </p>
 
 <p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00053">53</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
@@ -556,7 +567,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00997">997</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01023">1023</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -570,7 +581,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01095">1095</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01121">1121</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -584,7 +595,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01094">1094</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01120">1120</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +609,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01091">1091</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01117">1117</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +623,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00700">700</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00726">726</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +637,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00702">702</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00728">728</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -640,7 +651,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00703">703</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00729">729</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -654,7 +665,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00701">701</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00727">727</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +691,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00070">70</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00077">77</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>

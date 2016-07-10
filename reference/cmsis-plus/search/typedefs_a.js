@@ -47,6 +47,8 @@ var searchData=
   ['os_5fthread_5ffunc_5fargs_5ft',['os_thread_func_args_t',['../group__cmsis-plus-rtos-c-thread.html#ga8b048f911624cd470f327cea02245790',1,'os-c-decls.h']]],
   ['os_5fthread_5ffunc_5ft',['os_thread_func_t',['../group__cmsis-plus-rtos-c-thread.html#ga5c927d23d4ba368f34a1a73eefb2d6b3',1,'os-c-decls.h']]],
   ['os_5fthread_5fprio_5ft',['os_thread_prio_t',['../group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d',1,'os-c-decls.h']]],
+  ['os_5fthread_5fstack_5fallocation_5felement_5ft',['os_thread_stack_allocation_element_t',['../group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60',1,'os-c-decls.h']]],
+  ['os_5fthread_5fstack_5felement_5ft',['os_thread_stack_element_t',['../group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce',1,'os-c-decls.h']]],
   ['os_5fthread_5fstack_5ft',['os_thread_stack_t',['../group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8',1,'os-c-decls.h']]],
   ['os_5fthread_5fstate_5ft',['os_thread_state_t',['../group__cmsis-plus-rtos-c-thread.html#gae64a260be596aebabf5ff66f129dffa9',1,'os-c-decls.h']]],
   ['os_5fthread_5fstatistics_5ft',['os_thread_statistics_t',['../group__cmsis-plus-rtos-c-thread.html#gab01da43569494ec25de993b90b46867f',1,'os-c-decls.h']]],

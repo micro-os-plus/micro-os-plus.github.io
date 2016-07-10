@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "CMSIS++ Reference", "index.html", [
+  [ "µOS++ IIIe / CMSIS++ Reference", "index.html", [
     [ "Overview", "index.html", null ],
     [ "Change log", "md_doxygen_pages_change-log.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -52,15 +52,15 @@ var NAVTREEINDEX =
 "classos_1_1rtos_1_1event__flags.html#afc2027838d333aa0cdb4e2488b4cf741",
 "classos_1_1rtos_1_1message__queue__allocated.html#a6106138213cbf09c034242aa6a32509e",
 "classos_1_1rtos_1_1terminated__threads__list.html#ac398ad02b949ced4aa29446ddea8be2a",
-"cmsis__os_8h.html#a3b571de44cd3094c643247a7397f86b5",
-"functions_vars_l.html",
-"group__cmsis-plus-rtos-c-clock.html#gaf181c99133fc85695d38debea7bf862a",
-"group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20",
-"group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca8c40f1dcd1d01ad795d0febb02277aab",
-"newlib-aliases_8h.html#a1fd116a5c6d658acbe5e5786fa3e1868",
-"semihosting_8h.html#a368e5417dfc8239b696ecf3233a6a955a0ec256df1f87ed648561fc9af71e607f",
-"structos__clock__node__s.html#a919f956c2b84125f841d6b99e45876b0",
-"usart-wrapper_8cpp.html"
+"cmsis__os_8h.html#a4a861e9c469c9d0daf5721bf174f8e54",
+"functions_vars_r.html",
+"group__cmsis-plus-rtos-c-condvar.html#ga5956d1601bb051b2494df7576afd31b8",
+"group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677",
+"group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eaaf8d16c7562f59170cf82a99b6450792",
+"new_8cpp.html#af5b857eccc1f5516255e4fbb2b93ec48",
+"os-types_8h.html#abb41d6a623a7deb73c674fae146e0d45",
+"structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f",
+"types_8h.html#a99474167150457ce4f33ee42e6e83fab"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

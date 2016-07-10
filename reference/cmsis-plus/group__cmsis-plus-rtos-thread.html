@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: Threads</title>
+<title>µOS++ IIIe / CMSIS++ Reference: Threads</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -137,8 +137,23 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">os::rtos::thread::attributes</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread attributes.  <a href="classos_1_1rtos_1_1thread_1_1attributes.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1context.html">os::rtos::thread::context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread context.  <a href="classos_1_1rtos_1_1thread_1_1context.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1thread_1_1priority.html">os::rtos::thread::priority</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priorities.  <a href="structos_1_1rtos_1_1thread_1_1priority.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html">os::rtos::thread::stack</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread stack.  <a href="classos_1_1rtos_1_1thread_1_1stack.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1rtos_1_1thread_1_1state.html">os::rtos::thread::state</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread states.  <a href="structos_1_1rtos_1_1thread_1_1state.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html">os::rtos::thread::statistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread statistics.  <a href="classos_1_1rtos_1_1thread_1_1statistics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html">os::rtos::thread</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>thread</b>, using the default RTOS allocator.  <a href="classos_1_1rtos_1_1thread.html#details">More...</a><br /></td></tr>
@@ -158,34 +173,34 @@ Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gac24438ba32ff8ac04fe2f1433f16aabd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: priority_t { <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdabe1def6f8adb29967a162872655593ae">os::rtos::thread::priority::none</a> = 0, 
+<tr class="memitem:ga7812945316a2540d68c3933e0f497b66"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: priority_t { <br />
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66abe1def6f8adb29967a162872655593ae">os::rtos::thread::priority::none</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda24b83eece3b5e2c59b6cc190cfbec515">os::rtos::thread::priority::idle</a> = (1 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a24b83eece3b5e2c59b6cc190cfbec515">os::rtos::thread::priority::idle</a> = (1 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdab2750fc62b452d5734c9d48f98b15220">os::rtos::thread::priority::lowest</a> = (2 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ab2750fc62b452d5734c9d48f98b15220">os::rtos::thread::priority::lowest</a> = (2 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdafa27875e2cfdd82964492ec24defc750">os::rtos::thread::priority::low</a> = (2 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66afa27875e2cfdd82964492ec24defc750">os::rtos::thread::priority::low</a> = (2 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdaecb6604af6f7847bafb7f3647f920804">os::rtos::thread::priority::below_normal</a> = (4 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66aecb6604af6f7847bafb7f3647f920804">os::rtos::thread::priority::below_normal</a> = (4 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdad92eafd06437bfec575bb7c47244e93c">os::rtos::thread::priority::normal</a> = (6 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c">os::rtos::thread::priority::normal</a> = (6 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdae255d30184b1db425fced0ead1708334">os::rtos::thread::priority::above_normal</a> = (8 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ae255d30184b1db425fced0ead1708334">os::rtos::thread::priority::above_normal</a> = (8 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda06a3f2cab2ecc909e21184ad819aa2bb">os::rtos::thread::priority::high</a> = (10 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a06a3f2cab2ecc909e21184ad819aa2bb">os::rtos::thread::priority::high</a> = (10 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda047fd6a18c2fbfe5c9ec9187da97a5c9">os::rtos::thread::priority::realtime</a> = (12 &lt;&lt; range), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9">os::rtos::thread::priority::realtime</a> = (12 &lt;&lt; range), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda899451bc782f7dc4679653d14625bcaf">os::rtos::thread::priority::highest</a> = (((13 + 1) &lt;&lt; range) - 1), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a899451bc782f7dc4679653d14625bcaf">os::rtos::thread::priority::highest</a> = (((13 + 1) &lt;&lt; range) - 1), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda48f2cfacae6c01ca59332f982ba73553">os::rtos::thread::priority::isr</a> = (((14 + 1) &lt;&lt; range) - 1), 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a48f2cfacae6c01ca59332f982ba73553">os::rtos::thread::priority::isr</a> = (((14 + 1) &lt;&lt; range) - 1), 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabda3f38937bb7063900c3328df07da44c0c">os::rtos::thread::priority::error</a> = (((15 + 1) &lt;&lt; range) - 1)
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a3f38937bb7063900c3328df07da44c0c">os::rtos::thread::priority::error</a> = (((15 + 1) &lt;&lt; range) - 1)
 <br />
- }<tr class="memdesc:gac24438ba32ff8ac04fe2f1433f16aabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priorities; intermediate values are also possible.  <a href="group__cmsis-plus-rtos-thread.html#gac24438ba32ff8ac04fe2f1433f16aabd">More...</a><br /></td></tr>
+ }<tr class="memdesc:ga7812945316a2540d68c3933e0f497b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priorities; intermediate values are also possible.  <a href="group__cmsis-plus-rtos-thread.html#ga7812945316a2540d68c3933e0f497b66">More...</a><br /></td></tr>
 </td></tr>
-<tr class="separator:gac24438ba32ff8ac04fe2f1433f16aabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ga7812945316a2540d68c3933e0f497b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C++ API threads definitions. </p>
@@ -204,12 +219,12 @@ Enumerations</h2></td></tr>
 <p>A numeric type used to hold thread priorities, affecting the thread behaviour, like scheduling and thread wakeup due to events; usually an unsigned 8-bits type.</p>
 <p>Higher values represent higher priorities. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00139">139</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00146">146</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="gac24438ba32ff8ac04fe2f1433f16aabd"></a>
+<a class="anchor" id="ga7812945316a2540d68c3933e0f497b66"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -221,40 +236,40 @@ Enumerations</h2></td></tr>
 
 <p>Thread priorities; intermediate values are also possible. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdabe1def6f8adb29967a162872655593ae"></a>none&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66abe1def6f8adb29967a162872655593ae"></a>none&#160;</td><td class="fielddoc">
 <p>Undefined, thread not initialised. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda24b83eece3b5e2c59b6cc190cfbec515"></a>idle&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a24b83eece3b5e2c59b6cc190cfbec515"></a>idle&#160;</td><td class="fielddoc">
 <p>System reserved for the IDLE thread. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdab2750fc62b452d5734c9d48f98b15220"></a>lowest&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66ab2750fc62b452d5734c9d48f98b15220"></a>lowest&#160;</td><td class="fielddoc">
 <p>Lowest available for user code. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdafa27875e2cfdd82964492ec24defc750"></a>low&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66afa27875e2cfdd82964492ec24defc750"></a>low&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdaecb6604af6f7847bafb7f3647f920804"></a>below_normal&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66aecb6604af6f7847bafb7f3647f920804"></a>below_normal&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdad92eafd06437bfec575bb7c47244e93c"></a>normal&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c"></a>normal&#160;</td><td class="fielddoc">
 <p>Default priority. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabdae255d30184b1db425fced0ead1708334"></a>above_normal&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66ae255d30184b1db425fced0ead1708334"></a>above_normal&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda06a3f2cab2ecc909e21184ad819aa2bb"></a>high&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a06a3f2cab2ecc909e21184ad819aa2bb"></a>high&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda047fd6a18c2fbfe5c9ec9187da97a5c9"></a>realtime&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9"></a>realtime&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda899451bc782f7dc4679653d14625bcaf"></a>highest&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a899451bc782f7dc4679653d14625bcaf"></a>highest&#160;</td><td class="fielddoc">
 <p>Highest available for user code. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda48f2cfacae6c01ca59332f982ba73553"></a>isr&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a48f2cfacae6c01ca59332f982ba73553"></a>isr&#160;</td><td class="fielddoc">
 <p>System reserved for the ISR deferred thread. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggac24438ba32ff8ac04fe2f1433f16aabda3f38937bb7063900c3328df07da44c0c"></a>error&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga7812945316a2540d68c3933e0f497b66a3f38937bb7063900c3328df07da44c0c"></a>error&#160;</td><td class="fielddoc">
 <p>Error. </p>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00170">170</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00177">177</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>

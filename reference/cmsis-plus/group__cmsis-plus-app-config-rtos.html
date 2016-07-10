@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: RTOS options</title>
+<title>µOS++ IIIe / CMSIS++ Reference: RTOS options</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -133,6 +133,9 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <tr class="memitem:gac323de6b830f6258cb9a3813202a14ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES</a></td></tr>
 <tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size.  <a href="#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
 <tr class="separator:gac323de6b830f6258cb9a3813202a14ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac323de6b830f6258cb9a3813202a14ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES</a></td></tr>
+<tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size.  <a href="#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
+<tr class="separator:gac323de6b830f6258cb9a3813202a14ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca">OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES</a></td></tr>
 <tr class="memdesc:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <b>main</b> thread stack size.  <a href="#ga1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
 <tr class="separator:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +182,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <p>If larger messages are needed, this option extends the message size to 65536 bytes.</p>
 <dl class="section user"><dt>Default</dt><dd>False (short messages). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00183">183</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00188">188</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -198,7 +201,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <p>If your debugger has difficulties to properly display the thread stack trace, enable this option and the stack will always start with a 0x0.</p>
 <dl class="section user"><dt>Default</dt><dd>False (the stack trace starts with the first function). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00214">214</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00219">219</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -217,7 +220,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <p>However, some applications, like the ARM CMSIS RTOS validator, need to test the behaviour of idle threads. For such cases, to guarantee that the idle thread is the lowest priority thread, its priority can be lowered one additional step.</p>
 <dl class="section user"><dt>Default</dt><dd>False (the idle thread has the idle priority). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00199">199</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00204">204</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +239,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <p>Unfortunately, most devices disable this clock when entering even the shallow sleep mode, disabling the debugger access to the device.</p>
 <p>To prevent this, usually for the debug configurations, it is possible to exclude the code that puts the device to sleep. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00230">230</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00235">235</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +255,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 
 <p>Add a user defined storage to each thread. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00169">169</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00174">174</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -276,7 +279,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html#a3b883578ce8fcbb5226515b5799e2bdc" title="Get the number of thread context switches. ">os::rtos::thread::statistics::context_switches()</a></dd></dl>
 <dl class="section user"><dt>Default</dt><dd>Disable. Do not include context switches statistics. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00164">164</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00169">169</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +303,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html#a789a41ac20fff4b8a37eeba367070d84" title="Get the thread execution time. ">os::rtos::thread::statistics::cpu_cycles()</a></dd></dl>
 <dl class="section user"><dt>Default</dt><dd>Disable. Do not include CPU cycles statistics. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00143">143</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00148">148</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -338,8 +341,26 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 </div><div class="memdoc">
 
 <p>Define the default thread stack size. </p>
+<p>Define the minimum thread stack size. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00109">109</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00114">114</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gac323de6b830f6258cb9a3813202a14ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the default thread stack size. </p>
+<p>Define the minimum thread stack size. </p>
+
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00114">114</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -355,7 +376,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 
 <p>Define the <b>idle</b> thread stack size. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00119">119</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00124">124</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +392,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 
 <p>Define the <b>main</b> thread stack size. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00114">114</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00119">119</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>

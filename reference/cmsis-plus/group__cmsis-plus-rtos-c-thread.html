@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: Threads</title>
+<title>µOS++ IIIe / CMSIS++ Reference: Threads</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -163,6 +163,12 @@ Types</h2></td></tr>
 <tr class="memitem:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">os_thread_prio_t</a></td></tr>
 <tr class="memdesc:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding thread priorities.  <a href="#ga314f97c14203c7ec9cabd3adc7b1d95d">More...</a><br /></td></tr>
 <tr class="separator:ga314f97c14203c7ec9cabd3adc7b1d95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga202e37a07547181b57632a3194c9fa60"><td class="memItemLeft" align="right" valign="top">typedef os_port_thread_stack_allocation_element_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60">os_thread_stack_allocation_element_t</a></td></tr>
+<tr class="memdesc:ga202e37a07547181b57632a3194c9fa60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding aligned stack elements.  <a href="#ga202e37a07547181b57632a3194c9fa60">More...</a><br /></td></tr>
+<tr class="separator:ga202e37a07547181b57632a3194c9fa60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89006097f69cd675294822c8859f75ce"><td class="memItemLeft" align="right" valign="top">typedef os_port_thread_stack_element_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a></td></tr>
+<tr class="memdesc:ga89006097f69cd675294822c8859f75ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding stack words.  <a href="#ga89006097f69cd675294822c8859f75ce">More...</a><br /></td></tr>
+<tr class="separator:ga89006097f69cd675294822c8859f75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structos__thread__stack__s.html">os_thread_stack_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a></td></tr>
 <tr class="memdesc:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread stack.  <a href="#ga2192c78a1260e3e18f8acc566d1bd1c8">More...</a><br /></td></tr>
 <tr class="separator:ga2192c78a1260e3e18f8acc566d1bd1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,7 +221,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eacec117cb3d2b0202237758218626b710">os_thread_state_running</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eac11cf56324d715f45bbd9a0f85b35f32">os_thread_state_waiting</a> = 4, 
+&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea201933dc6dbb707984de3152769e6860">os_thread_state_suspended</a> = 4, 
 <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea1a7f66671b3b41e9de7184bfac09f2ad">os_thread_state_terminated</a> = 5, 
 <br />
@@ -236,15 +242,21 @@ Current thread functions</h2></td></tr>
 <tr class="memitem:gae1d6e2fb102a0c22fe222a055c4c3eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gae1d6e2fb102a0c22fe222a055c4c3eff">os_this_thread_exit</a> (void *exit_ptr)</td></tr>
 <tr class="memdesc:gae1d6e2fb102a0c22fe222a055c4c3eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the current running thread.  <a href="#gae1d6e2fb102a0c22fe222a055c4c3eff">More...</a><br /></td></tr>
 <tr class="separator:gae1d6e2fb102a0c22fe222a055c4c3eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2b72e6a96061ce1e208de4923ea88d08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2b72e6a96061ce1e208de4923ea88d08">os_this_thread_sig_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
-<tr class="memdesc:ga2b72e6a96061ce1e208de4923ea88d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for thread signal flags.  <a href="#ga2b72e6a96061ce1e208de4923ea88d08">More...</a><br /></td></tr>
-<tr class="separator:ga2b72e6a96061ce1e208de4923ea88d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga092c0ecf14f19910054a47b74fdbe506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga092c0ecf14f19910054a47b74fdbe506">os_this_thread_try_sig_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
-<tr class="memdesc:ga092c0ecf14f19910054a47b74fdbe506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for thread signal flags.  <a href="#ga092c0ecf14f19910054a47b74fdbe506">More...</a><br /></td></tr>
-<tr class="separator:ga092c0ecf14f19910054a47b74fdbe506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebff45914befccdc9282e39e678ecc40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaebff45914befccdc9282e39e678ecc40">os_this_thread_timed_sig_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb">os_clock_duration_t</a> timeout, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
-<tr class="memdesc:gaebff45914befccdc9282e39e678ecc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for thread signal flags.  <a href="#gaebff45914befccdc9282e39e678ecc40">More...</a><br /></td></tr>
-<tr class="separator:gaebff45914befccdc9282e39e678ecc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d575b7252406dd8ec1414fff2f82490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2d575b7252406dd8ec1414fff2f82490">os_this_thread_flags_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
+<tr class="memdesc:ga2d575b7252406dd8ec1414fff2f82490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for thread event flags.  <a href="#ga2d575b7252406dd8ec1414fff2f82490">More...</a><br /></td></tr>
+<tr class="separator:ga2d575b7252406dd8ec1414fff2f82490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab54938203d9028c7354ecce7e7b72c43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab54938203d9028c7354ecce7e7b72c43">os_this_thread_try_flags_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
+<tr class="memdesc:gab54938203d9028c7354ecce7e7b72c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait for thread event flags.  <a href="#gab54938203d9028c7354ecce7e7b72c43">More...</a><br /></td></tr>
+<tr class="separator:gab54938203d9028c7354ecce7e7b72c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga186460e6917eba768267bef3979075e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga186460e6917eba768267bef3979075e0">os_this_thread_timed_flags_wait</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb">os_clock_duration_t</a> timeout, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
+<tr class="memdesc:ga186460e6917eba768267bef3979075e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for thread event flags.  <a href="#ga186460e6917eba768267bef3979075e0">More...</a><br /></td></tr>
+<tr class="separator:ga186460e6917eba768267bef3979075e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga612580e7abcf5fc314d6125f2e597f55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga612580e7abcf5fc314d6125f2e597f55">os_this_thread_flags_clear</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags)</td></tr>
+<tr class="memdesc:ga612580e7abcf5fc314d6125f2e597f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear thread event flags.  <a href="#ga612580e7abcf5fc314d6125f2e597f55">More...</a><br /></td></tr>
+<tr class="separator:ga612580e7abcf5fc314d6125f2e597f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24ad4877027581fc346326fa89f87c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga24ad4877027581fc346326fa89f87c64">os_this_thread_flags_get</a> (<a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
+<tr class="memdesc:ga24ad4877027581fc346326fa89f87c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/clear thread event flags.  <a href="#ga24ad4877027581fc346326fa89f87c64">More...</a><br /></td></tr>
+<tr class="separator:ga24ad4877027581fc346326fa89f87c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Thread functions</h2></td></tr>
@@ -272,15 +284,9 @@ Thread functions</h2></td></tr>
 <tr class="memitem:ga51ca25f0f1104fcc4f7da7feda61fbab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga51ca25f0f1104fcc4f7da7feda61fbab">os_thread_resume</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>)</td></tr>
 <tr class="memdesc:ga51ca25f0f1104fcc4f7da7feda61fbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the thread.  <a href="#ga51ca25f0f1104fcc4f7da7feda61fbab">More...</a><br /></td></tr>
 <tr class="separator:ga51ca25f0f1104fcc4f7da7feda61fbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeabf6ea08d2f5e2da14ae709efcd1892"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaeabf6ea08d2f5e2da14ae709efcd1892">os_thread_sig_raise</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags)</td></tr>
-<tr class="memdesc:gaeabf6ea08d2f5e2da14ae709efcd1892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise thread signal flags.  <a href="#gaeabf6ea08d2f5e2da14ae709efcd1892">More...</a><br /></td></tr>
-<tr class="separator:gaeabf6ea08d2f5e2da14ae709efcd1892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad443f433885adddd827e8bc75f167ebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gad443f433885adddd827e8bc75f167ebb">os_thread_sig_clear</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags)</td></tr>
-<tr class="memdesc:gad443f433885adddd827e8bc75f167ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear thread signal flags.  <a href="#gad443f433885adddd827e8bc75f167ebb">More...</a><br /></td></tr>
-<tr class="separator:gad443f433885adddd827e8bc75f167ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9dfdb7eafea8f250143c8806517e721c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga9dfdb7eafea8f250143c8806517e721c">os_thread_sig_get</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a> mode)</td></tr>
-<tr class="memdesc:ga9dfdb7eafea8f250143c8806517e721c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/clear thread signal flags.  <a href="#ga9dfdb7eafea8f250143c8806517e721c">More...</a><br /></td></tr>
-<tr class="separator:ga9dfdb7eafea8f250143c8806517e721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf97dac90d6cfc70ca78e834d9cb29ccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf97dac90d6cfc70ca78e834d9cb29ccc">os_thread_flags_raise</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> mask, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *oflags)</td></tr>
+<tr class="memdesc:gaf97dac90d6cfc70ca78e834d9cb29ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise thread event flags.  <a href="#gaf97dac90d6cfc70ca78e834d9cb29ccc">More...</a><br /></td></tr>
+<tr class="separator:gaf97dac90d6cfc70ca78e834d9cb29ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaadc4e4e4148d33add175cee6500759eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gae64a260be596aebabf5ff66f129dffa9">os_thread_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaadc4e4e4148d33add175cee6500759eb">os_thread_get_sched_state</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a>)</td></tr>
 <tr class="memdesc:gaadc4e4e4148d33add175cee6500759eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread scheduler state.  <a href="#gaadc4e4e4148d33add175cee6500759eb">More...</a><br /></td></tr>
 <tr class="separator:gaadc4e4e4148d33add175cee6500759eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,12 +311,24 @@ Thread stack functions</h2></td></tr>
 <tr class="memitem:gaf3339c11aff73770228841daa4a0a69e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf3339c11aff73770228841daa4a0a69e">os_thread_stack_set_min_size</a> (size_t size_bytes)</td></tr>
 <tr class="memdesc:gaf3339c11aff73770228841daa4a0a69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the min stack size.  <a href="#gaf3339c11aff73770228841daa4a0a69e">More...</a><br /></td></tr>
 <tr class="separator:gaf3339c11aff73770228841daa4a0a69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea79949b03663d62e76f3df49b30d1f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaea79949b03663d62e76f3df49b30d1f6">os_thread_stack_get_bottom</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
+<tr class="memdesc:gaea79949b03663d62e76f3df49b30d1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stack lowest reserved address.  <a href="#gaea79949b03663d62e76f3df49b30d1f6">More...</a><br /></td></tr>
+<tr class="separator:gaea79949b03663d62e76f3df49b30d1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33e830a7d2505c9ee340fb09ec9f4983"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga33e830a7d2505c9ee340fb09ec9f4983">os_thread_stack_get_top</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
+<tr class="memdesc:ga33e830a7d2505c9ee340fb09ec9f4983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the top stack address.  <a href="#ga33e830a7d2505c9ee340fb09ec9f4983">More...</a><br /></td></tr>
+<tr class="separator:ga33e830a7d2505c9ee340fb09ec9f4983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab2d5b6329b3c44fd9cc2ce1532eb3547"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab2d5b6329b3c44fd9cc2ce1532eb3547">os_thread_stack_get_size</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
 <tr class="memdesc:gab2d5b6329b3c44fd9cc2ce1532eb3547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stack size.  <a href="#gab2d5b6329b3c44fd9cc2ce1532eb3547">More...</a><br /></td></tr>
 <tr class="separator:gab2d5b6329b3c44fd9cc2ce1532eb3547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac84a64dd79077064030499e22a80516c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gac84a64dd79077064030499e22a80516c">os_thread_stack_get_available</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
 <tr class="memdesc:gac84a64dd79077064030499e22a80516c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute how much available stack remains.  <a href="#gac84a64dd79077064030499e22a80516c">More...</a><br /></td></tr>
 <tr class="separator:gac84a64dd79077064030499e22a80516c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a019f1e3955f0c58840ea86a20ac1bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb">os_thread_stack_check_bottom_magic</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
+<tr class="memdesc:ga7a019f1e3955f0c58840ea86a20ac1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if bottom magic word is still there.  <a href="#ga7a019f1e3955f0c58840ea86a20ac1bb">More...</a><br /></td></tr>
+<tr class="separator:ga7a019f1e3955f0c58840ea86a20ac1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66e87ac2c440e0f4b91297738c88e135"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135">os_thread_stack_check_top_magic</a> (<a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *stack)</td></tr>
+<tr class="memdesc:ga66e87ac2c440e0f4b91297738c88e135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if top magic word is still there.  <a href="#ga66e87ac2c440e0f4b91297738c88e135">More...</a><br /></td></tr>
+<tr class="separator:ga66e87ac2c440e0f4b91297738c88e135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Thread statistics functions</h2></td></tr>
@@ -387,7 +405,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Useful to cast other similar types to silence possible compiler warnings.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808" title="Type of thread function arguments. ">os::rtos::thread::func_args_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00289">289</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00296">296</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -405,7 +423,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Useful to cast other similar types to silence possible compiler warnings.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc" title="Type of thread function. ">os::rtos::thread::func_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00300">300</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00307">307</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +442,43 @@ Thread children iterator functions</h2></td></tr>
 <p>Higher values represent higher priorities.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36" title="Type of variables holding thread priorities. ">os::rtos::thread::priority_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00320">320</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00327">327</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga202e37a07547181b57632a3194c9fa60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef os_port_thread_stack_allocation_element_t <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60">os_thread_stack_allocation_element_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of variables holding aligned stack elements. </p>
+<p>A numeric type intended to be used for stack allocations.</p>
+<dl class="section see"><dt>See also</dt><dd>os::rtos::stack::allocation_element_t </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00355">355</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga89006097f69cd675294822c8859f75ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef os_port_thread_stack_element_t <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of variables holding stack words. </p>
+<p>A numeric type intended to store a stack word as stored by push instructions.</p>
+<dl class="section see"><dt>See also</dt><dd>os::rtos::stack::element_t </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00346">346</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -457,7 +511,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Type of variables holding thread states. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a2ad4ea288b751984ac2af3c762da7b61" title="Type of variables holding thread states. ">os::rtos::thread::state_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00307">307</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00314">314</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -473,7 +527,7 @@ Thread children iterator functions</h2></td></tr>
 
 <p>Thread statistics. </p>
 <p>The members of this structure are hidden and should not be accessed directly, but through associated functions.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html">os::rtos::thread::statistics</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html" title="Thread statistics. ">os::rtos::thread::statistics</a> </dd></dl>
 
 </div>
 </div>
@@ -507,7 +561,7 @@ Thread children iterator functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Thread priorities; intermediate values are also possible. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1thread_1_1state.html">os::rtos::thread::state</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1thread_1_1state.html" title="Thread states. ">os::rtos::thread::state</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggadc29c2ff13d900c2f185ee95427fb06ca984ddcb3c65005a4d765c1633331cf86"></a>os_thread_priority_none&#160;</td><td class="fielddoc">
 </td></tr>
@@ -535,7 +589,7 @@ Thread children iterator functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00248">248</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00255">255</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -550,7 +604,7 @@ Thread children iterator functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>An enumeration with all possible thread states. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1thread_1_1state.html">os::rtos::thread::state</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1thread_1_1state.html" title="Thread states. ">os::rtos::thread::state</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga61dadd085c1777f559549e05962b2c9ea41d90ad0923e4ca8dbeead18134c4c63"></a>os_thread_state_undefined&#160;</td><td class="fielddoc">
 </td></tr>
@@ -560,7 +614,7 @@ Thread children iterator functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga61dadd085c1777f559549e05962b2c9eacec117cb3d2b0202237758218626b710"></a>os_thread_state_running&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga61dadd085c1777f559549e05962b2c9eac11cf56324d715f45bbd9a0f85b35f32"></a>os_thread_state_waiting&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga61dadd085c1777f559549e05962b2c9ea201933dc6dbb707984de3152769e6860"></a>os_thread_state_suspended&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga61dadd085c1777f559549e05962b2c9ea1a7f66671b3b41e9de7184bfac09f2ad"></a>os_thread_state_terminated&#160;</td><td class="fielddoc">
 </td></tr>
@@ -568,7 +622,7 @@ Thread children iterator functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00270">270</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00277">277</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -598,7 +652,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Return the position of the first element in the list of children threads of the given thread. If NULL, the position first element in the list of top threads is returned.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00865">865</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00916">916</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +682,7 @@ Thread children iterator functions</h2></td></tr>
 <p>The iteration loop must be terminated when the current iterator is equal to this position, before entering the loop body.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00883">883</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00934">934</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +711,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Calling it when the iterator is equal to the end position leads to unpredictable results.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00897">897</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00948">948</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +740,7 @@ Thread children iterator functions</h2></td></tr>
 <p>Calling it when the iterator is equal to the end position leads to unpredictable results.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00913">913</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00964">964</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -743,12 +797,105 @@ Thread children iterator functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga2b72e6a96061ce1e208de4923ea88d08"></a>
+<a class="anchor" id="ga612580e7abcf5fc314d6125f2e597f55"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_sig_wait </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_flags_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *&#160;</td>
+          <td class="paramname"><em>oflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear thread event flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to clear. Zero means 'all' </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>NULL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">os_ok</td><td>The flags were cleared. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The mask is zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a51f7b7655584f3056207ba720be64b63" title="Clear thread event flags. ">os::rtos::this_thread::flags_clear()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00530">530</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga24ad4877027581fc346326fa89f87c64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> os_this_thread_flags_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get/clear thread event flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to get/clear; may be zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if the flags should be cleared (the other bits are ignored). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">flags</td><td>The selected bits from the current thread event flags mask. </td></tr>
+    <tr><td class="paramname">sig::all</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a2c9c9266c41ec5e9d98fd0a00bb4a1d7" title="Get/clear thread event flags. ">os::rtos::this_thread::flags_get()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00543">543</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2d575b7252406dd8ec1414fff2f82490"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_flags_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -773,7 +920,7 @@ Thread children iterator functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Wait for thread signal flags. </p>
+<p>Wait for thread event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); may be zero. </td></tr>
@@ -793,7 +940,7 @@ Thread children iterator functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ae4b0d65d3c726e4a2e689cbbe8314174" title="Wait for thread signal flags. ">os::rtos::this_thread::sig_wait()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#af0f2307e56de88739dd287739a08e530" title="Wait for thread event flags. ">os::rtos::this_thread::flags_wait()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00486">486</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
@@ -823,12 +970,12 @@ Thread children iterator functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaebff45914befccdc9282e39e678ecc40"></a>
+<a class="anchor" id="ga186460e6917eba768267bef3979075e0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_timed_sig_wait </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_timed_flags_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -859,7 +1006,7 @@ Thread children iterator functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Timed wait for thread signal flags. </p>
+<p>Timed wait for thread event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); may be zero. </td></tr>
@@ -881,18 +1028,18 @@ Thread children iterator functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ace535b426cfe457c0759cc9263ac35c6" title="Timed wait for thread signal flags. ">os::rtos::this_thread::timed_sig_wait()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#af248a10201663dcd29bf7b1cdbd6a7b2" title="Timed wait for thread event flags. ">os::rtos::this_thread::timed_flags_wait()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00514">514</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga092c0ecf14f19910054a47b74fdbe506"></a>
+<a class="anchor" id="gab54938203d9028c7354ecce7e7b72c43"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_try_sig_wait </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_this_thread_try_flags_wait </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
           <td class="paramname"><em>mask</em>, </td>
@@ -917,7 +1064,7 @@ Thread children iterator functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Try to wait for thread signal flags. </p>
+<p>Try to wait for thread event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); may be zero. </td></tr>
@@ -936,7 +1083,7 @@ Thread children iterator functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ac92da31a5a64cc3ab75845170237829f" title="Try to wait for thread signal flags. ">os::rtos::this_thread::try_sig_wait()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ad1dddf9b021ed1de249c5631f985bea0" title="Try to wait for thread event flags. ">os::rtos::this_thread::try_flags_wait()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00500">500</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
@@ -967,7 +1114,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html" title="Thread attributes. ">os::rtos::thread::attributes</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00531">531</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00558">558</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1175,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">os::rtos::thread</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00545">545</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00572">572</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1204,61 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html" title="POSIX compliant thread, using the default RTOS allocator. ">os::rtos::thread</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00567">567</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00594">594</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf97dac90d6cfc70ca78e834d9cb29ccc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_thread_flags_raise </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *&#160;</td>
+          <td class="paramname"><em>oflags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raise thread event flags. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Pointer to thread object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to raise. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>NULL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">os_ok</td><td>The flags were raised. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The mask is zero. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a19d614476bd8688a77ebfe4a457382c2" title="Raise thread event flags. ">os::rtos::thread::flags_raise()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00679">679</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1287,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc" title="Get object name. ">os::rtos::thread::name()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00581">581</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00608">608</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1316,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a0fa1bb1ad4bffa04e235acf40aec3db2" title="Get the current scheduling priority. ">os::rtos::thread::sched_prio()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00595">595</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00622">622</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1345,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#abf353f7a7a9d70602ec7cfe9be741284" title="Get thread scheduler state. ">os::rtos::thread::sched_state()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00700">700</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00695">695</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1173,7 +1374,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a242fe32b877603530519dc59f94db519" title="Get the thread context stack. ">os::rtos::thread::stack()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00728">728</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00723">723</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1403,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a4669f794ae4540f28553a7bb5c0b8fa1" title="Get the user storage. ">os::rtos::thread::user_storage()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00714">714</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00709">709</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1449,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a7d3323ac7f60353146568999cf1b3078" title="Wait for thread termination. ">os::rtos::thread::join()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00624">624</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00651">651</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1478,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#aea39969a90aad5de97abc2529485c18c" title="Resume the thread. ">os::rtos::thread::resume()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00638">638</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00665">665</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1324,168 +1525,77 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a04ccfc9004616fb1d3a9e8aa972440ba" title="Set the dynamic scheduling priority. ">os::rtos::thread::sched_prio(priority_t)</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00609">609</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00636">636</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="gad443f433885adddd827e8bc75f167ebb"></a>
+<a class="anchor" id="ga7a019f1e3955f0c58840ea86a20ac1bb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_thread_sig_clear </td>
+          <td class="memname">bool os_thread_stack_check_bottom_magic </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *&#160;</td>
-          <td class="paramname"><em>thread</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *&#160;</td>
-          <td class="paramname"><em>oflags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear thread signal flags. </p>
+<p>Check if bottom magic word is still there. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Pointer to thread object. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to clear. Zero means 'all' </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>NULL</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stack</td><td>Pointer to stack object. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">os_ok</td><td>The flags were cleared. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The mask is zero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#aa345244ba0bea3958b423ce27304a6a9" title="Clear thread signal flags. ">os::rtos::thread::sig_clear()</a> </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00668">668</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga9dfdb7eafea8f250143c8806517e721c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> os_thread_sig_get </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *&#160;</td>
-          <td class="paramname"><em>thread</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaa7717ba76b19f03476214806948ea990">os_flags_mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get/clear thread signal flags. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Pointer to thread object. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to get/clear; may be zero. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Mode bits to select if the flags should be cleared (the other bits are ignored). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">flags</td><td>The selected bits from the current thread signal flags mask. </td></tr>
-    <tr><td class="paramname">sig::all</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#a5184453ef4d171a8969178e0a37bd97e" title="Get/clear thread signal flags. ">os::rtos::thread::sig_get()</a> </dd></dl>
-
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00684">684</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gaeabf6ea08d2f5e2da14ae709efcd1892"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaf11f1f616da57a9df49781a87356b875">os_result_t</a> os_thread_sig_raise </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2">os_thread_t</a> *&#160;</td>
-          <td class="paramname"><em>thread</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a>&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga734b8414e0b61fa26a208b4853de2fa9">os_flags_mask_t</a> *&#160;</td>
-          <td class="paramname"><em>oflags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Raise thread signal flags. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Pointer to thread object. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to raise. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">oflags</td><td>Optional pointer where to store the previous flags; may be <code>NULL</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">os_ok</td><td>The flags were raised. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The mask is zero. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines.</td></tr>
+    <tr><td class="paramname">true</td><td>The magic word is still there. </td></tr>
+    <tr><td class="paramname">false</td><td>The magic word was overwritten.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread.html#af2f80cfa3b30888d6671c0b5a88dc3f8" title="Raise thread signal flags. ">os::rtos::thread::sig_raise()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a81a5bd005cd3e6774d79eafc5b478825" title="Check if bottom magic word is still there. ">os::rtos::thread::stack::check_bottom_magic()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00652">652</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00847">847</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga66e87ac2c440e0f4b91297738c88e135"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os_thread_stack_check_top_magic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if top magic word is still there. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stack</td><td>Pointer to stack object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The magic word is still there. </td></tr>
+    <tr><td class="paramname">false</td><td>The magic word was overwritten.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a3c34f1787a5dbffe36939292c640ee6c" title="Check if top magic word is still there. ">os::rtos::thread::stack::check_top_magic()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00861">861</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1514,7 +1624,36 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ae0ef4b3107daa7299d1e8dbe95d300f9" title="Compute how much available stack remains. ">os::rtos::thread::stack::available()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00810">810</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00833">833</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaea79949b03663d62e76f3df49b30d1f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a>* os_thread_stack_get_bottom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the stack lowest reserved address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stack</td><td>Pointer to stack object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The address of the stack reserved area.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a770df18ba5bce892e8514b0dd5faf18b" title="Get the stack lowest reserved address. ">os::rtos::thread::stack::bottom()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00791">791</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1677,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a99a6469f91a2fbf8db518d6052b48dd1" title="Get the default stack size. ">os::rtos::thread::stack::default_size()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00744">744</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00739">739</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1562,7 +1701,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab2ef1af83d808c194f2eef9fdc5c540b" title="Get the min stack size. ">os::rtos::thread::stack::min_size()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00770">770</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00765">765</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1730,36 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e" title="Get the stack size. ">os::rtos::thread::stack::size()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00796">796</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00819">819</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga33e830a7d2505c9ee340fb09ec9f4983"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os_thread_stack_element_t</a>* os_thread_stack_get_top </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2192c78a1260e3e18f8acc566d1bd1c8">os_thread_stack_t</a> *&#160;</td>
+          <td class="paramname"><em>stack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the top stack address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stack</td><td>Pointer to stack object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The address after the last stack element.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#aef3f2aecef35feecf01b9c4b53e92b4b" title="Get the top stack address. ">os::rtos::thread::stack::top()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00805">805</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1620,7 +1788,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#acca656e8254fea88dcc81d71f942b5dd" title="Set the default stack size. ">os::rtos::thread::stack::default_size(std::size_t)</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00757">757</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00752">752</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1817,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a1d9b896dedb9a71b91f2f5d556cafa6d" title="Set the min stack size. ">os::rtos::thread::stack::min_size(std::size_t)</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00783">783</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00778">778</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1672,7 +1840,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html#a3b883578ce8fcbb5226515b5799e2bdc" title="Get the number of thread context switches. ">os::rtos::thread::statistics::context_switches()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00828">828</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00879">879</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1695,7 +1863,7 @@ Thread children iterator functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html#a789a41ac20fff4b8a37eeba367070d84" title="Get the thread execution time. ">os::rtos::thread::statistics::cpu_cycles()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00846">846</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l00897">897</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,10 @@ var searchData=
 [
   ['fcntl',['fcntl',['../newlib-aliases_8h.html#acfc4bf677fc9f8be66d9624175cb3775',1,'fcntl(int fildes, int cmd,...):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#acfc4bf677fc9f8be66d9624175cb3775',1,'fcntl(int fildes, int cmd,...):&#160;standard-aliases.h']]],
   ['filedescriptor_5ft',['fileDescriptor_t',['../namespaceos_1_1posix.html#a063e1d1eddc71cc8f3cd46a4aad0dc2a',1,'os::posix']]],
+  ['flags_5fclear',['flags_clear',['../namespaceos_1_1rtos_1_1this__thread.html#a51f7b7655584f3056207ba720be64b63',1,'os::rtos::this_thread']]],
+  ['flags_5fget',['flags_get',['../namespaceos_1_1rtos_1_1this__thread.html#a2c9c9266c41ec5e9d98fd0a00bb4a1d7',1,'os::rtos::this_thread']]],
+  ['flags_5fraise',['flags_raise',['../classos_1_1rtos_1_1thread.html#a19d614476bd8688a77ebfe4a457382c2',1,'os::rtos::thread']]],
+  ['flags_5fwait',['flags_wait',['../namespaceos_1_1rtos_1_1this__thread.html#af0f2307e56de88739dd287739a08e530',1,'os::rtos::this_thread']]],
   ['flow_5fconfig_5fpos',['FLOW_CONFIG_Pos',['../namespaceos_1_1driver_1_1serial.html#ae6640fa2131477228d76b394d95ebcd2',1,'os::driver::serial']]],
   ['flow_5fcontrol_5fcts',['flow_control_cts',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a77f8633c4edbf3205c678bd3217b10f6',1,'os::driver::serial::Capabilities::flow_control_cts()'],['../namespaceos_1_1driver_1_1serial.html#a710cfdd1bca959462a5950bfaceb835f',1,'os::driver::serial::FLOW_CONTROL_CTS()']]],
   ['flow_5fcontrol_5fmsk',['FLOW_CONTROL_Msk',['../namespaceos_1_1driver_1_1serial.html#a79a7815b2af62d538518fd49ebe2f06e',1,'os::driver::serial']]],

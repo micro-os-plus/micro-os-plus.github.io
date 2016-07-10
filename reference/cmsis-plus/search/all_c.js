@@ -13,8 +13,8 @@ var searchData=
   ['lockable',['lockable',['../classos_1_1rtos_1_1scheduler_1_1lockable.html#a36f5361fc46e8c6d3ba2d3be429a220d',1,'os::rtos::scheduler::lockable::lockable()'],['../classos_1_1rtos_1_1interrupts_1_1lockable.html#af0216b65401ee1a71eea6925677e585f',1,'os::rtos::interrupts::lockable::lockable()']]],
   ['lockable',['lockable',['../classos_1_1rtos_1_1interrupts_1_1lockable.html',1,'os::rtos::interrupts']]],
   ['locked',['locked',['../namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4',1,'os::rtos::scheduler']]],
-  ['low',['low',['../group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdafa27875e2cfdd82964492ec24defc750',1,'os::rtos::thread::priority::low()'],['../namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::low()'],['../namespaceos_1_1driver_1_1usb.html#a49b41e39ea6e6b7d388901f7d74176b4a53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::usb::low()']]],
-  ['lowest',['lowest',['../group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdab2750fc62b452d5734c9d48f98b15220',1,'os::rtos::thread::priority']]],
+  ['low',['low',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66afa27875e2cfdd82964492ec24defc750',1,'os::rtos::thread::priority::low()'],['../namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::low()'],['../namespaceos_1_1driver_1_1usb.html#a49b41e39ea6e6b7d388901f7d74176b4a53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::usb::low()']]],
+  ['lowest',['lowest',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ab2750fc62b452d5734c9d48f98b15220',1,'os::rtos::thread::priority']]],
   ['lr',['lr',['../structexception__stack__frame__s.html#a9ff7256b393540ebf8bfa97b5fc2a1d4',1,'exception_stack_frame_s']]],
   ['lseek',['lseek',['../standard-aliases_8h.html#a33a233f3e6cc9e1a2b8b3f6aaea2c808',1,'standard-aliases.h']]]
 ];

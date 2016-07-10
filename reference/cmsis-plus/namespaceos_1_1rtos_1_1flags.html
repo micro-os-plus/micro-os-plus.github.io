@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: os::rtos::flags Namespace Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::flags Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -124,7 +124,8 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1flags.html','')
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Types</a>  </div>
+<a href="#typedef-members">Types</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">os::rtos::flags Namespace Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-core.html">Core &amp; scheduler</a></div></div>  </div>
 </div><!--header-->
@@ -147,6 +148,17 @@ Types</h2></td></tr>
 <tr class="memitem:a49c1da8337c9d32697fefbdf0412cdac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1flags.html#a49c1da8337c9d32697fefbdf0412cdac">mode_t</a> = uint32_t</td></tr>
 <tr class="memdesc:a49c1da8337c9d32697fefbdf0412cdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of variables holding flags modes.  <a href="#a49c1da8337c9d32697fefbdf0412cdac">More...</a><br /></td></tr>
 <tr class="separator:a49c1da8337c9d32697fefbdf0412cdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a096d5e2918efd09347ff64e76d4b9125"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: mask_t { <br />
+&#160;&#160;<a class="el" href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8">any</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125a63a38a7ba2f5bf8dd3cf9903d1051efd">all</a> = 0xFFFFFFFF
+<br />
+ }<tr class="memdesc:a096d5e2918efd09347ff64e76d4b9125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags sets with special meaning.  <a href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a096d5e2918efd09347ff64e76d4b9125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic flags namespace. </p>
@@ -164,9 +176,9 @@ Types</h2></td></tr>
 
 <p>Type of variables holding flags masks. </p>
 <p>An unsigned type large enough to store all the flags, usually 32-bits wide.</p>
-<p>Both thread signal flags and event flags use this definition. </p>
+<p>Both thread event flags and generic event flags use this definition. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00281">281</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00283">283</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -182,9 +194,34 @@ Types</h2></td></tr>
 
 <p>Type of variables holding flags modes. </p>
 <p>An unsigned type used to hold the mode bits passed to functions returning flags.</p>
-<p>Both thread signal flags and event flags use this definition. </p>
+<p>Both thread event flags and generic event flags use this definition. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00291">291</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00293">293</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a096d5e2918efd09347ff64e76d4b9125"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : <a class="el" href="namespaceos_1_1rtos_1_1flags.html#a87571a2d62e491d2af4e4390eb1aca06">mask_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flags sets with special meaning. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8"></a>any&#160;</td><td class="fielddoc">
+<p>Special mask to represent any flag. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a096d5e2918efd09347ff64e76d4b9125a63a38a7ba2f5bf8dd3cf9903d1051efd"></a>all&#160;</td><td class="fielddoc">
+<p>Special mask to represent all flags. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00328">328</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

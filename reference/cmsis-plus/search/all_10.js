@@ -38,7 +38,7 @@ var searchData=
   ['priority',['priority',['../structos_1_1rtos_1_1thread_1_1priority.html',1,'os::rtos::thread']]],
   ['priority_5ft',['priority_t',['../classos_1_1rtos_1_1message__queue.html#a26895a3c081fd319cb199d21c4028963',1,'os::rtos::message_queue::priority_t()'],['../group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36',1,'os::rtos::thread::priority_t()']]],
   ['prios',['prios',['../classos_1_1rtos_1_1message__queue_1_1arena.html#a679a09fb4e24817fa97e3c7f6085804e',1,'os::rtos::message_queue::arena']]],
-  ['protect',['protect',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a56353515f34a143d68c7d658f1e74dbeaebac25e02252bdd4f038dd200b2ef7cb',1,'os::rtos::mutex::protocol']]],
+  ['protect',['protect',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb',1,'os::rtos::mutex::protocol']]],
   ['protocol',['protocol',['../structos_1_1rtos_1_1mutex_1_1protocol.html',1,'os::rtos::mutex']]],
   ['protocol_5ft',['protocol_t',['../classos_1_1rtos_1_1mutex.html#a65bfef6cd463aac910d5c93d5828fe7f',1,'os::rtos::mutex']]],
   ['psr',['psr',['../structexception__stack__frame__s.html#acb44bbe2250a13a138e3f4276a33a62b',1,'exception_stack_frame_s']]],

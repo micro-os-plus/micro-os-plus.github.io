@@ -9,6 +9,7 @@ var group__cmsis_plus_app_config_rtos =
     [ "OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES", "group__cmsis-plus-app-config-rtos.html#ga98b9ee74f2cc3a619c4f7ec7529692d4", null ],
     [ "OS_INTEGER_RTOS_CRITICAL_SECTION_INTERRUPT_PRIORITY", "group__cmsis-plus-app-config-rtos.html#gae563c41aa21f771722c3e38e0115bd1b", null ],
     [ "OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES", "group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee", null ],
+    [ "OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES", "group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee", null ],
     [ "OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES", "group__cmsis-plus-app-config-rtos.html#gaa8fdfffcd4b6d58c260d5dd4730b44d0", null ],
     [ "OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES", "group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca", null ],
     [ "OS_INTEGER_SYSTICK_FREQUENCY_HZ", "group__cmsis-plus-app-config-rtos.html#gab657098ae141f5b84a1319f48c181052", null ]

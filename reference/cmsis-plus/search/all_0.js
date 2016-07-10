@@ -72,7 +72,7 @@ var searchData=
   ['_5fchown',['_chown',['../newlib-aliases_8h.html#aaad58465601ae411fec6cf7a836da2e7',1,'newlib-aliases.h']]],
   ['_5fclock',['_clock',['../newlib-aliases_8h.html#a8192f929aaaff7d88fd8b31045b5863d',1,'newlib-aliases.h']]],
   ['_5fclose',['_close',['../newlib-aliases_8h.html#a5af2dad9b50913a0025ea80a8577bea8',1,'newlib-aliases.h']]],
-  ['_5fdefault',['_default',['../structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba9f0739f65b7c391818b4aef908552aaf',1,'os::rtos::mutex::type']]],
+  ['_5fdefault',['_default',['../structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf',1,'os::rtos::mutex::type']]],
   ['_5fexecve',['_execve',['../newlib-aliases_8h.html#ad803eae96eec90aa3ef8c65f06d59009',1,'newlib-aliases.h']]],
   ['_5ffork',['_fork',['../newlib-aliases_8h.html#a1bbd8aee44468bfc796b6ceb3bf74d96',1,'newlib-aliases.h']]],
   ['_5ffstat',['_fstat',['../newlib-aliases_8h.html#a649d75c0ad1eb6ae029b723c26b66752',1,'newlib-aliases.h']]],

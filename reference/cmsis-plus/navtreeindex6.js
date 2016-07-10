@@ -1,11 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"cmsis__os_8h.html#a3b571de44cd3094c643247a7397f86b5":[6,0,1,0,5,0,80],
-"cmsis__os_8h.html#a3de2730654589d6c3559c4b9e2825553":[6,0,1,0,5,0,105],
-"cmsis__os_8h.html#a4299d838978bc2aae5e4350754e6a4e9":[6,0,1,0,5,0,109],
-"cmsis__os_8h.html#a4478aff059e4a47e87e2f8d62f0f04c8":[6,0,1,0,5,0,49],
-"cmsis__os_8h.html#a479a6561f859e3d4818e25708593d203":[6,0,1,0,5,0,13],
-"cmsis__os_8h.html#a47cf03658f01cdffca688e9096b58289":[6,0,1,0,5,0,19],
 "cmsis__os_8h.html#a4a861e9c469c9d0daf5721bf174f8e54":[6,0,1,0,5,0,99],
 "cmsis__os_8h.html#a4fa06198874bc76e8dc26db38fc2f9d6":[6,0,1,0,5,0,73],
 "cmsis__os_8h.html#a4fabf218791890a95fcf1c96a9d7e329":[6,0,1,0,5,0,54],
@@ -249,5 +243,11 @@ var NAVTREEINDEX6 =
 "functions_vars_e.html":[5,3,2,4],
 "functions_vars_f.html":[5,3,2,5],
 "functions_vars_h.html":[5,3,2,6],
-"functions_vars_i.html":[5,3,2,7]
+"functions_vars_i.html":[5,3,2,7],
+"functions_vars_l.html":[5,3,2,8],
+"functions_vars_m.html":[5,3,2,9],
+"functions_vars_n.html":[5,3,2,10],
+"functions_vars_o.html":[5,3,2,11],
+"functions_vars_p.html":[5,3,2,12],
+"functions_vars_q.html":[5,3,2,13]
 };

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dcd',['dcd',['../namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ab3e14962b245eaf7deab89f03da5408e',1,'os::driver::serial']]],
-  ['destroyed',['destroyed',['../structos_1_1rtos_1_1thread_1_1state.html#a687ce37e394dc7cf1e7529158c8ec498a220cec61dc8f7e06877e15f3f46fdb31',1,'os::rtos::thread::state::destroyed()'],['../structos_1_1rtos_1_1timer_1_1state.html#afab3e383c0c151dc956f9074b43fc8f3af241d8f5e42418a1c8315fa74fc975d3',1,'os::rtos::timer::state::destroyed()']]],
+  ['destroyed',['destroyed',['../structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31',1,'os::rtos::thread::state::destroyed()'],['../structos_1_1rtos_1_1timer_1_1state.html#afab3e383c0c151dc956f9074b43fc8f3af241d8f5e42418a1c8315fa74fc975d3',1,'os::rtos::timer::state::destroyed()']]],
   ['disable_5fbreak',['disable_break',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a632a0e2b4681f4b4c6f784ba5b0162e1',1,'os::driver::serial']]],
   ['disable_5frx',['disable_rx',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5afa3f5628bbfc60d09884c579fbc2a9b7',1,'os::driver::serial']]],
   ['disable_5ftx',['disable_tx',['../namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a64c2b8f6add19172ee8a813511824f93',1,'os::driver::serial']]],

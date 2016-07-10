@@ -75,7 +75,7 @@ var group__cmsis_plus_rtos_clock =
       [ "sleep_until", "classos_1_1rtos_1_1clock__systick.html#a7720aceded20f868c541755b26027901", null ],
       [ "start", "classos_1_1rtos_1_1clock__systick.html#ae9468d10ee3d1c9cec4e405d1442593b", null ],
       [ "steady_now", "classos_1_1rtos_1_1clock__systick.html#a8b593aa571fee824ba84d66761db80c7", null ],
-      [ "ticks_cast", "classos_1_1rtos_1_1clock__systick.html#a3b3b4d4aa0bba2e7f5934f950f0c7e31", null ],
+      [ "ticks_cast", "classos_1_1rtos_1_1clock__systick.html#ad62d8700873c719d37c212daba7f47c3", null ],
       [ "wait_for", "classos_1_1rtos_1_1clock__systick.html#a5a99215d8e93906802385eb70e921a05", null ],
       [ "frequency_hz", "classos_1_1rtos_1_1clock__systick.html#a2abaebfa5e1ff2d36380770e513d1c8e", null ]
     ] ],

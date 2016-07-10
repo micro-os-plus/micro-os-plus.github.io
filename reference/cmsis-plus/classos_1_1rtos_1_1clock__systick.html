@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: os::rtos::clock_systick Class Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::clock_systick Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -192,10 +192,10 @@ Static Public Attributes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9468d10ee3d1c9cec4e405d1442593b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock__systick.html#ae9468d10ee3d1c9cec4e405d1442593b">start</a> (void) override</td></tr>
 <tr class="separator:ae9468d10ee3d1c9cec4e405d1442593b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b3b4d4aa0bba2e7f5934f950f0c7e31"><td class="memTemplParams" colspan="2">template&lt;typename Rep_T &gt; </td></tr>
-<tr class="memitem:a3b3b4d4aa0bba2e7f5934f950f0c7e31"><td class="memTemplItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock__systick.html#a3b3b4d4aa0bba2e7f5934f950f0c7e31">ticks_cast</a> (Rep_T microsec)</td></tr>
-<tr class="memdesc:a3b3b4d4aa0bba2e7f5934f950f0c7e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert microseconds to ticks.  <a href="#a3b3b4d4aa0bba2e7f5934f950f0c7e31">More...</a><br /></td></tr>
-<tr class="separator:a3b3b4d4aa0bba2e7f5934f950f0c7e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62d8700873c719d37c212daba7f47c3"><td class="memTemplParams" colspan="2">template&lt;typename Rep_T &gt; </td></tr>
+<tr class="memitem:ad62d8700873c719d37c212daba7f47c3"><td class="memTemplItemLeft" align="right" valign="top">static constexpr <a class="el" href="classos_1_1rtos_1_1clock.html#a149d8b5cea55224ef5cfede8a81df04c">clock::duration_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock__systick.html#ad62d8700873c719d37c212daba7f47c3">ticks_cast</a> (Rep_T microsec)</td></tr>
+<tr class="memdesc:ad62d8700873c719d37c212daba7f47c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert microseconds to ticks.  <a href="#ad62d8700873c719d37c212daba7f47c3">More...</a><br /></td></tr>
+<tr class="separator:ad62d8700873c719d37c212daba7f47c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SysTick derived clock. </p>
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
 <p>The SysTick clock should be a steady clock, i.e. the total count of ticks should be monotone ascending (in other words no adjustments to the past should be performed).</p>
 <p>For Cortex-M implementations using the standard SysTick, this clock is able to provide accuracy at CPU cycle level, by sampling the SysTick internal counter. For a CPU clock of 100 MHz, this gives a 10 ns resolution, quite high for accurate timing.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Get the current ticks counter.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1clock.html#a4f6ee5cdd07c87db11f64d02e1c354d1">clock::timestamp_t</a> ticks = <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#a965f1afa68128bdfaeac93e216e2196f">now</a>();</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of ticks.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb">sleep_for</a>(7);</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of microseconds.</span></div><div class="line">   <span class="comment">// For a 1000 Hz clock, the actual value is 4 ticks.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb">sleep_for</a>(<a class="code" href="classos_1_1rtos_1_1clock__systick.html#a3b3b4d4aa0bba2e7f5934f950f0c7e31">clock_systick::ticks_cast</a>(3500));</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
+<div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Get the current ticks counter.</span></div><div class="line">   <a class="code" href="classos_1_1rtos_1_1clock.html#a4f6ee5cdd07c87db11f64d02e1c354d1">clock::timestamp_t</a> ticks = <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#a965f1afa68128bdfaeac93e216e2196f">now</a>();</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of ticks.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb">sleep_for</a>(7);</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of microseconds.</span></div><div class="line">   <span class="comment">// For a 1000 Hz clock, the actual value is 4 ticks.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb">sleep_for</a>(<a class="code" href="classos_1_1rtos_1_1clock__systick.html#ad62d8700873c719d37c212daba7f47c3">clock_systick::ticks_cast</a>((uint64_t)(3500)));</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
 <p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00431">431</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a149d8b5cea55224ef5cfede8a81df04c"></a>
@@ -298,7 +298,7 @@ Public Member Functions</h2></td></tr>
 <p>Create a SysTick clock object. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00504">504</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00508">508</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -326,7 +326,7 @@ Public Member Functions</h2></td></tr>
 <p>Destroy the SysTick clock object. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00516">516</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00520">520</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +359,7 @@ Public Member Functions</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -480,7 +480,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a5582df6aac1fd73354589bb024f17873">os::rtos::adjustable_clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00230">230</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00231">231</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1rtos_1_1clock.html#addb7972fd07f3be0abb5287d470987f9">os::rtos::clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00527">527</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00531">531</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b3b4d4aa0bba2e7f5934f950f0c7e31"></a>
+<a class="anchor" id="ad62d8700873c719d37c212daba7f47c3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -554,7 +554,7 @@ template&lt;typename Rep_T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr uint32_t os::rtos::clock_systick::ticks_cast </td>
+          <td class="memname">static constexpr <a class="el" href="classos_1_1rtos_1_1clock.html#a149d8b5cea55224ef5cfede8a81df04c">clock::duration_t</a> os::rtos::clock_systick::ticks_cast </td>
           <td>(</td>
           <td class="paramtype">Rep_T&#160;</td>
           <td class="paramname"><em>microsec</em></td><td>)</td>
@@ -625,7 +625,7 @@ template&lt;typename Rep_T &gt; </div>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00268">268</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00270">270</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>

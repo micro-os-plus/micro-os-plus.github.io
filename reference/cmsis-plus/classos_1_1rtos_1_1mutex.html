@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: os::rtos::mutex Class Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::mutex Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -437,7 +437,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_consistent.html"><code>pthread_mutex_consistent()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01091">1091</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01093">1093</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +465,7 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mutex was created with the protocol attribute having the value PTHREAD_PRIO_PROTECT and the calling thread's priority is higher than the mutex's current priority ceiling. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex.</td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex.</td></tr>
   </table>
   </dd>
 </dl>
@@ -522,7 +522,7 @@ Static Public Attributes</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00516">516</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -614,7 +614,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_getprioceiling.html"><code>pthread_mutex_getprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00985">985</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00987">987</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +662,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_setprioceiling.html"><code>pthread_mutex_setprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01025">1025</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01027">1027</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -692,7 +692,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01122">1122</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l01124">1124</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -724,7 +724,7 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">ETIMEDOUT</td><td>The mutex could not be locked before the specified timeout expired. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The state protected by the mutex is not recoverable. </td></tr>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The process or thread would have blocked, and the abstime parameter specified a nanoseconds field value less than zero or greater than or equal to 1000 million. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent.</td></tr>
   </table>
@@ -742,7 +742,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00797">797</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00798">798</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -770,12 +770,12 @@ Differences from the standard:<ul>
     <tr><td class="paramname">EAGAIN</td><td>The mutex could not be acquired because the maximum number of recursive locks for mutex has been exceeded. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>The mutex was created with the protocol attribute having the value PTHREAD_PRIO_PROTECT and the calling thread's priority is higher than the mutex's current priority ceiling. </td></tr>
     <tr><td class="paramname">EOWNERDEAD</td><td>The mutex is a robust mutex and the process containing the previous owning thread terminated while holding the mutex lock. The mutex lock shall be acquired by the calling thread and it is up to the new owner to make the state consistent. </td></tr>
-    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
+    <tr><td class="paramname">EDEADLK</td><td>The mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> and the current thread already owns the mutex. </td></tr>
     <tr><td class="paramname">EWOULDBLOCK</td><td>The mutex could not be acquired because it was already locked.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Try to lock the mutex as <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock the mutex. ">lock()</a></code>, except that if the mutex object referenced by mutex is currently locked (by any thread, including the current thread), the call shall return immediately. If the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> and the mutex is currently owned by the calling thread, the mutex lock count shall be incremented by one and the <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> function shall immediately return success.</p>
+<p>Try to lock the mutex as <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock the mutex. ">lock()</a></code>, except that if the mutex object referenced by mutex is currently locked (by any thread, including the current thread), the call shall return immediately. If the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> and the mutex is currently owned by the calling thread, the mutex lock count shall be incremented by one and the <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> function shall immediately return success.</p>
 <p>If <em>mutex</em> is a robust mutex and the process containing the owning thread terminated while holding the mutex lock, a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> shall return the error value <code>EOWNERDEAD</code>. If <em>mutex</em> is a robust mutex and the owning thread terminated while holding the mutex lock, a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263" title="Try to lock the mutex. ">try_lock()</a></code> may return the error value <code>EOWNERDEAD</code> even if the process in which the owning thread resides has not terminated. In these cases, the mutex is locked by the thread but the state it protects is marked as inconsistent. The application should ensure that the state is made consistent for reuse and when that is complete call <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">consistent()</a></code>. If the application is unable to recover the state, it should unlock the mutex without a prior call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">consistent()</a></code>, after which the mutex is marked permanently unusable.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_trylock.html"><code>pthread_mutex_trylock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). <br />
 Differences from the standard:<ul>
@@ -784,7 +784,7 @@ Differences from the standard:<ul>
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00731">731</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00732">732</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>
@@ -807,17 +807,17 @@ Differences from the standard:<ul>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The mutex was unlocked. </td></tr>
-    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routine; the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714ba77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code>, or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routine; the mutex type is <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code> or <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code>, or the mutex is a robust mutex, and the current thread does not own the mutex. </td></tr>
     <tr><td class="paramname">ENOTRECOVERABLE</td><td>The mutex was not unlocked.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Release the mutex object referenced by <em>mutex</em>. The manner in which a mutex is released is dependent upon the mutex's type attribute. If there are threads blocked on the mutex object referenced by mutex when <code><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb" title="Unlock the mutex. ">unlock()</a></code> is called, resulting in the mutex becoming available, the scheduling policy shall determine which thread shall acquire the mutex.</p>
-<p>(In the case of <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a64ca227bd20bdbaad19b2ad7afab714baf017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> mutexes, the mutex shall become available when the count reaches zero and the calling thread no longer has any locks on this mutex.)</p>
+<p>(In the case of <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code> mutexes, the mutex shall become available when the count reaches zero and the calling thread no longer has any locks on this mutex.)</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_unlock.html"><code>pthread_mutex_unlock()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00912">912</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00914">914</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>

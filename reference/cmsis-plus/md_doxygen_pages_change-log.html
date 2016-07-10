@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>CMSIS++ Reference: Change log</title>
+<title>µOS++ IIIe / CMSIS++ Reference: Change log</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">CMSIS++ Reference
-     &#160;<span id="projectnumber">0.2.1</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
+     &#160;<span id="projectnumber">v6.3.1</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">CMSIS++: A proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -147,7 +147,17 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>update all to lower case</li>
 <li>add <code>new_delete_allocator</code></li>
 <li>prefix all init functions with <code>os_</code></li>
-<li>many other, too many to mention, inherent for first versions... </li>
+<li>many other, too many to mention, inherent for first versions...</li>
+</ul>
+<h3>v0.3.1 2016-07-10</h3>
+<p>Changes, in reverse chronological order:</p>
+<ul>
+<li>for consistency reasons, thread signals were renamed thread event flags</li>
+<li><code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a51f7b7655584f3056207ba720be64b63" title="Clear thread event flags. ">flags_clear()</a></code>, <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a2c9c9266c41ec5e9d98fd0a00bb4a1d7" title="Get/clear thread event flags. ">flags_get()</a></code> moved from <code>thread</code> to <code>this_thread</code></li>
+<li><code>os_thread_stack_element_t</code> and <code>os_thread_stack_allocation_element_t</code> added to C API</li>
+<li><code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaea79949b03663d62e76f3df49b30d1f6" title="Get the stack lowest reserved address. ">os_thread_stack_get_bottom()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga33e830a7d2505c9ee340fb09ec9f4983" title="Get the top stack address. ">os_thread_stack_get_top()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb" title="Check if bottom magic word is still there. ">os_thread_stack_check_bottom_magic()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135" title="Check if top magic word is still there. ">os_thread_stack_check_top_magic()</a></code> added</li>
+<li>thread <code>waiting</code> renamed <code>suspended</code></li>
+<li>validation: waiting function are allowed only if scheduler is not locked </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

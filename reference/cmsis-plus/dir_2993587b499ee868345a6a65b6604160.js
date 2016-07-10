@@ -8,5 +8,6 @@ var dir_2993587b499ee868345a6a65b6604160 =
     [ "legacy", "dir_ec8a5beccc8630a1bbfe2c053fb5e476.html", "dir_ec8a5beccc8630a1bbfe2c053fb5e476" ],
     [ "posix", "dir_8cf3aac9cd7db06c2a2047e53e2c35e1.html", "dir_8cf3aac9cd7db06c2a2047e53e2c35e1" ],
     [ "posix-io", "dir_25e9540bf659df2f7d47922707357530.html", "dir_25e9540bf659df2f7d47922707357530" ],
-    [ "rtos", "dir_9b2f2403bcd392d39d152e037ac99c7b.html", "dir_9b2f2403bcd392d39d152e037ac99c7b" ]
+    [ "rtos", "dir_9b2f2403bcd392d39d152e037ac99c7b.html", "dir_9b2f2403bcd392d39d152e037ac99c7b" ],
+    [ "os-versions.h", "os-versions_8h.html", "os-versions_8h" ]
 ];

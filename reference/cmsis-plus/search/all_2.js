@@ -3,7 +3,7 @@ var searchData=
   ['base',['Base',['../classos_1_1driver_1_1_base.html',1,'os::driver']]],
   ['base',['Base',['../classos_1_1driver_1_1_base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
   ['begin',['begin',['../classos_1_1rtos_1_1static__double__list.html#ac398ad02b949ced4aa29446ddea8be2a',1,'os::rtos::static_double_list::begin()'],['../classos_1_1rtos_1_1intrusive__list.html#a18c67fd65c867b9f70ebc0a25b86e744',1,'os::rtos::intrusive_list::begin()']]],
-  ['below_5fnormal',['below_normal',['../group__cmsis-plus-rtos-thread.html#ggac24438ba32ff8ac04fe2f1433f16aabdaecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
+  ['below_5fnormal',['below_normal',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66aecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
   ['binary_5fattributes',['binary_attributes',['../classbinary__attributes.html',1,'binary_attributes'],['../classos_1_1rtos_1_1semaphore_1_1binary__attributes.html#a587f3cad7e7ab7041fb1e472696386b5',1,'os::rtos::semaphore::binary_attributes::binary_attributes()']]],
   ['binary_5fattributes',['binary_attributes',['../classos_1_1rtos_1_1semaphore_1_1binary__attributes.html',1,'os::rtos::semaphore']]],
   ['binary_5finitializer',['binary_initializer',['../classos_1_1rtos_1_1semaphore.html#a6cb2aea524fc49e23c4c1f1ebae5b312',1,'os::rtos::semaphore']]],
