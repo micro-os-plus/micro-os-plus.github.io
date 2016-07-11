@@ -15,6 +15,6 @@ var classos_1_1rtos_1_1semaphore__counting =
     [ "try_wait", "classos_1_1rtos_1_1semaphore__counting.html#a4c32154fdf817eed5f8ad58bbeacba56", null ],
     [ "value", "classos_1_1rtos_1_1semaphore__counting.html#ab1b0aec87113d2856a3641ae246320f8", null ],
     [ "wait", "classos_1_1rtos_1_1semaphore__counting.html#a25bf8989fbd11f6b4add24837a22cd29", null ],
-    [ "binary_initializer", "classos_1_1rtos_1_1semaphore__counting.html#a8c41ceab5f565ba3de67c86f7dcb36ee", null ],
+    [ "initializer_binary", "classos_1_1rtos_1_1semaphore__counting.html#a6a97b5ca045e295b4928b4741f0d949e", null ],
     [ "max_count_value", "classos_1_1rtos_1_1semaphore__counting.html#a52960bb03444802faaff6fb110156fba", null ]
 ];

@@ -55,7 +55,7 @@ var NAVTREEINDEX0 =
 "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html#ac3330179c855cefa95f864b4ead08eb2":[5,0,1,1,5],
 "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html#af8258a63966f621605804691ae4d2179":[5,0,1,1,8],
 "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html#af887d467866a32aa28de44288aa438ed":[5,0,1,1,3],
-"classbinary__attributes.html":[5,0,3],
+"classattributes__binary.html":[5,0,3],
 "classes.html":[5,1],
 "classos_1_1driver_1_1_base.html":[5,0,2,0,2],
 "classos_1_1driver_1_1_base.html#a03dafced83724ad0e1b8124510b6a5c1":[5,0,2,0,2,5],

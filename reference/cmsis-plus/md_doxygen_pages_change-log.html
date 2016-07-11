@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.1</span>
+     &#160;<span id="projectnumber">v6.3.2</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <ul>
 <li>initial version of the APIs announced on <a href="https://community.arm.com/groups/tools/blog/2016/03/11/cmsis-a-proposal-for-a-future-cmsis-written-in-c">ARM Connected Community</a></li>
 </ul>
-<h3>v0.2.1 2016-06-21</h3>
+<h3>v6.2.1 2016-06-21</h3>
 <p>First fully functional reference implementation. The C and C++ APIs were completely refurbished and use all lower case letters.</p>
 <p>Changes, in reverse chronological order:</p>
 <ul>
@@ -149,15 +149,22 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>prefix all init functions with <code>os_</code></li>
 <li>many other, too many to mention, inherent for first versions...</li>
 </ul>
-<h3>v0.3.1 2016-07-10</h3>
-<p>Changes, in reverse chronological order:</p>
+<h3>v6.3.1 2016-07-10</h3>
 <ul>
-<li>for consistency reasons, thread signals were renamed thread event flags</li>
-<li><code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#aa1700e9473b69e5acbad3d87a279712d" title="Clear thread event flags. ">flags_clear()</a></code>, <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ae6267f94a724efd5ec8d3025a1165dc3" title="Get/clear thread event flags. ">flags_get()</a></code> moved from <code>thread</code> to <code>this_thread</code></li>
-<li><code>os_thread_stack_element_t</code> and <code>os_thread_stack_allocation_element_t</code> added to C API</li>
-<li><code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaea79949b03663d62e76f3df49b30d1f6" title="Get the stack lowest reserved address. ">os_thread_stack_get_bottom()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga33e830a7d2505c9ee340fb09ec9f4983" title="Get the top stack address. ">os_thread_stack_get_top()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb" title="Check if bottom magic word is still there. ">os_thread_stack_check_bottom_magic()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135" title="Check if top magic word is still there. ">os_thread_stack_check_top_magic()</a></code> added</li>
+<li>validation: waiting function are allowed only if scheduler is not locked</li>
 <li>thread <code>waiting</code> renamed <code>suspended</code></li>
-<li>validation: waiting function are allowed only if scheduler is not locked </li>
+<li><code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaea79949b03663d62e76f3df49b30d1f6" title="Get the stack lowest reserved address. ">os_thread_stack_get_bottom()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga33e830a7d2505c9ee340fb09ec9f4983" title="Get the top stack address. ">os_thread_stack_get_top()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb" title="Check if bottom magic word is still there. ">os_thread_stack_check_bottom_magic()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135" title="Check if top magic word is still there. ">os_thread_stack_check_top_magic()</a></code> added</li>
+<li><code>os_thread_stack_element_t</code> and <code>os_thread_stack_allocation_element_t</code> added to C API</li>
+<li><code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#aa1700e9473b69e5acbad3d87a279712d" title="Clear thread event flags. ">flags_clear()</a></code>, <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#ae6267f94a724efd5ec8d3025a1165dc3" title="Get/clear thread event flags. ">flags_get()</a></code> moved from <code>thread</code> to <code>this_thread</code></li>
+<li>for consistency reasons, thread signals were renamed thread event flags</li>
+</ul>
+<h3>v6.3.2 2016-07-11</h3>
+<ul>
+<li>fix <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9373c2b9e8f007ac31440ea1192fd361" title="Try to wait for thread event flags. ">thread::flags_try_wait()</a></code> spelling</li>
+<li>semaphores refurbished (make default as binary, add classes <code>semaphore_binary</code> and <code>semaphore_counting</code>)</li>
+<li>add <code>binary_attributes</code></li>
+<li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes. ">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d" title="Create a binary semaphore object. ">os_semaphore_binary_create()</a></code></li>
+<li>os-semaphore: rename <code><a class="el" href="classattributes__binary.html">attributes_binary</a></code>, <code>attributes_counting</code>, <code>initializer_binary</code> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

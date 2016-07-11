@@ -8,16 +8,23 @@ var group__cmsis_plus_rtos_semaphore =
         [ "sm_initial_value", "classos_1_1rtos_1_1semaphore_1_1attributes.html#a93a004acdd6591ddef9e0f49be403635", null ],
         [ "sm_max_value", "classos_1_1rtos_1_1semaphore_1_1attributes.html#a0b166731dc11931d76a03e1a99e37aad", null ]
       ] ],
-      [ "counting_attributes", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html", [
-        [ "counting_attributes", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a2ad3fa8c49a29af1271d4d3e8ecc94e5", null ],
-        [ "~counting_attributes", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a5d03ab3d39507f670907fb5dc5c9c186", null ],
-        [ "clock", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a884c121715e76abbea32e132876884fb", null ],
-        [ "sm_initial_value", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a93a004acdd6591ddef9e0f49be403635", null ],
-        [ "sm_max_value", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html#a0b166731dc11931d76a03e1a99e37aad", null ]
+      [ "attributes_binary", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html", [
+        [ "attributes_binary", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#ab41ad1903b9fda1ed5abdb7f9270b5d0", null ],
+        [ "~attributes_binary", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a810de7e4571f5a726862a31b2478c865", null ],
+        [ "clock", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a884c121715e76abbea32e132876884fb", null ],
+        [ "sm_initial_value", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a93a004acdd6591ddef9e0f49be403635", null ],
+        [ "sm_max_value", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a0b166731dc11931d76a03e1a99e37aad", null ]
+      ] ],
+      [ "attributes_counting", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html", [
+        [ "attributes_counting", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a3267866f2212afecc82a79e78ef2a619", null ],
+        [ "~attributes_counting", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#aad2151c227b49f115d6e9b2c2012265d", null ],
+        [ "clock", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a884c121715e76abbea32e132876884fb", null ],
+        [ "sm_initial_value", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a93a004acdd6591ddef9e0f49be403635", null ],
+        [ "sm_max_value", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a0b166731dc11931d76a03e1a99e37aad", null ]
       ] ],
       [ "count_t", "classos_1_1rtos_1_1semaphore.html#ad6dc71df534fae5ff113a4a010511df1", null ],
-      [ "semaphore", "classos_1_1rtos_1_1semaphore.html#abf77f76e2aa7813072de515c468e6159", null ],
-      [ "semaphore", "classos_1_1rtos_1_1semaphore.html#a2add75ca41de614460e8296af9e48acb", null ],
+      [ "semaphore", "classos_1_1rtos_1_1semaphore.html#a722459e3f83bb595777960716a15d83f", null ],
+      [ "semaphore", "classos_1_1rtos_1_1semaphore.html#a2716be8bd141fb73bfb338c31459d50a", null ],
       [ "~semaphore", "classos_1_1rtos_1_1semaphore.html#a4dacfa0176b4286c2784352637396b8d", null ],
       [ "initial_value", "classos_1_1rtos_1_1semaphore.html#a332c9dcea56cfaf9321c778059d00b5f", null ],
       [ "max_value", "classos_1_1rtos_1_1semaphore.html#a12882c8f1b9dac665087b6f88428a1b8", null ],
@@ -29,7 +36,7 @@ var group__cmsis_plus_rtos_semaphore =
       [ "try_wait", "classos_1_1rtos_1_1semaphore.html#a4c32154fdf817eed5f8ad58bbeacba56", null ],
       [ "value", "classos_1_1rtos_1_1semaphore.html#ab1b0aec87113d2856a3641ae246320f8", null ],
       [ "wait", "classos_1_1rtos_1_1semaphore.html#a25bf8989fbd11f6b4add24837a22cd29", null ],
-      [ "binary_initializer", "classos_1_1rtos_1_1semaphore.html#a8c41ceab5f565ba3de67c86f7dcb36ee", null ],
+      [ "initializer_binary", "classos_1_1rtos_1_1semaphore.html#a6a97b5ca045e295b4928b4741f0d949e", null ],
       [ "max_count_value", "classos_1_1rtos_1_1semaphore.html#a52960bb03444802faaff6fb110156fba", null ]
     ] ],
     [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html", [
@@ -48,7 +55,7 @@ var group__cmsis_plus_rtos_semaphore =
       [ "try_wait", "classos_1_1rtos_1_1semaphore__binary.html#a4c32154fdf817eed5f8ad58bbeacba56", null ],
       [ "value", "classos_1_1rtos_1_1semaphore__binary.html#ab1b0aec87113d2856a3641ae246320f8", null ],
       [ "wait", "classos_1_1rtos_1_1semaphore__binary.html#a25bf8989fbd11f6b4add24837a22cd29", null ],
-      [ "binary_initializer", "classos_1_1rtos_1_1semaphore__binary.html#a8c41ceab5f565ba3de67c86f7dcb36ee", null ],
+      [ "initializer_binary", "classos_1_1rtos_1_1semaphore__binary.html#a6a97b5ca045e295b4928b4741f0d949e", null ],
       [ "max_count_value", "classos_1_1rtos_1_1semaphore__binary.html#a52960bb03444802faaff6fb110156fba", null ]
     ] ],
     [ "semaphore_counting", "classos_1_1rtos_1_1semaphore__counting.html", [
@@ -67,7 +74,7 @@ var group__cmsis_plus_rtos_semaphore =
       [ "try_wait", "classos_1_1rtos_1_1semaphore__counting.html#a4c32154fdf817eed5f8ad58bbeacba56", null ],
       [ "value", "classos_1_1rtos_1_1semaphore__counting.html#ab1b0aec87113d2856a3641ae246320f8", null ],
       [ "wait", "classos_1_1rtos_1_1semaphore__counting.html#a25bf8989fbd11f6b4add24837a22cd29", null ],
-      [ "binary_initializer", "classos_1_1rtos_1_1semaphore__counting.html#a8c41ceab5f565ba3de67c86f7dcb36ee", null ],
+      [ "initializer_binary", "classos_1_1rtos_1_1semaphore__counting.html#a6a97b5ca045e295b4928b4741f0d949e", null ],
       [ "max_count_value", "classos_1_1rtos_1_1semaphore__counting.html#a52960bb03444802faaff6fb110156fba", null ]
     ] ]
 ];

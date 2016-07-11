@@ -3,7 +3,7 @@ var annotated_dup =
     [ "anonymous_namespace{memory-resource.cpp}", "namespaceanonymous__namespace_02memory-resource_8cpp_03.html", "namespaceanonymous__namespace_02memory-resource_8cpp_03" ],
     [ "anonymous_namespace{os-memory.cpp}", "namespaceanonymous__namespace_02os-memory_8cpp_03.html", "namespaceanonymous__namespace_02os-memory_8cpp_03" ],
     [ "os", "namespaceos.html", "namespaceos" ],
-    [ "binary_attributes", "classbinary__attributes.html", null ],
+    [ "attributes_binary", "classattributes__binary.html", null ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
     [ "os_clock_s", "structos__clock__s.html", null ],

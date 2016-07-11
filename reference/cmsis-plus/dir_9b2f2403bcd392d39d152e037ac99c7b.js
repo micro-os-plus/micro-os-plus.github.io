@@ -46,7 +46,8 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-sched.h", "os-sched_8h.html", "os-sched_8h" ],
     [ "os-semaphore.h", "os-semaphore_8h.html", [
       [ "attributes", "classos_1_1rtos_1_1semaphore_1_1attributes.html", "classos_1_1rtos_1_1semaphore_1_1attributes" ],
-      [ "counting_attributes", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html", "classos_1_1rtos_1_1semaphore_1_1counting__attributes" ]
+      [ "attributes_binary", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html", "classos_1_1rtos_1_1semaphore_1_1attributes__binary" ],
+      [ "attributes_counting", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html", "classos_1_1rtos_1_1semaphore_1_1attributes__counting" ]
     ] ],
     [ "os-thread.h", "os-thread_8h.html", "os-thread_8h" ],
     [ "os-timer.h", "os-timer_8h.html", [

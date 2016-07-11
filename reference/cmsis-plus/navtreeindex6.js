@@ -1,5 +1,11 @@
 var NAVTREEINDEX6 =
 {
+"classos_1_1rtos_1_1waiting__threads__list.html#a6640d1fdaff38c79759643146781be7e":[5,0,2,2,44,11],
+"classos_1_1rtos_1_1waiting__threads__list.html#a82b3a9c80a0b16778e55135236a4b1cb":[5,0,2,2,44,1],
+"classos_1_1rtos_1_1waiting__threads__list.html#a908de007589f3ecbfcde849580c1b08d":[5,0,2,2,44,12],
+"classos_1_1rtos_1_1waiting__threads__list.html#a9483439a0234c141147f60600bc0be81":[5,0,2,2,44,6],
+"classos_1_1rtos_1_1waiting__threads__list.html#ab4d4465a0024dbce9f8131c313913e36":[5,0,2,2,44,3],
+"classos_1_1rtos_1_1waiting__threads__list.html#ac398ad02b949ced4aa29446ddea8be2a":[5,0,2,2,44,2],
 "classos_1_1rtos_1_1waiting__threads__list.html#ad5d71083a917ec335bebe22cbe252542":[5,0,2,2,44,0],
 "classos_1_1rtos_1_1waiting__threads__list.html#adf6868ece45ab96fb129f8843b0e4a5a":[5,0,2,2,44,10],
 "classos_1_1rtos_1_1waiting__threads__list.html#af0817145a118719101aeeee0a6010d96":[5,0,2,2,44,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "functions_func_k.html":[5,3,1,11],
 "functions_func_l.html":[5,3,1,12],
 "functions_func_m.html":[5,3,1,13],
-"functions_func_n.html":[5,3,1,14],
-"functions_func_o.html":[5,3,1,15],
-"functions_func_p.html":[5,3,1,16],
-"functions_func_r.html":[5,3,1,17],
-"functions_func_s.html":[5,3,1,18],
-"functions_func_t.html":[5,3,1,19],
-"functions_func_u.html":[5,3,1,20]
+"functions_func_n.html":[5,3,1,14]
 };

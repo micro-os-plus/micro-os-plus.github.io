@@ -4,6 +4,7 @@ var hierarchy =
     [ "os::estd::adopt_lock_t", "structos_1_1estd_1_1adopt__lock__t.html", null ],
     [ "os::rtos::memory_pool::arena< T, blocks, block_size_bytes >", "classos_1_1rtos_1_1memory__pool_1_1arena.html", null ],
     [ "os::rtos::message_queue::arena< T, msgs, msg_size_bytes >", "classos_1_1rtos_1_1message__queue_1_1arena.html", null ],
+    [ "attributes_binary", "classattributes__binary.html", null ],
     [ "os::driver::Base", "classos_1_1driver_1_1_base.html", [
       [ "os::driver::Serial", "classos_1_1driver_1_1_serial.html", [
         [ "os::driver::Usart_wrapper", "classos_1_1driver_1_1_usart__wrapper.html", null ]
@@ -15,7 +16,6 @@ var hierarchy =
         [ "os::driver::Usbh_wrapper", "classos_1_1driver_1_1_usbh__wrapper.html", null ]
       ] ]
     ] ],
-    [ "binary_attributes", "classbinary__attributes.html", null ],
     [ "os::driver::usb::device::Capabilities", "classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html", null ],
     [ "os::driver::serial::Capabilities", "classos_1_1driver_1_1serial_1_1_capabilities.html", null ],
     [ "os::driver::usb::host::Capabilities", "classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html", null ],
@@ -31,7 +31,8 @@ var hierarchy =
         [ "os::rtos::mutex::recursive_attributes", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html", null ]
       ] ],
       [ "os::rtos::semaphore::attributes", "classos_1_1rtos_1_1semaphore_1_1attributes.html", [
-        [ "os::rtos::semaphore::counting_attributes", "classos_1_1rtos_1_1semaphore_1_1counting__attributes.html", null ]
+        [ "os::rtos::semaphore::attributes_binary", "classos_1_1rtos_1_1semaphore_1_1attributes__binary.html", null ],
+        [ "os::rtos::semaphore::attributes_counting", "classos_1_1rtos_1_1semaphore_1_1attributes__counting.html", null ]
       ] ],
       [ "os::rtos::thread::attributes", "classos_1_1rtos_1_1thread_1_1attributes.html", null ],
       [ "os::rtos::timer::attributes", "classos_1_1rtos_1_1timer_1_1attributes.html", [
@@ -56,13 +57,13 @@ var hierarchy =
     [ "os::estd::lock_guard< Mutex_T >", "classos_1_1estd_1_1lock__guard.html", null ],
     [ "os::rtos::scheduler::lockable", "classos_1_1rtos_1_1scheduler_1_1lockable.html", null ],
     [ "os::rtos::interrupts::lockable", "classos_1_1rtos_1_1interrupts_1_1lockable.html", null ],
-    [ "os::rtos::memory::memory_resource", "classos_1_1rtos_1_1memory_1_1memory__resource.html", [
-      [ "anonymous_namespace{os-memory.cpp}::new_delete_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1new__delete__memory__resource.html", null ],
-      [ "anonymous_namespace{os-memory.cpp}::null_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html", null ]
-    ] ],
     [ "memory_resource", null, [
       [ "anonymous_namespace{memory-resource.cpp}::new_delete_memory_resource", "classanonymous__namespace_02memory-resource_8cpp_03_1_1new__delete__memory__resource.html", null ],
       [ "anonymous_namespace{memory-resource.cpp}::null_memory_resource", "classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html", null ]
+    ] ],
+    [ "os::rtos::memory::memory_resource", "classos_1_1rtos_1_1memory_1_1memory__resource.html", [
+      [ "anonymous_namespace{os-memory.cpp}::new_delete_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1new__delete__memory__resource.html", null ],
+      [ "anonymous_namespace{os-memory.cpp}::null_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html", null ]
     ] ],
     [ "os::driver::serial::Modem_status", "classos_1_1driver_1_1serial_1_1_modem__status.html", null ],
     [ "os::estd::mutex", "classos_1_1estd_1_1mutex.html", [
@@ -148,8 +149,8 @@ var hierarchy =
     [ "os::rtos::mutex::robustness", "structos_1_1rtos_1_1mutex_1_1robustness.html", null ],
     [ "os::rtos::timer::run", "structos_1_1rtos_1_1timer_1_1run.html", null ],
     [ "os::rtos::thread::stack", "classos_1_1rtos_1_1thread_1_1stack.html", null ],
-    [ "os::rtos::timer::state", "structos_1_1rtos_1_1timer_1_1state.html", null ],
     [ "os::rtos::thread::state", "structos_1_1rtos_1_1thread_1_1state.html", null ],
+    [ "os::rtos::timer::state", "structos_1_1rtos_1_1timer_1_1state.html", null ],
     [ "os::rtos::static_double_list", "classos_1_1rtos_1_1static__double__list.html", [
       [ "os::rtos::double_list", "classos_1_1rtos_1_1double__list.html", [
         [ "os::rtos::clock_timestamps_list", "classos_1_1rtos_1_1clock__timestamps__list.html", null ],
@@ -170,18 +171,18 @@ var hierarchy =
       ] ]
     ] ],
     [ "os::rtos::thread::statistics", "classos_1_1rtos_1_1thread_1_1statistics.html", null ],
-    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
-    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
     [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
+    [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
+    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
     [ "os::estd::chrono::systick_clock", "classos_1_1estd_1_1chrono_1_1systick__clock.html", null ],
     [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],
     [ "os::estd::try_to_lock_t", "structos_1_1estd_1_1try__to__lock__t.html", null ],
     [ "os::rtos::mutex::type", "structos_1_1rtos_1_1mutex_1_1type.html", null ],
-    [ "os::rtos::port::interrupts::uncritical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html", null ],
-    [ "os::rtos::scheduler::uncritical_section", "classos_1_1rtos_1_1scheduler_1_1uncritical__section.html", null ],
     [ "os::rtos::interrupts::uncritical_section", "classos_1_1rtos_1_1interrupts_1_1uncritical__section.html", null ],
+    [ "os::rtos::scheduler::uncritical_section", "classos_1_1rtos_1_1scheduler_1_1uncritical__section.html", null ],
+    [ "os::rtos::port::interrupts::uncritical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html", null ],
     [ "os::estd::unique_lock< Mutex_T >", "classos_1_1estd_1_1unique__lock.html", null ],
     [ "os::driver::Version", "classos_1_1driver_1_1_version.html", null ]
 ];

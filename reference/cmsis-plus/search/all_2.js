@@ -4,8 +4,6 @@ var searchData=
   ['base',['Base',['../classos_1_1driver_1_1_base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
   ['begin',['begin',['../classos_1_1rtos_1_1static__double__list.html#ac398ad02b949ced4aa29446ddea8be2a',1,'os::rtos::static_double_list::begin()'],['../classos_1_1rtos_1_1intrusive__list.html#a18c67fd65c867b9f70ebc0a25b86e744',1,'os::rtos::intrusive_list::begin()']]],
   ['below_5fnormal',['below_normal',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66aecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
-  ['binary_5fattributes',['binary_attributes',['../classbinary__attributes.html',1,'']]],
-  ['binary_5finitializer',['binary_initializer',['../classos_1_1rtos_1_1semaphore.html#a8c41ceab5f565ba3de67c86f7dcb36ee',1,'os::rtos::semaphore']]],
   ['bind',['bind',['../newlib-aliases_8h.html#a55b3c1572b4e86ca0702ecdeb7e43997',1,'bind(int socket, const struct sockaddr *address, socklen_t address_len):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#a55b3c1572b4e86ca0702ecdeb7e43997',1,'bind(int socket, const struct sockaddr *address, socklen_t address_len):&#160;standard-aliases.h']]],
   ['bit_5fnumber_5ft',['bit_number_t',['../namespaceos_1_1driver_1_1serial.html#aee085b90d521dfded35f948dd5698f25',1,'os::driver::serial']]],
   ['block_5fsize',['block_size',['../classos_1_1rtos_1_1memory__pool.html#aebe79719e418025e60a95ec384d95f51',1,'os::rtos::memory_pool']]],

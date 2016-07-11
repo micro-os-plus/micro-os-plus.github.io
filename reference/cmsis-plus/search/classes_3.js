@@ -17,8 +17,7 @@ var searchData=
   ['condition_5fvariable_5fany',['condition_variable_any',['../classos_1_1estd_1_1condition__variable__any.html',1,'os::estd']]],
   ['context',['context',['../classos_1_1rtos_1_1port_1_1context.html',1,'os::rtos::port']]],
   ['context',['context',['../classos_1_1rtos_1_1thread_1_1context.html',1,'os::rtos::thread']]],
-  ['counting_5fattributes',['counting_attributes',['../classos_1_1rtos_1_1semaphore_1_1counting__attributes.html',1,'os::rtos::semaphore']]],
   ['critical_5fsection',['critical_section',['../classos_1_1rtos_1_1interrupts_1_1critical__section.html',1,'os::rtos::interrupts']]],
-  ['critical_5fsection',['critical_section',['../classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html',1,'os::rtos::port::interrupts']]],
-  ['critical_5fsection',['critical_section',['../classos_1_1rtos_1_1scheduler_1_1critical__section.html',1,'os::rtos::scheduler']]]
+  ['critical_5fsection',['critical_section',['../classos_1_1rtos_1_1scheduler_1_1critical__section.html',1,'os::rtos::scheduler']]],
+  ['critical_5fsection',['critical_section',['../classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html',1,'os::rtos::port::interrupts']]]
 ];
