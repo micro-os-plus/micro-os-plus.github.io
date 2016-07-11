@@ -1,35 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Developer resources</title>
+  <title>How to release</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="Developer resources" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="How to release">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
-
-
-  <meta property="article:published_time" content="2016-03-09">
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
+  <meta property="article:published_time" content="2016-07-11">
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201603032012" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201603032012" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/">
+  <link rel="canonical" href="http://micro-os-plus.github.io/develop/how-to-release/">
 
 
 
@@ -165,7 +166,8 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s <strong>manual</strong></a>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
     <ul>
       <li><a href="/user-manual/getting-started/">Getting started</a></li>
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
@@ -223,8 +225,8 @@
       <div class="site-content">
 
         
-<h1 class="page-title">Developer resources</h1>
-<p class="last-modified">Last modified on Thu Jun 30 10:25:17 2016 UTC.</p>
+<h1 class="page-title">How to release</h1>
+<p class="last-modified">Last modified on Mon Jul 11 18:30:10 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -237,54 +239,121 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#coding-styles"><span class="tocnumber">1</span> <span class="toctext">Coding styles</span></a>
+<a href="#commit-git-repos"><span class="tocnumber">1</span> <span class="toctext">Commit git repos</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#misc"><span class="tocnumber">2</span> <span class="toctext">Misc</span></a>
+<a href="#update-the-doxygen-change-log"><span class="tocnumber">2</span> <span class="toctext">Update the doxygen change log</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#procedures"><span class="tocnumber">3</span> <span class="toctext">Procedures</span></a>
+<a href="#update-the-doxygen-mainmarkdown"><span class="tocnumber">3</span> <span class="toctext">Update the doxygen main.markdown</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#links--references"><span class="tocnumber">4</span> <span class="toctext">Links &amp; References</span></a>
+<a href="#update-os-versionsh"><span class="tocnumber">4</span> <span class="toctext">Update os-versions.h</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#run-doxygen"><span class="tocnumber">5</span> <span class="toctext">Run doxygen</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#check-the-jekyll-site"><span class="tocnumber">6</span> <span class="toctext">Check the jekyll site</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#build-the-jekyll-site"><span class="tocnumber">7</span> <span class="toctext">Build the jekyll site</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#commit-git-repos-1"><span class="tocnumber">8</span> <span class="toctext">Commit git repos</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#publish-site"><span class="tocnumber">9</span> <span class="toctext">Publish site</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><h2 id="coding-styles">Coding styles</h2>
+</div>
+<h2 id="commit-git-repos">Commit git repos</h2>
+
+<p>With GitHub Desktop,</p>
 
 <ul>
-  <li><a href="/develop/coding-style/">C++ coding style</a></li>
-  <li><a href="/develop/naming-conventions/">C/C++ naming conventions</a></li>
-  <li><a href="/develop/doxygen-style-guide/">Doxygen style</a></li>
-  <li><a href="/develop/jekyll-style-guide/">Jekyll style</a></li>
+  <li>commit cmsis-plus</li>
+  <li>possibly commit posix-arch, micro-os-plus-iii, etc</li>
 </ul>
 
-<h2 id="misc">Misc</h2>
+<h2 id="update-the-doxygen-change-log">Update the doxygen change log</h2>
+
+<p>With Eclipse, edit <code class="highlighter-rouge">doxygen/pages/changes-log.markdown</code></p>
 
 <ul>
-  <li><a href="/develop/predefined-macros/">Predefined compiler macros</a></li>
+  <li>add new <code class="highlighter-rouge">###</code> section, with version and date</li>
+  <li>copy from GitHub Desktop the relevant changes, in chronological order</li>
 </ul>
 
-<h2 id="procedures">Procedures</h2>
+<h2 id="update-the-doxygen-mainmarkdown">Update the doxygen main.markdown</h2>
+
+<p>If the CMSIS APIs changed, update <code class="highlighter-rouge">doxygen/pages/main.markdown</code>.</p>
+
+<h2 id="update-os-versionsh">Update os-versions.h</h2>
+
+<p>With Eclipse,</p>
 
 <ul>
-  <li><a href="/develop/how-to-release/">How to release</a></li>
+  <li>edit <code class="highlighter-rouge">include/os-versions.h</code>.</li>
 </ul>
 
-<h2 id="links--references">Links &amp; References</h2>
+<h2 id="run-doxygen">Run doxygen</h2>
+
+<p>With Eclipse,</p>
 
 <ul>
-  <li><a href="/develop/references#standards-and-style">Standards and style</a></li>
-  <li><a href="/develop/references#embedded-operating-systems">Embedded operating systems</a></li>
-  <li><a href="/develop/references#cc-language--libraries">C/C++ language libraries</a></li>
-  <li><a href="/develop/references#tcpip-libraries">TCP/IP libraries</a></li>
-  <li><a href="/develop/references#testing">Testing</a></li>
-  <li><a href="/develop/references#multi-tasking-related-links">Multi-tasking related links</a></li>
-  <li><a href="/develop/references#miscellaneous">Miscellaneous</a></li>
-  <li><a href="/develop/references#books">Books</a></li>
+  <li>select the <code class="highlighter-rouge">micro-os-plus-iii</code> project</li>
+  <li>click the <code class="highlighter-rouge">@</code> button</li>
+</ul>
+
+<p>If errors, fix them and repeat.</p>
+
+<h2 id="check-the-jekyll-site">Check the jekyll site</h2>
+
+<p>In Finder,</p>
+
+<ul>
+  <li>double click the <code class="highlighter-rouge">jekyll-serve.command</code>
+</li>
+  <li>double click the <code class="highlighter-rouge">localhost-4001.command</code>
+</li>
+</ul>
+
+<p>Verify the changed pages.</p>
+
+<h2 id="build-the-jekyll-site">Build the jekyll site</h2>
+
+<p>In Finder,</p>
+
+<ul>
+  <li>double click the <code class="highlighter-rouge">jekyll-build.command</code>
+</li>
+</ul>
+
+<h2 id="commit-git-repos-1">Commit git repos</h2>
+
+<p>With GitHub Desktop,</p>
+
+<ul>
+  <li>commit <code class="highlighter-rouge">cmsis-plus</code> (versions, message like v6.3.3)</li>
+  <li>click the <strong>Sync</strong> button</li>
+  <li>commit <code class="highlighter-rouge">micro-os-plus.github.io-source</code>
+</li>
+  <li>click the <strong>Sync</strong> button</li>
+</ul>
+
+<h2 id="publish-site">Publish site</h2>
+
+<p>With GitHub Desktop,</p>
+
+<ul>
+  <li>commit <code class="highlighter-rouge">micro-os-plus.github.io</code>
+</li>
+  <li>click the <strong>Sync</strong> button</li>
 </ul>
 
 
@@ -295,7 +364,7 @@
 
 
 <ul class="share-buttons">
-  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/develop/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/develop/how-to-release/" data-layout="button"></div></li>
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
 </ul>
 
@@ -315,7 +384,7 @@
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
 </ul>
 
 

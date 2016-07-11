@@ -6,7 +6,6 @@ var searchData=
   ['idle',['idle',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a24b83eece3b5e2c59b6cc190cfbec515',1,'os::rtos::thread::priority']]],
   ['in',['in',['../namespaceos_1_1driver_1_1usb_1_1device.html#aa54cbb59440f3be58ec61a52efe494efa773438b06ca4c5e4e4c519f7bc9ffa18',1,'os::driver::usb::device']]],
   ['in_5fhandler_5fmode',['in_handler_mode',['../namespaceos_1_1rtos_1_1port_1_1interrupts.html#aaaf07ee70419469818c7593e3fd28d06',1,'os::rtos::port::interrupts::in_handler_mode()'],['../namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a',1,'os::rtos::interrupts::in_handler_mode()']]],
-  ['inactive',['inactive',['../structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1a313c1da2143fec8792db9473f67dc5',1,'os::rtos::thread::state']]],
   ['index_5ft',['index_t',['../classos_1_1rtos_1_1message__queue.html#a2983d5ecc043f3be220ae96619bfa148',1,'os::rtos::message_queue']]],
   ['inherit',['inherit',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4',1,'os::rtos::mutex::protocol']]],
   ['initial_5fvalue',['initial_value',['../classos_1_1rtos_1_1semaphore.html#a332c9dcea56cfaf9321c778059d00b5f',1,'os::rtos::semaphore']]],

@@ -57,10 +57,10 @@ var NAVTREEINDEX =
 "group__cmsis-plus-rtos-c-clock.html#ga4227a69d2ab6d5a295134c5fcd795b8b",
 "group__cmsis-plus-rtos-c-mqueue.html#ga5f2526c8f6cc1f674a57f4beaa0746a3",
 "group__cmsis-plus-rtos-c-thread.html#gaa8a5534159ae9b56f189dcd31c45fbe2",
-"namespaceos_1_1driver.html",
-"os-memory_8h.html#aa67f4f8fa7acec54ed5db96538b56520",
-"standard-aliases_8h.html#aaf4003debbed347d18870fbeae46523f",
-"trace_8h.html#a3c17d4f016a7d8ba761ab3f3cccdf0db"
+"namespaceos_1_1driver_1_1serial.html",
+"os-memory_8h.html#ab0589e2807bf564836e6c1cee7f25c09",
+"standard-aliases_8h.html#ab2df76f2c62ae012c2e417813b5fe8ce",
+"trace_8h.html#a5e626eea11f3605e19b207a68b13b822"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

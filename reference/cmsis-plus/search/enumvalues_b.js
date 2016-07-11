@@ -30,7 +30,6 @@ var searchData=
   ['os_5fthread_5fpriority_5fnormal',['os_thread_priority_normal',['../group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06cae113d073fd99c84c929213fd3c927320',1,'os-c-decls.h']]],
   ['os_5fthread_5fpriority_5frealtime',['os_thread_priority_realtime',['../group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06cabef2cc14d45fb8d0aaf10efe75e6a9cd',1,'os-c-decls.h']]],
   ['os_5fthread_5fstate_5fdestroyed',['os_thread_state_destroyed',['../group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea63a68552068a61ec666e8dc5d1f8a7e7',1,'os-c-decls.h']]],
-  ['os_5fthread_5fstate_5finactive',['os_thread_state_inactive',['../group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eaaf8d16c7562f59170cf82a99b6450792',1,'os-c-decls.h']]],
   ['os_5fthread_5fstate_5fready',['os_thread_state_ready',['../group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea4f544e7053ed58852c73a844a3ac96f5',1,'os-c-decls.h']]],
   ['os_5fthread_5fstate_5frunning',['os_thread_state_running',['../group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eacec117cb3d2b0202237758218626b710',1,'os-c-decls.h']]],
   ['os_5fthread_5fstate_5fsuspended',['os_thread_state_suspended',['../group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea201933dc6dbb707984de3152769e6860',1,'os-c-decls.h']]],

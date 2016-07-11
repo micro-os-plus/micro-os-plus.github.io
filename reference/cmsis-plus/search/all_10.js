@@ -35,6 +35,7 @@ var searchData=
   ['prev_5f',['prev_',['../classos_1_1rtos_1_1static__double__list__links.html#ab57df753832436e487b3edb7dd731d7d',1,'os::rtos::static_double_list_links']]],
   ['printf',['printf',['../group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee',1,'os::trace']]],
   ['prio_5fceiling',['prio_ceiling',['../classos_1_1rtos_1_1mutex.html#a3486b0293f3416bd47068c44dbd85877',1,'os::rtos::mutex::prio_ceiling(void) const '],['../classos_1_1rtos_1_1mutex.html#af0a2c6bbb2d30714f8eee0070e5d0ac0',1,'os::rtos::mutex::prio_ceiling(thread::priority_t prio_ceiling, thread::priority_t *old_prio_ceiling=nullptr)']]],
+  ['priority',['priority',['../classos_1_1rtos_1_1thread.html#a51c5f1bc25971db6b9a8ccb721a7d288',1,'os::rtos::thread::priority(priority_t prio)'],['../classos_1_1rtos_1_1thread.html#a666a5b74372fb159e39d3cf797b8c7e5',1,'os::rtos::thread::priority(void)']]],
   ['priority',['priority',['../structos_1_1rtos_1_1thread_1_1priority.html',1,'os::rtos::thread']]],
   ['priority_5ft',['priority_t',['../classos_1_1rtos_1_1message__queue.html#a26895a3c081fd319cb199d21c4028963',1,'os::rtos::message_queue::priority_t()'],['../group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36',1,'os::rtos::thread::priority_t()']]],
   ['prios',['prios',['../classos_1_1rtos_1_1message__queue_1_1arena.html#a679a09fb4e24817fa97e3c7f6085804e',1,'os::rtos::message_queue::arena']]],

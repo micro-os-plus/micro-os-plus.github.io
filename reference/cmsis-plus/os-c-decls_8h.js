@@ -82,7 +82,6 @@ var os_c_decls_8h =
     [ "os_thread_priority_isr", "group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca3be35b099a08d9e2a3c3231aaf60c301", null ],
     [ "os_thread_priority_error", "group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca8ab425197c011320b929c3cfddaae920", null ],
     [ "os_thread_state_undefined", "group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea41d90ad0923e4ca8dbeead18134c4c63", null ],
-    [ "os_thread_state_inactive", "group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eaaf8d16c7562f59170cf82a99b6450792", null ],
     [ "os_thread_state_ready", "group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea4f544e7053ed58852c73a844a3ac96f5", null ],
     [ "os_thread_state_running", "group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9eacec117cb3d2b0202237758218626b710", null ],
     [ "os_thread_state_suspended", "group__cmsis-plus-rtos-c-thread.html#gga61dadd085c1777f559549e05962b2c9ea201933dc6dbb707984de3152769e6860", null ],

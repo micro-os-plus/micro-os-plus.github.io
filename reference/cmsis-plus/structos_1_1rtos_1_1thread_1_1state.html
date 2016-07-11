@@ -142,17 +142,15 @@ Public Types</h2></td></tr>
 <tr class="memitem:a0aeb2faf49c001494f12a5d893ffb5cf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: state_t { <br />
 &#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b">undefined</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1a313c1da2143fec8792db9473f67dc5">inactive</a> = 1, 
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">ready</a> = 1, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">ready</a> = 2, 
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">running</a> = 2, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">running</a> = 3, 
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a">suspended</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a">suspended</a> = 4, 
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec">terminated</a> = 4, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec">terminated</a> = 5, 
-<br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31">destroyed</a> = 6
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31">destroyed</a> = 5
 <br />
  }<tr class="memdesc:a0aeb2faf49c001494f12a5d893ffb5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumeration with all possible thread states.  <a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cf">More...</a><br /></td></tr>
 </td></tr>
@@ -179,18 +177,20 @@ Public Types</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b"></a>undefined&#160;</td><td class="fielddoc">
 <p>Used to catch uninitialised threads. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfa1a313c1da2143fec8792db9473f67dc5"></a>inactive&#160;</td><td class="fielddoc">
-</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033"></a>ready&#160;</td><td class="fielddoc">
+<p>Present in the READY list and competing for CPU. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3"></a>running&#160;</td><td class="fielddoc">
+<p>Has the CPU and runs. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a"></a>suspended&#160;</td><td class="fielddoc">
+<p>Not present in the READY list, waiting for an event. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec"></a>terminated&#160;</td><td class="fielddoc">
-<p>Reuse possible if terminated or higher. </p>
+<p>No longer usable, but resources not yet released. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31"></a>destroyed&#160;</td><td class="fielddoc">
+<p>Terminated and resources (like stack) released. </p>
 </td></tr>
 </table>
 

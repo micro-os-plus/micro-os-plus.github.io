@@ -977,7 +977,7 @@
 </span><span class="kt">void</span><span class="o">*</span>
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">this_thread</span><span class="o">::</span><span class="kr">thread</span><span class="p">().</span><span class="n">sched_prio</span><span class="p">(</span><span class="kr">thread</span><span class="o">::</span><span class="n">priority</span><span class="o">::</span><span class="n">high</span><span class="p">);</span>
+  <span class="n">this_thread</span><span class="o">::</span><span class="kr">thread</span><span class="p">().</span><span class="n">priority</span><span class="p">(</span><span class="kr">thread</span><span class="o">::</span><span class="n">priority</span><span class="o">::</span><span class="n">high</span><span class="p">);</span>
 
   <span class="c1">// Do something useful.
 </span>
@@ -1133,8 +1133,8 @@
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
-<span class="kr">thread</span><span class="o">::</span><span class="n">priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">sched_prio</span><span class="p">();</span>
-<span class="n">th</span><span class="p">.</span><span class="n">sched_prio</span><span class="p">(</span><span class="kr">thread</span><span class="o">::</span><span class="n">priority</span><span class="o">::</span><span class="n">high</span><span class="p">);</span>
+<span class="kr">thread</span><span class="o">::</span><span class="n">priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">priority</span><span class="p">();</span>
+<span class="n">th</span><span class="p">.</span><span class="n">priority</span><span class="p">(</span><span class="kr">thread</span><span class="o">::</span><span class="n">priority</span><span class="o">::</span><span class="n">high</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -1144,8 +1144,8 @@
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
-<span class="n">os_thread_priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">os_thread_get_sched_prio</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
-<span class="n">os_thread_set_sched_prio</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="n">os_thread_priority_high</span><span class="p">);</span>
+<span class="n">os_thread_priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">os_thread_get_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
+<span class="n">os_thread_set_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="n">os_thread_priority_high</span><span class="p">);</span>
 </code></pre>
 </div>
 
