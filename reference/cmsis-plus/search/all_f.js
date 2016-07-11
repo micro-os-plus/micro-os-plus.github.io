@@ -88,6 +88,7 @@ var searchData=
   ['os_5fchildren_5fthreads_5fiter_5fget',['os_children_threads_iter_get',['../group__cmsis-plus-rtos-c-thread.html#ga71148b48db512fcb061b162c3d768aa2',1,'os_children_threads_iter_get(os_iterator_t iterator):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-thread.html#ga71148b48db512fcb061b162c3d768aa2',1,'os_children_threads_iter_get(os_iterator_t iterator):&#160;os-c-wrapper.cpp']]],
   ['os_5fchildren_5fthreads_5fiter_5fnext',['os_children_threads_iter_next',['../group__cmsis-plus-rtos-c-thread.html#ga19695f0be16a29ee75624c6f3aff5335',1,'os_children_threads_iter_next(os_iterator_t iterator):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-thread.html#ga19695f0be16a29ee75624c6f3aff5335',1,'os_children_threads_iter_next(os_iterator_t iterator):&#160;os-c-wrapper.cpp']]],
   ['os_5fclock_5fduration_5ft',['os_clock_duration_t',['../group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb',1,'os-c-decls.h']]],
+  ['os_5fclock_5fget_5fhrclock',['os_clock_get_hrclock',['../group__cmsis-plus-rtos-c-clock.html#ga181619f09a43310e8add2c7e0cb94cb6',1,'os_clock_get_hrclock(void):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-clock.html#ga181619f09a43310e8add2c7e0cb94cb6',1,'os_clock_get_hrclock(void):&#160;os-c-wrapper.cpp']]],
   ['os_5fclock_5fget_5fname',['os_clock_get_name',['../group__cmsis-plus-rtos-c-clock.html#ga4d4a96cd3f25cf32bdaf27c3439fc0a4',1,'os_clock_get_name(os_clock_t *clock):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-clock.html#ga4d4a96cd3f25cf32bdaf27c3439fc0a4',1,'os_clock_get_name(os_clock_t *clock):&#160;os-c-wrapper.cpp']]],
   ['os_5fclock_5fget_5foffset',['os_clock_get_offset',['../group__cmsis-plus-rtos-c-clock.html#ga5bf21e10e72c6abc8c23d76cb1385938',1,'os_clock_get_offset(os_clock_t *clock):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-clock.html#ga5bf21e10e72c6abc8c23d76cb1385938',1,'os_clock_get_offset(os_clock_t *clock):&#160;os-c-wrapper.cpp']]],
   ['os_5fclock_5fget_5frtclock',['os_clock_get_rtclock',['../group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06',1,'os_clock_get_rtclock(void):&#160;os-c-wrapper.cpp'],['../group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06',1,'os_clock_get_rtclock(void):&#160;os-c-wrapper.cpp']]],
@@ -573,9 +574,9 @@ var searchData=
   ['serial',['serial',['../namespaceos_1_1driver_1_1serial.html',1,'os::driver']]],
   ['statistics',['statistics',['../namespaceos_1_1rtos_1_1scheduler_1_1statistics.html',1,'os::rtos::scheduler']]],
   ['statistics',['statistics',['../namespaceos_1_1rtos_1_1statistics.html',1,'os::rtos']]],
-  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1this__thread.html',1,'os::rtos']]],
   ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1port_1_1this__thread.html',1,'os::rtos::port']]],
   ['this_5fthread',['this_thread',['../namespaceos_1_1estd_1_1this__thread.html',1,'os::estd']]],
+  ['this_5fthread',['this_thread',['../namespaceos_1_1rtos_1_1this__thread.html',1,'os::rtos']]],
   ['trace',['trace',['../namespaceos_1_1trace.html',1,'os']]],
   ['usb',['usb',['../namespaceos_1_1driver_1_1usb.html',1,'os::driver']]]
 ];

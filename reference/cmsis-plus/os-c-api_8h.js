@@ -5,6 +5,7 @@ var os_c_api_8h =
     [ "os_children_threads_iter_end", "group__cmsis-plus-rtos-c-thread.html#gaf886f3c9e579055df6b4c28eab86147b", null ],
     [ "os_children_threads_iter_get", "group__cmsis-plus-rtos-c-thread.html#ga71148b48db512fcb061b162c3d768aa2", null ],
     [ "os_children_threads_iter_next", "group__cmsis-plus-rtos-c-thread.html#ga19695f0be16a29ee75624c6f3aff5335", null ],
+    [ "os_clock_get_hrclock", "group__cmsis-plus-rtos-c-clock.html#ga181619f09a43310e8add2c7e0cb94cb6", null ],
     [ "os_clock_get_name", "group__cmsis-plus-rtos-c-clock.html#ga4d4a96cd3f25cf32bdaf27c3439fc0a4", null ],
     [ "os_clock_get_offset", "group__cmsis-plus-rtos-c-clock.html#ga5bf21e10e72c6abc8c23d76cb1385938", null ],
     [ "os_clock_get_rtclock", "group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06", null ],

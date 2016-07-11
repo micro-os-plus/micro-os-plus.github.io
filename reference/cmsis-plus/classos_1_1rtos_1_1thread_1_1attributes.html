@@ -152,17 +152,17 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:abf51b5739bec481b8de2430a5567e0a6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#abf51b5739bec481b8de2430a5567e0a6">th_stack_address</a> = 0</td></tr>
-<tr class="memdesc:abf51b5739bec481b8de2430a5567e0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the user defined storage for the memory pool stack.  <a href="#abf51b5739bec481b8de2430a5567e0a6">More...</a><br /></td></tr>
+<tr class="memdesc:abf51b5739bec481b8de2430a5567e0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the user defined storage for the thread stack.  <a href="#abf51b5739bec481b8de2430a5567e0a6">More...</a><br /></td></tr>
 <tr class="separator:abf51b5739bec481b8de2430a5567e0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a238f705bd944ce07ea724442e79a8cf3"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#a238f705bd944ce07ea724442e79a8cf3">th_stack_size_bytes</a> = 0</td></tr>
-<tr class="memdesc:a238f705bd944ce07ea724442e79a8cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the user defined storage for the memory pool stack.  <a href="#a238f705bd944ce07ea724442e79a8cf3">More...</a><br /></td></tr>
+<tr class="memdesc:a238f705bd944ce07ea724442e79a8cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the user defined storage for the thread stack, in bytes.  <a href="#a238f705bd944ce07ea724442e79a8cf3">More...</a><br /></td></tr>
 <tr class="separator:a238f705bd944ce07ea724442e79a8cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34cbdf3c66fcb0f2fede61cf8ed0aabf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#a34cbdf3c66fcb0f2fede61cf8ed0aabf">th_priority</a> = <a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c">priority::normal</a></td></tr>
-<tr class="memdesc:a34cbdf3c66fcb0f2fede61cf8ed0aabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread priority attribute.  <a href="#a34cbdf3c66fcb0f2fede61cf8ed0aabf">More...</a><br /></td></tr>
+<tr class="memdesc:a34cbdf3c66fcb0f2fede61cf8ed0aabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread initial priority.  <a href="#a34cbdf3c66fcb0f2fede61cf8ed0aabf">More...</a><br /></td></tr>
 <tr class="separator:a34cbdf3c66fcb0f2fede61cf8ed0aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:a884c121715e76abbea32e132876884fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1clock.html">rtos::clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clocked__attributes.html#a884c121715e76abbea32e132876884fb">clock</a> = nullptr</td></tr>
-<tr class="memdesc:a884c121715e76abbea32e132876884fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock.  <a href="#a884c121715e76abbea32e132876884fb">More...</a><br /></td></tr>
+<tr class="memdesc:a884c121715e76abbea32e132876884fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the clock to use for timeouts.  <a href="#a884c121715e76abbea32e132876884fb">More...</a><br /></td></tr>
 <tr class="separator:a884c121715e76abbea32e132876884fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -189,7 +189,7 @@ Public Attributes</h2></td></tr>
 <p>Create a thread attributes object. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01955">1955</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01971">1971</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -237,10 +237,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to clock. </p>
-<p>If <code>nullptr</code>, the default clock is the <a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a>. </p>
+<p>Address of the clock to use for timeouts. </p>
+<p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock. ">os::rtos::rtclock</a></code>, or any other user object derived from class <code>clock</code>.</p>
+<p>If <code>nullptr</code>, the default clock is <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a></code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00498">498</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00501">501</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -254,9 +255,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Thread priority attribute. </p>
+<p>Thread initial priority. </p>
+<p>If 0, the default is <code><a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c">thread::priority::normal</a></code>.</p>
+<p>A convenient and explicit variant to this attribute is to call <code><a class="el" href="classos_1_1rtos_1_1thread.html#a04ccfc9004616fb1d3a9e8aa972440ba" title="Set the dynamic scheduling priority. ">thread::sched_prio</a> (priority_t)</code> at the beginning of the thread function. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00804">804</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00820">820</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -270,9 +273,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Address of the user defined storage for the memory pool stack. </p>
+<p>Address of the user defined storage for the thread stack. </p>
+<p>If <code>nullptr</code>, the default is to dynamically allocate the stack. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00794">794</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00796">796</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -286,9 +290,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Size of the user defined storage for the memory pool stack. </p>
+<p>Size of the user defined storage for the thread stack, in bytes. </p>
+<p>If 0, the default is <code><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a99a6469f91a2fbf8db518d6052b48dd1" title="Get the default stack size. ">thread::stack::default_size()</a></code>.</p>
+<p>A convenient and explicit variant to this attribute is to call <code><a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a99a6469f91a2fbf8db518d6052b48dd1" title="Get the default stack size. ">thread::stack::default_size</a> (std::size_t)</code> just before creating the thread. However mind setting this from different threads at the same time. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00799">799</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00809">809</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>

@@ -140,21 +140,21 @@ $(document).ready(function(){initNavTree('structos__thread__attr__s.html','');})
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8e316a66358b1978b9064ee3bf0af739"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__attr__s.html#a8e316a66358b1978b9064ee3bf0af739">clock</a></td></tr>
-<tr class="memdesc:a8e316a66358b1978b9064ee3bf0af739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to clock object.  <a href="#a8e316a66358b1978b9064ee3bf0af739">More...</a><br /></td></tr>
+<tr class="memdesc:a8e316a66358b1978b9064ee3bf0af739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the clock to use for timeouts.  <a href="#a8e316a66358b1978b9064ee3bf0af739">More...</a><br /></td></tr>
 <tr class="separator:a8e316a66358b1978b9064ee3bf0af739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16679040f25d405fe1fab78b6a0b6c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">os_thread_prio_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__attr__s.html#a16679040f25d405fe1fab78b6a0b6c8b">th_priority</a></td></tr>
 <tr class="memdesc:a16679040f25d405fe1fab78b6a0b6c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread initial priority.  <a href="#a16679040f25d405fe1fab78b6a0b6c8b">More...</a><br /></td></tr>
 <tr class="separator:a16679040f25d405fe1fab78b6a0b6c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a691fccf786502a84d1fcb0d45f563a89"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__attr__s.html#a691fccf786502a84d1fcb0d45f563a89">th_stack_address</a></td></tr>
-<tr class="memdesc:a691fccf786502a84d1fcb0d45f563a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to user provided stack area.  <a href="#a691fccf786502a84d1fcb0d45f563a89">More...</a><br /></td></tr>
+<tr class="memdesc:a691fccf786502a84d1fcb0d45f563a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the user defined storage for the thread stack.  <a href="#a691fccf786502a84d1fcb0d45f563a89">More...</a><br /></td></tr>
 <tr class="separator:a691fccf786502a84d1fcb0d45f563a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae36b916952381ab914b4c0e8cbe54e0c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos__thread__attr__s.html#ae36b916952381ab914b4c0e8cbe54e0c">th_stack_size_bytes</a></td></tr>
-<tr class="memdesc:ae36b916952381ab914b4c0e8cbe54e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of user provided stack area, in bytes.  <a href="#ae36b916952381ab914b4c0e8cbe54e0c">More...</a><br /></td></tr>
+<tr class="memdesc:ae36b916952381ab914b4c0e8cbe54e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the user defined storage for the thread stack, in bytes.  <a href="#ae36b916952381ab914b4c0e8cbe54e0c">More...</a><br /></td></tr>
 <tr class="separator:ae36b916952381ab914b4c0e8cbe54e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread attributes. </p>
-<p>Initialise this structure with <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga02835e5e5561d82c40b4c99db7270c4b" title="Initialise the thread attributes. ">os_thread_attr_init()</a> and then set any of the individual members directly.</p>
+<p>Initialise this structure with <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga02835e5e5561d82c40b4c99db7270c4b" title="Initialise the thread attributes. ">os_thread_attr_init()</a></code>, and then set any of the individual members directly.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html" title="Thread attributes. ">os::rtos::thread::attributes</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00463">463</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
@@ -169,9 +169,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to clock object. </p>
+<p>Address of the clock to use for timeouts. </p>
+<p>It may be <code><a class="el" href="group__cmsis-plus-rtos-c-clock.html#gad306883e705c7b1c46708b3cf6fad57d" title="Get sysclock (the system clock). ">os_clock_get_sysclock()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06" title="Get rtclock (the real-time clock). ">os_clock_get_rtclock()</a></code>, or any other user object derived from class <code>clock</code>.</p>
+<p>If <code>NULL</code>, the default is <code>sysclock</code>. </p>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00468">468</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00473">473</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -186,8 +188,10 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Thread initial priority. </p>
+<p>If 0, the default is <code>os_thread_priority_normal</code>.</p>
+<p>A convenient and explicit variant to this attribute is to call <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga376474e581ad949e6457f6c5cc66d069" title="Set the thread dynamic scheduling priority. ">os_thread_set_prio()</a></code> at the beginning of the thread function. </p>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00483">483</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00504">504</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -201,9 +205,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to user provided stack area. </p>
+<p>Address of the user defined storage for the thread stack. </p>
+<p>If <code>NULL</code>, the default is to dynamically allocate the stack. </p>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00473">473</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00480">480</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -217,9 +222,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Size of user provided stack area, in bytes. </p>
+<p>Size of the user defined storage for the thread stack, in bytes. </p>
+<p>If 0, the default is <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaeb909418faf136e8830ba94e8e52f353" title="Get the default stack size. ">os_thread_stack_get_default_size()</a></code>.</p>
+<p>A convenient and explicit variant to this attribute is to call <code>os_thread_stack_set_default_size ()</code> just before creating the thread. However mind setting this from different threads at the same time. </p>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00478">478</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00493">493</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
