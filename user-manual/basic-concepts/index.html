@@ -224,7 +224,7 @@
 
         
 <h1 class="page-title">Basic concepts</h1>
-<p class="last-modified">Last modified on Wed Jul  6 21:26:50 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Jul 14 17:25:53 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -328,10 +328,10 @@
 <a href="#passing-messages"><span class="tocnumber">8.2</span> <span class="toctext">Passing messages</span></a>
 </li>
 <li class="toc_level-2 toc_section-30">
-<a href="#event-flags"><span class="tocnumber">8.3</span> <span class="toctext">Event flags</span></a>
+<a href="#semaphores"><span class="tocnumber">8.3</span> <span class="toctext">Semaphores</span></a>
 </li>
 <li class="toc_level-2 toc_section-31">
-<a href="#semaphores"><span class="tocnumber">8.4</span> <span class="toctext">Semaphores</span></a>
+<a href="#event-flags"><span class="tocnumber">8.4</span> <span class="toctext">Event flags</span></a>
 </li>
 </ul>
 </li>
@@ -708,15 +708,15 @@
 
 <p>Threads can block while waiting for messages, and as such do not waste CPU cycles.</p>
 
+<h3 id="semaphores">Semaphores</h3>
+
+<p>Semaphores, and especially binary semaphores, are commonly used to pass notifications between different parts of the code, mostly from ISRs to threads. However, they have a richer semantic, especially the counting semaphores, and can also be used to keep track of the number of available resources (for example total positions in a circular buffer), which somehow places them at the border with managing shared resources.</p>
+
 <h3 id="event-flags">Event flags</h3>
 
 <p>An event flag is a binary variable, representing a specific condition that a thread can wait for. When the condition occurs, the flag is raised and the thread is resumed.</p>
 
 <p>Multiple flags can be grouped and the thread can be notified when all or any of the flags was raised.</p>
-
-<h3 id="semaphores">Semaphores</h3>
-
-<p>Semaphores can also be used to pass notifications between different parts of the code, although they generally are associated with protecting access to shared resources.</p>
 
 <h2 id="managing-common-resources">Managing common resources</h2>
 
@@ -760,7 +760,7 @@
 
 <p>µOS++ mutexes have a built-in priority inheritance mechanism, which avoids unbound priority inversions.</p>
 
-<p>However, mutexes are slightly slower (in execution time) than semaphores since the priority of the owner may need to be changed, which requires CPU processing.</p>
+<p>However, mutexes are slightly slower (in execution time) than semaphores since the priority of the owner may need to be changed, which requires more CPU processing.</p>
 
 <h3 id="should-a-semaphore-or-a-mutex-be-used">Should a semaphore or a mutex be used?</h3>
 
@@ -768,7 +768,7 @@
 
 <p>A semaphore can be used instead of a mutex if none of the threads competing for the shared resource have deadlines to be satisfied.</p>
 
-<p>However, if there are deadlines to meet, you should use a mutex prior to accessing shared resources. Semaphores are subject to unbounded priority inversions, while mutex are not.</p>
+<p>However, if there are deadlines to meet, you should use a mutex prior to accessing shared resources. Semaphores are subject to unbounded priority inversions, while mutexes are not.</p>
 
 <h3 id="deadlock-or-deadly-embrace">Deadlock (or deadly embrace)</h3>
 

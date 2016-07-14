@@ -226,7 +226,7 @@
 
         
 <h1 class="page-title">Threads</h1>
-<p class="last-modified">Last modified on Mon Jul 11 18:34:25 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Jul 14 17:26:27 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -430,6 +430,8 @@
 </span>  <span class="n">th</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
   <span class="c1">// ...
+</span>
+  <span class="c1">// The local thread is destroyed automatically before exiting this block.
 </span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
@@ -455,7 +457,7 @@
 <span class="p">{</span>
   <span class="c1">// ...
 </span>
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
@@ -530,7 +532,7 @@
   <span class="kt">uint8_t</span> <span class="n">payload</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
 <span class="p">}</span> <span class="n">msg_t</span><span class="p">;</span>
 
-<span class="c1">// Storage for the queue object.
+<span class="c1">// Global static storage for the queue object instance.
 // The queue itself will be dynamically allocated.
 </span><span class="n">os_mqueue_t</span> <span class="n">mq</span><span class="p">;</span>
 
@@ -578,9 +580,9 @@
 
 <h2 id="creating-threads">Creating threads</h2>
 
-<p>Creating threads is probably the most complex part of any RTOS API, so it is unfortunate that it is usually the first encountered when dealing with a new RTOS, but threads must be mastered first as they are the most fundamental component of a multitasking system.</p>
+<p>Creating threads is probably the most complex part of any RTOS API, and it is unfortunate that this is usually one of the first issues encountered when dealing with a new RTOS, but threads must be mastered as soon as possible as they are a fundamental component of multitasking systems.</p>
 
-<p>For flexibility reasons, µOS++ has a rich set of functions for creating threads. Threads can use either statically or dynamically allocated stacks, threads can be created as local objects on the function stack, or as global objects, threads can be created with default characteristics or with custom attributes, and so on.</p>
+<p>For convenience reasons, µOS++ has a rich set of functions for creating threads. Threads can use either statically or dynamically allocated stacks, threads can be created as local objects on the function stack, or as global objects, threads can be created with default characteristics or with custom attributes, and so on.</p>
 
 <p>For infinite loop threads, the easiest way to create threads is to make them global objects.</p>
 
@@ -599,9 +601,9 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
@@ -637,6 +639,9 @@
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="c1">// All threads are automatically destroyed if os_main() returns.
+</span>
 </code></pre>
 </div>
 
@@ -652,17 +657,17 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Static storage for the thread object.
+<span class="c1">// Global static storage for the thread object instance.
 </span><span class="n">os_thread_t</span> <span class="n">th1</span><span class="p">;</span>
 
-<span class="c1">// Static storage for the thread object.
+<span class="c1">// Global static storage for the thread object instance.
 </span><span class="n">os_thread_t</span> <span class="n">th2</span><span class="p">;</span>
 
 <span class="cp">#define MY_STACK_SIZE_BYTES 3000
@@ -670,7 +675,7 @@
 </span><span class="n">os_thread_stack_allocation_element_t</span>
 <span class="n">th3_stack</span><span class="p">[</span><span class="n">MY_STACK_SIZE_BYTES</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="n">os_thread_stack_allocation_element_t</span><span class="p">)];</span>
 
-<span class="c1">// Static storage for the thread object.
+<span class="c1">// Global static storage for the thread object instance.
 </span><span class="n">os_thread_t</span> <span class="n">th3</span><span class="p">;</span>
 
 <span class="kt">int</span>
@@ -720,7 +725,7 @@
 </code></pre>
 </div>
 
-<p>If, in C++, for a better control, it is required to create global thread objects, but construct them manually, use the placement <code class="highlighter-rouge">new</code> operator.</p>
+<p>In C++, if it is necessary to control the moment when global objects instances are created, it is possible to separately allocate the storage as global variables, then use the placement <code class="highlighter-rouge">new</code> operator to initialise them.</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="c1">/// @file app-main.cpp
@@ -735,14 +740,15 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Static storage for the thread object.
+<span class="c1">// Global static storage for the thread object instance.
+// This storage is set to 0 as any uninitialised variable.
 </span><span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="kr">thread</span><span class="p">),</span> <span class="k">alignof</span><span class="p">(</span><span class="kr">thread</span><span class="p">)</span><span class="o">&gt;::</span><span class="n">type</span> <span class="n">th1</span><span class="p">;</span>
 
 <span class="kt">int</span>
@@ -753,21 +759,30 @@
   <span class="c1">// Use placement new, to explicitly call the constructor
 </span>  <span class="c1">// and initialise the thread.
 </span>  <span class="k">new</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">)</span> <span class="kr">thread</span> <span class="p">{</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+
+  <span class="c1">// Local static storage for the thread object instance.
+</span>  <span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="kr">thread</span><span class="p">),</span> <span class="k">alignof</span><span class="p">(</span><span class="kr">thread</span><span class="p">)</span><span class="o">&gt;::</span><span class="n">type</span> <span class="n">th2</span><span class="p">;</span>
+
+  <span class="c1">// Use placement new, to explicitly call the constructor
+</span>  <span class="c1">// and initialise the thread.
+</span>  <span class="k">new</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">)</span> <span class="kr">thread</span> <span class="p">{</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+
   <span class="c1">// ...
 </span>
   <span class="c1">// Wait for the thread to terminate.
 </span>  <span class="n">th1</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
-  <span class="c1">// For completeness, call the thread destructor, which for placement new
+  <span class="c1">// For completeness, call the threads destructors, which for placement new
 </span>  <span class="c1">// is no longer called automatically.
 </span>  <span class="n">th1</span><span class="p">.</span><span class="o">~</span><span class="kr">thread</span><span class="p">();</span>
+  <span class="n">th2</span><span class="p">.</span><span class="o">~</span><span class="kr">thread</span><span class="p">();</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Threads objects can also be created on the local stack, for example on the main thread stack. Just be sure the stack is large enough to store all defined local objects.</p>
+<p>Threads objects instances can also be created on the local stack, for example on the main thread stack. Just be sure the stack is large enough to store all defined local objects.</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="c1">/// @file app-main.cpp
@@ -782,9 +797,9 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
@@ -815,6 +830,10 @@
   <span class="c1">// Create a thread; the stack is statically allocated.
 </span>  <span class="kr">thread</span> <span class="n">th3</span> <span class="p">{</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="n">attr</span> <span class="p">};</span>
 
+  <span class="c1">// Beware of local static instances, since they'll use atexit()
+</span>  <span class="c1">// to register the destructor; avoid and prefer placement new, as before.
+</span>  <span class="c1">// static thread th4 { "th4", th_func, nullptr };
+</span>
   <span class="c1">// ...
 </span>
   <span class="c1">// Wait for the threads to terminate.
@@ -822,7 +841,8 @@
   <span class="n">th2</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
   <span class="n">th3</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// The local threads are destroyed automatically before exiting this block.
+</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -839,9 +859,9 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
@@ -856,7 +876,7 @@
 <span class="p">{</span>
   <span class="c1">// ...
 </span>
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th1</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
@@ -870,7 +890,7 @@
   <span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">my_allocator_allocate</span><span class="p">(</span><span class="n">my_size</span><span class="p">);</span>
   <span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="n">my_size</span><span class="p">;</span>
 
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th2</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the user allocator.
@@ -881,7 +901,7 @@
   <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">th3_stack</span><span class="p">;</span>
   <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
 
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th3</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is statically allocated.
@@ -951,14 +971,15 @@
   <span class="c1">// Wait for the thread to terminate.
 </span>  <span class="n">th1</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// The local thread is destroyed automatically before exiting this block.
+</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>The expected standard implementation dynamically allocates the underlying <code class="highlighter-rouge">rtos::thread</code> object, which in turn allocates the stack; it is not possible to configure static stacks with ISO C++ threads, neither to set a name to the thread.</p>
+<p>The expected standard implementation dynamically allocates the underlying <code class="highlighter-rouge">rtos::thread</code> object instance, which in turn allocates the stack; it is not possible to configure static stacks with ISO C++ threads, neither to set a name for the thread.</p>
 
-<p>To be noted that standard C++ threads can have any number of arguments. The internal implementation uses tuples and std::bind, which also imply a dynamic memory allocation.</p>
+<p>To be noted that standard C++ threads can have any number of arguments. The internal implementation uses tuples and <code class="highlighter-rouge">std::bind</code>, which also imply a dynamic memory allocation.</p>
 
 <p>For more details, please read the <em>ISO/IEC 14882:2011(E), Programming Languages – C++</em> specifications.</p>
 
@@ -1020,9 +1041,9 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1044,7 +1065,8 @@
   <span class="c1">// Wait for the thread to terminate.
 </span>  <span class="n">th1</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// The local thread is destroyed automatically before exiting this block.
+</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -1061,9 +1083,9 @@
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="c1">// Do something useful.
-</span>  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="c1">// Do something useful.
+</span>    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1077,7 +1099,7 @@
   <span class="n">os_thread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
   <span class="n">attr</span><span class="p">.</span><span class="n">th_priority</span> <span class="o">=</span> <span class="n">os_thread_priority_high</span><span class="p">;</span>
 
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th1</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
@@ -1103,9 +1125,9 @@
 
 <h3 id="getting-the-thread-name">Getting the thread name</h3>
 
-<p>The thread name is a string defined during thread creation. It is generally used to identify the thread during debugging sessions.</p>
+<p>The thread name is an optional string defined during thread creation. It is generally used to identify the thread during debugging sessions.</p>
 
-<p>The APIs is simple:</p>
+<p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
@@ -1114,7 +1136,7 @@
 </code></pre>
 </div>
 
-<p>A similar example, but written in C:</p>
+<p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
@@ -1128,7 +1150,7 @@
 
 <p>The thread priority can be accessed and modified by the thread itself, or by another thread.</p>
 
-<p>The APIs is simple:</p>
+<p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
@@ -1138,7 +1160,7 @@
 </code></pre>
 </div>
 
-<p>A similar example, but written in C:</p>
+<p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
@@ -1153,7 +1175,7 @@
 
 <p>The <code class="highlighter-rouge">thread::stack</code> is a separate object, managing the thread stack; the stack storage itself is not included in this object, but only a pointer to it is available.</p>
 
-<p>The APIs is simple:</p>
+<p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
@@ -1168,7 +1190,7 @@
 </code></pre>
 </div>
 
-<p>A similar example, but written in C:</p>
+<p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
@@ -1188,7 +1210,7 @@
 
 <p>The thread user storage is a user defined structure added to each thread storage.</p>
 
-<p>The APIs is simple:</p>
+<p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
@@ -1233,9 +1255,9 @@
   <span class="c1">// Block on a long sleep.
 </span>  <span class="n">result_t</span> <span class="n">res</span> <span class="o">=</span> <span class="n">sysclock</span><span class="p">.</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">99999999</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">EINTR</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">this_thread</span><span class="o">::</span><span class="kr">thread</span><span class="p">().</span><span class="n">interrupt</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">this_thread</span><span class="o">::</span><span class="kr">thread</span><span class="p">().</span><span class="n">interrupt</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1257,7 +1279,8 @@
   <span class="c1">// Wait for the thread to terminate.
 </span>  <span class="n">th1</span><span class="p">.</span><span class="n">join</span><span class="p">();</span>
 
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="c1">// The local thread is destroyed automatically before exiting this block.
+</span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -1275,9 +1298,9 @@
   <span class="c1">// Block on a long sleep.
 </span>  <span class="n">os_result_t</span> <span class="n">res</span> <span class="o">=</span> <span class="n">os_sysclock_sleep_for</span><span class="p">(</span><span class="mi">99999999</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">EINTR</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">os_thread_interrupt</span><span class="p">(</span><span class="n">os_this_thread</span><span class="p">(),</span> <span class="nb">false</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">os_thread_interrupt</span><span class="p">(</span><span class="n">os_this_thread</span><span class="p">(),</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1287,7 +1310,7 @@
 <span class="p">{</span>
   <span class="c1">// ...
 </span>
-  <span class="c1">// Local storage for the thread object.
+  <span class="c1">// Local storage for the thread object instance.
 </span>  <span class="n">os_thread_t</span> <span class="n">th1</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
@@ -1450,9 +1473,9 @@
 </span>  <span class="kr">thread</span><span class="o">::</span><span class="n">stack</span><span class="o">&amp;</span> <span class="n">st</span> <span class="o">=</span> <span class="n">this_thread</span><span class="o">::</span><span class="kr">thread</span><span class="p">().</span><span class="n">stack</span><span class="p">();</span>
   <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">available</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="n">available</span><span class="p">();</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">available</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
-  <span class="p">{</span>
-    <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Low stack!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Low stack!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="c1">// Do something.
 </span>
@@ -1477,9 +1500,9 @@
 </span>  <span class="n">os_thread_stack_t</span><span class="o">*</span> <span class="n">st</span> <span class="o">=</span> <span class="n">os_thread_get_stack</span><span class="p">(</span><span class="n">os_this_thread</span><span class="p">());</span>
   <span class="kt">size_t</span> <span class="n">available</span> <span class="o">=</span> <span class="n">os_thread_stack_get_available</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">available</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">os_thread_stack_get_size</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
-  <span class="p">{</span>
-    <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Low stack!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Low stack!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="c1">// Do something.
 </span>
@@ -1573,7 +1596,7 @@
 <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">th3_stack</span><span class="p">;</span>
 <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
 
-<span class="c1">// Local storage for the thread object.
+<span class="c1">// Local storage for the thread object instance.
 </span><span class="n">os_thread_t</span> <span class="n">th3</span><span class="p">;</span>
 
 <span class="c1">// Create a thread; the stack is statically allocated.
@@ -1595,7 +1618,7 @@
 
 <p>The idle thread manages a list of threads terminated and waiting to be destroyed. The <code class="highlighter-rouge">thread::exit()</code> call links the terminating thread to this list, since it cannot destroy the thread while still running on the thread stack.</p>
 
-<p>When the idle is resumed, it first checks this list, and, if any threads are present, they are fully destroyed and possibly the stack space is deallocated.</p>
+<p>When the idle thread is resumed, it first checks this list, and, if any threads are present, they are fully destroyed and possibly the stack space is deallocated.</p>
 
 <p>When the idle thread has nothing else to do, it places the CPU into sleep, and waits for the next interrupt (the Cortex-M devices use the <strong>Wait For Interrupt - WFI</strong> instruction for this).</p>
 

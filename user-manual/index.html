@@ -224,7 +224,7 @@
 
         
 <h1 class="page-title">User's manual</h1>
-<p class="last-modified">Last modified on Sun Jul 10 12:28:54 2016 UTC.</p>
+<p class="last-modified">Last modified on Thu Jul 14 17:25:53 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -255,16 +255,16 @@
 <a href="#thread-event-flagsuser-manualthread-event-flags"><span class="tocnumber">1.5</span> <span class="toctext">Thread event flags</span></a>
 </li>
 <li class="toc_level-2 toc_section-7">
-<a href="#semaphores"><span class="tocnumber">1.6</span> <span class="toctext">Semaphores</span></a>
+<a href="#semaphoresuser-manualsemaphores"><span class="tocnumber">1.6</span> <span class="toctext">Semaphores</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#mutexes"><span class="tocnumber">1.7</span> <span class="toctext">Mutexes</span></a>
+<a href="#event-flags"><span class="tocnumber">1.7</span> <span class="toctext">Event flags</span></a>
 </li>
 <li class="toc_level-2 toc_section-9">
-<a href="#condition-variables"><span class="tocnumber">1.8</span> <span class="toctext">Condition variables</span></a>
+<a href="#mutexes"><span class="tocnumber">1.8</span> <span class="toctext">Mutexes</span></a>
 </li>
 <li class="toc_level-2 toc_section-10">
-<a href="#event-flags"><span class="tocnumber">1.9</span> <span class="toctext">Event flags</span></a>
+<a href="#condition-variables"><span class="tocnumber">1.9</span> <span class="toctext">Condition variables</span></a>
 </li>
 <li class="toc_level-2 toc_section-11">
 <a href="#message-queues"><span class="tocnumber">1.10</span> <span class="toctext">Message queues</span></a>
@@ -409,24 +409,52 @@
   <li><a href="/user-manual/thread-event-flags/#other-thread-event-flags-functions">Other thread event flags functions</a></li>
 </ul>
 
-<h3 id="semaphores">Semaphores</h3>
+<h3 id="semaphoresuser-manualsemaphores">
+<a href="/user-manual/semaphores/">Semaphores</a>
+</h3>
 <ul>
-  <li>Overview
+  <li><a href="/user-manual/semaphores/#overview">Overview</a></li>
+  <li><a href="/user-manual/semaphores/#semaphore-types">Semaphore types</a>
     <ul>
-      <li>Binary semaphores</li>
-      <li>Counting semaphores</li>
+      <li><a href="/user-manual/semaphores/#binary-semaphores">Binary semaphores</a></li>
+      <li><a href="/user-manual/semaphores/#counting-semaphores">Counting semaphores</a></li>
     </ul>
   </li>
-  <li>Creating semaphores</li>
-  <li>Posting tokens to semaphores
+  <li><a href="/user-manual/semaphores/#creating-semaphores">Creating semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#posting-to-semaphores">Posting to semaphores</a>
     <ul>
-      <li>Posting tokens from ISRs</li>
+      <li><a href="/user-manual/semaphores/#posting-from-isrs">Posting from ISRs</a></li>
     </ul>
   </li>
-  <li>Waiting on semaphores</li>
-  <li>Multiple threads waiting on a semaphore</li>
-  <li>Other semaphore functions</li>
-  <li>Destroying semaphores</li>
+  <li><a href="/user-manual/semaphores/#waiting-on-semaphores">Waiting on semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#multiple-threads-waiting-on-a-semaphore">Multiple threads waiting on a semaphore</a></li>
+  <li><a href="/user-manual/semaphores/#other-semaphore-functions">Other semaphore functions</a>
+    <ul>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-name">Getting the semaphore name</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-value">Getting the semaphore value</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-maximum-value">Getting the semaphore maximum value</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-initial-value">Getting the semaphore initial value</a></li>
+    </ul>
+  </li>
+  <li><a href="/user-manual/semaphores/#destroying-semaphores">Destroying semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#using-semaphores-for-resource-management">Using semaphores for resource management</a></li>
+  <li><a href="/user-manual/semaphores/#unilateral-rendezvous">Unilateral rendezvous</a></li>
+  <li><a href="/user-manual/semaphores/#semaphore-pitfalls">Semaphore pitfalls</a></li>
+</ul>
+
+<h3 id="event-flags">Event flags</h3>
+<ul>
+  <li>Overview</li>
+  <li>Creating event flags</li>
+  <li>Raising event flags
+    <ul>
+      <li>Raising event flags from ISRs</li>
+    </ul>
+  </li>
+  <li>Waiting for event flags</li>
+  <li>Other event flags functions</li>
+  <li>Multiple threads waiting on event flags</li>
+  <li>Destroying event flags</li>
 </ul>
 
 <h3 id="mutexes">Mutexes</h3>
@@ -452,21 +480,6 @@
 <ul>
   <li>Overview</li>
   <li>TODO</li>
-</ul>
-
-<h3 id="event-flags">Event flags</h3>
-<ul>
-  <li>Overview</li>
-  <li>Creating event flags</li>
-  <li>Raising event flags
-    <ul>
-      <li>Raising event flags from ISRs</li>
-    </ul>
-  </li>
-  <li>Waiting for event flags</li>
-  <li>Other event flags functions</li>
-  <li>Multiple threads waiting on event flags</li>
-  <li>Destroying event flags</li>
 </ul>
 
 <h3 id="message-queues">Message queues</h3>

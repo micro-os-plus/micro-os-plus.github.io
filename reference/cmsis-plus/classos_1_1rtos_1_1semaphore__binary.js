@@ -1,8 +1,8 @@
 var classos_1_1rtos_1_1semaphore__binary =
 [
     [ "count_t", "classos_1_1rtos_1_1semaphore__binary.html#ad6dc71df534fae5ff113a4a010511df1", null ],
-    [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html#a23a07f69cfba347c7feeb127eb18cd10", null ],
-    [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html#ae1213bb2415264d4835048965332b25b", null ],
+    [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html#a853d5f9048fe423b9d44b1251686cb54", null ],
+    [ "semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html#a7c514c23a827be55eed37ea545101f13", null ],
     [ "~semaphore_binary", "classos_1_1rtos_1_1semaphore__binary.html#a037f760996f8b5ac05fe5f8202ad314c", null ],
     [ "initial_value", "classos_1_1rtos_1_1semaphore__binary.html#a332c9dcea56cfaf9321c778059d00b5f", null ],
     [ "max_value", "classos_1_1rtos_1_1semaphore__binary.html#a12882c8f1b9dac665087b6f88428a1b8", null ],

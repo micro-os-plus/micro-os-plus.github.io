@@ -53,10 +53,10 @@ var searchData=
   ['attributes',['attributes',['../classos_1_1rtos_1_1semaphore_1_1attributes.html',1,'os::rtos::semaphore']]],
   ['attributes',['attributes',['../classos_1_1rtos_1_1memory__pool_1_1attributes.html',1,'os::rtos::memory_pool']]],
   ['attributes',['attributes',['../classos_1_1rtos_1_1event__flags_1_1attributes.html',1,'os::rtos::event_flags']]],
-  ['attributes_5fbinary',['attributes_binary',['../classattributes__binary.html',1,'attributes_binary'],['../classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#ab41ad1903b9fda1ed5abdb7f9270b5d0',1,'os::rtos::semaphore::attributes_binary::attributes_binary()']]],
+  ['attributes_5fbinary',['attributes_binary',['../classattributes__binary.html',1,'attributes_binary'],['../classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a34814a61f03b95ec00a10309f0a20f25',1,'os::rtos::semaphore::attributes_binary::attributes_binary()']]],
   ['attributes_5fbinary',['attributes_binary',['../classos_1_1rtos_1_1semaphore_1_1attributes__binary.html',1,'os::rtos::semaphore']]],
   ['attributes_5fcounting',['attributes_counting',['../classos_1_1rtos_1_1semaphore_1_1attributes__counting.html',1,'os::rtos::semaphore']]],
-  ['attributes_5fcounting',['attributes_counting',['../classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a3267866f2212afecc82a79e78ef2a619',1,'os::rtos::semaphore::attributes_counting']]],
+  ['attributes_5fcounting',['attributes_counting',['../classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a5f2330065b8c01127482f39b3e6a892f',1,'os::rtos::semaphore::attributes_counting']]],
   ['auto_5fsplit',['auto_split',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a8b33a8711d66ddd6a324fca5db9d0c72',1,'os::driver::usb::host::Capabilities']]],
   ['available',['available',['../classos_1_1rtos_1_1thread_1_1stack.html#ae0ef4b3107daa7299d1e8dbe95d300f9',1,'os::rtos::thread::stack']]]
 ];
