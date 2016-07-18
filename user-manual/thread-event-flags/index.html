@@ -173,6 +173,15 @@
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
       <li><a href="/user-manual/features/">Features</a></li>
       <li><a href="/user-manual/threads/">Threads</a></li>
+      <li><a href="/user-manual/thread-event-flags/">Thread event flags</a></li>
+      <li><a href="/user-manual/semaphores/">Semaphores</a></li>
+      <li><a href="/user-manual/event-flags/">Event flags</a></li>
+      <li>Mutexes</li>
+      <li>Condition variables</li>
+      <li>Message queues</li>
+      <li>Memory pools</li>
+      <li>Software timers</li>
+      <li>Clocks</li>
     </ul>
   </li>
   <li><a href="/reference/cmsis-plus/">CMSIS++ <strong>reference</strong></a></li>
@@ -226,7 +235,7 @@
 
         
 <h1 class="page-title">Thread event flags</h1>
-<p class="last-modified">Last modified on Sun Jul 10 12:28:54 2016 UTC.</p>
+<p class="last-modified">Last modified on Mon Jul 18 22:10:14 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -303,13 +312,13 @@
 </span>  <span class="n">result_t</span> <span class="n">res</span><span class="p">;</span>
   <span class="n">res</span> <span class="o">=</span> <span class="n">this_thread</span><span class="o">::</span><span class="n">flags_timed_wait</span><span class="p">(</span><span class="mh">0x3</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">os_ok</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Both flags raised</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Both flags raised</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
   <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">ETIMEDOUT</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Timeout</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace</span><span class="o">::</span><span class="n">printf</span><span class="p">(</span><span class="s">"Timeout</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
@@ -355,13 +364,13 @@
 </span>  <span class="n">os_result_t</span> <span class="n">res</span><span class="p">;</span>
   <span class="n">res</span> <span class="o">=</span> <span class="n">os_this_thread_flags_timed_wait</span><span class="p">(</span><span class="mh">0x3</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">os_flags_mode_all</span> <span class="o">|</span> <span class="n">os_flags_mode_clear</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">os_ok</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Both flags raised</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Both flags raised</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
   <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">ETIMEDOUT</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Timeout</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="p">{</span>
+      <span class="n">trace_printf</span><span class="p">(</span><span class="s">"Timeout</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
 
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
@@ -399,7 +408,7 @@
 </code></pre>
 </div>
 
-<p>To check if any of the flags in the set is raised, use <code class="highlighter-rouge">flags::mode::any</code> (in C use <code class="highlighter-rouge">os_flags_mode_any</code>).</p>
+<p>To check if any flag in the set is raised, use <code class="highlighter-rouge">flags::mode::any</code> (in C use <code class="highlighter-rouge">os_flags_mode_any</code>).</p>
 
 <h2 id="other-thread-event-flags-functions">Other thread event flags functions</h2>
 

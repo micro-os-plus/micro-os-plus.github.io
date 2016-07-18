@@ -171,6 +171,15 @@
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
       <li><a href="/user-manual/features/">Features</a></li>
       <li><a href="/user-manual/threads/">Threads</a></li>
+      <li><a href="/user-manual/thread-event-flags/">Thread event flags</a></li>
+      <li><a href="/user-manual/semaphores/">Semaphores</a></li>
+      <li><a href="/user-manual/event-flags/">Event flags</a></li>
+      <li>Mutexes</li>
+      <li>Condition variables</li>
+      <li>Message queues</li>
+      <li>Memory pools</li>
+      <li>Software timers</li>
+      <li>Clocks</li>
     </ul>
   </li>
   <li><a href="/reference/cmsis-plus/">CMSIS++ <strong>reference</strong></a></li>
@@ -224,7 +233,7 @@
 
         
 <h1 class="page-title">User's manual</h1>
-<p class="last-modified">Last modified on Thu Jul 14 17:25:53 2016 UTC.</p>
+<p class="last-modified">Last modified on Mon Jul 18 22:10:14 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -258,7 +267,7 @@
 <a href="#semaphoresuser-manualsemaphores"><span class="tocnumber">1.6</span> <span class="toctext">Semaphores</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#event-flags"><span class="tocnumber">1.7</span> <span class="toctext">Event flags</span></a>
+<a href="#event-flagsuser-manualevent-flags"><span class="tocnumber">1.7</span> <span class="toctext">Event flags</span></a>
 </li>
 <li class="toc_level-2 toc_section-9">
 <a href="#mutexes"><span class="tocnumber">1.8</span> <span class="toctext">Mutexes</span></a>
@@ -375,6 +384,13 @@
       <li><a href="/user-manual/basic-concepts/#fragmentation">Fragmentation</a></li>
     </ul>
   </li>
+  <li><a href="/user-manual/basic-concepts/#real-time-clock">Real-time clock</a></li>
+  <li><a href="/user-manual/basic-concepts/#terms-to-use-with-caution">Terms to use with caution</a>
+    <ul>
+      <li><a href="/user-manual/basic-concepts/#kernel">Kernel</a></li>
+      <li><a href="/user-manual/basic-concepts/#tasks-vs-threads">Tasks vs threads</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="featuresuser-manualfeatures">
@@ -423,7 +439,7 @@
   <li><a href="/user-manual/semaphores/#creating-semaphores">Creating semaphores</a></li>
   <li><a href="/user-manual/semaphores/#posting-to-semaphores">Posting to semaphores</a>
     <ul>
-      <li><a href="/user-manual/semaphores/#posting-from-isrs">Posting from ISRs</a></li>
+      <li><a href="/user-manual/semaphores/#posting-to-semaphores-from-isrs">Posting to semaphores from ISRs</a></li>
     </ul>
   </li>
   <li><a href="/user-manual/semaphores/#waiting-on-semaphores">Waiting on semaphores</a></li>
@@ -439,22 +455,38 @@
   <li><a href="/user-manual/semaphores/#destroying-semaphores">Destroying semaphores</a></li>
   <li><a href="/user-manual/semaphores/#using-semaphores-for-resource-management">Using semaphores for resource management</a></li>
   <li><a href="/user-manual/semaphores/#unilateral-rendezvous">Unilateral rendezvous</a></li>
-  <li><a href="/user-manual/semaphores/#semaphore-pitfalls">Semaphore pitfalls</a></li>
-</ul>
-
-<h3 id="event-flags">Event flags</h3>
-<ul>
-  <li>Overview</li>
-  <li>Creating event flags</li>
-  <li>Raising event flags
+  <li><a href="/user-manual/semaphores/#semaphore-pitfalls">Semaphore pitfalls</a>
     <ul>
-      <li>Raising event flags from ISRs</li>
+      <li><a href="/user-manual/semaphores/#unbalanced-waitpost">Unbalanced wait()/post()</a></li>
+      <li><a href="/user-manual/semaphores/#recursive-deadlock">Recursive deadlock</a></li>
+      <li><a href="/user-manual/semaphores/#thread-termination-deadlock">Thread-termination deadlock</a></li>
+      <li><a href="/user-manual/semaphores/#priority-inversion">Priority inversion</a></li>
+      <li><a href="/user-manual/semaphores/#wrong-initialisation">Wrong initialisation</a></li>
     </ul>
   </li>
-  <li>Waiting for event flags</li>
-  <li>Other event flags functions</li>
-  <li>Multiple threads waiting on event flags</li>
-  <li>Destroying event flags</li>
+</ul>
+
+<h3 id="event-flagsuser-manualevent-flags">
+<a href="/user-manual/event-flags/">Event flags</a>
+</h3>
+<ul>
+  <li><a href="/user-manual/event-flags/#overview">Overview</a></li>
+  <li><a href="/user-manual/event-flags/#creating-event-flags">Creating event flags</a></li>
+  <li><a href="/user-manual/event-flags/#raising-event-flags">Raising event flags</a>
+    <ul>
+      <li><a href="/user-manual/event-flags/#raising-event-flags-from-isrs">Raising event flags from ISRs</a></li>
+    </ul>
+  </li>
+  <li><a href="/user-manual/event-flags/#waiting-for-event-flags">Waiting for event flags</a></li>
+  <li><a href="/user-manual/event-flags/#multiple-threads-waiting-on-event-flags">Multiple threads waiting on event flags</a></li>
+  <li><a href="/user-manual/event-flags/#other-event-flags-functions">Other event flags functions</a>
+    <ul>
+      <li><a href="/user-manual/event-flags/#getting-the-event-flags-name">Getting the event flags name</a></li>
+      <li><a href="/user-manual/event-flags/#getting-individual-flags">Getting individual flags</a></li>
+      <li><a href="/user-manual/event-flags/#clearing-individual-flags">Clearing individual flags</a></li>
+    </ul>
+  </li>
+  <li><a href="/user-manual/event-flags/#destroying-event-flags">Destroying event flags</a></li>
 </ul>
 
 <h3 id="mutexes">Mutexes</h3>
@@ -573,6 +605,12 @@
   <li><em>“Using the FreeRTOS Real Time Kernel”</em>, by Richard Barry</li>
   <li><em>“µC/OC-III The Real-Time Kernel - User’s Manual”</em>, by Micriµm</li>
   <li><em>“embOS &amp; embOS-MPU - Real-Time Operating System - CPU-independent - User &amp; Reference Guide”</em>, by SEGGER</li>
+</ul>
+
+<p>Other links:</p>
+
+<ul>
+  <li><a href="https://blog.feabhas.com/category/rtos/">The Feabhas Blog</a></li>
 </ul>
 
 <p>Many thanks for their impressive work and for providing the inspiration.</p>

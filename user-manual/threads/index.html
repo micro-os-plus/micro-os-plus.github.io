@@ -173,6 +173,15 @@
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
       <li><a href="/user-manual/features/">Features</a></li>
       <li><a href="/user-manual/threads/">Threads</a></li>
+      <li><a href="/user-manual/thread-event-flags/">Thread event flags</a></li>
+      <li><a href="/user-manual/semaphores/">Semaphores</a></li>
+      <li><a href="/user-manual/event-flags/">Event flags</a></li>
+      <li>Mutexes</li>
+      <li>Condition variables</li>
+      <li>Message queues</li>
+      <li>Memory pools</li>
+      <li>Software timers</li>
+      <li>Clocks</li>
     </ul>
   </li>
   <li><a href="/reference/cmsis-plus/">CMSIS++ <strong>reference</strong></a></li>
@@ -226,7 +235,7 @@
 
         
 <h1 class="page-title">Threads</h1>
-<p class="last-modified">Last modified on Thu Jul 14 17:26:27 2016 UTC.</p>
+<p class="last-modified">Last modified on Mon Jul 18 22:10:14 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -927,6 +936,8 @@
 </code></pre>
 </div>
 
+<p>The application programmer can create an unlimited number of threads (limited only by the available RAM).</p>
+
 <h3 id="isoiec-c-threads">ISO/IEC C++ threads</h3>
 
 <p>The 2011 release of the ISO/IEC C++ 14882 standard finally introduced a standard definition for the C++ threads objects.</p>
@@ -1125,7 +1136,7 @@
 
 <h3 id="getting-the-thread-name">Getting the thread name</h3>
 
-<p>The thread name is an optional string defined during thread creation. It is generally used to identify the thread during debugging sessions.</p>
+<p>The thread name is an optional string defined during thread object instance creation. It is generally used to identify the thread during debugging sessions.</p>
 
 <p>The C++ API is:</p>
 
@@ -1515,7 +1526,7 @@
 
 <h3 id="configuring-the-thread-stack-size">Configuring the thread stack size</h3>
 
-<p>The stack size can be specified during creation time for each thread, using the <code class="highlighter-rouge">th_stack_size_bytes</code> thread attribute. If attributes are not used, or the provided value is zero, a default value is used.</p>
+<p>The stack size can be specified during creation time for each thread, using the <code class="highlighter-rouge">th_stack_size_bytes</code> thread attribute. If attributes are not used, or the provided value is zero, a default value is supplied.</p>
 
 <p>This default value can be set at any time using <code class="highlighter-rouge">thread::stack::default_size(std::size_t)</code> (in C with <code class="highlighter-rouge">os_thread_stack_set_default_size(size_t)</code>), and applies to all threads created afterwords.</p>
 
