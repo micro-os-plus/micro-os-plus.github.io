@@ -12,6 +12,8 @@ var os_sched_8h =
     [ "initialize", "os-sched_8h.html#ab6cf4a77bd9f182fb9ee339e08b2289d", null ],
     [ "lock", "os-sched_8h.html#a192571f4400ae993fae3f589a9be128c", null ],
     [ "locked", "os-sched_8h.html#adc237cecdf686cfb10780a29931166a4", null ],
+    [ "preemptive", "os-sched_8h.html#adb57f891c4f1a22d19748fb4082c6e39", null ],
+    [ "preemptive", "os-sched_8h.html#a2521fd21b6096d59875323377a378adf", null ],
     [ "start", "os-sched_8h.html#a447a6a5aa512129d0ab5a28b0fce6890", null ],
     [ "started", "os-sched_8h.html#a6b69515f09f9b87c1488f1684aec5afa", null ],
     [ "unlock", "os-sched_8h.html#a02960f99e1e2aee1a748f46cab8545fd", null ]

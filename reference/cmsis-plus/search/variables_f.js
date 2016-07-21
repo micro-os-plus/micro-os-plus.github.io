@@ -6,7 +6,6 @@ var searchData=
   ['r2',['r2',['../structexception__stack__frame__s.html#acc4d022f30404d81a80a5e24e1b84b8b',1,'exception_stack_frame_s']]],
   ['r3',['r3',['../structexception__stack__frame__s.html#a87b4c3699526d548651abe9503aec0df',1,'exception_stack_frame_s']]],
   ['range',['range',['../structos_1_1rtos_1_1thread_1_1priority.html#ac6eda42298fb0342b8aa20ecf8096cbd',1,'os::rtos::thread::priority']]],
-  ['recursive_5finitializer',['recursive_initializer',['../classos_1_1rtos_1_1mutex.html#a9ff513834ed7545c8b978edfa51f88bb',1,'os::rtos::mutex']]],
   ['res_5f',['res_',['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#aaaca5dfb506220669ccb17736b965df1',1,'os::rtos::memory::polymorphic_allocator']]],
   ['return_5fok',['RETURN_OK',['../namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497',1,'os::driver']]],
   ['ri',['ri',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b',1,'os::driver::serial::Modem_status::ri()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#aabdcd81f18c0daeff729367e22a87306',1,'os::driver::serial::Capabilities::ri()']]],

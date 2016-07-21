@@ -4,6 +4,7 @@ var os_app_config_8h =
     [ "NDEBUG", "group__cmsis-plus-app-config-cmdline.html#ga8de3ed741dadc9c979a4ff17c0a9116e", null ],
     [ "OS_BOOL_RTOS_MESSAGE_QUEUE_SIZE_16BITS", "group__cmsis-plus-app-config-rtos.html#ga8b8d4cff816a87836292f6a70a0cfc94", null ],
     [ "OS_BOOL_RTOS_PORT_CONTEXT_CREATE_ZERO_LR", "group__cmsis-plus-app-config-rtos.html#ga20b7aa5c5dbff8b57e7e0252c48c7b7a", null ],
+    [ "OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE", "group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f", null ],
     [ "OS_BOOL_RTOS_THREAD_IDLE_PRIORITY_BELOW_IDLE", "group__cmsis-plus-app-config-rtos.html#gac3d21d69ffeb83966538e51598e19828", null ],
     [ "OS_BOOL_STARTUP_GUARD_CHECKS", "group__cmsis-plus-app-config-startup.html#ga425f65080a3b89e3c42e571a5cd0215a", null ],
     [ "OS_EXCLUDE_RTOS_IDLE_SLEEP", "group__cmsis-plus-app-config-rtos.html#ga2be577ef06cbd48ea7a9713b86540346", null ],

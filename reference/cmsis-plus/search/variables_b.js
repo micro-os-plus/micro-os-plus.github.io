@@ -10,7 +10,6 @@ var searchData=
   ['no_5findex',['no_index',['../classos_1_1rtos_1_1message__queue.html#afb32c8676f31ac44c5fd8d2782b41e3f',1,'os::rtos::message_queue']]],
   ['node_5f',['node_',['../classos_1_1rtos_1_1intrusive__list__iterator.html#a4426b8d866fa3df142f7330312676608',1,'os::rtos::intrusive_list_iterator']]],
   ['nofiledescriptor',['noFileDescriptor',['../namespaceos_1_1posix.html#ad52280e4d26eb2e1f792567064dcda38',1,'os::posix']]],
-  ['normal_5finitializer',['normal_initializer',['../classos_1_1rtos_1_1mutex.html#ade64ddfd6a8dd1043d1ee39b554c0f95',1,'os::rtos::mutex']]],
   ['nothrow',['nothrow',['../namespacestd.html#ae4b7b14b5246bacb54f2a4ae366ccd44',1,'std']]],
   ['null_5fres',['null_res',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#ac18afe54e677ec83cf606dca4c813266',1,'anonymous_namespace{memory-resource.cpp}::null_res()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#ac25aa9f9cf26c98a8c87446c1e12725e',1,'anonymous_namespace{os-memory.cpp}::null_res()']]]
 ];

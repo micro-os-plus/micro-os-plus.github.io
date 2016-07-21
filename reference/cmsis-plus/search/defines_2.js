@@ -2,6 +2,7 @@ var searchData=
 [
   ['os_5fassert_5ferr',['os_assert_err',['../os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39',1,'os-decls.h']]],
   ['os_5fassert_5fthrow',['os_assert_throw',['../os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137',1,'os-decls.h']]],
+  ['os_5fbool_5frtos_5fscheduler_5fpreemptive',['OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE',['../os-decls_8h.html#a06cdcf78fd8d8a0e8dd564e597108e4f',1,'os-decls.h']]],
   ['os_5finteger_5frtos_5fapi_5fversion_5fmajor',['OS_INTEGER_RTOS_API_VERSION_MAJOR',['../os-versions_8h.html#a3ef924b9cb16c88e4737a55f53f5e88e',1,'os-versions.h']]],
   ['os_5finteger_5frtos_5fapi_5fversion_5fminor',['OS_INTEGER_RTOS_API_VERSION_MINOR',['../os-versions_8h.html#ae4db32657fa5fc36977de82a486dd6b0',1,'os-versions.h']]],
   ['os_5finteger_5frtos_5fapi_5fversion_5fpatch',['OS_INTEGER_RTOS_API_VERSION_PATCH',['../os-versions_8h.html#a7c2f8ac12522ba85f99e7efda3068df8',1,'os-versions.h']]],

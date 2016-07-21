@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.3</span>
+     &#160;<span id="projectnumber">v6.3.4</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -166,6 +166,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1a26c9b72ae4246b086a516244e480c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os_sched_is_locked</a> (void)</td></tr>
 <tr class="memdesc:ga1a26c9b72ae4246b086a516244e480c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the scheduler is locked.  <a href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">More...</a><br /></td></tr>
 <tr class="separator:ga1a26c9b72ae4246b086a516244e480c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0c6a2436fce9a30d872ca6ba1fdf096"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096">os_sched_is_preemptive</a> (void)</td></tr>
+<tr class="memdesc:gab0c6a2436fce9a30d872ca6ba1fdf096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the scheduler is in preemptive mode.  <a href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096">More...</a><br /></td></tr>
+<tr class="separator:gab0c6a2436fce9a30d872ca6ba1fdf096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2faea83dc062e14038e02652db06308d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2faea83dc062e14038e02652db06308d">os_sched_set_preemptive</a> (bool status)</td></tr>
+<tr class="memdesc:ga2faea83dc062e14038e02652db06308d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scheduler preemptive mode.  <a href="group__cmsis-plus-rtos-c-core.html#ga2faea83dc062e14038e02652db06308d">More...</a><br /></td></tr>
+<tr class="separator:ga2faea83dc062e14038e02652db06308d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Scheduler statistics functions</div></td></tr>
 <tr class="memitem:gaafd24ecb31930163f2e0cae2fe94799b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga82859399be999511926d065242157d92">os_statistics_counter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-core.html#gaafd24ecb31930163f2e0cae2fe94799b">os_sched_stat_get_context_switches</a> (void)</td></tr>
 <tr class="memdesc:gaafd24ecb31930163f2e0cae2fe94799b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of context switches.  <a href="group__cmsis-plus-rtos-c-core.html#gaafd24ecb31930163f2e0cae2fe94799b">More...</a><br /></td></tr>
@@ -383,9 +389,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os_mutex_attr_init</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
 <tr class="memdesc:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the mutex attributes.  <a href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">More...</a><br /></td></tr>
 <tr class="separator:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0671164a9a1472746f35730fd837bbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga0671164a9a1472746f35730fd837bbe6">os_mutex_attr_init_recursive</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:ga0671164a9a1472746f35730fd837bbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the recursive mutex attributes.  <a href="group__cmsis-plus-rtos-c-mutex.html#ga0671164a9a1472746f35730fd837bbe6">More...</a><br /></td></tr>
-<tr class="separator:ga0671164a9a1472746f35730fd837bbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga517f589a9d52aad46ec60f0e727d79fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe">os_mutex_attr_recursive_init</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:ga517f589a9d52aad46ec60f0e727d79fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the recursive mutex attributes.  <a href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe">More...</a><br /></td></tr>
+<tr class="separator:ga517f589a9d52aad46ec60f0e727d79fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9f4ece47660bab9b048b34e5ba32074e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e">os_mutex_attr_get_recursive</a> (void)</td></tr>
 <tr class="memdesc:ga9f4ece47660bab9b048b34e5ba32074e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a recursive mutex attributes object.  <a href="group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e">More...</a><br /></td></tr>
 <tr class="separator:ga9f4ece47660bab9b048b34e5ba32074e"><td class="memSeparator" colspan="2">&#160;</td></tr>

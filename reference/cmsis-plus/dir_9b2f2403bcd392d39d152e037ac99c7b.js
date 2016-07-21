@@ -38,8 +38,8 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     ] ],
     [ "os-mutex.h", "os-mutex_8h.html", [
       [ "attributes", "classos_1_1rtos_1_1mutex_1_1attributes.html", "classos_1_1rtos_1_1mutex_1_1attributes" ],
+      [ "attributes_recursive", "classos_1_1rtos_1_1mutex_1_1attributes__recursive.html", "classos_1_1rtos_1_1mutex_1_1attributes__recursive" ],
       [ "protocol", "structos_1_1rtos_1_1mutex_1_1protocol.html", "structos_1_1rtos_1_1mutex_1_1protocol" ],
-      [ "recursive_attributes", "classos_1_1rtos_1_1mutex_1_1recursive__attributes.html", "classos_1_1rtos_1_1mutex_1_1recursive__attributes" ],
       [ "robustness", "structos_1_1rtos_1_1mutex_1_1robustness.html", "structos_1_1rtos_1_1mutex_1_1robustness" ],
       [ "type", "structos_1_1rtos_1_1mutex_1_1type.html", "structos_1_1rtos_1_1mutex_1_1type" ]
     ] ],

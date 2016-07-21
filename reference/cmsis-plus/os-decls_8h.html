@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.3</span>
+     &#160;<span id="projectnumber">v6.3.4</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -136,6 +136,7 @@ $(document).ready(function(){initNavTree('os-decls_8h.html','');});
 <div class="textblock"><code>#include &lt;<a class="el" href="os-versions_8h_source.html">cmsis-plus/os-versions.h</a>&gt;</code><br />
 <code>#include &lt;cmsis-plus/os-app-config.h&gt;</code><br />
 <code>#include &lt;cmsis-plus/rtos/port/os-decls.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cerrno&gt;</code><br />
@@ -222,14 +223,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a7ca7d74dfe5c184cdd627cc958564137"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137">os_assert_throw</a>(__e,  __er)&#160;&#160;&#160;assert(__e)</td></tr>
 <tr class="memdesc:a7ca7d74dfe5c184cdd627cc958564137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert or throw a system error exception.  <a href="#a7ca7d74dfe5c184cdd627cc958564137">More...</a><br /></td></tr>
 <tr class="separator:a7ca7d74dfe5c184cdd627cc958564137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#a06cdcf78fd8d8a0e8dd564e597108e4f">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a>&#160;&#160;&#160;(true)</td></tr>
+<tr class="separator:a06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8fdfffcd4b6d58c260d5dd4730b44d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#aa8fdfffcd4b6d58c260d5dd4730b44d0">OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES</a>&#160;&#160;&#160;(os::rtos::port::stack::default_size_bytes)</td></tr>
-<tr class="memdesc:aa8fdfffcd4b6d58c260d5dd4730b44d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the idle thread stack size, in bytes.  <a href="#aa8fdfffcd4b6d58c260d5dd4730b44d0">More...</a><br /></td></tr>
 <tr class="separator:aa8fdfffcd4b6d58c260d5dd4730b44d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2bd07321ee51c8de75ada8d6726cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca">OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES</a>&#160;&#160;&#160;(os::rtos::port::stack::default_size_bytes)</td></tr>
-<tr class="memdesc:a1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a></code> stack size, in bytes.  <a href="#a1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
 <tr class="separator:a1e2bd07321ee51c8de75ada8d6726cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab657098ae141f5b84a1319f48c181052"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#ab657098ae141f5b84a1319f48c181052">OS_INTEGER_SYSTICK_FREQUENCY_HZ</a>&#160;&#160;&#160;(1000)</td></tr>
-<tr class="memdesc:ab657098ae141f5b84a1319f48c181052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the SysTick frequency, in Hz.  <a href="#ab657098ae141f5b84a1319f48c181052">More...</a><br /></td></tr>
 <tr class="separator:ab657098ae141f5b84a1319f48c181052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841b874bf63424159693407fe668c6ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os-decls_8h.html#a841b874bf63424159693407fe668c6ae">OS_USE_CMSIS_PLUS</a></td></tr>
 <tr class="memdesc:a841b874bf63424159693407fe668c6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell the world that CMSIS++ is in use.  <a href="#a841b874bf63424159693407fe668c6ae">More...</a><br /></td></tr>
@@ -307,6 +307,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a37be2d99e61e1464fa821b0cb9575b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a37be2d99e61e1464fa821b0cb9575b65">os::rtos::port::scheduler::lock</a> (rtos::scheduler::status_t status)</td></tr>
 <tr class="memdesc:a37be2d99e61e1464fa821b0cb9575b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the scheduler.  <a href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a37be2d99e61e1464fa821b0cb9575b65">More...</a><br /></td></tr>
 <tr class="separator:a37be2d99e61e1464fa821b0cb9575b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66836e8a33c3f8e0321ea8bb591adf6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a66836e8a33c3f8e0321ea8bb591adf6b">os::rtos::port::scheduler::preempt</a> (void)</td></tr>
+<tr class="separator:a66836e8a33c3f8e0321ea8bb591adf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a36e3c17ff4e406aaa6cec58775a1a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1this__thread.html#a8a36e3c17ff4e406aaa6cec58775a1a1">os::rtos::port::this_thread::prepare_suspend</a> (void)</td></tr>
 <tr class="separator:a8a36e3c17ff4e406aaa6cec58775a1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b50858a899f97e824e5f963253b860e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">os::rtos::port::scheduler::reschedule</a> (void)</td></tr>
@@ -348,7 +350,7 @@ Functions</h2></td></tr>
 <p>Assert or return an error. </p>
 <p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, the given error code is returned. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00863">863</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00868">868</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -379,7 +381,21 @@ Functions</h2></td></tr>
 <p>Assert or throw a system error exception. </p>
 <p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, a ssytem error exception is thrown (which is replaced by an <code>abort()</code> if exceptions are disabled). </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00878">878</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00883">883</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06cdcf78fd8d8a0e8dd564e597108e4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE&#160;&#160;&#160;(true)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00908">908</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -393,11 +409,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default definition for the idle thread stack size, in bytes. </p>
-<p>Redefine it in <code>&lt;<a class="el" href="os-app-config_8h.html" title="Application configuration file. ">os-app-config.h</a>&gt;</code> to the actual value.</p>
-<dl class="section note"><dt>Note</dt><dd>Ignored for synthetic platforms. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00913">913</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00904">904</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -411,11 +423,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default definition for the <code><a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a></code> stack size, in bytes. </p>
-<p>Redefine it in <code>&lt;<a class="el" href="os-app-config_8h.html" title="Application configuration file. ">os-app-config.h</a>&gt;</code> to the actual value.</p>
-<dl class="section note"><dt>Note</dt><dd>Ignored for synthetic platforms. </dd></dl>
-
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00902">902</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00900">900</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -429,10 +437,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default definition for the SysTick frequency, in Hz. </p>
-<p>Redefine it in <code>&lt;<a class="el" href="os-app-config_8h.html" title="Application configuration file. ">os-app-config.h</a>&gt;</code> to the actual value. </p>
-
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00889">889</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00894">894</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.3</span>
+     &#160;<span id="projectnumber">v6.3.4</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -152,13 +152,13 @@ Macros</h2></td></tr>
 <tr class="memdesc:gae563c41aa21f771722c3e38e0115bd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For Cortex-M[347], define the interrupt priority level.  <a href="group__cmsis-plus-app-config-rtos.html#gae563c41aa21f771722c3e38e0115bd1b">More...</a><br /></td></tr>
 <tr class="separator:gae563c41aa21f771722c3e38e0115bd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac323de6b830f6258cb9a3813202a14ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES</a></td></tr>
-<tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size.  <a href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
+<tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size, in bytes.  <a href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
 <tr class="separator:gac323de6b830f6258cb9a3813202a14ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac323de6b830f6258cb9a3813202a14ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">OS_INTEGER_RTOS_DEFAULT_STACK_SIZE_BYTES</a></td></tr>
-<tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size.  <a href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
+<tr class="memdesc:gac323de6b830f6258cb9a3813202a14ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the default thread stack size, in bytes.  <a href="group__cmsis-plus-app-config-rtos.html#gac323de6b830f6258cb9a3813202a14ee">More...</a><br /></td></tr>
 <tr class="separator:gac323de6b830f6258cb9a3813202a14ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca">OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES</a></td></tr>
-<tr class="memdesc:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <b>main</b> thread stack size.  <a href="group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
+<tr class="memdesc:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <b>main</b> thread stack size, in bytes.  <a href="group__cmsis-plus-app-config-rtos.html#ga1e2bd07321ee51c8de75ada8d6726cca">More...</a><br /></td></tr>
 <tr class="separator:ga1e2bd07321ee51c8de75ada8d6726cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa8fdfffcd4b6d58c260d5dd4730b44d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#gaa8fdfffcd4b6d58c260d5dd4730b44d0">OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES</a></td></tr>
 <tr class="memdesc:gaa8fdfffcd4b6d58c260d5dd4730b44d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <b>idle</b> thread stack size.  <a href="group__cmsis-plus-app-config-rtos.html#gaa8fdfffcd4b6d58c260d5dd4730b44d0">More...</a><br /></td></tr>
@@ -181,6 +181,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga20b7aa5c5dbff8b57e7e0252c48c7b7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga20b7aa5c5dbff8b57e7e0252c48c7b7a">OS_BOOL_RTOS_PORT_CONTEXT_CREATE_ZERO_LR</a>&#160;&#160;&#160;(false)</td></tr>
 <tr class="memdesc:ga20b7aa5c5dbff8b57e7e0252c48c7b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the stack trace to start with a 0x0.  <a href="group__cmsis-plus-app-config-rtos.html#ga20b7aa5c5dbff8b57e7e0252c48c7b7a">More...</a><br /></td></tr>
 <tr class="separator:ga20b7aa5c5dbff8b57e7e0252c48c7b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a>&#160;&#160;&#160;(true)</td></tr>
+<tr class="memdesc:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the preemption flag.  <a href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">More...</a><br /></td></tr>
+<tr class="separator:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2be577ef06cbd48ea7a9713b86540346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga2be577ef06cbd48ea7a9713b86540346">OS_EXCLUDE_RTOS_IDLE_SLEEP</a></td></tr>
 <tr class="memdesc:ga2be577ef06cbd48ea7a9713b86540346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not enter sleep in the idle thread.  <a href="group__cmsis-plus-app-config-rtos.html#ga2be577ef06cbd48ea7a9713b86540346">More...</a><br /></td></tr>
 <tr class="separator:ga2be577ef06cbd48ea7a9713b86540346"><td class="memSeparator" colspan="2">&#160;</td></tr>

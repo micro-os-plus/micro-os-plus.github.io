@@ -30,7 +30,6 @@ var searchData=
   ['nofiledescriptor',['noFileDescriptor',['../namespaceos_1_1posix.html#ad52280e4d26eb2e1f792567064dcda38',1,'os::posix']]],
   ['none',['none',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b',1,'os::rtos::mutex::protocol::none()'],['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66abe1def6f8adb29967a162872655593ae',1,'os::rtos::thread::priority::none()']]],
   ['normal',['normal',['../structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939',1,'os::rtos::mutex::type::normal()'],['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c',1,'os::rtos::thread::priority::normal()']]],
-  ['normal_5finitializer',['normal_initializer',['../classos_1_1rtos_1_1mutex.html#ade64ddfd6a8dd1043d1ee39b554c0f95',1,'os::rtos::mutex']]],
   ['nothrow',['nothrow',['../namespacestd.html#ae4b7b14b5246bacb54f2a4ae366ccd44',1,'std']]],
   ['notify_5fall',['notify_all',['../classos_1_1estd_1_1condition__variable.html#aed19321b79ed7eecc944d493fec480bc',1,'os::estd::condition_variable::notify_all()'],['../classos_1_1estd_1_1condition__variable__any.html#a7af951e50d5798b7bdaab6e7c5d36e5b',1,'os::estd::condition_variable_any::notify_all()']]],
   ['notify_5fall_5fat_5fthread_5fexit',['notify_all_at_thread_exit',['../group__cmsis-plus-iso.html#ga7a2aae48fd29daf2b726b2bb96175d43',1,'os::estd']]],

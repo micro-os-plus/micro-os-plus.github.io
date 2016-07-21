@@ -23,7 +23,7 @@ var group__cmsis_plus_rtos_c_mutex =
     ] ],
     [ "os_mutex_attr_get_recursive", "group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e", null ],
     [ "os_mutex_attr_init", "group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30", null ],
-    [ "os_mutex_attr_init_recursive", "group__cmsis-plus-rtos-c-mutex.html#ga0671164a9a1472746f35730fd837bbe6", null ],
+    [ "os_mutex_attr_recursive_init", "group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe", null ],
     [ "os_mutex_create", "group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08", null ],
     [ "os_mutex_destroy", "group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677", null ],
     [ "os_mutex_get_name", "group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20", null ],

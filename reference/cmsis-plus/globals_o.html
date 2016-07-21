@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.3</span>
+     &#160;<span id="projectnumber">v6.3.4</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -194,6 +194,10 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 </li>
 <li>OS_BOOL_RTOS_PORT_CONTEXT_CREATE_ZERO_LR
 : <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga20b7aa5c5dbff8b57e7e0252c48c7b7a">os-app-config.h</a>
+</li>
+<li>OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE
+: <a class="el" href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">os-app-config.h</a>
+, <a class="el" href="os-decls_8h.html#a06cdcf78fd8d8a0e8dd564e597108e4f">os-decls.h</a>
 </li>
 <li>OS_BOOL_RTOS_THREAD_IDLE_PRIORITY_BELOW_IDLE
 : <a class="el" href="group__cmsis-plus-app-config-rtos.html#gac3d21d69ffeb83966538e51598e19828">os-app-config.h</a>
@@ -672,9 +676,9 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os-c-wrapper.cpp</a>
 </li>
-<li>os_mutex_attr_init_recursive()
-: <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga0671164a9a1472746f35730fd837bbe6">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga0671164a9a1472746f35730fd837bbe6">os-c-wrapper.cpp</a>
+<li>os_mutex_attr_recursive_init()
+: <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe">os-c-wrapper.cpp</a>
 </li>
 <li>os_mutex_attr_t
 : <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os-c-decls.h</a>
@@ -793,6 +797,10 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga1a26c9b72ae4246b086a516244e480c8">os-c-wrapper.cpp</a>
 </li>
+<li>os_sched_is_preemptive()
+: <a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096">os-c-wrapper.cpp</a>
+</li>
 <li>os_sched_is_started()
 : <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga56c6a381c9ced86c2819df7ac4cb778f">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga56c6a381c9ced86c2819df7ac4cb778f">os-c-wrapper.cpp</a>
@@ -800,6 +808,10 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <li>os_sched_lock()
 : <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2c2ad60bbb83ac0a6d2c71ce4a5538a4">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2c2ad60bbb83ac0a6d2c71ce4a5538a4">os-c-wrapper.cpp</a>
+</li>
+<li>os_sched_set_preemptive()
+: <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2faea83dc062e14038e02652db06308d">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2faea83dc062e14038e02652db06308d">os-c-wrapper.cpp</a>
 </li>
 <li>os_sched_start()
 : <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga451fc611eb6479ea8b590cf80abc9003">os-c-api.h</a>
@@ -894,8 +906,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 , <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gafd5a26f4182a3cf7b432302924a6534a">os-c-wrapper.cpp</a>
 </li>
 <li>os_semaphore_wait()
-: <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os-c-api.h</a>
 </li>
 <li>os_statistics_counter_t
 : <a class="el" href="group__cmsis-plus-rtos-c-core.html#ga82859399be999511926d065242157d92">os-c-decls.h</a>
@@ -984,16 +996,16 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab2decc4b2cd1b7a5678b2b3cc5a294f4">os-c-decls.h</a>
 </li>
 <li>os_thread_create()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gad5ce1acdb6542e0d3044fa3f8dc89da2">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gad5ce1acdb6542e0d3044fa3f8dc89da2">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gad5ce1acdb6542e0d3044fa3f8dc89da2">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gad5ce1acdb6542e0d3044fa3f8dc89da2">os-c-api.h</a>
 </li>
 <li>os_thread_destroy()
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga0793ca27bb7ecbadacc96ae641d64a47">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga0793ca27bb7ecbadacc96ae641d64a47">os-c-wrapper.cpp</a>
 </li>
 <li>os_thread_flags_raise()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf97dac90d6cfc70ca78e834d9cb29ccc">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf97dac90d6cfc70ca78e834d9cb29ccc">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf97dac90d6cfc70ca78e834d9cb29ccc">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gaf97dac90d6cfc70ca78e834d9cb29ccc">os-c-api.h</a>
 </li>
 <li>os_thread_func_args_t
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga8b048f911624cd470f327cea02245790">os-c-decls.h</a>
@@ -1002,24 +1014,24 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga5c927d23d4ba368f34a1a73eefb2d6b3">os-c-decls.h</a>
 </li>
 <li>os_thread_get_name()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os-c-api.h</a>
 </li>
 <li>os_thread_get_priority()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga890874652c8a982bcb32d524ed5cd261">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga890874652c8a982bcb32d524ed5cd261">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga890874652c8a982bcb32d524ed5cd261">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga890874652c8a982bcb32d524ed5cd261">os-c-wrapper.cpp</a>
 </li>
 <li>os_thread_get_stack()
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46e47607370dcd1bde0eb87a9a6c213b">os-c-api.h</a>
 , <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46e47607370dcd1bde0eb87a9a6c213b">os-c-wrapper.cpp</a>
 </li>
 <li>os_thread_get_state()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8">os-c-wrapper.cpp</a>
 </li>
 <li>os_thread_get_user_storage()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46271b9f7ea7a533959d4d8f51b9864e">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46271b9f7ea7a533959d4d8f51b9864e">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46271b9f7ea7a533959d4d8f51b9864e">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga46271b9f7ea7a533959d4d8f51b9864e">os-c-api.h</a>
 </li>
 <li>os_thread_join()
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga68883733e1c7637df06fdb4e1d9a6ce5">os-c-api.h</a>
@@ -1079,12 +1091,12 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga202e37a07547181b57632a3194c9fa60">os-c-decls.h</a>
 </li>
 <li>os_thread_stack_check_bottom_magic()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga7a019f1e3955f0c58840ea86a20ac1bb">os-c-wrapper.cpp</a>
 </li>
 <li>os_thread_stack_check_top_magic()
-: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135">os-c-api.h</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135">os-c-wrapper.cpp</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135">os-c-wrapper.cpp</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga66e87ac2c440e0f4b91297738c88e135">os-c-api.h</a>
 </li>
 <li>os_thread_stack_element_t
 : <a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga89006097f69cd675294822c8859f75ce">os-c-decls.h</a>
@@ -1163,16 +1175,16 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="os-c-decls_8h.html#a556a8ea5f9e1f5fa90cd0f759de0a351">os-c-decls.h</a>
 </li>
 <li>os_timer_attr_get_periodic()
-: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga47f3f81a5405ecff302ec4ff8b9e5eaf">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga47f3f81a5405ecff302ec4ff8b9e5eaf">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga47f3f81a5405ecff302ec4ff8b9e5eaf">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga47f3f81a5405ecff302ec4ff8b9e5eaf">os-c-wrapper.cpp</a>
 </li>
 <li>os_timer_attr_init()
-: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga92d94502723018f68d38af2230f65e87">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga92d94502723018f68d38af2230f65e87">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga92d94502723018f68d38af2230f65e87">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga92d94502723018f68d38af2230f65e87">os-c-wrapper.cpp</a>
 </li>
 <li>os_timer_attr_init_periodic()
-: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga8350f389f29a513685d62b9bf05acde0">os-c-wrapper.cpp</a>
-, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga8350f389f29a513685d62b9bf05acde0">os-c-api.h</a>
+: <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga8350f389f29a513685d62b9bf05acde0">os-c-api.h</a>
+, <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga8350f389f29a513685d62b9bf05acde0">os-c-wrapper.cpp</a>
 </li>
 <li>os_timer_attr_t
 : <a class="el" href="group__cmsis-plus-rtos-c-timer.html#ga08193db6e5c1b76c2dfc65e5096606c8">os-c-decls.h</a>
@@ -1403,8 +1415,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 , <a class="el" href="cmsis__os_8h.html#a3b571de44cd3094c643247a7397f86b5">cmsis_os.h</a>
 </li>
 <li>osKernelStart()
-: <a class="el" href="os-c-wrapper_8cpp.html#aab668ffd2ea76bb0a77ab0ab385eaef2">os-c-wrapper.cpp</a>
-, <a class="el" href="cmsis__os_8h.html#aab668ffd2ea76bb0a77ab0ab385eaef2">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#aab668ffd2ea76bb0a77ab0ab385eaef2">cmsis_os.h</a>
+, <a class="el" href="os-c-wrapper_8cpp.html#aab668ffd2ea76bb0a77ab0ab385eaef2">os-c-wrapper.cpp</a>
 </li>
 <li>osKernelSystemId
 : <a class="el" href="cmsis__os_8h.html#a47cf03658f01cdffca688e9096b58289">cmsis_os.h</a>
@@ -1437,7 +1449,7 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#a35048c8f88b1e10690d21e7ab827a4b2">cmsis_os.h</a>
 </li>
 <li>osMailQ
-: <a class="el" href="cmsis__os_8h.html#a874689464239e386a1f4d74bffc3ef40">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#ad2deeb66d51ade54e63d8f87ff2ec9d2">cmsis_os.h</a>
 </li>
 <li>osMailQAllocatedDef
 : <a class="el" href="cmsis__os_8h.html#ad60e06a64e47e3d220a3bb679a4d207a">cmsis_os.h</a>
@@ -1464,7 +1476,7 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#ac0dcf462fc92de8ffaba6cc004514a6d">cmsis_os.h</a>
 </li>
 <li>osMessageQ
-: <a class="el" href="cmsis__os_8h.html#a2d446a0b4bb90bf05d6f92eedeaabc97">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#a3738f34ef383deaa8e52e4ae6d3e873a">cmsis_os.h</a>
 </li>
 <li>osMessageQAllocatedDef
 : <a class="el" href="cmsis__os_8h.html#a56531414b5ef27ab21b956a8252e9adf">cmsis_os.h</a>
@@ -1485,7 +1497,7 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#a87b9983a58404f1faa7fcd90a485b85e">cmsis_os.h</a>
 </li>
 <li>osMutex
-: <a class="el" href="cmsis__os_8h.html#a1122a86faa64b4a0880c76cf68d0c934">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#ae92d55f6d5769081cadc2693488785cd">cmsis_os.h</a>
 </li>
 <li>osMutexAttr
 : <a class="el" href="cmsis__os_8h.html#ae16cbf38683803cbe5fe58050686e280">cmsis_os.h</a>
@@ -1512,8 +1524,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 , <a class="el" href="os-c-wrapper_8cpp.html#a006e4744d741e8e132c3d5bbc295afe1">os-c-wrapper.cpp</a>
 </li>
 <li>osMutexWait()
-: <a class="el" href="cmsis__os_8h.html#a5e1752b73f573ee015dbd9ef1edaba13">cmsis_os.h</a>
-, <a class="el" href="os-c-wrapper_8cpp.html#a5e1752b73f573ee015dbd9ef1edaba13">os-c-wrapper.cpp</a>
+: <a class="el" href="os-c-wrapper_8cpp.html#a5e1752b73f573ee015dbd9ef1edaba13">os-c-wrapper.cpp</a>
+, <a class="el" href="cmsis__os_8h.html#a5e1752b73f573ee015dbd9ef1edaba13">cmsis_os.h</a>
 </li>
 <li>osOK
 : <a class="el" href="cmsis__os_8h.html#ae2e091fefc4c767117727bd5aba4d99ea9e1c9e2550bb4de8969a935acffc968f">cmsis_os.h</a>
@@ -1606,8 +1618,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#acc15b0fc8ce1167fe43da33042e62098">cmsis_os.h</a>
 </li>
 <li>osSignalClear()
-: <a class="el" href="os-c-wrapper_8cpp.html#a87283a6ebc31ce9ed42baf3ea7e4eab6">os-c-wrapper.cpp</a>
-, <a class="el" href="cmsis__os_8h.html#a87283a6ebc31ce9ed42baf3ea7e4eab6">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#a87283a6ebc31ce9ed42baf3ea7e4eab6">cmsis_os.h</a>
+, <a class="el" href="os-c-wrapper_8cpp.html#a87283a6ebc31ce9ed42baf3ea7e4eab6">os-c-wrapper.cpp</a>
 </li>
 <li>osSignalSet()
 : <a class="el" href="cmsis__os_8h.html#a3de2730654589d6c3559c4b9e2825553">cmsis_os.h</a>
@@ -1630,8 +1642,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#adaec65a79f588752067d093942cf7835">cmsis_os.h</a>
 </li>
 <li>osThreadCreate()
-: <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">os-c-wrapper.cpp</a>
-, <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#aa0872f4b4e84cd457cf7a6ef4451e094">cmsis_os.h</a>
+, <a class="el" href="os-c-wrapper_8cpp.html#aa0872f4b4e84cd457cf7a6ef4451e094">os-c-wrapper.cpp</a>
 </li>
 <li>osThreadDef
 : <a class="el" href="cmsis__os_8h.html#aee93d929beb350f16e5cc7fa602e229f">cmsis_os.h</a>
@@ -1651,8 +1663,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#af5f4a62058770653bd98b873b8e6160c">cmsis_os.h</a>
 </li>
 <li>osThreadSetPriority()
-: <a class="el" href="cmsis__os_8h.html#a0dfb90ccf1f6e4b54b9251b12d1cbc8b">cmsis_os.h</a>
-, <a class="el" href="os-c-wrapper_8cpp.html#a0dfb90ccf1f6e4b54b9251b12d1cbc8b">os-c-wrapper.cpp</a>
+: <a class="el" href="os-c-wrapper_8cpp.html#a0dfb90ccf1f6e4b54b9251b12d1cbc8b">os-c-wrapper.cpp</a>
+, <a class="el" href="cmsis__os_8h.html#a0dfb90ccf1f6e4b54b9251b12d1cbc8b">cmsis_os.h</a>
 </li>
 <li>osThreadStaticDef
 : <a class="el" href="cmsis__os_8h.html#ad14cc3244fff1c701fcec6f3d739e3fe">cmsis_os.h</a>
@@ -1666,14 +1678,14 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 , <a class="el" href="os-c-wrapper_8cpp.html#af13a667493c5d629a90c13e113b99233">os-c-wrapper.cpp</a>
 </li>
 <li>osTimer
-: <a class="el" href="cmsis__os_8h.html#a1b8d670eaf964b2910fa06885e650678">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#a350266287188b42859d75f1d7d33f9fd">cmsis_os.h</a>
 </li>
 <li>osTimerAttr
 : <a class="el" href="cmsis__os_8h.html#a77dd2a3022d715f2ac93d694387c5792">cmsis_os.h</a>
 </li>
 <li>osTimerCreate()
-: <a class="el" href="cmsis__os_8h.html#a23a7d9989aadf2932b0bbdbea9c092c2">cmsis_os.h</a>
-, <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">os-c-wrapper.cpp</a>
+: <a class="el" href="os-c-wrapper_8cpp.html#a23a7d9989aadf2932b0bbdbea9c092c2">os-c-wrapper.cpp</a>
+, <a class="el" href="cmsis__os_8h.html#a23a7d9989aadf2932b0bbdbea9c092c2">cmsis_os.h</a>
 </li>
 <li>osTimerDef
 : <a class="el" href="cmsis__os_8h.html#a1c720627e08d1cc1afcad44e799ed492">cmsis_os.h</a>
@@ -1682,8 +1694,8 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#a4fa06198874bc76e8dc26db38fc2f9d6">cmsis_os.h</a>
 </li>
 <li>osTimerDelete()
-: <a class="el" href="cmsis__os_8h.html#a746b8043d906849bd65e3900fcb483cf">cmsis_os.h</a>
-, <a class="el" href="os-c-wrapper_8cpp.html#a746b8043d906849bd65e3900fcb483cf">os-c-wrapper.cpp</a>
+: <a class="el" href="os-c-wrapper_8cpp.html#a746b8043d906849bd65e3900fcb483cf">os-c-wrapper.cpp</a>
+, <a class="el" href="cmsis__os_8h.html#a746b8043d906849bd65e3900fcb483cf">cmsis_os.h</a>
 </li>
 <li>osTimerId
 : <a class="el" href="cmsis__os_8h.html#a8dff27523c3fda42403f35ade9c46e50">cmsis_os.h</a>
@@ -1695,12 +1707,12 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 : <a class="el" href="cmsis__os_8h.html#adac860eb9e1b4b0619271e6595ed83d9ab9c91f9699162edb09bb7c90c11c8788">cmsis_os.h</a>
 </li>
 <li>osTimerStart()
-: <a class="el" href="cmsis__os_8h.html#a27a797a401b068e2644d1125f22a07ca">cmsis_os.h</a>
-, <a class="el" href="os-c-wrapper_8cpp.html#a27a797a401b068e2644d1125f22a07ca">os-c-wrapper.cpp</a>
+: <a class="el" href="os-c-wrapper_8cpp.html#a27a797a401b068e2644d1125f22a07ca">os-c-wrapper.cpp</a>
+, <a class="el" href="cmsis__os_8h.html#a27a797a401b068e2644d1125f22a07ca">cmsis_os.h</a>
 </li>
 <li>osTimerStop()
-: <a class="el" href="os-c-wrapper_8cpp.html#a58f36b121a812936435cacc6e1e0e091">os-c-wrapper.cpp</a>
-, <a class="el" href="cmsis__os_8h.html#a58f36b121a812936435cacc6e1e0e091">cmsis_os.h</a>
+: <a class="el" href="cmsis__os_8h.html#a58f36b121a812936435cacc6e1e0e091">cmsis_os.h</a>
+, <a class="el" href="os-c-wrapper_8cpp.html#a58f36b121a812936435cacc6e1e0e091">os-c-wrapper.cpp</a>
 </li>
 <li>osWait()
 : <a class="el" href="cmsis__os_8h.html#a8470c8aaedfde524a44e22e5b2328285">cmsis_os.h</a>
