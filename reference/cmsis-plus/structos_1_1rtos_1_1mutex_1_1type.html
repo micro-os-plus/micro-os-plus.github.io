@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::mutex::type Struct Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::mutex::type Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -126,9 +126,9 @@ $(document).ready(function(){initNavTree('structos_1_1rtos_1_1mutex_1_1type.html
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="structos_1_1rtos_1_1mutex_1_1type-members.html">List of all members</a>  </div>
+<a href="classos_1_1rtos_1_1mutex_1_1type-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::type Struct Reference</div>  </div>
+<div class="title">os::rtos::mutex::type Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -154,9 +154,18 @@ Public Types</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of mutex types. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a2f2d0f166ed193d5da4ac5f0da655f17" title="Mutex type attribute. ">attributes::mx_type</a> </dd></dl>
+<p>Allow to define the behaviour of calls which lock and unlock the mutex. See <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock/acquire the mutex. ">mutex::lock()</a></code> for details.</p>
+<p>The mutex type is defined via the <code>mx_type</code> attribute of the <code><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html" title="Mutex attributes. ">mutex::attributes</a></code> class. Valid mutex types are:</p>
+<ul>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939" title="Normal mutex behaviour. ">mutex::type::normal</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf">mutex::type::_default</a></code></li>
+</ul>
+<p>An implementation may map <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf">mutex::type::_default</a></code> to one of the other mutex types.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_settype.html"><code>pthread_mutexattr_settype()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00140">140</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00131">131</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9"></a>
 <div class="memitem">
@@ -169,7 +178,6 @@ Public Types</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mutex types. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a2f2d0f166ed193d5da4ac5f0da655f17" title="Mutex type attribute. ">attributes::mx_type</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939"></a>normal&#160;</td><td class="fielddoc">
 <p>Normal mutex behaviour. </p>
@@ -184,11 +192,11 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00147">147</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00136">136</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mutex_8h_source.html">os-mutex.h</a></li>
 </ul>
 </div><!-- contents -->

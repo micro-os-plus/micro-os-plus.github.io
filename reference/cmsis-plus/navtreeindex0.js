@@ -56,6 +56,7 @@ var NAVTREEINDEX0 =
 "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html#af8258a63966f621605804691ae4d2179":[5,0,1,1,8],
 "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html#af887d467866a32aa28de44288aa438ed":[5,0,1,1,3],
 "classattributes__binary.html":[5,0,3],
+"classattributes__periodic.html":[5,0,4],
 "classes.html":[5,1],
 "classos_1_1driver_1_1_base.html":[5,0,2,0,2],
 "classos_1_1driver_1_1_base.html#a03dafced83724ad0e1b8124510b6a5c1":[5,0,2,0,2,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classos_1_1driver_1_1_usbh__wrapper.html#affd928c099c3f1c99389fd7388437ac4":[5,0,2,0,6,4],
 "classos_1_1driver_1_1_version.html":[5,0,2,0,7],
 "classos_1_1driver_1_1_version.html#a5f4f4bb94cbba08b22c74e8a1227e142":[5,0,2,0,7,8],
-"classos_1_1driver_1_1_version.html#a80631ee0cc3b4a7bf26275ea104e91b0":[5,0,2,0,7,6],
-"classos_1_1driver_1_1_version.html#a84a4d0366c81658dba6f1bf047aeff30":[5,0,2,0,7,4]
+"classos_1_1driver_1_1_version.html#a80631ee0cc3b4a7bf26275ea104e91b0":[5,0,2,0,7,6]
 };

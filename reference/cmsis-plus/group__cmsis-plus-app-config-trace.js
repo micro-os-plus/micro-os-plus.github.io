@@ -8,6 +8,7 @@ var group__cmsis_plus_app_config_trace =
     [ "OS_TRACE_RTOS_CONDVAR", "group__cmsis-plus-app-config-trace.html#gadc3abe71d1469164239b90c00ff63456", null ],
     [ "OS_TRACE_RTOS_EVFLAGS", "group__cmsis-plus-app-config-trace.html#gad064d6489f2fa913f322fe37be684e9e", null ],
     [ "OS_TRACE_RTOS_LISTS", "group__cmsis-plus-app-config-trace.html#ga860bf237bc7e64c17ec3422437aa7032", null ],
+    [ "OS_TRACE_RTOS_LISTS_CLOCKS", "group__cmsis-plus-app-config-trace.html#gad6897e7a3e81b82db408b844f8ba729b", null ],
     [ "OS_TRACE_RTOS_MEMPOOL", "group__cmsis-plus-app-config-trace.html#gad91e5b247b295adf2e5dc5422735cd1b", null ],
     [ "OS_TRACE_RTOS_MQUEUE", "group__cmsis-plus-app-config-trace.html#ga75f695340608f38b8a0b238ef87a0bd9", null ],
     [ "OS_TRACE_RTOS_MUTEX", "group__cmsis-plus-app-config-trace.html#ga9ac677b44592e9696a3cc7954ad0bfeb", null ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['raise',['raise',['../classos_1_1rtos_1_1event__flags.html#af63fd5c6a4c59327f76ea2ac16becf3d',1,'os::rtos::event_flags::raise()'],['../newlib-aliases_8h.html#a08ba0dd26a850108a1746412faba2b21',1,'raise(int sig):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#a08ba0dd26a850108a1746412faba2b21',1,'raise(int sig):&#160;standard-aliases.h']]],
+  ['raise',['raise',['../classos_1_1rtos_1_1internal_1_1event__flags.html#a2789a19430c8df71bd6a8b9b42177d95',1,'os::rtos::internal::event_flags::raise()'],['../classos_1_1rtos_1_1event__flags.html#af63fd5c6a4c59327f76ea2ac16becf3d',1,'os::rtos::event_flags::raise()'],['../newlib-aliases_8h.html#a08ba0dd26a850108a1746412faba2b21',1,'raise(int sig):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#a08ba0dd26a850108a1746412faba2b21',1,'raise(int sig):&#160;standard-aliases.h']]],
   ['read',['read',['../standard-aliases_8h.html#ae0b3612f7987109a225666aebb5b8c2c',1,'standard-aliases.h']]],
   ['read_5fsetup_5fpacket',['read_setup_packet',['../classos_1_1driver_1_1usb_1_1_device.html#a688de8e35598af531305da80e82d98c1',1,'os::driver::usb::Device']]],
   ['readdir',['readdir',['../newlib-aliases_8h.html#a58257faf8b13b3f14558613c632b2373',1,'readdir(DIR *dirp):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#a58257faf8b13b3f14558613c632b2373',1,'readdir(DIR *dirp):&#160;standard-aliases.h']]],
@@ -29,9 +29,10 @@ var searchData=
   ['resource',['resource',['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a6db939caa16119329348bb1f6ed161dd',1,'os::rtos::memory::polymorphic_allocator']]],
   ['resume',['resume',['../classos_1_1rtos_1_1thread.html#aea39969a90aad5de97abc2529485c18c',1,'os::rtos::thread']]],
   ['resume_5fall',['resume_all',['../classos_1_1rtos_1_1waiting__threads__list.html#aff3cfc6d8826234d9790a6c047e8ce47',1,'os::rtos::waiting_threads_list']]],
-  ['resume_5fone',['resume_one',['../classos_1_1rtos_1_1waiting__threads__list.html#adf6868ece45ab96fb129f8843b0e4a5a',1,'os::rtos::waiting_threads_list']]],
+  ['resume_5fone',['resume_one',['../classos_1_1rtos_1_1waiting__threads__list.html#a68c8ff63f54d318fb15799a55193b5e2',1,'os::rtos::waiting_threads_list']]],
   ['resume_5fport',['resume_port',['../classos_1_1driver_1_1usb_1_1_host.html#a9962c1b1acbced083276755717dcfc6c',1,'os::driver::usb::Host']]],
   ['rewinddir',['rewinddir',['../newlib-aliases_8h.html#ad4fcb58b9194b1a3c1699654de963719',1,'rewinddir(DIR *dirp):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#ad4fcb58b9194b1a3c1699654de963719',1,'rewinddir(DIR *dirp):&#160;standard-aliases.h']]],
   ['rmdir',['rmdir',['../newlib-aliases_8h.html#ab2df76f2c62ae012c2e417813b5fe8ce',1,'rmdir(const char *path):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#ab2df76f2c62ae012c2e417813b5fe8ce',1,'rmdir(const char *path):&#160;standard-aliases.h']]],
+  ['robustness',['robustness',['../classos_1_1rtos_1_1mutex.html#abbebf5b630553b522a2c0a886ee1542e',1,'os::rtos::mutex']]],
   ['run_5ffunction_5fobject',['run_function_object',['../classos_1_1estd_1_1thread.html#ad7809b5e8b548d515ffdf00086d4f6c2',1,'os::estd::thread']]]
 ];

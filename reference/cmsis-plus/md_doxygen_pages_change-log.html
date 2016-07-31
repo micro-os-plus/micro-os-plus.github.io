@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>fix <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9373c2b9e8f007ac31440ea1192fd361" title="Try to wait for thread event flags. ">thread::flags_try_wait()</a></code> spelling</li>
 <li>semaphores refurbished (make default as binary, add classes <code>semaphore_binary</code> and <code>semaphore_counting</code>)</li>
 <li>add <code>binary_attributes</code></li>
-<li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes. ">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d" title="Create a binary semaphore object. ">os_semaphore_binary_create()</a></code></li>
+<li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes. ">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d" title="Create a binary semaphore object instance. ">os_semaphore_binary_create()</a></code></li>
 <li>os-semaphore: rename <code><a class="el" href="classattributes__binary.html">attributes_binary</a></code>, <code>attributes_counting</code>, <code>initializer_binary</code></li>
 </ul>
 <h3>v6.3.3 2016-07-11</h3>
@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>rtos/thread: rename <code>sched_prio()</code> -&gt; <code>priority()</code></li>
 <li>rename <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga890874652c8a982bcb32d524ed5cd261" title="Get the thread current scheduling priority. ">os_thread_get_priority()</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gae1c3615e8cb7da607485107ea1cbf1f2" title="Set the thread dynamic scheduling priority. ">os_thread_set_priority()</a></code></li>
 <li>rtos/thread: rename <code>thread::sched_state()</code> -&gt; <code>state()</code></li>
-<li>rename <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8" title="Get the thread scheduler state. ">os_thread_get_state()</a></code></li>
+<li>rename <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga768fa88412be4dd5e562263fb81b42c8" title="Get the thread scheduler state. ">os_thread_get_state()</a></code>.</li>
 </ul>
 <h3>v6.3.4 2016-07-21</h3>
 <ul>
@@ -187,7 +187,20 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>rename <code>os_mutex_attr_init_recursive()</code> -&gt; <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe" title="Initialise the recursive mutex attributes. ">os_mutex_attr_recursive_init()</a></code></li>
 <li>rtos: add <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#adb57f891c4f1a22d19748fb4082c6e39" title="Check if the scheduler is in preemptive mode. ">scheduler::preemptive()</a></code> &amp; <code>scheduler::preemptive(bool)</code></li>
 <li>add <code>OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</code></li>
-<li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096" title="Check if the scheduler is in preemptive mode. ">os_sched_is_preemptive()</a></code> &amp; <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga2faea83dc062e14038e02652db06308d" title="Set the scheduler preemptive mode. ">os_sched_set_preemptive()</a></code> </li>
+<li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096" title="Check if the scheduler is in preemptive mode. ">os_sched_is_preemptive()</a></code> &amp; <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga5dbd8d4a7c91345717f8f9e072faf153" title="Set the scheduler preemptive mode. ">os_sched_set_preemptive()</a></code>.</li>
+</ul>
+<h3>v6.3.5 2016-07-31</h3>
+<ul>
+<li>addd <code>OS_TRACE_RTOS_LISTS_CLOCKS</code></li>
+<li>refurbish scheduler <code><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a2dac383aee6954ff50ae7e01f35a3508" title="Lock the scheduler. ">lock()</a></code>, <code><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a03a7388064ca0937b8142ddf05f8a5e1" title="Unlock the scheduler. ">unlock()</a></code>, <code>locked(state_t)</code></li>
+<li>rename <code>os_irq_status_t</code> -&gt; <code>os_irq_state_t</code></li>
+<li>rename <code>interrupts::status_t</code> -&gt; <code>interrupts::state_t</code></li>
+<li>flags <code><a class="el" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">clear()</a></code> no longer accept 0 mask; use <code>flags::all</code></li>
+<li>add mutex accessors <code>type()</code>, <code>protocol()</code>, <code>robustness()</code></li>
+<li>add <code>class double_list_iterator</code>; use it in <code>waiting_threads_list</code></li>
+<li>rename <code>timer::periodic_attributes</code> -&gt; <code>timer::attributes_periodic</code></li>
+<li>add <code>internal::event_flags</code>; not public. <hr/>
+ </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -142,10 +142,10 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1static__double__lis
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:ada2d5a91aa7f06976cdce0bc70a11942"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#ada2d5a91aa7f06976cdce0bc70a11942">static_double_list</a> ()</td></tr>
-<tr class="memdesc:ada2d5a91aa7f06976cdce0bc70a11942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a list.  <a href="#ada2d5a91aa7f06976cdce0bc70a11942">More...</a><br /></td></tr>
+<tr class="memdesc:ada2d5a91aa7f06976cdce0bc70a11942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a list.  <a href="#ada2d5a91aa7f06976cdce0bc70a11942">More...</a><br /></td></tr>
 <tr class="separator:ada2d5a91aa7f06976cdce0bc70a11942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36195cf14b0893dd05044d1d9d043cb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#a36195cf14b0893dd05044d1d9d043cb0">~static_double_list</a> ()</td></tr>
-<tr class="memdesc:a36195cf14b0893dd05044d1d9d043cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the list.  <a href="#a36195cf14b0893dd05044d1d9d043cb0">More...</a><br /></td></tr>
+<tr class="memdesc:a36195cf14b0893dd05044d1d9d043cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the list.  <a href="#a36195cf14b0893dd05044d1d9d043cb0">More...</a><br /></td></tr>
 <tr class="separator:a36195cf14b0893dd05044d1d9d043cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:ab4d4465a0024dbce9f8131c313913e36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#ab4d4465a0024dbce9f8131c313913e36">clear</a> (void)</td></tr>
@@ -160,10 +160,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6640d1fdaff38c79759643146781be7e"><td class="memItemLeft" align="right" valign="top">volatile <a class="el" href="classos_1_1rtos_1_1static__double__list__links.html">static_double_list_links</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#a6640d1fdaff38c79759643146781be7e">tail</a> (void) const </td></tr>
 <tr class="memdesc:a6640d1fdaff38c79759643146781be7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list tail.  <a href="#a6640d1fdaff38c79759643146781be7e">More...</a><br /></td></tr>
 <tr class="separator:a6640d1fdaff38c79759643146781be7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac398ad02b949ced4aa29446ddea8be2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1static__double__list__links.html">static_double_list_links</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#ac398ad02b949ced4aa29446ddea8be2a">begin</a> (void) const </td></tr>
-<tr class="separator:ac398ad02b949ced4aa29446ddea8be2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d527d4e301b1b03d1c0068d6525275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1static__double__list__links.html">static_double_list_links</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list.html#a33d527d4e301b1b03d1c0068d6525275">end</a> (void) const </td></tr>
-<tr class="separator:a33d527d4e301b1b03d1c0068d6525275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -185,7 +181,7 @@ Protected Attributes</h2></td></tr>
 <p>The idea is to design the object in such a way as to benefit from the standard BSS initialisation, in other words take <code>nullptr</code> as starting values.</p>
 <p>This has the downside of requiring additional tests before adding new nodes to the list, to create the initial self links, and when checking if the list is empty. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00678">678</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00824">824</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ada2d5a91aa7f06976cdce0bc70a11942"></a>
 <div class="memitem">
@@ -208,10 +204,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a list. </p>
+<p>Construct a list. </p>
 <p>The initial list status is empty by having the pointers null. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01580">1580</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01865">1865</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -236,40 +232,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the list. </p>
+<p>Destruct the list. </p>
 <p>There must be no nodes in the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01591">1591</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01876">1876</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac398ad02b949ced4aa29446ddea8be2a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1static__double__list__links.html">static_double_list_links</a> * os::rtos::static_double_list::begin </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01616">1616</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ab4d4465a0024dbce9f8131c313913e36"></a>
 <div class="memitem">
 <div class="memproto">
@@ -325,33 +295,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01597">1597</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a33d527d4e301b1b03d1c0068d6525275"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1static__double__list__links.html">static_double_list_links</a> * os::rtos::static_double_list::end </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01622">1622</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01882">1882</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +325,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to head node. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01604">1604</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01889">1889</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -457,7 +401,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to tail node. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01610">1610</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01895">1895</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -483,7 +427,7 @@ Protected Attributes</h2></td></tr>
 <p>A list node used to point to head and tail. </p>
 <p>To simplify processing, the list always has a node. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00807">807</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00947">947</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>

@@ -9,6 +9,7 @@ var searchData=
   ['os_5fdouble_5flist_5flinks_5fs',['os_double_list_links_s',['../structos__double__list__links__s.html',1,'']]],
   ['os_5fevflags_5fattr_5fs',['os_evflags_attr_s',['../structos__evflags__attr__s.html',1,'']]],
   ['os_5fevflags_5fs',['os_evflags_s',['../structos__evflags__s.html',1,'']]],
+  ['os_5finternal_5fevflags_5fs',['os_internal_evflags_s',['../structos__internal__evflags__s.html',1,'']]],
   ['os_5fmail_5fqueue_5fs',['os_mail_queue_s',['../structos__mail__queue__s.html',1,'']]],
   ['os_5fmailq_5fdef',['os_mailQ_def',['../structos__mail_q__def.html',1,'']]],
   ['os_5fmempool_5fattr_5fs',['os_mempool_attr_s',['../structos__mempool__attr__s.html',1,'']]],

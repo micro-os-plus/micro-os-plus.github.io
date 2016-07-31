@@ -2,7 +2,7 @@ var searchData=
 [
   ['base',['Base',['../classos_1_1driver_1_1_base.html',1,'os::driver']]],
   ['base',['Base',['../classos_1_1driver_1_1_base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
-  ['begin',['begin',['../classos_1_1rtos_1_1static__double__list.html#ac398ad02b949ced4aa29446ddea8be2a',1,'os::rtos::static_double_list::begin()'],['../classos_1_1rtos_1_1intrusive__list.html#a18c67fd65c867b9f70ebc0a25b86e744',1,'os::rtos::intrusive_list::begin()']]],
+  ['begin',['begin',['../classos_1_1rtos_1_1intrusive__list.html#a18c67fd65c867b9f70ebc0a25b86e744',1,'os::rtos::intrusive_list::begin()'],['../classos_1_1rtos_1_1waiting__threads__list.html#a493a95f5a7bfec5d851b3178265b4089',1,'os::rtos::waiting_threads_list::begin()']]],
   ['below_5fnormal',['below_normal',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66aecb6604af6f7847bafb7f3647f920804',1,'os::rtos::thread::priority']]],
   ['bind',['bind',['../newlib-aliases_8h.html#a55b3c1572b4e86ca0702ecdeb7e43997',1,'bind(int socket, const struct sockaddr *address, socklen_t address_len):&#160;newlib-aliases.h'],['../standard-aliases_8h.html#a55b3c1572b4e86ca0702ecdeb7e43997',1,'bind(int socket, const struct sockaddr *address, socklen_t address_len):&#160;standard-aliases.h']]],
   ['bit_5fnumber_5ft',['bit_number_t',['../namespaceos_1_1driver_1_1serial.html#aee085b90d521dfded35f948dd5698f25',1,'os::driver::serial']]],

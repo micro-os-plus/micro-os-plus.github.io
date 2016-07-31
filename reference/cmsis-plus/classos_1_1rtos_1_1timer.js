@@ -1,7 +1,7 @@
 var classos_1_1rtos_1_1timer =
 [
     [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html", "classos_1_1rtos_1_1timer_1_1attributes" ],
-    [ "periodic_attributes", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html", "classos_1_1rtos_1_1timer_1_1periodic__attributes" ],
+    [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html", "classos_1_1rtos_1_1timer_1_1attributes__periodic" ],
     [ "run", "structos_1_1rtos_1_1timer_1_1run.html", "structos_1_1rtos_1_1timer_1_1run" ],
     [ "state", "structos_1_1rtos_1_1timer_1_1state.html", "structos_1_1rtos_1_1timer_1_1state" ],
     [ "func_args_t", "classos_1_1rtos_1_1timer.html#a08e6dea4337c8592a54e4b14b7825263", null ],
@@ -16,5 +16,5 @@ var classos_1_1rtos_1_1timer =
     [ "start", "classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730", null ],
     [ "stop", "classos_1_1rtos_1_1timer.html#adc15ae1bbd9d1b8851a690019d8603a6", null ],
     [ "once_initializer", "classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343", null ],
-    [ "periodic_initializer", "classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f", null ]
+    [ "periodic_initializer", "classos_1_1rtos_1_1timer.html#a4b2c2f1ee0a2bb67e4780143cdf6005d", null ]
 ];

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -151,10 +151,10 @@ Condition variable functions</h2></td></tr>
 <tr class="memdesc:gaf34e240d31863e8e0daf776030acb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the condition variable attributes.  <a href="#gaf34e240d31863e8e0daf776030acb54e">More...</a><br /></td></tr>
 <tr class="separator:gaf34e240d31863e8e0daf776030acb54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477">os_condvar_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a condition variable object.  <a href="#gabf26b8b1575d1fc2ca9e275c1d320477">More...</a><br /></td></tr>
+<tr class="memdesc:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a condition variable object instance.  <a href="#gabf26b8b1575d1fc2ca9e275c1d320477">More...</a><br /></td></tr>
 <tr class="separator:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f429a06a20b61690012bc7948511958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga5f429a06a20b61690012bc7948511958">os_condvar_destroy</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
-<tr class="memdesc:ga5f429a06a20b61690012bc7948511958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the condition variable object.  <a href="#ga5f429a06a20b61690012bc7948511958">More...</a><br /></td></tr>
+<tr class="memdesc:ga5f429a06a20b61690012bc7948511958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the condition variable object instance.  <a href="#ga5f429a06a20b61690012bc7948511958">More...</a><br /></td></tr>
 <tr class="separator:ga5f429a06a20b61690012bc7948511958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga87ca22aa9244f70e5a4f1cfb1d60949c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga87ca22aa9244f70e5a4f1cfb1d60949c">os_condvar_get_name</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
 <tr class="memdesc:ga87ca22aa9244f70e5a4f1cfb1d60949c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the condition variable name.  <a href="#ga87ca22aa9244f70e5a4f1cfb1d60949c">More...</a><br /></td></tr>
@@ -204,8 +204,8 @@ Condition variable functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Condition variable object storage. </p>
-<p>This C structure has the same size as the C++ <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> object and must be initialised with <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477" title="Create a condition variable object. ">os_condvar_create()</a>.</p>
-<p>Later on a pointer to it can be used both in C and C++ to refer to the timer object.</p>
+<p>This C structure has the same size as the C++ <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> object and must be initialised with <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477" title="Create a condition variable object instance. ">os_condvar_create()</a>.</p>
+<p>Later on a pointer to it can be used both in C and C++ to refer to the timer object instance.</p>
 <p>The members of this structure are hidden and should not be used directly, but only through specific functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html" title="POSIX compliant condition variable. ">os::rtos::condition_variable</a> </dd></dl>
 
@@ -229,7 +229,7 @@ Condition variable functions</h2></td></tr>
 <p>Initialise the condition variable attributes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to condition variable attributes object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to condition variable attributes object instance. </td></tr>
   </table>
   </dd>
 </dl>
@@ -237,7 +237,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable_1_1attributes.html" title="Condition variable attributes. ">os::rtos::condition_variable::attributes</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01561">1561</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01616">1616</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +258,7 @@ Condition variable functions</h2></td></tr>
 <p>Notify all threads waiting for a condition variable. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,7 +273,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81" title="Notify all threads waiting for a condition variable. ">os::rtos::condition_variable::broadcast()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01637">1637</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01692">1692</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -307,10 +307,10 @@ Condition variable functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a condition variable object. </p>
+<p>Create a condition variable object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes. </td></tr>
   </table>
@@ -326,7 +326,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html" title="POSIX compliant condition variable. ">os::rtos::condition_variable</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01575">1575</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01630">1630</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -344,10 +344,10 @@ Condition variable functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the condition variable object. </p>
+<p>Destroy the condition variable object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
   </table>
   </dd>
 </dl>
@@ -355,7 +355,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html" title="POSIX compliant condition variable. ">os::rtos::condition_variable</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01595">1595</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01650">1650</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -376,7 +376,7 @@ Condition variable functions</h2></td></tr>
 <p>Get the condition variable name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
   </table>
   </dd>
 </dl>
@@ -384,7 +384,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc" title="Get object name. ">os::rtos::condition_variable::name()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01609">1609</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01664">1664</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Condition variable functions</h2></td></tr>
 <p>Notify one thread waiting for a condition variable. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
   </table>
   </dd>
 </dl>
@@ -420,7 +420,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766" title="Notify one thread waiting for a condition variable. ">os::rtos::condition_variable::signal()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01623">1623</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01678">1678</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +457,7 @@ Condition variable functions</h2></td></tr>
 <p>Timed wait for a condition variable to be notified. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to the associated mutex. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout to wait. </td></tr>
   </table>
@@ -477,7 +477,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#aea63b3c19dd9e0fa2f17c781ec220198" title="Timed wait for a condition variable to be notified. ">os::rtos::condition_variable::timed_wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01666">1666</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01721">1721</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ Condition variable functions</h2></td></tr>
 <p>Wait for a condition variable to be notified. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to the associated mutex. </td></tr>
   </table>
   </dd>
@@ -526,7 +526,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#ac920555b675c7778d8db780307fdcd3d" title="Wait for a condition variable to be notified. ">os::rtos::condition_variable::wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01651">1651</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01706">1706</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

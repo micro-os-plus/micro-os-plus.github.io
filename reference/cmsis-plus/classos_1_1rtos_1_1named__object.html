@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -144,10 +144,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1fa8a183d0d2eb17fd2ea1f2bad6d7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1named__object.html#ae1fa8a183d0d2eb17fd2ea1f2bad6d7e">named_object</a> ()</td></tr>
 <tr class="separator:ae1fa8a183d0d2eb17fd2ea1f2bad6d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55f6dae29ec4ebd4157f1308b2b3b7de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1named__object.html#a55f6dae29ec4ebd4157f1308b2b3b7de">named_object</a> (const char *<a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a>)</td></tr>
-<tr class="memdesc:a55f6dae29ec4ebd4157f1308b2b3b7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named object.  <a href="#a55f6dae29ec4ebd4157f1308b2b3b7de">More...</a><br /></td></tr>
+<tr class="memdesc:a55f6dae29ec4ebd4157f1308b2b3b7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named object instance.  <a href="#a55f6dae29ec4ebd4157f1308b2b3b7de">More...</a><br /></td></tr>
 <tr class="separator:a55f6dae29ec4ebd4157f1308b2b3b7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af06c4e78093c8b1f835c0faf1afeb54e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1named__object.html#af06c4e78093c8b1f835c0faf1afeb54e">~named_object</a> ()=default</td></tr>
-<tr class="memdesc:af06c4e78093c8b1f835c0faf1afeb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the named object.  <a href="#af06c4e78093c8b1f835c0faf1afeb54e">More...</a><br /></td></tr>
+<tr class="memdesc:af06c4e78093c8b1f835c0faf1afeb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the named object instance.  <a href="#af06c4e78093c8b1f835c0faf1afeb54e">More...</a><br /></td></tr>
 <tr class="separator:af06c4e78093c8b1f835c0faf1afeb54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:aa8a2c96e84505309794a489458c8b3bc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a> (void) const </td></tr>
@@ -159,7 +159,7 @@ Public Member Functions</h2></td></tr>
 <p>This class serves as a base class for all objects that have a name (most of the RTOS classes do have a name).</p>
 <p>Attributes use a separate constexpr object. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00360">360</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00354">354</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae1fa8a183d0d2eb17fd2ea1f2bad6d7e"></a>
 <div class="memitem">
@@ -174,7 +174,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00592">592</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00528">528</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -192,7 +192,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a named object. </p>
+<p>Construct a named object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned.</td></tr>
@@ -202,7 +202,7 @@ Public Member Functions</h2></td></tr>
 <p>Prefer the given name, otherwise default to '-'.</p>
 <p>To save space, instead of copying the null terminated string locally, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00608">608</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00544">544</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the named object. </p>
+<p>Destruct the named object instance. </p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ Public Member Functions</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00541">541</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

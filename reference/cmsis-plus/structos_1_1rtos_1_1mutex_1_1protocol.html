@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::mutex::protocol Struct Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: os::rtos::mutex::protocol Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -126,13 +126,13 @@ $(document).ready(function(){initNavTree('structos_1_1rtos_1_1mutex_1_1protocol.
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="structos_1_1rtos_1_1mutex_1_1protocol-members.html">List of all members</a>  </div>
+<a href="classos_1_1rtos_1_1mutex_1_1protocol-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::protocol Struct Reference</div>  </div>
+<div class="title">os::rtos::mutex::protocol Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Namespace of mutex protocols.  
+<p>Mutex protocols.  
  <a href="structos_1_1rtos_1_1mutex_1_1protocol.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>&gt;</code></p>
@@ -146,15 +146,31 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb">protect</a> = 2
 <br />
- }<tr class="memdesc:a0a3a2506459afaf7cb613aaf1fd875a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex protocols.  <a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9">More...</a><br /></td></tr>
+ }<tr class="memdesc:a0a3a2506459afaf7cb613aaf1fd875a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of mutex protocols.  <a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a0a3a2506459afaf7cb613aaf1fd875a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Namespace of mutex protocols. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#aa4b2fac6a493ae652f41c3b250d07ad9" title="Mutex protocol attribute. ">attributes::mx_protocol</a> </dd></dl>
+<div class="textblock"><p>Mutex protocols. </p>
+<p>Allow to define the behaviour of the mutex related to scheduling.</p>
+<p>The mutex protocol is defined via the <code>mx_protocol</code> attribute of the <code><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html" title="Mutex attributes. ">mutex::attributes</a></code> class. Valid values are:</p>
+<ul>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b" title="Priority and scheduling not affected by mutex ownership. ">mutex::protocol::none</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb" title="Execute at the highest priority. ">mutex::protocol::protect</a></code></li>
+</ul>
+<p>When a thread owns a mutex with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b" title="Priority and scheduling not affected by mutex ownership. ">mutex::protocol::none</a></code> protocol attribute, its priority and scheduling shall not be affected by its mutex ownership.</p>
+<p>When a thread is blocking higher priority threads because of owning one or more robust mutexes with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code> protocol attribute, it shall execute at the higher of its priority or the priority of the highest priority thread waiting on any of the robust mutexes owned by this thread and initialised with this protocol.</p>
+<p>When a thread is blocking higher priority threads because of owning one or more non-robust mutexes with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code> protocol attribute, it shall execute at the higher of its priority or the priority of the highest priority thread waiting on any of the non-robust mutexes owned by this thread and initialised with this protocol.</p>
+<p>When a thread owns one or more robust mutexes initialised with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb" title="Execute at the highest priority. ">mutex::protocol::protect</a></code> protocol, it shall execute at the higher of its priority or the highest of the priority ceilings of all the robust mutexes owned by this thread and initialised with this attribute, regardless of whether other threads are blocked on any of these robust mutexes or not.</p>
+<p>When a thread owns one or more non-robust mutexes initialised with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb" title="Execute at the highest priority. ">mutex::protocol::protect</a></code> protocol, it shall execute at the higher of its priority or the highest of the priority ceilings of all the non-robust mutexes owned by this thread and initialised with this attribute, regardless of whether other threads are blocked on any of these non-robust mutexes or not.</p>
+<p>While a thread is holding a mutex which has been initialised with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code> or <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb" title="Execute at the highest priority. ">mutex::protocol::protect</a></code> protocol attributes, it shall not be subject to being moved to the tail of the scheduling queue at its priority in the event that its original priority is changed, such as by a POSIX call to sched_setparam(). Likewise, when a thread unlocks a mutex that has been initialised with the <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code> or <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb" title="Execute at the highest priority. ">mutex::protocol::protect</a></code> protocol attributes, it shall not be subject to being moved to the tail of the scheduling queue at its priority in the event that its original priority is changed.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement the policy of locking thread priorities increased by mutexes.</dd></dl>
+<p>If a thread simultaneously owns several mutexes initialised with different protocols, it shall execute at the highest of the priorities that it would have obtained by each of these protocols.</p>
+<p>When a thread makes a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock/acquire the mutex. ">mutex::lock()</a></code>, the mutex was initialised with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code>, when the calling thread is blocked because the mutex is owned by another thread, that owner thread shall inherit the priority level of the calling thread as long as it continues to own the mutex. The implementation shall update its execution priority to the maximum of its assigned priority and all its inherited priorities. Furthermore, if this owner thread itself becomes blocked on another mutex with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code>, the same priority inheritance effect shall be propagated to this other owner thread, in a recursive manner.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_setprotocol()</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00072">72</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00070">70</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a0a3a2506459afaf7cb613aaf1fd875a9"></a>
 <div class="memitem">
@@ -166,8 +182,7 @@ Public Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mutex protocols. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#aa4b2fac6a493ae652f41c3b250d07ad9" title="Mutex protocol attribute. ">attributes::mx_protocol</a> </dd></dl>
+<p>Enumeration of mutex protocols. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b"></a>none&#160;</td><td class="fielddoc">
 <p>Priority and scheduling not affected by mutex ownership. </p>
@@ -180,11 +195,11 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00079">79</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00075">75</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cmsis-plus/rtos/<a class="el" href="os-mutex_8h_source.html">os-mutex.h</a></li>
 </ul>
 </div><!-- contents -->

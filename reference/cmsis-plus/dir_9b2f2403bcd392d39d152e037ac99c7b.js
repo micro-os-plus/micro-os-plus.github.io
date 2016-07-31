@@ -1,5 +1,6 @@
 var dir_9b2f2403bcd392d39d152e037ac99c7b =
 [
+    [ "internal", "dir_29ef16fb87c4e7d99125b3ef7748c427.html", "dir_29ef16fb87c4e7d99125b3ef7748c427" ],
     [ "os-c-api.h", "os-c-api_8h.html", "os-c-api_8h" ],
     [ "os-c-decls.h", "os-c-decls_8h.html", "os-c-decls_8h" ],
     [ "os-clocks.h", "os-clocks_8h.html", "os-clocks_8h" ],
@@ -13,6 +14,7 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-lists.h", "os-lists_8h.html", [
       [ "clock_timestamps_list", "classos_1_1rtos_1_1clock__timestamps__list.html", "classos_1_1rtos_1_1clock__timestamps__list" ],
       [ "double_list", "classos_1_1rtos_1_1double__list.html", "classos_1_1rtos_1_1double__list" ],
+      [ "double_list_iterator", "classos_1_1rtos_1_1double__list__iterator.html", "classos_1_1rtos_1_1double__list__iterator" ],
       [ "double_list_links", "classos_1_1rtos_1_1double__list__links.html", "classos_1_1rtos_1_1double__list__links" ],
       [ "intrusive_list", "classos_1_1rtos_1_1intrusive__list.html", "classos_1_1rtos_1_1intrusive__list" ],
       [ "intrusive_list_iterator", "classos_1_1rtos_1_1intrusive__list__iterator.html", "classos_1_1rtos_1_1intrusive__list__iterator" ],
@@ -52,7 +54,7 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-thread.h", "os-thread_8h.html", "os-thread_8h" ],
     [ "os-timer.h", "os-timer_8h.html", [
       [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html", "classos_1_1rtos_1_1timer_1_1attributes" ],
-      [ "periodic_attributes", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html", "classos_1_1rtos_1_1timer_1_1periodic__attributes" ],
+      [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html", "classos_1_1rtos_1_1timer_1_1attributes__periodic" ],
       [ "run", "structos_1_1rtos_1_1timer_1_1run.html", "structos_1_1rtos_1_1timer_1_1run" ],
       [ "state", "structos_1_1rtos_1_1timer_1_1state.html", "structos_1_1rtos_1_1timer_1_1state" ]
     ] ],

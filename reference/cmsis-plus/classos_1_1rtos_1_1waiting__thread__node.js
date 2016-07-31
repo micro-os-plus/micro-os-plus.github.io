@@ -9,5 +9,5 @@ var classos_1_1rtos_1_1waiting__thread__node =
     [ "unlink", "classos_1_1rtos_1_1waiting__thread__node.html#a1abbc7da507a3bf539bc0bfea9232c75", null ],
     [ "next_", "classos_1_1rtos_1_1waiting__thread__node.html#a712bb249a86c0733933657a9a8c2b72f", null ],
     [ "prev_", "classos_1_1rtos_1_1waiting__thread__node.html#ab57df753832436e487b3edb7dd731d7d", null ],
-    [ "thread_", "classos_1_1rtos_1_1waiting__thread__node.html#abc0d00c1c0a22fce36bc68b88ef2a47b", null ]
+    [ "thread_", "classos_1_1rtos_1_1waiting__thread__node.html#a738fe7ecf4b381f6054003ab034abd6f", null ]
 ];

@@ -50,7 +50,7 @@ var searchData=
   ['isr',['isr',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a48f2cfacae6c01ca59332f982ba73553',1,'os::rtos::thread::priority']]],
   ['item_5fsz',['item_sz',['../structos__pool__def.html#a815cc2ca8f46c006e460d57fa0f3be6a',1,'os_pool_def::item_sz()'],['../structos__message_q__def.html#ae38d83bb9cb36d9ce40e511330bb2c29',1,'os_messageQ_def::item_sz()']]],
   ['items',['items',['../structos__pool__def.html#ae0a9d218980d5676c6a97f12f3482cf2',1,'os_pool_def::items()'],['../structos__message_q__def.html#a8dcd59d8d0d67ac594c0b57728288fff',1,'os_messageQ_def::items()'],['../structos__mail_q__def.html#a1036b66daa7408b2d98897969eab7d93',1,'os_mailQ_def::items()']]],
-  ['iterator',['iterator',['../classos_1_1rtos_1_1intrusive__list.html#aa0ea38bef77f74a723500aa0565a0a1a',1,'os::rtos::intrusive_list']]],
-  ['iterator_5fcategory',['iterator_category',['../classos_1_1rtos_1_1intrusive__list__iterator.html#a08dbc0f329dd4794037e53d5e6224cce',1,'os::rtos::intrusive_list_iterator']]],
-  ['iterator_5fpointer',['iterator_pointer',['../classos_1_1rtos_1_1intrusive__list__iterator.html#a2e708b704afd9cc7682e80f4d1361a74',1,'os::rtos::intrusive_list_iterator']]]
+  ['iterator',['iterator',['../classos_1_1rtos_1_1intrusive__list.html#aa0ea38bef77f74a723500aa0565a0a1a',1,'os::rtos::intrusive_list::iterator()'],['../classos_1_1rtos_1_1waiting__threads__list.html#ae91cd05a2a369dd8771a60efd0e7a404',1,'os::rtos::waiting_threads_list::iterator()']]],
+  ['iterator_5fcategory',['iterator_category',['../classos_1_1rtos_1_1double__list__iterator.html#add0013ddab34a21ec416953ff9e3897b',1,'os::rtos::double_list_iterator::iterator_category()'],['../classos_1_1rtos_1_1intrusive__list__iterator.html#a08dbc0f329dd4794037e53d5e6224cce',1,'os::rtos::intrusive_list_iterator::iterator_category()']]],
+  ['iterator_5fpointer',['iterator_pointer',['../classos_1_1rtos_1_1double__list__iterator.html#aaa3332cfb60cd0b444d7485db385faff',1,'os::rtos::double_list_iterator::iterator_pointer()'],['../classos_1_1rtos_1_1intrusive__list__iterator.html#a2e708b704afd9cc7682e80f4d1361a74',1,'os::rtos::intrusive_list_iterator::iterator_pointer()']]]
 ];

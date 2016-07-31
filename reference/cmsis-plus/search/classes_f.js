@@ -1,9 +1,9 @@
 var searchData=
 [
   ['terminated_5fthreads_5flist',['terminated_threads_list',['../classos_1_1rtos_1_1terminated__threads__list.html',1,'os::rtos']]],
-  ['thread',['thread',['../classos_1_1estd_1_1thread.html',1,'os::estd']]],
-  ['thread',['thread',['../classos_1_1rtos_1_1thread.html',1,'os::rtos']]],
   ['thread',['thread',['../classos_1_1rtos_1_1port_1_1thread.html',1,'os::rtos::port']]],
+  ['thread',['thread',['../classos_1_1rtos_1_1thread.html',1,'os::rtos']]],
+  ['thread',['thread',['../classos_1_1estd_1_1thread.html',1,'os::estd']]],
   ['thread_5fallocated',['thread_allocated',['../classos_1_1rtos_1_1thread__allocated.html',1,'os::rtos']]],
   ['thread_5fchildren_5flist',['thread_children_list',['../classos_1_1rtos_1_1thread__children__list.html',1,'os::rtos']]],
   ['thread_5fstatic',['thread_static',['../classos_1_1rtos_1_1thread__static.html',1,'os::rtos']]],

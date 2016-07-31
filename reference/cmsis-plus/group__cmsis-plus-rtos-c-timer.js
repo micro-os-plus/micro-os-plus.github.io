@@ -16,7 +16,7 @@ var group__cmsis_plus_rtos_c_timer =
     ] ],
     [ "os_timer_attr_get_periodic", "group__cmsis-plus-rtos-c-timer.html#ga47f3f81a5405ecff302ec4ff8b9e5eaf", null ],
     [ "os_timer_attr_init", "group__cmsis-plus-rtos-c-timer.html#ga92d94502723018f68d38af2230f65e87", null ],
-    [ "os_timer_attr_init_periodic", "group__cmsis-plus-rtos-c-timer.html#ga8350f389f29a513685d62b9bf05acde0", null ],
+    [ "os_timer_attr_periodic_init", "group__cmsis-plus-rtos-c-timer.html#gadf31ea9a8492b03aee0a7728a1078f4a", null ],
     [ "os_timer_create", "group__cmsis-plus-rtos-c-timer.html#ga8fa33feb8d72126562b81e79a13fc32f", null ],
     [ "os_timer_destroy", "group__cmsis-plus-rtos-c-timer.html#gac46b718fa8a0fedc97c6ec06f8d8e301", null ],
     [ "os_timer_get_name", "group__cmsis-plus-rtos-c-timer.html#gaaec940a207d36d55a38e0b4a09d27606", null ],

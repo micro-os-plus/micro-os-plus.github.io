@@ -2,6 +2,7 @@ var searchData=
 [
   ['main',['main',['../os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'os-main.cpp']]],
   ['malloc',['malloc',['../group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4',1,'os::estd']]],
+  ['mask',['mask',['../classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442',1,'os::rtos::internal::event_flags']]],
   ['max_5fsize',['max_size',['../classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#a1fcf82f80d3320108400ffee8a099a37',1,'os::rtos::memory::new_delete_allocator::max_size()'],['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#af543c6c83532cb86c09a98990686d1e9',1,'os::rtos::memory::polymorphic_allocator::max_size()']]],
   ['max_5fvalue',['max_value',['../classos_1_1rtos_1_1semaphore.html#a12882c8f1b9dac665087b6f88428a1b8',1,'os::rtos::semaphore']]],
   ['memory_5fpool',['memory_pool',['../classos_1_1rtos_1_1memory__pool.html#a7fb9d6254e71976f36541a4239e4a058',1,'os::rtos::memory_pool::memory_pool(std::size_t blocks, std::size_t block_size_bytes, const attributes &amp;attr=initializer, const Allocator &amp;allocator=Allocator())'],['../classos_1_1rtos_1_1memory__pool.html#a666fd807d745008c540b90016975cd0b',1,'os::rtos::memory_pool::memory_pool(const char *name, std::size_t blocks, std::size_t block_size_bytes, const attributes &amp;attr=initializer, const Allocator &amp;allocator=Allocator())']]],

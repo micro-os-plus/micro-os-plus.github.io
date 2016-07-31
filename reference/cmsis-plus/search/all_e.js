@@ -26,7 +26,7 @@ var searchData=
   ['nmi_5fhandler',['NMI_Handler',['../exception-handlers_8h.html#a6ad7a5e3ee69cb6db6a6b9111ba898bc',1,'exception-handlers.h']]],
   ['no_5findex',['no_index',['../classos_1_1rtos_1_1message__queue.html#afb32c8676f31ac44c5fd8d2782b41e3f',1,'os::rtos::message_queue']]],
   ['no_5ftimeout',['no_timeout',['../group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd',1,'os::estd']]],
-  ['node_5f',['node_',['../classos_1_1rtos_1_1intrusive__list__iterator.html#a4426b8d866fa3df142f7330312676608',1,'os::rtos::intrusive_list_iterator']]],
+  ['node_5f',['node_',['../classos_1_1rtos_1_1double__list__iterator.html#a963f881e04fdc080a80ba67b5408d2ce',1,'os::rtos::double_list_iterator::node_()'],['../classos_1_1rtos_1_1intrusive__list__iterator.html#a4426b8d866fa3df142f7330312676608',1,'os::rtos::intrusive_list_iterator::node_()']]],
   ['nofiledescriptor',['noFileDescriptor',['../namespaceos_1_1posix.html#ad52280e4d26eb2e1f792567064dcda38',1,'os::posix']]],
   ['none',['none',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b',1,'os::rtos::mutex::protocol::none()'],['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66abe1def6f8adb29967a162872655593ae',1,'os::rtos::thread::priority::none()']]],
   ['normal',['normal',['../structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939',1,'os::rtos::mutex::type::normal()'],['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ad92eafd06437bfec575bb7c47244e93c',1,'os::rtos::thread::priority::normal()']]],

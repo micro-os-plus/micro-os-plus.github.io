@@ -2,10 +2,8 @@ var classos_1_1rtos_1_1ready__threads__list =
 [
     [ "ready_threads_list", "classos_1_1rtos_1_1ready__threads__list.html#a884e36935c4252edf4544f4fe9710ac7", null ],
     [ "~ready_threads_list", "classos_1_1rtos_1_1ready__threads__list.html#a3174f7f576a0a0ea0f30932ce40cb160", null ],
-    [ "begin", "classos_1_1rtos_1_1ready__threads__list.html#ac398ad02b949ced4aa29446ddea8be2a", null ],
     [ "clear", "classos_1_1rtos_1_1ready__threads__list.html#ab4d4465a0024dbce9f8131c313913e36", null ],
     [ "empty", "classos_1_1rtos_1_1ready__threads__list.html#af0817145a118719101aeeee0a6010d96", null ],
-    [ "end", "classos_1_1rtos_1_1ready__threads__list.html#a33d527d4e301b1b03d1c0068d6525275", null ],
     [ "head", "classos_1_1rtos_1_1ready__threads__list.html#a7e602298f25e9c55668939b4f6edbb09", null ],
     [ "insert_after", "classos_1_1rtos_1_1ready__threads__list.html#af43b69e0096f7657be850df9abbadac9", null ],
     [ "link", "classos_1_1rtos_1_1ready__threads__list.html#aec6221d2cc2df6ab4b0c23a9f9480812", null ],

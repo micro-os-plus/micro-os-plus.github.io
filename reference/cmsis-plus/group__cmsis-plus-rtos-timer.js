@@ -7,11 +7,11 @@ var group__cmsis_plus_rtos_timer =
         [ "clock", "classos_1_1rtos_1_1timer_1_1attributes.html#a884c121715e76abbea32e132876884fb", null ],
         [ "tm_type", "classos_1_1rtos_1_1timer_1_1attributes.html#a1678ce0a3d98c4c540292c70dd0c90f3", null ]
       ] ],
-      [ "periodic_attributes", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html", [
-        [ "periodic_attributes", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html#a7c6b43eb907af3a2e9a430b66995f8ae", null ],
-        [ "~periodic_attributes", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html#ae415380f7428ffe38f79d6436c7ed411", null ],
-        [ "clock", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html#a884c121715e76abbea32e132876884fb", null ],
-        [ "tm_type", "classos_1_1rtos_1_1timer_1_1periodic__attributes.html#a1678ce0a3d98c4c540292c70dd0c90f3", null ]
+      [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html", [
+        [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a67ab5d0413195c59d1aa786ef8b9c824", null ],
+        [ "~attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a50f35bfb52583fb29fca42c125d10c88", null ],
+        [ "clock", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a884c121715e76abbea32e132876884fb", null ],
+        [ "tm_type", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a1678ce0a3d98c4c540292c70dd0c90f3", null ]
       ] ],
       [ "run", "structos_1_1rtos_1_1timer_1_1run.html", [
         [ "once", "structos_1_1rtos_1_1timer_1_1run.html#a98c7aa532bda781126dc8dc0dbdfcc44a72b566411febd3d575bfb109b3346777", null ],
@@ -37,6 +37,6 @@ var group__cmsis_plus_rtos_timer =
       [ "start", "classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730", null ],
       [ "stop", "classos_1_1rtos_1_1timer.html#adc15ae1bbd9d1b8851a690019d8603a6", null ],
       [ "once_initializer", "classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343", null ],
-      [ "periodic_initializer", "classos_1_1rtos_1_1timer.html#a2c1b2f4ddbe729823897a47b5ed72a4f", null ]
+      [ "periodic_initializer", "classos_1_1rtos_1_1timer.html#a4b2c2f1ee0a2bb67e4780143cdf6005d", null ]
     ] ]
 ];

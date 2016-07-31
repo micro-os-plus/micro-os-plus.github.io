@@ -8,7 +8,7 @@ var searchData=
   ['next_5f',['next_',['../classos_1_1rtos_1_1static__double__list__links.html#a712bb249a86c0733933657a9a8c2b72f',1,'os::rtos::static_double_list_links']]],
   ['nm_5f',['nm_',['../classos_1_1estd_1_1mutex.html#a0dacaad816b4e8b500430f8189387ac4',1,'os::estd::mutex::nm_()'],['../classos_1_1estd_1_1recursive__mutex.html#a4cab2578e632960757b334730331f905',1,'os::estd::recursive_mutex::nm_()']]],
   ['no_5findex',['no_index',['../classos_1_1rtos_1_1message__queue.html#afb32c8676f31ac44c5fd8d2782b41e3f',1,'os::rtos::message_queue']]],
-  ['node_5f',['node_',['../classos_1_1rtos_1_1intrusive__list__iterator.html#a4426b8d866fa3df142f7330312676608',1,'os::rtos::intrusive_list_iterator']]],
+  ['node_5f',['node_',['../classos_1_1rtos_1_1double__list__iterator.html#a963f881e04fdc080a80ba67b5408d2ce',1,'os::rtos::double_list_iterator::node_()'],['../classos_1_1rtos_1_1intrusive__list__iterator.html#a4426b8d866fa3df142f7330312676608',1,'os::rtos::intrusive_list_iterator::node_()']]],
   ['nofiledescriptor',['noFileDescriptor',['../namespaceos_1_1posix.html#ad52280e4d26eb2e1f792567064dcda38',1,'os::posix']]],
   ['nothrow',['nothrow',['../namespacestd.html#ae4b7b14b5246bacb54f2a4ae366ccd44',1,'std']]],
   ['null_5fres',['null_res',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#ac18afe54e677ec83cf606dca4c813266',1,'anonymous_namespace{memory-resource.cpp}::null_res()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#ac25aa9f9cf26c98a8c87446c1e12725e',1,'anonymous_namespace{os-memory.cpp}::null_res()']]]

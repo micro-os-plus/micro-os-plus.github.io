@@ -235,7 +235,7 @@
 
         
 <h1 class="page-title">Doxygen style guide</h1>
-<p class="last-modified">Last modified on Tue Jun 28 15:01:13 2016 UTC.</p>
+<p class="last-modified">Last modified on Sun Jul 31 16:24:58 2016 UTC.</p>
 
 
 <div id="toc-container">
@@ -315,6 +315,17 @@
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-23">
+<a href="#samples"><span class="tocnumber">21</span> <span class="toctext">Samples</span></a>
+<ul>
+<li class="toc_level-2 toc_section-24">
+<a href="#typedefs-or-using"><span class="tocnumber">21.1</span> <span class="toctext">Typedefs or using</span></a>
+</li>
+<li class="toc_level-2 toc_section-25">
+<a href="#extra-line-between-brief-and-details"><span class="tocnumber">21.2</span> <span class="toctext">Extra line between @brief and @details</span></a>
+</li>
+</ul>
+</li>
 </ul>
 </td>
 </tr>
@@ -370,8 +381,8 @@
 <div class="highlighter-rouge">
 <pre class="highlight"><code>/**
  * @details
- * The TraceOstreamBase class implements an ostream class
- * to be used by the Trace class.
+ * The @ref trace_streambuf_base class implements an @ref ostream class
+ * to be used by the @ref trace class.
  */
 </code></pre>
 </div>
@@ -401,7 +412,7 @@
 <div class="highlighter-rouge">
 <pre class="highlight"><code>/**
  * @code{.cpp}
- * setClassName("os::infra::TestSuite");
+ * set_class_name("os::infra::test_suite");
  * @endcode
  */
 </code></pre>
@@ -441,7 +452,7 @@
 <div class="highlighter-rouge">
 <pre class="highlight"><code>| Right | Center | Left  |
 | ----: | :----: | :---- |
-| 10    | 10     | 10    |
+| 10    | 10 | 10    |
 | 1000  | 1000   | 1000  |
 </code></pre>
 </div>
@@ -461,7 +472,7 @@
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>/**
- * @tparam Implementation_T  Type of the implementation class.
+ * @tparam T  Type of the implementation class.
  */
 </code></pre>
 </div>
@@ -531,7 +542,7 @@
  * @details
  * Interrupt numbers defined by the Cortex-M0 light architecture.
  */
-class CortexM0InterruptNumber ...
+class cortex_m0_interrupt_number ...
 </code></pre>
 </div>
 
@@ -566,7 +577,7 @@ class CortexM0InterruptNumber ...
  * @{
  */
 
-typedef Implementation_T Implementation;
+typedef T implementation_t;
 
 /**
  * @}  
@@ -581,13 +592,13 @@ typedef Implementation_T Implementation;
  * @brief  Base constructor.
  * @param [in] implementation Reference to the implementation class.
  */
-TTraceStreambufBase(Implementation&amp; implementation);
+trace_streambuf_base(implementation_t&amp; implementation);
 
 /**
  * @brief  Base destructor.
  */
 virtual
-~TTraceStreambufBase();
+~trace_streambuf_base();
 
 /**
  * @}
@@ -599,18 +610,18 @@ virtual
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>/**
- * @headerfile Trace.h "portable/diagnostics/include/Trace.h"
+ * @headerfile trace.h "portable/diagnostics/include/trace.h"
  * @ingroup diag
  *
  * @brief Trace light base class.
- * @tparam Implementation_T  Type of the implementation class.
+ * @tparam T  Type of the implementation class.
  *
  * @details
  * This class provides no functionality, it is used only as a
- * light alternative to TraceOstreamBase.
+ * light alternative to trace_ostream_base.
  */
-template&lt;class Implementation_T&gt;
-  class TTraceLightBase
+template&lt;class T&gt;
+  class trace_light_base
   {
     ...
   };
@@ -640,16 +651,16 @@ template&lt;class Implementation_T&gt;
  * @ingroup core_thread
  * @{
  */
-        &lt;- mandatory different blocks
+    &lt;- mandatory different blocks
 /**
  * @brief Stack element type.
  */
-typedef hal::arch::stackElement_t element_t;
+typedef hal::arch::stack_element_t element_t;
 
 /**
  * @brief Stack size type.
  */
-typedef hal::arch::stackSize_t size_t;
+typedef hal::arch::stack_size_t size_t;
 
 /**
  * @}
@@ -672,16 +683,16 @@ typedef hal::arch::stackSize_t size_t;
  * @name Constructors/destructor
  * @{
  */
-        &lt;- mandatory different blocks
+    &lt;- mandatory different blocks
 /**
  * @brief Constructor.
  */
-MainThread(void);
+main_thread(void);
 
 /**
  * @brief Destructor.
  */
-~MainThread();
+~main_thread();
 
 /**
  * @}
@@ -692,17 +703,41 @@ MainThread(void);
 <p>Recommended sections name are:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code> * @name Types and constants
+<pre class="highlight"><code>@name Types and constants
 
- * @name Constructors/destructor
+@name Constructors/destructor
 
- * @name Operators
+@name Operators
 
- * @name Public member functions
+@name Public member functions
 
- * @name Private friends
+@name Private friends
 
- * @name Private member variables
+@name Private member variables
+</code></pre>
+</div>
+
+<h2 id="samples">Samples</h2>
+
+<h3 id="typedefs-or-using">Typedefs or using</h3>
+
+<p>Use plural.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>@brief Type of variables holding mutex recursion counters.
+</code></pre>
+</div>
+
+<h3 id="extra-line-between-brief-and-details">Extra line between <a href="https://github.com/brief" class="user-mention">@brief</a> and <a href="https://github.com/details" class="user-mention">@details</a>
+</h3>
+
+<p>For headers which define <a href="https://github.com/details" class="user-mention">@details</a> too, add an extra line.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>@brief Type of variables holding scheduler state codes.
+
+@details
+Usually a boolean telling if the scheduler is ...
 </code></pre>
 </div>
 

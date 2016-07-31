@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -142,10 +142,10 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1semaphore_1_1attrib
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:a5f2330065b8c01127482f39b3e6a892f"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a5f2330065b8c01127482f39b3e6a892f">attributes_counting</a> (<a class="el" href="classos_1_1rtos_1_1semaphore.html#ad6dc71df534fae5ff113a4a010511df1">count_t</a> <a class="el" href="classos_1_1rtos_1_1semaphore.html#a12882c8f1b9dac665087b6f88428a1b8">max_value</a>, <a class="el" href="classos_1_1rtos_1_1semaphore.html#ad6dc71df534fae5ff113a4a010511df1">count_t</a> <a class="el" href="classos_1_1rtos_1_1semaphore.html#a332c9dcea56cfaf9321c778059d00b5f">initial_value</a>)</td></tr>
-<tr class="memdesc:a5f2330065b8c01127482f39b3e6a892f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a counting semaphore attributes object.  <a href="#a5f2330065b8c01127482f39b3e6a892f">More...</a><br /></td></tr>
+<tr class="memdesc:a5f2330065b8c01127482f39b3e6a892f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a counting semaphore attributes object instance.  <a href="#a5f2330065b8c01127482f39b3e6a892f">More...</a><br /></td></tr>
 <tr class="separator:a5f2330065b8c01127482f39b3e6a892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2151c227b49f115d6e9b2c2012265d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#aad2151c227b49f115d6e9b2c2012265d">~attributes_counting</a> ()=default</td></tr>
-<tr class="memdesc:aad2151c227b49f115d6e9b2c2012265d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the semaphore attributes object.  <a href="#aad2151c227b49f115d6e9b2c2012265d">More...</a><br /></td></tr>
+<tr class="memdesc:aad2151c227b49f115d6e9b2c2012265d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the semaphore attributes object instance.  <a href="#aad2151c227b49f115d6e9b2c2012265d">More...</a><br /></td></tr>
 <tr class="separator:aad2151c227b49f115d6e9b2c2012265d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -159,7 +159,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a93a004acdd6591ddef9e0f49be403635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
 <tr class="memitem:a884c121715e76abbea32e132876884fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1clock.html">rtos::clock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clocked__attributes.html#a884c121715e76abbea32e132876884fb">clock</a> = nullptr</td></tr>
-<tr class="memdesc:a884c121715e76abbea32e132876884fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the clock to use for timeouts.  <a href="#a884c121715e76abbea32e132876884fb">More...</a><br /></td></tr>
+<tr class="memdesc:a884c121715e76abbea32e132876884fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute with the address of the clock to be used for timeouts.  <a href="#a884c121715e76abbea32e132876884fb">More...</a><br /></td></tr>
 <tr class="separator:a884c121715e76abbea32e132876884fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -191,7 +191,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a counting semaphore attributes object. </p>
+<p>Construct a counting semaphore attributes object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">max_value</td><td>Maximum count value. </td></tr>
@@ -225,7 +225,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the semaphore attributes object. </p>
+<p>Destruct the semaphore attributes object instance. </p>
 
 </div>
 </div>
@@ -248,11 +248,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Address of the clock to use for timeouts. </p>
-<p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock. ">os::rtos::rtclock</a></code>, or any other user object derived from class <code>clock</code>.</p>
+<p>Attribute with the address of the clock to be used for timeouts. </p>
+<p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock. ">os::rtos::rtclock</a></code>, or any other user object derived from class <code><a class="el" href="classos_1_1rtos_1_1clock.html" title="Generic clock. ">os::rtos::clock</a></code>.</p>
 <p>If <code>nullptr</code>, the default clock is <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock. ">os::rtos::sysclock</a></code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00503">503</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00498">498</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

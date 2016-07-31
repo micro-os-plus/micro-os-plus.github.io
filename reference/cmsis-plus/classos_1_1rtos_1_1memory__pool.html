@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -170,13 +170,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada288312b54cc038fcdc144ed91c53ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:a7fb9d6254e71976f36541a4239e4a058"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a7fb9d6254e71976f36541a4239e4a058">memory_pool</a> (std::size_t blocks, std::size_t block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1memory__pool.html#a7fd442f85898940215d53d32e7a4eee7">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a83591557b98cce2788cba1926153fd8e">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1memory__pool.html#a83591557b98cce2788cba1926153fd8e">Allocator</a>())</td></tr>
-<tr class="memdesc:a7fb9d6254e71976f36541a4239e4a058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a memory pool object.  <a href="#a7fb9d6254e71976f36541a4239e4a058">More...</a><br /></td></tr>
+<tr class="memdesc:a7fb9d6254e71976f36541a4239e4a058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a memory pool object instance.  <a href="#a7fb9d6254e71976f36541a4239e4a058">More...</a><br /></td></tr>
 <tr class="separator:a7fb9d6254e71976f36541a4239e4a058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a666fd807d745008c540b90016975cd0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a666fd807d745008c540b90016975cd0b">memory_pool</a> (const char *<a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a>, std::size_t blocks, std::size_t block_size_bytes, const <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1memory__pool.html#a7fd442f85898940215d53d32e7a4eee7">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a83591557b98cce2788cba1926153fd8e">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1memory__pool.html#a83591557b98cce2788cba1926153fd8e">Allocator</a>())</td></tr>
-<tr class="memdesc:a666fd807d745008c540b90016975cd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named memory pool object.  <a href="#a666fd807d745008c540b90016975cd0b">More...</a><br /></td></tr>
+<tr class="memdesc:a666fd807d745008c540b90016975cd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named memory pool object instance.  <a href="#a666fd807d745008c540b90016975cd0b">More...</a><br /></td></tr>
 <tr class="separator:a666fd807d745008c540b90016975cd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9744239d3f89c9a63a4156e43175884"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool.html#ae9744239d3f89c9a63a4156e43175884">~memory_pool</a> ()</td></tr>
-<tr class="memdesc:ae9744239d3f89c9a63a4156e43175884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the memory pool object.  <a href="#ae9744239d3f89c9a63a4156e43175884">More...</a><br /></td></tr>
+<tr class="memdesc:ae9744239d3f89c9a63a4156e43175884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the memory pool object instance.  <a href="#ae9744239d3f89c9a63a4156e43175884">More...</a><br /></td></tr>
 <tr class="separator:ae9744239d3f89c9a63a4156e43175884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operators</div></td></tr>
 <tr class="memitem:a1407c7d431ceebf67b66e2a41407ec22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a1407c7d431ceebf67b66e2a41407ec22">operator==</a> (const <a class="el" href="classos_1_1rtos_1_1memory__pool.html">memory_pool</a> &amp;rhs) const </td></tr>
@@ -234,7 +234,7 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><p>Synchronised <b>memory pool</b>, using the default RTOS allocator. </p>
 <p>Manage a pool of same size blocks. Fast and deterministic allocation and deallocation behaviour, suitable for use even in ISRs.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Create the pool object.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1memory__pool.html#a7fb9d6254e71976f36541a4239e4a058">memory_pool</a> mp { pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  <span class="keywordtype">void</span>* buf;</div><div class="line"></div><div class="line">  <span class="comment">// Get one block from pool.</span></div><div class="line">  buf = mp.alloc();</div><div class="line"></div><div class="line">  <span class="comment">// ... use the buffer</span></div><div class="line"></div><div class="line">  <span class="comment">// Free the buffer.</span></div><div class="line">  mp.free(buf);</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is no equivalent of calloc(); to initialise to zero a memory block, use: <div class="fragment"><div class="line">block = mp.alloc();</div><div class="line">memset (block, 0, mp.block_size ());</div></div><!-- fragment --></dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Define the type of one pool block.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line">  uint32_t length;</div><div class="line">  uint32_t width;</div><div class="line">  uint32_t height;</div><div class="line">  uint32_t weight;</div><div class="line">} properties_t;</div><div class="line"></div><div class="line"><span class="comment">// Define the pool size.</span></div><div class="line">constexpr uint32_t pool_size = 10;</div><div class="line"></div><div class="line"><span class="comment">// Construct the pool object instance.</span></div><div class="line"><a class="code" href="classos_1_1rtos_1_1memory__pool.html#a7fb9d6254e71976f36541a4239e4a058">memory_pool</a> mp { pool_size, <span class="keyword">sizeof</span>(properties_t) };</div><div class="line"></div><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">  <span class="comment">// Do something</span></div><div class="line"></div><div class="line">  <span class="keywordtype">void</span>* buf;</div><div class="line"></div><div class="line">  <span class="comment">// Get one block from pool.</span></div><div class="line">  buf = mp.alloc();</div><div class="line"></div><div class="line">  <span class="comment">// ... use the buffer</span></div><div class="line"></div><div class="line">  <span class="comment">// Free the buffer.</span></div><div class="line">  mp.free(buf);</div><div class="line"></div><div class="line">  <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>There is no equivalent of calloc(); to initialise to zero a memory block, use: <div class="fragment"><div class="line">block = mp.alloc();</div><div class="line">memset (block, 0, mp.block_size ());</div></div><!-- fragment --></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified. Current functionality inspired by ARM CMSIS, with extensions. </dd></dl>
 
 <p>Definition at line <a class="el" href="os-mempool_8h_source.html#l00063">63</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
@@ -309,7 +309,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a memory pool object. </p>
+<p>Construct a memory pool object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">blocks</td><td>The maximum number of items in the pool. </td></tr>
@@ -371,7 +371,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a named memory pool object. </p>
+<p>Construct a named memory pool object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
@@ -413,13 +413,13 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the memory pool object. </p>
+<p>Destruct the memory pool object instance. </p>
 <p>This destructor shall destroy the memory pool object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
 <p>It shall be safe to destroy an initialised memory pool object upon which no threads are currently blocked. Attempting to destroy a memory pool object upon which other threads are currently blocked results in undefined behaviour.</p>
 <p>If the storage for the memory pool was dynamically allocated, it is deallocated using the same allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00396">396</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00397">397</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Static Public Attributes</h2></td></tr>
 <p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00490">490</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00492">492</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +660,7 @@ template&lt;typename T &gt; </div>
 <p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00713">713</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00756">756</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -729,7 +729,7 @@ template&lt;typename T &gt; </div>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00541">541</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -826,7 +826,7 @@ template&lt;typename T &gt; </div>
 <p>Reset the memory pool to the initial state, with all blocks free.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00758">758</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00807">807</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -861,7 +861,7 @@ template&lt;typename T &gt; </div>
 <p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00625">625</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00651">651</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>
@@ -888,7 +888,7 @@ template&lt;typename T &gt; </div>
 <p>This function uses a critical section to protect against simultaneous access from other threads or interrupts.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00570">570</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00586">586</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
 
 </div>
 </div>

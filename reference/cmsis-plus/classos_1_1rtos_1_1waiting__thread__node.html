@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.4</span>
+     &#160;<span id="projectnumber">v6.3.5</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -142,10 +142,10 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1waiting__thread__no
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:ac3b6a601f7cce63b3200105b3f151766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1waiting__thread__node.html#ac3b6a601f7cce63b3200105b3f151766">waiting_thread_node</a> (<a class="el" href="classos_1_1rtos_1_1thread.html">thread</a> &amp;th)</td></tr>
-<tr class="memdesc:ac3b6a601f7cce63b3200105b3f151766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node with references to the thread.  <a href="#ac3b6a601f7cce63b3200105b3f151766">More...</a><br /></td></tr>
+<tr class="memdesc:ac3b6a601f7cce63b3200105b3f151766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a node with references to the thread.  <a href="#ac3b6a601f7cce63b3200105b3f151766">More...</a><br /></td></tr>
 <tr class="separator:ac3b6a601f7cce63b3200105b3f151766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42cd8e30261616c5d99599d9d5be1cb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1waiting__thread__node.html#a42cd8e30261616c5d99599d9d5be1cb2">~waiting_thread_node</a> ()</td></tr>
-<tr class="memdesc:a42cd8e30261616c5d99599d9d5be1cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the node.  <a href="#a42cd8e30261616c5d99599d9d5be1cb2">More...</a><br /></td></tr>
+<tr class="memdesc:a42cd8e30261616c5d99599d9d5be1cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the node.  <a href="#a42cd8e30261616c5d99599d9d5be1cb2">More...</a><br /></td></tr>
 <tr class="separator:a42cd8e30261616c5d99599d9d5be1cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:a1abbc7da507a3bf539bc0bfea9232c75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1static__double__list__links.html#a1abbc7da507a3bf539bc0bfea9232c75">unlink</a> (void)</td></tr>
@@ -163,9 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Variables</div></td></tr>
-<tr class="memitem:abc0d00c1c0a22fce36bc68b88ef2a47b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1thread.html">rtos::thread</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1waiting__thread__node.html#abc0d00c1c0a22fce36bc68b88ef2a47b">thread_</a></td></tr>
-<tr class="memdesc:abc0d00c1c0a22fce36bc68b88ef2a47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to waiting thread.  <a href="#abc0d00c1c0a22fce36bc68b88ef2a47b">More...</a><br /></td></tr>
-<tr class="separator:abc0d00c1c0a22fce36bc68b88ef2a47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738fe7ecf4b381f6054003ab034abd6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1thread.html">rtos::thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1waiting__thread__node.html#a738fe7ecf4b381f6054003ab034abd6f">thread_</a></td></tr>
+<tr class="memdesc:a738fe7ecf4b381f6054003ab034abd6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to waiting thread.  <a href="#a738fe7ecf4b381f6054003ab034abd6f">More...</a><br /></td></tr>
+<tr class="separator:a738fe7ecf4b381f6054003ab034abd6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -180,7 +180,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Double linked list node, with thread reference. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00350">350</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00496">496</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac3b6a601f7cce63b3200105b3f151766"></a>
 <div class="memitem">
@@ -204,7 +204,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a node with references to the thread. </p>
+<p>Construct a node with references to the thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">th</td><td>Reference to the thread. </td></tr>
@@ -212,7 +212,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01561">1561</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01846">1846</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -237,9 +237,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the node. </p>
+<p>Destruct the node. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01568">1568</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01853">1853</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -266,7 +266,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01520">1520</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01805">1805</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +292,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01532">1532</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01817">1817</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01526">1526</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01811">1811</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +344,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01538">1538</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l01823">1823</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to next node. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00288">288</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00434">434</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -424,23 +424,23 @@ Protected Attributes</h2></td></tr>
 
 <p>Pointer to previous node. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00283">283</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00429">429</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abc0d00c1c0a22fce36bc68b88ef2a47b"></a>
+<a class="anchor" id="a738fe7ecf4b381f6054003ab034abd6f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1thread.html">rtos::thread</a>&amp; os::rtos::waiting_thread_node::thread_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1thread.html">rtos::thread</a>* os::rtos::waiting_thread_node::thread_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reference to waiting thread. </p>
+<p>Pointer to waiting thread. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00399">399</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00545">545</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
