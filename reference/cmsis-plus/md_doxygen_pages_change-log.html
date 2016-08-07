@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.5</span>
+     &#160;<span id="projectnumber">v6.3.6</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -199,10 +199,24 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>add mutex accessors <code>type()</code>, <code>protocol()</code>, <code>robustness()</code></li>
 <li>add <code>class double_list_iterator</code>; use it in <code>waiting_threads_list</code></li>
 <li>rename <code>timer::periodic_attributes</code> -&gt; <code>timer::attributes_periodic</code></li>
-<li>add <code>internal::event_flags</code>; not public. <hr/>
- </li>
+<li>add <code>internal::event_flags</code>; not public.</li>
 </ul>
-</div></div><!-- contents -->
+<h3>v6.3.6 2016-08-07</h3>
+<ul>
+<li>move lists to <code>internal::</code></li>
+<li>rename <code>named_object</code> -&gt; <code>internal::object_named</code></li>
+<li>rename <code>clocked_attributes</code> -&gt; <code>internal::attribute_clocked</code></li>
+<li>rename <code>Allocator</code> -&gt; <code>allocator_type</code></li>
+<li>add <code>thread::priority_inherited()</code>, <code>thread::priority_inherited(int)</code></li>
+<li>make <code>thread::priority()</code> public</li>
+<li>reimplement POSIX mutex inheritance</li>
+<li>implement POSIX robust mutexes</li>
+<li>make default mutex inheritable</li>
+<li>add class mutex_recursive</li>
+<li>prefix protected functions with <code>internal_</code></li>
+</ul>
+<hr/>
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

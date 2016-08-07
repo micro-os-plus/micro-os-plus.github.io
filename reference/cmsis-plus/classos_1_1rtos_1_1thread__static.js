@@ -1,6 +1,6 @@
 var classos_1_1rtos_1_1thread__static =
 [
-    [ "Allocator", "classos_1_1rtos_1_1thread__static.html#a6fcd995da82377459de40be8688a3f6d", null ],
+    [ "allocator_type", "classos_1_1rtos_1_1thread__static.html#aad1b11b58a161d9ee54c9ca297a28cd6", null ],
     [ "func_args_t", "classos_1_1rtos_1_1thread__static.html#af172404a80d16e472f9425ca59c30808", null ],
     [ "func_t", "classos_1_1rtos_1_1thread__static.html#a562163ef5c0911be98a342a6a2ee07bc", null ],
     [ "priority_t", "classos_1_1rtos_1_1thread__static.html#gaa5d09b05379b4799f126477d0ac29c36", null ],
@@ -16,10 +16,12 @@ var classos_1_1rtos_1_1thread__static =
     [ "interrupted", "classos_1_1rtos_1_1thread__static.html#a68ced1bf0b2cb14d6b41a54aa5c648bd", null ],
     [ "join", "classos_1_1rtos_1_1thread__static.html#a7d3323ac7f60353146568999cf1b3078", null ],
     [ "kill", "classos_1_1rtos_1_1thread__static.html#a20cb840d5dad7610bd1a0a3cee72cd7b", null ],
-    [ "name", "classos_1_1rtos_1_1thread__static.html#aa8a2c96e84505309794a489458c8b3bc", null ],
+    [ "name", "classos_1_1rtos_1_1thread__static.html#a36805a0eae21688c136129059482c3dd", null ],
     [ "operator==", "classos_1_1rtos_1_1thread__static.html#a08534b2e62374e78f823339750296552", null ],
     [ "priority", "classos_1_1rtos_1_1thread__static.html#a51c5f1bc25971db6b9a8ccb721a7d288", null ],
     [ "priority", "classos_1_1rtos_1_1thread__static.html#a666a5b74372fb159e39d3cf797b8c7e5", null ],
+    [ "priority_inherited", "classos_1_1rtos_1_1thread__static.html#a0e9d96a0fd72d0ded7001c1bf6b3eb42", null ],
+    [ "priority_inherited", "classos_1_1rtos_1_1thread__static.html#ae7135d765656e217c6cc36d04a418902", null ],
     [ "resume", "classos_1_1rtos_1_1thread__static.html#aea39969a90aad5de97abc2529485c18c", null ],
     [ "stack", "classos_1_1rtos_1_1thread__static.html#a242fe32b877603530519dc59f94db519", null ],
     [ "state", "classos_1_1rtos_1_1thread__static.html#ae0e19cd555aac2a77769ecc054062e7c", null ],

@@ -10,6 +10,7 @@ var searchData=
   ['message_5fqueue_5fstatic',['message_queue_static',['../classos_1_1rtos_1_1message__queue__static.html',1,'os::rtos']]],
   ['message_5fqueue_5ftyped',['message_queue_typed',['../classos_1_1rtos_1_1message__queue__typed.html',1,'os::rtos']]],
   ['modem_5fstatus',['Modem_status',['../classos_1_1driver_1_1serial_1_1_modem__status.html',1,'os::driver::serial']]],
+  ['mutex',['mutex',['../classos_1_1estd_1_1mutex.html',1,'os::estd']]],
   ['mutex',['mutex',['../classos_1_1rtos_1_1mutex.html',1,'os::rtos']]],
-  ['mutex',['mutex',['../classos_1_1estd_1_1mutex.html',1,'os::estd']]]
+  ['mutex_5frecursive',['mutex_recursive',['../classos_1_1rtos_1_1mutex__recursive.html',1,'os::rtos']]]
 ];

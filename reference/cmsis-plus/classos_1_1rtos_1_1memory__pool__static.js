@@ -1,7 +1,7 @@
 var classos_1_1rtos_1_1memory__pool__static =
 [
-    [ "Allocator", "classos_1_1rtos_1_1memory__pool__static.html#a83591557b98cce2788cba1926153fd8e", null ],
-    [ "size_t", "classos_1_1rtos_1_1memory__pool__static.html#a2906df850164ea47bd55d45a254f6699", null ],
+    [ "allocator_type", "classos_1_1rtos_1_1memory__pool__static.html#a5ef5fc603da1b3dfd918ca4d03f8ff97", null ],
+    [ "size_t", "classos_1_1rtos_1_1memory__pool__static.html#ga2906df850164ea47bd55d45a254f6699", null ],
     [ "value_type", "classos_1_1rtos_1_1memory__pool__static.html#a4de8f633c32a87683b395b6a374d0859", null ],
     [ "memory_pool_static", "classos_1_1rtos_1_1memory__pool__static.html#a488ff22fe88bac03a7752a873607f672", null ],
     [ "memory_pool_static", "classos_1_1rtos_1_1memory__pool__static.html#aa908f98f189b0c8e470d9f556c5764ab", null ],
@@ -15,7 +15,7 @@ var classos_1_1rtos_1_1memory__pool__static =
     [ "free", "classos_1_1rtos_1_1memory__pool__static.html#a95efd50d23b62a19590750f1ff07c063", null ],
     [ "free", "classos_1_1rtos_1_1memory__pool__static.html#af29aed24e31d65f6586a281c27901a6b", null ],
     [ "full", "classos_1_1rtos_1_1memory__pool__static.html#a22e31f68eaa6f88eb4621ab0de70b7a4", null ],
-    [ "name", "classos_1_1rtos_1_1memory__pool__static.html#aa8a2c96e84505309794a489458c8b3bc", null ],
+    [ "name", "classos_1_1rtos_1_1memory__pool__static.html#a36805a0eae21688c136129059482c3dd", null ],
     [ "operator==", "classos_1_1rtos_1_1memory__pool__static.html#a1407c7d431ceebf67b66e2a41407ec22", null ],
     [ "pool", "classos_1_1rtos_1_1memory__pool__static.html#aa1fde03a7e551f6d28f12a1e21d10e87", null ],
     [ "reset", "classos_1_1rtos_1_1memory__pool__static.html#ac764ac06d8a23bc517ea0785caccf350", null ],
@@ -23,6 +23,6 @@ var classos_1_1rtos_1_1memory__pool__static =
     [ "try_alloc", "classos_1_1rtos_1_1memory__pool__static.html#a1f29f70d4d2c79bdea34fca6d1bf7705", null ],
     [ "arena_", "classos_1_1rtos_1_1memory__pool__static.html#a08fcd0b6e2b8c0ca93076668e80593b6", null ],
     [ "blocks", "classos_1_1rtos_1_1memory__pool__static.html#a9b53a73b330de92afe9e4528b302050c", null ],
-    [ "initializer", "classos_1_1rtos_1_1memory__pool__static.html#a7fd442f85898940215d53d32e7a4eee7", null ],
-    [ "max_size", "classos_1_1rtos_1_1memory__pool__static.html#a25abdce615f4418c120dfdaa66db582e", null ]
+    [ "initializer", "classos_1_1rtos_1_1memory__pool__static.html#ga7fd442f85898940215d53d32e7a4eee7", null ],
+    [ "max_size", "classos_1_1rtos_1_1memory__pool__static.html#ga25abdce615f4418c120dfdaa66db582e", null ]
 ];

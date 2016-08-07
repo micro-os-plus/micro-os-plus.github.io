@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.5</span>
+     &#160;<span id="projectnumber">v6.3.6</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1thread.html','');})
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="classos_1_1rtos_1_1named__object.html">os::rtos::named_object</a>.</p>
+<p>Inherits <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html">os::rtos::internal::object_named</a>.</p>
 
 <p>Inherited by <a class="el" href="classos_1_1rtos_1_1thread__allocated.html">os::rtos::thread_allocated&lt; Allocator &gt;</a>, and <a class="el" href="classos_1_1rtos_1_1thread__static.html">os::rtos::thread_static&lt; N &gt;</a>.</p>
 <table class="memberdecls">
@@ -166,9 +166,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6fcd995da82377459de40be8688a3f6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a> = <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt; <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab4cbbaaaf2f0a91dcc9a7cc42b7f8b98">stack::allocation_element_t</a> &gt;</td></tr>
-<tr class="memdesc:a6fcd995da82377459de40be8688a3f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default RTOS allocator.  <a href="#a6fcd995da82377459de40be8688a3f6d">More...</a><br /></td></tr>
-<tr class="separator:a6fcd995da82377459de40be8688a3f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1b11b58a161d9ee54c9ca297a28cd6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a> = <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt; <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab4cbbaaaf2f0a91dcc9a7cc42b7f8b98">stack::allocation_element_t</a> &gt;</td></tr>
+<tr class="memdesc:aad1b11b58a161d9ee54c9ca297a28cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default RTOS allocator.  <a href="#aad1b11b58a161d9ee54c9ca297a28cd6">More...</a><br /></td></tr>
+<tr class="separator:aad1b11b58a161d9ee54c9ca297a28cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af172404a80d16e472f9425ca59c30808"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808">func_args_t</a> = _func_args_t</td></tr>
 <tr class="memdesc:af172404a80d16e472f9425ca59c30808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of thread function arguments.  <a href="#af172404a80d16e472f9425ca59c30808">More...</a><br /></td></tr>
 <tr class="separator:af172404a80d16e472f9425ca59c30808"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,12 +185,12 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:a0d38968972ad36281ca8c8ed40a84073"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a0d38968972ad36281ca8c8ed40a84073">thread</a> (<a class="el" href="classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1thread.html#af623615f855fa9dae02486afe5d697f2">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a>())</td></tr>
-<tr class="memdesc:a0d38968972ad36281ca8c8ed40a84073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a thread object instance.  <a href="#a0d38968972ad36281ca8c8ed40a84073">More...</a><br /></td></tr>
-<tr class="separator:a0d38968972ad36281ca8c8ed40a84073"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a0e97a92cf240a6a9a8e1378268275"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a45a0e97a92cf240a6a9a8e1378268275">thread</a> (const char *<a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a>, <a class="el" href="classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1thread.html#af623615f855fa9dae02486afe5d697f2">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a>())</td></tr>
-<tr class="memdesc:a45a0e97a92cf240a6a9a8e1378268275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named thread object instance.  <a href="#a45a0e97a92cf240a6a9a8e1378268275">More...</a><br /></td></tr>
-<tr class="separator:a45a0e97a92cf240a6a9a8e1378268275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1bae07a39810404143e3481500589e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#aef1bae07a39810404143e3481500589e">thread</a> (<a class="el" href="classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1thread.html#af623615f855fa9dae02486afe5d697f2">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a>())</td></tr>
+<tr class="memdesc:aef1bae07a39810404143e3481500589e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a thread object instance.  <a href="#aef1bae07a39810404143e3481500589e">More...</a><br /></td></tr>
+<tr class="separator:aef1bae07a39810404143e3481500589e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac006ddd0c636ca01f143859f0beab523"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#ac006ddd0c636ca01f143859f0beab523">thread</a> (const char *<a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">name</a>, <a class="el" href="classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc">func_t</a> function, <a class="el" href="classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808">func_args_t</a> args, const <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html">attributes</a> &amp;attr=<a class="el" href="classos_1_1rtos_1_1thread.html#af623615f855fa9dae02486afe5d697f2">initializer</a>, const <a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a> &amp;allocator=<a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a>())</td></tr>
+<tr class="memdesc:ac006ddd0c636ca01f143859f0beab523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named thread object instance.  <a href="#ac006ddd0c636ca01f143859f0beab523">More...</a><br /></td></tr>
+<tr class="separator:ac006ddd0c636ca01f143859f0beab523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b3762082434ebfde2c280554f6752a1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a5b3762082434ebfde2c280554f6752a1">~thread</a> ()</td></tr>
 <tr class="memdesc:a5b3762082434ebfde2c280554f6752a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the thread object instance.  <a href="#a5b3762082434ebfde2c280554f6752a1">More...</a><br /></td></tr>
 <tr class="separator:a5b3762082434ebfde2c280554f6752a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,11 +209,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7d3323ac7f60353146568999cf1b3078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for thread termination.  <a href="#a7d3323ac7f60353146568999cf1b3078">More...</a><br /></td></tr>
 <tr class="separator:a7d3323ac7f60353146568999cf1b3078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c5f1bc25971db6b9a8ccb721a7d288"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a51c5f1bc25971db6b9a8ccb721a7d288">priority</a> (<a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a> prio)</td></tr>
-<tr class="memdesc:a51c5f1bc25971db6b9a8ccb721a7d288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the dynamic scheduling priority.  <a href="#a51c5f1bc25971db6b9a8ccb721a7d288">More...</a><br /></td></tr>
+<tr class="memdesc:a51c5f1bc25971db6b9a8ccb721a7d288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the assigned scheduling priority.  <a href="#a51c5f1bc25971db6b9a8ccb721a7d288">More...</a><br /></td></tr>
 <tr class="separator:a51c5f1bc25971db6b9a8ccb721a7d288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9d96a0fd72d0ded7001c1bf6b3eb42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a0e9d96a0fd72d0ded7001c1bf6b3eb42">priority_inherited</a> (<a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a> prio)</td></tr>
+<tr class="memdesc:a0e9d96a0fd72d0ded7001c1bf6b3eb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the inherited scheduling priority.  <a href="#a0e9d96a0fd72d0ded7001c1bf6b3eb42">More...</a><br /></td></tr>
+<tr class="separator:a0e9d96a0fd72d0ded7001c1bf6b3eb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a666a5b74372fb159e39d3cf797b8c7e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a666a5b74372fb159e39d3cf797b8c7e5">priority</a> (void)</td></tr>
 <tr class="memdesc:a666a5b74372fb159e39d3cf797b8c7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scheduling priority.  <a href="#a666a5b74372fb159e39d3cf797b8c7e5">More...</a><br /></td></tr>
 <tr class="separator:a666a5b74372fb159e39d3cf797b8c7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7135d765656e217c6cc36d04a418902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#ae7135d765656e217c6cc36d04a418902">priority_inherited</a> (void)</td></tr>
+<tr class="memdesc:ae7135d765656e217c6cc36d04a418902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inherited scheduling priority.  <a href="#ae7135d765656e217c6cc36d04a418902">More...</a><br /></td></tr>
+<tr class="separator:ae7135d765656e217c6cc36d04a418902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68ced1bf0b2cb14d6b41a54aa5c648bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#a68ced1bf0b2cb14d6b41a54aa5c648bd">interrupted</a> (void)</td></tr>
 <tr class="memdesc:a68ced1bf0b2cb14d6b41a54aa5c648bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if interrupted.  <a href="#a68ced1bf0b2cb14d6b41a54aa5c648bd">More...</a><br /></td></tr>
 <tr class="separator:a68ced1bf0b2cb14d6b41a54aa5c648bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,9 +250,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac03abea9e899fb47a4ab163abcbdb26e"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classos_1_1rtos_1_1thread_1_1statistics.html">thread::statistics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread.html#ac03abea9e899fb47a4ab163abcbdb26e">statistics</a> (void)</td></tr>
 <tr class="separator:ac03abea9e899fb47a4ab163abcbdb26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:aa8a2c96e84505309794a489458c8b3bc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1named__object.html#aa8a2c96e84505309794a489458c8b3bc">name</a> (void) const </td></tr>
-<tr class="memdesc:aa8a2c96e84505309794a489458c8b3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object name.  <a href="#aa8a2c96e84505309794a489458c8b3bc">More...</a><br /></td></tr>
-<tr class="separator:aa8a2c96e84505309794a489458c8b3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36805a0eae21688c136129059482c3dd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">name</a> (void) const </td></tr>
+<tr class="memdesc:a36805a0eae21688c136129059482c3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object name.  <a href="#a36805a0eae21688c136129059482c3dd">More...</a><br /></td></tr>
+<tr class="separator:a36805a0eae21688c136129059482c3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -262,19 +268,19 @@ Static Public Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="os-thread_8h_source.html#l00233">233</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
-<a class="anchor" id="a6fcd995da82377459de40be8688a3f6d"></a>
+<a class="anchor" id="aad1b11b58a161d9ee54c9ca297a28cd6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">os::rtos::thread::Allocator</a> =  <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt;<a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab4cbbaaaf2f0a91dcc9a7cc42b7f8b98">stack::allocation_element_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">os::rtos::thread::allocator_type</a> =  <a class="el" href="namespaceos_1_1rtos_1_1memory.html#abb41d6a623a7deb73c674fae146e0d45">memory::allocator</a>&lt;<a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab4cbbaaaf2f0a91dcc9a7cc42b7f8b98">stack::allocation_element_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Default RTOS allocator. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00961">961</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00963">963</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -291,7 +297,7 @@ Static Public Attributes</h2></td></tr>
 <p>Type of thread function arguments. </p>
 <p>Useful to cast other similar types to silence possible compiler warnings. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00384">384</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00386">386</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +314,7 @@ Static Public Attributes</h2></td></tr>
 <p>Type of thread function. </p>
 <p>Useful to cast other similar types to silence possible compiler warnings. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00392">392</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00394">394</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -324,12 +330,12 @@ Static Public Attributes</h2></td></tr>
 
 <p>Type of variables holding thread states. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00333">333</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00334">334</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0d38968972ad36281ca8c8ed40a84073"></a>
+<a class="anchor" id="aef1bae07a39810404143e3481500589e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -354,8 +360,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a> &amp;&#160;</td>
-          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a>&#160;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a>&#160;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -383,11 +389,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00290">290</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00294">294</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a45a0e97a92cf240a6a9a8e1378268275"></a>
+<a class="anchor" id="ac006ddd0c636ca01f143859f0beab523"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -418,8 +424,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a> &amp;&#160;</td>
-          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1thread.html#a6fcd995da82377459de40be8688a3f6d">Allocator</a>&#160;()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>allocator</em> = <code><a class="el" href="classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6">allocator_type</a>&#160;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -448,7 +454,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_create.html"><code>pthread_create()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00339">339</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00343">343</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +485,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>No POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00494">494</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00498">498</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -508,11 +514,11 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1thread.html#a5bd4a092dc5a5113c4e9b9c466039c3a" title="Cancel thread execution. ">cancel()</a></code> function shall not return an error code of <code>EINTR</code>. If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error. error number is returned.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Implement it properly (thread interruption is not yet fully implemented).</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement it properly (thread interruption is not yet fully implemented).</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_cancel.html"><code>pthread_cancel()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00773">773</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00876">876</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +550,7 @@ Static Public Attributes</h2></td></tr>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1thread.html#a09b7123d2088c979ec43d5daf9c9ae02" title="Detach a thread. ">detach()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00669">669</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00772">772</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +597,7 @@ Static Public Attributes</h2></td></tr>
 <p>Set more bits in the thread current event flags mask. Use OR at bit-mask level. Wake-up the thread to evaluate the event flags.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01039">1039</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01156">1156</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -622,7 +628,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to arguments.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02235">2235</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02284">2284</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -652,7 +658,7 @@ Static Public Attributes</h2></td></tr>
 <p>After the thread detects the interrupted condition, it must clear the interrupted flag.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00797">797</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00900">900</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -689,7 +695,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02246">2246</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02295">2295</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -727,7 +733,7 @@ Static Public Attributes</h2></td></tr>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1thread.html#a7d3323ac7f60353146568999cf1b3078" title="Wait for thread termination. ">join()</a></code> function shall not return an error code of [EINTR].</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00723">723</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00826">826</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -756,11 +762,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_kill.html"><code>pthread_kill()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00965">965</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01082">1082</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa8a2c96e84505309794a489458c8b3bc"></a>
+<a class="anchor" id="a36805a0eae21688c136129059482c3dd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -768,7 +774,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char * os::rtos::named_object::name </td>
+          <td class="memname">const char * os::rtos::internal::object_named::name </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -788,7 +794,7 @@ Static Public Attributes</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00536">536</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00540">540</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -825,7 +831,7 @@ Static Public Attributes</h2></td></tr>
 <p>Identical threads should have the same memory address.</p>
 <p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02213">2213</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02262">2262</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -843,7 +849,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the dynamic scheduling priority. </p>
+<p>Set the assigned scheduling priority. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">prio</td><td>New priority. </td></tr>
@@ -864,7 +870,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_setschedprio.html"><code>pthread_setschedprio()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00602">602</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00634">634</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -886,9 +892,72 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The thread priority.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00579">579</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e9d96a0fd72d0ded7001c1bf6b3eb42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> os::rtos::thread::priority_inherited </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">priority_t</a>&#160;</td>
+          <td class="paramname"><em>prio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the inherited scheduling priority. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prio</td><td>New priority. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b" title="Function completed; no errors or events occurred. ">result::ok</a></td><td>The priority was set. </td></tr>
+    <tr><td class="paramname">EPERM</td><td>Cannot be invoked from an Interrupt Service Routines. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The value of prio is invalid for the scheduling policy of the specified thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the scheduling inherited priority for the thread to the value given by <em>prio</em>.</p>
+<p>If an implementation detects use of a thread ID after the end of its lifetime, it is recommended that the function should fail and report an <code>ESRCH</code> error.</p>
+<p>The <code><a class="el" href="classos_1_1rtos_1_1thread.html#a666a5b74372fb159e39d3cf797b8c7e5" title="Get the current scheduling priority. ">priority()</a></code> function shall not return an error code of <code>EINTR</code>.</p>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00574">574</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00700">700</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7135d765656e217c6cc36d04a418902"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> os::rtos::thread::priority_inherited </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the inherited scheduling priority. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The thread inherited priority. May be <code><a class="el" href="group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66abe1def6f8adb29967a162872655593ae">priority::none</a></code>.</dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00607">607</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -913,7 +982,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00525">525</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l00529">529</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
@@ -944,7 +1013,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the context stack object instance.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02308">2308</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02357">2357</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -975,7 +1044,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Thread scheduler state.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02224">2224</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02273">2273</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1071,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02321">2321</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02370">2370</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1104,7 @@ Static Public Attributes</h2></td></tr>
 <p>Inspired by (actually a generalisation of) µC-OS III task user registers and FreeRTOS thread local storage, which proved useful when implementing CMSIS+ over FreeRTOS.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02265">2265</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02314">2314</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1130,7 @@ Static Public Attributes</h2></td></tr>
 <p>Default thread initialiser. </p>
 <p>This variable is used by the default constructor. </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00954">954</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l00956">956</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.5</span>
+     &#160;<span id="projectnumber">v6.3.6</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -128,14 +128,14 @@ $(document).ready(function(){initNavTree('structos_1_1rtos_1_1mutex_1_1type.html
 <a href="#pub-types">Public Types</a> &#124;
 <a href="classos_1_1rtos_1_1mutex_1_1type-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::type Class Reference</div>  </div>
+<div class="title">os::rtos::mutex::type Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Namespace of mutex types.  
+<p>Mutex types.  
  <a href="structos_1_1rtos_1_1mutex_1_1type.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -146,33 +146,35 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f">recursive</a> = 2, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf">_default</a> = normal
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6">default_</a> = normal, 
+<br />
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a11821e1c1c8622e6a40e4f22348e430b">max_</a> = recursive
 <br />
  }<tr class="memdesc:a236f83dd04e1c18f388949b26fe5f4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex types.  <a href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a236f83dd04e1c18f388949b26fe5f4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Namespace of mutex types. </p>
+<div class="textblock"><p>Mutex types. </p>
 <p>Allow to define the behaviour of calls which lock and unlock the mutex. See <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock/acquire the mutex. ">mutex::lock()</a></code> for details.</p>
 <p>The mutex type is defined via the <code>mx_type</code> attribute of the <code><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html" title="Mutex attributes. ">mutex::attributes</a></code> class. Valid mutex types are:</p>
 <ul>
 <li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939" title="Normal mutex behaviour. ">mutex::type::normal</a></code></li>
 <li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26" title="Check mutex behaviour. ">mutex::type::errorcheck</a></code></li>
 <li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f" title="Recursive mutex behaviour. ">mutex::type::recursive</a></code></li>
-<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf">mutex::type::_default</a></code></li>
+<li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6" title="Default value. ">mutex::type::default_</a></code></li>
 </ul>
-<p>An implementation may map <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf">mutex::type::_default</a></code> to one of the other mutex types.</p>
+<p>An implementation may map <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6" title="Default value. ">mutex::type::default_</a></code> to one of the other mutex types.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_settype.html"><code>pthread_mutexattr_settype()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00131">131</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00160">160</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum : <a class="el" href="classos_1_1rtos_1_1mutex.html#a16cfc618bf9be9be363fc28bd72b3200">type_t</a></td>
+          <td class="memname">anonymous enum : <a class="el" href="group__cmsis-plus-rtos-mutex.html#ga16cfc618bf9be9be363fc28bd72b3200">type_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -188,11 +190,15 @@ Public Types</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f"></a>recursive&#160;</td><td class="fielddoc">
 <p>Recursive mutex behaviour. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9a9f0739f65b7c391818b4aef908552aaf"></a>_default&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6"></a>default_&#160;</td><td class="fielddoc">
+<p>Default value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a236f83dd04e1c18f388949b26fe5f4b9a11821e1c1c8622e6a40e4f22348e430b"></a>max_&#160;</td><td class="fielddoc">
+<p>Maximum value, for validation purposes. </p>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00136">136</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00165">165</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

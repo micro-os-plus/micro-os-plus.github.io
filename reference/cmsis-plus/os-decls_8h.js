@@ -1,13 +1,13 @@
 var os_decls_8h =
 [
+    [ "attributes_clocked", "classos_1_1rtos_1_1internal_1_1attributes__clocked.html", "classos_1_1rtos_1_1internal_1_1attributes__clocked" ],
     [ "clock_highres", "classos_1_1rtos_1_1port_1_1clock__highres.html", "classos_1_1rtos_1_1port_1_1clock__highres" ],
     [ "clock_rtc", "classos_1_1rtos_1_1port_1_1clock__rtc.html", "classos_1_1rtos_1_1port_1_1clock__rtc" ],
     [ "clock_systick", "classos_1_1rtos_1_1port_1_1clock__systick.html", "classos_1_1rtos_1_1port_1_1clock__systick" ],
-    [ "clocked_attributes", "classos_1_1rtos_1_1clocked__attributes.html", "classos_1_1rtos_1_1clocked__attributes" ],
     [ "context", "classos_1_1rtos_1_1port_1_1context.html", "classos_1_1rtos_1_1port_1_1context" ],
     [ "critical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html", "classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section" ],
-    [ "named_object", "classos_1_1rtos_1_1named__object.html", "classos_1_1rtos_1_1named__object" ],
     [ "new_delete_allocator", "classos_1_1rtos_1_1memory_1_1new__delete__allocator.html", "classos_1_1rtos_1_1memory_1_1new__delete__allocator" ],
+    [ "object_named", "classos_1_1rtos_1_1internal_1_1object__named.html", "classos_1_1rtos_1_1internal_1_1object__named" ],
     [ "polymorphic_allocator", "classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html", "classos_1_1rtos_1_1memory_1_1polymorphic__allocator" ],
     [ "thread", "classos_1_1rtos_1_1port_1_1thread.html", "classos_1_1rtos_1_1port_1_1thread" ],
     [ "uncritical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section" ],

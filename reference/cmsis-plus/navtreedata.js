@@ -49,18 +49,19 @@ var NAVTREEINDEX =
 "__sbrk_8c.html",
 "classos_1_1driver_1_1_version.html#a84a4d0366c81658dba6f1bf047aeff30",
 "classos_1_1estd_1_1lock__guard.html#aaee3cedd024c4f9363d5ad8e9ea5e58a",
-"classos_1_1rtos_1_1double__list__links.html#a6a4543a8012a26e68fac57858b63bc87",
-"classos_1_1rtos_1_1message__queue.html#afba3f2650328e5ea1bbcfe06541936d8",
-"classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a884c121715e76abbea32e132876884fb",
-"classos_1_1rtos_1_1timestamp__node.html#a6dbed1324426c10e07fd0979ab3e2ed8",
-"functions_b.html",
-"group__cmsis-plus-iso.html",
+"classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a9877beef976bb5cf145c75ec43c5fca0",
+"classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87",
+"classos_1_1rtos_1_1mutex_1_1attributes__recursive.html#a1eaad3426c177dd2156e30293f8bb987",
+"classos_1_1rtos_1_1thread__static.html#a6b9a7475275a84d9692404497ae0fb28",
+"functions_c.html",
+"group__cmsis-plus-iso.html#ga0910ad1ca1123a4da2cc323f70882196",
 "group__cmsis-plus-rtos-c-mempool.html#gab8ea7b1711a8504a38d51e8ad6977ab3",
-"group__cmsis-plus-rtos-c-thread.html#ga46e47607370dcd1bde0eb87a9a6c213b",
-"mutex.html#ab0fd06745caaaa2ad1adcb64821326ab",
-"os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137",
-"serial_8h.html#af22280c215b4e276cd2a53fce4a99e99",
-"system__error.html"
+"group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c",
+"group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9",
+"os-c-decls_8h.html#a599416bcdf3ac69d0df2582d724b5e9d",
+"serial_8h.html#a16d38c70ff077aeba035b60246f76ac1",
+"structos__mempool__attr__s.html#aa2d6137032ffa5347e17e857430cc67f",
+"usb-host_8h.html#a44ea8024d85782aeb9a3111a03c169db"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

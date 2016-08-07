@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.5</span>
+     &#160;<span id="projectnumber">v6.3.6</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -128,21 +128,25 @@ $(document).ready(function(){initNavTree('structos_1_1rtos_1_1mutex_1_1robustnes
 <a href="#pub-types">Public Types</a> &#124;
 <a href="classos_1_1rtos_1_1mutex_1_1robustness-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::robustness Class Reference</div>  </div>
+<div class="title">os::rtos::mutex::robustness Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Mutex robustness.  
  <a href="structos_1_1rtos_1_1mutex_1_1robustness.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a5b273639f9cbba3efd3034a468bbd406"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: robustness_t { <br />
 &#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6">stalled</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">robust</a> = 1
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">robust</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a4de573a7ab4d3111d41f671ae034a9d8">default_</a> = stalled, 
+<br />
+&#160;&#160;<a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346">max_</a> = robust
 <br />
  }<tr class="memdesc:a5b273639f9cbba3efd3034a468bbd406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of mutex robustness.  <a href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406">More...</a><br /></td></tr>
 </td></tr>
@@ -157,20 +161,19 @@ Public Types</h2></td></tr>
 <p class="startli">No special actions are taken if the owner of the mutex is terminated while holding the mutex lock. This can lead to deadlocks if no other thread can unlock the mutex. This is the default value.</p>
 </li>
 <li><p class="startli"><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f" title="Enhanced robustness at thread termination. ">mutex::robustness::robust</a></code></p>
-<p class="startli">If the process containing the owning thread of a robust mutex terminates while holding the mutex lock, the next thread that acquires the mutex shall be notified about the termination by the return value <code>EOWNERDEAD</code> from the locking function. If the owning thread of a robust mutex terminates while holding the mutex lock, the next thread that acquires the mutex may be notified about the termination by the return value <code>EOWNERDEAD</code>. The notified thread can then attempt to mark the state protected by the mutex as consistent again by a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">mutex::consistent()</a></code>. After a subsequent successful call <code><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb" title="Unlock/release the mutex. ">mutex::unlock()</a></code>, the mutex lock shall be released and can be used normally by other threads. If the mutex is unlocked without a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">mutex::consistent()</a></code>, it shall be in a permanently unusable state and all attempts to lock the mutex shall fail with the error <code>ENOTRECOVERABLE</code>. The only permissible operation on such a mutex is <code>mutex::destroy()</code>.</p>
+<p class="startli">If the owning thread of a robust mutex terminates while holding the mutex lock, the next thread that acquires the mutex may be notified about the termination by the return value <code>EOWNERDEAD</code>. The notified thread can then attempt to mark the state protected by the mutex as consistent again by a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">mutex::consistent()</a></code>. After a subsequent successful call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb" title="Unlock/release the mutex. ">mutex::unlock()</a></code>, the mutex lock shall be released and can be used normally by other threads. If the mutex is unlocked without a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab" title="Mark mutex as consistent. ">mutex::consistent()</a></code>, it shall be in a permanently unusable state and all attempts to lock the mutex shall fail with the error <code>ENOTRECOVERABLE</code>. The only permissible operations on such a mutex are <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a033e2192e11ca3ba1110f1ec0e29c6e3" title="Reset the mutex. ">mutex::reset()</a></code> and the mutex destruction.</p>
 </li>
 </ul>
-<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Extend thread to implement robustness. Instead of a count of threads, a list is required. </dd></dl>
+<dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00103">103</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00119">119</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a5b273639f9cbba3efd3034a468bbd406"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum : <a class="el" href="classos_1_1rtos_1_1mutex.html#a763c7134e2f479dcc4b21912c0af89c7">robustness_t</a></td>
+          <td class="memname">anonymous enum : <a class="el" href="group__cmsis-plus-rtos-mutex.html#ga763c7134e2f479dcc4b21912c0af89c7">robustness_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -183,9 +186,15 @@ Public Types</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f"></a>robust&#160;</td><td class="fielddoc">
 <p>Enhanced robustness at thread termination. </p>
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5b273639f9cbba3efd3034a468bbd406a4de573a7ab4d3111d41f671ae034a9d8"></a>default_&#160;</td><td class="fielddoc">
+<p>Default value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346"></a>max_&#160;</td><td class="fielddoc">
+<p>Maximum value, for validation purposes. </p>
+</td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00108">108</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00124">124</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

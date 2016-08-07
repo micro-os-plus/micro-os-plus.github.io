@@ -10,7 +10,7 @@ var searchData=
   ['data_5fbits_5fpos',['DATA_BITS_Pos',['../namespaceos_1_1driver_1_1serial.html#a07337030b12eaed6a1151e4d7fbbfbea',1,'os::driver::serial']]],
   ['dcd',['dcd',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a799df20fc67c14ae9356734008c8c74f',1,'os::driver::serial::Modem_status::dcd()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#af688bc917b275cab9775760af342a404',1,'os::driver::serial::Capabilities::dcd()']]],
   ['def',['def',['../structos_event.html#a90f9650ceb8eb3a9481270a99caaa47f',1,'osEvent']]],
-  ['default_5fpriority',['default_priority',['../classos_1_1rtos_1_1message__queue.html#a40cf8256124467cd9c58410969808979',1,'os::rtos::message_queue']]],
+  ['default_5fpriority',['default_priority',['../group__cmsis-plus-rtos-mqueue.html#ga40cf8256124467cd9c58410969808979',1,'os::rtos::message_queue']]],
   ['default_5fresource',['default_resource',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#a40405302f31f0052e9e7ff783cfbaf3b',1,'anonymous_namespace{memory-resource.cpp}::default_resource()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#af79d339755e9df6e0c026701bbb68590',1,'anonymous_namespace{os-memory.cpp}::default_resource()']]],
   ['default_5ftx_5fvalue',['DEFAULT_TX_VALUE',['../namespaceos_1_1driver_1_1serial.html#a27f30f5c598402a4b03848ae4be7a649',1,'os::driver::serial']]],
   ['defer_5flock',['defer_lock',['../namespaceos_1_1estd.html#a5cd14457b0c5e499b1ac4be877c33f86',1,'os::estd']]],

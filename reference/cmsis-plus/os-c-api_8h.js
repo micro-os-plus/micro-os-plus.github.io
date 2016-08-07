@@ -85,6 +85,7 @@ var os_c_api_8h =
     [ "os_mutex_get_type", "group__cmsis-plus-rtos-c-mutex.html#ga7d322f477d86a8777ea7c69cd62f9d84", null ],
     [ "os_mutex_lock", "group__cmsis-plus-rtos-c-mutex.html#gaccc7bef859ff23b4ab35ce5d6a6c1bbc", null ],
     [ "os_mutex_mark_consistent", "group__cmsis-plus-rtos-c-mutex.html#gac28bafcb0ec593a11ef72a3c1433c14e", null ],
+    [ "os_mutex_recursive_create", "group__cmsis-plus-rtos-c-mutex.html#gaa46351d856c3edb43f89fdfcecd6c520", null ],
     [ "os_mutex_reset", "group__cmsis-plus-rtos-c-mutex.html#gae38200d7d272c07806b939d80a1f4c0d", null ],
     [ "os_mutex_set_prio_ceiling", "group__cmsis-plus-rtos-c-mutex.html#ga9d4184820b2d30173d0d8b37e252021e", null ],
     [ "os_mutex_timed_lock", "group__cmsis-plus-rtos-c-mutex.html#gaa829de874de77f645c3a9ac479a4c707", null ],
