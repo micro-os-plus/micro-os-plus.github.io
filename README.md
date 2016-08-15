@@ -1,6 +1,6 @@
-# The CMSIS++ / µOS++ IIIe web site
+# The µOS++ IIIe / CMSIS++ web site
 
-This repository stores the actual, live, CMSIS++ / µOS++ IIIe project web.
+This repository stores the actual, live, µOS++ IIIe / CMSIS++ project web.
 
 ## URL
 
