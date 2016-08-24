@@ -7,6 +7,7 @@ var dir_9b2f2403bcd392d39d152e037ac99c7b =
     [ "os-condvar.h", "os-condvar_8h.html", null ],
     [ "os-decls.h", "os-decls_8h.html", "os-decls_8h" ],
     [ "os-evflags.h", "os-evflags_8h.html", null ],
+    [ "os-hooks.h", "os-hooks_8h.html", "os-hooks_8h" ],
     [ "os-memory.h", "os-memory_8h.html", "os-memory_8h" ],
     [ "os-mempool.h", "os-mempool_8h.html", [
       [ "arena", "classos_1_1rtos_1_1memory__pool_1_1arena.html", "classos_1_1rtos_1_1memory__pool_1_1arena" ]

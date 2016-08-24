@@ -6,7 +6,7 @@ var dir_7803600e9c8bc1d53ecfe7a0f945f09e =
     [ "os-condvar.cpp", "os-condvar_8cpp.html", null ],
     [ "os-core.cpp", "os-core_8cpp.html", "os-core_8cpp" ],
     [ "os-evflags.cpp", "os-evflags_8cpp.html", null ],
-    [ "os-idle.cpp", "os-idle_8cpp.html", null ],
+    [ "os-idle.cpp", "os-idle_8cpp.html", "os-idle_8cpp" ],
     [ "os-main.cpp", "os-main_8cpp.html", "os-main_8cpp" ],
     [ "os-memory.cpp", "os-memory_8cpp.html", "os-memory_8cpp" ],
     [ "os-mempool.cpp", "os-mempool_8cpp.html", null ],

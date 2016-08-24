@@ -8,5 +8,6 @@ var modules =
     [ "CMSIS++ Drivers", "group__cmsis-plus-drivers.html", null ],
     [ "CMSIS++ Diag", "group__cmsis-plus-diag.html", "group__cmsis-plus-diag" ],
     [ "CMSIS++ POSIX I/O", "group__cmsis-plus-posix-io.html", null ],
-    [ "CMSIS++ App Config", "group__cmsis-plus-app-config.html", "group__cmsis-plus-app-config" ]
+    [ "CMSIS++ App Config", "group__cmsis-plus-app-config.html", "group__cmsis-plus-app-config" ],
+    [ "CMSIS++ App Hooks", "group__cmsis-plus-app-hooks.html", "group__cmsis-plus-app-hooks" ]
 ];

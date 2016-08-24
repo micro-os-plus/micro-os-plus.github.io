@@ -54,14 +54,14 @@ var NAVTREEINDEX =
 "classos_1_1rtos_1_1mutex_1_1attributes__recursive.html",
 "classos_1_1rtos_1_1thread__static.html#a68ced1bf0b2cb14d6b41a54aa5c648bd",
 "functions_b.html",
-"group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631",
-"group__cmsis-plus-rtos-c-mempool.html#gab8ea7b1711a8504a38d51e8ad6977ab3",
-"group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c",
-"group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36",
-"os-c-decls_8h.html#a42976f5e88e7e3820e1b21a93b2e1430",
-"serial_8h.html#a14c6376484f80257f6e6d4c26a72eaf5",
-"structos__mempool__attr__s.html#a421b74f14305099c30a56ae08e6bd3e1",
-"usb-host_8h.html#a29f43829f9945aefa55c484f4e3021a0af0672809972697c38c433bb85d372d2a"
+"group__cmsis-plus-diag.html#gad3e35a5ce4981b2c40ed6fb69814477e",
+"group__cmsis-plus-rtos-c-mempool.html#gaa5bb9b5286ba521032f5651e2e0e364f",
+"group__cmsis-plus-rtos-c-thread.html#ga33e830a7d2505c9ee340fb09ec9f4983",
+"group__cmsis-plus-rtos-semaphore.html#gad6dc71df534fae5ff113a4a010511df1",
+"os-c-decls_8h.html#a01128d3f26631eb950187fbb52b32140",
+"serial_8cpp_source.html",
+"structos__mail_q__def.html#a9e24a300acba966809bbe121dec2acbf",
+"usb-host_8h.html#a29f43829f9945aefa55c484f4e3021a0a35f868b37b14701b8221c238ce8a6de1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

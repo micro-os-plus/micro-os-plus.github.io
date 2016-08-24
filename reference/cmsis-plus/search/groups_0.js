@@ -3,6 +3,7 @@ var searchData=
   ['cmsis_2b_2b_20app_20config',['CMSIS++ App Config',['../group__cmsis-plus-app-config.html',1,'']]],
   ['command_20line_20options',['Command line options',['../group__cmsis-plus-app-config-cmdline.html',1,'']]],
   ['custom_20rtos_20options',['Custom RTOS options',['../group__cmsis-plus-app-config-port.html',1,'']]],
+  ['cmsis_2b_2b_20app_20hooks',['CMSIS++ App Hooks',['../group__cmsis-plus-app-hooks.html',1,'']]],
   ['cmsis_2b_2b_20core',['CMSIS++ Core',['../group__cmsis-plus-core.html',1,'']]],
   ['cmsis_2b_2b_20diag',['CMSIS++ Diag',['../group__cmsis-plus-diag.html',1,'']]],
   ['cmsis_2b_2b_20drivers',['CMSIS++ Drivers',['../group__cmsis-plus-drivers.html',1,'']]],
