@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063":[3,2,5,1,12],
 "classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87":[3,2,5,1,16],
 "classos_1_1rtos_1_1memory__pool.html#ac764ac06d8a23bc517ea0785caccf350":[3,2,5,1,17],
 "classos_1_1rtos_1_1memory__pool.html#ada288312b54cc038fcdc144ed91c53ef":[3,2,5,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classos_1_1rtos_1_1mutex_1_1attributes.html#a5d7e0d82010925866a1780e04a8134c4":[3,2,7,0,2],
 "classos_1_1rtos_1_1mutex_1_1attributes.html#a60145b09e385cf69247e11687fe9c38d":[3,2,7,0,1],
 "classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b":[3,2,7,0,4],
-"classos_1_1rtos_1_1mutex_1_1attributes.html#aa4b2fac6a493ae652f41c3b250d07ad9":[3,2,7,0,5],
-"classos_1_1rtos_1_1mutex_1_1attributes__recursive.html":[3,2,7,1]
+"classos_1_1rtos_1_1mutex_1_1attributes.html#aa4b2fac6a493ae652f41c3b250d07ad9":[3,2,7,0,5]
 };

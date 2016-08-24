@@ -47,21 +47,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__sbrk_8c.html",
-"classos_1_1driver_1_1_version.html#a84a4d0366c81658dba6f1bf047aeff30",
-"classos_1_1estd_1_1lock__guard.html#aaee3cedd024c4f9363d5ad8e9ea5e58a",
-"classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a9877beef976bb5cf145c75ec43c5fca0",
-"classos_1_1rtos_1_1memory__pool.html#aa1fde03a7e551f6d28f12a1e21d10e87",
-"classos_1_1rtos_1_1mutex_1_1attributes__recursive.html#a1eaad3426c177dd2156e30293f8bb987",
-"classos_1_1rtos_1_1thread__static.html#a6b9a7475275a84d9692404497ae0fb28",
-"functions_c.html",
-"group__cmsis-plus-iso.html#ga0910ad1ca1123a4da2cc323f70882196",
+"classos_1_1driver_1_1_version.html#a80631ee0cc3b4a7bf26275ea104e91b0",
+"classos_1_1estd_1_1lock__guard.html#a960137a9cbf9a48a1f6b8c0e411e7cad",
+"classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a97f0c9630e094790893f60e83fddd874",
+"classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063",
+"classos_1_1rtos_1_1mutex_1_1attributes__recursive.html",
+"classos_1_1rtos_1_1thread__static.html#a68ced1bf0b2cb14d6b41a54aa5c648bd",
+"functions_b.html",
+"group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631",
 "group__cmsis-plus-rtos-c-mempool.html#gab8ea7b1711a8504a38d51e8ad6977ab3",
 "group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c",
-"group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9",
-"os-c-decls_8h.html#a599416bcdf3ac69d0df2582d724b5e9d",
-"serial_8h.html#a16d38c70ff077aeba035b60246f76ac1",
-"structos__mempool__attr__s.html#aa2d6137032ffa5347e17e857430cc67f",
-"usb-host_8h.html#a44ea8024d85782aeb9a3111a03c169db"
+"group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36",
+"os-c-decls_8h.html#a42976f5e88e7e3820e1b21a93b2e1430",
+"serial_8h.html#a14c6376484f80257f6e6d4c26a72eaf5",
+"structos__mempool__attr__s.html#a421b74f14305099c30a56ae08e6bd3e1",
+"usb-host_8h.html#a29f43829f9945aefa55c484f4e3021a0af0672809972697c38c433bb85d372d2a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

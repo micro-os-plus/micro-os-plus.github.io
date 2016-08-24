@@ -238,7 +238,7 @@
 <h1 class="page-title">Conceitos básicos</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 17:13:15 2016 UTC.</td>
+    <td id="last-modified">Last modified on Thu Aug 18 19:23:40 2016 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/basic-concepts.pt.md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
   </tr>
 </table>
@@ -759,7 +759,7 @@
 
 <h3 id="disableenable-interrupts">Disable/enable interrupts</h3>
 
-<p>When the resource is also accessed from ISRs, the usual solution to prevent an ISR to access the resource at the same time with a thread or another lower priority ISR, is to temporarily disable the interrupts while using the shared resource.</p>
+<p>When the resource is also accessed from ISRs, the usual solution to prevent a high priority ISR to run in the middle of a thread or another lower priority ISR, is to temporarily disable the interrupts while using the shared resource.</p>
 
 <p>The overhead to disable/enable interrupts is usually low, and for some devices, like the Cortex-M[347] ones, it is even possible to disable interrupts only partially, from a given priority level down, keeping high priority interrupts enabled.</p>
 

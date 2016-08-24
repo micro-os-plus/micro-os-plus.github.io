@@ -238,7 +238,7 @@
 <h1 class="page-title">Basic concepts</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
+    <td id="last-modified">Last modified on Wed Aug 17 07:13:55 2016 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/basic-concepts.md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
   </tr>
 </table>
@@ -420,7 +420,7 @@
 
 <p>In this case the application is monolithic and runs directly on the hardware, thus the name <em>bare-metal</em>.</p>
 
-<p>µOS++ focuses on these <a href="https://en.wikipedia.org/wiki/Bare_machine">bare-metal</a> applications, especially those running on ARM Cortex-M devices. Although µOS++ can be ported on larger ARM cores, even the 64-bits ones, there are no plans to include support for MMU, virtual memory, separate processes and other such features specific to the Unix world.</p>
+<p>µOS++ focuses on these <a href="https://en.wikipedia.org/wiki/Bare_machine">bare-metal</a> applications, especially those running on ARM Cortex-M devices. Although µOS++ can be ported on larger ARM Cortex-A cores, even the 64-bits ones, there are no plans to include support for MMU, virtual memory, separate processes and other such features specific to the Unix world.</p>
 
 <h2 id="real-time-systems">Real-time systems</h2>
 
@@ -507,7 +507,7 @@
 
 <p>Well behaved applications should never enter (long) busy loops waiting for conditions to occur, but instead suspend the thread and arrange for it to be resumed when the condition is met. During this waiting period the thread completely releases the CPU, so the CPU will be fully available for the other active threads.</p>
 
-<p>For the sake of completeness, it should be noted that the only exception to the rule applies to short delays, where short means delays with durations comparable with the multitasking overhead. On most modern microcontrollers this is usually in the range of microseconds.</p>
+<p>For the sake of completeness, it should be noted that the only exception to the rule applies to short delays, where short means delays with durations comparable with the multitasking overhead required to suspend/resume threads (where the context switching time plays an important role). On most modern microcontrollers this is usually in the range of microseconds.</p>
 
 <h3 id="the-idle-thread">The idle thread</h3>
 

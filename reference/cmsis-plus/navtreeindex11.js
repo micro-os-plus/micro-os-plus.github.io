@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36":[3,2,1,7,3],
 "group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9":[3,2,1,3,8],
 "group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a047fd6a18c2fbfe5c9ec9187da97a5c9":[3,2,1,10,8],
 "group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a06a3f2cab2ecc909e21184ad819aa2bb":[3,2,1,10,7],
@@ -38,8 +39,8 @@ var NAVTREEINDEX11 =
 "group__cmsis-plus-rtos.html":[3,2],
 "group__cmsis-plus-startup.html":[3,1],
 "hierarchy.html":[5,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "initialize-hardware_8c.html":[6,0,2,6,1],
 "initialize-hardware_8c_source.html":[6,0,2,6,1],
 "malloc_8cpp.html":[6,0,2,3,3],
@@ -125,16 +126,16 @@ var NAVTREEINDEX11 =
 "namespaceos_1_1driver_1_1usb_1_1device.html":[5,0,2,0,1,0],
 "namespaceos_1_1driver_1_1usb_1_1host.html":[4,0,3,0,1,1],
 "namespaceos_1_1driver_1_1usb_1_1host.html":[5,0,2,0,1,1],
-"namespaceos_1_1estd.html":[5,0,2,1],
 "namespaceos_1_1estd.html":[4,0,3,1],
+"namespaceos_1_1estd.html":[5,0,2,1],
 "namespaceos_1_1estd_1_1chrono.html":[4,0,3,1,0],
 "namespaceos_1_1estd_1_1chrono.html":[5,0,2,1,0],
 "namespaceos_1_1estd_1_1this__thread.html":[4,0,3,1,1],
 "namespaceos_1_1posix.html":[4,0,3,2],
 "namespaceos_1_1rtos.html":[5,0,2,2],
 "namespaceos_1_1rtos.html":[4,0,3,3],
-"namespaceos_1_1rtos_1_1flags.html":[5,0,2,2,0],
 "namespaceos_1_1rtos_1_1flags.html":[4,0,3,3,0],
+"namespaceos_1_1rtos_1_1flags.html":[5,0,2,2,0],
 "namespaceos_1_1rtos_1_1flags_1_1mode.html":[4,0,3,3,0,0],
 "namespaceos_1_1rtos_1_1internal.html":[4,0,3,3,1],
 "namespaceos_1_1rtos_1_1internal.html":[5,0,2,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "os-c-decls_8h.html#a01128d3f26631eb950187fbb52b32140":[6,0,1,0,8,2,33],
 "os-c-decls_8h.html#a0be8753a081cf353186f4f0e22452a2c":[6,0,1,0,8,2,40],
 "os-c-decls_8h.html#a0d13d335a8c8871403cb2d06e2663715":[6,0,1,0,8,2,25],
-"os-c-decls_8h.html#a2979c090b0cb1ee20fe9507715e7de7a":[6,0,1,0,8,2,43],
-"os-c-decls_8h.html#a42976f5e88e7e3820e1b21a93b2e1430":[6,0,1,0,8,2,36]
+"os-c-decls_8h.html#a2979c090b0cb1ee20fe9507715e7de7a":[6,0,1,0,8,2,43]
 };

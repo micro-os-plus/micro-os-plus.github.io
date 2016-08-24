@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"functions_b.html":[5,3,0,1],
 "functions_c.html":[5,3,0,2],
 "functions_d.html":[5,3,0,3],
 "functions_e.html":[5,3,0,4],
@@ -78,8 +79,8 @@ var NAVTREEINDEX7 =
 "globals_enum.html":[6,1,4],
 "globals_eval.html":[6,1,5],
 "globals_f.html":[6,1,0,6],
-"globals_func.html":[6,1,1,0],
 "globals_func.html":[6,1,1],
+"globals_func.html":[6,1,1,0],
 "globals_func_a.html":[6,1,1,1],
 "globals_func_b.html":[6,1,1,2],
 "globals_func_c.html":[6,1,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "group__cmsis-plus-diag.html#gad3e35a5ce4981b2c40ed6fb69814477e":[3,6,3],
 "group__cmsis-plus-diag.html#gae52332a8c43778a8d61312fc4064647e":[3,6,1],
 "group__cmsis-plus-drivers.html":[3,5],
-"group__cmsis-plus-iso.html":[3,4],
-"group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631":[3,4,11]
+"group__cmsis-plus-iso.html":[3,4]
 };

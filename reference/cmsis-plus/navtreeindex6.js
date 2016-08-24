@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classos_1_1rtos_1_1thread__static.html#a68ced1bf0b2cb14d6b41a54aa5c648bd":[3,2,1,9,13],
 "classos_1_1rtos_1_1thread__static.html#a6b9a7475275a84d9692404497ae0fb28":[3,2,1,9,11],
 "classos_1_1rtos_1_1thread__static.html#a6f06b3f0f9168f42ca9ca45460de5342":[3,2,1,9,28],
 "classos_1_1rtos_1_1thread__static.html#a7d3323ac7f60353146568999cf1b3078":[3,2,1,9,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "files.html":[6,0],
 "functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
-"functions_0x7e.html":[5,3,0,23],
-"functions_b.html":[5,3,0,1]
+"functions_0x7e.html":[5,3,0,23]
 };
