@@ -19,6 +19,7 @@ var searchData=
   ['fork',['fork',['../standard-aliases_8h.html#aa4e4714e6e8927c80b2553a40094b6d9',1,'standard-aliases.h']]],
   ['frame_5fnumber_5ft',['frame_number_t',['../namespaceos_1_1driver_1_1usb.html#ab63f90a8ff7ba91b64d07baf621e72bc',1,'os::driver::usb']]],
   ['free',['free',['../classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063',1,'os::rtos::memory_pool::free()'],['../classos_1_1rtos_1_1memory__pool__typed.html#a100f0ef4e03ead308a9926a204eb40da',1,'os::rtos::memory_pool_typed::free()'],['../classos_1_1rtos_1_1memory__pool__static.html#af29aed24e31d65f6586a281c27901a6b',1,'os::rtos::memory_pool_static::free()'],['../group__cmsis-plus-iso.html#ga800730f656f908066925a653e09d59a3',1,'os::estd::free()']]],
+  ['free_5flist_5f',['free_list_',['../classos_1_1estd_1_1memory_1_1newlib__nano.html#a304aeda3aa50f732c0f71f0e4f303346',1,'os::estd::memory::newlib_nano']]],
   ['frequency_5fhz',['frequency_hz',['../classos_1_1rtos_1_1clock__systick.html#a2abaebfa5e1ff2d36380770e513d1c8e',1,'os::rtos::clock_systick::frequency_hz()'],['../classos_1_1rtos_1_1clock__rtc.html#a0c40d3bdecdfc88457eec8fa79a3c1fb',1,'os::rtos::clock_rtc::frequency_hz()']]],
   ['from_5ftime_5ft',['from_time_t',['../classos_1_1estd_1_1chrono_1_1system__clock.html#a1143c2e1e7936be68c33a56004bad05b',1,'os::estd::chrono::system_clock']]],
   ['fstat',['fstat',['../standard-aliases_8h.html#ac1759a877da2f37512096f3a491e4112',1,'standard-aliases.h']]],

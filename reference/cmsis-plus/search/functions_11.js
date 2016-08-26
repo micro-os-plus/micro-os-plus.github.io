@@ -26,7 +26,7 @@ var searchData=
   ['reset_5fhandler',['Reset_Handler',['../exception-handlers_8h.html#ae7ee340978f5c25f52f0cad1457c6616',1,'exception-handlers.h']]],
   ['reset_5fpipe',['reset_pipe',['../classos_1_1driver_1_1usb_1_1_host.html#acdbbdb9db2a54ff4adcc4076eb8cdc1b',1,'os::driver::usb::Host']]],
   ['reset_5fport',['reset_port',['../classos_1_1driver_1_1usb_1_1_host.html#a158bb4acc38c605980db0e43eef3f348',1,'os::driver::usb::Host']]],
-  ['resource',['resource',['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a6db939caa16119329348bb1f6ed161dd',1,'os::rtos::memory::polymorphic_allocator']]],
+  ['resource',['resource',['../classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a6db939caa16119329348bb1f6ed161dd',1,'os::rtos::memory::polymorphic_allocator::resource()'],['../classos_1_1estd_1_1polymorphic__allocator.html#aeee540f4f347bee576d8ee2f46feaaa3',1,'os::estd::polymorphic_allocator::resource()']]],
   ['resume',['resume',['../classos_1_1rtos_1_1thread.html#aea39969a90aad5de97abc2529485c18c',1,'os::rtos::thread']]],
   ['resume_5fall',['resume_all',['../classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#ae310312d889099b09f87f33df752e4a7',1,'os::rtos::internal::waiting_threads_list']]],
   ['resume_5fone',['resume_one',['../classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#a36c2fccbcd803879f42a8244d81b3a1c',1,'os::rtos::internal::waiting_threads_list']]],

@@ -37,6 +37,7 @@ var hierarchy =
     [ "os::driver::usb::device::Capabilities", "classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html", null ],
     [ "os::driver::serial::Capabilities", "classos_1_1driver_1_1serial_1_1_capabilities.html", null ],
     [ "os::driver::usb::host::Capabilities", "classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html", null ],
+    [ "os::estd::memory::newlib_nano::chunk_s", "structos_1_1estd_1_1memory_1_1newlib__nano_1_1chunk__s.html", null ],
     [ "os::rtos::port::clock_highres", "classos_1_1rtos_1_1port_1_1clock__highres.html", null ],
     [ "os::rtos::port::clock_rtc", "classos_1_1rtos_1_1port_1_1clock__rtc.html", null ],
     [ "os::rtos::port::clock_systick", "classos_1_1rtos_1_1port_1_1clock__systick.html", null ],
@@ -60,9 +61,11 @@ var hierarchy =
     [ "os::estd::lock_guard< Mutex_T >", "classos_1_1estd_1_1lock__guard.html", null ],
     [ "os::rtos::scheduler::lockable", "classos_1_1rtos_1_1scheduler_1_1lockable.html", null ],
     [ "os::rtos::interrupts::lockable", "classos_1_1rtos_1_1interrupts_1_1lockable.html", null ],
-    [ "memory_resource", null, [
+    [ "os::estd::locker_null", "classos_1_1estd_1_1locker__null.html", null ],
+    [ "os::estd::memory_resource", "classos_1_1estd_1_1memory__resource.html", [
       [ "anonymous_namespace{memory-resource.cpp}::new_delete_memory_resource", "classanonymous__namespace_02memory-resource_8cpp_03_1_1new__delete__memory__resource.html", null ],
-      [ "anonymous_namespace{memory-resource.cpp}::null_memory_resource", "classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html", null ]
+      [ "anonymous_namespace{memory-resource.cpp}::null_memory_resource", "classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html", null ],
+      [ "os::estd::memory::newlib_nano", "classos_1_1estd_1_1memory_1_1newlib__nano.html", null ]
     ] ],
     [ "os::rtos::memory::memory_resource", "classos_1_1rtos_1_1memory_1_1memory__resource.html", [
       [ "anonymous_namespace{os-memory.cpp}::new_delete_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1new__delete__memory__resource.html", null ],
@@ -144,6 +147,7 @@ var hierarchy =
     [ "os_timer_def", "structos__timer__def.html", null ],
     [ "os_timer_s", "structos__timer__s.html", null ],
     [ "osEvent", "structos_event.html", null ],
+    [ "os::estd::polymorphic_allocator< T, L >", "classos_1_1estd_1_1polymorphic__allocator.html", null ],
     [ "os::rtos::memory::polymorphic_allocator< T >", "classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html", null ],
     [ "os::rtos::thread::priority", "structos_1_1rtos_1_1thread_1_1priority.html", null ],
     [ "os::rtos::mutex::protocol", "structos_1_1rtos_1_1mutex_1_1protocol.html", null ],
@@ -176,13 +180,13 @@ var hierarchy =
       ] ]
     ] ],
     [ "os::rtos::thread::statistics", "classos_1_1rtos_1_1thread_1_1statistics.html", null ],
-    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
     [ "os::driver::usb::host::Status", "classos_1_1driver_1_1usb_1_1host_1_1_status.html", null ],
     [ "os::driver::usb::device::Status", "classos_1_1driver_1_1usb_1_1device_1_1_status.html", null ],
+    [ "os::driver::serial::Status", "classos_1_1driver_1_1serial_1_1_status.html", null ],
     [ "os::estd::chrono::system_clock", "classos_1_1estd_1_1chrono_1_1system__clock.html", null ],
     [ "os::estd::chrono::systick_clock", "classos_1_1estd_1_1chrono_1_1systick__clock.html", null ],
-    [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
     [ "os::estd::thread", "classos_1_1estd_1_1thread.html", null ],
+    [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
     [ "os::estd::try_to_lock_t", "structos_1_1estd_1_1try__to__lock__t.html", null ],
     [ "os::rtos::mutex::type", "structos_1_1rtos_1_1mutex_1_1type.html", null ],
     [ "os::rtos::scheduler::uncritical_section", "classos_1_1rtos_1_1scheduler_1_1uncritical__section.html", null ],

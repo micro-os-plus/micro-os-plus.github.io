@@ -19,7 +19,7 @@ var searchData=
   ['is_5fcts_5factive',['is_cts_active',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a76356d4384eb9758f05b8dbdb148ffd1',1,'os::driver::serial::Modem_status']]],
   ['is_5fdcd_5factive',['is_dcd_active',['../classos_1_1driver_1_1serial_1_1_modem__status.html#adcfbdb34be9d308978c7fd0406bf782c',1,'os::driver::serial::Modem_status']]],
   ['is_5fdsr_5factive',['is_dsr_active',['../classos_1_1driver_1_1serial_1_1_modem__status.html#af84c033ef71f271b46e7a22035d7ca32',1,'os::driver::serial::Modem_status']]],
-  ['is_5fequal',['is_equal',['../classos_1_1rtos_1_1memory_1_1memory__resource.html#aaedd8bc8d0cabee33a80f68ae471e48e',1,'os::rtos::memory::memory_resource']]],
+  ['is_5fequal',['is_equal',['../classos_1_1rtos_1_1memory_1_1memory__resource.html#a744c6dfea9b1d3ec3cff05fb40d832e6',1,'os::rtos::memory::memory_resource::is_equal()'],['../classos_1_1estd_1_1memory__resource.html#a442442302c333e53a1a10f6d08b918da',1,'os::estd::memory_resource::is_equal()']]],
   ['is_5fovercurrent',['is_overcurrent',['../classos_1_1driver_1_1usb_1_1host_1_1_status.html#ada65563146b872425dce5e716c7bcc69',1,'os::driver::usb::host::Status']]],
   ['is_5fri_5factive',['is_ri_active',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a68765072c6dcce2c1c054482ad15a902',1,'os::driver::serial::Modem_status']]],
   ['is_5frx_5fbreak',['is_rx_break',['../classos_1_1driver_1_1serial_1_1_status.html#abf6eee3b4868d15218aa130ce1a71892',1,'os::driver::serial::Status']]],

@@ -2,6 +2,8 @@ var searchData=
 [
   ['signals',['signals',['../structos_event.html#ad63c33b8b5d3bb37b45433d7c67d1e09',1,'osEvent']]],
   ['single_5fwire',['single_wire',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4',1,'os::driver::serial::Capabilities']]],
+  ['size',['size',['../structos_1_1estd_1_1memory_1_1newlib__nano_1_1chunk__s.html#a92fcdff98a6cb17ffd327448e4c7f550',1,'os::estd::memory::newlib_nano::chunk_s']]],
+  ['size_5f',['size_',['../classos_1_1estd_1_1memory_1_1newlib__nano.html#a2cafc2abeba9165b8e3bb9ac9b43a02e',1,'os::estd::memory::newlib_nano']]],
   ['sm_5finitial_5fvalue',['sm_initial_value',['../structos__semaphore__attr__s.html#a9e8fa44e93d32703646f22450822278c',1,'os_semaphore_attr_s::sm_initial_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a93a004acdd6591ddef9e0f49be403635',1,'os::rtos::semaphore::attributes::sm_initial_value()']]],
   ['sm_5fmax_5fvalue',['sm_max_value',['../structos__semaphore__attr__s.html#a908d1dc68226404282ca687042a05017',1,'os_semaphore_attr_s::sm_max_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a0b166731dc11931d76a03e1a99e37aad',1,'os::rtos::semaphore::attributes::sm_max_value()']]],
   ['smart_5fcard',['smart_card',['../classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e',1,'os::driver::serial::Capabilities']]],

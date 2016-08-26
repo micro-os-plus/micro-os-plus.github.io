@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['reference',['reference',['../classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a8616068ad17f01b9d64742e4c852de28',1,'os::rtos::internal::double_list_iterator::reference()'],['../classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#aee6616fd90a287f033e3c344c356f232',1,'os::rtos::internal::intrusive_list_iterator::reference()'],['../classos_1_1rtos_1_1internal_1_1intrusive__list.html#a6851a808301f9e9ff249692b9ba04f86',1,'os::rtos::internal::intrusive_list::reference()']]],
-  ['rep',['rep',['../classos_1_1estd_1_1chrono_1_1systick__clock.html#a5149a4ee2d5108fa31d2397d82aebe14',1,'os::estd::chrono::systick_clock::rep()'],['../classos_1_1estd_1_1chrono_1_1realtime__clock.html#ad57adba90d5d5a42def38234ec339036',1,'os::estd::chrono::realtime_clock::rep()'],['../classos_1_1estd_1_1chrono_1_1system__clock.html#aa46fed27835b6ac0b8c4a978df7a9185',1,'os::estd::chrono::system_clock::rep()'],['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#ae26dabf754ef0e37631fd62348252c41',1,'os::estd::chrono::high_resolution_clock::rep()']]],
-  ['result_5ft',['result_t',['../namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d',1,'os::rtos']]],
-  ['return_5ft',['return_t',['../namespaceos_1_1driver.html#ae505c9532fc7b402d8a54ec68c19f8ae',1,'os::driver']]],
-  ['robustness_5ft',['robustness_t',['../group__cmsis-plus-rtos-mutex.html#ga763c7134e2f479dcc4b21912c0af89c7',1,'os::rtos::mutex']]]
+  ['packet_5fsize_5ft',['packet_size_t',['../namespaceos_1_1driver_1_1usb.html#a8457d9a22f15015dc63a9a9ec0b66c4a',1,'os::driver::usb']]],
+  ['period',['period',['../classos_1_1estd_1_1chrono_1_1systick__clock.html#a14abc1975e738dd137f5b3259d14f1dd',1,'os::estd::chrono::systick_clock::period()'],['../classos_1_1estd_1_1chrono_1_1realtime__clock.html#a4d38cde5cae018a2e7f111778772ee1d',1,'os::estd::chrono::realtime_clock::period()'],['../classos_1_1estd_1_1chrono_1_1system__clock.html#aa8b4a98db0aa5cf650a044b7317bc6e9',1,'os::estd::chrono::system_clock::period()'],['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#adec1dd478f69928934a7d3c53d0af88c',1,'os::estd::chrono::high_resolution_clock::period()']]],
+  ['pipe_5ft',['pipe_t',['../namespaceos_1_1driver_1_1usb.html#a32495e4d62febe2c2b3f2a8f599e18fa',1,'os::driver::usb']]],
+  ['pointer',['pointer',['../classos_1_1rtos_1_1internal_1_1double__list__iterator.html#aec6b1713b5be9b6529c4fd781cef7007',1,'os::rtos::internal::double_list_iterator::pointer()'],['../classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#abbb42b83609db54ca2111647e233e51c',1,'os::rtos::internal::intrusive_list_iterator::pointer()'],['../classos_1_1rtos_1_1internal_1_1intrusive__list.html#a197dc5f0ac710ca7021022572e35153d',1,'os::rtos::internal::intrusive_list::pointer()']]],
+  ['polling_5finterval_5ft',['polling_interval_t',['../namespaceos_1_1driver_1_1usb.html#a98d8456ba44a32e9f1d5a2f91d6035eb',1,'os::driver::usb']]],
+  ['port_5ft',['port_t',['../namespaceos_1_1driver_1_1usb.html#a8db18341bf9e1b4f4df499a6444af336',1,'os::driver::usb']]],
+  ['power_5ft',['power_t',['../namespaceos_1_1driver.html#a4c1665b807c596e0c2d23d429e230202',1,'os::driver']]],
+  ['priority_5ft',['priority_t',['../group__cmsis-plus-rtos-mqueue.html#ga26895a3c081fd319cb199d21c4028963',1,'os::rtos::message_queue::priority_t()'],['../group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36',1,'os::rtos::thread::priority_t()']]],
+  ['protocol_5ft',['protocol_t',['../group__cmsis-plus-rtos-mutex.html#ga65bfef6cd463aac910d5c93d5828fe7f',1,'os::rtos::mutex']]]
 ];
