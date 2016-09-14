@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -145,10 +145,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html">os::estd::thread</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard thread.  <a href="classos_1_1estd_1_1thread.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc528ef2980271a5637ad14e15e8e1c4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4">os::estd::malloc</a> (std::size_t size) noexcept</td></tr>
-<tr class="separator:gafc528ef2980271a5637ad14e15e8e1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga800730f656f908066925a653e09d59a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga800730f656f908066925a653e09d59a3">os::estd::free</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:ga800730f656f908066925a653e09d59a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0910ad1ca1123a4da2cc323f70882196"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga0910ad1ca1123a4da2cc323f70882196">os::estd::cv_status</a> { <br />
 &#160;&#160;<a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">os::estd::cv_status::no_timeout</a>, 
 <br />
@@ -204,41 +200,11 @@ Classes</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="condition__variable_source.html#l00075">75</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p>Definition at line <a class="el" href="condition__variable_source.html#l00074">74</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga800730f656f908066925a653e09d59a3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::estd::free </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The <a class="el" href="group__cmsis-plus-iso.html#ga800730f656f908066925a653e09d59a3">free()</a> function deallocates the memory allocation pointed to by ptr.</p>
-<p>If ptr is a NULL pointer, no operation is performed.</p>
-<p>Currently it calls the C function.</p>
-<dl class="section note"><dt>Note</dt><dd>Synchronisation is provided by using a scheduler lock. </dd></dl>
-
-<p>Definition at line <a class="el" href="malloc_8cpp_source.html#l00087">87</a> of file <a class="el" href="malloc_8cpp_source.html">malloc.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ga4cdd27328fdf1dee2e48eed9596eb768"></a>
 <div class="memitem">
 <div class="memproto">
@@ -262,35 +228,7 @@ Classes</h2></td></tr>
 
 <p>Return the <b>id</b> of the current running thread. </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00418">418</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gafc528ef2980271a5637ad14e15e8e1c4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void * os::estd::malloc </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The <a class="el" href="group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4">malloc()</a> function allocates size bytes of memory and returns a pointer to the allocated memory. Currently it calls the C function.</p>
-<dl class="section note"><dt>Note</dt><dd>Synchronisation is provided by using a scheduler lock. </dd></dl>
-
-<p>Definition at line <a class="el" href="malloc_8cpp_source.html#l00057">57</a> of file <a class="el" href="malloc_8cpp_source.html">malloc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00416">416</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -347,7 +285,7 @@ template&lt;typename Clock_T  = chrono::systick_clock, typename Rep_T , typename
 </dl>
 <p>extra Clock_T is an extension to the standard </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00473">473</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00471">471</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -375,7 +313,7 @@ template&lt;typename Clock_T , typename Duration_T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00493">493</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00491">491</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>
@@ -404,7 +342,7 @@ template&lt;typename Clock_T , typename Duration_T &gt; </div>
 <p>Yield the CPU to the next ready thread. </p>
 <p>Yield execution to the next ready thread. </p>
 
-<p>Definition at line <a class="el" href="thread_source.html#l00412">412</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
+<p>Definition at line <a class="el" href="thread_source.html#l00410">410</a> of file <a class="el" href="thread_source.html">thread</a>.</p>
 
 </div>
 </div>

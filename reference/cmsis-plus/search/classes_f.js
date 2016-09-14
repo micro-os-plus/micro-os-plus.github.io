@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['terminated_5fthreads_5flist',['terminated_threads_list',['../classos_1_1rtos_1_1internal_1_1terminated__threads__list.html',1,'os::rtos::internal']]],
-  ['thread',['thread',['../classos_1_1estd_1_1thread.html',1,'os::estd']]],
-  ['thread',['thread',['../classos_1_1rtos_1_1thread.html',1,'os::rtos']]],
-  ['thread',['thread',['../classos_1_1rtos_1_1port_1_1thread.html',1,'os::rtos::port']]],
-  ['thread_5fallocated',['thread_allocated',['../classos_1_1rtos_1_1thread__allocated.html',1,'os::rtos']]],
-  ['thread_5fchildren_5flist',['thread_children_list',['../classos_1_1rtos_1_1internal_1_1thread__children__list.html',1,'os::rtos::internal']]],
-  ['thread_5fstatic',['thread_static',['../classos_1_1rtos_1_1thread__static.html',1,'os::rtos']]],
-  ['timed_5fmutex',['timed_mutex',['../classos_1_1estd_1_1timed__mutex.html',1,'os::estd']]],
-  ['timeout_5fthread_5fnode',['timeout_thread_node',['../classos_1_1rtos_1_1internal_1_1timeout__thread__node.html',1,'os::rtos::internal']]],
-  ['timer',['timer',['../classos_1_1rtos_1_1timer.html',1,'os::rtos']]],
-  ['timer_5fnode',['timer_node',['../classos_1_1rtos_1_1internal_1_1timer__node.html',1,'os::rtos::internal']]],
-  ['timestamp_5fnode',['timestamp_node',['../classos_1_1rtos_1_1internal_1_1timestamp__node.html',1,'os::rtos::internal']]],
-  ['try_5fto_5flock_5ft',['try_to_lock_t',['../structos_1_1estd_1_1try__to__lock__t.html',1,'os::estd']]],
-  ['type',['type',['../structos_1_1rtos_1_1mutex_1_1type.html',1,'os::rtos::mutex']]]
+  ['semaphore',['semaphore',['../classos_1_1rtos_1_1semaphore.html',1,'os::rtos']]],
+  ['semaphore_5fbinary',['semaphore_binary',['../classos_1_1rtos_1_1semaphore__binary.html',1,'os::rtos']]],
+  ['semaphore_5fcounting',['semaphore_counting',['../classos_1_1rtos_1_1semaphore__counting.html',1,'os::rtos']]],
+  ['serial',['Serial',['../classos_1_1driver_1_1_serial.html',1,'os::driver']]],
+  ['sockaddr',['sockaddr',['../structsockaddr.html',1,'']]],
+  ['stack',['stack',['../classos_1_1rtos_1_1thread_1_1stack.html',1,'os::rtos::thread']]],
+  ['state',['state',['../structos_1_1rtos_1_1timer_1_1state.html',1,'os::rtos::timer']]],
+  ['state',['state',['../structos_1_1rtos_1_1thread_1_1state.html',1,'os::rtos::thread']]],
+  ['static_5fdouble_5flist',['static_double_list',['../classos_1_1rtos_1_1internal_1_1static__double__list.html',1,'os::rtos::internal']]],
+  ['static_5fdouble_5flist_5flinks',['static_double_list_links',['../classos_1_1rtos_1_1internal_1_1static__double__list__links.html',1,'os::rtos::internal']]],
+  ['statistics',['statistics',['../classos_1_1rtos_1_1thread_1_1statistics.html',1,'os::rtos::thread']]],
+  ['status',['Status',['../classos_1_1driver_1_1usb_1_1host_1_1_status.html',1,'os::driver::usb::host']]],
+  ['status',['Status',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html',1,'os::driver::usb::device']]],
+  ['status',['Status',['../classos_1_1driver_1_1serial_1_1_status.html',1,'os::driver::serial']]],
+  ['system_5fclock',['system_clock',['../classos_1_1estd_1_1chrono_1_1system__clock.html',1,'os::estd::chrono']]],
+  ['systick_5fclock',['systick_clock',['../classos_1_1estd_1_1chrono_1_1systick__clock.html',1,'os::estd::chrono']]]
 ];

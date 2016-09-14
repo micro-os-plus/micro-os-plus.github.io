@@ -1,5 +1,7 @@
 var malloc_8cpp =
 [
-    [ "free", "malloc_8cpp.html#ga800730f656f908066925a653e09d59a3", null ],
-    [ "malloc", "malloc_8cpp.html#gafc528ef2980271a5637ad14e15e8e1c4", null ]
+    [ "calloc", "group__cmsis-plus-rtos-c-memres.html#ga4caf6b14a04c9e260ea0e3b7dafbbe49", null ],
+    [ "free", "group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711", null ],
+    [ "malloc", "group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152", null ],
+    [ "realloc", "group__cmsis-plus-rtos-c-memres.html#ga0699cd3a7ec9876643028bbf110e84ac", null ]
 ];

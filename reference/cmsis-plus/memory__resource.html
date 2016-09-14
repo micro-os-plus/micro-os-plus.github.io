@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/iso/memory_resource File Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/estd/memory_resource File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -126,37 +126,27 @@ $(document).ready(function(){initNavTree('memory__resource.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Types</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">memory_resource File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="os-memory_8h_source.html">cmsis-plus/rtos/os-memory.h</a>&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cerrno&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;<a class="el" href="mutex_source.html">cmsis-plus/iso/mutex</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="system__error_source.html">cmsis-plus/iso/system_error</a>&gt;</code><br />
 </div>
 <p><a href="memory__resource_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1estd_1_1memory_1_1newlib__nano_1_1chunk__s.html">os::estd::memory::newlib_nano::chunk_s</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1locker__null.html">os::estd::locker_null</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Null locker.  <a href="classos_1_1estd_1_1locker__null.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html">os::estd::memory_resource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory resource manager.  <a href="classos_1_1estd_1_1memory__resource.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html">os::estd::memory::newlib_nano</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory resource implementing newlib nano policies.  <a href="classos_1_1estd_1_1memory_1_1newlib__nano.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1polymorphic__allocator.html">os::estd::polymorphic_allocator&lt; T, L &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1polymorphic__allocator.html">os::estd::polymorphic_allocator&lt; T, L &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -167,7 +157,7 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1estd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html">os::estd</a></td></tr>
 <tr class="memdesc:namespaceos_1_1estd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embedded <b>std</b> namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceos_1_1estd_1_1memory"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1memory.html">os::estd::memory</a></td></tr>
+<tr class="memitem:namespaceos_1_1estd_1_1pmr"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html">os::estd::pmr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -175,38 +165,45 @@ Macros</h2></td></tr>
 <tr class="memitem:a7180c7458a8db9a19ee211cd1fd0cdf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__resource.html#a7180c7458a8db9a19ee211cd1fd0cdf4">CMSIS_PLUS_ISO_MEMORY_</a></td></tr>
 <tr class="separator:a7180c7458a8db9a19ee211cd1fd0cdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Types</h2></td></tr>
+<tr class="memitem:a1a9b09f8187dcfee7e91c01b7b0731ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">os::estd::pmr::memory_resource</a> = rtos::memory::memory_resource</td></tr>
+<tr class="separator:a1a9b09f8187dcfee7e91c01b7b0731ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a897c806258f898c9eab9811e1cc83f5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a897c806258f898c9eab9811e1cc83f5b">os::estd::get_default_resource</a> (void) noexcept</td></tr>
-<tr class="separator:a897c806258f898c9eab9811e1cc83f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c6721174a7a95d6c8542c85664d0617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a6c6721174a7a95d6c8542c85664d0617">os::estd::new_delete_resource</a> (void) noexcept</td></tr>
-<tr class="separator:a6c6721174a7a95d6c8542c85664d0617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a2bd55122e20d23074e0a36799d61ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a8a2bd55122e20d23074e0a36799d61ba">os::estd::null_memory_resource</a> (void) noexcept</td></tr>
-<tr class="separator:a8a2bd55122e20d23074e0a36799d61ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b42600db0c8394963da15788622eb52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a3b42600db0c8394963da15788622eb52">os::estd::operator!=</a> (const memory_resource &amp;lhs, const memory_resource &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:a3b42600db0c8394963da15788622eb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the <code><a class="el" href="classos_1_1estd_1_1memory__resource.html" title="Memory resource manager. ">memory_resource</a></code> instances for inequality.  <a href="namespaceos_1_1estd.html#a3b42600db0c8394963da15788622eb52">More...</a><br /></td></tr>
-<tr class="separator:a3b42600db0c8394963da15788622eb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaca830dae7a042491e80424698516eb7"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename L &gt; </td></tr>
-<tr class="memitem:aaca830dae7a042491e80424698516eb7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#aaca830dae7a042491e80424698516eb7">os::estd::operator!=</a> (const polymorphic_allocator&lt; T1, L &gt; &amp;a, const polymorphic_allocator&lt; T2, L &gt; &amp;b) noexcept</td></tr>
-<tr class="separator:aaca830dae7a042491e80424698516eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819cbeb0f2ac43d3a674f057b5eadec0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a819cbeb0f2ac43d3a674f057b5eadec0">os::estd::operator!=</a> (memory_resource const &amp;lhs, memory_resource const &amp;rhs) noexcept</td></tr>
-<tr class="separator:a819cbeb0f2ac43d3a674f057b5eadec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dfa28154c6bb77fc5a9f9f813c07a53"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename L &gt; </td></tr>
-<tr class="memitem:a5dfa28154c6bb77fc5a9f9f813c07a53"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a5dfa28154c6bb77fc5a9f9f813c07a53">os::estd::operator!=</a> (polymorphic_allocator&lt; T, L &gt; const &amp;lhs, polymorphic_allocator&lt; U, L &gt; const &amp;rhs) noexcept</td></tr>
-<tr class="separator:a5dfa28154c6bb77fc5a9f9f813c07a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbe8c3e140c786da2b844271102e9157"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#adbe8c3e140c786da2b844271102e9157">os::estd::operator==</a> (const memory_resource &amp;lhs, const memory_resource &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:adbe8c3e140c786da2b844271102e9157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the <code><a class="el" href="classos_1_1estd_1_1memory__resource.html" title="Memory resource manager. ">memory_resource</a></code> instances for equality.  <a href="namespaceos_1_1estd.html#adbe8c3e140c786da2b844271102e9157">More...</a><br /></td></tr>
-<tr class="separator:adbe8c3e140c786da2b844271102e9157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672dae7bb46fb68af8a93ad51c06298c"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename L &gt; </td></tr>
-<tr class="memitem:a672dae7bb46fb68af8a93ad51c06298c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a672dae7bb46fb68af8a93ad51c06298c">os::estd::operator==</a> (const polymorphic_allocator&lt; T1, L &gt; &amp;a, const polymorphic_allocator&lt; T2, L &gt; &amp;b) noexcept</td></tr>
-<tr class="separator:a672dae7bb46fb68af8a93ad51c06298c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c370855b28175a855173d086818c84e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a8c370855b28175a855173d086818c84e">os::estd::operator==</a> (memory_resource const &amp;lhs, memory_resource const &amp;rhs) noexcept</td></tr>
-<tr class="separator:a8c370855b28175a855173d086818c84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07829a49dbc186c02a04f9c7a0269df7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename L &gt; </td></tr>
-<tr class="memitem:a07829a49dbc186c02a04f9c7a0269df7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a07829a49dbc186c02a04f9c7a0269df7">os::estd::operator==</a> (polymorphic_allocator&lt; T, L &gt; const &amp;lhs, polymorphic_allocator&lt; U, L &gt; const &amp;rhs) noexcept</td></tr>
-<tr class="separator:a07829a49dbc186c02a04f9c7a0269df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae548f646f5394fb55bbcb1a792d5a9e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#ae548f646f5394fb55bbcb1a792d5a9e8">os::estd::set_default_resource</a> (<a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> *r) noexcept</td></tr>
-<tr class="separator:ae548f646f5394fb55bbcb1a792d5a9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdfb11bebd11da95682c3379cd1b48a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">os::estd::__throw_bad_alloc</a> (void)</td></tr>
+<tr class="separator:afdfb11bebd11da95682c3379cd1b48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766f1bbfb3eb329a5d88466fb0a25fbf"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a766f1bbfb3eb329a5d88466fb0a25fbf"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a766f1bbfb3eb329a5d88466fb0a25fbf">os::estd::pmr::operator!=</a> (const polymorphic_allocator&lt; T1 &gt; &amp;a, const polymorphic_allocator&lt; T2 &gt; &amp;b) noexcept</td></tr>
+<tr class="separator:a766f1bbfb3eb329a5d88466fb0a25fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb7d465a49996ffd13199adecc9e86f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:afbb7d465a49996ffd13199adecc9e86f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#afbb7d465a49996ffd13199adecc9e86f">os::estd::pmr::operator!=</a> (polymorphic_allocator&lt; T &gt; const &amp;lhs, polymorphic_allocator&lt; U &gt; const &amp;rhs) noexcept</td></tr>
+<tr class="separator:afbb7d465a49996ffd13199adecc9e86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ac4e6d9c06f826234548ff2c6a2029"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a47ac4e6d9c06f826234548ff2c6a2029"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a47ac4e6d9c06f826234548ff2c6a2029">os::estd::pmr::operator==</a> (const polymorphic_allocator&lt; T1 &gt; &amp;a, const polymorphic_allocator&lt; T2 &gt; &amp;b) noexcept</td></tr>
+<tr class="separator:a47ac4e6d9c06f826234548ff2c6a2029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1e1d8db2bab850f91a83a5b93b2e09"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a0f1e1d8db2bab850f91a83a5b93b2e09"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a0f1e1d8db2bab850f91a83a5b93b2e09">os::estd::pmr::operator==</a> (polymorphic_allocator&lt; T &gt; const &amp;lhs, polymorphic_allocator&lt; U &gt; const &amp;rhs) noexcept</td></tr>
+<tr class="separator:a0f1e1d8db2bab850f91a83a5b93b2e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Standard Memory Functions</div></td></tr>
+<tr class="memitem:gaa0efdbc11c98e94893825fc05c6a7615"><td class="memItemLeft" align="right" valign="top">memory_resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaa0efdbc11c98e94893825fc05c6a7615">os::estd::pmr::new_delete_resource</a> (void) noexcept</td></tr>
+<tr class="memdesc:gaa0efdbc11c98e94893825fc05c6a7615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of a memory manager based on <code>new/delete</code>.  <a href="group__cmsis-plus-rtos-memres.html#gaa0efdbc11c98e94893825fc05c6a7615">More...</a><br /></td></tr>
+<tr class="separator:gaa0efdbc11c98e94893825fc05c6a7615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a429398eefddb1ca8a103006ace1387"><td class="memItemLeft" align="right" valign="top">memory_resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga1a429398eefddb1ca8a103006ace1387">os::estd::pmr::null_memory_resource</a> (void) noexcept</td></tr>
+<tr class="memdesc:ga1a429398eefddb1ca8a103006ace1387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of an ineffective memory manager.  <a href="group__cmsis-plus-rtos-memres.html#ga1a429398eefddb1ca8a103006ace1387">More...</a><br /></td></tr>
+<tr class="separator:ga1a429398eefddb1ca8a103006ace1387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbb72d3cad1991160e1c3c5c8538f6c4"><td class="memItemLeft" align="right" valign="top">memory_resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gacbb72d3cad1991160e1c3c5c8538f6c4">os::estd::pmr::set_default_resource</a> (memory_resource *res) noexcept</td></tr>
+<tr class="memdesc:gacbb72d3cad1991160e1c3c5c8538f6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default application memory manager.  <a href="group__cmsis-plus-rtos-memres.html#gacbb72d3cad1991160e1c3c5c8538f6c4">More...</a><br /></td></tr>
+<tr class="separator:gacbb72d3cad1991160e1c3c5c8538f6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga984b9c524b3d5f8eaa560e4f98c55928"><td class="memItemLeft" align="right" valign="top">memory_resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">os::estd::pmr::get_default_resource</a> (void) noexcept</td></tr>
+<tr class="memdesc:ga984b9c524b3d5f8eaa560e4f98c55928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default application memory manager.  <a href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">More...</a><br /></td></tr>
+<tr class="separator:ga984b9c524b3d5f8eaa560e4f98c55928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a367830a029fdc04046d060dd0b53efdc"><td class="memItemLeft" align="right" valign="top">memory_resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">os::estd::pmr::default_resource</a></td></tr>
+<tr class="separator:a367830a029fdc04046d060dd0b53efdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a7180c7458a8db9a19ee211cd1fd0cdf4"></a>
@@ -228,7 +225,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_cae430f933a417897a2c3fb661b022de.html">iso</a></li><li class="navelem"><a class="el" href="memory__resource.html">memory_resource</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_873369f21ff1666f0e3e53746773a1c1.html">estd</a></li><li class="navelem"><a class="el" href="memory__resource.html">memory_resource</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

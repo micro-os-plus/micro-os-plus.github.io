@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -155,6 +155,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
+<tr class="memitem:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock.html#ae823d4ebdf4c3453e24eb3e4929e7b0e">~clock</a> ()</td></tr>
+<tr class="memdesc:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the clock object instance.  <a href="#ae823d4ebdf4c3453e24eb3e4929e7b0e">More...</a><br /></td></tr>
+<tr class="separator:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:addb7972fd07f3be0abb5287d470987f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock.html#addb7972fd07f3be0abb5287d470987f9">start</a> (void)=0</td></tr>
 <tr class="memdesc:addb7972fd07f3be0abb5287d470987f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the clock.  <a href="#addb7972fd07f3be0abb5287d470987f9">More...</a><br /></td></tr>
@@ -178,13 +182,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a36805a0eae21688c136129059482c3dd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">name</a> (void) const </td></tr>
 <tr class="memdesc:a36805a0eae21688c136129059482c3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object name.  <a href="#a36805a0eae21688c136129059482c3dd">More...</a><br /></td></tr>
 <tr class="separator:a36805a0eae21688c136129059482c3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock.html#ae823d4ebdf4c3453e24eb3e4929e7b0e">~clock</a> ()</td></tr>
-<tr class="memdesc:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the clock object instance.  <a href="#ae823d4ebdf4c3453e24eb3e4929e7b0e">More...</a><br /></td></tr>
-<tr class="separator:ae823d4ebdf4c3453e24eb3e4929e7b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic clock. </p>
@@ -208,14 +205,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Destruct the clock object instance. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00151">151</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00148">148</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -248,7 +245,7 @@ Protected Member Functions</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00540">540</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00773">773</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -275,13 +272,13 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tell the current time, possibly adjusted for epoch. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The clock current timestamp (time units from startup plus the epoch offset).</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classos_1_1rtos_1_1clock__highres.html#adebfa864877a8aebe860cac84e205cde">os::rtos::clock_highres</a>, and <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a2ff3189d8d88102a0e49fd094bc7c70b">os::rtos::adjustable_clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00172">172</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00169">169</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +313,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00204">204</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00201">201</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -361,7 +358,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a5582df6aac1fd73354589bb024f17873">os::rtos::adjustable_clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00246">246</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00243">243</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,13 +385,13 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Start the clock. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
-<dl class="section user"><dt>Returns</dt><dd>Nothing</dd></dl>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>For system clocks it is called from the system startup code. </p>
 
 <p>Implemented in <a class="el" href="classos_1_1rtos_1_1clock__highres.html#a53275b6eacb2e9c44af526622436415f">os::rtos::clock_highres</a>, <a class="el" href="classos_1_1rtos_1_1clock__rtc.html#a76114a4e81214e9f4dfe81dfb4807d0a">os::rtos::clock_rtc</a>, and <a class="el" href="classos_1_1rtos_1_1clock__systick.html#ae9468d10ee3d1c9cec4e405d1442593b">os::rtos::clock_systick</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00161">161</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00158">158</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -413,11 +410,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tell the current time since startup. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The clock current timestamp (time units from startup).</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00188">188</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00185">185</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +450,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00285">285</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00282">282</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>

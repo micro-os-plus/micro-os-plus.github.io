@@ -2,13 +2,21 @@ var group__cmsis_plus_rtos_timer =
 [
     [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html", [
       [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html#a25901891ddd23ca9878b716718c67d83", null ],
+      [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html#aeb87290bdecc14905b4c0b78f14554cc", null ],
+      [ "attributes", "classos_1_1rtos_1_1timer_1_1attributes.html#aa2b680b7ed6a57d4478a2fb6f57d747c", null ],
       [ "~attributes", "classos_1_1rtos_1_1timer_1_1attributes.html#aaae5ba28a47cbe2dd4dc92c1ec19d11c", null ],
+      [ "operator=", "classos_1_1rtos_1_1timer_1_1attributes.html#acadcfe5200ab56e24d0cee738ab23641", null ],
+      [ "operator=", "classos_1_1rtos_1_1timer_1_1attributes.html#ad8b6b73ab2c78805e91049b14d2a2002", null ],
       [ "clock", "classos_1_1rtos_1_1timer_1_1attributes.html#a5d7e0d82010925866a1780e04a8134c4", null ],
       [ "tm_type", "classos_1_1rtos_1_1timer_1_1attributes.html#a1678ce0a3d98c4c540292c70dd0c90f3", null ]
     ] ],
     [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html", [
       [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a67ab5d0413195c59d1aa786ef8b9c824", null ],
+      [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a40597d650c10750877d414539f50b64a", null ],
+      [ "attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#ac310972fbcdbb6c441c7b4701d8ac120", null ],
       [ "~attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a50f35bfb52583fb29fca42c125d10c88", null ],
+      [ "operator=", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#aa6f04f7668f0a8a6663addf74befd55f", null ],
+      [ "operator=", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#ac79af3c8a0ffe0073ba674609ad20745", null ],
       [ "clock", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a5d7e0d82010925866a1780e04a8134c4", null ],
       [ "tm_type", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a1678ce0a3d98c4c540292c70dd0c90f3", null ]
     ] ],
@@ -33,6 +41,12 @@ var group__cmsis_plus_rtos_timer =
       [ "timer", "classos_1_1rtos_1_1timer.html#ab6c3599acea758eec0997b1803ea2c1c", null ],
       [ "~timer", "classos_1_1rtos_1_1timer.html#a1c7ef59be85cbc662d0d7abad1b9caf5", null ],
       [ "name", "classos_1_1rtos_1_1timer.html#a36805a0eae21688c136129059482c3dd", null ],
+      [ "operator delete", "classos_1_1rtos_1_1timer.html#aef5d78f2ac3f37daf3984758c9e2ddb2", null ],
+      [ "operator delete[]", "classos_1_1rtos_1_1timer.html#adc1c29f4a020deee857f22330e0277ed", null ],
+      [ "operator new", "classos_1_1rtos_1_1timer.html#a1456983acc3a56e02cd4a48a220f222c", null ],
+      [ "operator new", "classos_1_1rtos_1_1timer.html#a35f709b685919d096e49acb8edefe02f", null ],
+      [ "operator new[]", "classos_1_1rtos_1_1timer.html#a27026070d8fd2c51873036cfd1661ce4", null ],
+      [ "operator new[]", "classos_1_1rtos_1_1timer.html#ad415429ae3487ec5ae1258b4d2a5787f", null ],
       [ "operator==", "classos_1_1rtos_1_1timer.html#a10f338d447a46b5ba4a4ec00924bb738", null ],
       [ "start", "classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730", null ],
       [ "stop", "classos_1_1rtos_1_1timer.html#adc15ae1bbd9d1b8851a690019d8603a6", null ],

@@ -1,17 +1,15 @@
 var classos_1_1estd_1_1polymorphic__allocator =
 [
-    [ "locker_type", "classos_1_1estd_1_1polymorphic__allocator.html#a9a3deb497fba7ee4bb27f71f6428de30", null ],
-    [ "value_type", "classos_1_1estd_1_1polymorphic__allocator.html#acf6863bb84d4475d1e5cc6cc92359879", null ],
-    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#aacdafca8a025d8421181827d62727fb2", null ],
-    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#af93019e3ca68d91447a870c6f2e44e32", null ],
-    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#ac359e6444c6dc5ee92849384775b5b95", null ],
-    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#a2f29300256c79fef20f2679338dd3513", null ],
-    [ "allocate", "classos_1_1estd_1_1polymorphic__allocator.html#a9d8b4cc710a9ddd773bae00592342118", null ],
-    [ "deallocate", "classos_1_1estd_1_1polymorphic__allocator.html#af2352ce17383be1849d60c08784b630c", null ],
-    [ "max_size", "classos_1_1estd_1_1polymorphic__allocator.html#ae704a2e6a8bd0341d604df543549b0a4", null ],
-    [ "operator=", "classos_1_1estd_1_1polymorphic__allocator.html#ac17e7d2216c20a18d3391df306124ad3", null ],
-    [ "resource", "classos_1_1estd_1_1polymorphic__allocator.html#aeee540f4f347bee576d8ee2f46feaaa3", null ],
-    [ "select_on_container_copy_construction", "classos_1_1estd_1_1polymorphic__allocator.html#a2d78d91f8635b86ddcf2cb33acc9cd59", null ],
-    [ "locker_", "classos_1_1estd_1_1polymorphic__allocator.html#aa9d2794d8b2950cc57809da77784412a", null ],
-    [ "res_", "classos_1_1estd_1_1polymorphic__allocator.html#ac36ae065f3b4f0dcb00eee33f2a18ae3", null ]
+    [ "value_type", "classos_1_1estd_1_1polymorphic__allocator.html#a23ad8780d5ba4e85b496c52b0b57dc44", null ],
+    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#a528b052944ca0f2e99c27ff6c5a7b7f7", null ],
+    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#aaffef2b3f9af8383aeb68b96b2a3103d", null ],
+    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#a8ba1492643da588a2408f2124288b41d", null ],
+    [ "polymorphic_allocator", "classos_1_1estd_1_1polymorphic__allocator.html#ac1665fe508440166ffb1bd1459624338", null ],
+    [ "allocate", "classos_1_1estd_1_1polymorphic__allocator.html#ab4e08e3b3f8322d29c46f7aaa4fde305", null ],
+    [ "deallocate", "classos_1_1estd_1_1polymorphic__allocator.html#ac7c8b5b3fadd7fd0965026a9379cf72c", null ],
+    [ "max_size", "classos_1_1estd_1_1polymorphic__allocator.html#ad00f68a7e81b0c6c83d287b3bdd5fd3a", null ],
+    [ "operator=", "classos_1_1estd_1_1polymorphic__allocator.html#acab810b2934196d0125d34f0b45d5550", null ],
+    [ "resource", "classos_1_1estd_1_1polymorphic__allocator.html#a9d81ed2757d1a5af0439d536d09a5fc7", null ],
+    [ "select_on_container_copy_construction", "classos_1_1estd_1_1polymorphic__allocator.html#aa8cf9fd944d528210de373e7dc6b962b", null ],
+    [ "res_", "classos_1_1estd_1_1polymorphic__allocator.html#a80b7f91344d98309d035c081cdec6c82", null ]
 ];

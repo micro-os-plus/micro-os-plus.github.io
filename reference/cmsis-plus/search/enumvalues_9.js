@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['max_5f',['max_',['../structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a4a64c26ead3ae9ce0d7592b5c51337a1',1,'os::rtos::mutex::protocol::max_()'],['../structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346',1,'os::rtos::mutex::robustness::max_()'],['../structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a11821e1c1c8622e6a40e4f22348e430b',1,'os::rtos::mutex::type::max_()']]]
+  ['low',['low',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66afa27875e2cfdd82964492ec24defc750',1,'os::rtos::thread::priority::low()'],['../namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::low()'],['../namespaceos_1_1driver_1_1usb.html#a49b41e39ea6e6b7d388901f7d74176b4a53cced8d281a1a0ace3cb6594daaa4f7',1,'os::driver::usb::low()']]],
+  ['lowest',['lowest',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66ab2750fc62b452d5734c9d48f98b15220',1,'os::rtos::thread::priority']]]
 ];

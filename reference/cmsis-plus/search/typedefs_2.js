@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['chunk_5ft',['chunk_t',['../classos_1_1estd_1_1memory_1_1newlib__nano.html#a0fc10f4c74d735b96e65ddfff8f330ee',1,'os::estd::memory::newlib_nano']]],
   ['config_5farg_5ft',['config_arg_t',['../namespaceos_1_1driver_1_1serial.html#a01a49c46795f92b60931c856f06109d9',1,'os::driver::serial']]],
   ['config_5ft',['config_t',['../namespaceos_1_1driver_1_1serial.html#a16d38c70ff077aeba035b60246f76ac1',1,'os::driver::serial']]],
   ['control_5farg_5ft',['control_arg_t',['../namespaceos_1_1driver_1_1serial.html#aa1a37580580c17d07e0793c5bbe183aa',1,'os::driver::serial']]],

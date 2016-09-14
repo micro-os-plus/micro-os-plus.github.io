@@ -4,6 +4,8 @@ var group__cmsis_plus_app_config_trace =
     [ "OS_INTEGER_TRACE_SEMIHOSTING_BUFF_ARRAY_SIZE", "group__cmsis-plus-app-config-trace.html#ga781848869981aae7eafaa4542023b5d5", null ],
     [ "OS_TRACE_LIBC_ATEXIT", "group__cmsis-plus-app-config-trace.html#ga87e19e856f58bcf1d1ca4dffbd5e693e", null ],
     [ "OS_TRACE_LIBC_MALLOC", "group__cmsis-plus-app-config-trace.html#gafd0340b1f1853fd7cad6e3a730cbadea", null ],
+    [ "OS_TRACE_LIBCPP_MEMORY_RESOURCE", "group__cmsis-plus-app-config-trace.html#ga5fb42d6123c07513c3b82bcc7953f9c3", null ],
+    [ "OS_TRACE_LIBCPP_OPERATOR_NEW", "group__cmsis-plus-app-config-trace.html#ga6bb9fa285a253408c2d9a856c899eade", null ],
     [ "OS_TRACE_RTOS_CLOCKS", "group__cmsis-plus-app-config-trace.html#gab300223c6a13a1bd271d5c269791ce24", null ],
     [ "OS_TRACE_RTOS_CONDVAR", "group__cmsis-plus-app-config-trace.html#gadc3abe71d1469164239b90c00ff63456", null ],
     [ "OS_TRACE_RTOS_EVFLAGS", "group__cmsis-plus-app-config-trace.html#gad064d6489f2fa913f322fe37be684e9e", null ],

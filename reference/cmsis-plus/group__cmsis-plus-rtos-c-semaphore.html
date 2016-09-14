@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -149,7 +149,18 @@ Types</h2></td></tr>
 <tr class="separator:ga6f43e7bfa993ee025cc7238390c91691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Semaphore functions</h2></td></tr>
+Compatibility Macros</h2></td></tr>
+<tr class="memitem:ga217c0539a3d2e826e9797f28741a8c37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga217c0539a3d2e826e9797f28741a8c37">os_semaphore_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba">os_semaphore_construct</a></td></tr>
+<tr class="separator:ga217c0539a3d2e826e9797f28741a8c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab264af2883d8dfe5a1d9ff9de6d14f79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab264af2883d8dfe5a1d9ff9de6d14f79">os_semaphore_binary_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaadba3c2e6ae33b1eaad20b132a36380a">os_semaphore_binary_construct</a></td></tr>
+<tr class="separator:gab264af2883d8dfe5a1d9ff9de6d14f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e219da167ac8b51008c2429cd0a8dbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga8e219da167ac8b51008c2429cd0a8dbe">os_semaphore_counting_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gab7a9d2b1e986706f55d96b18a11f8dbd">os_semaphore_counting_construct</a></td></tr>
+<tr class="separator:ga8e219da167ac8b51008c2429cd0a8dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga284daaa2b3e1a56caa4e8caebf195956"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga284daaa2b3e1a56caa4e8caebf195956">os_semaphore_destroy</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a></td></tr>
+<tr class="separator:ga284daaa2b3e1a56caa4e8caebf195956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Semaphore Attributes Functions</h2></td></tr>
 <tr class="memitem:gad6f50cc528f9191e8c1b19e79ba733bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gad6f50cc528f9191e8c1b19e79ba733bb">os_semaphore_attr_init</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *attr)</td></tr>
 <tr class="memdesc:gad6f50cc528f9191e8c1b19e79ba733bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the counting semaphore attributes.  <a href="#gad6f50cc528f9191e8c1b19e79ba733bb">More...</a><br /></td></tr>
 <tr class="separator:gad6f50cc528f9191e8c1b19e79ba733bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,18 +173,36 @@ Semaphore functions</h2></td></tr>
 <tr class="memitem:gab24cb74cede310bfdd7f73fc8f1f3d45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gab24cb74cede310bfdd7f73fc8f1f3d45">os_semaphore_attr_get_binary</a> (void)</td></tr>
 <tr class="memdesc:gab24cb74cede310bfdd7f73fc8f1f3d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a binary semaphore attributes object instance.  <a href="#gab24cb74cede310bfdd7f73fc8f1f3d45">More...</a><br /></td></tr>
 <tr class="separator:gab24cb74cede310bfdd7f73fc8f1f3d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaec377c19565fa719da413b98d26ca88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaaec377c19565fa719da413b98d26ca88">os_semaphore_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:gaaec377c19565fa719da413b98d26ca88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a semaphore object instance.  <a href="#gaaec377c19565fa719da413b98d26ca88">More...</a><br /></td></tr>
-<tr class="separator:gaaec377c19565fa719da413b98d26ca88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga73f9a5506f1ab63afef4425fe385d76d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d">os_semaphore_binary_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
-<tr class="memdesc:ga73f9a5506f1ab63afef4425fe385d76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a binary semaphore object instance.  <a href="#ga73f9a5506f1ab63afef4425fe385d76d">More...</a><br /></td></tr>
-<tr class="separator:ga73f9a5506f1ab63afef4425fe385d76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0a0db094dee095022d584fd21e4aa0fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga0a0db094dee095022d584fd21e4aa0fd">os_semaphore_counting_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> max_value, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
-<tr class="memdesc:ga0a0db094dee095022d584fd21e4aa0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a counting semaphore object instance.  <a href="#ga0a0db094dee095022d584fd21e4aa0fd">More...</a><br /></td></tr>
-<tr class="separator:ga0a0db094dee095022d584fd21e4aa0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga156238f12fa5beb1cb0a29a934a5cc05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga156238f12fa5beb1cb0a29a934a5cc05">os_semaphore_destroy</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>)</td></tr>
-<tr class="memdesc:ga156238f12fa5beb1cb0a29a934a5cc05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the semaphore object instance.  <a href="#ga156238f12fa5beb1cb0a29a934a5cc05">More...</a><br /></td></tr>
-<tr class="separator:ga156238f12fa5beb1cb0a29a934a5cc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Semaphore Creation Functions</h2></td></tr>
+<tr class="memitem:gade6020bcb9e4bb7d90d2c0126efb5bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba">os_semaphore_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gade6020bcb9e4bb7d90d2c0126efb5bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated semaphore object instance.  <a href="#gade6020bcb9e4bb7d90d2c0126efb5bba">More...</a><br /></td></tr>
+<tr class="separator:gade6020bcb9e4bb7d90d2c0126efb5bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaadba3c2e6ae33b1eaad20b132a36380a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaadba3c2e6ae33b1eaad20b132a36380a">os_semaphore_binary_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
+<tr class="memdesc:gaadba3c2e6ae33b1eaad20b132a36380a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated binary semaphore object instance.  <a href="#gaadba3c2e6ae33b1eaad20b132a36380a">More...</a><br /></td></tr>
+<tr class="separator:gaadba3c2e6ae33b1eaad20b132a36380a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7a9d2b1e986706f55d96b18a11f8dbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gab7a9d2b1e986706f55d96b18a11f8dbd">os_semaphore_counting_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> max_value, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
+<tr class="memdesc:gab7a9d2b1e986706f55d96b18a11f8dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated counting semaphore object instance.  <a href="#gab7a9d2b1e986706f55d96b18a11f8dbd">More...</a><br /></td></tr>
+<tr class="separator:gab7a9d2b1e986706f55d96b18a11f8dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa36e7913da3faaf7fc418aeb6204f4d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>)</td></tr>
+<tr class="memdesc:gaa36e7913da3faaf7fc418aeb6204f4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the statically allocated semaphore object instance.  <a href="#gaa36e7913da3faaf7fc418aeb6204f4d3">More...</a><br /></td></tr>
+<tr class="separator:gaa36e7913da3faaf7fc418aeb6204f4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb9457c4a68e6d20ae4fdf7fd5bc82d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gacb9457c4a68e6d20ae4fdf7fd5bc82d6">os_semaphore_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gacb9457c4a68e6d20ae4fdf7fd5bc82d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated a semaphore object instance and construct it.  <a href="#gacb9457c4a68e6d20ae4fdf7fd5bc82d6">More...</a><br /></td></tr>
+<tr class="separator:gacb9457c4a68e6d20ae4fdf7fd5bc82d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b272eda67fb6d69971d26e4ac206e9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga3b272eda67fb6d69971d26e4ac206e9c">os_semaphore_binary_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
+<tr class="memdesc:ga3b272eda67fb6d69971d26e4ac206e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a binary semaphore object instance and construct it.  <a href="#ga3b272eda67fb6d69971d26e4ac206e9c">More...</a><br /></td></tr>
+<tr class="separator:ga3b272eda67fb6d69971d26e4ac206e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga933a33be37cc762d0e40510d1e674fb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga933a33be37cc762d0e40510d1e674fb8">os_semaphore_counting_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> max_value, const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a> initial_value)</td></tr>
+<tr class="memdesc:ga933a33be37cc762d0e40510d1e674fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a counting semaphore object instance and construct it.  <a href="#ga933a33be37cc762d0e40510d1e674fb8">More...</a><br /></td></tr>
+<tr class="separator:ga933a33be37cc762d0e40510d1e674fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc37dc0e6088fd7ddec5d16be353dae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gabc37dc0e6088fd7ddec5d16be353dae9">os_semaphore_delete</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>)</td></tr>
+<tr class="memdesc:gabc37dc0e6088fd7ddec5d16be353dae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the semaphore object instance.  <a href="#gabc37dc0e6088fd7ddec5d16be353dae9">More...</a><br /></td></tr>
+<tr class="separator:gabc37dc0e6088fd7ddec5d16be353dae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Semaphore Functions</h2></td></tr>
 <tr class="memitem:ga8e4d8a1042f11366c450e6579ef4e460"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga8e4d8a1042f11366c450e6579ef4e460">os_semaphore_get_name</a> (<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *<a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a>)</td></tr>
 <tr class="memdesc:ga8e4d8a1042f11366c450e6579ef4e460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the semaphore name.  <a href="#ga8e4d8a1042f11366c450e6579ef4e460">More...</a><br /></td></tr>
 <tr class="separator:ga8e4d8a1042f11366c450e6579ef4e460"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,9 +233,66 @@ Semaphore functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C API semaphore definitions. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-semaphore.html">RTOS C++ API</a></dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-semaphore.html">RTOS C++ API</a></dd></dl>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <span class="comment">// Binary semaphore, start at 0.</span></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d">os_semaphore_binary_create</a> (&amp;sp1, <span class="stringliteral">&quot;sp1&quot;</span>, 0);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os_semaphore_wait</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gafd5a26f4182a3cf7b432302924a6534a">os_semaphore_try_wait</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga15c2d2b2bc33979949712ef1860d4aae">os_semaphore_timed_wait</a> (&amp;sp1, 1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga93ba78ee5ed6fe74e6aa70f57d28e810">os_semaphore_get_value</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga4fae178b20142677bcdbcd2284190dd1">os_semaphore_get_initial_value</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gac87ebc19abe2aa3d7dcc0c5b399f9a3d">os_semaphore_reset</a> (&amp;sp1);</div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8e4d8a1042f11366c450e6579ef4e460">os_semaphore_get_name</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga156238f12fa5beb1cb0a29a934a5cc05">os_semaphore_destroy</a> (&amp;sp1);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom semaphore.</span></div><div class="line">      <a class="code" href="structos__semaphore__attr__s.html">os_semaphore_attr_t</a> asp2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gad6f50cc528f9191e8c1b19e79ba733bb">os_semaphore_attr_init</a> (&amp;asp2);</div><div class="line"></div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a9e8fa44e93d32703646f22450822278c">sm_initial_value</a> = 3;</div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a908d1dc68226404282ca687042a05017">sm_max_value</a> = 7;</div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a44319ab7ca0e186b9067c663377bc56f">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaaec377c19565fa719da413b98d26ca88">os_semaphore_create</a> (&amp;sp2, <span class="stringliteral">&quot;sp2&quot;</span>, &amp;asp2);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga156238f12fa5beb1cb0a29a934a5cc05">os_semaphore_destroy</a> (&amp;sp2);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Counting semaphore, 7 resources, start at 7.</span></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp3;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga0a0db094dee095022d584fd21e4aa0fd">os_semaphore_counting_create</a> (&amp;sp3, <span class="stringliteral">&quot;sp3&quot;</span>, 7, 7);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga156238f12fa5beb1cb0a29a934a5cc05">os_semaphore_destroy</a> (&amp;sp3);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom binary semaphore.</span></div><div class="line">      <a class="code" href="structos__semaphore__attr__s.html">os_semaphore_attr_t</a> asp4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5">os_semaphore_attr_binary_init</a> (&amp;asp4, 0);</div><div class="line">      asp4.<a class="code" href="structos__semaphore__attr__s.html#a44319ab7ca0e186b9067c663377bc56f">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaaec377c19565fa719da413b98d26ca88">os_semaphore_create</a> (&amp;sp4, <span class="stringliteral">&quot;sp4&quot;</span>, &amp;asp4);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga156238f12fa5beb1cb0a29a934a5cc05">os_semaphore_destroy</a> (&amp;sp4);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Types</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <span class="comment">// Binary semaphore, start at 0.</span></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaadba3c2e6ae33b1eaad20b132a36380a">os_semaphore_binary_construct</a> (&amp;sp1, <span class="stringliteral">&quot;sp1&quot;</span>, 0);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga9355a79cd8c08dfe1fcf7fd632c03776">os_semaphore_wait</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gafd5a26f4182a3cf7b432302924a6534a">os_semaphore_try_wait</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8fe78e9b9c3a2056c61b44b6a15f7875">os_semaphore_post</a> (&amp;sp1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga15c2d2b2bc33979949712ef1860d4aae">os_semaphore_timed_wait</a> (&amp;sp1, 1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga93ba78ee5ed6fe74e6aa70f57d28e810">os_semaphore_get_value</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga4fae178b20142677bcdbcd2284190dd1">os_semaphore_get_initial_value</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gac87ebc19abe2aa3d7dcc0c5b399f9a3d">os_semaphore_reset</a> (&amp;sp1);</div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga8e4d8a1042f11366c450e6579ef4e460">os_semaphore_get_name</a> (&amp;sp1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a> (&amp;sp1);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom semaphore.</span></div><div class="line">      <a class="code" href="structos__semaphore__attr__s.html">os_semaphore_attr_t</a> asp2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gad6f50cc528f9191e8c1b19e79ba733bb">os_semaphore_attr_init</a> (&amp;asp2);</div><div class="line"></div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a9e8fa44e93d32703646f22450822278c">sm_initial_value</a> = 3;</div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a908d1dc68226404282ca687042a05017">sm_max_value</a> = 7;</div><div class="line">      asp2.<a class="code" href="structos__semaphore__attr__s.html#a44319ab7ca0e186b9067c663377bc56f">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba">os_semaphore_construct</a> (&amp;sp2, <span class="stringliteral">&quot;sp2&quot;</span>, &amp;asp2);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a> (&amp;sp2);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Counting semaphore, 7 resources, start at 7.</span></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp3;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gab7a9d2b1e986706f55d96b18a11f8dbd">os_semaphore_counting_construct</a> (&amp;sp3, <span class="stringliteral">&quot;sp3&quot;</span>, 7, 7);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a> (&amp;sp3);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom binary semaphore.</span></div><div class="line">      <a class="code" href="structos__semaphore__attr__s.html">os_semaphore_attr_t</a> asp4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5">os_semaphore_attr_binary_init</a> (&amp;asp4, 0);</div><div class="line">      asp4.<a class="code" href="structos__semaphore__attr__s.html#a44319ab7ca0e186b9067c663377bc56f">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__semaphore__s.html">os_semaphore_t</a> sp4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba">os_semaphore_construct</a> (&amp;sp4, <span class="stringliteral">&quot;sp4&quot;</span>, &amp;asp4);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a> (&amp;sp4);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="gab264af2883d8dfe5a1d9ff9de6d14f79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_semaphore_binary_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaadba3c2e6ae33b1eaad20b132a36380a">os_semaphore_binary_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01908">1908</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8e219da167ac8b51008c2429cd0a8dbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_semaphore_counting_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gab7a9d2b1e986706f55d96b18a11f8dbd">os_semaphore_counting_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01909">1909</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga217c0539a3d2e826e9797f28741a8c37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_semaphore_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba">os_semaphore_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01907">1907</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga284daaa2b3e1a56caa4e8caebf195956"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_semaphore_destroy&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3">os_semaphore_destruct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01910">1910</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Types</h2>
 <a class="anchor" id="gae28f5d07072b7944b5d4ef86aaa4b045"></a>
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +322,7 @@ Semaphore functions</h2></td></tr>
 <p>Type of variables holding semaphore counts. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-semaphore.html#gad6dc71df534fae5ff113a4a010511df1" title="Type of semaphore counter storage. ">os::rtos::semaphore::count_t</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01049">1049</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l01081">1081</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -251,7 +337,7 @@ Semaphore functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Semaphore object storage. </p>
-<p>This C structure has the same size as the C++ <code><a class="el" href="classos_1_1rtos_1_1semaphore.html" title="POSIX compliant semaphore. ">os::rtos::semaphore</a></code> object and must be initialised with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaaec377c19565fa719da413b98d26ca88" title="Create a semaphore object instance. ">os_semaphore_create()</a></code>.</p>
+<p>This C structure has the same size as the C++ <code><a class="el" href="classos_1_1rtos_1_1semaphore.html" title="POSIX compliant semaphore. ">os::rtos::semaphore</a></code> object and must be initialised with <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga217c0539a3d2e826e9797f28741a8c37">os_semaphore_create()</a></code>.</p>
 <p>Later on a pointer to it can be used both in C and C++ to refer to the semaphore object instance.</p>
 <p>The members of this structure are hidden and should not be used directly, but only through specific functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html" title="POSIX compliant semaphore. ">os::rtos::semaphore</a> </dd></dl>
@@ -295,7 +381,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__binary.html">os::rtos::semaphore::attributes_binary</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01873">1873</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02115">2115</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +427,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html">os::rtos::semaphore::attributes_counting</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01890">1890</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02132">2132</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +450,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-semaphore.html#ga6a97b5ca045e295b4928b4741f0d949e">os::rtos::semaphore::initializer_binary</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01908">1908</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02150">2150</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -393,16 +479,16 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html">os::rtos::semaphore::attributes</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01857">1857</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02099">2099</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga73f9a5506f1ab63afef4425fe385d76d"></a>
+<a class="anchor" id="gaadba3c2e6ae33b1eaad20b132a36380a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_semaphore_binary_create </td>
+          <td class="memname">void os_semaphore_binary_construct </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
           <td class="paramname"><em>semaphore</em>, </td>
@@ -427,29 +513,122 @@ Semaphore functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a binary semaphore object instance. </p>
+<p>Construct a statically allocated binary semaphore object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">initial_value</td><td>Initial count value. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3" title="Destruct the statically allocated semaphore object instance. ">os_semaphore_destruct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore__binary.html">os::rtos::semaphore_binary</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01943">1943</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02189">2189</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga0a0db094dee095022d584fd21e4aa0fd"></a>
+<a class="anchor" id="ga3b272eda67fb6d69971d26e4ac206e9c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_semaphore_counting_create </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a>* os_semaphore_binary_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a>&#160;</td>
+          <td class="paramname"><em>initial_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a binary semaphore object instance and construct it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initial_value</td><td>Initial count value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new semaphore object instance.</dd></dl>
+<p>Dynamically allocate the binary semaphore object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new semaphore_binary(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gabc37dc0e6088fd7ddec5d16be353dae9" title="Destruct the semaphore object instance. ">os_semaphore_delete()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore__binary.html">os::rtos::semaphore_binary</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02275">2275</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gade6020bcb9e4bb7d90d2c0126efb5bba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_semaphore_construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
+          <td class="paramname"><em>semaphore</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a statically allocated semaphore object instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3" title="Destruct the statically allocated semaphore object instance. ">os_semaphore_destruct()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02166">2166</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab7a9d2b1e986706f55d96b18a11f8dbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_semaphore_counting_construct </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
           <td class="paramname"><em>semaphore</em>, </td>
@@ -480,45 +659,46 @@ Semaphore functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a counting semaphore object instance. </p>
+<p>Construct a statically allocated counting semaphore object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_value</td><td>Maximum count value. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">initial_value</td><td>Initial count value. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaa36e7913da3faaf7fc418aeb6204f4d3" title="Destruct the statically allocated semaphore object instance. ">os_semaphore_destruct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore__counting.html">os::rtos::semaphore_counting</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01960">1960</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02208">2208</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="gaaec377c19565fa719da413b98d26ca88"></a>
+<a class="anchor" id="ga933a33be37cc762d0e40510d1e674fb8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_semaphore_create </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a>* os_semaphore_counting_new </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
-          <td class="paramname"><em>semaphore</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *&#160;</td>
-          <td class="paramname"><em>attr</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a>&#160;</td>
+          <td class="paramname"><em>max_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae4141b84b2ee40838c36b6c606cf7e5e">os_semaphore_count_t</a>&#160;</td>
+          <td class="paramname"><em>initial_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -528,29 +708,33 @@ Semaphore functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a semaphore object instance. </p>
+<p>Allocate a counting semaphore object instance and construct it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_value</td><td>Maximum count value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initial_value</td><td>Initial count value. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new semaphore object instance.</dd></dl>
+<p>Dynamically allocate the counting semaphore object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new semaphore_counting(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gabc37dc0e6088fd7ddec5d16be353dae9" title="Destruct the semaphore object instance. ">os_semaphore_delete()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
-<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a> </dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore__counting.html">os::rtos::semaphore_counting</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01922">1922</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02297">2297</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga156238f12fa5beb1cb0a29a934a5cc05"></a>
+<a class="anchor" id="gabc37dc0e6088fd7ddec5d16be353dae9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_semaphore_destroy </td>
+          <td class="memname">void os_semaphore_delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
           <td class="paramname"><em>semaphore</em></td><td>)</td>
@@ -559,7 +743,7 @@ Semaphore functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the semaphore object instance. </p>
+<p>Destruct the semaphore object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance. </td></tr>
@@ -567,10 +751,44 @@ Semaphore functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>Destruct the semaphore and deallocate the dynamically allocated space using the RTOS system allocator.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>delete ptr_semaphore</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gacb9457c4a68e6d20ae4fdf7fd5bc82d6" title="Allocated a semaphore object instance and construct it. ">os_semaphore_new()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga3b272eda67fb6d69971d26e4ac206e9c" title="Allocate a binary semaphore object instance and construct it. ">os_semaphore_binary_new()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga933a33be37cc762d0e40510d1e674fb8" title="Allocate a counting semaphore object instance and construct it. ">os_semaphore_counting_new()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01978">1978</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02321">2321</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa36e7913da3faaf7fc418aeb6204f4d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_semaphore_destruct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a> *&#160;</td>
+          <td class="paramname"><em>semaphore</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruct the statically allocated semaphore object instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">semaphore</td><td>Pointer to semaphore object instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gade6020bcb9e4bb7d90d2c0126efb5bba" title="Construct a statically allocated semaphore object instance. ">os_semaphore_construct()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gaadba3c2e6ae33b1eaad20b132a36380a" title="Construct a statically allocated binary semaphore object instance. ">os_semaphore_binary_construct()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gab7a9d2b1e986706f55d96b18a11f8dbd" title="Construct a statically allocated counting semaphore object instance. ">os_semaphore_counting_construct()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02229">2229</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +817,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a332c9dcea56cfaf9321c778059d00b5f">os::rtos::semaphore::initial_value()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02099">2099</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02442">2442</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +846,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a12882c8f1b9dac665087b6f88428a1b8">os::rtos::semaphore::max_value()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02114">2114</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02457">2457</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +875,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">os::rtos::semaphore::name()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01993">1993</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02336">2336</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +904,51 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#ab1b0aec87113d2856a3641ae246320f8">os::rtos::semaphore::value()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02069">2069</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02412">2412</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gacb9457c4a68e6d20ae4fdf7fd5bc82d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga6f43e7bfa993ee025cc7238390c91691">os_semaphore_t</a>* os_semaphore_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gae28f5d07072b7944b5d4ef86aaa4b045">os_semaphore_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocated a semaphore object instance and construct it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new semaphore object instance.</dd></dl>
+<p>Dynamically allocate the semaphore object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new semaphore(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#gabc37dc0e6088fd7ddec5d16be353dae9" title="Destruct the semaphore object instance. ">os_semaphore_delete()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02250">2250</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -722,7 +984,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a466afc9e741ec96dbd1780820789758f">os::rtos::semaphore::post()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02008">2008</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02351">2351</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +1019,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a3bf4a8cefda24b57821c9cd322b33b19">os::rtos::semaphore::reset()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02084">2084</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02427">2427</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +1070,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a19c3e1a3b941763aa51005c767a48067">os::rtos::semaphore::timed_wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02053">2053</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02396">2396</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -847,7 +1109,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a4c32154fdf817eed5f8ad58bbeacba56">os::rtos::semaphore::try_wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02038">2038</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02381">2381</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +1147,7 @@ Semaphore functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1semaphore.html#a25bf8989fbd11f6b4add24837a22cd29">os::rtos::semaphore::wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02023">2023</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02366">2366</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

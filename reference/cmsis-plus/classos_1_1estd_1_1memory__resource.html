@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('classos_1_1estd_1_1memory__resource.ht
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/iso/memory_resource</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1new__delete__memory__resource.html">anonymous_namespace{memory-resource.cpp}::new_delete_memory_resource</a>, <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>, and <a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html">os::estd::memory::newlib_nano</a>.</p>
+<p>Inherited by <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1new__delete__memory__resource.html">anonymous_namespace{memory-resource.cpp}::new_delete_memory_resource</a>, <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>, <a class="el" href="classos_1_1rtos_1_1memory_1_1malloc__memory__resource.html">os::rtos::memory::malloc_memory_resource</a>, and <a class="el" href="classos_1_1rtos_1_1memory_1_1newlib__nano__malloc.html">os::rtos::memory::newlib_nano_malloc</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,9 +149,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a167f2551af2112f15bd442df0126c3fa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a167f2551af2112f15bd442df0126c3fa">allocate</a> (std::size_t bytes, std::size_t alignment=<a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a>)</td></tr>
 <tr class="memdesc:a167f2551af2112f15bd442df0126c3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory.  <a href="#a167f2551af2112f15bd442df0126c3fa">More...</a><br /></td></tr>
 <tr class="separator:a167f2551af2112f15bd442df0126c3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3acbc2a202116d6b167364b15b1f433"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#ae3acbc2a202116d6b167364b15b1f433">allocate</a> (const std::nothrow_t &amp;<a class="el" href="classos_1_1estd_1_1memory__resource.html#a47e4080efc087934ffe12420754b155d">no_throw</a>, std::size_t bytes, std::size_t alignment=<a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a>) noexcept</td></tr>
+<tr class="memdesc:ae3acbc2a202116d6b167364b15b1f433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory, no throw.  <a href="#ae3acbc2a202116d6b167364b15b1f433">More...</a><br /></td></tr>
+<tr class="separator:ae3acbc2a202116d6b167364b15b1f433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4816d3da4918d223a1769f39183ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a6b4816d3da4918d223a1769f39183ecc">deallocate</a> (void *addr, std::size_t bytes, std::size_t alignment=<a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a>)</td></tr>
 <tr class="memdesc:a6b4816d3da4918d223a1769f39183ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate memory.  <a href="#a6b4816d3da4918d223a1769f39183ecc">More...</a><br /></td></tr>
 <tr class="separator:a6b4816d3da4918d223a1769f39183ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759e5aaf7ee5384f0e398b647c22b75f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a759e5aaf7ee5384f0e398b647c22b75f">deallocate</a> (const std::nothrow_t &amp;<a class="el" href="classos_1_1estd_1_1memory__resource.html#a47e4080efc087934ffe12420754b155d">no_throw</a>, void *addr, std::size_t bytes, std::size_t alignment=<a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a>) noexcept</td></tr>
+<tr class="memdesc:a759e5aaf7ee5384f0e398b647c22b75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate memory, no throw.  <a href="#a759e5aaf7ee5384f0e398b647c22b75f">More...</a><br /></td></tr>
+<tr class="separator:a759e5aaf7ee5384f0e398b647c22b75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a442442302c333e53a1a10f6d08b918da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a442442302c333e53a1a10f6d08b918da">is_equal</a> (<a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> const &amp;other) const  noexcept</td></tr>
 <tr class="memdesc:a442442302c333e53a1a10f6d08b918da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare for equality with another <a class="el" href="classos_1_1estd_1_1memory__resource.html" title="Memory resource manager. ">memory_resource</a>.  <a href="#a442442302c333e53a1a10f6d08b918da">More...</a><br /></td></tr>
 <tr class="separator:a442442302c333e53a1a10f6d08b918da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,24 +166,27 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ac68cd901b0efb6d256d9444846b3e76b"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a> = alignof(std::max_align_t)</td></tr>
 <tr class="separator:ac68cd901b0efb6d256d9444846b3e76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e4080efc087934ffe12420754b155d"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a47e4080efc087934ffe12420754b155d">no_throw</a> = (1 &lt;&lt; 30)</td></tr>
+<tr class="separator:a47e4080efc087934ffe12420754b155d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Private Member Functions</h2></td></tr>
 <tr class="memitem:abd79feac98f7896402e73813aca34d6b"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#abd79feac98f7896402e73813aca34d6b">do_allocate</a> (std::size_t bytes, std::size_t alignment)=0</td></tr>
 <tr class="memdesc:abd79feac98f7896402e73813aca34d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory implementation.  <a href="#abd79feac98f7896402e73813aca34d6b">More...</a><br /></td></tr>
 <tr class="separator:abd79feac98f7896402e73813aca34d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecbe755480a3ec1ff021e03f8d8e9c56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#aecbe755480a3ec1ff021e03f8d8e9c56">do_deallocate</a> (void *p, std::size_t bytes, std::size_t alignment)=0</td></tr>
 <tr class="memdesc:aecbe755480a3ec1ff021e03f8d8e9c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate memory implementation.  <a href="#aecbe755480a3ec1ff021e03f8d8e9c56">More...</a><br /></td></tr>
 <tr class="separator:aecbe755480a3ec1ff021e03f8d8e9c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba2b510a123c33c450c2b60476307d3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a1ba2b510a123c33c450c2b60476307d3">do_is_equal</a> (<a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> const &amp;other) const  noexcept=0</td></tr>
-<tr class="memdesc:a1ba2b510a123c33c450c2b60476307d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare for equality implementation.  <a href="#a1ba2b510a123c33c450c2b60476307d3">More...</a><br /></td></tr>
-<tr class="separator:a1ba2b510a123c33c450c2b60476307d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5828fafc2e3e0215eb5bedbf735f5788"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a5828fafc2e3e0215eb5bedbf735f5788">do_is_equal</a> (<a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> const &amp;other) const  noexcept</td></tr>
+<tr class="memdesc:a5828fafc2e3e0215eb5bedbf735f5788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare for equality implementation.  <a href="#a5828fafc2e3e0215eb5bedbf735f5788">More...</a><br /></td></tr>
+<tr class="separator:a5828fafc2e3e0215eb5bedbf735f5788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9461b3095beaf3ea8e17592a7445c6f3"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1memory__resource.html#a9461b3095beaf3ea8e17592a7445c6f3">do_align</a> (std::size_t size, std::size_t align)</td></tr>
+<tr class="separator:a9461b3095beaf3ea8e17592a7445c6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory resource manager. </p>
 
-<p>Definition at line <a class="el" href="memory__resource_source.html#l00185">185</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00115">115</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae211bef148c2877fc3d27b765ecc9b5a"></a>
 <div class="memitem">
@@ -202,7 +211,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Destruct the memory resource object instance. </p>
 
-<p>Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00137">137</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
+<p>Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00178">178</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
 
 </div>
 </div>
@@ -251,7 +260,63 @@ Protected Member Functions</h2></td></tr>
 <dl class="section user"><dt>Exceptions</dt><dd>Throws an exception if storage of the requested size and alignment cannot be obtained.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#abd79feac98f7896402e73813aca34d6b" title="Allocate memory implementation. ">do_allocate()</a>; </dd></dl>
 
-<p>Definition at line <a class="el" href="memory__resource_source.html#l00412">412</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00319">319</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3acbc2a202116d6b167364b15b1f433"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * os::estd::memory_resource::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
+          <td class="paramname"><em>no_throw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>alignment</em> = <code><a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate memory, no throw. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no_throw</td><td></td></tr>
+    <tr><td class="paramname">bytes</td><td></td></tr>
+    <tr><td class="paramname">alignment</td><td>Allocates storage with a size of at least bytes bytes. The returned storage is aligned to the specified alignment if such alignment is supported, and to <code>alignof(std::max_align_t)</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Equivalent to <code>return do_allocate(bytes, alignment);</code>.</p>
+<dl class="section user"><dt>Exceptions</dt><dd>Throws nothing.</dd></dl>
+<dl class="section user"><dt>Standard compliance</dt><dd>Extension to standard.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#abd79feac98f7896402e73813aca34d6b" title="Allocate memory implementation. ">do_allocate()</a>; </dd></dl>
+
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00341">341</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
 
 </div>
 </div>
@@ -303,10 +368,110 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Equivalent to <code>return do_deallocate(p, bytes, alignment);</code>.</p>
-<dl class="section user"><dt>Exceptions</dt><dd>Throws nothing.</dd></dl>
+<dl class="section user"><dt>Exceptions</dt><dd>May throw an exception for error cases (To be defined).</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#aecbe755480a3ec1ff021e03f8d8e9c56" title="Deallocate memory implementation. ">do_deallocate()</a>; </dd></dl>
 
-<p>Definition at line <a class="el" href="memory__resource_source.html#l00432">432</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00362">362</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a759e5aaf7ee5384f0e398b647c22b75f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os::estd::memory_resource::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
+          <td class="paramname"><em>no_throw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>alignment</em> = <code><a class="el" href="classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b">max_align</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deallocate memory, no throw. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no_throw</td><td></td></tr>
+    <tr><td class="paramname">p</td><td></td></tr>
+    <tr><td class="paramname">bytes</td><td></td></tr>
+    <tr><td class="paramname">alignment</td><td>Deallocates the storage pointed to by p. p shall have been returned by a prior call to <code>allocate(bytes, alignment)</code> on a <a class="el" href="classos_1_1estd_1_1memory__resource.html" title="Memory resource manager. ">memory_resource</a> that compares equal to *this, and the storage it points to shall not yet have been deallocated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Equivalent to <code>return do_deallocate(p, bytes, alignment);</code>.</p>
+<dl class="section user"><dt>Exceptions</dt><dd>Throws nothing.</dd></dl>
+<dl class="section user"><dt>Standard compliance</dt><dd>Extension to standard.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#aecbe755480a3ec1ff021e03f8d8e9c56" title="Deallocate memory implementation. ">do_deallocate()</a>; </dd></dl>
+
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00386">386</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9461b3095beaf3ea8e17592a7445c6f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t os::estd::memory_resource::do_align </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>align</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section user"><dt>Standard compliance</dt><dd>Extension to standard. </dd></dl>
+
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00416">416</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
 
 </div>
 </div>
@@ -351,7 +516,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html#a00e266f6feb9fcb8455022f4ae206e0c">os::estd::memory::newlib_nano</a>, and <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html#a718ab9b6eccd4950197289275570edd8">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>.</p>
+<p>Implemented in <a class="el" href="classos_1_1rtos_1_1memory_1_1newlib__nano__malloc.html#a9480d73fab6a4ddbfa440af6a6ac3edf">os::rtos::memory::newlib_nano_malloc</a>, <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html#a2c57a5fb4794d30f13707351d586c4ee">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>, and <a class="el" href="classos_1_1rtos_1_1memory_1_1malloc__memory__resource.html#ac19fd0a3e3b04863480fd4136f3de9a2">os::rtos::memory::malloc_memory_resource</a>.</p>
 
 </div>
 </div>
@@ -403,11 +568,11 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html#ae0d9ae3432474ab6f62f4072f91a81c1">os::estd::memory::newlib_nano</a>, and <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html#a78d52e5a469b8f2e3a27b21ab4eee81e">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>.</p>
+<p>Implemented in <a class="el" href="classos_1_1rtos_1_1memory_1_1newlib__nano__malloc.html#a458c2c1a08d66eecc9454c17f9c39484">os::rtos::memory::newlib_nano_malloc</a>, <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html#a1ca6a9219c905dcec7cc71e08bd2157c">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>, and <a class="el" href="classos_1_1rtos_1_1memory_1_1malloc__memory__resource.html#ac7b9dc55c1aae9d3d370884001ee3ee3">os::rtos::memory::malloc_memory_resource</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1ba2b510a123c33c450c2b60476307d3"></a>
+<a class="anchor" id="a5828fafc2e3e0215eb5bedbf735f5788"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -415,7 +580,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool os::estd::memory_resource::do_is_equal </td>
+          <td class="memname">bool os::estd::memory_resource::do_is_equal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classos_1_1estd_1_1memory__resource.html">memory_resource</a> const &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -424,7 +589,7 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -444,7 +609,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html#a64d51fb271de8483ef6a94538256ef22">os::estd::memory::newlib_nano</a>, <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1null__memory__resource.html#afebea15377b92a2e168628deab577e70">anonymous_namespace{memory-resource.cpp}::null_memory_resource</a>, and <a class="el" href="classanonymous__namespace_02memory-resource_8cpp_03_1_1new__delete__memory__resource.html#a6789d4757a7a18714c0f25c8d256e8bb">anonymous_namespace{memory-resource.cpp}::new_delete_memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00184">184</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
 
 </div>
 </div>
@@ -486,9 +651,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <p>Compares <code>*this</code> for equality with other. Two <code>memory_resources</code> compare equal if and only if memory allocated from one <code><a class="el" href="classos_1_1estd_1_1memory__resource.html" title="Memory resource manager. ">memory_resource</a></code> can be deallocated from the other and vice versa.</p>
 <dl class="section user"><dt>Exceptions</dt><dd>Throws nothing.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#a1ba2b510a123c33c450c2b60476307d3" title="Compare for equality implementation. ">do_is_equal()</a>; </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1estd_1_1memory__resource.html#a5828fafc2e3e0215eb5bedbf735f5788" title="Compare for equality implementation. ">do_is_equal()</a>; </dd></dl>
 
-<p>Definition at line <a class="el" href="memory__resource_source.html#l00450">450</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00404">404</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
 
 </div>
 </div>
@@ -511,7 +676,29 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="memory__resource_source.html#l00190">190</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00120">120</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47e4080efc087934ffe12420754b155d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t os::estd::memory_resource::no_throw = (1 &lt;&lt; 30)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="memory__resource_source.html#l00121">121</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
 
 </div>
 </div>

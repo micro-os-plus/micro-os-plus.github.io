@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/iso/mutex File Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/estd/mutex File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -132,11 +132,9 @@ $(document).ready(function(){initNavTree('mutex.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="thread_source.html">cmsis-plus/iso/thread</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="system__error_source.html">cmsis-plus/iso/system_error</a>&gt;</code><br />
-<code>#include &lt;cerrno&gt;</code><br />
-<code>#include &lt;<a class="el" href="chrono_source.html">cmsis-plus/iso/chrono</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="thread_source.html">cmsis-plus/estd/thread</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="system__error_source.html">cmsis-plus/estd/system_error</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="chrono_source.html">cmsis-plus/estd/chrono</a>&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
 </div>
 <p><a href="mutex_source.html">Go to the source code of this file.</a></p>
@@ -147,7 +145,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1estd_1_1defer__lock__t.html">os::estd::defer_lock_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1lock__guard.html">os::estd::lock_guard&lt; Mutex_T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1lock__guard.html">os::estd::lock_guard&lt; L &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1mutex.html">os::estd::mutex</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +159,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1estd_1_1try__to__lock__t.html">os::estd::try_to_lock_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1unique__lock.html">os::estd::unique_lock&lt; Mutex_T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1unique__lock.html">os::estd::unique_lock&lt; L &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -201,9 +199,9 @@ Functions</h2></td></tr>
 <tr class="separator:ab0fd06745caaaa2ad1adcb64821326ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac343546aca6c8e136a0ac0a1fed06d3c"><td class="memItemLeft" align="right" valign="top">constexpr adopt_lock_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#ac343546aca6c8e136a0ac0a1fed06d3c">os::estd::adopt_lock</a> { }</td></tr>
 <tr class="separator:ac343546aca6c8e136a0ac0a1fed06d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad61a3ffb827008e91837fb048bc74873"><td class="memTemplParams" colspan="2">template&lt;typename Mutex_T &gt; </td></tr>
-<tr class="memitem:ad61a3ffb827008e91837fb048bc74873"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#ad61a3ffb827008e91837fb048bc74873">os::estd::swap</a> (unique_lock&lt; Mutex_T &gt; &amp;x, unique_lock&lt; Mutex_T &gt; &amp;y) noexcept</td></tr>
-<tr class="separator:ad61a3ffb827008e91837fb048bc74873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5b01ae0bf710c883c9aa00ca83069e"><td class="memTemplParams" colspan="2">template&lt;typename L &gt; </td></tr>
+<tr class="memitem:adc5b01ae0bf710c883c9aa00ca83069e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#adc5b01ae0bf710c883c9aa00ca83069e">os::estd::swap</a> (unique_lock&lt; L &gt; &amp;x, unique_lock&lt; L &gt; &amp;y) noexcept</td></tr>
+<tr class="separator:adc5b01ae0bf710c883c9aa00ca83069e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26498cc884ea17ea17965af274e1258a"><td class="memTemplParams" colspan="2">template&lt;typename L1 , typename L2 , typename... L3&gt; </td></tr>
 <tr class="memitem:a26498cc884ea17ea17965af274e1258a"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a26498cc884ea17ea17965af274e1258a">os::estd::try_lock</a> (L1 &amp;, L2 &amp;, L3 &amp;...)</td></tr>
 <tr class="separator:a26498cc884ea17ea17965af274e1258a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,7 +232,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_cae430f933a417897a2c3fb661b022de.html">iso</a></li><li class="navelem"><a class="el" href="mutex.html">mutex</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_873369f21ff1666f0e3e53746773a1c1.html">estd</a></li><li class="navelem"><a class="el" href="mutex.html">mutex</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

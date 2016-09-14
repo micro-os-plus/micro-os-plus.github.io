@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['d_5fino',['d_ino',['../structdirent.html#aaea0878aa0629630d94e180f5dbc22c5',1,'dirent']]],
+  ['d_5fname',['d_name',['../structdirent.html#a11c685ee04698cf17e2be73669a78173',1,'dirent']]],
   ['data',['data',['../structos__thread__def.html#ab815c251ea222bd21f0e8f254aba002f',1,'os_thread_def::data()'],['../structos__timer__def.html#a7b8c7784746c4d840b6e65d2c8053a0d',1,'os_timer_def::data()'],['../structos__mutex__def.html#a646f3e23ac00f5344e09f15a868815e2',1,'os_mutex_def::data()'],['../structos__semaphore__def.html#a7d9f74c97f719bcaedf063a12d16eb59',1,'os_semaphore_def::data()'],['../structos__pool__def.html#a033e35ae38101d4ac73eb2e322d3ca1e',1,'os_pool_def::data()'],['../structos__message_q__def.html#a7c9151a180076c44520c3fd279606df3',1,'os_messageQ_def::data()'],['../structos__mail_q__def.html#a0fe19100874db60cb846f2542780fe7e',1,'os_mailQ_def::data()']]],
   ['data_5fbits_5f5',['DATA_BITS_5',['../namespaceos_1_1driver_1_1serial.html#a77ade4817caad1aec9a56463ecea79f4',1,'os::driver::serial']]],
   ['data_5fbits_5f6',['DATA_BITS_6',['../namespaceos_1_1driver_1_1serial.html#a2a24019ca27fe4e60d349ac064489838',1,'os::driver::serial']]],
@@ -11,11 +13,12 @@ var searchData=
   ['dcd',['dcd',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a799df20fc67c14ae9356734008c8c74f',1,'os::driver::serial::Modem_status::dcd()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#af688bc917b275cab9775760af342a404',1,'os::driver::serial::Capabilities::dcd()']]],
   ['def',['def',['../structos_event.html#a90f9650ceb8eb3a9481270a99caaa47f',1,'osEvent']]],
   ['default_5fpriority',['default_priority',['../group__cmsis-plus-rtos-mqueue.html#ga40cf8256124467cd9c58410969808979',1,'os::rtos::message_queue']]],
-  ['default_5fresource',['default_resource',['../namespaceanonymous__namespace_02memory-resource_8cpp_03.html#a40405302f31f0052e9e7ff783cfbaf3b',1,'anonymous_namespace{memory-resource.cpp}::default_resource()'],['../namespaceanonymous__namespace_02os-memory_8cpp_03.html#af79d339755e9df6e0c026701bbb68590',1,'anonymous_namespace{os-memory.cpp}::default_resource()']]],
+  ['default_5fresource',['default_resource',['../namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc',1,'os::estd::pmr']]],
   ['default_5ftx_5fvalue',['DEFAULT_TX_VALUE',['../namespaceos_1_1driver_1_1serial.html#a27f30f5c598402a4b03848ae4be7a649',1,'os::driver::serial']]],
   ['defer_5flock',['defer_lock',['../namespaceos_1_1estd.html#a5cd14457b0c5e499b1ac4be877c33f86',1,'os::estd']]],
   ['driver_5f',['driver_',['../classos_1_1driver_1_1_usart__wrapper.html#ab251f7ed7a872c144fccc3211ba3993c',1,'os::driver::Usart_wrapper::driver_()'],['../classos_1_1driver_1_1_usbd__wrapper.html#ae79bf933f6f6417f0c9ca49d744361a2',1,'os::driver::Usbd_wrapper::driver_()'],['../classos_1_1driver_1_1_usbh__wrapper.html#add619a55fb2359509c8f4d43763a5118',1,'os::driver::Usbh_wrapper::driver_()']]],
   ['drv_5f',['drv_',['../classos_1_1driver_1_1_version.html#a5f4f4bb94cbba08b22c74e8a1227e142',1,'os::driver::Version']]],
   ['dsr',['dsr',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a715a25caa04951c817a50da357e19471',1,'os::driver::serial::Modem_status::dsr()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#a45b18cab553c67e12d221174b32c2ce8',1,'os::driver::serial::Capabilities::dsr()']]],
-  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]]
+  ['dtr',['dtr',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a274919192aaa7cc8ef1c8be489d9aeda',1,'os::driver::serial::Capabilities']]],
+  ['dummy',['dummy',['../structos__memory__s.html#a718bc3fe85cd070d19b52c98c38a6a52',1,'os_memory_s']]]
 ];

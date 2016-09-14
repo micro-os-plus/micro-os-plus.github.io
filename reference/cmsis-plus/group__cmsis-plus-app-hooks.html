@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: CMSIS++ App Hooks</title>
+<title>µOS++ IIIe / CMSIS++ Reference: CMSIS++ App Overrides &amp; Hooks</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -116,27 +116,164 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">CMSIS++ App Hooks</div>  </div>
+<div class="title">CMSIS++ App Overrides &amp; Hooks</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CMSIS++ application hooks.  
+<p>CMSIS++ application customisable functions and hooks.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Startup Routines</h2></td></tr>
+<tr class="memitem:ga8b67a6ff3f33fae9b3f1b142005c0bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a> (void)</td></tr>
+<tr class="memdesc:ga8b67a6ff3f33fae9b3f1b142005c0bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The standard C application entry point.  <a href="#ga8b67a6ff3f33fae9b3f1b142005c0bc2">More...</a><br /></td></tr>
+<tr class="separator:ga8b67a6ff3f33fae9b3f1b142005c0bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d70c5328916fbd871e99173c6c2375d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a> (void)</td></tr>
+<tr class="memdesc:ga5d70c5328916fbd871e99173c6c2375d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise hardware early.  <a href="#ga5d70c5328916fbd871e99173c6c2375d">More...</a><br /></td></tr>
+<tr class="separator:ga5d70c5328916fbd871e99173c6c2375d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9703b4858dc67c7bae54570ffa4ea4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a> (void)</td></tr>
+<tr class="memdesc:gab9703b4858dc67c7bae54570ffa4ea4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise hardware.  <a href="#gab9703b4858dc67c7bae54570ffa4ea4f">More...</a><br /></td></tr>
+<tr class="separator:gab9703b4858dc67c7bae54570ffa4ea4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga348982bfc48b68b86a9771dbda12c505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a> (void *heap_address, size_t heap_size_bytes)</td></tr>
+<tr class="memdesc:ga348982bfc48b68b86a9771dbda12c505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise free store.  <a href="#ga348982bfc48b68b86a9771dbda12c505">More...</a><br /></td></tr>
+<tr class="separator:ga348982bfc48b68b86a9771dbda12c505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93965d610e08f0905fc7c8dff44bed61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a> (int *p_argc, char ***p_argv)</td></tr>
+<tr class="memdesc:ga93965d610e08f0905fc7c8dff44bed61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise arguments.  <a href="#ga93965d610e08f0905fc7c8dff44bed61">More...</a><br /></td></tr>
+<tr class="separator:ga93965d610e08f0905fc7c8dff44bed61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01b26889454af3742929c1996401bb40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">os_startup_create_thread_idle</a> (void)</td></tr>
+<tr class="memdesc:ga01b26889454af3742929c1996401bb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the idle thread.  <a href="#ga01b26889454af3742929c1996401bb40">More...</a><br /></td></tr>
+<tr class="separator:ga01b26889454af3742929c1996401bb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Termination Routines</h2></td></tr>
+<tr class="memitem:ga6771db6e5df087433ff0e4cb407de772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772">os_terminate_goodbye</a> (void)</td></tr>
+<tr class="memdesc:ga6771db6e5df087433ff0e4cb407de772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display statistics and say goodbye before terminating.  <a href="#ga6771db6e5df087433ff0e4cb407de772">More...</a><br /></td></tr>
+<tr class="separator:ga6771db6e5df087433ff0e4cb407de772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65cb603487e23470319b222097c9e95e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">os_terminate</a> (int code)</td></tr>
+<tr class="memdesc:ga65cb603487e23470319b222097c9e95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the application. There is no more life after this.  <a href="#ga65cb603487e23470319b222097c9e95e">More...</a><br /></td></tr>
+<tr class="separator:ga65cb603487e23470319b222097c9e95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Hooks</h2></td></tr>
 <tr class="memitem:gaaac13d67ff6331d34415f14b5029eeb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7">os_rtos_idle_enter_power_saving_mode_hook</a> (void)</td></tr>
 <tr class="memdesc:gaaac13d67ff6331d34415f14b5029eeb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook to enter a power saving mode.  <a href="#gaaac13d67ff6331d34415f14b5029eeb7">More...</a><br /></td></tr>
 <tr class="separator:gaaac13d67ff6331d34415f14b5029eeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6aa820f05a12d8ca33e2940f335f8959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga6aa820f05a12d8ca33e2940f335f8959">os_rtos_application_out_of_memory_hook</a> (void)</td></tr>
+<tr class="memdesc:ga6aa820f05a12d8ca33e2940f335f8959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook to handle out of memory in the application free store.  <a href="#ga6aa820f05a12d8ca33e2940f335f8959">More...</a><br /></td></tr>
+<tr class="separator:ga6aa820f05a12d8ca33e2940f335f8959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1529966372cdc4b3c19aaee9e419e5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#gae1529966372cdc4b3c19aaee9e419e5f">os_rtos_system_out_of_memory_hook</a> (void)</td></tr>
+<tr class="memdesc:gae1529966372cdc4b3c19aaee9e419e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook to handle out of memory in the RTOS dynamic memory.  <a href="#gae1529966372cdc4b3c19aaee9e419e5f">More...</a><br /></td></tr>
+<tr class="separator:gae1529966372cdc4b3c19aaee9e419e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Compatibility Macros</h2></td></tr>
+<tr class="memitem:ga6d103a632522f9d7548905eede2c6eb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">os_initialize_hardware_early</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a></td></tr>
+<tr class="separator:ga6d103a632522f9d7548905eede2c6eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c2dc77cf2ea26763c5318b1e1c70151"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">os_initialize_hardware</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a></td></tr>
+<tr class="separator:ga4c2dc77cf2ea26763c5318b1e1c70151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1551d37cf9ec69bab33cbf502c8d925"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">os_initialize_args</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a></td></tr>
+<tr class="separator:gad1551d37cf9ec69bab33cbf502c8d925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>CMSIS++ application hooks. </p>
-<p>Applications using CMSIS++ can customise the behaviour of the system or intercept several events by redefining several hooks.</p>
-<p>All hooks have weak default definitions, effective if the application does not redefine the functions. </p>
+<p>CMSIS++ application customisable functions and hooks. </p>
+<p>Applications using CMSIS++ can customise the behaviour of the system or intercept several events by redefining these functions.</p>
+<p>All of them have weak default definitions, providing a reasonable functionality. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="gad1551d37cf9ec69bab33cbf502c8d925"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_initialize_args&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-hooks_8h_source.html#l00189">189</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4c2dc77cf2ea26763c5318b1e1c70151"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_initialize_hardware&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-hooks_8h_source.html#l00188">188</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6d103a632522f9d7548905eede2c6eb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_initialize_hardware_early&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-hooks_8h_source.html#l00187">187</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga8b67a6ff3f33fae9b3f1b142005c0bc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The standard C application entry point. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Does not return.</dd></dl>
+<p>This is the place where the Cortex-M core will go immediately after reset (the <code>Reset_Handler</code> calls this function).</p>
+<p>To reach this location, the reset stack must point to a valid internal RAM area.</p>
+<p>Debugging new startup configurations usually begins with placing a breakpoint at <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2" title="The standard C application entry point. ">_start()</a></code>, and stepping through the routine. </p>
+
+<p>Definition at line <a class="el" href="startup_8c_source.html#l00251">251</a> of file <a class="el" href="startup_8c_source.html">startup.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6aa820f05a12d8ca33e2940f335f8959"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_rtos_application_out_of_memory_hook </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hook to handle out of memory in the application free store. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>This function is called when the application memory manager detects an out of memory condition.</p>
+<p>This function is usually used to gracefully reset the device.</p>
+<p>However, for special memory managers, which do not coalesce automatically, it might be possible to first try to coalesce. If this succeeds, this call can return, and the allocation will be resumed.</p>
+<dl class="section note"><dt>Note</dt><dd>Since most allocations are done in critical sections, this function is very likely to be called with the scheduler locked. </dd></dl>
+
+<p>Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00293">293</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gaaac13d67ff6331d34415f14b5029eeb7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +289,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Hook to enter a power saving mode. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The hook entered a power saving mode. </td></tr>
@@ -165,7 +302,228 @@ Functions</h2></td></tr>
 <p>This function is executed by the idle thread on each iteration, and must limit complexity to reasonably levels.</p>
 <p>If the user function decides not to enter a power saving mode, it must return <code>false</code>, which will make the idle thread proceed as usual, by entering a shallow sleep waiting for the next interrupt. </p>
 
-<p>Definition at line <a class="el" href="os-idle_8cpp_source.html#l00124">124</a> of file <a class="el" href="os-idle_8cpp_source.html">os-idle.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-idle_8cpp_source.html#l00163">163</a> of file <a class="el" href="os-idle_8cpp_source.html">os-idle.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gae1529966372cdc4b3c19aaee9e419e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_rtos_system_out_of_memory_hook </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hook to handle out of memory in the RTOS dynamic memory. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>This function is called when the RTOS system memory manager detects an out of memory condition.</p>
+<p>This function is usually used to gracefully reset the device.</p>
+<p>However, for special memory managers, which do not coalesce automatically, it might be possible to first try to coalesce. If this succeeds, this call can return, and the allocation will be resumed.</p>
+<dl class="section note"><dt>Note</dt><dd>Since most allocations are done in critical sections, this function is very likely to be called with the scheduler locked. </dd></dl>
+
+<p>Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00316">316</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga01b26889454af3742929c1996401bb40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_startup_create_thread_idle </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create the idle thread. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga93965d610e08f0905fc7c8dff44bed61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_startup_initialize_args </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>p_argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char ***&#160;</td>
+          <td class="paramname"><em>p_argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_argc</td><td>Pointer to argc. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_argv</td><td>Pointer to argv. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="startup_8c_source.html#l00400">400</a> of file <a class="el" href="startup_8c_source.html">startup.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga348982bfc48b68b86a9771dbda12c505"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_startup_initialize_free_store </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>heap_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>heap_size_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise free store. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap_address</td><td>The first unallocated RAM address (after the BSS). </td></tr>
+    <tr><td class="paramname">heap_size_bytes</td><td>The free store size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab9703b4858dc67c7bae54570ffa4ea4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_startup_initialize_hardware </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise hardware. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>This is the default implementation for the second hardware initialisation routine.</p>
+<p>It is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2" title="The standard C application entry point. ">_start()</a></code>, right after DATA &amp; BSS init, before the static constructors.</p>
+<p>The application can redefine it for more complex cases that require custom inits (before constructors), otherwise these inits can be done in <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a>. </p>
+
+<p>Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00118">118</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5d70c5328916fbd871e99173c6c2375d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_startup_initialize_hardware_early </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise hardware early. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>This is the default early hardware initialisation routine.</p>
+<p>It is called right at the beginning of <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2" title="The standard C application entry point. ">_start()</a></code>, to switch clocks to higher frequencies and have the rest of the initialisations run faster.</p>
+<p>The application can redefine it for more complex cases that requires inits before DATA and BSS init.</p>
+<p>It is mandatory on platforms like Kinetis, which start with the watch dog enabled and require an early sequence to disable it.</p>
+<p>Also useful on platform with external RAM, that need to be initialised before filling the BSS section. </p>
+
+<p>Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00060">60</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga65cb603487e23470319b222097c9e95e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_terminate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Terminate the application. There is no more life after this. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>Exit code, 0 for success, non 0 for failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>The freestanding version of this function resets the MCU core, using the NVIC features. </p>
+
+<p>Definition at line <a class="el" href="exit_8c_source.html#l00166">166</a> of file <a class="el" href="exit_8c_source.html">exit.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6771db6e5df087433ff0e4cb407de772"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_terminate_goodbye </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display statistics and say goodbye before terminating. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-main_8cpp_source.html#l00181">181</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
 
 </div>
 </div>

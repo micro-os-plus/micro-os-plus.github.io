@@ -9,6 +9,7 @@ var namespaceos_1_1rtos_1_1internal =
     [ "intrusive_list", "classos_1_1rtos_1_1internal_1_1intrusive__list.html", "classos_1_1rtos_1_1internal_1_1intrusive__list" ],
     [ "intrusive_list_iterator", "classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html", "classos_1_1rtos_1_1internal_1_1intrusive__list__iterator" ],
     [ "object_named", "classos_1_1rtos_1_1internal_1_1object__named.html", "classos_1_1rtos_1_1internal_1_1object__named" ],
+    [ "object_named_system", "classos_1_1rtos_1_1internal_1_1object__named__system.html", "classos_1_1rtos_1_1internal_1_1object__named__system" ],
     [ "ready_threads_list", "classos_1_1rtos_1_1internal_1_1ready__threads__list.html", "classos_1_1rtos_1_1internal_1_1ready__threads__list" ],
     [ "static_double_list", "classos_1_1rtos_1_1internal_1_1static__double__list.html", "classos_1_1rtos_1_1internal_1_1static__double__list" ],
     [ "static_double_list_links", "classos_1_1rtos_1_1internal_1_1static__double__list__links.html", "classos_1_1rtos_1_1internal_1_1static__double__list__links" ],

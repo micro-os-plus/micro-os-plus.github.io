@@ -6,6 +6,8 @@ var searchData=
   ['initializer_5fnormal',['initializer_normal',['../group__cmsis-plus-rtos-mutex.html#gab7a76d2ba638380ae88167da73fbd4cf',1,'os::rtos::mutex']]],
   ['initializer_5frecursive',['initializer_recursive',['../group__cmsis-plus-rtos-mutex.html#ga63d0eaa13d7ae8e574a110a9c033b414',1,'os::rtos::mutex']]],
   ['instances',['instances',['../structos__thread__def.html#afd50a1965f6fb28cc37fdfdca5d07e4e',1,'os_thread_def']]],
+  ['iov_5fbase',['iov_base',['../structiovec.html#a07aeddeccf80f14520fdd7ef0759442b',1,'iovec']]],
+  ['iov_5flen',['iov_len',['../structiovec.html#a17b5ac2078fd1adfabb262a95808a07d',1,'iovec']]],
   ['irda',['irda',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8ea5e73df56b6754f3686f5922e49301',1,'os::driver::serial::Capabilities']]],
   ['irda_5fpulse',['IRDA_PULSE',['../namespaceos_1_1driver_1_1serial.html#a3fbcf78af70f462e8a48f1e2b152e3d6',1,'os::driver::serial']]],
   ['is_5fsteady',['is_steady',['../classos_1_1estd_1_1chrono_1_1systick__clock.html#a40727628329487f69e34d1c4e97d0f60',1,'os::estd::chrono::systick_clock::is_steady()'],['../classos_1_1estd_1_1chrono_1_1realtime__clock.html#a4f72d052047d8afd1f3df8e76924bc8a',1,'os::estd::chrono::realtime_clock::is_steady()'],['../classos_1_1estd_1_1chrono_1_1system__clock.html#ab7ce3ad1d9df4cb6490862ce95fbd280',1,'os::estd::chrono::system_clock::is_steady()'],['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#a3775a1bd0115bece2f7cd980b5684b08',1,'os::estd::chrono::high_resolution_clock::is_steady()']]],

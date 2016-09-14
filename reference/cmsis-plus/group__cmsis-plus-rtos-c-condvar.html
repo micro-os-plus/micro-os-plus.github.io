@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -146,16 +146,35 @@ Types</h2></td></tr>
 <tr class="separator:ga7127e71b04816bab6ae79484a8dccbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Condition variable functions</h2></td></tr>
+Compatibility Macros</h2></td></tr>
+<tr class="memitem:gabed51a6c72ffe5c4f10422f702c269da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gabed51a6c72ffe5c4f10422f702c269da">os_condvar_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga926282623acb18f651cce13e374ad361">os_condvar_construct</a></td></tr>
+<tr class="separator:gabed51a6c72ffe5c4f10422f702c269da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab75aabbfa7fec565d10bd006b7b2e490"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab75aabbfa7fec565d10bd006b7b2e490">os_condvar_destroy</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga96c00b8b6f39707a6b368a236b7e3cb8">os_condvar_destruct</a></td></tr>
+<tr class="separator:gab75aabbfa7fec565d10bd006b7b2e490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Condition Variable Attributes Functions</h2></td></tr>
 <tr class="memitem:gaf34e240d31863e8e0daf776030acb54e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf34e240d31863e8e0daf776030acb54e">os_condvar_attr_init</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *attr)</td></tr>
 <tr class="memdesc:gaf34e240d31863e8e0daf776030acb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the condition variable attributes.  <a href="#gaf34e240d31863e8e0daf776030acb54e">More...</a><br /></td></tr>
 <tr class="separator:gaf34e240d31863e8e0daf776030acb54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477">os_condvar_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a condition variable object instance.  <a href="#gabf26b8b1575d1fc2ca9e275c1d320477">More...</a><br /></td></tr>
-<tr class="separator:gabf26b8b1575d1fc2ca9e275c1d320477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f429a06a20b61690012bc7948511958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga5f429a06a20b61690012bc7948511958">os_condvar_destroy</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
-<tr class="memdesc:ga5f429a06a20b61690012bc7948511958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the condition variable object instance.  <a href="#ga5f429a06a20b61690012bc7948511958">More...</a><br /></td></tr>
-<tr class="separator:ga5f429a06a20b61690012bc7948511958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Condition Variable Creation Functions</h2></td></tr>
+<tr class="memitem:ga926282623acb18f651cce13e374ad361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga926282623acb18f651cce13e374ad361">os_condvar_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:ga926282623acb18f651cce13e374ad361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated condition variable object instance.  <a href="#ga926282623acb18f651cce13e374ad361">More...</a><br /></td></tr>
+<tr class="separator:ga926282623acb18f651cce13e374ad361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96c00b8b6f39707a6b368a236b7e3cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga96c00b8b6f39707a6b368a236b7e3cb8">os_condvar_destruct</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
+<tr class="memdesc:ga96c00b8b6f39707a6b368a236b7e3cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the statically allocated condition variable object instance.  <a href="#ga96c00b8b6f39707a6b368a236b7e3cb8">More...</a><br /></td></tr>
+<tr class="separator:ga96c00b8b6f39707a6b368a236b7e3cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga645cbf7f1e22b940033932638a43ad39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga645cbf7f1e22b940033932638a43ad39">os_condvar_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:ga645cbf7f1e22b940033932638a43ad39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a condition variable object instance and construct it.  <a href="#ga645cbf7f1e22b940033932638a43ad39">More...</a><br /></td></tr>
+<tr class="separator:ga645cbf7f1e22b940033932638a43ad39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6782fba720162d3c4093fb7b3648fa66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga6782fba720162d3c4093fb7b3648fa66">os_condvar_delete</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
+<tr class="memdesc:ga6782fba720162d3c4093fb7b3648fa66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the condition variable object instance and deallocate it.  <a href="#ga6782fba720162d3c4093fb7b3648fa66">More...</a><br /></td></tr>
+<tr class="separator:ga6782fba720162d3c4093fb7b3648fa66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Condition Variable Functions</h2></td></tr>
 <tr class="memitem:ga87ca22aa9244f70e5a4f1cfb1d60949c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga87ca22aa9244f70e5a4f1cfb1d60949c">os_condvar_get_name</a> (<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *condvar)</td></tr>
 <tr class="memdesc:ga87ca22aa9244f70e5a4f1cfb1d60949c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the condition variable name.  <a href="#ga87ca22aa9244f70e5a4f1cfb1d60949c">More...</a><br /></td></tr>
 <tr class="separator:ga87ca22aa9244f70e5a4f1cfb1d60949c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,9 +193,38 @@ Condition variable functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C API condition variable definitions. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-condvar.html">RTOS C++ API</a></dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-condvar.html">RTOS C++ API</a></dd></dl>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <a class="code" href="structos__condvar__s.html">os_condvar_t</a> cv1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477">os_condvar_create</a> (&amp;cv1, <span class="stringliteral">&quot;cv1&quot;</span>, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga8e08a0be5183fbdfbe090f11427f9eae">os_condvar_signal</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#gadbbf4324f8fc4ad8d7ed30f23b1552ac">os_condvar_broadcast</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <span class="comment">// TODO: test os_condvar_wait()</span></div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga87ca22aa9244f70e5a4f1cfb1d60949c">os_condvar_get_name</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga5f429a06a20b61690012bc7948511958">os_condvar_destroy</a> (&amp;cv1);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Types</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <a class="code" href="structos__condvar__s.html">os_condvar_t</a> cv1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga926282623acb18f651cce13e374ad361">os_condvar_construct</a> (&amp;cv1, <span class="stringliteral">&quot;cv1&quot;</span>, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga8e08a0be5183fbdfbe090f11427f9eae">os_condvar_signal</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#gadbbf4324f8fc4ad8d7ed30f23b1552ac">os_condvar_broadcast</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <span class="comment">// TODO: test os_condvar_wait()</span></div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga87ca22aa9244f70e5a4f1cfb1d60949c">os_condvar_get_name</a> (&amp;cv1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-condvar.html#ga96c00b8b6f39707a6b368a236b7e3cb8">os_condvar_destruct</a> (&amp;cv1);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="gabed51a6c72ffe5c4f10422f702c269da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_condvar_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga926282623acb18f651cce13e374ad361">os_condvar_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01634">1634</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab75aabbfa7fec565d10bd006b7b2e490"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_condvar_destroy&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga96c00b8b6f39707a6b368a236b7e3cb8">os_condvar_destruct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01635">1635</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Types</h2>
 <a class="anchor" id="gaf3a6f7a54b218d4b85cbfae52572737c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +252,7 @@ Condition variable functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Condition variable object storage. </p>
-<p>This C structure has the same size as the C++ <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> object and must be initialised with <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gabf26b8b1575d1fc2ca9e275c1d320477" title="Create a condition variable object instance. ">os_condvar_create()</a>.</p>
+<p>This C structure has the same size as the C++ <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> object and must be initialised with <a class="el" href="group__cmsis-plus-rtos-c-thread.html#gabed51a6c72ffe5c4f10422f702c269da">os_condvar_create()</a>.</p>
 <p>Later on a pointer to it can be used both in C and C++ to refer to the timer object instance.</p>
 <p>The members of this structure are hidden and should not be used directly, but only through specific functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html" title="POSIX compliant condition variable. ">os::rtos::condition_variable</a> </dd></dl>
@@ -237,7 +285,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable_1_1attributes.html">os::rtos::condition_variable::attributes</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01726">1726</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01918">1918</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -273,16 +321,16 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81">os::rtos::condition_variable::broadcast()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01807">1807</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02049">2049</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="gabf26b8b1575d1fc2ca9e275c1d320477"></a>
+<a class="anchor" id="ga926282623acb18f651cce13e374ad361"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_condvar_create </td>
+          <td class="memname">void os_condvar_construct </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *&#160;</td>
           <td class="paramname"><em>condvar</em>, </td>
@@ -307,12 +355,12 @@ Condition variable functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a condition variable object instance. </p>
+<p>Construct a statically allocated condition variable object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
   </table>
   </dd>
 </dl>
@@ -323,19 +371,20 @@ Condition variable functions</h2></td></tr>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The constructor shall not fail with an error code of <code>EINTR</code>. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga96c00b8b6f39707a6b368a236b7e3cb8" title="Destruct the statically allocated condition variable object instance. ">os_condvar_destruct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01741">1741</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01935">1935</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga5f429a06a20b61690012bc7948511958"></a>
+<a class="anchor" id="ga6782fba720162d3c4093fb7b3648fa66"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_condvar_destroy </td>
+          <td class="memname">void os_condvar_delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *&#160;</td>
           <td class="paramname"><em>condvar</em></td><td>)</td>
@@ -344,7 +393,40 @@ Condition variable functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the condition variable object instance. </p>
+<p>Destruct the condition variable object instance and deallocate it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to dynamically allocated condition variable object instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>Destruct the condition variable and deallocate the dynamically allocated space using the RTOS system allocator.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>delete ptr_condvar</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga645cbf7f1e22b940033932638a43ad39" title="Allocate a condition variable object instance and construct it. ">os_condvar_new()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02004">2004</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga96c00b8b6f39707a6b368a236b7e3cb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_condvar_destruct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a> *&#160;</td>
+          <td class="paramname"><em>condvar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruct the statically allocated condition variable object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">condvar</td><td>Pointer to condition variable object instance. </td></tr>
@@ -352,10 +434,11 @@ Condition variable functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga926282623acb18f651cce13e374ad361" title="Construct a statically allocated condition variable object instance. ">os_condvar_construct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01762">1762</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01958">1958</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +467,57 @@ Condition variable functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">os::rtos::condition_variable::name()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01777">1777</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02019">2019</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga645cbf7f1e22b940033932638a43ad39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga7127e71b04816bab6ae79484a8dccbec">os_condvar_t</a>* os_condvar_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-condvar.html#gaf3a6f7a54b218d4b85cbfae52572737c">os_condvar_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a condition variable object instance and construct it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Errors</dt><dd>The constructor shall fail if:<ul>
+<li><code>EAGAIN</code> - The system lacked the necessary resources (other than memory) to create the condition variable.</li>
+<li><code>ENOMEM</code> - Insufficient memory exists to initialise the condition variable. </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>The constructor shall not fail with an error code of <code>EINTR</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new condition variable object instance.</dd></dl>
+<p>Dynamically allocate the condition variable object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new condition_variable(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-condvar.html#ga6782fba720162d3c4093fb7b3648fa66" title="Destruct the condition variable object instance and deallocate it. ">os_condvar_delete()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01979">1979</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +553,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766">os::rtos::condition_variable::signal()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01792">1792</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02034">2034</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +610,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#aea63b3c19dd9e0fa2f17c781ec220198">os::rtos::condition_variable::timed_wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01838">1838</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02080">2080</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -526,7 +659,7 @@ Condition variable functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1condition__variable.html#ac920555b675c7778d8db780307fdcd3d">os::rtos::condition_variable::wait()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01822">1822</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l02064">2064</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

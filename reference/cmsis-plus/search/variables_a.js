@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['m_5f',['m_',['../classos_1_1estd_1_1lock__guard.html#aaee3cedd024c4f9363d5ad8e9ea5e58a',1,'os::estd::lock_guard::m_()'],['../classos_1_1estd_1_1unique__lock.html#aa9a522acd5dab9eba0dc9e5ec5187059',1,'os::estd::unique_lock::m_()']]],
   ['magic',['magic',['../classos_1_1rtos_1_1thread_1_1stack.html#aee2b43afeed32f7dd1f92bee5f968798',1,'os::rtos::thread::stack']]],
   ['mail_5fid',['mail_id',['../structos_event.html#aeeccddfa51120e20a2316e73bdba099a',1,'osEvent']]],
-  ['max_5falign',['max_align',['../classos_1_1rtos_1_1memory_1_1memory__resource.html#af8258a63966f621605804691ae4d2179',1,'os::rtos::memory::memory_resource::max_align()'],['../classos_1_1estd_1_1memory__resource.html#ac68cd901b0efb6d256d9444846b3e76b',1,'os::estd::memory_resource::max_align()']]],
+  ['max_5falign',['max_align',['../classos_1_1rtos_1_1memory_1_1memory__resource.html#af8258a63966f621605804691ae4d2179',1,'os::rtos::memory::memory_resource']]],
   ['max_5fcount',['max_count',['../group__cmsis-plus-rtos-mutex.html#gaa7751ed78ef38380bccafa55ac67c1bd',1,'os::rtos::mutex']]],
   ['max_5fcount_5fvalue',['max_count_value',['../group__cmsis-plus-rtos-semaphore.html#ga52960bb03444802faaff6fb110156fba',1,'os::rtos::semaphore']]],
   ['max_5fmsg_5fsize',['max_msg_size',['../group__cmsis-plus-rtos-mqueue.html#ga041d0cf777c082b3a64dd16052e9bf90',1,'os::rtos::message_queue']]],
@@ -22,7 +21,7 @@ var searchData=
   ['mq_5fqueue_5faddr',['mq_queue_addr',['../structos__mqueue__attr__s.html#a8c47ee942c59a4fa0c95134c13490e43',1,'os_mqueue_attr_s']]],
   ['mq_5fqueue_5faddress',['mq_queue_address',['../classos_1_1rtos_1_1message__queue_1_1attributes.html#a7c679f6f48c4899a02d684e50d87b7d5',1,'os::rtos::message_queue::attributes']]],
   ['mq_5fqueue_5fsize_5fbytes',['mq_queue_size_bytes',['../structos__mqueue__attr__s.html#af00dbae4fcf07a05b5b7bf4ab45e349f',1,'os_mqueue_attr_s::mq_queue_size_bytes()'],['../classos_1_1rtos_1_1message__queue_1_1attributes.html#a7ceb77a70f107ca6c8490eb6692837de',1,'os::rtos::message_queue::attributes::mq_queue_size_bytes()']]],
-  ['msgs',['msgs',['../classos_1_1rtos_1_1message__queue__static.html#abed5ff5b8cd30f40a7a962ba1631012b',1,'os::rtos::message_queue_static']]],
+  ['msgs',['msgs',['../classos_1_1rtos_1_1message__queue__inclusive.html#a8c02b362532b4a8abdfe5b8a7f172391',1,'os::rtos::message_queue_inclusive']]],
   ['mx_5f',['mx_',['../classos_1_1estd_1_1condition__variable__any.html#aac209f398996e7234efc9bdcb0e6fed0',1,'os::estd::condition_variable_any']]],
   ['mx_5fmax_5fcount',['mx_max_count',['../structos__mutex__attr__s.html#a6ec04d5b1ef28f00047df867b24e564a',1,'os_mutex_attr_s::mx_max_count()'],['../classos_1_1rtos_1_1mutex_1_1attributes.html#a1eaad3426c177dd2156e30293f8bb987',1,'os::rtos::mutex::attributes::mx_max_count()']]],
   ['mx_5fpriority_5fceiling',['mx_priority_ceiling',['../structos__mutex__attr__s.html#ad1e092498cece835db72f8af7d8171cb',1,'os_mutex_attr_s::mx_priority_ceiling()'],['../classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b',1,'os::rtos::mutex::attributes::mx_priority_ceiling()']]],

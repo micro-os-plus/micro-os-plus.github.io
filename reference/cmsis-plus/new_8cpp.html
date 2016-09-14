@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -133,11 +133,8 @@ $(document).ready(function(){initNavTree('new_8cpp.html','');});
 
 <p>Global synchronised new/delete definitions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;new&gt;</code><br />
-<code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="malloc_8h_source.html">cmsis-plus/iso/malloc.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="memory__resource_source.html">cmsis-plus/estd/memory_resource</a>&gt;</code><br />
 </div>
 <p><a href="new_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -151,36 +148,48 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2aab280c9a87214e453f8f598827d13b"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a2aab280c9a87214e453f8f598827d13b">std::get_new_handler</a> () noexcept</td></tr>
+<tr class="memdesc:a2aab280c9a87214e453f8f598827d13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current handler.  <a href="namespacestd.html#a2aab280c9a87214e453f8f598827d13b">More...</a><br /></td></tr>
 <tr class="separator:a2aab280c9a87214e453f8f598827d13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa145befcf5e7b83424408ca503c8637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#afa145befcf5e7b83424408ca503c8637">operator delete</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:afa145befcf5e7b83424408ca503c8637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac089b2a0bb8375c15c092ac05564d480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#ac089b2a0bb8375c15c092ac05564d480">operator delete</a> (void *ptr, std::size_t size) noexcept</td></tr>
-<tr class="separator:ac089b2a0bb8375c15c092ac05564d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8550e9bb1c5db86131284c9c9f4941d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#a8550e9bb1c5db86131284c9c9f4941d7">operator delete</a> (void *ptr, const std::nothrow_t &amp;) noexcept</td></tr>
-<tr class="separator:a8550e9bb1c5db86131284c9c9f4941d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22aea74a1155aa798d6032da46da2391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#a22aea74a1155aa798d6032da46da2391">operator delete[]</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:a22aea74a1155aa798d6032da46da2391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abae5e7b9b336270bef3fa5670e12b6a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#abae5e7b9b336270bef3fa5670e12b6a8">operator delete[]</a> (void *ptr, std::size_t size) noexcept</td></tr>
-<tr class="separator:abae5e7b9b336270bef3fa5670e12b6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e6840057e14ada18c1f92c0ba0cbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#a32e6840057e14ada18c1f92c0ba0cbf0">operator delete[]</a> (void *ptr, const std::nothrow_t &amp;) noexcept</td></tr>
-<tr class="separator:a32e6840057e14ada18c1f92c0ba0cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5b857eccc1f5516255e4fbb2b93ec48"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#af5b857eccc1f5516255e4fbb2b93ec48">operator new</a> (std::size_t size) noexcept(false)</td></tr>
-<tr class="separator:af5b857eccc1f5516255e4fbb2b93ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad36796d7a5704dbb614a1eb59bf534ec"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#ad36796d7a5704dbb614a1eb59bf534ec">operator new</a> (std::size_t size, const std::nothrow_t &amp;) noexcept</td></tr>
-<tr class="separator:ad36796d7a5704dbb614a1eb59bf534ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8da7ccde55fa8d09744b11307d18df62"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#a8da7ccde55fa8d09744b11307d18df62">operator new[]</a> (std::size_t size) noexcept(false)</td></tr>
-<tr class="separator:a8da7ccde55fa8d09744b11307d18df62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf381244b4f42034fe8276d7286e4c5c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="new_8cpp.html#abf381244b4f42034fe8276d7286e4c5c">operator new[]</a> (std::size_t size, const std::nothrow_t &amp;) noexcept</td></tr>
-<tr class="separator:abf381244b4f42034fe8276d7286e4c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6519f396a0019421c491bcdccab811b3"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a6519f396a0019421c491bcdccab811b3">std::set_new_handler</a> (new_handler handler) noexcept</td></tr>
-<tr class="memdesc:a6519f396a0019421c491bcdccab811b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the function designated by handler as the current new_handler.  <a href="namespacestd.html#a6519f396a0019421c491bcdccab811b3">More...</a><br /></td></tr>
+<tr class="memdesc:a6519f396a0019421c491bcdccab811b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the function designated by handler as the current <code>new_handler</code>.  <a href="namespacestd.html#a6519f396a0019421c491bcdccab811b3">More...</a><br /></td></tr>
 <tr class="separator:a6519f396a0019421c491bcdccab811b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Standard operators</div></td></tr>
+<tr class="memitem:ga98d1fa89f048e8bde29089fccc11a3fc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga98d1fa89f048e8bde29089fccc11a3fc">operator new</a> (std::size_t bytes)</td></tr>
+<tr class="memdesc:ga98d1fa89f048e8bde29089fccc11a3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for a new object instance.  <a href="group__cmsis-plus-rtos-memres.html#ga98d1fa89f048e8bde29089fccc11a3fc">More...</a><br /></td></tr>
+<tr class="separator:ga98d1fa89f048e8bde29089fccc11a3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa47e694d5a1ed7a76f371e75d20ad584"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaa47e694d5a1ed7a76f371e75d20ad584">operator new</a> (std::size_t bytes, const std::nothrow_t &amp;nothrow) noexcept</td></tr>
+<tr class="memdesc:gaa47e694d5a1ed7a76f371e75d20ad584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for a new object instance (nothrow).  <a href="group__cmsis-plus-rtos-memres.html#gaa47e694d5a1ed7a76f371e75d20ad584">More...</a><br /></td></tr>
+<tr class="separator:gaa47e694d5a1ed7a76f371e75d20ad584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b71e89e72e6b0db306d6897d9e2533e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga0b71e89e72e6b0db306d6897d9e2533e">operator new[]</a> (std::size_t bytes)</td></tr>
+<tr class="memdesc:ga0b71e89e72e6b0db306d6897d9e2533e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for an array of new object instances.  <a href="group__cmsis-plus-rtos-memres.html#ga0b71e89e72e6b0db306d6897d9e2533e">More...</a><br /></td></tr>
+<tr class="separator:ga0b71e89e72e6b0db306d6897d9e2533e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a58a6def1abeffe81a6f146f8736025"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga9a58a6def1abeffe81a6f146f8736025">operator new[]</a> (std::size_t bytes, const std::nothrow_t &amp;nothrow) noexcept</td></tr>
+<tr class="memdesc:ga9a58a6def1abeffe81a6f146f8736025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for an array of new object instances (nothrow).  <a href="group__cmsis-plus-rtos-memres.html#ga9a58a6def1abeffe81a6f146f8736025">More...</a><br /></td></tr>
+<tr class="separator:ga9a58a6def1abeffe81a6f146f8736025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa145befcf5e7b83424408ca503c8637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gafa145befcf5e7b83424408ca503c8637">operator delete</a> (void *ptr) noexcept</td></tr>
+<tr class="memdesc:gafa145befcf5e7b83424408ca503c8637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated object instance.  <a href="group__cmsis-plus-rtos-memres.html#gafa145befcf5e7b83424408ca503c8637">More...</a><br /></td></tr>
+<tr class="separator:gafa145befcf5e7b83424408ca503c8637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeca15c4f631258b9c4987f804f6796c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaeca15c4f631258b9c4987f804f6796c3">operator delete</a> (void *ptr, std::size_t bytes) noexcept</td></tr>
+<tr class="memdesc:gaeca15c4f631258b9c4987f804f6796c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated object instance.  <a href="group__cmsis-plus-rtos-memres.html#gaeca15c4f631258b9c4987f804f6796c3">More...</a><br /></td></tr>
+<tr class="separator:gaeca15c4f631258b9c4987f804f6796c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82af5bcb97f91e73d40aa6390554920a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga82af5bcb97f91e73d40aa6390554920a">operator delete</a> (void *ptr, const std::nothrow_t &amp;nothrow) noexcept</td></tr>
+<tr class="memdesc:ga82af5bcb97f91e73d40aa6390554920a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated object instance (nothrow).  <a href="group__cmsis-plus-rtos-memres.html#ga82af5bcb97f91e73d40aa6390554920a">More...</a><br /></td></tr>
+<tr class="separator:ga82af5bcb97f91e73d40aa6390554920a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22aea74a1155aa798d6032da46da2391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga22aea74a1155aa798d6032da46da2391">operator delete[]</a> (void *ptr) noexcept</td></tr>
+<tr class="memdesc:ga22aea74a1155aa798d6032da46da2391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated array of object.  <a href="group__cmsis-plus-rtos-memres.html#ga22aea74a1155aa798d6032da46da2391">More...</a><br /></td></tr>
+<tr class="separator:ga22aea74a1155aa798d6032da46da2391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga813195142d16c1a016cc2ba960d69087"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga813195142d16c1a016cc2ba960d69087">operator delete[]</a> (void *ptr, std::size_t bytes) noexcept</td></tr>
+<tr class="memdesc:ga813195142d16c1a016cc2ba960d69087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated array of object.  <a href="group__cmsis-plus-rtos-memres.html#ga813195142d16c1a016cc2ba960d69087">More...</a><br /></td></tr>
+<tr class="separator:ga813195142d16c1a016cc2ba960d69087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f192d7375b5f82e6bec075a834762ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga2f192d7375b5f82e6bec075a834762ca">operator delete[]</a> (void *ptr, const std::nothrow_t &amp;nothrow) noexcept</td></tr>
+<tr class="memdesc:ga2f192d7375b5f82e6bec075a834762ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the dynamically allocated array of object (nothrow).  <a href="group__cmsis-plus-rtos-memres.html#ga2f192d7375b5f82e6bec075a834762ca">More...</a><br /></td></tr>
+<tr class="separator:ga2f192d7375b5f82e6bec075a834762ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa36125a52e6dbeb881016393eff5e851"><td class="memItemLeft" align="right" valign="top">std::new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02new_8cpp_03.html#aa36125a52e6dbeb881016393eff5e851">anonymous_namespace{new.cpp}::__new_handler</a></td></tr>
-<tr class="memdesc:aa36125a52e6dbeb881016393eff5e851"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current new handler.  <a href="namespaceanonymous__namespace_02new_8cpp_03.html#aa36125a52e6dbeb881016393eff5e851">More...</a><br /></td></tr>
-<tr class="separator:aa36125a52e6dbeb881016393eff5e851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099e4657626730e767ff1b87868e1379"><td class="memItemLeft" align="right" valign="top">std::new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379">anonymous_namespace{new.cpp}::new_handler_</a></td></tr>
+<tr class="memdesc:a099e4657626730e767ff1b87868e1379"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current new handler.  <a href="namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379">More...</a><br /></td></tr>
+<tr class="separator:a099e4657626730e767ff1b87868e1379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4b7b14b5246bacb54f2a4ae366ccd44"><td class="memItemLeft" align="right" valign="top">const nothrow_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#ae4b7b14b5246bacb54f2a4ae366ccd44">std::nothrow</a></td></tr>
 <tr class="separator:ae4b7b14b5246bacb54f2a4ae366ccd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -188,348 +197,7 @@ Variables</h2></td></tr>
 <div class="textblock"><p>Global synchronised new/delete definitions. </p>
 
 <p>Definition in file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="afa145befcf5e7b83424408ca503c8637"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The deallocation function (3.7.4.2) called by a delete-expression to render the value of ptr invalid.</p>
-<p>ptr shall be a null pointer or its value shall be a value returned by an earlier call to the (possibly replaced) operator new(os::std::size_t) or operator new(os::std::size_t,const std::nothrow_t&amp;) which has not been invalidated by an intervening call to <a class="el" href="new_8cpp.html#afa145befcf5e7b83424408ca503c8637">operator delete(void*)</a>.</p>
-<p>If ptr is null, does nothing. Otherwise, reclaims the storage allocated by the earlier call to operator new.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00253">253</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac089b2a0bb8375c15c092ac05564d480"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00270">270</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8550e9bb1c5db86131284c9c9f4941d7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The deallocation function (3.7.4.2) called by the implementation to render the value of ptr invalid when the constructor invoked from a nothrow placement version of the new-expression throws an exception.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00293">293</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a22aea74a1155aa798d6032da46da2391"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete[] </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The deallocation function (3.7.4.2) called by the array form of a delete-expression to render the value of ptr invalid.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00308">308</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abae5e7b9b336270bef3fa5670e12b6a8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete[] </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00321">321</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a32e6840057e14ada18c1f92c0ba0cbf0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void operator delete[] </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The deallocation function (3.7.4.2) called by the implementation to render the value of ptr invalid when the constructor invoked from a nothrow placement version of the array new-expression throws an exception.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00340">340</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af5b857eccc1f5516255e4fbb2b93ec48"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* operator new </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The allocation function (3.7.4.1) called by a new-expression (5.3.4) to allocate size bytes of storage suitably aligned to represent any object of that size.</p>
-<p>Return a non-null pointer to suitably aligned storage (3.7.4), or else throw a bad-alloc exception. This requirement is binding on a replacement version of this function.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00119">119</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad36796d7a5704dbb614a1eb59bf534ec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* operator new </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Same as new(size), except that it is called by a placement version of a new-expression when a C++ program prefers a null pointer result as an error indication, instead of a bad_alloc exception.</p>
-<p>Return a non-null pointer to suitably aligned storage (3.7.4), or else return a null pointer. This nothrow version of operator new returns a pointer obtained as if acquired from the (possibly replaced) ordinary version. This requirement is binding on a replacement version of this function.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00170">170</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8da7ccde55fa8d09744b11307d18df62"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* operator new[] </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The allocation function (3.7.4.1) called by the array form of a new-expression (5.3.4) to allocate size bytes of storage suitably aligned to represent any array object of that size or smaller.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00199">199</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abf381244b4f42034fe8276d7286e4c5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* operator new[] </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::nothrow_t &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Same as new[](size), except that it is called by a placement version of a new-expression when a C++ program prefers a null pointer result as an error indication, instead of a bad_alloc exception.</p>
-<dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library. </dd></dl>
-
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00218">218</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

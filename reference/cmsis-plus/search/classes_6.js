@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['has_5fsleep_5ffor',['has_sleep_for',['../structos_1_1estd_1_1chrono_1_1has__sleep__for.html',1,'os::estd::chrono']]],
-  ['high_5fresolution_5fclock',['high_resolution_clock',['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html',1,'os::estd::chrono']]],
-  ['host',['Host',['../classos_1_1driver_1_1usb_1_1_host.html',1,'os::driver::usb']]]
+  ['first_5ffit_5ftop',['first_fit_top',['../classos_1_1memory_1_1first__fit__top.html',1,'os::memory']]],
+  ['first_5ffit_5ftop_5fallocated',['first_fit_top_allocated',['../classos_1_1memory_1_1first__fit__top__allocated.html',1,'os::memory']]],
+  ['first_5ffit_5ftop_5finclusive',['first_fit_top_inclusive',['../classos_1_1memory_1_1first__fit__top__inclusive.html',1,'os::memory']]]
 ];

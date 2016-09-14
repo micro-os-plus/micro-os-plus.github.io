@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -159,8 +159,18 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 <li>allocation_element_t
 : <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ab4cbbaaaf2f0a91dcc9a7cc42b7f8b98">os::rtos::thread::stack</a>
 </li>
+<li>allocator_traits
+: <a class="el" href="classos_1_1memory_1_1block__pool__typed__allocated.html#ae9bfb21d2fcb7f0e3d9fe38225642b29">os::memory::block_pool_typed_allocated&lt; T, A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1first__fit__top__allocated.html#a6b5c0db37444f26eaf00f81a916bbd5a">os::memory::first_fit_top_allocated&lt; A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1lifo__allocated.html#a318fdf12c2f91af8cf186e7a47093d29">os::memory::lifo_allocated&lt; A &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#abc672faf7d90e95af5398501f927cceb">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
+</li>
 <li>allocator_type
-: <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a5ef5fc603da1b3dfd918ca4d03f8ff97">os::rtos::memory_pool</a>
+: <a class="el" href="classos_1_1memory_1_1block__pool__typed__allocated.html#a0eae04191bccda0e68fdb8f3070bfb5f">os::memory::block_pool_typed_allocated&lt; T, A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1first__fit__top__allocated.html#a5fd47cd43bb702f79c45df5acdb18a12">os::memory::first_fit_top_allocated&lt; A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1lifo__allocated.html#af3e373e4126b2ff99e7501362a9f452b">os::memory::lifo_allocated&lt; A &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a4d1f4859491f3752751fd5675e2a256a">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a5ef5fc603da1b3dfd918ca4d03f8ff97">os::rtos::memory_pool</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__allocated.html#ac67cc7ecd82470f321e069387b5e68fc">os::rtos::memory_pool_allocated&lt; Allocator &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html#a6f58800ed33281ca6517e518afdec071">os::rtos::memory_pool_typed&lt; T, Allocator &gt;</a>
 , <a class="el" href="group__cmsis-plus-rtos-mqueue.html#ga99e8ba430c6176765669424acded3f0e">os::rtos::message_queue</a>
@@ -173,9 +183,6 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>chunk_t
-: <a class="el" href="classos_1_1estd_1_1memory_1_1newlib__nano.html#a0fc10f4c74d735b96e65ddfff8f330ee">os::estd::memory::newlib_nano</a>
-</li>
 <li>count_t
 : <a class="el" href="group__cmsis-plus-rtos-mutex.html#ga31a6f2d64eb598ccb0f8152e2bf20504">os::rtos::mutex</a>
 , <a class="el" href="group__cmsis-plus-rtos-semaphore.html#gad6dc71df534fae5ff113a4a010511df1">os::rtos::semaphore</a>
@@ -244,8 +251,12 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>lockable_type
+: <a class="el" href="classos_1_1estd_1_1lock__guard.html#a94fdb2ad8c040e845fe7ddc1796e7303">os::estd::lock_guard&lt; L &gt;</a>
+, <a class="el" href="classos_1_1estd_1_1unique__lock.html#ae5de510f747f0de846a471588ed96e2d">os::estd::unique_lock&lt; L &gt;</a>
+</li>
 <li>locker_type
-: <a class="el" href="classos_1_1estd_1_1polymorphic__allocator.html#a9a3deb497fba7ee4bb27f71f6428de30">os::estd::polymorphic_allocator&lt; T, L &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a9661e542e08651280f7e7e4ce523515a">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
 </li>
 </ul>
 
@@ -253,10 +264,6 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>msg_size_t
 : <a class="el" href="group__cmsis-plus-rtos-mqueue.html#gaee507fd1f777940280b9246bff1018d3">os::rtos::message_queue</a>
-</li>
-<li>mutex_type
-: <a class="el" href="classos_1_1estd_1_1lock__guard.html#aee651e0193a55431241a5af82808a9a0">os::estd::lock_guard&lt; Mutex_T &gt;</a>
-, <a class="el" href="classos_1_1estd_1_1unique__lock.html#ada85ff65ec3aea78b1aefa232067d6e3">os::estd::unique_lock&lt; Mutex_T &gt;</a>
 </li>
 </ul>
 
@@ -298,6 +305,7 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1double__list__iterator.html#aec6b1713b5be9b6529c4fd781cef7007">os::rtos::internal::double_list_iterator&lt; T, N, MP, U &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list.html#a197dc5f0ac710ca7021022572e35153d">os::rtos::internal::intrusive_list&lt; T, N, MP &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#abbb42b83609db54ca2111647e233e51c">os::rtos::internal::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#ae8ebd623e15661ab4f5ea11e896bec6b">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
 </li>
 <li>priority_t
 : <a class="el" href="group__cmsis-plus-rtos-mqueue.html#ga26895a3c081fd319cb199d21c4028963">os::rtos::message_queue</a>
@@ -366,15 +374,19 @@ $(document).ready(function(){initNavTree('functions_type.html','');});
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>value_type
-: <a class="el" href="classos_1_1estd_1_1polymorphic__allocator.html#acf6863bb84d4475d1e5cc6cc92359879">os::estd::polymorphic_allocator&lt; T, L &gt;</a>
+: <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#a5949d9f5016701ede765e74d138a4889">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1block__pool__typed__allocated.html#a23501f05f23316bb8544c1aba87cb850">os::memory::block_pool_typed_allocated&lt; T, A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1block__pool__typed__inclusive.html#a39db5a3cc5e3c2a82523eba6e9f1b00d">os::memory::block_pool_typed_inclusive&lt; T, N &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1first__fit__top__allocated.html#ae4b1ec84d7ed3919bfc8f17ae22e88e7">os::memory::first_fit_top_allocated&lt; A &gt;</a>
+, <a class="el" href="classos_1_1memory_1_1lifo__allocated.html#a00eb506dfb276281084379bbc3822849">os::memory::lifo_allocated&lt; A &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a772287e4fc055598cc25244fce485c9b">os::rtos::internal::double_list_iterator&lt; T, N, MP, U &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list.html#a053d687b4fd85fcbb66298b0cdcc6d9e">os::rtos::internal::intrusive_list&lt; T, N, MP &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#ad3f3f22ccaa7bfc8c592861decb06ce0">os::rtos::internal::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#aee800519a3f519956ce83abfb84b622b">os::rtos::memory::new_delete_allocator&lt; T &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#a92fe79d130853a7d4b18be047c49d796">os::rtos::memory::polymorphic_allocator&lt; T &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory__pool__static.html#a4de8f633c32a87683b395b6a374d0859">os::rtos::memory_pool_static&lt; T, N &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#aeb7246fa47822a38531255853313e044">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a92bb72aea38addc67af6d8642ecea0ea">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a58c609f468d4fa5430d9c04ca11ceb9d">os::rtos::memory_pool_inclusive&lt; T, N &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html#a4a3b6a591e6237b1f6b7431903646ec4">os::rtos::memory_pool_typed&lt; T, Allocator &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1message__queue__static.html#aafff5c8cbfcface13aa0ba5a4489f348">os::rtos::message_queue_static&lt; T, N &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1message__queue__inclusive.html#a0549f825504371a739a54bece23c4efa">os::rtos::message_queue_inclusive&lt; T, N &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue__typed.html#a0af8b88c2438822c23f5be795040c975">os::rtos::message_queue_typed&lt; T, Allocator &gt;</a>
 </li>
 </ul>

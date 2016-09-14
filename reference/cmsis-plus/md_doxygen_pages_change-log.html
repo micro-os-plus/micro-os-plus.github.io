@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>fix <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9373c2b9e8f007ac31440ea1192fd361" title="Try to wait for thread event flags. ">thread::flags_try_wait()</a></code> spelling</li>
 <li>semaphores refurbished (make default as binary, add classes <code>semaphore_binary</code> and <code>semaphore_counting</code>)</li>
 <li>add <code>binary_attributes</code></li>
-<li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes. ">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga73f9a5506f1ab63afef4425fe385d76d" title="Create a binary semaphore object instance. ">os_semaphore_binary_create()</a></code></li>
+<li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes. ">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab264af2883d8dfe5a1d9ff9de6d14f79">os_semaphore_binary_create()</a></code></li>
 <li>os-semaphore: rename <code><a class="el" href="classattributes__binary.html">attributes_binary</a></code>, <code>attributes_counting</code>, <code>initializer_binary</code></li>
 </ul>
 <h3>v6.3.3 2016-07-11</h3>
@@ -214,6 +214,47 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>make default mutex inheritable</li>
 <li>add class mutex_recursive</li>
 <li>prefix protected functions with <code>internal_</code></li>
+</ul>
+<h3>v6.3.7 2016-09-14</h3>
+<ul>
+<li>always include <code><a class="el" href="assert_8c.html#a2532ff72b1a2ff82f65e8c2a5a4dde00">assert_failed()</a></code> (used by STM HAL)</li>
+<li>for ARMv7-M, in default handlers use BKPT(0) only if C_DEBUGEN is enabled, to prevent crashes when not connected to debugger</li>
+<li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7" title="Hook to enter a power saving mode. ">os_rtos_idle_enter_power_saving_mode_hook()</a></code></li>
+<li>rename include folder <code>cmsis-plus/iso</code> -&gt; <code>cmsis-plus/estd</code></li>
+<li>add memory resource manager <code>first-fit-top</code> for variable size allocations</li>
+<li>add memory resource manager <code>lifo</code> for one-time allocations</li>
+<li>add memory resource manager <code>null</code> to completely disable dynamic allocations</li>
+<li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store. ">os_startup_initialize_free_store()</a></code> to initialise the application free store</li>
+<li>if <code>OS_INTEGER_RTOS_DYNAMIC_MEMORY_SIZE_BYTES</code> is defined, optionally initialise a separate RTOS system allocation area and class specific pools</li>
+<li>adjust <code><a class="el" href="__sbrk_8c.html#a68125648bcce70b6bb3aa0be50e99700">_sbrk()</a></code> to acknowledge all available RAM is used</li>
+<li>refurbish C <code>malloc</code> &amp; C++ <code>new</code>/<code>delete</code> to be thread safe and use the memory resource manager</li>
+<li>for bare bone, if dynamic memory is not used, the default manager is <code>null_resource</code></li>
+<li>for POSIX, the default is <code>malloc_resource</code></li>
+<li>the standard definitions were moved to the C++17-like <code>estd::pmr</code> namespace</li>
+<li><code>estd::malloc()</code> is no longer needed and was removed, the standard <a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152" title="Allocate a memory block (non-initialised). ">malloc()</a> is now thread safe</li>
+<li>a C API was added for memory resources</li>
+<li>add statistics to <code>memory_resource</code></li>
+<li>rename C API <code>_create</code> -&gt; <code>_construct</code>, <code>_destroy</code> -&gt; <code>_destruct</code> (add compatibility macros for the old names)</li>
+<li>to make use of the system allocator in system classes, add custom <code>new</code>/<code>delete</code> operators to class <code>object_named_system</code>, and use it as base for all system objects</li>
+<li>add <code>rtos::make_shared&lt;&gt;</code> to use the system allocator (experimental, to be further refined with thread safe)</li>
+<li>for Cortex-M, manage the interrupts stack via the <code>thread::stack</code> class; initialise interrupts stack with pattern and check the bottom marker in the idle thread</li>
+<li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga662046e9017fcb1ed5a4b09ccc2634ad" title="Get the interrupts stack. ">os_irq_get_stack()</a></code> to the C API</li>
+<li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772" title="Display statistics and say goodbye before terminating. ">os_terminate_goodbye()</a></code> to display memory usage statistics</li>
+<li>refubish the exit code to avoid crashes when building freestanding apps</li>
+<li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">os_initialize_args()</a></code> -&gt; <code><a class="el" href="types_8h.html#a93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args()</a></code></li>
+<li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">os_initialize_hardware_early()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d" title="Initialise hardware early. ">os_startup_initialize_hardware_early()</a></code></li>
+<li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">os_initialize_hardware()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware. ">os_startup_initialize_hardware()</a></code></li>
+<li>add <em>out of memory</em> hooks to memory managers</li>
+<li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e" title="Terminate the application. There is no more life after this. ">os_terminate()</a></code> as a portable function to terminate the application (implemented as reset on Cortex-M)</li>
+<li>add the <code>block_pool</code> class to manage pools of memory blocks</li>
+<li>add <code>block_pool_typed_allocated</code> and <code>block_pool_typed_inclusive</code> templates</li>
+<li>add <code>first_fit_top_allocated</code> and <code>first_fit_top_inclusive</code> templates</li>
+<li>add <code>lifo_allocated</code> and <code>lifo_inclusive</code> templates</li>
+<li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40" title="Create the idle thread. ">os_startup_create_thread_idle()</a></code> as weak</li>
+<li>add <code>OS_INTEGER_RTOS_ALLOC_MUTEX_POOL_SIZE</code> and similar, to create pools of storage for system objects</li>
+<li>rename <code>thread_static&lt;&gt;</code> -&gt; <code>thread_inclusive&lt;&gt;</code></li>
+<li>rename <code>memory_pool_static&lt;&gt;</code> -&gt; <code>memory_pool_inclusive&lt;&gt;</code></li>
+<li>rename <code>message_queue_static&lt;&gt;</code> -&gt; <code>message_queue_inclusive&lt;&gt;</code></li>
 </ul>
 <hr/>
  </div></div><!-- contents -->

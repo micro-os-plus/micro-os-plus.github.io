@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -162,6 +162,13 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
 <li>__assert_func()
 : <a class="el" href="assert_8c.html#a620a4f992f76741d22c71a8736391bf6">assert.c</a>
+</li>
+<li>__call_exitprocs()
+: <a class="el" href="atexit_8cpp.html#ac1f455c0db2501472cb11fabc53ed95f">atexit.cpp</a>
+, <a class="el" href="atexit_8h.html#a12b1de11d1825f43a84c42975648d485">atexit.h</a>
+</li>
+<li>__cxa_pure_virtual()
+: <a class="el" href="cxx_8cpp.html#a6be7d9ce80c86f5178635fa86c2dd5e7">cxx.cpp</a>
 </li>
 <li>__errno()
 : <a class="el" href="group__cmsis-plus-rtos-c.html#ga39b9754c96beda392bdb080bc5653e9e">os-core.cpp</a>
@@ -349,6 +356,13 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>__posix_writev()
 : <a class="el" href="types_8h.html#ae14a4f38a51d65192d03e6f9f536c56b">types.h</a>
 </li>
+<li>__register_exitproc()
+: <a class="el" href="atexit_8cpp.html#a71eff26af10b1e3a3a3688a89c16a17f">atexit.cpp</a>
+, <a class="el" href="atexit_8h.html#aae7c08f3db773cecf5c46a1326d81974">atexit.h</a>
+</li>
+<li>__reset_hardware()
+: <a class="el" href="reset-hardware_8c.html#ab6d978ce88666a8d604f2d6ebce2a4f4">reset-hardware.c</a>
+</li>
 <li>_chown()
 : <a class="el" href="newlib-aliases_8h.html#aaad58465601ae411fec6cf7a836da2e7">newlib-aliases.h</a>
 </li>
@@ -358,44 +372,109 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>_close()
 : <a class="el" href="newlib-aliases_8h.html#a5af2dad9b50913a0025ea80a8577bea8">newlib-aliases.h</a>
 </li>
+<li>_close_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#abb7e853b04fe321b588e9df6ad8e286c">c-newlib-reent.cpp</a>
+</li>
 <li>_execve()
 : <a class="el" href="newlib-aliases_8h.html#ad803eae96eec90aa3ef8c65f06d59009">newlib-aliases.h</a>
+</li>
+<li>_execve_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#aa9a71af4edb80d3301efbc83e950a7b2">c-newlib-reent.cpp</a>
+</li>
+<li>_Exit()
+: <a class="el" href="exit_8c.html#ad459e22e06681daa1f6b98956b00cf54">exit.c</a>
+</li>
+<li>_exit()
+: <a class="el" href="exit_8c.html#abc96bd69b58b2deaddb484478d911c1b">exit.c</a>
+</li>
+<li>_fcntl_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#aebd542b5cf95b28503fbc89b849e726c">c-newlib-reent.cpp</a>
 </li>
 <li>_fork()
 : <a class="el" href="newlib-aliases_8h.html#a1bbd8aee44468bfc796b6ceb3bf74d96">newlib-aliases.h</a>
 </li>
+<li>_fork_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a0895f1d4df8e059f51293417da626ec7">c-newlib-reent.cpp</a>
+</li>
 <li>_fstat()
 : <a class="el" href="newlib-aliases_8h.html#a649d75c0ad1eb6ae029b723c26b66752">newlib-aliases.h</a>
+</li>
+<li>_fstat_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#ab363725fe0d90c471b86b82e8742d465">c-newlib-reent.cpp</a>
 </li>
 <li>_getpid()
 : <a class="el" href="newlib-aliases_8h.html#ad1f206883946ce8cb8bb983464f9b102">newlib-aliases.h</a>
 </li>
+<li>_getpid_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#aae523d8fe4fa9284b24d7541548fbc81">c-newlib-reent.cpp</a>
+</li>
 <li>_gettimeofday()
 : <a class="el" href="newlib-aliases_8h.html#a9407a5597c3642ba1440b12673ccf40a">newlib-aliases.h</a>
+</li>
+<li>_gettimeofday_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a6511565fcb1414b121b6017efcbf21dc">c-newlib-reent.cpp</a>
 </li>
 <li>_isatty()
 : <a class="el" href="newlib-aliases_8h.html#a81c31ba5216786a72a4e4f59bfb43035">newlib-aliases.h</a>
 </li>
+<li>_isatty_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a0b1bcdbaf068013ff345e33305322d2b">c-newlib-reent.cpp</a>
+</li>
 <li>_kill()
 : <a class="el" href="newlib-aliases_8h.html#aea4fc7643f2a2aacc79a377ffb7be528">newlib-aliases.h</a>
+</li>
+<li>_kill_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#abc04b205147324b50ad7fb26f890f691">c-newlib-reent.cpp</a>
 </li>
 <li>_link()
 : <a class="el" href="newlib-aliases_8h.html#adf9bf32c8849d6a800621252ee12bfac">newlib-aliases.h</a>
 </li>
+<li>_link_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#add9383a3ccd50ceae54bf08d23b99cb4">c-newlib-reent.cpp</a>
+</li>
 <li>_lseek()
 : <a class="el" href="newlib-aliases_8h.html#a1fd116a5c6d658acbe5e5786fa3e1868">newlib-aliases.h</a>
+</li>
+<li>_lseek_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a2bbb98e6cca43b935d6231a7c8fdf5f4">c-newlib-reent.cpp</a>
+</li>
+<li>_mkdir_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#ae160ee0d155658c12b4cccd7a4c84c2c">c-newlib-reent.cpp</a>
 </li>
 <li>_open()
 : <a class="el" href="newlib-aliases_8h.html#a40ba06c3d48c361d532dfae10186e27e">newlib-aliases.h</a>
 </li>
+<li>_open_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a6387c55ae080cec621dd92cb7289a362">c-newlib-reent.cpp</a>
+</li>
 <li>_read()
 : <a class="el" href="newlib-aliases_8h.html#a6cfdb1d41006cb00b54a113c28dd3ab3">newlib-aliases.h</a>
+</li>
+<li>_read_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a9c869cc270324276d2e0e755c3daa539">c-newlib-reent.cpp</a>
 </li>
 <li>_readlink()
 : <a class="el" href="newlib-aliases_8h.html#a66ab0cd0b52c7ba40a20286faf7668a3">newlib-aliases.h</a>
 </li>
+<li>_rename_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#ae057ddea1bf0342961380f14200210ad">c-newlib-reent.cpp</a>
+</li>
+<li>_sbrk()
+: <a class="el" href="__sbrk_8c.html#a68125648bcce70b6bb3aa0be50e99700">_sbrk.c</a>
+</li>
+<li>_sbrk_r()
+: <a class="el" href="__sbrk_8c.html#ad9b7445a1713711c11108d891b64a686">_sbrk.c</a>
+</li>
+<li>_start()
+: <a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">startup.c</a>
+, <a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">os-hooks.h</a>
+, <a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">exception-handlers.c</a>
+</li>
 <li>_stat()
 : <a class="el" href="newlib-aliases_8h.html#a29b9e1ac839e37164be59c384823418e">newlib-aliases.h</a>
+</li>
+<li>_stat_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a70471840e6013c010b5add2d5eb929f0">c-newlib-reent.cpp</a>
 </li>
 <li>_symlink()
 : <a class="el" href="newlib-aliases_8h.html#a647c2bf992b146407c0d3c2807ed37cd">newlib-aliases.h</a>
@@ -403,14 +482,26 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>_times()
 : <a class="el" href="newlib-aliases_8h.html#a246d70ca40ab8628b6ad4fa9337fc726">newlib-aliases.h</a>
 </li>
+<li>_times_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a7bb06b9351b5a5182588c562996d19b7">c-newlib-reent.cpp</a>
+</li>
 <li>_unlink()
 : <a class="el" href="newlib-aliases_8h.html#ad599bf257f9250292653296049317388">newlib-aliases.h</a>
+</li>
+<li>_unlink_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a313eca33df1281563ca13820d2eea8e2">c-newlib-reent.cpp</a>
 </li>
 <li>_wait()
 : <a class="el" href="newlib-aliases_8h.html#ab2c677f94db811a57e55060e7412f8db">newlib-aliases.h</a>
 </li>
+<li>_wait_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#a5749949c9e10f91d78ef75de3bab7e6e">c-newlib-reent.cpp</a>
+</li>
 <li>_write()
 : <a class="el" href="newlib-aliases_8h.html#a637f3b33cf8a2223862596efdee3ad33">newlib-aliases.h</a>
+</li>
+<li>_write_r()
+: <a class="el" href="c-newlib-reent_8cpp.html#aad84974a628ddd50afb9503806fd5c9e">c-newlib-reent.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->

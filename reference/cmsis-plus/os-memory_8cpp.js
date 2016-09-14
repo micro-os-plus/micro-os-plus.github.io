@@ -1,12 +1,13 @@
 var os_memory_8cpp =
 [
-    [ "new_delete_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1new__delete__memory__resource.html", "classanonymous__namespace_02os-memory_8cpp_03_1_1new__delete__memory__resource" ],
-    [ "null_memory_resource", "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource.html", "classanonymous__namespace_02os-memory_8cpp_03_1_1null__memory__resource" ],
-    [ "get_default_resource", "os-memory_8cpp.html#a61c4946b90c917a9fc2a0b0f1c43ad89", null ],
-    [ "new_delete_resource", "os-memory_8cpp.html#aa67f4f8fa7acec54ed5db96538b56520", null ],
-    [ "null_memory_resource", "os-memory_8cpp.html#a40fcff6f5a5893407ac94006da386444", null ],
-    [ "set_default_resource", "os-memory_8cpp.html#ab225a6f29f49e12c68458faa4dd42216", null ],
-    [ "default_resource", "os-memory_8cpp.html#af79d339755e9df6e0c026701bbb68590", null ],
-    [ "new_delete_res", "os-memory_8cpp.html#a86093af6bfd6eed65fa30a1dcbe85412", null ],
-    [ "null_res", "os-memory_8cpp.html#ac25aa9f9cf26c98a8c87446c1e12725e", null ]
+    [ "malloc_resource", "os-memory_8cpp.html#ga3c3109d3de2ac643502566774021d5dd", null ],
+    [ "set_default_resource", "os-memory_8cpp.html#ga34cf8ec3444242cb4c9bd0849c7ce439", null ],
+    [ "set_resource_typed< condition_variable >", "os-memory_8cpp.html#ga4af1d058b3b53828b3d6c7f1bc71cda4", null ],
+    [ "set_resource_typed< event_flags >", "os-memory_8cpp.html#ga8feae91943adab3bd057ce09c2b27f4f", null ],
+    [ "set_resource_typed< memory_pool >", "os-memory_8cpp.html#ga666b9fe23b9c8b824e1ce74b9826ba6d", null ],
+    [ "set_resource_typed< message_queue >", "os-memory_8cpp.html#ga57cf8f5462e5fbaf1cf80b7cedcc4339", null ],
+    [ "set_resource_typed< mutex >", "os-memory_8cpp.html#gab6cb16d9873d8a50e8995a531daf0e49", null ],
+    [ "set_resource_typed< semaphore >", "os-memory_8cpp.html#gabf7151b6c67a779c0f061d5f97d041c4", null ],
+    [ "set_resource_typed< thread >", "os-memory_8cpp.html#gac4df8b5306c8cb1a3bb584d324a36def", null ],
+    [ "set_resource_typed< timer >", "os-memory_8cpp.html#gafb9431faf4191c85a8570dd511d87e2e", null ]
 ];

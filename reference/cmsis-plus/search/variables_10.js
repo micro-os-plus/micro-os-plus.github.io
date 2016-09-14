@@ -1,9 +1,9 @@
 var searchData=
 [
+  ['sa_5fdata',['sa_data',['../structsockaddr.html#a0f8f1da22275364aef1e79c57f786ce4',1,'sockaddr']]],
+  ['sa_5ffamily',['sa_family',['../structsockaddr.html#ac6ef02e9a2e90a30218132ffd7b5a5c5',1,'sockaddr']]],
   ['signals',['signals',['../structos_event.html#ad63c33b8b5d3bb37b45433d7c67d1e09',1,'osEvent']]],
   ['single_5fwire',['single_wire',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a8999746beab07528ffaa6704e7a43ee4',1,'os::driver::serial::Capabilities']]],
-  ['size',['size',['../structos_1_1estd_1_1memory_1_1newlib__nano_1_1chunk__s.html#a92fcdff98a6cb17ffd327448e4c7f550',1,'os::estd::memory::newlib_nano::chunk_s']]],
-  ['size_5f',['size_',['../classos_1_1estd_1_1memory_1_1newlib__nano.html#a2cafc2abeba9165b8e3bb9ac9b43a02e',1,'os::estd::memory::newlib_nano']]],
   ['sm_5finitial_5fvalue',['sm_initial_value',['../structos__semaphore__attr__s.html#a9e8fa44e93d32703646f22450822278c',1,'os_semaphore_attr_s::sm_initial_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a93a004acdd6591ddef9e0f49be403635',1,'os::rtos::semaphore::attributes::sm_initial_value()']]],
   ['sm_5fmax_5fvalue',['sm_max_value',['../structos__semaphore__attr__s.html#a908d1dc68226404282ca687042a05017',1,'os_semaphore_attr_s::sm_max_value()'],['../classos_1_1rtos_1_1semaphore_1_1attributes.html#a0b166731dc11931d76a03e1a99e37aad',1,'os::rtos::semaphore::attributes::sm_max_value()']]],
   ['smart_5fcard',['smart_card',['../classos_1_1driver_1_1serial_1_1_capabilities.html#ac2e36afd6a548587cc956b0647e8434e',1,'os::driver::serial::Capabilities']]],
@@ -12,7 +12,7 @@ var searchData=
   ['smart_5fcard_5fnack',['SMART_CARD_NACK',['../namespaceos_1_1driver_1_1serial.html#a27f4c07458c468567a55c3d82dd6fead',1,'os::driver::serial']]],
   ['speed',['speed',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html#a265ddae1223300e8289bf7b23662cac2',1,'os::driver::usb::device::Status::speed()'],['../classos_1_1driver_1_1usb_1_1host_1_1_status.html#af7310347fdb873dfc415810f6cd1c177',1,'os::driver::usb::host::Status::speed()']]],
   ['stack',['stack',['../structos__thread__def.html#a268b54cbfcfabd6f34c8012bae94d7d7',1,'os_thread_def']]],
-  ['stack_5fsize_5fbytes',['stack_size_bytes',['../classos_1_1rtos_1_1thread__static.html#a6f06b3f0f9168f42ca9ca45460de5342',1,'os::rtos::thread_static']]],
+  ['stack_5fsize_5fbytes',['stack_size_bytes',['../classos_1_1rtos_1_1thread__inclusive.html#a5ab873c55d379e8286c6481e9bca5393',1,'os::rtos::thread_inclusive']]],
   ['stacksize',['stacksize',['../structos__thread__def.html#aa0dd2cff64a499a08f422dd159fe5780',1,'os_thread_def']]],
   ['startup_5ftime_5fpoint',['startup_time_point',['../classos_1_1estd_1_1chrono_1_1realtime__clock.html#acd58619635d05c632aa67388635b0a2a',1,'os::estd::chrono::realtime_clock']]],
   ['state_5f',['state_',['../structos_1_1estd_1_1once__flag.html#aafd0a6549d1f72b1c29b22a77cd8d064',1,'os::estd::once_flag']]],

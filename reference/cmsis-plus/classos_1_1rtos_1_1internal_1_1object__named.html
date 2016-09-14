@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -136,12 +136,13 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1internal_1_1object_
 
 <p><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="classos_1_1rtos_1_1clock.html">os::rtos::clock</a>, <a class="el" href="classos_1_1rtos_1_1condition__variable.html">os::rtos::condition_variable</a>, <a class="el" href="classos_1_1rtos_1_1event__flags.html">os::rtos::event_flags</a>, <a class="el" href="classos_1_1rtos_1_1memory__pool.html">os::rtos::memory_pool</a>, <a class="el" href="classos_1_1rtos_1_1message__queue.html">os::rtos::message_queue</a>, <a class="el" href="classos_1_1rtos_1_1mutex.html">os::rtos::mutex</a>, <a class="el" href="classos_1_1rtos_1_1semaphore.html">os::rtos::semaphore</a>, <a class="el" href="classos_1_1rtos_1_1thread.html">os::rtos::thread</a>, and <a class="el" href="classos_1_1rtos_1_1timer.html">os::rtos::timer</a>.</p>
+<p>Inherited by <a class="el" href="classos_1_1rtos_1_1clock.html">os::rtos::clock</a>, <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named__system.html">os::rtos::internal::object_named_system</a>, and <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html">os::rtos::memory::memory_resource</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
 <tr class="memitem:a191fec2dd0076e286af417f2d12ed01d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a191fec2dd0076e286af417f2d12ed01d">object_named</a> ()</td></tr>
+<tr class="memdesc:a191fec2dd0076e286af417f2d12ed01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named object instance.  <a href="#a191fec2dd0076e286af417f2d12ed01d">More...</a><br /></td></tr>
 <tr class="separator:a191fec2dd0076e286af417f2d12ed01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4d2ac12be6af9e7739a88d65b4c9fd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#ac4d2ac12be6af9e7739a88d65b4c9fd9">object_named</a> (const char *<a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">name</a>)</td></tr>
 <tr class="memdesc:ac4d2ac12be6af9e7739a88d65b4c9fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a named object instance.  <a href="#ac4d2ac12be6af9e7739a88d65b4c9fd9">More...</a><br /></td></tr>
@@ -159,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <p>This class serves as a base class for all objects that have a name (most of the RTOS classes do have a name).</p>
 <p>Attributes use a separate constexpr object. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00355">355</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00363">363</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a191fec2dd0076e286af417f2d12ed01d"></a>
 <div class="memitem">
@@ -174,7 +175,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00532">532</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Construct a named object instance. </p>
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00559">559</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +205,7 @@ Public Member Functions</h2></td></tr>
 <p>Prefer the given name, otherwise default to '-'.</p>
 <p>To save space, instead of copying the null terminated string locally, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00548">548</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00575">575</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +263,7 @@ Public Member Functions</h2></td></tr>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00540">540</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00773">773</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

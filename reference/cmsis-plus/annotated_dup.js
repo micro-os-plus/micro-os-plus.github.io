@@ -1,11 +1,12 @@
 var annotated_dup =
 [
-    [ "anonymous_namespace{memory-resource.cpp}", "namespaceanonymous__namespace_02memory-resource_8cpp_03.html", "namespaceanonymous__namespace_02memory-resource_8cpp_03" ],
-    [ "anonymous_namespace{os-memory.cpp}", "namespaceanonymous__namespace_02os-memory_8cpp_03.html", "namespaceanonymous__namespace_02os-memory_8cpp_03" ],
     [ "os", "namespaceos.html", "namespaceos" ],
     [ "attributes_binary", "classattributes__binary.html", null ],
     [ "attributes_periodic", "classattributes__periodic.html", null ],
+    [ "DIR", "struct_d_i_r.html", null ],
+    [ "dirent", "structdirent.html", "structdirent" ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
+    [ "iovec", "structiovec.html", "structiovec" ],
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
     [ "os_clock_s", "structos__clock__s.html", null ],
     [ "os_condvar_attr_s", "structos__condvar__attr__s.html", "structos__condvar__attr__s" ],
@@ -19,6 +20,7 @@ var annotated_dup =
     [ "os_internal_waiting_thread_node_s", "structos__internal__waiting__thread__node__s.html", "structos__internal__waiting__thread__node__s" ],
     [ "os_mail_queue_s", "structos__mail__queue__s.html", "structos__mail__queue__s" ],
     [ "os_mailQ_def", "structos__mail_q__def.html", "structos__mail_q__def" ],
+    [ "os_memory_s", "structos__memory__s.html", "structos__memory__s" ],
     [ "os_mempool_attr_s", "structos__mempool__attr__s.html", "structos__mempool__attr__s" ],
     [ "os_mempool_s", "structos__mempool__s.html", null ],
     [ "os_messageQ_def", "structos__message_q__def.html", "structos__message_q__def" ],
@@ -40,5 +42,6 @@ var annotated_dup =
     [ "os_timer_attr_s", "structos__timer__attr__s.html", "structos__timer__attr__s" ],
     [ "os_timer_def", "structos__timer__def.html", "structos__timer__def" ],
     [ "os_timer_s", "structos__timer__s.html", null ],
-    [ "osEvent", "structos_event.html", "structos_event" ]
+    [ "osEvent", "structos_event.html", "structos_event" ],
+    [ "sockaddr", "structsockaddr.html", "structsockaddr" ]
 ];

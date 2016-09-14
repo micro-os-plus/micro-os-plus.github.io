@@ -15,7 +15,7 @@ var mutex =
     [ "lock", "mutex.html#acd05cc068debdfeb8e5b29416ee56166", null ],
     [ "lock", "mutex.html#a0ee3ff85665bcf61f491170753f7397b", null ],
     [ "lock", "mutex.html#a84a76556e18d9dbf96054848a470fc65", null ],
-    [ "swap", "mutex.html#ad61a3ffb827008e91837fb048bc74873", null ],
+    [ "swap", "mutex.html#adc5b01ae0bf710c883c9aa00ca83069e", null ],
     [ "try_lock", "mutex.html#a26498cc884ea17ea17965af274e1258a", null ],
     [ "try_lock", "mutex.html#a5a198565171becbb126fbf25bc2aea56", null ],
     [ "try_lock", "mutex.html#a69694c9c4c6ce2553c8b26a3371ed55b", null ],

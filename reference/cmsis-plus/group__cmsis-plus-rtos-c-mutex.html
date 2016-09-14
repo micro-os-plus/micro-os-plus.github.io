@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -184,7 +184,16 @@ Enumerations</h2></td></tr>
 <tr class="separator:gab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Mutex functions</h2></td></tr>
+Compatibility Macros</h2></td></tr>
+<tr class="memitem:ga51fef3c2f3c13308703222400c8d8f4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga51fef3c2f3c13308703222400c8d8f4e">os_mutex_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a></td></tr>
+<tr class="separator:ga51fef3c2f3c13308703222400c8d8f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2623a258859a6088a083d4aadeda5d92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga2623a258859a6088a083d4aadeda5d92">os_mutex_recursive_create</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga29cc0dfa50c47a8f2f56a8031f426ef4">os_mutex_recursive_construct</a></td></tr>
+<tr class="separator:ga2623a258859a6088a083d4aadeda5d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ee2f67c2960220de825b3a1a6c7ca4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga9ee2f67c2960220de825b3a1a6c7ca4a">os_mutex_destroy</a>&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a></td></tr>
+<tr class="separator:ga9ee2f67c2960220de825b3a1a6c7ca4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Mutex Attributes Functions</h2></td></tr>
 <tr class="memitem:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os_mutex_attr_init</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
 <tr class="memdesc:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the mutex attributes.  <a href="#gaa3ad85ddc4b1a0baf4df0d29936f7b30">More...</a><br /></td></tr>
 <tr class="separator:gaa3ad85ddc4b1a0baf4df0d29936f7b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,15 +203,30 @@ Mutex functions</h2></td></tr>
 <tr class="memitem:ga9f4ece47660bab9b048b34e5ba32074e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e">os_mutex_attr_get_recursive</a> (void)</td></tr>
 <tr class="memdesc:ga9f4ece47660bab9b048b34e5ba32074e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a recursive mutex attributes object instance.  <a href="#ga9f4ece47660bab9b048b34e5ba32074e">More...</a><br /></td></tr>
 <tr class="separator:ga9f4ece47660bab9b048b34e5ba32074e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga64aa9b462b86d4b54c5f61f5ed550b08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08">os_mutex_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:ga64aa9b462b86d4b54c5f61f5ed550b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a mutex object instance.  <a href="#ga64aa9b462b86d4b54c5f61f5ed550b08">More...</a><br /></td></tr>
-<tr class="separator:ga64aa9b462b86d4b54c5f61f5ed550b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa46351d856c3edb43f89fdfcecd6c520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa46351d856c3edb43f89fdfcecd6c520">os_mutex_recursive_create</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
-<tr class="memdesc:gaa46351d856c3edb43f89fdfcecd6c520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a recursive mutex object instance.  <a href="#gaa46351d856c3edb43f89fdfcecd6c520">More...</a><br /></td></tr>
-<tr class="separator:gaa46351d856c3edb43f89fdfcecd6c520"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3557d0abf88771a87a81c305496bb677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677">os_mutex_destroy</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>)</td></tr>
-<tr class="memdesc:ga3557d0abf88771a87a81c305496bb677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the mutex object instance.  <a href="#ga3557d0abf88771a87a81c305496bb677">More...</a><br /></td></tr>
-<tr class="separator:ga3557d0abf88771a87a81c305496bb677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Mutex Creation Functions</h2></td></tr>
+<tr class="memitem:gafaa095363b68fb5b1bae23c847122354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gafaa095363b68fb5b1bae23c847122354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated mutex object instance.  <a href="#gafaa095363b68fb5b1bae23c847122354">More...</a><br /></td></tr>
+<tr class="separator:gafaa095363b68fb5b1bae23c847122354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29cc0dfa50c47a8f2f56a8031f426ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga29cc0dfa50c47a8f2f56a8031f426ef4">os_mutex_recursive_construct</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>, const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:ga29cc0dfa50c47a8f2f56a8031f426ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a statically allocated recursive mutex object instance.  <a href="#ga29cc0dfa50c47a8f2f56a8031f426ef4">More...</a><br /></td></tr>
+<tr class="separator:ga29cc0dfa50c47a8f2f56a8031f426ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8daff12e9d8213cbe799024ee0072841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>)</td></tr>
+<tr class="memdesc:ga8daff12e9d8213cbe799024ee0072841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the statically allocated mutex object instance.  <a href="#ga8daff12e9d8213cbe799024ee0072841">More...</a><br /></td></tr>
+<tr class="separator:ga8daff12e9d8213cbe799024ee0072841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9fbb7cc7d3c24873306dbe8327a0146"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gad9fbb7cc7d3c24873306dbe8327a0146">os_mutex_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gad9fbb7cc7d3c24873306dbe8327a0146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a mutex object instance and construct it.  <a href="#gad9fbb7cc7d3c24873306dbe8327a0146">More...</a><br /></td></tr>
+<tr class="separator:gad9fbb7cc7d3c24873306dbe8327a0146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6cf6b9080e8443fd1763470add61708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa6cf6b9080e8443fd1763470add61708">os_mutex_recursive_new</a> (const char *name, const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *attr)</td></tr>
+<tr class="memdesc:gaa6cf6b9080e8443fd1763470add61708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated a recursive mutex object instance and construct it.  <a href="#gaa6cf6b9080e8443fd1763470add61708">More...</a><br /></td></tr>
+<tr class="separator:gaa6cf6b9080e8443fd1763470add61708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab341794a3481c8800773dfa262d27927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gab341794a3481c8800773dfa262d27927">os_mutex_delete</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>)</td></tr>
+<tr class="memdesc:gab341794a3481c8800773dfa262d27927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the mutex object instance and deallocate it.  <a href="#gab341794a3481c8800773dfa262d27927">More...</a><br /></td></tr>
+<tr class="separator:gab341794a3481c8800773dfa262d27927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Mutex Functions</h2></td></tr>
 <tr class="memitem:ga1dfb52a616b78c2c68e883d7d1a06f20"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20">os_mutex_get_name</a> (<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *<a class="el" href="classos_1_1rtos_1_1mutex.html">mutex</a>)</td></tr>
 <tr class="memdesc:ga1dfb52a616b78c2c68e883d7d1a06f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mutex name.  <a href="#ga1dfb52a616b78c2c68e883d7d1a06f20">More...</a><br /></td></tr>
 <tr class="separator:ga1dfb52a616b78c2c68e883d7d1a06f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,9 +269,52 @@ Mutex functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C API mutex definitions. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__cmsis-plus-rtos-mutex.html">RTOS C++ API</a></dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-mutex.html">RTOS C++ API</a></dd></dl>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08">os_mutex_create</a> (&amp;mx1, <span class="stringliteral">&quot;mx1&quot;</span>, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaccc7bef859ff23b4ab35ce5d6a6c1bbc">os_mutex_lock</a> (&amp;mx1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaaeb1c9e20f02b8f2b0ce699f276c7239">os_mutex_try_lock</a> (&amp;mx1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaa829de874de77f645c3a9ac479a4c707">os_mutex_timed_lock</a> (&amp;mx1, 1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20">os_mutex_get_name</a> (&amp;mx1);</div><div class="line">      assert(strcmp (name, <span class="stringliteral">&quot;mx1&quot;</span>) == 0);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">os_thread_prio_t</a> prio;</div><div class="line">      prio = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8679042c78514cdaf10611d4df4c4353">os_mutex_get_prio_ceiling</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga9d4184820b2d30173d0d8b37e252021e">os_mutex_set_prio_ceiling</a> (&amp;mx1, prio, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="structos__thread__s.html">os_thread_t</a>* th;</div><div class="line">      th = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gac3444dc52478bac7b01b509b75c7cf3a">os_mutex_get_owner</a> (&amp;mx1);</div><div class="line">      <span class="keywordflow">if</span> (th != NULL)</div><div class="line">        {</div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os_thread_get_name</a> (th);</div><div class="line">        }</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gae38200d7d272c07806b939d80a1f4c0d">os_mutex_reset</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677">os_mutex_destroy</a> (&amp;mx1);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom mutex, with RTC.</span></div><div class="line">      <a class="code" href="structos__mutex__attr__s.html">os_mutex_attr_t</a> amx2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os_mutex_attr_init</a> (&amp;amx2);</div><div class="line"></div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#ad1e092498cece835db72f8af7d8171cb">mx_priority_ceiling</a> = <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca8cb7f8123773427b0a791be84bb9a2e5">os_thread_priority_high</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a3cf2665ae6887c39558ed10ea1e687e6">mx_protocol</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gga0411cd49bb5b71852cecd93bcbf0ca2da833c6218717a9f577e97ad4567968f45">os_mutex_protocol_protect</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a3cdf47462cbd23bfb0e27dbad0179fca">mx_type</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ggab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af">os_mutex_type_recursive</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a6ec04d5b1ef28f00047df867b24e564a">mx_max_count</a> = 7;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#aaa1f0bf15e24cfc7e275bd1cb5ccdeb8">mx_robustness</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ggabed82baf7f470b522273a3e37c24c600a84385ef4f64d839d6b80d713da91ec8a">os_mutex_robustness_stalled</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#afeba254112582f73d74a4ed71d0c76aa">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08">os_mutex_create</a> (&amp;mx2, <span class="stringliteral">&quot;mx2&quot;</span>, &amp;amx2);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677">os_mutex_destroy</a> (&amp;mx2);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Recursive mutex.</span></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx3;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08">os_mutex_create</a> (&amp;mx3, <span class="stringliteral">&quot;mx3&quot;</span>, <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e">os_mutex_attr_get_recursive</a> ());</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677">os_mutex_destroy</a> (&amp;mx3);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom recursive mutex, with RTC.</span></div><div class="line">      <a class="code" href="structos__mutex__attr__s.html">os_mutex_attr_t</a> amx4;</div><div class="line">      os_mutex_attr_init_recursive (&amp;amx4);</div><div class="line"></div><div class="line">      amx4.<a class="code" href="structos__mutex__attr__s.html#afeba254112582f73d74a4ed71d0c76aa">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08">os_mutex_create</a> (&amp;mx4, <span class="stringliteral">&quot;mx4&quot;</span>, &amp;amx4);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga3557d0abf88771a87a81c305496bb677">os_mutex_destroy</a> (&amp;mx4);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Types</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span></div><div class="line"><a class="code" href="group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd">os_main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div><div class="line">{</div><div class="line">    {</div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx1;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a> (&amp;mx1, <span class="stringliteral">&quot;mx1&quot;</span>, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaccc7bef859ff23b4ab35ce5d6a6c1bbc">os_mutex_lock</a> (&amp;mx1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaaeb1c9e20f02b8f2b0ce699f276c7239">os_mutex_try_lock</a> (&amp;mx1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaa829de874de77f645c3a9ac479a4c707">os_mutex_timed_lock</a> (&amp;mx1, 1);</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gabbf0c5b09eab504e41b0ff06c2345dc7">os_mutex_unlock</a> (&amp;mx1);</div><div class="line"></div><div class="line">      name = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga1dfb52a616b78c2c68e883d7d1a06f20">os_mutex_get_name</a> (&amp;mx1);</div><div class="line">      assert(strcmp (name, <span class="stringliteral">&quot;mx1&quot;</span>) == 0);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ga314f97c14203c7ec9cabd3adc7b1d95d">os_thread_prio_t</a> prio;</div><div class="line">      prio = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8679042c78514cdaf10611d4df4c4353">os_mutex_get_prio_ceiling</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga9d4184820b2d30173d0d8b37e252021e">os_mutex_set_prio_ceiling</a> (&amp;mx1, prio, NULL);</div><div class="line"></div><div class="line">      <a class="code" href="structos__thread__s.html">os_thread_t</a>* th;</div><div class="line">      th = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gac3444dc52478bac7b01b509b75c7cf3a">os_mutex_get_owner</a> (&amp;mx1);</div><div class="line">      <span class="keywordflow">if</span> (th != NULL)</div><div class="line">        {</div><div class="line">          <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ga441fc50f95e215bee21e40ca286fed9c">os_thread_get_name</a> (th);</div><div class="line">        }</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gae38200d7d272c07806b939d80a1f4c0d">os_mutex_reset</a> (&amp;mx1);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a> (&amp;mx1);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom mutex, with RTC.</span></div><div class="line">      <a class="code" href="structos__mutex__attr__s.html">os_mutex_attr_t</a> amx2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gaa3ad85ddc4b1a0baf4df0d29936f7b30">os_mutex_attr_init</a> (&amp;amx2);</div><div class="line"></div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#ad1e092498cece835db72f8af7d8171cb">mx_priority_ceiling</a> = <a class="code" href="group__cmsis-plus-rtos-c-thread.html#ggadc29c2ff13d900c2f185ee95427fb06ca8cb7f8123773427b0a791be84bb9a2e5">os_thread_priority_high</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a3cf2665ae6887c39558ed10ea1e687e6">mx_protocol</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gga0411cd49bb5b71852cecd93bcbf0ca2da833c6218717a9f577e97ad4567968f45">os_mutex_protocol_protect</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a3cdf47462cbd23bfb0e27dbad0179fca">mx_type</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ggab04a0655cd1e3bcac5e8f48c18df1a57a331b47521255a14c72ff4b60ed8b71af">os_mutex_type_recursive</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#a6ec04d5b1ef28f00047df867b24e564a">mx_max_count</a> = 7;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#aaa1f0bf15e24cfc7e275bd1cb5ccdeb8">mx_robustness</a> = <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ggabed82baf7f470b522273a3e37c24c600a84385ef4f64d839d6b80d713da91ec8a">os_mutex_robustness_stalled</a>;</div><div class="line">      amx2.<a class="code" href="structos__mutex__attr__s.html#afeba254112582f73d74a4ed71d0c76aa">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx2;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a> (&amp;mx2, <span class="stringliteral">&quot;mx2&quot;</span>, &amp;amx2);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a> (&amp;mx2);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Recursive mutex.</span></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx3;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a> (&amp;mx3, <span class="stringliteral">&quot;mx3&quot;</span>, <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga9f4ece47660bab9b048b34e5ba32074e">os_mutex_attr_get_recursive</a> ());</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a> (&amp;mx3);</div><div class="line">    }</div><div class="line"></div><div class="line">    {</div><div class="line">      <span class="comment">// Custom recursive mutex, with RTC.</span></div><div class="line">      <a class="code" href="structos__mutex__attr__s.html">os_mutex_attr_t</a> amx4;</div><div class="line">      os_mutex_attr_init_recursive (&amp;amx4);</div><div class="line"></div><div class="line">      amx4.<a class="code" href="structos__mutex__attr__s.html#afeba254112582f73d74a4ed71d0c76aa">clock</a> = <a class="code" href="group__cmsis-plus-rtos-c-clock.html#gaa9893993808e49b7ab2ccfbe98bbad06">os_clock_get_rtclock</a> ();</div><div class="line"></div><div class="line">      <a class="code" href="structos__mutex__s.html">os_mutex_t</a> mx4;</div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a> (&amp;mx4, <span class="stringliteral">&quot;mx4&quot;</span>, &amp;amx4);</div><div class="line"></div><div class="line">      <a class="code" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a> (&amp;mx4);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga51fef3c2f3c13308703222400c8d8f4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_mutex_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354">os_mutex_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01441">1441</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga9ee2f67c2960220de825b3a1a6c7ca4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_mutex_destroy&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841">os_mutex_destruct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01443">1443</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2623a258859a6088a083d4aadeda5d92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_mutex_recursive_create&#160;&#160;&#160;<a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga29cc0dfa50c47a8f2f56a8031f426ef4">os_mutex_recursive_construct</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="os-c-api_8h_source.html#l01442">1442</a> of file <a class="el" href="os-c-api_8h_source.html">os-c-api.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Types</h2>
 <a class="anchor" id="ga6eee076e88523711841844ed92d40bdb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -275,7 +342,7 @@ Mutex functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mutex object storage. </p>
-<p>This C structure has the same size as the C++ <code><a class="el" href="classos_1_1rtos_1_1mutex.html" title="POSIX compliant mutex. ">os::rtos::mutex</a></code> object and must be initialised with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga64aa9b462b86d4b54c5f61f5ed550b08" title="Create a mutex object instance. ">os_mutex_create()</a></code>.</p>
+<p>This C structure has the same size as the C++ <code><a class="el" href="classos_1_1rtos_1_1mutex.html" title="POSIX compliant mutex. ">os::rtos::mutex</a></code> object and must be initialised with <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#ga51fef3c2f3c13308703222400c8d8f4e">os_mutex_create()</a></code>.</p>
 <p>Later on a pointer to it can be used both in C and C++ to refer to the mutex object instance.</p>
 <p>The members of this structure are hidden and should not be used directly, but only through specific functions.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html" title="POSIX compliant mutex. ">os::rtos::mutex</a> </dd></dl>
@@ -310,7 +377,7 @@ Mutex functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00801">801</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00829">829</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +405,7 @@ Mutex functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00829">829</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00857">857</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +436,7 @@ Mutex functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00852">852</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-c-decls_8h_source.html#l00880">880</a> of file <a class="el" href="os-c-decls_8h_source.html">os-c-decls.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +460,7 @@ Mutex functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-mutex.html#ga63d0eaa13d7ae8e574a110a9c033b414">os::rtos::mutex::initializer_recursive</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01457">1457</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01570">1570</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +489,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html">os::rtos::mutex::attributes</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01427">1427</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01540">1540</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -451,16 +518,16 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes__recursive.html">os::rtos::mutex::attributes_recursive</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01442">1442</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01555">1555</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga64aa9b462b86d4b54c5f61f5ed550b08"></a>
+<a class="anchor" id="gafaa095363b68fb5b1bae23c847122354"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_mutex_create </td>
+          <td class="memname">void os_mutex_construct </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em>, </td>
@@ -485,29 +552,30 @@ Mutex functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a mutex object instance. </p>
+<p>Construct a statically allocated mutex object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841" title="Destruct the statically allocated mutex object instance. ">os_mutex_destruct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html">os::rtos::mutex</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01471">1471</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01586">1586</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ga3557d0abf88771a87a81c305496bb677"></a>
+<a class="anchor" id="gab341794a3481c8800773dfa262d27927"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_mutex_destroy </td>
+          <td class="memname">void os_mutex_delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em></td><td>)</td>
@@ -516,18 +584,52 @@ Mutex functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the mutex object instance. </p>
+<p>Destruct the mutex object instance and deallocate it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to dynamically allocated mutex object instance. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<p>Destruct the mutex and deallocate the dynamically allocated space using the RTOS system allocator.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>delete ptr_mutex</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gad9fbb7cc7d3c24873306dbe8327a0146" title="Allocate a mutex object instance and construct it. ">os_mutex_new()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gaa6cf6b9080e8443fd1763470add61708" title="Allocated a recursive mutex object instance and construct it. ">os_mutex_recursive_new()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html">os::rtos::mutex</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01511">1511</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01703">1703</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8daff12e9d8213cbe799024ee0072841"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_mutex_destruct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruct the statically allocated mutex object instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance storage. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafaa095363b68fb5b1bae23c847122354" title="Construct a statically allocated mutex object instance. ">os_mutex_construct()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga29cc0dfa50c47a8f2f56a8031f426ef4" title="Construct a statically allocated recursive mutex object instance. ">os_mutex_recursive_construct()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html">os::rtos::mutex</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01631">1631</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +658,7 @@ Mutex functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">os::rtos::mutex::name()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01526">1526</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01718">1718</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +687,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#adcfacc498b568dd75fa1d2434ae9b1d8">os::rtos::mutex::owner()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01649">1649</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01841">1841</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +716,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#a3486b0293f3416bd47068c44dbd85877">os::rtos::mutex::prio_ceiling()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01602">1602</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01794">1794</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -643,7 +745,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#abcb96b1b7ea3c9834abcd6f0ccdc65f2">os::rtos::mutex::protocol()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01679">1679</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01871">1871</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -672,7 +774,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#abbebf5b630553b522a2c0a886ee1542e">os::rtos::mutex::robustness()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01694">1694</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01886">1886</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -701,7 +803,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#ac067e11063401bed9ac437f21da3b79e">os::rtos::mutex::type()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01664">1664</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01856">1856</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -741,7 +843,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e">os::rtos::mutex::lock()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01541">1541</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01733">1733</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -777,16 +879,60 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#ada9bec2b176e4a9e5714bd8c70bc0aab">os::rtos::mutex::consistent()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01634">1634</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01826">1826</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="gaa46351d856c3edb43f89fdfcecd6c520"></a>
+<a class="anchor" id="gad9fbb7cc7d3c24873306dbe8327a0146"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void os_mutex_recursive_create </td>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a>* os_mutex_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a mutex object instance and construct it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new mutex object instance.</dd></dl>
+<p>Dynamically allocate the mutex object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new mutex(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gab341794a3481c8800773dfa262d27927" title="Destruct the mutex object instance and deallocate it. ">os_mutex_delete()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html">os::rtos::mutex</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01652">1652</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga29cc0dfa50c47a8f2f56a8031f426ef4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os_mutex_recursive_construct </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a> *&#160;</td>
           <td class="paramname"><em>mutex</em>, </td>
@@ -811,20 +957,65 @@ Mutex functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a recursive mutex object instance. </p>
+<p>Construct a statically allocated recursive mutex object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mutex</td><td>Pointer to mutex object instance storage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga8daff12e9d8213cbe799024ee0072841" title="Destruct the statically allocated mutex object instance. ">os_mutex_destruct()</a></code>.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex__recursive.html">os::rtos::mutex_recursive</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01491">1491</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01608">1608</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa6cf6b9080e8443fd1763470add61708"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gafab3c85c5a0ce6cfc7f784f2cc7b230f">os_mutex_t</a>* os_mutex_recursive_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga6eee076e88523711841844ed92d40bdb">os_mutex_attr_t</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocated a recursive mutex object instance and construct it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name (may be NULL). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Pointer to attributes (may be NULL). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new recursive mutex object instance.</dd></dl>
+<p>Dynamically allocate the recursive mutex object instance using the RTOS system allocator and construct it.</p>
+<dl class="section note"><dt>Note</dt><dd>Equivalent of C++ <code>new mutex_recursive(...)</code>. </dd>
+<dd>
+Must be paired with <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#gab341794a3481c8800773dfa262d27927" title="Destruct the mutex object instance and deallocate it. ">os_mutex_delete()</a></code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
+<dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex__recursive.html">os::rtos::mutex_recursive</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01677">1677</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -858,7 +1049,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#a033e2192e11ca3ba1110f1ec0e29c6e3">os::rtos::mutex::reset()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01709">1709</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01901">1901</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -911,7 +1102,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#af0a2c6bbb2d30714f8eee0070e5d0ac0">os::rtos::mutex::prio_ceiling(thread::priority_t, thread::priority_t*)</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01617">1617</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01809">1809</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1154,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#a61911bfedcb48f2ab8314c42a7cb96d4">os::rtos::mutex::timed_lock()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01571">1571</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01763">1763</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1195,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#a7d6a0eaa5e19ca9720603439647cb263">os::rtos::mutex::try_lock()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01556">1556</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01748">1748</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1231,7 @@ Mutex functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1mutex.html#afeb6e546c4dc95c96d8f81aba64638cb">os::rtos::mutex::unlock()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01587">1587</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l01779">1779</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>

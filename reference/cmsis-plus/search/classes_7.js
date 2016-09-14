@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['id',['id',['../classos_1_1estd_1_1thread_1_1id.html',1,'os::estd::thread']]],
-  ['intrusive_5flist',['intrusive_list',['../classos_1_1rtos_1_1internal_1_1intrusive__list.html',1,'os::rtos::internal']]],
-  ['intrusive_5flist_5fiterator',['intrusive_list_iterator',['../classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html',1,'os::rtos::internal']]]
+  ['has_5fsleep_5ffor',['has_sleep_for',['../structos_1_1estd_1_1chrono_1_1has__sleep__for.html',1,'os::estd::chrono']]],
+  ['high_5fresolution_5fclock',['high_resolution_clock',['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html',1,'os::estd::chrono']]],
+  ['host',['Host',['../classos_1_1driver_1_1usb_1_1_host.html',1,'os::driver::usb']]]
 ];

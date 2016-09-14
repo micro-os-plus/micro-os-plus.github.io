@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/iso/malloc.h File Reference</title>
+<title>µOS++ IIIe / CMSIS++ Reference: include/cmsis-plus/memory/malloc.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -123,38 +123,39 @@ $(document).ready(function(){initNavTree('malloc_8h.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">malloc.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
 </div>
 <p><a href="malloc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1memory_1_1malloc__memory__resource.html">os::memory::malloc_memory_resource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A memory manager that allocates memory via the system <code>std::malloc()</code> and deallocates via <code>std::free()</code>.  <a href="classos_1_1memory_1_1malloc__memory__resource.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1memory_1_1new__delete__memory__resource.html">os::memory::new_delete_memory_resource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A memory manager that allocates memory via the system <code>operator new</code> and deallocates via <code>operator delete</code>.  <a href="classos_1_1memory_1_1new__delete__memory__resource.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos.html">os</a></td></tr>
 <tr class="memdesc:namespaceos"><td class="mdescLeft">&#160;</td><td class="mdescRight">System namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceos_1_1estd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html">os::estd</a></td></tr>
-<tr class="memdesc:namespaceos_1_1estd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Embedded <b>std</b> namespace. <br /></td></tr>
+<tr class="memitem:namespaceos_1_1memory"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1memory.html">os::memory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:gafc528ef2980271a5637ad14e15e8e1c4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#gafc528ef2980271a5637ad14e15e8e1c4">os::estd::malloc</a> (std::size_t size) noexcept</td></tr>
-<tr class="separator:gafc528ef2980271a5637ad14e15e8e1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga800730f656f908066925a653e09d59a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga800730f656f908066925a653e09d59a3">os::estd::free</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:ga800730f656f908066925a653e09d59a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_cae430f933a417897a2c3fb661b022de.html">iso</a></li><li class="navelem"><a class="el" href="malloc_8h.html">malloc.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2993587b499ee868345a6a65b6604160.html">cmsis-plus</a></li><li class="navelem"><a class="el" href="dir_882d3e73c19339b4abf05fbe813c53cf.html">memory</a></li><li class="navelem"><a class="el" href="malloc_8h.html">malloc.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

@@ -2,7 +2,11 @@ var group__cmsis_plus_rtos_evflag =
 [
     [ "attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html", [
       [ "attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a34644fac121c934c013967eca82b011d", null ],
+      [ "attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a864264b9d25bc57502405f1a8f4aad2c", null ],
+      [ "attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a587692388257cf571bd1bc7c21233001", null ],
       [ "~attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a57afcf807889cfc927f7bbcdeeafd0c2", null ],
+      [ "operator=", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a93f0b825249d787646c28f43c8c2e68a", null ],
+      [ "operator=", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a66964fd9d4f3a41c9dc6a4d2abd083d3", null ],
       [ "clock", "classos_1_1rtos_1_1event__flags_1_1attributes.html#a5d7e0d82010925866a1780e04a8134c4", null ]
     ] ],
     [ "event_flags", "classos_1_1rtos_1_1event__flags.html", [
@@ -12,6 +16,12 @@ var group__cmsis_plus_rtos_evflag =
       [ "clear", "classos_1_1rtos_1_1event__flags.html#afda9fb2eb3ff4c7a6bb6e296302b5374", null ],
       [ "get", "classos_1_1rtos_1_1event__flags.html#abb673856df1e5291bd7b3e4bcd49a734", null ],
       [ "name", "classos_1_1rtos_1_1event__flags.html#a36805a0eae21688c136129059482c3dd", null ],
+      [ "operator delete", "classos_1_1rtos_1_1event__flags.html#aef5d78f2ac3f37daf3984758c9e2ddb2", null ],
+      [ "operator delete[]", "classos_1_1rtos_1_1event__flags.html#adc1c29f4a020deee857f22330e0277ed", null ],
+      [ "operator new", "classos_1_1rtos_1_1event__flags.html#a1456983acc3a56e02cd4a48a220f222c", null ],
+      [ "operator new", "classos_1_1rtos_1_1event__flags.html#a35f709b685919d096e49acb8edefe02f", null ],
+      [ "operator new[]", "classos_1_1rtos_1_1event__flags.html#a27026070d8fd2c51873036cfd1661ce4", null ],
+      [ "operator new[]", "classos_1_1rtos_1_1event__flags.html#ad415429ae3487ec5ae1258b4d2a5787f", null ],
       [ "operator==", "classos_1_1rtos_1_1event__flags.html#a98a6ced0db2585b7b6517ac3bace72e2", null ],
       [ "raise", "classos_1_1rtos_1_1event__flags.html#af63fd5c6a4c59327f76ea2ac16becf3d", null ],
       [ "timed_wait", "classos_1_1rtos_1_1event__flags.html#a2a776fd6c252decb43e8fda705605f8e", null ],

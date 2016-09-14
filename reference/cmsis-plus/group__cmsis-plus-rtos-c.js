@@ -10,6 +10,7 @@ var group__cmsis_plus_rtos_c =
     [ "Mutexes", "group__cmsis-plus-rtos-c-mutex.html", "group__cmsis-plus-rtos-c-mutex" ],
     [ "Semaphores", "group__cmsis-plus-rtos-c-semaphore.html", "group__cmsis-plus-rtos-c-semaphore" ],
     [ "Timers", "group__cmsis-plus-rtos-c-timer.html", "group__cmsis-plus-rtos-c-timer" ],
+    [ "Memory management", "group__cmsis-plus-rtos-c-memres.html", "group__cmsis-plus-rtos-c-memres" ],
     [ "__errno", "group__cmsis-plus-rtos-c.html#ga39b9754c96beda392bdb080bc5653e9e", null ],
     [ "os_main", "group__cmsis-plus-rtos-c.html#gadc9fe392fc6245784eb029f4eecfb8dd", null ]
 ];

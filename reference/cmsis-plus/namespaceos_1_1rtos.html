@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -126,6 +126,7 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Types</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">os::rtos Namespace Reference</div>  </div>
@@ -192,8 +193,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__allocated.html">memory_pool_allocated</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a synchronised <b>memory pool</b> with allocator.  <a href="classos_1_1rtos_1_1memory__pool__allocated.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__static.html">memory_pool_static</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a synchronised <b>memory pool</b> with block type and local storage.  <a href="classos_1_1rtos_1_1memory__pool__static.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html">memory_pool_inclusive</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a synchronised <b>memory pool</b> with block type and local storage.  <a href="classos_1_1rtos_1_1memory__pool__inclusive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html">memory_pool_typed</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a synchronised <b>memory pool</b> with block type and allocator.  <a href="classos_1_1rtos_1_1memory__pool__typed.html#details">More...</a><br /></td></tr>
@@ -204,8 +205,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1message__queue__allocated.html">message_queue_allocated</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with allocator.  <a href="classos_1_1rtos_1_1message__queue__allocated.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1message__queue__static.html">message_queue_static</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and local storage.  <a href="classos_1_1rtos_1_1message__queue__static.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1message__queue__inclusive.html">message_queue_inclusive</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and local storage.  <a href="classos_1_1rtos_1_1message__queue__inclusive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1message__queue__typed.html">message_queue_typed</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>message queue</b> with message type and allocator.  <a href="classos_1_1rtos_1_1message__queue__typed.html#details">More...</a><br /></td></tr>
@@ -215,6 +216,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1mutex__recursive.html">mutex_recursive</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>recursive mutex</b>.  <a href="classos_1_1rtos_1_1mutex__recursive.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1null__locker.html">null_locker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Null locker.  <a href="classos_1_1rtos_1_1null__locker.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1semaphore.html">semaphore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX compliant <b>semaphore</b>.  <a href="classos_1_1rtos_1_1semaphore.html#details">More...</a><br /></td></tr>
@@ -231,8 +235,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread__allocated.html">thread_allocated</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with allocator.  <a href="classos_1_1rtos_1_1thread__allocated.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread__static.html">thread_static</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with local stack.  <a href="classos_1_1rtos_1_1thread__static.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1thread__inclusive.html">thread_inclusive</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template of a POSIX compliant <b>thread</b> with local stack.  <a href="classos_1_1rtos_1_1thread__inclusive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1timer.html">timer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">User single-shot or periodic <b>timer</b>.  <a href="classos_1_1rtos_1_1timer.html#details">More...</a><br /></td></tr>
@@ -245,6 +249,13 @@ Types</h2></td></tr>
 <tr class="memitem:a54633089ccffe9e56ce1137ebe57776d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a> = uint32_t</td></tr>
 <tr class="memdesc:a54633089ccffe9e56ce1137ebe57776d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of values returned by RTOS functions.  <a href="#a54633089ccffe9e56ce1137ebe57776d">More...</a><br /></td></tr>
 <tr class="separator:a54633089ccffe9e56ce1137ebe57776d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga37b0386e27c195cf62056ed8ec48c2f8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ga37b0386e27c195cf62056ed8ec48c2f8"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga37b0386e27c195cf62056ed8ec48c2f8">make_shared</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ga37b0386e27c195cf62056ed8ec48c2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an object that is owned by a <code>shared_ptr</code> and is allocated using the RTOS system allocator.  <a href="group__cmsis-plus-rtos-memres.html#ga37b0386e27c195cf62056ed8ec48c2f8">More...</a><br /></td></tr>
+<tr class="separator:ga37b0386e27c195cf62056ed8ec48c2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -272,7 +283,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00303">303</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8cpp_source.html#l00298">298</a> of file <a class="el" href="os-mutex_8cpp_source.html">os-mutex.cpp</a>.</p>
 
 </div>
 </div>

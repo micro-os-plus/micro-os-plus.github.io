@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -126,16 +126,17 @@ $(document).ready(function(){initNavTree('namespacestd.html','');});
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">std Namespace Reference</div>  </div>
+<div class="title">std Namespace Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-memres.html">Memory management</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2aab280c9a87214e453f8f598827d13b"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a2aab280c9a87214e453f8f598827d13b">get_new_handler</a> () noexcept</td></tr>
+<tr class="memdesc:a2aab280c9a87214e453f8f598827d13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current handler.  <a href="#a2aab280c9a87214e453f8f598827d13b">More...</a><br /></td></tr>
 <tr class="separator:a2aab280c9a87214e453f8f598827d13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6519f396a0019421c491bcdccab811b3"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a6519f396a0019421c491bcdccab811b3">set_new_handler</a> (new_handler handler) noexcept</td></tr>
-<tr class="memdesc:a6519f396a0019421c491bcdccab811b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the function designated by handler as the current new_handler.  <a href="#a6519f396a0019421c491bcdccab811b3">More...</a><br /></td></tr>
+<tr class="memdesc:a6519f396a0019421c491bcdccab811b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the function designated by handler as the current <code>new_handler</code>.  <a href="#a6519f396a0019421c491bcdccab811b3">More...</a><br /></td></tr>
 <tr class="separator:a6519f396a0019421c491bcdccab811b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -165,7 +166,12 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00089">89</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Get the current handler. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to user function, or <code>nullptr</code> if not set.</dd></dl>
+<p>The initial <code>new_handler</code> is a null pointer. </p>
+
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00116">116</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,17 +197,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Establishes the function designated by handler as the current new_handler. </p>
+<p>Establishes the function designated by handler as the current <code>new_handler</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handler</td><td></td></tr>
+    <tr><td class="paramname">handler</td><td>Pointer to user function. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous handler.</dd></dl>
-<p>The initial new_handler is a null pointer. </p>
+<p>This handler is invoked when the standard <a class="el" href="group__cmsis-plus-rtos-memres.html#ga98d1fa89f048e8bde29089fccc11a3fc" title="Allocate space for a new object instance. ">operator new()</a> detect an out of memory condition, to give a chance to the application process it properly. If the application can arrange for more memory to be used for allocation, this function should return and the allocation process is retried. If not, this function should gracefully shut down and restart.</p>
+<p>The initial <code>new_handler</code> is a null pointer. </p>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00075">75</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00094">94</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +223,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= nothrow_t</div><div class="line">    { }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00064">64</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00074">74</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -117,7 +117,8 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-core.html','');
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Core &amp; scheduler<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a></div></div>  </div>
 </div><!--header-->
@@ -140,9 +141,41 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1rtos_1_1statistics"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1rtos_1_1statistics.html">os::rtos::statistics</a></td></tr>
 <tr class="memdesc:namespaceos_1_1rtos_1_1statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistics namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga2060bb385320119880c8956fc8fb1c5b"><td class="memItemLeft" align="right" valign="top">class thread::stack *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">os::rtos::interrupts::stack</a> (void)</td></tr>
+<tr class="memdesc:ga2060bb385320119880c8956fc8fb1c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the interrupts stack.  <a href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">More...</a><br /></td></tr>
+<tr class="separator:ga2060bb385320119880c8956fc8fb1c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C++ API scheduler definitions. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga2060bb385320119880c8956fc8fb1c5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class thread::stack * os::rtos::interrupts::stack </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the interrupts stack. </p>
+<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to stack object instance.</dd></dl>
+<p>The interrupts stack can be manipulated in a way similar to the thread stack.</p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only on platforms that support a separate interrupt stack (like Cortex-M).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
+
+<p>Definition at line <a class="el" href="os-core_8cpp_source.html#l00521">521</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

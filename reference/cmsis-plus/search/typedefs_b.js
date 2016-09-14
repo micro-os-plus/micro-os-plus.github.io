@@ -21,6 +21,7 @@ var searchData=
   ['os_5firq_5fstate_5ft',['os_irq_state_t',['../group__cmsis-plus-rtos-c-core.html#ga9d7369bbc37e4ba09aa9dec8b58b0610',1,'os-c-decls.h']]],
   ['os_5fiterator_5ft',['os_iterator_t',['../group__cmsis-plus-rtos-c-core.html#gad2e40378f4beb5cd5c21fc5753ce182a',1,'os-c-decls.h']]],
   ['os_5fmail_5fqueue_5ft',['os_mail_queue_t',['../cmsis__os_8h.html#ad4c76b32057b40a4c9f8a813d82019e8',1,'cmsis_os.h']]],
+  ['os_5fmemory_5ft',['os_memory_t',['../group__cmsis-plus-rtos-c-memres.html#gaa6f623e2561070f971359374c18bd40e',1,'os-c-decls.h']]],
   ['os_5fmempool_5fattr_5ft',['os_mempool_attr_t',['../group__cmsis-plus-rtos-c-mempool.html#gae4b7a92edc8640a265e6223205e9016a',1,'os-c-decls.h']]],
   ['os_5fmempool_5fsize_5ft',['os_mempool_size_t',['../os-c-decls_8h.html#aabac07100301e21809737351cc209717',1,'os-c-decls.h']]],
   ['os_5fmempool_5ft',['os_mempool_t',['../group__cmsis-plus-rtos-c-mempool.html#ga2596c5158a3a6a6dfee34304dfb9e40d',1,'os-c-decls.h']]],
@@ -88,5 +89,6 @@ var searchData=
   ['ostimer',['osTimer',['../cmsis__os_8h.html#a350266287188b42859d75f1d7d33f9fd',1,'cmsis_os.h']]],
   ['ostimerattr',['osTimerAttr',['../cmsis__os_8h.html#a77dd2a3022d715f2ac93d694387c5792',1,'cmsis_os.h']]],
   ['ostimerdef_5ft',['osTimerDef_t',['../cmsis__os_8h.html#a4fa06198874bc76e8dc26db38fc2f9d6',1,'cmsis_os.h']]],
-  ['ostimerid',['osTimerId',['../cmsis__os_8h.html#a8dff27523c3fda42403f35ade9c46e50',1,'cmsis_os.h']]]
+  ['ostimerid',['osTimerId',['../cmsis__os_8h.html#a8dff27523c3fda42403f35ade9c46e50',1,'cmsis_os.h']]],
+  ['out_5fof_5fmemory_5fhandler_5ft',['out_of_memory_handler_t',['../group__cmsis-plus-rtos-memres.html#ga165e1d42e364dcabcbf01e5322b9f554',1,'os::rtos::memory']]]
 ];

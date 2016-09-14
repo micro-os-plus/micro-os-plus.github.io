@@ -29,6 +29,7 @@ var os_c_decls_8h =
     [ "os_internal_waiting_thread_node_t", "os-c-decls_8h.html#a904bb224d116b6ed18ffb61afc364f93", null ],
     [ "os_irq_state_t", "group__cmsis-plus-rtos-c-core.html#ga9d7369bbc37e4ba09aa9dec8b58b0610", null ],
     [ "os_iterator_t", "group__cmsis-plus-rtos-c-core.html#gad2e40378f4beb5cd5c21fc5753ce182a", null ],
+    [ "os_memory_t", "group__cmsis-plus-rtos-c-memres.html#gaa6f623e2561070f971359374c18bd40e", null ],
     [ "os_mempool_attr_t", "group__cmsis-plus-rtos-c-mempool.html#gae4b7a92edc8640a265e6223205e9016a", null ],
     [ "os_mempool_size_t", "os-c-decls_8h.html#aabac07100301e21809737351cc209717", null ],
     [ "os_mempool_t", "group__cmsis-plus-rtos-c-mempool.html#ga2596c5158a3a6a6dfee34304dfb9e40d", null ],

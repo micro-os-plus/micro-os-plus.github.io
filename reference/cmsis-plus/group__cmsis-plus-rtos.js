@@ -9,5 +9,6 @@ var group__cmsis_plus_rtos =
     [ "Message queues", "group__cmsis-plus-rtos-mqueue.html", "group__cmsis-plus-rtos-mqueue" ],
     [ "Mutexes", "group__cmsis-plus-rtos-mutex.html", "group__cmsis-plus-rtos-mutex" ],
     [ "Semaphores", "group__cmsis-plus-rtos-semaphore.html", "group__cmsis-plus-rtos-semaphore" ],
-    [ "Timers", "group__cmsis-plus-rtos-timer.html", "group__cmsis-plus-rtos-timer" ]
+    [ "Timers", "group__cmsis-plus-rtos-timer.html", "group__cmsis-plus-rtos-timer" ],
+    [ "Memory management", "group__cmsis-plus-rtos-memres.html", "group__cmsis-plus-rtos-memres" ]
 ];

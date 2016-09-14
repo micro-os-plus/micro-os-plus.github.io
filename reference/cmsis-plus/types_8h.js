@@ -62,6 +62,6 @@ var types_8h =
     [ "__posix_wait", "types_8h.html#af5ee8cb019f75066a7f462b919d5990e", null ],
     [ "__posix_write", "types_8h.html#a925f315f0fd4466fea0b8d8b4814137d", null ],
     [ "__posix_writev", "types_8h.html#ae14a4f38a51d65192d03e6f9f536c56b", null ],
-    [ "os_initialize_args", "types_8h.html#a8f6955bee75d71b792b23eef9aaaff32", null ],
+    [ "os_startup_initialize_args", "types_8h.html#a93965d610e08f0905fc7c8dff44bed61", null ],
     [ "noFileDescriptor", "types_8h.html#ad52280e4d26eb2e1f792567064dcda38", null ]
 ];

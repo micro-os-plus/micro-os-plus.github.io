@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -164,13 +164,20 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>malloc_memory_resource()
+: <a class="el" href="classos_1_1memory_1_1malloc__memory__resource.html#a0157388861d8b62f2ea7c8d7e600006b">os::memory::malloc_memory_resource</a>
+</li>
 <li>mask()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">os::rtos::internal::event_flags</a>
 </li>
+<li>max_allocated_bytes()
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a533ab1d1b397d83315541ff6ffce4b02">os::rtos::memory::memory_resource</a>
+</li>
 <li>max_size()
-: <a class="el" href="classos_1_1estd_1_1polymorphic__allocator.html#ae704a2e6a8bd0341d604df543549b0a4">os::estd::polymorphic_allocator&lt; T, L &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1new__delete__allocator.html#a1fcf82f80d3320108400ffee8a099a37">os::rtos::memory::new_delete_allocator&lt; T &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html#af543c6c83532cb86c09a98990686d1e9">os::rtos::memory::polymorphic_allocator&lt; T &gt;</a>
+: <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#a021a680f65db19526a40de3a2a7d7f32">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#af4ad8465ce867e36e0557dd88c6cf0eb">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#af972c74a19fecfa4e699cb632061b6e3">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a6d4acf8e4ebc78c12f315504f10a5f61">os::rtos::memory::memory_resource</a>
 </li>
 <li>max_value()
 : <a class="el" href="classos_1_1rtos_1_1semaphore.html#a12882c8f1b9dac665087b6f88428a1b8">os::rtos::semaphore</a>
@@ -181,20 +188,23 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
 <li>memory_pool_allocated()
 : <a class="el" href="classos_1_1rtos_1_1memory__pool__allocated.html#ad59f9c8e02a675cdbc4f075957d0fb39">os::rtos::memory_pool_allocated&lt; Allocator &gt;</a>
 </li>
-<li>memory_pool_static()
-: <a class="el" href="classos_1_1rtos_1_1memory__pool__static.html#a488ff22fe88bac03a7752a873607f672">os::rtos::memory_pool_static&lt; T, N &gt;</a>
+<li>memory_pool_inclusive()
+: <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a26690848e5068fffeaa2fca4ff402592">os::rtos::memory_pool_inclusive&lt; T, N &gt;</a>
 </li>
 <li>memory_pool_typed()
 : <a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html#ade5db60437324a2029eef68720589b9b">os::rtos::memory_pool_typed&lt; T, Allocator &gt;</a>
+</li>
+<li>memory_resource()
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a3be76038e28cd874354bdefdcd0ef551">os::rtos::memory::memory_resource</a>
 </li>
 <li>message_queue()
 : <a class="el" href="classos_1_1rtos_1_1message__queue.html#abdffbae1fad40d43c075210034f2eab4">os::rtos::message_queue</a>
 </li>
 <li>message_queue_allocated()
-: <a class="el" href="classos_1_1rtos_1_1message__queue__allocated.html#a0422cfcf7589d71acbab79b149460551">os::rtos::message_queue_allocated&lt; Allocator &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1message__queue__allocated.html#a519364b6c442701a6e0a20c1a78abf2b">os::rtos::message_queue_allocated&lt; Allocator &gt;</a>
 </li>
-<li>message_queue_static()
-: <a class="el" href="classos_1_1rtos_1_1message__queue__static.html#a0162825b021230807dd88b7ba211da1f">os::rtos::message_queue_static&lt; T, N &gt;</a>
+<li>message_queue_inclusive()
+: <a class="el" href="classos_1_1rtos_1_1message__queue__inclusive.html#a88adfdbbd10392ac473e20c2c1ef28a9">os::rtos::message_queue_inclusive&lt; T, N &gt;</a>
 </li>
 <li>message_queue_typed()
 : <a class="el" href="classos_1_1rtos_1_1message__queue__typed.html#ab3275209d1facd87fd51ef7045711d80">os::rtos::message_queue_typed&lt; T, Allocator &gt;</a>
@@ -210,11 +220,11 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
 </li>
 <li>mutex()
 : <a class="el" href="classos_1_1estd_1_1mutex.html#ad3fbd0971e672dafd88fdd516a9ae029">os::estd::mutex</a>
-, <a class="el" href="classos_1_1estd_1_1unique__lock.html#aa7f883416dc7068f13f39def08614a97">os::estd::unique_lock&lt; Mutex_T &gt;</a>
+, <a class="el" href="classos_1_1estd_1_1unique__lock.html#a4a72e9f35d99d29183903ef31cb5ed90">os::estd::unique_lock&lt; L &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1mutex.html#a5e56aece25fd2a280665afedac2d79f0">os::rtos::mutex</a>
 </li>
 <li>mutex_recursive()
-: <a class="el" href="classos_1_1rtos_1_1mutex__recursive.html#a85cdce9a2c888eeddb3992770acb3487">os::rtos::mutex_recursive</a>
+: <a class="el" href="classos_1_1rtos_1_1mutex__recursive.html#a46b0f98909435f8dad5ef194e601e388">os::rtos::mutex_recursive</a>
 </li>
 </ul>
 </div><!-- contents -->

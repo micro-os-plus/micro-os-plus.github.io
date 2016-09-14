@@ -1,18 +1,9 @@
 var searchData=
 [
-  ['semaphore',['semaphore',['../classos_1_1rtos_1_1semaphore.html',1,'os::rtos']]],
-  ['semaphore_5fbinary',['semaphore_binary',['../classos_1_1rtos_1_1semaphore__binary.html',1,'os::rtos']]],
-  ['semaphore_5fcounting',['semaphore_counting',['../classos_1_1rtos_1_1semaphore__counting.html',1,'os::rtos']]],
-  ['serial',['Serial',['../classos_1_1driver_1_1_serial.html',1,'os::driver']]],
-  ['stack',['stack',['../classos_1_1rtos_1_1thread_1_1stack.html',1,'os::rtos::thread']]],
-  ['state',['state',['../structos_1_1rtos_1_1thread_1_1state.html',1,'os::rtos::thread']]],
-  ['state',['state',['../structos_1_1rtos_1_1timer_1_1state.html',1,'os::rtos::timer']]],
-  ['static_5fdouble_5flist',['static_double_list',['../classos_1_1rtos_1_1internal_1_1static__double__list.html',1,'os::rtos::internal']]],
-  ['static_5fdouble_5flist_5flinks',['static_double_list_links',['../classos_1_1rtos_1_1internal_1_1static__double__list__links.html',1,'os::rtos::internal']]],
-  ['statistics',['statistics',['../classos_1_1rtos_1_1thread_1_1statistics.html',1,'os::rtos::thread']]],
-  ['status',['Status',['../classos_1_1driver_1_1usb_1_1device_1_1_status.html',1,'os::driver::usb::device']]],
-  ['status',['Status',['../classos_1_1driver_1_1usb_1_1host_1_1_status.html',1,'os::driver::usb::host']]],
-  ['status',['Status',['../classos_1_1driver_1_1serial_1_1_status.html',1,'os::driver::serial']]],
-  ['system_5fclock',['system_clock',['../classos_1_1estd_1_1chrono_1_1system__clock.html',1,'os::estd::chrono']]],
-  ['systick_5fclock',['systick_clock',['../classos_1_1estd_1_1chrono_1_1systick__clock.html',1,'os::estd::chrono']]]
+  ['ready_5fthreads_5flist',['ready_threads_list',['../classos_1_1rtos_1_1internal_1_1ready__threads__list.html',1,'os::rtos::internal']]],
+  ['realtime_5fclock',['realtime_clock',['../classos_1_1estd_1_1chrono_1_1realtime__clock.html',1,'os::estd::chrono']]],
+  ['recursive_5fmutex',['recursive_mutex',['../classos_1_1estd_1_1recursive__mutex.html',1,'os::estd']]],
+  ['recursive_5ftimed_5fmutex',['recursive_timed_mutex',['../classos_1_1estd_1_1recursive__timed__mutex.html',1,'os::estd']]],
+  ['robustness',['robustness',['../structos_1_1rtos_1_1mutex_1_1robustness.html',1,'os::rtos::mutex']]],
+  ['run',['run',['../structos_1_1rtos_1_1timer_1_1run.html',1,'os::rtos::timer']]]
 ];

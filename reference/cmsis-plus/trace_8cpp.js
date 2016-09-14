@@ -13,7 +13,7 @@ var trace_8cpp =
     [ "trace_printf", "trace_8cpp.html#a6a6492d4a967fc866e4825f6146cec37", null ],
     [ "trace_putchar", "trace_8cpp.html#a0a58d8674f578e4f8fa90ee7c3ebb071", null ],
     [ "trace_puts", "trace_8cpp.html#af690ad866f65f64c9ca11ba6722d7974", null ],
-    [ "trace_vprintf", "trace_8cpp.html#a36acfdd5a9c9ad027ef989a94e6d281a", null ],
+    [ "trace_vprintf", "trace_8cpp.html#a765b02834ecee237f33d6e2294f4d65b", null ],
     [ "trace_write", "trace_8cpp.html#a621f9531bd83624d42c014c1e75a5d66", null ],
     [ "vprintf", "trace_8cpp.html#ga91e6ffbb2227d7363c07c016366249e8", null ],
     [ "write", "trace_8cpp.html#a5e626eea11f3605e19b207a68b13b822", null ]

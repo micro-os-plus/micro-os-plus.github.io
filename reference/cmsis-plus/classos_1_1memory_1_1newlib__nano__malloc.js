@@ -1,0 +1,27 @@
+var classos_1_1memory_1_1newlib__nano__malloc =
+[
+    [ "newlib_nano_malloc", "classos_1_1memory_1_1newlib__nano__malloc.html#a31251ef989d1c7e2dd85ea7289e10bd3", null ],
+    [ "newlib_nano_malloc", "classos_1_1memory_1_1newlib__nano__malloc.html#a2d91c1266829f0c276d8f62810bb3b33", null ],
+    [ "~newlib_nano_malloc", "classos_1_1memory_1_1newlib__nano__malloc.html#a618c5aba350f146e6c100b3fd0d86f39", null ],
+    [ "align", "classos_1_1memory_1_1newlib__nano__malloc.html#a9a7a5e6ca02b793eb892cffc03ffe392", null ],
+    [ "allocate", "classos_1_1memory_1_1newlib__nano__malloc.html#a5284ae746c3d0f71a02acdb9ed69f815", null ],
+    [ "allocated_bytes", "classos_1_1memory_1_1newlib__nano__malloc.html#a4461f324ac21f845527f391ce47c2dd0", null ],
+    [ "allocated_chunks", "classos_1_1memory_1_1newlib__nano__malloc.html#a2f4e57e4e77ead637b0720a9c6fee762", null ],
+    [ "coalesce", "classos_1_1memory_1_1newlib__nano__malloc.html#a1ad8d18056f87e387cd86d2632566a53", null ],
+    [ "deallocate", "classos_1_1memory_1_1newlib__nano__malloc.html#a43986889676bf5f4274e60538ccd76ee", null ],
+    [ "do_allocate", "classos_1_1memory_1_1newlib__nano__malloc.html#a9d6d135a6eaf4305fdd6a22c27db9f32", null ],
+    [ "do_coalesce", "classos_1_1memory_1_1newlib__nano__malloc.html#a2949e2fa9faf3dcbcc1822bce975e6dc", null ],
+    [ "do_deallocate", "classos_1_1memory_1_1newlib__nano__malloc.html#a342871104517924edc2cfc4af0a0ed69", null ],
+    [ "do_is_equal", "classos_1_1memory_1_1newlib__nano__malloc.html#a3669f91812f347941545ede47d7f12ac", null ],
+    [ "do_max_size", "classos_1_1memory_1_1newlib__nano__malloc.html#ac24018b048970b2827809e9da66849b6", null ],
+    [ "do_reset", "classos_1_1memory_1_1newlib__nano__malloc.html#a5e98e6eb063e5aeb21d5c00a7f9aa4cb", null ],
+    [ "free_bytes", "classos_1_1memory_1_1newlib__nano__malloc.html#af317cfeb595643a0e27901bc9a983f14", null ],
+    [ "free_chunks", "classos_1_1memory_1_1newlib__nano__malloc.html#ae6c44b3b065fd27a202d1a3dfa2f285f", null ],
+    [ "is_equal", "classos_1_1memory_1_1newlib__nano__malloc.html#a744c6dfea9b1d3ec3cff05fb40d832e6", null ],
+    [ "max_size", "classos_1_1memory_1_1newlib__nano__malloc.html#a6d4acf8e4ebc78c12f315504f10a5f61", null ],
+    [ "out_of_memory_handler", "classos_1_1memory_1_1newlib__nano__malloc.html#ad208c11d7df324b8bf0a010f29d88f50", null ],
+    [ "out_of_memory_handler", "classos_1_1memory_1_1newlib__nano__malloc.html#a5f26792209fb575350c8eba08960a809", null ],
+    [ "reset", "classos_1_1memory_1_1newlib__nano__malloc.html#a7cf334270b97273de3ad4d8e32c31af3", null ],
+    [ "total_bytes", "classos_1_1memory_1_1newlib__nano__malloc.html#aa4149d7ffaa8e6d5cabc26ef8c439fa8", null ],
+    [ "max_align", "classos_1_1memory_1_1newlib__nano__malloc.html#af8258a63966f621605804691ae4d2179", null ]
+];

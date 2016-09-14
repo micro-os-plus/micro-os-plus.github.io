@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -140,14 +140,18 @@ $(document).ready(function(){initNavTree('os-decls_8h.html','');});
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;<a class="el" href="os-lists_8h_source.html">cmsis-plus/rtos/internal/os-lists.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="os-types_8h_source.html">cmsis-plus/rtos/os-types.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="system__error_source.html">cmsis-plus/iso/system_error</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="system__error_source.html">cmsis-plus/estd/system_error</a>&gt;</code><br />
 </div>
 <p><a href="os-decls_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard allocator based on the RTOS system default memory manager.  <a href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1attributes__clocked.html">os::rtos::internal::attributes_clocked</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for attributes.  <a href="classos_1_1rtos_1_1internal_1_1attributes__clocked.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,12 +165,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html">os::rtos::port::interrupts::critical_section</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory_1_1new__delete__allocator.html">os::rtos::memory::new_delete_allocator&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1null__locker.html">os::rtos::null_locker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Null locker.  <a href="classos_1_1rtos_1_1null__locker.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html">os::rtos::internal::object_named</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for named objects.  <a href="classos_1_1rtos_1_1internal_1_1object__named.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory_1_1polymorphic__allocator.html">os::rtos::memory::polymorphic_allocator&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named__system.html">os::rtos::internal::object_named_system</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for named system objects.  <a href="classos_1_1rtos_1_1internal_1_1object__named__system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1port_1_1thread.html">os::rtos::port::thread</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,7 +366,7 @@ Functions</h2></td></tr>
 <p>Assert or return an error. </p>
 <p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, the given error code is returned. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00874">874</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01136">1136</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -389,9 +395,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Assert or throw a system error exception. </p>
-<p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, a ssytem error exception is thrown (which is replaced by an <code>abort()</code> if exceptions are disabled). </p>
+<p>As required by the ANSI standards, if <code>NDEBUG</code> is defined, the assertion is disabled and if the condition is true, a ssytem error exception is thrown (which is replaced by an <code><a class="el" href="exit_8c.html#a8dec7c95227ff149687066cf04029191">abort()</a></code> if exceptions are disabled). </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00889">889</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01151">1151</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -405,7 +411,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00914">914</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01176">1176</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -419,7 +425,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00910">910</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01172">1172</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +439,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00906">906</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01168">1168</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +453,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00900">900</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l01162">1162</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>

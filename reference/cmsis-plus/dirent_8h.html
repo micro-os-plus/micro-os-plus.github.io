@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.6</span>
+     &#160;<span id="projectnumber">v6.3.7</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -122,13 +122,121 @@ $(document).ready(function(){initNavTree('dirent_8h.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">dirent.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="dirent_8h_source.html">dirent.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
 </div>
 <p><a href="dirent_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_i_r.html">DIR</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdirent.html">dirent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5e007aea157a97e520b579680113ac35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dirent_8h.html#a5e007aea157a97e520b579680113ac35">OS_INTEGER_DIRENT_NAME_MAX</a>&#160;&#160;&#160;(256)</td></tr>
+<tr class="separator:a5e007aea157a97e520b579680113ac35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aaeac2b41e8c2c3a5f91c9bd511a8c0a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dirent_8h.html#aaeac2b41e8c2c3a5f91c9bd511a8c0a6">closedir</a> (<a class="el" href="struct_d_i_r.html">DIR</a> *dirp)</td></tr>
+<tr class="separator:aaeac2b41e8c2c3a5f91c9bd511a8c0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09dd96447776d2bc5d8321e4b499591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_d_i_r.html">DIR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dirent_8h.html#ad09dd96447776d2bc5d8321e4b499591">opendir</a> (const char *dirname)</td></tr>
+<tr class="separator:ad09dd96447776d2bc5d8321e4b499591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58257faf8b13b3f14558613c632b2373"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdirent.html">dirent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dirent_8h.html#a58257faf8b13b3f14558613c632b2373">readdir</a> (<a class="el" href="struct_d_i_r.html">DIR</a> *dirp)</td></tr>
+<tr class="separator:a58257faf8b13b3f14558613c632b2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fcb58b9194b1a3c1699654de963719"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dirent_8h.html#ad4fcb58b9194b1a3c1699654de963719">rewinddir</a> (<a class="el" href="struct_d_i_r.html">DIR</a> *dirp)</td></tr>
+<tr class="separator:ad4fcb58b9194b1a3c1699654de963719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a5e007aea157a97e520b579680113ac35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_INTEGER_DIRENT_NAME_MAX&#160;&#160;&#160;(256)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="dirent_8h_source.html#l00045">45</a> of file <a class="el" href="dirent_8h_source.html">dirent.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aaeac2b41e8c2c3a5f91c9bd511a8c0a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int closedir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_i_r.html">DIR</a> *&#160;</td>
+          <td class="paramname"><em>dirp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad09dd96447776d2bc5d8321e4b499591"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_d_i_r.html">DIR</a>* opendir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dirname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58257faf8b13b3f14558613c632b2373"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdirent.html">dirent</a>* readdir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_i_r.html">DIR</a> *&#160;</td>
+          <td class="paramname"><em>dirp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad4fcb58b9194b1a3c1699654de963719"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rewinddir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_i_r.html">DIR</a> *&#160;</td>
+          <td class="paramname"><em>dirp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
