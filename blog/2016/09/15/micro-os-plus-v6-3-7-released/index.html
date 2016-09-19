@@ -295,12 +295,12 @@ Posted on September 15, 2016 by Liviu Ionescu.
 <h2 id="download">Download</h2>
 
 <p>As of now, the <strong>µOS++</strong> code is split between several GitHub projects and needs to be brought together to compose a project.
-To automate this process, some scripts were written. Toe experiment with <strong>µOS++</strong>, please check the demo projects, available from <a href="https://github.com/micro-os-plus/eclipse-demo-projects">GitHub</a>, and use a similar structure for your projects.</p>
+To automate this process, some scripts were written. To experiment with <strong>µOS++</strong>, please check the demo projects, available from <a href="https://github.com/micro-os-plus/eclipse-demo-projects">GitHub</a>, and use a similar structure for your projects.</p>
 
 <h2 id="new-features">New features</h2>
 
 <ul>
-  <li>advanced memory management; several <code class="highlighter-rouge">memory_resource</code> classes were added, with various allocation policies (<code class="highlighter-rouge">first_fit_top</code>, <code class="highlighter-rouge">lifo</code>, <code class="highlighter-rouge">block_pool</code>). Based on this classes, an application allocator was implemented, and the standard C++ <code class="highlighter-rouge">new</code> and <code class="highlighter-rouge">delete</code>, as the standard C <code class="highlighter-rouge">malloc()</code> and <code class="highlighter-rouge">free()</code> were routed to this allocator. An optional allocator for the RTOS system objects can be defined. For special applications, optional pools of system objects can be created and allocation for these objects redirected to the pools.</li>
+  <li>advanced memory management; several <code class="highlighter-rouge">memory_resource</code> classes were added, with various allocation policies (<code class="highlighter-rouge">first_fit_top</code>, <code class="highlighter-rouge">lifo</code>, <code class="highlighter-rouge">block_pool</code>). Based on these classes, an application allocator was implemented, and the standard C++ <code class="highlighter-rouge">new</code> and <code class="highlighter-rouge">delete</code>, as the standard C <code class="highlighter-rouge">malloc()</code> and <code class="highlighter-rouge">free()</code> were routed to this allocator. An optional allocator for the RTOS system objects can be defined. For special applications, optional pools of system objects can be created and allocation for these objects redirected to the pools.</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
