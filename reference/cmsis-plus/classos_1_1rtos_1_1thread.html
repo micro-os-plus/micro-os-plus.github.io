@@ -650,7 +650,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to arguments.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02309">2309</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02315">2315</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -717,7 +717,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02320">2320</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02326">2326</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1128,7 @@ Static Public Attributes</h2></td></tr>
 <p>Identical threads should have the same memory address.</p>
 <p>Compatible with POSIX pthread_equal(). <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html">http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_equal.html</a> </p>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02287">2287</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02293">2293</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1310,7 +1310,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the context stack object instance.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02382">2382</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02396">2396</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1341,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Thread scheduler state.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02298">2298</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02304">2304</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1368,7 +1368,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02395">2395</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02409">2409</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -1399,9 +1399,11 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The address of the thread user storage.</dd></dl>
 <p>The user storage is a custom structure defined in <code>&lt;<a class="el" href="os-app-config_8h.html" title="Application configuration file. ">os-app-config.h</a>&gt;</code>, which is added to each and every thread storage. Applications can store here any data.</p>
 <p>Inspired by (actually a generalisation of) µC-OS III task user registers and FreeRTOS thread local storage, which proved useful when implementing CMSIS+ over FreeRTOS.</p>
-<dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Available only when <code>OS_INCLUDE_RTOS_CUSTOM_THREAD_USER_STORAGE</code> is defined.</dd>
+<dd>
+Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02339">2339</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02351">2351</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
