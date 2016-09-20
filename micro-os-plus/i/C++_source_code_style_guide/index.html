@@ -1,21 +1,21 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>C++ source code style guide</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="C++ source code style guide" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="C++ source code style guide">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
   <meta property="article:published_time" content="2011-05-21">
@@ -24,9 +24,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
@@ -169,7 +169,8 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s <strong>manual</strong></a>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
     <ul>
       <li><a href="/user-manual/getting-started/">Getting started</a></li>
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
@@ -241,7 +242,7 @@
 <table id="last-modified">
   <tr>
     <td id="last-modified">Page date Sat May 21 08:49:59 2011 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/C++_source_code_style_guide.md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/C++_source_code_style_guide.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
@@ -288,7 +289,8 @@
 </tr>
 </tbody>
 </table>
-</div><h1 id="overview">Overview</h1>
+</div>
+<h1 id="overview">Overview</h1>
 
 <p>This document describes the recommended approaches for the format and structure of C++ source code files.</p>
 
@@ -305,7 +307,9 @@
 <p>For consistency, it is strongly recommended to always use the Eclipse CDT formatter</p>
 
 <ul>
-  <li><strong>Eclipse</strong> menu: <strong>Source</strong> → <strong>Format</strong></li>
+  <li>
+<strong>Eclipse</strong> menu: <strong>Source</strong> → <strong>Format</strong>
+</li>
 </ul>
 
 <h1 id="c-source-code-files">C++ source code files</h1>
@@ -325,10 +329,18 @@
 <p>The following binary operators are written with no space around them:</p>
 
 <ul>
-  <li><strong>-&gt;</strong> - structure pointer operator - <strong>me-&gt;foo</strong></li>
-  <li><strong>.</strong> structure member operator - <strong>s.foo</strong></li>
-  <li><strong>[]</strong> - array subscription - <strong>a[i]</strong></li>
-  <li><strong>()</strong> - function call - <strong>foo(x, y, z)</strong></li>
+  <li>
+<strong>-&gt;</strong> - structure pointer operator - <strong>me-&gt;foo</strong>
+</li>
+  <li>
+<strong>.</strong> structure member operator - <strong>s.foo</strong>
+</li>
+  <li>
+<strong>[]</strong> - array subscription - <strong>a[i]</strong>
+</li>
+  <li>
+<strong>()</strong> - function call - <strong>foo(x, y, z)</strong>
+</li>
 </ul>
 
 <p>The unary operators are written with no spaces between them and their operands:</p>
@@ -382,7 +394,8 @@
 
 <p>Paired open and close parenthesis must have the same position:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Parser
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class Parser
 {
 public:
   Parser();
@@ -396,7 +409,8 @@ protected:
 
 <p>The statement following any of the keywords (if, else, while, for, switch, case, do) must be compound, that is, use of braces is obligatory, even if the actual statement is singular.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  if (condition)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>  if (condition)
     {
       i = 1;
     }
@@ -411,7 +425,8 @@ protected:
 
 <p>Use C++ comments, one space separator and continue up to column 79. If text is used, it comes after 5 dashes, and is delimited by spaces.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// ----------------------------------------------------------------------------
+<div class="highlighter-rouge">
+<pre class="highlight"><code>// ----------------------------------------------------------------------------
 
 // ----- Static data ----------------------------------------------------------
 
@@ -447,7 +462,12 @@ protected:
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
 </ul>
 
 

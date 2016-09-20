@@ -1,21 +1,21 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Coding style (SE)</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="Coding style (SE)" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="Coding style (SE)">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
   <meta property="article:published_time" content="2014-02-22">
@@ -24,9 +24,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
@@ -169,7 +169,8 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s <strong>manual</strong></a>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
     <ul>
       <li><a href="/user-manual/getting-started/">Getting started</a></li>
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
@@ -241,7 +242,7 @@
 <table id="last-modified">
   <tr>
     <td id="last-modified">Page date Sat Feb 22 15:57:49 2014 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Coding_style_(SE).md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Coding_style_(SE).md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
@@ -601,26 +602,34 @@
 </tr>
 </tbody>
 </table>
-</div><p>The following rules are mainly based on <em>MISRA C++:2008 Guidelines for the use of the C++ language in critical systems</em>, by Motor Industry Software Reliability Association with additions from <em>Joint Strike Fighter Air Vehicle C++ Coding Standards</em>, Lockheed Martin Corporation Doc. No. 2RDU00001 Rev D, dated June 2007, with some changes and clarifications.</p>
+</div>
+<p>The following rules are mainly based on <em>MISRA C++:2008 Guidelines for the use of the C++ language in critical systems</em>, by Motor Industry Software Reliability Association with additions from <em>Joint Strike Fighter Air Vehicle C++ Coding Standards</em>, Lockheed Martin Corporation Doc. No. 2RDU00001 Rev D, dated June 2007, with some changes and clarifications.</p>
 
 <h2 id="general-design">General Design</h2>
 
 <p>This coding standards document is intended to help programmers develop code that conforms to safety-critical software principles, i.e., code that does not contain defects that could lead to catastrophic failures resulting in significant harm to individuals and/or equipment. In general, the code produced should exhibit the following important qualities:</p>
 
 <ul>
-  <li><strong>Reliability</strong>: Executable code should consistently fulfill all requirements in a predictable manner.</li>
-  <li><strong>Portability</strong>: Source code should be portable (i.e. not compiler or linker dependent).</li>
-  <li><strong>Maintainability</strong>: Source code should be written in a manner that is consistent, readable, simple in design, and easy to debug.</li>
-  <li><strong>Testability</strong>: Source code should be written to facilitate testability. Minimizing the following characteristics for each software module will facilitate a more testable and maintainable module:
+  <li>
+<strong>Reliability</strong>: Executable code should consistently fulfill all requirements in a predictable manner.</li>
+  <li>
+<strong>Portability</strong>: Source code should be portable (i.e. not compiler or linker dependent).</li>
+  <li>
+<strong>Maintainability</strong>: Source code should be written in a manner that is consistent, readable, simple in design, and easy to debug.</li>
+  <li>
+<strong>Testability</strong>: Source code should be written to facilitate testability. Minimizing the following characteristics for each software module will facilitate a more testable and maintainable module:
     <ol>
       <li>code size</li>
       <li>complexity</li>
       <li>static path count (number of paths through a piece of code)</li>
     </ol>
   </li>
-  <li><strong>Reusability</strong>: The design of reusable components is encouraged. Component reuse can eliminate redundant development and test activities (i.e. reduce costs).</li>
-  <li><strong>Extensibility</strong>: Requirements are expected to evolve over the life of a product. Thus, a system should be developed in an extensible manner (i.e. perturbations in requirements may be managed through local extensions rather than wholesale modifications).</li>
-  <li><strong>Readability</strong>: Source code should be written in a manner that is easy to read, understand and comprehend.</li>
+  <li>
+<strong>Reusability</strong>: The design of reusable components is encouraged. Component reuse can eliminate redundant development and test activities (i.e. reduce costs).</li>
+  <li>
+<strong>Extensibility</strong>: Requirements are expected to evolve over the life of a product. Thus, a system should be developed in an extensible manner (i.e. perturbations in requirements may be managed through local extensions rather than wholesale modifications).</li>
+  <li>
+<strong>Readability</strong>: Source code should be written in a manner that is easy to read, understand and comprehend.</li>
 </ul>
 
 <h3 id="coupling--cohesion">Coupling &amp; Cohesion</h3>
@@ -634,9 +643,12 @@
 <p>There are three types of rules: should, will, and shall rules. Each rule contains either a “should”, “will” or a “shall” in bold letters indicating its type.</p>
 
 <ul>
-  <li><strong>Should</strong> rules are advisory rules. They strongly suggest the recommended way of doing things.</li>
-  <li><strong>Will</strong> rules are intended to be mandatory requirements. It is expected that they will be followed, but they do not require verification. They are limited to non-safety-critical requirements that cannot be easily verified (e.g., naming conventions). Specific to JSF AV, MISRA C++ does not use them.</li>
-  <li><strong>Shall</strong> rules are mandatory requirements. They must be followed and they require verification (either automatic or manual).</li>
+  <li>
+<strong>Should</strong> rules are advisory rules. They strongly suggest the recommended way of doing things.</li>
+  <li>
+<strong>Will</strong> rules are intended to be mandatory requirements. It is expected that they will be followed, but they do not require verification. They are limited to non-safety-critical requirements that cannot be easily verified (e.g., naming conventions). Specific to JSF AV, MISRA C++ does not use them.</li>
+  <li>
+<strong>Shall</strong> rules are mandatory requirements. They must be followed and they require verification (either automatic or manual).</li>
 </ul>
 
 <h4 id="breaking-rules">Breaking Rules</h4>
@@ -667,8 +679,10 @@
 <ol>
   <li>ANSI/IEEE Std 754, IEEE Standard for Binary Floating-Point Arithmetic, 1985.</li>
   <li>Bjarne Stroustrup. <em>The C++ Programming Language, 3rd Edition</em>. Addison-Wesley, 2000.</li>
-  <li>Bjarne Stroustrup. <em>Bjarne Stroustrup’s C++ Glossary.</em></li>
-  <li>Bjarne Stroustrup. <em>Bjarne Stroustrup’s C++ Style and Technique FAQ.</em></li>
+  <li>Bjarne Stroustrup. <em>Bjarne Stroustrup’s C++ Glossary.</em>
+</li>
+  <li>Bjarne Stroustrup. <em>Bjarne Stroustrup’s C++ Style and Technique FAQ.</em>
+</li>
   <li>Barbara Liskov. <em>Data Abstraction and Hierarchy, SIGPLAN Notices</em>, 23, 5 (May, 1988).</li>
   <li>Scott Meyers. <em>Effective C++: 50 Specific Ways to Improve Your Programs and Design, 2nd Edition.</em> Addison-Wesley, 1998.</li>
   <li>Scott Meyers. <em>More Effective C++: 35 New Ways to Improve Your Programs and Designs</em>. Addison-Wesley, 1996.</li>
@@ -678,7 +692,8 @@
   <li>ISO/IEC 9899: 1990, <em>Programming languages - C</em>, ISO, 1990.</li>
   <li>JSF Mission Systems Software Development Plan.</li>
   <li>JSF System Safety Program Plan. DOC. No. 2YZA00045-0002.</li>
-  <li><em>Programming in C++ Rules and Recommendations.</em> Copyright © by Ellemtel Telecommunication Systems Laboratories, Box 1505, 125 25 Alvsjo, Sweden, Document: M 90 0118 Uen, Rev. C, 27 April 1992.</li>
+  <li>
+<em>Programming in C++ Rules and Recommendations.</em> Copyright © by Ellemtel Telecommunication Systems Laboratories, Box 1505, 125 25 Alvsjo, Sweden, Document: M 90 0118 Uen, Rev. C, 27 April 1992.</li>
   <li>RTCA/DO-178B, <em>Software Considerations in Airborne Systems and Equipment Certification</em>, December 1992.</li>
 </ol>
 
@@ -742,9 +757,12 @@
 <h3 id="language">Language</h3>
 
 <ul>
-  <li><del>[MISRA C++ Rule 1–0–1, Required] - All code <strong>shall</strong> conform to ISO/IEC 14882:2003 “The C++ Standard Incorporating Technical Corrigendum 1”.</del> (updated to 14882:2011)</li>
-  <li><del>[JSF AV Rule 8] - All code <strong>shall</strong> conform to ISO/IEC 14882:2002(E) standard C++. [10]</del> (updated to 14882:2011)</li>
-  <li>[ILG Rule 1–0–1 update, Required] - All code <strong>shall</strong> conform to ISO/IEC 14882:2011 The <em>C++ Programming languages — C++</em></li>
+  <li>
+<del>[MISRA C++ Rule 1–0–1, Required] - All code <strong>shall</strong> conform to ISO/IEC 14882:2003 “The C++ Standard Incorporating Technical Corrigendum 1”.</del> (updated to 14882:2011)</li>
+  <li>
+<del>[JSF AV Rule 8] - All code <strong>shall</strong> conform to ISO/IEC 14882:2002(E) standard C++. [10]</del> (updated to 14882:2011)</li>
+  <li>[ILG Rule 1–0–1 update, Required] - All code <strong>shall</strong> conform to ISO/IEC 14882:2011 The <em>C++ Programming languages — C++</em>
+</li>
   <li>[MISRA C++ Rule 1–0–2, Document] - Multiple compilers <strong>shall</strong> only be used if they have a common, defined interface.</li>
   <li>[ILG Rule 1-0-2, Advisory] - Both GNU GCC and LLVM Clang compilers <strong>should</strong> be considered.</li>
   <li>[MISRA C++ Rule 1–0–3, Document] - The implementation of integer division in the chosen compiler <strong>shall</strong> be determined and documented.</li>
@@ -761,7 +779,8 @@
 
 <!-- -->
 
-<div class="highlighter-rouge"><pre class="highlight"><code> a b c d e f g h i j k l m n o p q r s t u v w x y z
+<div class="highlighter-rouge">
+<pre class="highlight"><code> a b c d e f g h i j k l m n o p q r s t u v w x y z
  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
  0 1 2 3 4 5 6 7 8 9
  _ { } [ ] - # ( ) &lt; &gt; % : ; . ? * + -
@@ -791,7 +810,8 @@
 
 <!-- -->
 
-<div class="highlighter-rouge"><pre class="highlight"><code> &lt;% %&gt; &lt;: :&gt; %: %:%:
+<div class="highlighter-rouge">
+<pre class="highlight"><code> &lt;% %&gt; &lt;: :&gt; %: %:%:
 </code></pre>
 </div>
 
@@ -936,7 +956,8 @@
 
 <!-- -->
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef          char   char_t;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef          char   char_t;
 typedef signed   char   int8_t;
 typedef signed   short  int16_t;
 typedef signed   int    int32_t;
@@ -1155,7 +1176,8 @@ typedef long     double float128_t;
     <table>
       <tbody>
         <tr>
-          <td><strong>Exception</strong> Where an expression consists of either a sequence of only logical &amp;&amp; or a sequence of only logical</td>
+          <td>
+<strong>Exception</strong> Where an expression consists of either a sequence of only logical &amp;&amp; or a sequence of only logical</td>
           <td> </td>
           <td>, extra parentheses are not required.</td>
         </tr>
@@ -1265,7 +1287,8 @@ typedef long     double float128_t;
         <tr>
           <td>[JSF AV Rule 158 (MISRA C Rule 34)] - The operands of a logical &amp;&amp; or</td>
           <td> </td>
-          <td><strong>shall</strong> be parenthesized if the operands contain binary operators.</td>
+          <td>
+<strong>shall</strong> be parenthesized if the operands contain binary operators.</td>
         </tr>
       </tbody>
     </table>
@@ -1832,7 +1855,8 @@ typedef long     double float128_t;
 
 <!-- -->
 
-<div class="highlighter-rouge"><pre class="highlight"><code> defined ( identifier )
+<div class="highlighter-rouge">
+<pre class="highlight"><code> defined ( identifier )
  defined identifier
 </code></pre>
 </div>
@@ -1849,13 +1873,15 @@ typedef long     double float128_t;
   <li>[MISRA C++ Rule 16–2–3, Required] - Include guards <strong>shall</strong> be provided.</li>
   <li>[MISRA C++ Rule 16–2–4, Required] - The ‘, “, /* or // characters <strong>shall not</strong> occur in a header file name.</li>
   <li>[MISRA C++ Rule 16–2–5, Advisory] - The \ character <strong>should not</strong> occur in a header file name.</li>
-  <li>[MISRA C++ Rule 16–2–6, Required] - The <em>#include</em> directive <strong>shall</strong> be followed by either a *<filename>* or *"filename"* sequence.</filename></li>
+  <li>[MISRA C++ Rule 16–2–6, Required] - The <em>#include</em> directive <strong>shall</strong> be followed by either a *<filename>* or *"filename"* sequence.</filename>
+</li>
   <li>
     <p>[JSF AV Rule 32] - The <em>#include</em> pre-processor directive <strong>will</strong> only be used to include header (*.h) files.</p>
 
     <p><strong>Exception</strong>: I the case of template class or function definitions, the code may be partitioned into separate header and implementation files. In this case, the implementation file may be included as a part of the header file. The implementation file is logically a part of the header and is not separately compilable.</p>
   </li>
-  <li>[JSF AV Rule 33] - The <em>#include</em> directive <strong>shall</strong> use the <filename.h> notation to include header files.</filename.h></li>
+  <li>[JSF AV Rule 33] - The <em>#include</em> directive <strong>shall</strong> use the <filename.h> notation to include header files.</filename.h>
+</li>
   <li>[JSF AV Rule 34] - Header files <strong>should</strong> contain logically related declarations only.</li>
   <li>[JSF AV Rule 35] - A header file <strong>will</strong> contain a mechanism that prevents multiple inclusions of itself.</li>
   <li>[JSF AV Rule 36] - Compilation dependencies <strong>should</strong> be minimized when possible. (Stroustrup [2], Meyers [6], item 34)</li>
@@ -1890,7 +1916,8 @@ typedef long     double float128_t;
   <li>[MISRA C++ Rule 17–0–3, Required] - The names of standard library functions <strong>shall not</strong> be overridden.</li>
   <li>[MISRA C++ Rule 17–0–4, Document] - All library code <strong>shall</strong> conform to MISRA C++.</li>
   <li>[MISRA C++ Rule 17–0–5, Required] - The <em>setjmp</em> macro and the <em>longjmp</em> function <strong>shall not</strong> be used.</li>
-  <li><del>[JSF AV Rule 20 (MISRA C Rule 122)] - The <em>setjmp</em> macro and the <em>longjmp</em> function <strong>shall not</strong> be used.</del> (duplicate)</li>
+  <li>
+<del>[JSF AV Rule 20 (MISRA C Rule 122)] - The <em>setjmp</em> macro and the <em>longjmp</em> function <strong>shall not</strong> be used.</del> (duplicate)</li>
 </ul>
 
 <h2 id="language-support-library">Language support library</h2>
@@ -1899,14 +1926,22 @@ typedef long     double float128_t;
 
 <ul>
   <li>[MISRA C++ Rule 18–0–1, Required] - The C library <strong>shall not</strong> be used.</li>
-  <li>[MISRA C++ Rule 18–0–2, Required] - The library functions <em>atof</em>, <em>atoi</em> and <em>atol</em> from library *<cstdlib>* **shall not** be used.</cstdlib></li>
-  <li>[JSF AV Rule 23 (MISRA C Rule 125] - The library functions <em>atof</em>, <em>atoi</em> and <em>atol</em> from library <stdlib.h> **shall not** be used.</stdlib.h></li>
-  <li>[MISRA C++ Rule 18–0–3, Required] - The library functions <em>abort</em>, <em>exit</em>, <em>getenv</em> and <em>system</em> from library *<cstdlib>* **shall not** be used.</cstdlib></li>
-  <li>[JSF AV Rule 24 (MISRA C Rule 126] - The library functions <em>abort</em>, <em>exit</em>, <em>getenv</em> and <em>system</em> from library <stdlib.h> **shall not** be used.</stdlib.h></li>
-  <li>[MISRA C++ Rule 18–0–4, Required] - The time handling functions of library *<ctime>* **shall not** be used.</ctime></li>
-  <li>[JSF AV Rule 25 (MISRA C Rule 127] - The time handling functions of library <time.h> **shall not** be used.</time.h></li>
-  <li>[MISRA C++ Rule 18–0–5, Required] - The unbounded functions of library *<cstring>* **shall not** be used.</cstring></li>
-  <li>[JSF AV Rule 19 (MISRA C Rule 121)] - <locale.h> and the *setlocale* function **shall not** be used.</locale.h></li>
+  <li>[MISRA C++ Rule 18–0–2, Required] - The library functions <em>atof</em>, <em>atoi</em> and <em>atol</em> from library *<cstdlib>* **shall not** be used.</cstdlib>
+</li>
+  <li>[JSF AV Rule 23 (MISRA C Rule 125] - The library functions <em>atof</em>, <em>atoi</em> and <em>atol</em> from library <stdlib.h> **shall not** be used.</stdlib.h>
+</li>
+  <li>[MISRA C++ Rule 18–0–3, Required] - The library functions <em>abort</em>, <em>exit</em>, <em>getenv</em> and <em>system</em> from library *<cstdlib>* **shall not** be used.</cstdlib>
+</li>
+  <li>[JSF AV Rule 24 (MISRA C Rule 126] - The library functions <em>abort</em>, <em>exit</em>, <em>getenv</em> and <em>system</em> from library <stdlib.h> **shall not** be used.</stdlib.h>
+</li>
+  <li>[MISRA C++ Rule 18–0–4, Required] - The time handling functions of library *<ctime>* **shall not** be used.</ctime>
+</li>
+  <li>[JSF AV Rule 25 (MISRA C Rule 127] - The time handling functions of library <time.h> **shall not** be used.</time.h>
+</li>
+  <li>[MISRA C++ Rule 18–0–5, Required] - The unbounded functions of library *<cstring>* **shall not** be used.</cstring>
+</li>
+  <li>[JSF AV Rule 19 (MISRA C Rule 121)] - <locale.h> and the *setlocale* function **shall not** be used.</locale.h>
+</li>
   <li>[JSF AV Rule 16] - Only DO-178B level A [15] - certifiable or SEAL 1 C/C++ libraries shall be used with safety-critical (i.e. SEAL 1) code [13].</li>
 </ul>
 
@@ -1914,7 +1949,8 @@ typedef long     double float128_t;
 
 <ul>
   <li>[MISRA C++ Rule 18–2–1, Required] - The macro <em>offsetof</em> <strong>shall not</strong> be used.</li>
-  <li>[JSF AV Rule 18 (MISRA C Rule 120)] - The macro <em>offsetof</em>, in library <stddef.h>, **shall not** be used.</stddef.h></li>
+  <li>[JSF AV Rule 18 (MISRA C Rule 120)] - The macro <em>offsetof</em>, in library <stddef.h>, **shall not** be used.</stddef.h>
+</li>
 </ul>
 
 <h3 id="dynamic-memory-management">Dynamic memory management</h3>
@@ -1936,8 +1972,10 @@ typedef long     double float128_t;
 <h3 id="other-runtime-support">Other runtime support</h3>
 
 <ul>
-  <li>[MISRA C++ Rule 18–7–1, Required] - The signal handling facilities of *<csignal>* **shall not** be used.</csignal></li>
-  <li>[JSF AV Rule 21 (MISRA C Rule 123)] - The signal handling facilities of <signal.h> **shall not** be used.</signal.h></li>
+  <li>[MISRA C++ Rule 18–7–1, Required] - The signal handling facilities of *<csignal>* **shall not** be used.</csignal>
+</li>
+  <li>[JSF AV Rule 21 (MISRA C Rule 123)] - The signal handling facilities of <signal.h> **shall not** be used.</signal.h>
+</li>
 </ul>
 
 <h2 id="diagnostics-library">Diagnostics library</h2>
@@ -1958,8 +1996,10 @@ typedef long     double float128_t;
 <h3 id="general-7">General</h3>
 
 <ul>
-  <li>[MISRA C++ Rule 27–0–1, Required] - The stream input/output library *<cstdio>* **shall not** be used.</cstdio></li>
-  <li>[JSF AV Rule 22 (MISRA C Rule 124, Revised)] - The input/output library <stdio.h> **shall not** be used.</stdio.h></li>
+  <li>[MISRA C++ Rule 27–0–1, Required] - The stream input/output library *<cstdio>* **shall not** be used.</cstdio>
+</li>
+  <li>[JSF AV Rule 22 (MISRA C Rule 124, Revised)] - The input/output library <stdio.h> **shall not** be used.</stdio.h>
+</li>
 </ul>
 
 <h2 id="miscellaneous">Miscellaneous</h2>
@@ -2115,7 +2155,12 @@ typedef long     double float128_t;
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
 </ul>
 
 

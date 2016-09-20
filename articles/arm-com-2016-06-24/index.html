@@ -1,40 +1,40 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>[Article] CMSIS++ RTOS: fully functional reference implementation</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="[Article] CMSIS++ RTOS: fully functional reference implementation" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="[Article] CMSIS++ RTOS: fully functional reference implementation">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
   <meta property="article:published_time" content="2016-06-24">
 
 
 
-  <meta property="article:tag" content="arm" />
-  <meta property="article:tag" content="cmsis" />
-  <meta property="article:tag" content="c++" />
-  <meta property="article:tag" content="cmsis++" />
-  <meta property="article:tag" content="rtos" />
-  <meta property="article:tag" content="api" />
-  <meta property="article:tag" content="posix" />
-  <meta property="article:tag" content="iso" />
+  <meta property="article:tag" content="arm">
+  <meta property="article:tag" content="cmsis">
+  <meta property="article:tag" content="c++">
+  <meta property="article:tag" content="cmsis++">
+  <meta property="article:tag" content="rtos">
+  <meta property="article:tag" content="api">
+  <meta property="article:tag" content="posix">
+  <meta property="article:tag" content="iso">
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
@@ -177,7 +177,8 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s <strong>manual</strong></a>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
     <ul>
       <li><a href="/user-manual/getting-started/">Getting started</a></li>
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
@@ -249,7 +250,7 @@
 <table id="last-modified">
   <tr>
     <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/articles/arm-com-2016-06-24.md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/articles/arm-com-2016-06-24.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
@@ -316,7 +317,8 @@
 </tr>
 </tbody>
 </table>
-</div><p>
+</div>
+<p>
 <small>(This article was published in the <a href="https://community.arm.com/groups/tools/blog/2016/06/24/cmsis-rtos-reference-implementation-fully-functional">ARM Connected Community </a> blog, on 24.06.2016).</small>
 </p>
 
@@ -389,7 +391,8 @@
 
 <p>For example, the context switching is performed by a rather simple function:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>void
+<div class="highlighter-rouge">
+<pre class="highlight"><code>void
 __attribute__ ((section(".after_vectors"), naked, used, optimize("s")))
 PendSV_Handler (void)
 {
@@ -411,14 +414,18 @@ PendSV_Handler (void)
 <p>Apart from saving/returning, this function does exactly what it is expected to do:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">save_on_stack ()</code> - saves the context of the current thread on the thread stack and returns the stack address;</li>
-  <li><code class="highlighter-rouge">switch_stacks ()</code> - saves the above stack address in the current thread control block, selects the next thread waiting to run and returns the address of its stack context;</li>
-  <li><code class="highlighter-rouge">restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
+  <li>
+<code class="highlighter-rouge">save_on_stack ()</code> - saves the context of the current thread on the thread stack and returns the stack address;</li>
+  <li>
+<code class="highlighter-rouge">switch_stacks ()</code> - saves the above stack address in the current thread control block, selects the next thread waiting to run and returns the address of its stack context;</li>
+  <li>
+<code class="highlighter-rouge">restore_from_stack ()</code> - restores the context of the new thread from the stack.</li>
 </ul>
 
 <p>The two save/restore functions are among the very few in the Cortex-M port that require assembly code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>inline stack::element_t*
+<div class="highlighter-rouge">
+<pre class="highlight"><code>inline stack::element_t*
 __attribute__((always_inline))
 save_on_stack (void)
 {
@@ -502,7 +509,8 @@ restore_from_stack (stack::element_t* sp)
 
 <p>The generated code (for Cortex-M3) is remarkably neat and tidy:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>08000198 &lt;PendSV_Handler&gt;:
+<div class="highlighter-rouge">
+<pre class="highlight"><code>08000198 &lt;PendSV_Handler&gt;:
  8000198:	b500      	push	{lr}
  800019a:	f3ef 8009 	mrs	r0, PSP
  800019e:	f3bf 8f6f 	isb	sy
@@ -534,7 +542,8 @@ restore_from_stack (stack::element_t* sp)
 
 <p>For example one of the thread constructors is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>using Allocator = memory::allocator&lt;stack::allocation_element_t&gt;;
 
 thread (const char* name, func_t function, func_args_t args,
         const attributes&amp; attr = initializer, const Allocator&amp; allocator =
@@ -544,7 +553,8 @@ thread (const char* name, func_t function, func_args_t args,
 
 <p>By default the <code class="highlighter-rouge">memory::allocator&lt;T&gt;</code> is defined as:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>template&lt;typename T&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>template&lt;typename T&gt;
   using allocator = new_delete_allocator&lt;T&gt;;
 </code></pre>
 </div>
@@ -555,7 +565,8 @@ thread (const char* name, func_t function, func_args_t args,
 
 <p>Given the magic of C++, using such allocators is straightforward:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>template&lt;typename T&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>template&lt;typename T&gt;
   class my_allocator;
 
 thread_allocated&lt;my_allocator&gt; thread { "th", func, nullptr };
@@ -570,7 +581,8 @@ memory_pool_typed&lt;blk_t, my_allocator&gt; pool2 { "p2", 7 };
 
 <p>Static allocation is handled using exactly the same method, but different templates:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>thread_static&lt;2500&gt; thread { "th", func, nullptr };
+<div class="highlighter-rouge">
+<pre class="highlight"><code>thread_static&lt;2500&gt; thread { "th", func, nullptr };
 
 message_queue_static&lt;7, msg_t&gt; queue { "q" };
 
@@ -596,7 +608,8 @@ memory_pool_static&lt;7, blk_t&gt; pool { "p" };
 
 <p>The result of a run is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>CMSIS-RTOS Test Suite   Jun 23 2016   16:03:42
+<div class="highlighter-rouge">
+<pre class="highlight"><code>CMSIS-RTOS Test Suite   Jun 23 2016   16:03:42
 
 TEST 01: TC_ThreadCreate                  PASSED
 TEST 02: TC_ThreadMultiInstance           PASSED
@@ -672,7 +685,8 @@ Test Result: PASSED
 
 <p>A typical result of the run is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Mutex stress &amp; uniformity test.
+<div class="highlighter-rouge">
+<pre class="highlight"><code>Mutex stress &amp; uniformity test.
 Built with GCC 5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589].
 Seed 3761791254
 [  5s] t0:39   t1:42   t2:37   t3:41   t4:38   t5:37   t6:36   t7:41   t8:40   t9:34   sum=385, avg=39, delta in [-5,3] [-12%,8%]
@@ -694,7 +708,8 @@ Done.
 
 <p>A typical result of the run shows that on this platform the scheduler can stand about 250.000 context switches per second:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Semaphore stress test.
+<div class="highlighter-rouge">
+<pre class="highlight"><code>Semaphore stress test.
 Built with GCC 5.3.1 20160307 (release) [ARM/embedded-5-branch revision 234589].
 
 Iteration 0
@@ -769,7 +784,12 @@ Seed 832262406
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
 </ul>
 
 

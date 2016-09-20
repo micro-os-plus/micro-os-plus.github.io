@@ -1,21 +1,21 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Naming conventions (SE)</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="Naming conventions (SE)" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="Naming conventions (SE)">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
   <meta property="article:published_time" content="2014-02-22">
@@ -24,9 +24,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
@@ -169,7 +169,8 @@
 <h4 id="documentation">Documentation</h4>
 
 <ul>
-  <li><a href="/user-manual/">User’s <strong>manual</strong></a>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
     <ul>
       <li><a href="/user-manual/getting-started/">Getting started</a></li>
       <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
@@ -241,7 +242,7 @@
 <table id="last-modified">
   <tr>
     <td id="last-modified">Page date Sat Feb 22 16:02:04 2014 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Naming_conventions_(SE).md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Naming_conventions_(SE).md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
@@ -359,13 +360,15 @@
 </tr>
 </tbody>
 </table>
-</div><p>µOS++ uses the common C++ naming convention, based on the <a href="http://en.wikipedia.org/wiki/CamelCase">CamelCase</a> convention.</p>
+</div>
+<p>µOS++ uses the common C++ naming convention, based on the <a href="http://en.wikipedia.org/wiki/CamelCase">CamelCase</a> convention.</p>
 
 <h1 id="full-words-vs-short-words">Full words vs. short words</h1>
 
 <p>Whenever possible, it is recommended to use the full words; shortening words in member or member function names does not make the program shorter or faster, but, when used properly, highly increases the readability of the program.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int initialise(); &lt;- instead of init();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int initialise(); &lt;- instead of init();
 int configure(); &lt;- instead of config();
 ...
 int delaySeconds; &lt;- instead of delaySec;
@@ -378,7 +381,8 @@ int delaySeconds; &lt;- instead of delaySec;
 
 <p>When defining pairs of opposed actions, use the proper antonyms:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int startAcquisition();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int startAcquisition();
 int stopAcquisition();
 ...
 int enableInterrupts();
@@ -390,7 +394,8 @@ int disableInterrupts();
 
 <p>Sometimes, even if the words are not listed in dictionaries as antonyms, the pairs of opposed names are defined by practice:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// For hardware signals, like chip select
+<div class="highlighter-rouge">
+<pre class="highlight"><code>// For hardware signals, like chip select
 int assert();
 int deassert();
 ...
@@ -404,14 +409,16 @@ int release();
 
 <p>When defining actions, prefer <strong>start</strong>/<strong>stop</strong> to <strong>begin</strong>/<strong>end</strong>, since they have a stronger verb-like meaning (end is more an adjective than a verb).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int startAcquisition(); &lt;- instead of beginAcquisition()
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int startAcquisition(); &lt;- instead of beginAcquisition()
 int stopAcquisition(); &lt;- instead of endAcquisition()
 </code></pre>
 </div>
 
 <p>However, when the meaning is adjectival, for example adding determinants to a noun, the pair begin/end is preferred.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int listBegin; &lt;- instead of listStart
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int listBegin; &lt;- instead of listStart
 int listEnd; &lt;- instead of listStop
 </code></pre>
 </div>
@@ -420,7 +427,8 @@ int listEnd; &lt;- instead of listStop
 
 <p>Class names start with upper case letters, and are singular names or nominative constructs.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class Logger;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class Logger;
 class CircularBuffer;
 </code></pre>
 </div>
@@ -429,7 +437,8 @@ class CircularBuffer;
 
 <p>Derived class names should extend the base class name, by adding a differentiator at one end.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class OSDeviceCharacterBuffered : public OSDeviceCharacter
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class OSDeviceCharacterBuffered : public OSDeviceCharacter
 {
  ...
 };
@@ -440,7 +449,8 @@ class CircularBuffer;
 
 <p>When an abstract class is used as a base class for concrete implementations, the word Base can be used in the name, and this name can be skipped in the derived class name:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class DeviceCharacterBufferedUsart0 : public DeviceCharacterBufferedBase
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class DeviceCharacterBufferedUsart0 : public DeviceCharacterBufferedBase
 {
  ...
 };
@@ -465,7 +475,8 @@ class CircularBuffer;
 
 <p>In class templates, it is recommended to alias the template parameters to new names, and use these new names in code, reserving the template parameters only to define the template syntax.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>template &lt;class GPIO_T, typename Result_T = void, int Bit_T&gt;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>template &lt;class GPIO_T, typename Result_T = void, int Bit_T&gt;
 class TPin
 {
 public:
@@ -487,13 +498,15 @@ typename class TPin&lt;GPIOC1&gt; Pin;
 
 <p>Since functions define actions to be performed upon the object, the function name should have the function of a predicate, and usually <strong>start with an imperative verb</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int read();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int read();
 </code></pre>
 </div>
 
 <p>If there are multiple functions that perform similar actions, they should differentiate by the following noun, with the function of a direct complement.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int readByte();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int readByte();
 long readLong();
 ...
 void readBlock();
@@ -502,7 +515,8 @@ void readBlock();
 
 <p>The rule of starting with a verb is not absolute, when multiple functions are logically grouped by a common criteria, then predicative groups can be used as function names, and the verb is placed at the end.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bool eventWaitPrepare(OSEvent_t event);
+<div class="highlighter-rouge">
+<pre class="highlight"><code>bool eventWaitPrepare(OSEvent_t event);
 OSEventWaitReturn_t eventWaitPerform(void);
 
 int eventNotify(OSEvent_t event, OSEventWaitReturn_t ret = OSEventWaitReturn::OS_VOID);
@@ -511,14 +525,16 @@ int eventNotify(OSEvent_t event, OSEventWaitReturn_t ret = OSEventWaitReturn::OS
 
 <p>However, when such names occur, it might be a sign that the design can be further refined by defining additional objects, for example instead of</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>void criticalEnter();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>void criticalEnter();
 void criticalExit();
 </code></pre>
 </div>
 
 <p>in the new version of µOS++ we use a separate object to manage critical sections, like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class OSCriticalSection
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class OSCriticalSection
 {
   void enter(void);
   void exit(void);
@@ -534,7 +550,8 @@ void criticalExit();
 
 <p>The name should contain exactly the variable name, prefixed with <strong>get</strong> or <strong>set</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>private:
+<div class="highlighter-rouge">
+<pre class="highlight"><code>private:
   int m_count;
 
 public:
@@ -547,7 +564,8 @@ public:
 
 <p>When dealing with hardware, even if the memory mapped registers are seen as class members, it is recommended to prefix member functions with read/write, not get/set, which should be used only for accessing private data members of usual objects.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>hal::cortexm::reg32_t
+<div class="highlighter-rouge">
+<pre class="highlight"><code>hal::cortexm::reg32_t
 readMode(void);
 
 void
@@ -559,7 +577,8 @@ writeMode(const hal::cortexm::reg32_t value);
 
 <p>Functions that return boolean values should start with boolean verbs, like <strong>is</strong>, <strong>has</strong>, <strong>does</strong>. Depending on the context, past or future tense versions, like <strong>was</strong> or <strong>will</strong> may be more appropriate.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bool isAvailable();
+<div class="highlighter-rouge">
+<pre class="highlight"><code>bool isAvailable();
 bool wasInterrupted();
 bool willBlock();
 bool hasMembers();
@@ -573,7 +592,8 @@ bool doesReturn();  &lt;-- instead of 'bool returns();'
 
 <p>To mark this distinction, the recommended names should start with <strong>initialise</strong> for functions that are used before the device is enabled and with <strong>configure</strong> for functions that can be used at any moment.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bool initialiseSomething(void);
+<div class="highlighter-rouge">
+<pre class="highlight"><code>bool initialiseSomething(void);
 ...
 bool configureBaudRate(BaudRate_t baudRate);
 bool configureHighSpeed(void);
@@ -596,7 +616,8 @@ bool configureHighSpeed(void);
 
 <p>As the most common type of member variable names, the private member variables should be prefixed with <strong>m_</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>private:
+<div class="highlighter-rouge">
+<pre class="highlight"><code>private:
   int m_count;
   char* m_bufferAddress;
   int m_bufferSize;
@@ -610,7 +631,8 @@ bool configureHighSpeed(void);
 
 <p>Static member variables should be prefixed with <strong>ms_</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>static OSThread* volatile ms_pThreadRunning;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>static OSThread* volatile ms_pThreadRunning;
 </code></pre>
 </div>
 
@@ -618,7 +640,8 @@ bool configureHighSpeed(void);
 
 <p>As an exception to the above rules, some globally available member variables, like those in the global <strong>os</strong> or <strong>app</strong> objects, can be named without the <strong>m_</strong> prefix.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class OS : public OSImpl
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class OS : public OSImpl
 {
 public:
   ...
@@ -632,7 +655,8 @@ public:
 
 <p>For a better code readability, it is recommended to name array members or pointers to arrays explicitly, like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>OSTask** m_pWaitingTasksArray;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>OSTask** m_pWaitingTasksArray;
 unsigned short m_waitingTasksArraySize;
 </code></pre>
 </div>
@@ -641,7 +665,8 @@ unsigned short m_waitingTasksArraySize;
 
 <p>The rules for using these keywords are sometimes tricky, and the easiest to remember is <em>const makes a constant whatever is on its left</em>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> int* const p1; // constant pointer to int
+<div class="highlighter-rouge">
+<pre class="highlight"><code> int* const p1; // constant pointer to int
  const int* p2; // pointer to an int constant
  const int* const p3; // constant pointer to an int constant
 </code></pre>
@@ -649,13 +674,15 @@ unsigned short m_waitingTasksArraySize;
 
 <p>Systematic use of the above rule would put the type of scalars at the left of const, which is not that usual:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> int const n; // constant integer
+<div class="highlighter-rouge">
+<pre class="highlight"><code> int const n; // constant integer
 </code></pre>
 </div>
 
 <p>So, for scalars and for constants, it is also acceptable to use the more common order:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> const int n;
+<div class="highlighter-rouge">
+<pre class="highlight"><code> const int n;
  static const int CONST = 7;
 </code></pre>
 </div>
@@ -668,13 +695,15 @@ unsigned short m_waitingTasksArraySize;
 
 <p>For individual definitions, the recommended way is to use <strong>constexpr</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>constexpr threadId_t NO_ID = 0xFF;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>constexpr threadId_t NO_ID = 0xFF;
 </code></pre>
 </div>
 
 <p>For definitions inside a class, use <strong>static constexpr</strong> members.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>static constexpr OSReturn_t OS_OK = 0;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>static constexpr OSReturn_t OS_OK = 0;
 </code></pre>
 </div>
 
@@ -701,9 +730,15 @@ unsigned short m_waitingTasksArraySize;
 <p>These are mainly the definitions from <stdint.h></stdint.h></p>
 
 <ul>
-  <li><strong>uint8_t</strong>, <strong>int8_t</strong></li>
-  <li><strong>uint16_t</strong>, <strong>int16_t</strong></li>
-  <li><strong>uint32_t</strong>, <strong>int32_t</strong></li>
+  <li>
+<strong>uint8_t</strong>, <strong>int8_t</strong>
+</li>
+  <li>
+<strong>uint16_t</strong>, <strong>int16_t</strong>
+</li>
+  <li>
+<strong>uint32_t</strong>, <strong>int32_t</strong>
+</li>
 </ul>
 
 <h3 id="explicit-size-versus-platform-size">Explicit size versus platform size</h3>
@@ -726,13 +761,15 @@ unsigned short m_waitingTasksArraySize;
 
 <p>These are custom definitions, made to increase code readability and maintainability. Preferably they should rely on the previous type definitions.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef uint8_t threadPriority_t;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef uint8_t threadPriority_t;
 </code></pre>
 </div>
 
 <p>If the new type can be an alias, that does not introduce a new type definition, the C++11 syntax is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>using threadPriority_t = uint8_t threadPriority_t;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>using threadPriority_t = uint8_t threadPriority_t;
 </code></pre>
 </div>
 
@@ -740,7 +777,8 @@ unsigned short m_waitingTasksArraySize;
 
 <p>C++11 solved the old C enumeration problem and introduced strongly typed and scoped enumerations (<strong>enum class</strong>), so usually there is no need to use embedded classes with constants.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef uint32_t mode_t;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef uint32_t mode_t;
 
 enum class Mode : mode_t
 {
@@ -759,7 +797,8 @@ someFunction(Mode::Input);
 
 <p>However, if for any reasons, struct definitions are needed, it is recommended to define both the struct name and the type, using the following syntax:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>typedef struct Region_s
+<div class="highlighter-rouge">
+<pre class="highlight"><code>typedef struct Region_s
 {
   regionAddress_t address;
   regionSize_t size;
@@ -771,7 +810,8 @@ someFunction(Mode::Input);
 
 <p>For a more uniform look, type names used as aliases to class names should not end with <strong>_t</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class MyClass
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class MyClass
 {
 public:
   regionAddress_t address;
@@ -784,7 +824,8 @@ typedef MyClass MyClassAlias;
 
 <p>or even better, if the alias does not need to introduce a new type:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>using MyClassAlias = MyClass;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>using MyClassAlias = MyClass;
 </code></pre>
 </div>
 
@@ -792,7 +833,8 @@ typedef MyClass MyClassAlias;
 
 <p>Whenever not absolutely obvious, append the measuring units to the member variable or function name.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>int busFrequencyHz;
+<div class="highlighter-rouge">
+<pre class="highlight"><code>int busFrequencyHz;
 int delaySeconds;
 int delayMilliseconds;
 int delayMicroseconds;
@@ -808,7 +850,8 @@ int lengthMillimetres;
 
 <p>Normally under camelCase rules, the underscore is no longer necessary. However, in special cases the underscore can be used as a class specifier separator.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>inline static void
+<div class="highlighter-rouge">
+<pre class="highlight"><code>inline static void
 ledActiveOn(void);
 
 inline static void
@@ -877,7 +920,8 @@ ISR_ledActiveOn(void);
 
 <p>If some parts of the code are platform dependent, test the following preprocessor definitions:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined(__APPLE__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined(__APPLE__)
 #if defined(__linux__)
 #if defined(__x86_64__)
 </code></pre>
@@ -885,7 +929,8 @@ ISR_ledActiveOn(void);
 
 <p>To check the compiler:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined (__GNUC__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined (__GNUC__)
 #if __GNUC__ == 4 &amp;&amp; __GNUC_MINOR__ == 7
 #if defined(__clang__)
 </code></pre>
@@ -893,7 +938,8 @@ ISR_ledActiveOn(void);
 
 <p>To check the size of the pointer:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if __SIZEOF_POINTER__ == __SIZEOF_INT__
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if __SIZEOF_POINTER__ == __SIZEOF_INT__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG_LONG__
 </code></pre>
@@ -901,43 +947,50 @@ ISR_ledActiveOn(void);
 
 <p>To check if there are no <strong>long long</strong> variables:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if !defined(__SIZEOF_LONG_LONG)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if !defined(__SIZEOF_LONG_LONG)
 </code></pre>
 </div>
 
 <p>To check if the compiling unit is C++:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined (__cplusplus)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined (__cplusplus)
 </code></pre>
 </div>
 
 <p>To check if the compiling unit is an assembly file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined(__ASSEMBLER__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined(__ASSEMBLER__)
 </code></pre>
 </div>
 
 <p>To check if optimisation is enabled (more than -O0):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined(__OPTIMIZE__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined(__OPTIMIZE__)
 </code></pre>
 </div>
 
 <p>To check if optimisation for size is enabled (-Os):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined(__OPTIMIZE_SIZE__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined(__OPTIMIZE_SIZE__)
 </code></pre>
 </div>
 
 <p>To check if no inlines are enabled:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#if defined(__NO_INLINE__)
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#if defined(__NO_INLINE__)
 </code></pre>
 </div>
 
 <p>To see the GCC defines use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>g++ -dM -E - &lt; /dev/null
+<div class="highlighter-rouge">
+<pre class="highlight"><code>g++ -dM -E - &lt; /dev/null
 clang++ -dM -E - &lt; /dev/null
 </code></pre>
 </div>
@@ -948,7 +1001,8 @@ clang++ -dM -E - &lt; /dev/null
 
 <h3 id="arm-cortex-m0m0">ARM Cortex-M0/M0+</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
 #define __ARMEL__ 1
 #define __ARM_ARCH 6
 #define __ARM_ARCH_6M__ 1
@@ -970,7 +1024,8 @@ clang++ -dM -E - &lt; /dev/null
 
 <h3 id="arm-cortex-m3">ARM Cortex-M3</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
 #define __ARMEL__ 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7M__ 1
@@ -999,7 +1054,8 @@ clang++ -dM -E - &lt; /dev/null
 
 <h3 id="arm-cortex-m4">ARM Cortex-M4</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
 #define __ARMEL__ 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -1084,7 +1140,12 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
 </ul>
 
 

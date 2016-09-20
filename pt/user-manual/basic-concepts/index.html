@@ -1,21 +1,21 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="pt">
 
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Conceitos básicos</title>
   <meta name="description" content="The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.">
 
-  <meta property="og:title" content="Conceitos básicos" />
-  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++" />
+  <meta property="og:title" content="Conceitos básicos">
+  <meta property="og:site_name" content="µOS++ IIIe / CMSIS++">
 
-  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++" href="/feed.xml">
 
 
   <meta property="article:published_time" content="2016-06-30">
@@ -24,9 +24,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
@@ -169,7 +169,8 @@
 <h4 id="documentao">Documentação</h4>
 
 <ul>
-  <li><a href="/pt/user-manual/">Manual do usuário</a>
+  <li>
+<a href="/pt/user-manual/">Manual do usuário</a>
     <ul>
       <li><a href="/pt/user-manual/getting-started/">Começando</a></li>
       <li><a href="/pt/user-manual/basic-concepts/">Conceitos básicos</a></li>
@@ -241,7 +242,7 @@
 <table id="last-modified">
   <tr>
     <td id="last-modified">Last modified on Thu Aug 18 19:23:40 2016 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/basic-concepts.pt.md"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Improve this page</a></td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/basic-concepts.pt.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
@@ -406,7 +407,8 @@
 </tr>
 </tbody>
 </table>
-</div><h2 id="embedded-systems">Embedded systems</h2>
+</div>
+<h2 id="embedded-systems">Embedded systems</h2>
 
 <p>From the software point of view, an <a href="https://en.wikipedia.org/wiki/Embedded_system">embedded system</a> is a small computer, built for a dedicated function (as opposed to general purpose <a href="https://en.wikipedia.org/wiki/Computer">computers</a>).</p>
 
@@ -457,7 +459,7 @@
 <p>In this architecture, the functions implementing the various functionalities are inherently, even if not formally declared as such, some kind of <a href="https://en.wikipedia.org/wiki/Finite-state_machine">finite state machines</a>, spinning around and switching states based on inputs provided by the ISRs.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/superloop.png" />
+<img src="/assets/images/2016/superloop.png">
 <p>Superloop application</p>
 </div>
 
@@ -576,21 +578,21 @@
 <p>The biggest disadvantage of cooperative multi-tasking is a possible low reaction speed, for example when an interrupt wants to resume a high priority thread, this might not happen until the low priority thread decides to yield.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-cooperative.png" />
+<img src="/assets/images/2016/scheduling-cooperative.png">
 <p>Cooperative context switching.</p>
 </div>
 
 <p>In this case the solution is to allow the interrupt to trigger a context switch from the low priority thread to the high priority thread without the threads event knowing about. This automatic kind of context switch is also called <strong>preemptive</strong> multi-tasking, since long running threads are <em>preempted</em> to hog the CPU in favour of higher priority threads.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-preemptive.png" />
+<img src="/assets/images/2016/scheduling-preemptive.png">
 <p>Preemptive context switching</p>
 </div>
 
 <p>Once the mechanism for an interrupt to preempt a thread is functional, a further improvement can be added: a periodic timer (for example the timer used to keep track of time), can be used to automatically preempt threads and give a chance to equal priority threads to alternatively get the CPU.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-preemptive-timer.png" />
+<img src="/assets/images/2016/scheduling-preemptive-timer.png">
 <p>Preemptive context switching with periodic timer</p>
 </div>
 
@@ -635,9 +637,12 @@
 <p>Apart from some states used during thread creation and destruction, the most important thread states are:</p>
 
 <ul>
-  <li><strong>running</strong> - a thread is marked as running when it is using the CPU;</li>
-  <li><strong>ready</strong> - a thread that is ready to run, but does not use the CPU yet;</li>
-  <li><strong>suspended</strong> - a thread that is not ready to run since it must wait for a resource that is not yet available, or for an event that will occur in the future.</li>
+  <li>
+<strong>running</strong> - a thread is marked as running when it is using the CPU;</li>
+  <li>
+<strong>ready</strong> - a thread that is ready to run, but does not use the CPU yet;</li>
+  <li>
+<strong>suspended</strong> - a thread that is not ready to run since it must wait for a resource that is not yet available, or for an event that will occur in the future.</li>
 </ul>
 
 <h3 id="the-ready-list">The READY list</h3>
@@ -706,7 +711,7 @@
 </ul>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/priority-inversion.png" />
+<img src="/assets/images/2016/priority-inversion.png">
 <p>Priority inversion</p>
 </div>
 
@@ -717,7 +722,7 @@
 <p>One of the possible solutions to avoid this is for the high priority thread to temporarily boost the priority of the low priority thread, to prevent other threads to interfere and so help the low priority thread to complete its job sooner. This is known as <strong>priority inheritance</strong>.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/priority-inheritance.png" />
+<img src="/assets/images/2016/priority-inheritance.png">
 <p>Priority inheritance</p>
 </div>
 
@@ -911,7 +916,12 @@
     <ul>
   <li>© 2016 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
 </ul>
 
 
