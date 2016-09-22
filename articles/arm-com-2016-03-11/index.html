@@ -442,13 +442,13 @@ count(void)
 
 <p>With the ISO standard threads defined as wrappers over POSIX threads, and with the CMSIS++ native threads functionally compatible with POSIX threads, the implementation of the CMSIS++ ISO threads was quite straightforward.</p>
 
-<p>The classes are grouped under the <code class="highlighter-rouge">os::estd</code> namespace, and, to access them, C++ applications have to include headers from the <code class="highlighter-rouge">cmsis-plus/iso</code> folder, like <code class="highlighter-rouge">&lt;cmsis-plus/iso/thread&gt;</code>. The namespace <code class="highlighter-rouge">std::</code> and the standard header names (like <code class="highlighter-rouge">&lt;thread&gt;</code>) could not be used, to avoid clashes with system definitions when building CMSIS++ applications on POSIX host systems. The <strong>e</strong> in <code class="highlighter-rouge">estd</code> stands for <strong>embedded</strong>, so the namespace is dedicated to <strong>embedded standard</strong> definitions.</p>
+<p>The classes are grouped under the <code class="highlighter-rouge">os::estd</code> namespace, and, to access them, C++ applications have to include headers from the <code class="highlighter-rouge">cmsis-plus/estd</code> folder, like <code class="highlighter-rouge">&lt;cmsis-plus/estd/thread&gt;</code>. The namespace <code class="highlighter-rouge">std::</code> and the standard header names (like <code class="highlighter-rouge">&lt;thread&gt;</code>) could not be used, to avoid clashes with system definitions when building CMSIS++ applications on POSIX host systems. The <strong>e</strong> in <code class="highlighter-rouge">estd</code> stands for <strong>embedded</strong>, so the namespace is dedicated to <strong>embedded standard</strong> definitions.</p>
 
 <p>A similar example using the standard C++ threads:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#include &lt;cmsis-plus/iso/thread&gt;
-#include &lt;cmsis-plus/iso/chrono&gt;
+<pre class="highlight"><code>#include &lt;cmsis-plus/estd/thread&gt;
+#include &lt;cmsis-plus/estd/chrono&gt;
 #include &lt;cmsis-plus/diag/trace.h&gt;
 
 using namespace os;
@@ -492,8 +492,8 @@ os_main(int argc, char* argv[])
 <p>Most of the goodies of the C++ 11 standard can be used, for example <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> mutex locks, condition variables, lambdas:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#include &lt;cmsis-plus/iso/mutex&gt;
-#include &lt;cmsis-plus/iso/condition_variable&gt;
+<pre class="highlight"><code>#include &lt;cmsis-plus/estd/mutex&gt;
+#include &lt;cmsis-plus/estd/condition_variable&gt;
 
 using namespace os;
 using namespace os::estd;
