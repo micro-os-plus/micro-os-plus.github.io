@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Change log</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Change log</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>rename <code>recursive_initializer</code> -&gt; <code>initializer_recursive</code></li>
 <li>rename <code>normal_initializer</code> -&gt; <code>initializer_normal</code></li>
 <li>rename <code>os_mutex_attr_init_recursive()</code> -&gt; <code><a class="el" href="group__cmsis-plus-rtos-c-mutex.html#ga517f589a9d52aad46ec60f0e727d79fe" title="Initialise the recursive mutex attributes. ">os_mutex_attr_recursive_init()</a></code></li>
-<li>rtos: add <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#adb57f891c4f1a22d19748fb4082c6e39" title="Check if the scheduler is in preemptive mode. ">scheduler::preemptive()</a></code> &amp; <code>scheduler::preemptive(bool)</code></li>
+<li>rtos: add <code><a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a77599af3555dc227e504469900fe6fc3" title="Check if the scheduler is in preemptive mode. ">scheduler::preemptive()</a></code> &amp; <code>scheduler::preemptive(bool)</code></li>
 <li>add <code>OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</code></li>
 <li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#gab0c6a2436fce9a30d872ca6ba1fdf096" title="Check if the scheduler is in preemptive mode. ">os_sched_is_preemptive()</a></code> &amp; <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga5dbd8d4a7c91345717f8f9e072faf153" title="Set the scheduler preemptive mode. ">os_sched_set_preemptive()</a></code>.</li>
 </ul>
@@ -257,8 +257,24 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>rename <code>message_queue_static&lt;&gt;</code> -&gt; <code>message_queue_inclusive&lt;&gt;</code></li>
 </ul>
 <h4>Problematic incompatible changes</h4>
-<p>Experience proved that one of the above changes was trickier than planned: the rename of the <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware. ">os_startup_initialize_hardware()</a></code>, since without the renamed function the linker used the weak version of this function. To help developers, the weak definition was temporarily disabled, so if this function was not yet renamed in the application, the linker will complain. </p><hr/>
- </div></div><!-- contents -->
+<p>Experience proved that one of the above changes was trickier than planned: the rename of the <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware. ">os_startup_initialize_hardware()</a></code>, since without the renamed function the linker used the weak version of this function. To help developers, the weak definition was temporarily disabled, so if this function was not yet renamed in the application, the linker will complain.</p>
+<h3>v6.3.8 2016-10-05</h3>
+<ul>
+<li>refine thread user storage support, available only when <code>OS_INCLUDE_RTOS_CUSTOM_THREAD_USER_STORAGE</code></li>
+<li>startup: temporarily disable weak <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware. ">os_startup_initialize_hardware()</a></code></li>
+<li>rename <code>startup.c</code> -&gt; <code><a class="el" href="startup_8cpp.html">startup.cpp</a></code> to be able to call C++ code, like the code to initialise the main stack</li>
+<li>rename <code>OS_USE_RTOS_PORT_SYSTICK_CLOCK_SLEEP_FOR</code> -&gt; <code>OS_USE_RTOS_PORT_CLOCK_SYSTICK_WAIT_FOR</code></li>
+<li>rename <code>OS_USE_RTOS_PORT_REALTIME_CLOCK_SLEEP_FOR</code> -&gt; <code>OS_USE_RTOS_PORT_CLOCK_REALTIME_WAIT_FOR</code></li>
+<li>os-c-wrapper: fix object creation return values</li>
+<li>idle thread: use separate <code>os_rtos_idle_actions ()</code></li>
+<li>integrate posix-io &amp; posix-driver git subtrees</li>
+<li>rename folder <code>cmsis-plus/drivers</code> -&gt; <code>cmsis-plus/driver</code> (singular)</li>
+<li>update posix-io &amp; posix-driver to all lower case naming convention</li>
+<li>add separate utils, with generic utility code, like lists</li>
+<li>automate char device registry by using lists; no more need to manually add/remove devices <hr/>
+ </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

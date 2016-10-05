@@ -3,7 +3,7 @@ var classos_1_1driver_1_1usb_1_1_device =
     [ "Device", "classos_1_1driver_1_1usb_1_1_device.html#aefd2c04f314d809a54c7b3be7bb2b806", null ],
     [ "Device", "classos_1_1driver_1_1usb_1_1_device.html#af5b5635f9eb89f391bb024bf2ca5db5a", null ],
     [ "Device", "classos_1_1driver_1_1usb_1_1_device.html#aaa31c257a74140c2bec58db1b1100b1f", null ],
-    [ "~Device", "classos_1_1driver_1_1usb_1_1_device.html#ac1dc653d6a9e34304eb3c91aa9c4d1e1", null ],
+    [ "~Device", "classos_1_1driver_1_1usb_1_1_device.html#a824404b69000bc868b15a6bf9e3b33b1", null ],
     [ "abort_transfer", "classos_1_1driver_1_1usb_1_1_device.html#ad7e91441686c0f1a1049d59de6bdcbb3", null ],
     [ "configure_address", "classos_1_1driver_1_1usb_1_1_device.html#ac9326898a1ab7c6a143afd10fd0aa46a", null ],
     [ "configure_endpoint", "classos_1_1driver_1_1usb_1_1_device.html#adc3d664273d0979254a8adbff1e85d55", null ],

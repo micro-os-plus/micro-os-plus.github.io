@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rtos_20options',['RTOS Options',['../group__cmsis-plus-app-config-rtos.html',1,'']]]
+  ['functions',['Functions',['../group__cmsis-plus-posix-io-func.html',1,'']]]
 ];

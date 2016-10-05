@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ready_5fthreads_5flist',['ready_threads_list',['../classos_1_1rtos_1_1thread.html#a7ee778c048d3364221b5517c95b1cd5c',1,'os::rtos::thread']]],
-  ['thread',['thread',['../classos_1_1rtos_1_1thread_1_1stack.html#a4694096b36b06474e1e4925aa1ee01cb',1,'os::rtos::thread::stack::thread()'],['../classos_1_1rtos_1_1thread_1_1context.html#a4694096b36b06474e1e4925aa1ee01cb',1,'os::rtos::thread::context::thread()']]],
-  ['thread',['thread',['../classos_1_1rtos_1_1thread_1_1context.html#aa64dce641ff0e16877bc81e7f9d4a936',1,'os::rtos::thread::context']]]
+  ['mkdir',['mkdir',['../classos_1_1posix_1_1file__system.html#a548e5b744ca2e97beb61ad7aa41114e2',1,'os::posix::file_system']]],
+  ['mount_5fmanager',['mount_manager',['../classos_1_1posix_1_1file__system.html#ab043e7a9986a1b8c10b0e691853341e1',1,'os::posix::file_system']]]
 ];

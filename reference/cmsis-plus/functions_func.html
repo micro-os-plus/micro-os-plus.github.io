@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members - Functions</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -168,15 +169,37 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_device.html#ad7e91441686c0f1a1049d59de6bdcbb3">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#affd928c099c3f1c99389fd7388437ac4">os::driver::usb::Host</a>
 </li>
+<li>above_high_water_mark()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#aba59373fb75d1abfa900f4654a0cf494">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
+<li>above_low_water_mark()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a282e5a9c4e59dc8636427eaf3251bba3">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
+<li>accept()
+: <a class="el" href="classos_1_1posix_1_1socket.html#ad988e6784b93935c8e4f64cf95bdb1bb">os::posix::socket</a>
+</li>
 <li>action()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1timeout__thread__node.html#ad999760cd77603a2a6ed7ec75b98ecea">os::rtos::internal::timeout_thread_node</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1timer__node.html#a6a071cff911a40654ca96eeae9753fb6">os::rtos::internal::timer_node</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1timestamp__node.html#a1707812edd3486165026bbf86188d311">os::rtos::internal::timestamp_node</a>
 </li>
+<li>adjust_path()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#aa5cec738771e34d3d26ec5cbf93eca45">os::posix::file_system</a>
+</li>
+<li>advance_back()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#af0e6d3846be79ced01d579d03d3bdea6">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
+<li>advance_front()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a41dee72c5790e262c7bf0e6a25902147">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
 <li>alloc()
-: <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a398b56100a97f150fb31bcc781ced974">os::rtos::memory_pool</a>
+: <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a28f7133b7ab3b68a52e68bea705c0bd1">os::posix::file_descriptors_manager</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a398b56100a97f150fb31bcc781ced974">os::rtos::memory_pool</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#aeddefce76846cc9f7c508feea52cb757">os::rtos::memory_pool_inclusive&lt; T, N &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html#a5d99e7fd2e5ba287144eef3cc7a480a8">os::rtos::memory_pool_typed&lt; T, Allocator &gt;</a>
+</li>
+<li>alloc_file_descriptor()
+: <a class="el" href="classos_1_1posix_1_1io.html#a92490027421a039ea56d1ad2f5cff989">os::posix::io</a>
 </li>
 <li>allocate()
 : <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#aed60f290fbd5b311d4ea0f834e9f845a">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
@@ -200,26 +223,33 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a35a75593e68760b10c50ba750bf514e5">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
 </li>
 <li>allocator_stateless_polymorphic_synchronized()
-: <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a2f5e629c1a52c4c311f52e32aff00cf8">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#af2ec09ca16c46d95dea4b1630761a3ba">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
+</li>
+<li>aquire()
+: <a class="el" href="classos_1_1posix_1_1pool.html#a627ea0859fd88179d73f4da6fb0f4b3e">os::posix::pool</a>
+, <a class="el" href="classos_1_1posix_1_1pool__typed.html#a54756be720eb8a7d1767d34f53cf5ad9">os::posix::pool_typed&lt; T &gt;</a>
+</li>
+<li>assign()
+: <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a9b7afa465678dc615ad9757a54c8e5f8">os::posix::file_descriptors_manager</a>
 </li>
 <li>attributes()
 : <a class="el" href="classos_1_1rtos_1_1condition__variable_1_1attributes.html#a8e6f0ceafad3f07130d35b1ee223deb8">os::rtos::condition_variable::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1event__flags_1_1attributes.html#a587692388257cf571bd1bc7c21233001">os::rtos::event_flags::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1event__flags_1_1attributes.html#a34644fac121c934c013967eca82b011d">os::rtos::event_flags::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html#ac4bde4a3c9d0f66fbe8a35d43262cb3d">os::rtos::memory_pool::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1message__queue_1_1attributes.html#a7bde696df24d7a139eccab60a03351ba">os::rtos::message_queue::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1message__queue_1_1attributes.html#a5c7791910bcbf4d27be9f241e5513470">os::rtos::message_queue::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#af0dee2074d5dcd69332da79facbf717b">os::rtos::mutex::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a2d5f1e79bf68df57d284ebb1feb52196">os::rtos::semaphore::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#ac30490f322edb74df98ce58010f6a876">os::rtos::thread::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html#aa2b680b7ed6a57d4478a2fb6f57d747c">os::rtos::timer::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html#a25901891ddd23ca9878b716718c67d83">os::rtos::timer::attributes</a>
 </li>
 <li>attributes_binary()
-: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#ae8151d687b71c8cc2c915362cd07c0da">os::rtos::semaphore::attributes_binary</a>
+: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a34814a61f03b95ec00a10309f0a20f25">os::rtos::semaphore::attributes_binary</a>
 </li>
 <li>attributes_clocked()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1attributes__clocked.html#a133f5f069114fc7d1cf64fbcf4a3742d">os::rtos::internal::attributes_clocked</a>
 </li>
 <li>attributes_counting()
-: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a732102129a7138cf4dae4ab4c107b92b">os::rtos::semaphore::attributes_counting</a>
+: <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a7d069a6c13cfb6c41f9d18150dc9fdfa">os::rtos::semaphore::attributes_counting</a>
 </li>
 <li>attributes_periodic()
 : <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a40597d650c10750877d414539f50b64a">os::rtos::timer::attributes_periodic</a>

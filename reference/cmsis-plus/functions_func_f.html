@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members - Functions</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -164,6 +165,26 @@ $(document).ready(function(){initNavTree('functions_func_f.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fcntl()
+: <a class="el" href="classos_1_1posix_1_1io.html#aa02f5bee86b8acfa44cee93c5710167a">os::posix::io</a>
+</li>
+<li>file()
+: <a class="el" href="classos_1_1posix_1_1file.html#a640e549a7f4af7746b8534f2beba3927">os::posix::file</a>
+</li>
+<li>file_descriptor()
+: <a class="el" href="classos_1_1posix_1_1io.html#a98d3b9609fdc70cd3b17a9b2345a5c30">os::posix::io</a>
+</li>
+<li>file_descriptors_manager()
+: <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a8e546a487d47b555ada00f99355c02e4">os::posix::file_descriptors_manager</a>
+</li>
+<li>file_system()
+: <a class="el" href="classos_1_1posix_1_1directory.html#a806ef5c44fa0e97a663aec64187d6342">os::posix::directory</a>
+, <a class="el" href="classos_1_1posix_1_1file.html#a4b23666e3f39617bcace3f554c167a73">os::posix::file</a>
+, <a class="el" href="classos_1_1posix_1_1file__system.html#a65c080ca81bd1c13f2b00f10a404f595">os::posix::file_system</a>
+</li>
+<li>files_pool()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#a96236b9748876847d5cacf9a45074f4e">os::posix::file_system</a>
+</li>
 <li>first_fit_top()
 : <a class="el" href="classos_1_1memory_1_1first__fit__top.html#a5008e181bc1de0737fbdf3bd64cdd7ec">os::memory::first_fit_top</a>
 </li>
@@ -171,13 +192,14 @@ $(document).ready(function(){initNavTree('functions_func_f.html','');});
 : <a class="el" href="classos_1_1memory_1_1first__fit__top__allocated.html#a2f0afd76a043e02d67a6dd9280c8a708">os::memory::first_fit_top_allocated&lt; A &gt;</a>
 </li>
 <li>first_fit_top_inclusive()
-: <a class="el" href="classos_1_1memory_1_1first__fit__top__inclusive.html#a9782cb06d2b41000bc58e6813ffa21cc">os::memory::first_fit_top_inclusive&lt; N &gt;</a>
+: <a class="el" href="classos_1_1memory_1_1first__fit__top__inclusive.html#aa57828bcb4535a0e5923b018dfe4e5b1">os::memory::first_fit_top_inclusive&lt; N &gt;</a>
 </li>
 <li>flags_raise()
 : <a class="el" href="classos_1_1rtos_1_1thread.html#a34e7b2be9b9104142374399120e04589">os::rtos::thread</a>
 </li>
 <li>free()
-: <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063">os::rtos::memory_pool</a>
+: <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a81d12f194b6d2902bfda58ca80599ee5">os::posix::file_descriptors_manager</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063">os::rtos::memory_pool</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a149c9aa764771ec53e80fcdd91d5aa1c">os::rtos::memory_pool_inclusive&lt; T, N &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool__typed.html#a100f0ef4e03ead308a9926a204eb40da">os::rtos::memory_pool_typed&lt; T, Allocator &gt;</a>
 </li>
@@ -190,8 +212,21 @@ $(document).ready(function(){initNavTree('functions_func_f.html','');});
 <li>from_time_t()
 : <a class="el" href="classos_1_1estd_1_1chrono_1_1system__clock.html#a1143c2e1e7936be68c33a56004bad05b">os::estd::chrono::system_clock</a>
 </li>
+<li>front_contiguous_buffer()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a6baeb0a88556656f489deda6e3c3c943">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
+<li>fstat()
+: <a class="el" href="classos_1_1posix_1_1io.html#a941bd15a7fd7315689e3739331e1ef22">os::posix::io</a>
+</li>
+<li>fsync()
+: <a class="el" href="classos_1_1posix_1_1file.html#ad38f6b20e95a7744fc5d021924d13e33">os::posix::file</a>
+</li>
+<li>ftruncate()
+: <a class="el" href="classos_1_1posix_1_1file.html#a6d36ea8bd53f4c6d80835cc769fb4656">os::posix::file</a>
+</li>
 <li>full()
-: <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a22e31f68eaa6f88eb4621ab0de70b7a4">os::rtos::memory_pool</a>
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#ad939169a7c5b47bba5086d3a048ab82c">os::posix::circular_buffer&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a22e31f68eaa6f88eb4621ab0de70b7a4">os::rtos::memory_pool</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue.html#a6106138213cbf09c034242aa6a32509e">os::rtos::message_queue</a>
 </li>
 <li>function_args()

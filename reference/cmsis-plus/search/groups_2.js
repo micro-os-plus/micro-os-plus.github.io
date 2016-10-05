@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_20options',['Library Options',['../group__cmsis-plus-app-config-lib.html',1,'']]]
+  ['driver_20classes',['Driver classes',['../group__cmsis-plus-posix-io-drivers.html',1,'']]]
 ];

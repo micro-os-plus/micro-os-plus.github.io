@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members - Functions</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -178,15 +179,28 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 </li>
 <li>send()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#af002a780fce6376249c98ac6df633e2d">os::driver::Serial</a>
+, <a class="el" href="classos_1_1posix_1_1socket.html#a60fd24131a47f4ce4c5329132ff9e8f0">os::posix::socket</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue.html#a3e6feb26468955f0eef1251a94f04091">os::rtos::message_queue</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue__inclusive.html#a19432a2a8c83093ba8725a92ad8ab173">os::rtos::message_queue_inclusive&lt; T, N &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue__typed.html#a36f83a75fda2e9d4888c08f515d04725">os::rtos::message_queue_typed&lt; T, Allocator &gt;</a>
 </li>
+<li>sendmsg()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a33556d2d758ad4a37f026a441f3623e8">os::posix::socket</a>
+</li>
+<li>sendto()
+: <a class="el" href="classos_1_1posix_1_1socket.html#af01ecd608018b7c2bca97d3b04e6c3b9">os::posix::socket</a>
+</li>
 <li>Serial()
-: <a class="el" href="classos_1_1driver_1_1_serial.html#a3695d724eba31437b7ca9d55b9bf29be">os::driver::Serial</a>
+: <a class="el" href="classos_1_1driver_1_1_serial.html#a6420517f0c4543bd9ff2d9903fe147c9">os::driver::Serial</a>
 </li>
 <li>set()
 : <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#afd904365ef37ccaf74f6cd84e9cfd951">os::rtos::thread::stack</a>
+</li>
+<li>setsockopt()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a03477d4c1c58b8b12b43aab43e073333">os::posix::socket</a>
+</li>
+<li>shutdown()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a90a243afba45499c0431dc9927977e90">os::posix::socket</a>
 </li>
 <li>signal()
 : <a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766">os::rtos::condition_variable</a>
@@ -199,6 +213,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 </li>
 <li>signal_event()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#a069b0f66adb7e654801de27c7e43cf82">os::driver::Serial</a>
+, <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a0284eb47a0cfcaa084b3f16ed7ad1bb6">os::posix::device_serial_buffered&lt; CS &gt;</a>
 </li>
 <li>signal_pipe_event()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#a73140f099e2b475a5145e02b2cd2896d">os::driver::usb::Host</a>
@@ -207,7 +222,11 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#af676fbe5bf78c7b8b30b5c355b92c6b0">os::driver::usb::Host</a>
 </li>
 <li>size()
-: <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">os::rtos::thread::stack</a>
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#accc26f194ae21717be4626fd93737bc5">os::posix::circular_buffer&lt; T &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">os::posix::file_descriptors_manager</a>
+, <a class="el" href="classos_1_1posix_1_1mount__manager.html#ac9ac5c57e01d306800ff0f76cbc6544e">os::posix::mount_manager</a>
+, <a class="el" href="classos_1_1posix_1_1pool.html#a8ef2f1eeb7e263ed4d737cfd1bee4061">os::posix::pool</a>
+, <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">os::rtos::thread::stack</a>
 </li>
 <li>sleep_for()
 : <a class="el" href="classos_1_1estd_1_1chrono_1_1realtime__clock.html#ad64d1350abd11cb753600295bb9cdbe2">os::estd::chrono::realtime_clock</a>
@@ -217,6 +236,16 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>sleep_until()
 : <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a5582df6aac1fd73354589bb024f17873">os::rtos::adjustable_clock</a>
 , <a class="el" href="classos_1_1rtos_1_1clock.html#a7720aceded20f868c541755b26027901">os::rtos::clock</a>
+</li>
+<li>sockatmark()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a036aa00be56bae2eea21b21ba5afaace">os::posix::socket</a>
+</li>
+<li>socket()
+: <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a55ae1a7bf7f54c5df225e052dc6a7d92">os::posix::file_descriptors_manager</a>
+, <a class="el" href="classos_1_1posix_1_1socket.html#a09a2792e0eaeb926cf7630438e2352a6">os::posix::socket</a>
+</li>
+<li>sockets_pool()
+: <a class="el" href="classos_1_1posix_1_1net__stack.html#a1f606f805c7452b0e6c5792793773ab8">os::posix::net_stack</a>
 </li>
 <li>stack()
 : <a class="el" href="classos_1_1rtos_1_1thread_1_1context.html#a405ff125b0936a3f52eebff9be33f8a4">os::rtos::thread::context</a>
@@ -235,14 +264,17 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 , <a class="el" href="classos_1_1rtos_1_1port_1_1clock__systick.html#a74dcb8c3565f048dba966bcca43eae71">os::rtos::port::clock_systick</a>
 , <a class="el" href="classos_1_1rtos_1_1timer.html#af9ca17c173830dd8601f83d2a43a8730">os::rtos::timer</a>
 </li>
+<li>stat()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#a64cc801f4debba8025bbcef2a4634c03">os::posix::file_system</a>
+</li>
 <li>state()
 : <a class="el" href="classos_1_1rtos_1_1thread.html#ae0e19cd555aac2a77769ecc054062e7c">os::rtos::thread</a>
 </li>
 <li>static_double_list()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1static__double__list.html#a7fe91d8fae00edf10a9772c4262d8cf3">os::rtos::internal::static_double_list</a>
+: <a class="el" href="classos_1_1utils_1_1static__double__list.html#af39a9df451be49688fb9b1fb37425f4e">os::utils::static_double_list</a>
 </li>
 <li>static_double_list_links()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1static__double__list__links.html#a16679e145b19679d388827532e5e9f71">os::rtos::internal::static_double_list_links</a>
+: <a class="el" href="classos_1_1utils_1_1static__double__list__links.html#a2141f599dcb2c214d6847dfdbb6b6086">os::utils::static_double_list_links</a>
 </li>
 <li>statistics()
 : <a class="el" href="classos_1_1rtos_1_1thread.html#ac03abea9e899fb47a4ab163abcbdb26e">os::rtos::thread</a>

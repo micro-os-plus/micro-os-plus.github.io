@@ -13,7 +13,7 @@ var searchData=
   ['pool_5fsz',['pool_sz',['../structos__pool__def.html#a7a455b537ba119df57a704a3c4ac8b40',1,'os_pool_def::pool_sz()'],['../structos__mail_q__def.html#aa3cea447ed62fbe28be8862e64662e4b',1,'os_mailQ_def::pool_sz()']]],
   ['port_5fmask',['port_mask',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a57abb95c041cc6c140303dd3313acdc9',1,'os::driver::usb::host::Capabilities']]],
   ['prev',['prev',['../structos__internal__double__list__links__s.html#a51b1438e304be9fa64f8559c8ae65e86',1,'os_internal_double_list_links_s::prev()'],['../structos__clock__node__s.html#a919f956c2b84125f841d6b99e45876b0',1,'os_clock_node_s::prev()']]],
-  ['prev_5f',['prev_',['../classos_1_1rtos_1_1internal_1_1static__double__list__links.html#a27a055d70aab43f61ff8fc7216567b2f',1,'os::rtos::internal::static_double_list_links']]],
+  ['prev_5f',['prev_',['../classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293',1,'os::utils::static_double_list_links']]],
   ['prios',['prios',['../classos_1_1rtos_1_1message__queue_1_1arena.html#a679a09fb4e24817fa97e3c7f6085804e',1,'os::rtos::message_queue::arena']]],
   ['psr',['psr',['../structexception__stack__frame__s.html#acb44bbe2250a13a138e3f4276a33a62b',1,'exception_stack_frame_s']]],
   ['pthread',['pthread',['../structos__thread__def.html#a0df2a4614d013387de75eebe66a6e3f9',1,'os_thread_def']]],

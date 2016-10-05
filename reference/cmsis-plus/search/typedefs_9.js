@@ -5,5 +5,5 @@ var searchData=
   ['mode_5ft',['mode_t',['../namespaceos_1_1rtos_1_1flags.html#a49c1da8337c9d32697fefbdf0412cdac',1,'os::rtos::flags']]],
   ['modem_5fconfig_5ft',['modem_config_t',['../namespaceos_1_1driver_1_1serial.html#a97c477c99b3ba154395a50827b19bac9',1,'os::driver::serial']]],
   ['msg_5fsize_5ft',['msg_size_t',['../group__cmsis-plus-rtos-mqueue.html#gaee507fd1f777940280b9246bff1018d3',1,'os::rtos::message_queue']]],
-  ['mutexes_5flist',['mutexes_list',['../namespaceos_1_1rtos.html#a9f10242fb8b25fe339d47ad1d4e6f6db',1,'os::rtos']]]
+  ['mutexes_5flist',['mutexes_list',['../namespaceos_1_1rtos.html#a28b47e6e6b89d62a1628dfedf76a602a',1,'os::rtos']]]
 ];

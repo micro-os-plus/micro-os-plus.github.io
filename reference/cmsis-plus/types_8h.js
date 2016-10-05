@@ -1,6 +1,6 @@
 var types_8h =
 [
-    [ "fileDescriptor_t", "types_8h.html#a063e1d1eddc71cc8f3cd46a4aad0dc2a", null ],
+    [ "file_descriptor_t", "types_8h.html#a6b03fbc1f94583e9a5e43c752d688e98", null ],
     [ "__posix_accept", "types_8h.html#a067f588d36f5f6e050f59dde554a2da3", null ],
     [ "__posix_bind", "types_8h.html#a9cec95baa2d701d8486e368ca1e2456c", null ],
     [ "__posix_chdir", "types_8h.html#a158eb2d329a7063a035bb7b339ca41ce", null ],
@@ -63,5 +63,5 @@ var types_8h =
     [ "__posix_write", "types_8h.html#a925f315f0fd4466fea0b8d8b4814137d", null ],
     [ "__posix_writev", "types_8h.html#ae14a4f38a51d65192d03e6f9f536c56b", null ],
     [ "os_startup_initialize_args", "types_8h.html#a93965d610e08f0905fc7c8dff44bed61", null ],
-    [ "noFileDescriptor", "types_8h.html#ad52280e4d26eb2e1f792567064dcda38", null ]
+    [ "no_file_descriptor", "types_8h.html#aca961996bf22f0750729bf0a6c17a616", null ]
 ];

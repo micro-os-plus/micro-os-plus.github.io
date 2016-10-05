@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members - Functions</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -179,6 +180,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>get_drv()
 : <a class="el" href="classos_1_1driver_1_1_version.html#ab5856bacdd8325a61ffc158672f06350">os::driver::Version</a>
 </li>
+<li>get_file_system()
+: <a class="el" href="classos_1_1posix_1_1mount__manager.html#a3ef3002d50f2d49ba86e5cefe5de3f5e">os::posix::mount_manager</a>
+</li>
 <li>get_frame_number()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_device.html#ad09cd9fedcd8d8ca22940f57f37d266c">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#ad8e7726f38718e9dfd1f4c63878c6094">os::driver::usb::Host</a>
@@ -187,15 +191,15 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="classos_1_1estd_1_1thread.html#a5c68baef042ea6880432841602fa304d">os::estd::thread</a>
 </li>
 <li>get_iterator_pointer()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a97f0c9630e094790893f60e83fddd874">os::rtos::internal::double_list_iterator&lt; T, N, MP, U &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#a2b6cc6ead4fe366ed491dce7930881e6">os::rtos::internal::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
+: <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#add86ef449b41fdecad9e244e16eef8f3">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#ab03cd67262b53693dd4101936d36bd7a">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
 </li>
 <li>get_modem_status()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#ae6522b26ed0e69a011123060abe4d64f">os::driver::Serial</a>
 </li>
 <li>get_pointer()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1double__list__iterator.html#a30097ca637463db18ace61a445624675">os::rtos::internal::double_list_iterator&lt; T, N, MP, U &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list__iterator.html#aa945b5b478939c7bf2c21bdab2a625e2">os::rtos::internal::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
+: <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#af3a9ae134141ee618dcb5d4a674f1878">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#a5d4e6cb334be10dde1eb64d2b8b92c74">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
 </li>
 <li>get_port_status()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#a5c3a289f982732d91f34cb1646071592">os::driver::usb::Host</a>
@@ -218,8 +222,20 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>get_tx_count()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#ae66576b4568eda6e54ea2256ef9c07ea">os::driver::Serial</a>
 </li>
+<li>get_type()
+: <a class="el" href="classos_1_1posix_1_1io.html#ad28fccdc1b9c477ee06a71944b17bd78">os::posix::io</a>
+</li>
 <li>get_version()
 : <a class="el" href="classos_1_1driver_1_1_base.html#aad0e63dd5cf9179f7565138d10085b37">os::driver::Base</a>
+</li>
+<li>getpeername()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a3f11c8e27ad02c788baa888058a36190">os::posix::socket</a>
+</li>
+<li>getsockname()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a11f1b06cb058ad045c2565fa4362dcf0">os::posix::socket</a>
+</li>
+<li>getsockopt()
+: <a class="el" href="classos_1_1posix_1_1socket.html#ad97197c7c75e8c62980d5c8090491d69">os::posix::socket</a>
 </li>
 </ul>
 </div><!-- contents -->

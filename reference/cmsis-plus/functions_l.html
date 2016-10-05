@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -170,10 +171,11 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 , <a class="el" href="classos_1_1estd_1_1unique__lock.html#a8ef8b5f6d6d1a4573a915b9c10ad9b7d">os::estd::unique_lock&lt; L &gt;</a>
 </li>
 <li>length()
-: <a class="el" href="classos_1_1rtos_1_1message__queue.html#aff78d42a19d99e3fde893970fc6b08cd">os::rtos::message_queue</a>
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#af506f6127d9547e656f6823e40e29bf3">os::posix::circular_buffer&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1message__queue.html#aff78d42a19d99e3fde893970fc6b08cd">os::rtos::message_queue</a>
 </li>
 <li>lifo()
-: <a class="el" href="classos_1_1memory_1_1lifo.html#a963f39a040f17be2d9dbbbc660d404fd">os::memory::lifo</a>
+: <a class="el" href="classos_1_1memory_1_1lifo.html#a1298ae730237dbc16fabe884ab863886">os::memory::lifo</a>
 </li>
 <li>lifo_allocated()
 : <a class="el" href="classos_1_1memory_1_1lifo__allocated.html#a6325f1c0e7ae9fa3c2d847d1510b39ce">os::memory::lifo_allocated&lt; A &gt;</a>
@@ -182,12 +184,13 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 : <a class="el" href="classos_1_1memory_1_1lifo__inclusive.html#a0de94c104f8b921e97f5b435e367c095">os::memory::lifo_inclusive&lt; N &gt;</a>
 </li>
 <li>link()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1clock__timestamps__list.html#a3667b4ccf766230aca8557fce4fa8990">os::rtos::internal::clock_timestamps_list</a>
-, <a class="el" href="classos_1_1rtos_1_1internal_1_1intrusive__list.html#ab1c511315e5a900c5837e8dda7a78409">os::rtos::internal::intrusive_list&lt; T, N, MP &gt;</a>
+: <a class="el" href="classos_1_1posix_1_1device__char__registry.html#a3006c143eb256c22323064e59211f949">os::posix::device_char_registry</a>
+, <a class="el" href="classos_1_1rtos_1_1internal_1_1clock__timestamps__list.html#a3667b4ccf766230aca8557fce4fa8990">os::rtos::internal::clock_timestamps_list</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afc67779bde7220699267001db9499a64">os::rtos::internal::ready_threads_list</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1terminated__threads__list.html#aabe359cf57ce813395c5543028146b8f">os::rtos::internal::terminated_threads_list</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1thread__children__list.html#aedc797dc7757e684e7c33cdc891a6eae">os::rtos::internal::thread_children_list</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#a202eae42dee2321d77acfb50669664fb">os::rtos::internal::waiting_threads_list</a>
+, <a class="el" href="classos_1_1utils_1_1intrusive__list.html#a0b3296ede6b817e669753982d475867d">os::utils::intrusive_list&lt; T, N, MP &gt;</a>
 </li>
 <li>links
 : <a class="el" href="classos_1_1rtos_1_1message__queue_1_1arena.html#ad5aa49f7187d32b945ca96485fa00fe4">os::rtos::message_queue::arena&lt; T, msgs, msg_size_bytes &gt;</a>
@@ -197,6 +200,9 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 </li>
 <li>list
 : <a class="el" href="structos__clock__node__s.html#a1824d8b3566e35b8b6c1fbfef95f303b">os_clock_node_s</a>
+</li>
+<li>listen()
+: <a class="el" href="classos_1_1posix_1_1socket.html#a1d8e1253faed7eeae419294f91009049">os::posix::socket</a>
 </li>
 <li>lock()
 : <a class="el" href="classos_1_1estd_1_1mutex.html#a5d6274be38694e3239532efcd994084a">os::estd::mutex</a>
@@ -208,7 +214,7 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 , <a class="el" href="classos_1_1rtos_1_1scheduler_1_1lockable.html#a41276d652deeeffee0818315dfe69eb5">os::rtos::scheduler::lockable</a>
 </li>
 <li>lock_guard()
-: <a class="el" href="classos_1_1estd_1_1lock__guard.html#ae2b5d4db39a4bbf7daa2bf03b1dbe043">os::estd::lock_guard&lt; L &gt;</a>
+: <a class="el" href="classos_1_1estd_1_1lock__guard.html#a0e4c508a10d382f83522f03583b978f8">os::estd::lock_guard&lt; L &gt;</a>
 </li>
 <li>lockable()
 : <a class="el" href="classos_1_1estd_1_1unique__lock.html#a0d538d55cb752b932edcdcf0dd3ac3df">os::estd::unique_lock&lt; L &gt;</a>
@@ -230,6 +236,9 @@ $(document).ready(function(){initNavTree('functions_l.html','');});
 </li>
 <li>lr
 : <a class="el" href="structexception__stack__frame__s.html#a9ff7256b393540ebf8bfa97b5fc2a1d4">exception_stack_frame_s</a>
+</li>
+<li>lseek()
+: <a class="el" href="classos_1_1posix_1_1file.html#a8637a5c0c6a31e3f6fe14d6524eab86c">os::posix::file</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ Reference: Class Members</title>
+<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ Reference
-     &#160;<span id="projectnumber">v6.3.7</span>
+     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
+     &#160;<span id="projectnumber">v6.3.8</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
@@ -166,19 +167,19 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>c_cb_device_func_
-: <a class="el" href="classos_1_1driver_1_1_usbd__wrapper.html#a0e63688e6b1c2f6821010a54ff69d072">os::driver::Usbd_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a02b6562e48cda28e7b966e9cccf5b409">os::driver::usbd_wrapper</a>
 </li>
 <li>c_cb_endpoint_func_
-: <a class="el" href="classos_1_1driver_1_1_usbd__wrapper.html#af9b02f4a1c78dc8d9fc99a859a58a86b">os::driver::Usbd_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#aa207f7cfff7e516bded2a66487891f0e">os::driver::usbd_wrapper</a>
 </li>
 <li>c_cb_func_
-: <a class="el" href="classos_1_1driver_1_1_usart__wrapper.html#a43e823db9b93a31b86f4c58e710f62ed">os::driver::Usart_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usart__wrapper.html#a3859291f4a1b7473f393729ccb332893">os::driver::usart_wrapper</a>
 </li>
 <li>c_cb_pipe_func_
-: <a class="el" href="classos_1_1driver_1_1_usbh__wrapper.html#a484b8a0aec3a1a438980f0d7adc2186b">os::driver::Usbh_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a20e3ef3c5fec8fab04b4e084e927ccb9">os::driver::usbh_wrapper</a>
 </li>
 <li>c_cb_port_func_
-: <a class="el" href="classos_1_1driver_1_1_usbh__wrapper.html#aa5a240625b07c45d09b81a7a8e20e953">os::driver::Usbh_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a503658d0a00691259d7579f661860ed0">os::driver::usbh_wrapper</a>
 </li>
 <li>call_once
 : <a class="el" href="structos_1_1estd_1_1once__flag.html#abc9f98680dfe5408550cda3480cdf4f5">os::estd::once_flag</a>
@@ -187,9 +188,9 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="classos_1_1rtos_1_1thread.html#a5bd4a092dc5a5113c4e9b9c466039c3a">os::rtos::thread</a>
 </li>
 <li>capa_
-: <a class="el" href="classos_1_1driver_1_1_usart__wrapper.html#aa2874e2bc63f864cdfbc12b8694c8d5d">os::driver::Usart_wrapper</a>
-, <a class="el" href="classos_1_1driver_1_1_usbd__wrapper.html#ad9368c6a08d433c7aa802ccaffd6ab66">os::driver::Usbd_wrapper</a>
-, <a class="el" href="classos_1_1driver_1_1_usbh__wrapper.html#acd2893170833e1bba941c94137547800">os::driver::Usbh_wrapper</a>
+: <a class="el" href="classos_1_1driver_1_1usart__wrapper.html#a22527c2bffe1f5b8d758f33b4db3bcb7">os::driver::usart_wrapper</a>
+, <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a0e233d8b68496b20556c0ed2e758b51a">os::driver::usbd_wrapper</a>
+, <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a6ed14352b22dadd359a4191e0b8395fc">os::driver::usbh_wrapper</a>
 </li>
 <li>capacity()
 : <a class="el" href="classos_1_1rtos_1_1memory__pool.html#a1cc26a0bda2d24685775cb32e7aa551a">os::rtos::memory_pool</a>
@@ -237,14 +238,24 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>check_top_magic()
 : <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a3c34f1787a5dbffe36939292c640ee6c">os::rtos::thread::stack</a>
 </li>
+<li>chmod()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#a97aa83cbdda58a7b6f991565283b2079">os::posix::file_system</a>
+</li>
+<li>circular_buffer()
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a5649dbc15b28032a3a1d34b4e94d74a5">os::posix::circular_buffer&lt; T &gt;</a>
+</li>
 <li>clean()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#a50bb343b6ce54b6439475be0c95f7627">os::driver::Serial</a>
 </li>
 <li>clear()
-: <a class="el" href="classos_1_1rtos_1_1event__flags.html#afda9fb2eb3ff4c7a6bb6e296302b5374">os::rtos::event_flags</a>
+: <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a525740f410e9755f382df4e8d2bcd908">os::posix::circular_buffer&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1event__flags.html#afda9fb2eb3ff4c7a6bb6e296302b5374">os::rtos::event_flags</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1event__flags.html#a5d8eaf3e4d2eba43774e7ece466d8c1d">os::rtos::internal::event_flags</a>
-, <a class="el" href="classos_1_1rtos_1_1internal_1_1static__double__list.html#a5257c9373e501675b7a03e611612bfee">os::rtos::internal::static_double_list</a>
 , <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#ad9c875947868969a292a3bccd2bb128e">os::rtos::thread::stack</a>
+, <a class="el" href="classos_1_1utils_1_1static__double__list.html#a396a893431a46cf5541a744931957172">os::utils::static_double_list</a>
+</li>
+<li>clear_file_descriptor()
+: <a class="el" href="classos_1_1posix_1_1io.html#aac56327ce05ea29b9d423edc45a7cece">os::posix::io</a>
 </li>
 <li>clock
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1attributes__clocked.html#a5d7e0d82010925866a1780e04a8134c4">os::rtos::internal::attributes_clocked</a>
@@ -272,6 +283,10 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>clock_timestamps_list()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1clock__timestamps__list.html#a43f723f8f05f9154839d5636cea3c240">os::rtos::internal::clock_timestamps_list</a>
 </li>
+<li>close()
+: <a class="el" href="classos_1_1posix_1_1directory.html#a09ad8f122bfff56d277da8eefe5bffb1">os::posix::directory</a>
+, <a class="el" href="classos_1_1posix_1_1io.html#aa1cc0a41339069ecac53c5ae60e69635">os::posix::io</a>
+</li>
 <li>coalesce()
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a1ad8d18056f87e387cd86d2632566a53">os::rtos::memory::memory_resource</a>
 </li>
@@ -284,10 +299,10 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 </li>
 <li>condition_variable()
 : <a class="el" href="classos_1_1estd_1_1condition__variable.html#aa9ac11c9865cc5ea092fe50c5aaa0182">os::estd::condition_variable</a>
-, <a class="el" href="classos_1_1rtos_1_1condition__variable.html#af745a5ce4a56cfad74cc67d4aab9a688">os::rtos::condition_variable</a>
+, <a class="el" href="classos_1_1rtos_1_1condition__variable.html#ad61db5c36f5744c8d020dac53a55cd65">os::rtos::condition_variable</a>
 </li>
 <li>condition_variable_any()
-: <a class="el" href="classos_1_1estd_1_1condition__variable__any.html#ab08e8221fd051ba6e441c6f3011f21a6">os::estd::condition_variable_any</a>
+: <a class="el" href="classos_1_1estd_1_1condition__variable__any.html#aafc9706696803b54e94f790e956bc4ed">os::estd::condition_variable_any</a>
 </li>
 <li>configure()
 : <a class="el" href="classos_1_1driver_1_1_serial.html#ac1f7212bc185ff959372623e78b594a0">os::driver::Serial</a>
@@ -300,6 +315,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 </li>
 <li>connect()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_device.html#a25710deb990646a1380985742da0f0bd">os::driver::usb::Device</a>
+, <a class="el" href="classos_1_1posix_1_1socket.html#aa643d671f1e4202cfafada021e92ad63">os::posix::socket</a>
 </li>
 <li>connected
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1_status.html#af8588782e2746a8c2d363c9ac1030066">os::driver::usb::host::Status</a>
@@ -336,8 +352,9 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>create_pipe()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1_host.html#a64b8400160c3a4badfe3e6f8baa97970">os::driver::usb::Host</a>
 </li>
-<li>critical_section()
-: <a class="el" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#a1fe6785cdea6c6cc09ca50cfdfee948b">os::rtos::interrupts::critical_section</a>
+<li>critical_section
+: <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">os::posix::device_serial_buffered&lt; CS &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#a1fe6785cdea6c6cc09ca50cfdfee948b">os::rtos::interrupts::critical_section</a>
 , <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1critical__section.html#afe69d22b93ab36c3462851ea1aac2bfe">os::rtos::port::interrupts::critical_section</a>
 , <a class="el" href="classos_1_1rtos_1_1scheduler_1_1critical__section.html#a1dc4d1911839b1e7d122e3f893c85cc2">os::rtos::scheduler::critical_section</a>
 </li>

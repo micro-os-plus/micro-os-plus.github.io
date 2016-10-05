@@ -11,7 +11,8 @@ var searchData=
   ['message_5fqueue_5finclusive',['message_queue_inclusive',['../classos_1_1rtos_1_1message__queue__inclusive.html',1,'os::rtos']]],
   ['message_5fqueue_5ftyped',['message_queue_typed',['../classos_1_1rtos_1_1message__queue__typed.html',1,'os::rtos']]],
   ['modem_5fstatus',['Modem_status',['../classos_1_1driver_1_1serial_1_1_modem__status.html',1,'os::driver::serial']]],
-  ['mutex',['mutex',['../classos_1_1rtos_1_1mutex.html',1,'os::rtos']]],
+  ['mount_5fmanager',['mount_manager',['../classos_1_1posix_1_1mount__manager.html',1,'os::posix']]],
   ['mutex',['mutex',['../classos_1_1estd_1_1mutex.html',1,'os::estd']]],
+  ['mutex',['mutex',['../classos_1_1rtos_1_1mutex.html',1,'os::rtos']]],
   ['mutex_5frecursive',['mutex_recursive',['../classos_1_1rtos_1_1mutex__recursive.html',1,'os::rtos']]]
 ];

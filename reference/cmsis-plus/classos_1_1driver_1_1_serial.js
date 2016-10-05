@@ -3,7 +3,7 @@ var classos_1_1driver_1_1_serial =
     [ "Serial", "classos_1_1driver_1_1_serial.html#a3695d724eba31437b7ca9d55b9bf29be", null ],
     [ "Serial", "classos_1_1driver_1_1_serial.html#a6420517f0c4543bd9ff2d9903fe147c9", null ],
     [ "Serial", "classos_1_1driver_1_1_serial.html#aabfedd098e7d635b8be6df16cd552fe1", null ],
-    [ "~Serial", "classos_1_1driver_1_1_serial.html#a37f7757be0bc353268fc8f07dc9d67b4", null ],
+    [ "~Serial", "classos_1_1driver_1_1_serial.html#a62bd0eb0b50733a548d785421324fa98", null ],
     [ "clean", "classos_1_1driver_1_1_serial.html#a50bb343b6ce54b6439475be0c95f7627", null ],
     [ "configure", "classos_1_1driver_1_1_serial.html#ac1f7212bc185ff959372623e78b594a0", null ],
     [ "control", "classos_1_1driver_1_1_serial.html#a1039278de866bcedb8d300bf150a578c", null ],
