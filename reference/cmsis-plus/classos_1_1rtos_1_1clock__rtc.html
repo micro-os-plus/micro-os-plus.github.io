@@ -189,6 +189,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a99215d8e93906802385eb70e921a05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock.html#a5a99215d8e93906802385eb70e921a05">wait_for</a> (<a class="el" href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">duration_t</a> timeout)</td></tr>
 <tr class="memdesc:a5a99215d8e93906802385eb70e921a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timed wait for an event.  <a href="#a5a99215d8e93906802385eb70e921a05">More...</a><br /></td></tr>
 <tr class="separator:a5a99215d8e93906802385eb70e921a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edf24e95388b283aa2d3f1ca39fab2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__cmsis-plus-rtos-clock.html#ga4f6ee5cdd07c87db11f64d02e1c354d1">timestamp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1clock.html#a7edf24e95388b283aa2d3f1ca39fab2b">update_for_slept_time</a> (<a class="el" href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">duration_t</a> duration)</td></tr>
+<tr class="memdesc:a7edf24e95388b283aa2d3f1ca39fab2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the internal count after a deep sleep.  <a href="#a7edf24e95388b283aa2d3f1ca39fab2b">More...</a><br /></td></tr>
+<tr class="separator:a7edf24e95388b283aa2d3f1ca39fab2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
 <tr class="memitem:a36805a0eae21688c136129059482c3dd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a36805a0eae21688c136129059482c3dd">name</a> (void) const </td></tr>
 <tr class="memdesc:a36805a0eae21688c136129059482c3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get object name.  <a href="#a36805a0eae21688c136129059482c3dd">More...</a><br /></td></tr>
@@ -209,7 +212,7 @@ Static Public Attributes</h2></td></tr>
 <p>For systems that do not have a hardware RTC, it can be derived from SysTick, but in this case it must be externally initialised with the epoch.</p>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span></div><div class="line">func(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">   <span class="comment">// Do something</span></div><div class="line"></div><div class="line">   <span class="comment">// Get the current seconds counter.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#ga4f6ee5cdd07c87db11f64d02e1c354d1">clock::timestamp_t</a> seconds = <a class="code" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a">rtclock</a>.<a class="code" href="classos_1_1rtos_1_1adjustable__clock.html#a2ff3189d8d88102a0e49fd094bc7c70b">now</a>();</div><div class="line"></div><div class="line">   <span class="comment">// Put the current thread to sleep for a given number of seconds.</span></div><div class="line">   <a class="code" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a">rtclock</a>.<a class="code" href="classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb">sleep_for</a>(7);</div><div class="line"></div><div class="line">   <span class="comment">// Do something else.</span></div><div class="line">}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00584">584</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00592">592</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adb6c4c57480444009c25c59b74639f9d"></a>
 <div class="memitem">
@@ -227,7 +230,7 @@ Static Public Attributes</h2></td></tr>
 <p>Construct a real time clock object instance. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00638">638</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00660">660</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +258,7 @@ Static Public Attributes</h2></td></tr>
 <p>Destruct the real time clock object instance. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00650">650</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00672">672</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +348,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classos_1_1rtos_1_1clock.html#a965f1afa68128bdfaeac93e216e2196f">os::rtos::clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00389">389</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00411">411</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -376,7 +379,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Integer value representing the offset to epoch.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00447">447</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00469">469</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -412,7 +415,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Integer value representing the previous offset to epoch.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00458">458</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00480">480</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -500,7 +503,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classos_1_1rtos_1_1clock.html#a7720aceded20f868c541755b26027901">os::rtos::clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00408">408</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00430">430</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -540,7 +543,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1rtos_1_1clock.html#addb7972fd07f3be0abb5287d470987f9">os::rtos::clock</a>.</p>
 
-<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00664">664</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00686">686</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -568,10 +571,47 @@ Static Public Attributes</h2></td></tr>
 
 <p>Tell the current time since startup. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The clock current timestamp (time units from startup).</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The clock current steady timestamp (time units from startup).</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
 <p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00185">185</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7edf24e95388b283aa2d3f1ca39fab2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cmsis-plus-rtos-clock.html#ga4f6ee5cdd07c87db11f64d02e1c354d1">clock::timestamp_t</a> os::rtos::clock::update_for_slept_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">duration_t</a>&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increase the internal count after a deep sleep. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>Number of ticks lost during sleep. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The clock current steady timestamp (time units from startup).</dd></dl>
+<p>During deep sleep the interrupts used to count clock ticks are usually disabled and an external RTC is configured to wake-up the device, so a number of clock ticks are lost.</p>
+<p>To keep the clocks accurate, it is recommended to sample the external RTC before entering deep sleep and again when the device is back to life, compute the time slept as difference, and use this function to update the internal clock counter. </p>
+
+<p>Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00322">322</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
 
 </div>
 </div>
@@ -640,7 +680,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Real time clock frequency in Hz. </p>
 
-<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00596">596</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p>Definition at line <a class="el" href="os-clocks_8h_source.html#l00604">604</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>

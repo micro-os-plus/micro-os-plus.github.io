@@ -14,6 +14,7 @@ var classos_1_1rtos_1_1clock__rtc =
     [ "sleep_until", "classos_1_1rtos_1_1clock__rtc.html#a5582df6aac1fd73354589bb024f17873", null ],
     [ "start", "classos_1_1rtos_1_1clock__rtc.html#a76114a4e81214e9f4dfe81dfb4807d0a", null ],
     [ "steady_now", "classos_1_1rtos_1_1clock__rtc.html#a8b593aa571fee824ba84d66761db80c7", null ],
+    [ "update_for_slept_time", "classos_1_1rtos_1_1clock__rtc.html#a7edf24e95388b283aa2d3f1ca39fab2b", null ],
     [ "wait_for", "classos_1_1rtos_1_1clock__rtc.html#a5a99215d8e93906802385eb70e921a05", null ],
     [ "frequency_hz", "classos_1_1rtos_1_1clock__rtc.html#a0c40d3bdecdfc88457eec8fa79a3c1fb", null ]
 ];

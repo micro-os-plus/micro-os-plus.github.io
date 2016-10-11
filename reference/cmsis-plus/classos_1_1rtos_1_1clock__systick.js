@@ -12,6 +12,7 @@ var classos_1_1rtos_1_1clock__systick =
     [ "start", "classos_1_1rtos_1_1clock__systick.html#ae9468d10ee3d1c9cec4e405d1442593b", null ],
     [ "steady_now", "classos_1_1rtos_1_1clock__systick.html#a8b593aa571fee824ba84d66761db80c7", null ],
     [ "ticks_cast", "classos_1_1rtos_1_1clock__systick.html#ad62d8700873c719d37c212daba7f47c3", null ],
+    [ "update_for_slept_time", "classos_1_1rtos_1_1clock__systick.html#a7edf24e95388b283aa2d3f1ca39fab2b", null ],
     [ "wait_for", "classos_1_1rtos_1_1clock__systick.html#a5a99215d8e93906802385eb70e921a05", null ],
     [ "frequency_hz", "classos_1_1rtos_1_1clock__systick.html#a2abaebfa5e1ff2d36380770e513d1c8e", null ]
 ];

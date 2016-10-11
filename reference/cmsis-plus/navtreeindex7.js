@@ -1,5 +1,10 @@
 var NAVTREEINDEX7 =
 {
+"classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a5cbffd2d61b3d464e6940b0daecb793c":[3,2,10,1,8],
+"classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a7731d7f7b37209b54bcda09753f5aaf7":[3,2,10,1,4],
+"classos_1_1rtos_1_1memory_1_1allocator__deleter.html#aa070186f485374bb65ba50794902d37e":[3,2,10,1,9],
+"classos_1_1rtos_1_1memory_1_1allocator__deleter.html#abc672faf7d90e95af5398501f927cceb":[3,2,10,1,0],
+"classos_1_1rtos_1_1memory_1_1allocator__deleter.html#acf13568492f20428586bac37c2584332":[3,2,10,1,7],
 "classos_1_1rtos_1_1memory_1_1allocator__deleter.html#ae63698c4f4c8b3f40b7e6d727521edda":[3,2,10,1,6],
 "classos_1_1rtos_1_1memory_1_1allocator__deleter.html#ae8ebd623e15661ab4f5ea11e896bec6b":[3,2,10,1,2],
 "classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html":[3,2,10,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX7 =
 "classos_1_1rtos_1_1message__queue__allocated.html#a927870645dd32ddabdf2a701bfa4cdaa":[3,2,6,2,9],
 "classos_1_1rtos_1_1message__queue__allocated.html#abcbf2594a36674e81a895713de83091b":[3,2,6,2,0],
 "classos_1_1rtos_1_1message__queue__allocated.html#ad415429ae3487ec5ae1258b4d2a5787f":[3,2,6,2,20],
-"classos_1_1rtos_1_1message__queue__allocated.html#adc1c29f4a020deee857f22330e0277ed":[3,2,6,2,16],
-"classos_1_1rtos_1_1message__queue__allocated.html#ae4ee2f72a8b72a663b16f8fa0e0dc244":[3,2,6,2,8],
-"classos_1_1rtos_1_1message__queue__allocated.html#ae5f62d011ae11c87de47ebb528b17432":[3,2,6,2,10],
-"classos_1_1rtos_1_1message__queue__allocated.html#aee5f64b743277ef75f5328e7130ee865":[3,2,6,2,7],
-"classos_1_1rtos_1_1message__queue__allocated.html#aef5d78f2ac3f37daf3984758c9e2ddb2":[3,2,6,2,15],
-"classos_1_1rtos_1_1message__queue__allocated.html#aff78d42a19d99e3fde893970fc6b08cd":[3,2,6,2,12]
+"classos_1_1rtos_1_1message__queue__allocated.html#adc1c29f4a020deee857f22330e0277ed":[3,2,6,2,16]
 };
