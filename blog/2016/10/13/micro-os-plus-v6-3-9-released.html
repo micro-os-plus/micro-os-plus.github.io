@@ -9,18 +9,22 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Class OSTimer</title>
-  <meta name="description" content="The third edition of µOS++ and CMSIS++/POSIX++, a proposal for the next generation CMSIS, written in C++.">
+  <title>The µOS++ IIIe v6.3.9 released</title>
+  <meta name="description" content="Version v6.3.9 is a new µOS++ IIIe/CMSIS++ public release (v6.3.8 was an internal release). The major additions are: the integration of the first version of ...">
 
-  <meta property="og:title" content="Class OSTimer">
+  <meta property="og:title" content="The µOS++ IIIe v6.3.9 released">
   <meta property="og:site_name" content="µOS++ IIIe / CMSIS++ / POSIX++">
 
   <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe / CMSIS++ / POSIX++" href="/feed.xml">
 
 
-  <meta property="article:published_time" content="2011-02-16">
+  <meta property="article:published_time" content="2016-10-13">
 
 
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="rtos">
+  <meta property="article:section" content="cmsis-plus">
+  <meta property="article:section" content="micro-os-plus">
 
 
 
@@ -32,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Class_OSTimer/">
+  <link rel="canonical" href="http://micro-os-plus.github.io/blog/2016/10/13/micro-os-plus-v6-3-9-released">
 
 
 
@@ -237,14 +241,23 @@
 
       <div class="site-content">
 
-        
-<h1 class="page-title">Class OSTimer - DEPRECATED</h1>
-<table id="last-modified">
+        <table id="post-navigation">
   <tr>
-    <td id="last-modified">Page date Wed Feb 16 12:47:57 2011 UTC.</td>
-    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/Class_OSTimer.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
+    <td><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">←</a></td>
+    <td><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">The µOS++ IIIe first public version v6.3.7 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
+
+
+<h1 class="post-title">The µOS++ IIIe v6.3.9 released</h1>
+
+
+<p class="post-meta">
+Posted on October 13, 2016 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -256,25 +269,22 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#ostimerostimerstructtmicro-os-plusitypedefostimerstructt-wikilink-parray-int-size"><span class="tocnumber">1</span> <span class="toctext">OSTimer(OSTimerStruct_t *pArray, int size)</span></a>
+<a href="#download"><span class="tocnumber">1</span> <span class="toctext">Download</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#void-eventnotifyostimertickstmicro-os-plusitypedefostimertickst-wikilink-ticks-oseventtmicro-os-plusitypedefoseventt-wikilink-eventoseventwaitreturntmicro-os-plusitypedefoseventwaitreturnt-wikilink-ret"><span class="tocnumber">2</span> <span class="toctext">void eventNotify(OSTimerTicks_t ticks, OSEvent_t event,OSEventWaitReturn_t ret)</span></a>
+<a href="#new-features"><span class="tocnumber">2</span> <span class="toctext">New features</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#int-eventremoveoseventtmicro-os-plusitypedefoseventt-wikilink-event"><span class="tocnumber">3</span> <span class="toctext">int eventRemove(OSEvent_t event)</span></a>
+<a href="#addressed-bugs"><span class="tocnumber">3</span> <span class="toctext">Addressed bugs</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#ostimertickstmicro-os-plusitypedefostimertickst-wikilink-getticksvoid"><span class="tocnumber">4</span> <span class="toctext">OSTimerTicks_t getTicks(void)</span></a>
+<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#int-getcountvoid"><span class="tocnumber">5</span> <span class="toctext">int getCount(void)</span></a>
+<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#void-interrupttickvoid"><span class="tocnumber">6</span> <span class="toctext">void interruptTick(void)</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#void-incrementticksvoid"><span class="tocnumber">7</span> <span class="toctext">void incrementTicks(void)</span></a>
+<a href="#future-developments"><span class="tocnumber">6</span> <span class="toctext">Future developments</span></a>
 </li>
 </ul>
 </td>
@@ -282,187 +292,55 @@
 </tbody>
 </table>
 </div>
-<p>OSTimer</p>
+<p>Version v6.3.9 is a new <strong>µOS++ IIIe/CMSIS++</strong> public release (v6.3.8 was an internal release). The major additions are: the integration of the first version of the POSIX I/O subsystem and an experimental set of scripts to generate µOS++ projects.</p>
 
-<h1 id="constructors">Constructors</h1>
+<h2 id="download">Download</h2>
 
-<h2 id="ostimerostimerstructtmicro-os-plusitypedefostimerstructt-wikilink-parray-int-size">OSTimer(<a href="/micro-os-plus/i/Typedef_OSTimerStruct_t" title="wikilink">OSTimerStruct_t</a> *pArray, int size)</h2>
+<p>As of now, the <strong>µOS++</strong> code is split between several GitHub projects and needs to be brought together to compose a project.
+To automate this process, some scripts were written. To experiment with <strong>µOS++</strong>, please check the demo projects, available from <a href="https://github.com/micro-os-plus/eclipse-demo-projects">GitHub</a>, and use a similar structure for your projects.</p>
 
-<p>
-<strong>Description</strong>
-</p>
+<h2 id="new-features">New features</h2>
 
-<p>Initialize the internal members with the given array.</p>
+<ul>
+  <li>integrate posix-io &amp; posix-driver git subtrees from the separate projects; currently only character devices are fully functional;</li>
+  <li>automate char device registry by using lists; no need to manually add/remove devices;</li>
+  <li>in order to support ticless deep sleeps, the <code class="highlighter-rouge">update_for_slept_time()</code> function was added to the clock class, to update the internal count with the number of ticks lost during the sleep;</li>
+</ul>
 
-<p>
-<strong>Parameters</strong>
-</p>
+<h2 id="addressed-bugs">Addressed bugs</h2>
 
-<p>:* *pArray - input, the array of timeouts which are going to be used</p>
+<ul>
+  <li>os-c-wrapper.c: the functions used to create objects did create objects properly, but failed to return a pointer to the created objects; fixed;</li>
+  <li>diag/trace.cpp: for empty strings, <code class="highlighter-rouge">puts()</code> did not add the terminator; fixed;</li>
+</ul>
 
-<p>:* size - input, the size of pArray</p>
+<h2 id="other-changes">Other changes</h2>
 
-<h1 id="methods">Methods</h1>
+<ul>
+  <li>general purpose classes were moved to the newly created <code class="highlighter-rouge">utils</code> folder;</li>
+  <li>startup: temporarily disable weak <code class="highlighter-rouge">os_startup_initialize_hardware()</code> (without the renamed function the linker used the weak version of this function and did not perform the hardware initialisations at all).</li>
+</ul>
 
-<p>==<a href="/micro-os-plus/i/Typedef_OSEventWaitReturn_t" title="wikilink">OSEventWaitReturn_t</a> sleep(<a href="/micro-os-plus/i/Typedef_OSTimerTicks_t" title="wikilink">OSTimerTicks_t</a> ticks, <a href="/micro-os-plus/i/Typedef_OSEvent_t" title="wikilink">OSEvent_t</a> event = 0)== <strong>Description</strong></p>
+<h2 id="known-problems">Known problems</h2>
 
-<p>Put a task to sleep for the given number of ticks. If the given event is not null, when the timeout expires, it is notified. Else the task is resumed.</p>
+<p>None.</p>
 
-<p>
-<strong>Parameters</strong>
-</p>
+<h2 id="future-developments">Future developments</h2>
 
-<p>:* ticks - input, the number of ticks while the current task is put to sleep</p>
+<p>Advanced tools to manage the µOS++ packages (based on XCDL/xPack) are planned, and will be available in the near future.</p>
 
-<p>:* event - input, the event which should be notified when the sleep expires, if present and not null</p>
 
-<p>
-<strong>Return value</strong>
-</p>
+<div class="post-footer">
+<p>Posted in
 
-<p>:* OSEventWaitReturn::OS_VOID - if normal execution</p>
-
-<p>:* OSEventWaitReturn::OS_IMMEDIATELY - if no sleep is required (ticks input parameter is null)</p>
-
-<h2 id="void-eventnotifyostimertickstmicro-os-plusitypedefostimertickst-wikilink-ticks-oseventtmicro-os-plusitypedefoseventt-wikilink-eventoseventwaitreturntmicro-os-plusitypedefoseventwaitreturnt-wikilink-ret">void eventNotify(<a href="/micro-os-plus/i/Typedef_OSTimerTicks_t" title="wikilink">OSTimerTicks_t</a> ticks, <a href="/micro-os-plus/i/Typedef_OSEvent_t" title="wikilink">OSEvent_t</a> event,<a href="/micro-os-plus/i/Typedef_OSEventWaitReturn_t" title="wikilink">OSEventWaitReturn_t</a> ret)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Schedule the timer to notify the event after the number of ticks. If the event is OSEvent::OS_CUSTOM_TIMER, the ret value is the address of the custom timer.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* ticks - input, the number of ticks after which the event is notified</p>
-
-<p>:* event - input, the event which is notified when the ticks expires</p>
-
-<p>:* ret - input, it is the address of the custom timer; used only if the event is OSEvent::OS_CUSTOM_TIMER</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* none</p>
-
-<h2 id="int-eventremoveoseventtmicro-os-plusitypedefoseventt-wikilink-event">int eventRemove(<a href="/micro-os-plus/i/Typedef_OSEvent_t" title="wikilink">OSEvent_t</a> event)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Remove the scheduled timer notifications associated with the given event.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* event - input, the event which is associated with the scheduled timer notifications</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* n - the number of removed scheduled timer notifications</p>
-
-<h2 id="ostimertickstmicro-os-plusitypedefostimertickst-wikilink-getticksvoid">
-<a href="/micro-os-plus/i/Typedef_OSTimerTicks_t" title="wikilink">OSTimerTicks_t</a> getTicks(void)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Return the current number of ticks.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* none</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* n - the current number of ticks</p>
-
-<h2 id="int-getcountvoid">int getCount(void)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Return the number of scheduled timers.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* none</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* n - the current number of scheduled timers</p>
-
-<h2 id="void-interrupttickvoid">void interruptTick(void)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Update and notify the scheduled time events. It is called from the interrupt routine.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* none.</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* none</p>
-
-<h2 id="void-incrementticksvoid">void incrementTicks(void)</h2>
-
-<p>
-<strong>Description</strong>
-</p>
-
-<p>Update the current ticks number. This function is called from the interrupt routine.</p>
-
-<p>
-<strong>Parameters</strong>
-</p>
-
-<p>:* none</p>
-
-<p>
-<strong>Return value</strong>
-</p>
-
-<p>:* none</p>
-
-<h1 id="variables">Variables</h1>
-
-
-
-
-
-
-
-
+<strong>releases</strong>, <strong>rtos</strong>, <strong>cmsis-plus</strong>, <strong>micro-os-plus</strong>.</p>
+<p>Last modified on Thu Oct 13 20:20:03 2016 UTC.</p>
 <ul class="share-buttons">
-  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/micro-os-plus/i/Class_OSTimer/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/blog/2016/10/13/micro-os-plus-v6-3-9-released" data-layout="button"></div></li>
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
 </ul>
 
+</div>
 
 
       </div>
