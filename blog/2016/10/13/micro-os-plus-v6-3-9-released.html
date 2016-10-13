@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>The µOS++ IIIe v6.3.9 released</title>
-  <meta name="description" content="Version v6.3.9 is a new µOS++ IIIe/CMSIS++ public release (v6.3.8 was an internal release). The major additions are: the integration of the first version of ...">
+  <meta name="description" content="Version v6.3.9 is a new µOS++ IIIe/CMSIS++ public release (v6.3.8 was an internal release). The major additions are: the first integration of the POSIX I/O s...">
 
   <meta property="og:title" content="The µOS++ IIIe v6.3.9 released">
   <meta property="og:site_name" content="µOS++ IIIe / CMSIS++ / POSIX++">
@@ -292,7 +292,7 @@ Posted on October 13, 2016 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version v6.3.9 is a new <strong>µOS++ IIIe/CMSIS++</strong> public release (v6.3.8 was an internal release). The major additions are: the integration of the first version of the POSIX I/O subsystem and an experimental set of scripts to generate µOS++ projects.</p>
+<p>Version v6.3.9 is a new <strong>µOS++ IIIe/CMSIS++</strong> public release (v6.3.8 was an internal release). The major additions are: the first integration of the POSIX I/O subsystem and an experimental set of scripts to generate µOS++ projects.</p>
 
 <h2 id="download">Download</h2>
 
@@ -304,7 +304,7 @@ To automate this process, some scripts were written. To experiment with <strong>
 <ul>
   <li>integrate posix-io &amp; posix-driver git subtrees from the separate projects; currently only character devices are fully functional;</li>
   <li>automate char device registry by using lists; no need to manually add/remove devices;</li>
-  <li>in order to support ticless deep sleeps, the <code class="highlighter-rouge">update_for_slept_time()</code> function was added to the clock class, to update the internal count with the number of ticks lost during the sleep;</li>
+  <li>in order to support tickless deep sleeps, the <code class="highlighter-rouge">update_for_slept_time()</code> function was added to the <code class="highlighter-rouge">clock</code> class, to update the internal count with the number of ticks lost during the sleep;</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
@@ -334,7 +334,7 @@ To automate this process, some scripts were written. To experiment with <strong>
 <p>Posted in
 
 <strong>releases</strong>, <strong>rtos</strong>, <strong>cmsis-plus</strong>, <strong>micro-os-plus</strong>.</p>
-<p>Last modified on Thu Oct 13 20:20:03 2016 UTC.</p>
+<p>Last modified on Thu Oct 13 20:26:51 2016 UTC.</p>
 <ul class="share-buttons">
   <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/blog/2016/10/13/micro-os-plus-v6-3-9-released" data-layout="button"></div></li>
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
