@@ -67,8 +67,8 @@ var NAVTREEINDEX =
 "group__cmsis-plus-rtos-memres.html#ga4769d08c721d5e897a8792837d5eccf7",
 "namespaceos_1_1driver_1_1usb.html",
 "os-mutex_8h.html",
-"serial_8h.html#af591b88b5cef3dfda1109689ece8f287a848524acf5dec7dcc042cd0948daefe7",
-"system__error_source.html"
+"serial_8h.html#af22280c215b4e276cd2a53fce4a99e99",
+"system__error.html#a951c9b2c6401f3a3bb40d4b2c3213f46"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

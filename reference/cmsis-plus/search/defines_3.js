@@ -17,6 +17,8 @@ var searchData=
   ['os_5fmacro_5fstringify',['OS_MACRO_STRINGIFY',['../os-versions_8h.html#a74a5c13f61a67a517782766ca1790b2e',1,'os-versions.h']]],
   ['os_5fstring_5fposix_5fdevice_5fprefix',['OS_STRING_POSIX_DEVICE_PREFIX',['../device-char_8h.html#a14f23d03eb2e481a969a6974bf16c4ab',1,'device-char.h']]],
   ['os_5fstring_5frtos_5fimpl_5fversion',['OS_STRING_RTOS_IMPL_VERSION',['../os-versions_8h.html#a80b8e01f477973e2ba0fb37913122ed1',1,'os-versions.h']]],
+  ['os_5fstring_5frtos_5fimpl_5fversion_5fbuild',['OS_STRING_RTOS_IMPL_VERSION_BUILD',['../os-versions_8h.html#adc616060b0455a26ec21fc305c5f9cd5',1,'os-versions.h']]],
+  ['os_5fstring_5frtos_5fimpl_5fversion_5fpre_5frelease',['OS_STRING_RTOS_IMPL_VERSION_PRE_RELEASE',['../os-versions_8h.html#aa58c7b9efa7d6d239e8af9c3f1b81e43',1,'os-versions.h']]],
   ['os_5fthread_5fprio_5fshift',['OS_THREAD_PRIO_SHIFT',['../os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9',1,'os-c-decls.h']]],
   ['os_5fuse_5fcmsis_5fplus',['OS_USE_CMSIS_PLUS',['../os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-c-decls.h'],['../os-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-decls.h']]],
   ['oscmsis',['osCMSIS',['../cmsis__os_8h.html#a702196bacccbb978620c736b209387f1',1,'cmsis_os.h']]],

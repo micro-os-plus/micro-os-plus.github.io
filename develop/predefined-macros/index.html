@@ -132,10 +132,10 @@
       <h4 id="newsblog"><a href="/blog/">News</a></h4>
 
 <ul>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released">The µOS++ IIIe v6.3.9 released</a></li>
-  <li><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">The µOS++ IIIe first public version v6.3.7 released</a></li>
+  <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
+  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released">µOS++ IIIe v6.3.9 released</a></li>
+  <li><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">First µOS++ IIIe public version v6.3.7 released</a></li>
   <li><a href="/blog/2016/03/29/license-update/">License changed from LGPL to MIT License</a></li>
-  <li><a href="/blog/2016/03/10/arm-connected-community-article/">ARM Connected Community article, March 11, 2016</a></li>
 </ul>
 
 
@@ -145,6 +145,7 @@
 
   <div class="custom-sidebar">
     <div class="boxed-group-inner">
+      
       <h4 id="home"><a href="/">Home</a></h4>
 
 <h4 id="os-iiie">µOS++ IIIe</h4>
@@ -241,7 +242,7 @@
 <h1 class="page-title">Predefined compiler macros</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
+    <td id="last-modified">Last modified on Sun Nov 27 11:24:52 2016 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/predefined-macros.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -276,16 +277,19 @@
 </ul>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#freestanding"><span class="tocnumber">3</span> <span class="toctext">Freestanding</span></a>
+<a href="#floating-point"><span class="tocnumber">3</span> <span class="toctext">Floating point</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#c-exceptions"><span class="tocnumber">4</span> <span class="toctext">C++ Exceptions</span></a>
+<a href="#freestanding"><span class="tocnumber">4</span> <span class="toctext">Freestanding</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#other-macros"><span class="tocnumber">5</span> <span class="toctext">Other macros</span></a>
+<a href="#c-exceptions"><span class="tocnumber">5</span> <span class="toctext">C++ Exceptions</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#warnings"><span class="tocnumber">6</span> <span class="toctext">Warnings</span></a>
+<a href="#other-macros"><span class="tocnumber">6</span> <span class="toctext">Other macros</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#warnings"><span class="tocnumber">7</span> <span class="toctext">Warnings</span></a>
 </li>
 </ul>
 </td>
@@ -343,14 +347,14 @@
 </code></pre>
 </div>
 
-<p>To check if optimisation is enabled (more than -O0):</p>
+<p>To check if optimisation is enabled (more than <code class="highlighter-rouge">-O0</code>):</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>#if defined(__OPTIMIZE__)
 </code></pre>
 </div>
 
-<p>To check if optimisation for size is enabled (-Os):</p>
+<p>To check if optimisation for size is enabled (<code class="highlighter-rouge">-Os</code>):</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>#if defined(__OPTIMIZE_SIZE__)
@@ -364,7 +368,7 @@
 </code></pre>
 </div>
 
-<p>To see the GCC defines use:</p>
+<p>To see the built-in definitions:</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>g++ -dM -E - &lt; /dev/null
@@ -374,26 +378,48 @@ clang++ -dM -E - &lt; /dev/null
 
 <h2 id="arm-cortex-m">ARM Cortex-M</h2>
 
-<p>When compiling Cortex-M applications, GCC 4.8 provides the following built-in definitions.</p>
+<p>When compiling Cortex-M applications, GCC 5.4 provides the following built-in definitions.</p>
 
 <h3 id="arm-cortex-m0m0">ARM Cortex-M0/M0+</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_ARCH 6
 #define __ARM_ARCH_6M__ 1
 #define __ARM_ARCH_ISA_THUMB 1
 #define __ARM_ARCH_PROFILE 77
 #define __ARM_EABI__ 1
-#define __ARM_FP 12
-#define __ARM_NEON_FP 4
 #define __ARM_PCS 1
 #define __ARM_SIZEOF_MINIMAL_ENUM 1
 #define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __SOFTFP__ 1
+#define __STDC_VERSION__ 201112L
 #define __THUMBEL__ 1
 #define __THUMB_INTERWORK__ 1
-#define __VERSION__ "4.9.3 20150303 (release) [ARM/embedded-4_9-branch revision 221220]"
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
+#define __arm__ 1
+#define __thumb__ 1
+
+$ ./arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+#define __ARMEL__ 1
+#define __ARM_ARCH 6
+#define __ARM_ARCH_6M__ 1
+#define __ARM_ARCH_ISA_THUMB 1
+#define __ARM_ARCH_PROFILE 77
+#define __ARM_EABI__ 1
+#define __ARM_PCS 1
+#define __ARM_SIZEOF_MINIMAL_ENUM 1
+#define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __SOFTFP__ 1
+#define __STDC_VERSION__ 201112L
+#define __THUMBEL__ 1
+#define __THUMB_INTERWORK__ 1
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
 #define __arm__ 1
 #define __thumb__ 1
 </code></pre>
@@ -402,7 +428,7 @@ clang++ -dM -E - &lt; /dev/null
 <h3 id="arm-cortex-m3">ARM Cortex-M3</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
@@ -410,20 +436,24 @@ clang++ -dM -E - &lt; /dev/null
 #define __ARM_ARCH_EXT_IDIV__ 1
 #define __ARM_ARCH_ISA_THUMB 2
 #define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
 #define __ARM_EABI__ 1
 #define __ARM_FEATURE_CLZ 1
+#define __ARM_FEATURE_IDIV 1
 #define __ARM_FEATURE_LDREX 7
 #define __ARM_FEATURE_QBIT 1
 #define __ARM_FEATURE_SAT 1
 #define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 12
-#define __ARM_NEON_FP 4
 #define __ARM_PCS 1
 #define __ARM_SIZEOF_MINIMAL_ENUM 1
 #define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __SOFTFP__ 1
+#define __STDC_VERSION__ 201112L
 #define __THUMBEL__ 1
 #define __THUMB_INTERWORK__ 1
-#define __VERSION__ "4.9.3 20150303 (release) [ARM/embedded-4_9-branch revision 221220]"
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
 #define __arm__ 1
 #define __thumb2__ 1
 #define __thumb__ 1
@@ -433,8 +463,7 @@ clang++ -dM -E - &lt; /dev/null
 <h3 id="arm-cortex-m4">ARM Cortex-M4</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft \
--E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp__|version|abi' | sort
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
@@ -442,31 +471,63 @@ clang++ -dM -E - &lt; /dev/null
 #define __ARM_ARCH_EXT_IDIV__ 1
 #define __ARM_ARCH_ISA_THUMB 2
 #define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
 #define __ARM_EABI__ 1
 #define __ARM_FEATURE_CLZ 1
 #define __ARM_FEATURE_DSP 1
+#define __ARM_FEATURE_IDIV 1
+#define __ARM_FEATURE_LDREX 7
+#define __ARM_FEATURE_QBIT 1
+#define __ARM_FEATURE_SAT 1
+#define __ARM_FEATURE_SIMD32 1
+#define __ARM_FEATURE_UNALIGNED 1
+#define __ARM_PCS 1
+#define __ARM_SIZEOF_MINIMAL_ENUM 1
+#define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __SOFTFP__ 1
+#define __STDC_VERSION__ 201112L
+#define __THUMBEL__ 1
+#define __THUMB_INTERWORK__ 1
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
+#define __arm__ 1
+#define __thumb2__ 1
+#define __thumb__ 1
+
+$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+#define __ARMEL__ 1
+#define __ARM_32BIT_STATE 1
+#define __ARM_ARCH 7
+#define __ARM_ARCH_7EM__ 1
+#define __ARM_ARCH_EXT_IDIV__ 1
+#define __ARM_ARCH_ISA_THUMB 2
+#define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
+#define __ARM_EABI__ 1
+#define __ARM_FEATURE_CLZ 1
+#define __ARM_FEATURE_DSP 1
+#define __ARM_FEATURE_IDIV 1
 #define __ARM_FEATURE_LDREX 7
 #define __ARM_FEATURE_QBIT 1
 #define __ARM_FEATURE_SAT 1
 #define __ARM_FEATURE_SIMD32 1
 #define __ARM_FEATURE_UNALIGNED 1
 #define __ARM_FP 12
-#define __ARM_NEON_FP 4
 #define __ARM_PCS 1
 #define __ARM_SIZEOF_MINIMAL_ENUM 1
 #define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1002
-#define __SOFTFP__ 1
+#define __GXX_ABI_VERSION 1009
+#define __STDC_VERSION__ 201112L
 #define __THUMBEL__ 1
 #define __THUMB_INTERWORK__ 1
-#define __VERSION__ "4.9.3 20150303 (release) [ARM/embedded-4_9-branch revision 221220]"
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
 #define __VFP_FP__ 1
 #define __arm__ 1
 #define __thumb2__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
--mfpu=fpv4-sp-d16 -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp__|version|abi' | sort
+$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
@@ -474,24 +535,25 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 #define __ARM_ARCH_EXT_IDIV__ 1
 #define __ARM_ARCH_ISA_THUMB 2
 #define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
 #define __ARM_EABI__ 1
 #define __ARM_FEATURE_CLZ 1
 #define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_FMA 1
+#define __ARM_FEATURE_IDIV 1
 #define __ARM_FEATURE_LDREX 7
 #define __ARM_FEATURE_QBIT 1
 #define __ARM_FEATURE_SAT 1
 #define __ARM_FEATURE_SIMD32 1
 #define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 4
-#define __ARM_NEON_FP 4
+#define __ARM_FP 12
 #define __ARM_PCS_VFP 1
 #define __ARM_SIZEOF_MINIMAL_ENUM 1
 #define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1002
+#define __GXX_ABI_VERSION 1009
+#define __STDC_VERSION__ 201112L
 #define __THUMBEL__ 1
 #define __THUMB_INTERWORK__ 1
-#define __VERSION__ "4.9.3 20150303 (release) [ARM/embedded-4_9-branch revision 221220]"
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
 #define __VFP_FP__ 1
 #define __arm__ 1
 #define __thumb2__ 1
@@ -502,8 +564,7 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 <h3 id="arm-cortex-m7">ARM Cortex-M7</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft \
--E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp__|version|abi' | sort
+<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
@@ -511,24 +572,89 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 #define __ARM_ARCH_EXT_IDIV__ 1
 #define __ARM_ARCH_ISA_THUMB 2
 #define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
 #define __ARM_EABI__ 1
 #define __ARM_FEATURE_CLZ 1
 #define __ARM_FEATURE_DSP 1
+#define __ARM_FEATURE_IDIV 1
+#define __ARM_FEATURE_LDREX 7
+#define __ARM_FEATURE_QBIT 1
+#define __ARM_FEATURE_SAT 1
+#define __ARM_FEATURE_SIMD32 1
+#define __ARM_FEATURE_UNALIGNED 1
+#define __ARM_PCS 1
+#define __ARM_SIZEOF_MINIMAL_ENUM 1
+#define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __SOFTFP__ 1
+#define __STDC_VERSION__ 201112L
+#define __THUMBEL__ 1
+#define __THUMB_INTERWORK__ 1
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
+#define __arm__ 1
+#define __thumb2__ 1
+#define __thumb__ 1
+
+$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+#define __ARMEL__ 1
+#define __ARM_32BIT_STATE 1
+#define __ARM_ARCH 7
+#define __ARM_ARCH_7EM__ 1
+#define __ARM_ARCH_EXT_IDIV__ 1
+#define __ARM_ARCH_ISA_THUMB 2
+#define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
+#define __ARM_EABI__ 1
+#define __ARM_FEATURE_CLZ 1
+#define __ARM_FEATURE_DSP 1
+#define __ARM_FEATURE_IDIV 1
 #define __ARM_FEATURE_LDREX 7
 #define __ARM_FEATURE_QBIT 1
 #define __ARM_FEATURE_SAT 1
 #define __ARM_FEATURE_SIMD32 1
 #define __ARM_FEATURE_UNALIGNED 1
 #define __ARM_FP 12
-#define __ARM_NEON_FP 4
 #define __ARM_PCS 1
 #define __ARM_SIZEOF_MINIMAL_ENUM 1
 #define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1002
-#define __SOFTFP__ 1
+#define __GXX_ABI_VERSION 1009
+#define __STDC_VERSION__ 201112L
 #define __THUMBEL__ 1
 #define __THUMB_INTERWORK__ 1
-#define __VERSION__ "4.9.3 20150303 (release) [ARM/embedded-4_9-branch revision 221220]"
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
+#define __VFP_FP__ 1
+#define __arm__ 1
+#define __thumb2__ 1
+#define __thumb__ 1
+
+$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+#define __ARMEL__ 1
+#define __ARM_32BIT_STATE 1
+#define __ARM_ARCH 7
+#define __ARM_ARCH_7EM__ 1
+#define __ARM_ARCH_EXT_IDIV__ 1
+#define __ARM_ARCH_ISA_THUMB 2
+#define __ARM_ARCH_PROFILE 77
+#define __ARM_ASM_SYNTAX_UNIFIED__ 1
+#define __ARM_EABI__ 1
+#define __ARM_FEATURE_CLZ 1
+#define __ARM_FEATURE_DSP 1
+#define __ARM_FEATURE_IDIV 1
+#define __ARM_FEATURE_LDREX 7
+#define __ARM_FEATURE_QBIT 1
+#define __ARM_FEATURE_SAT 1
+#define __ARM_FEATURE_SIMD32 1
+#define __ARM_FEATURE_UNALIGNED 1
+#define __ARM_FP 12
+#define __ARM_PCS_VFP 1
+#define __ARM_SIZEOF_MINIMAL_ENUM 1
+#define __ARM_SIZEOF_WCHAR_T 4
+#define __GXX_ABI_VERSION 1009
+#define __STDC_VERSION__ 201112L
+#define __THUMBEL__ 1
+#define __THUMB_INTERWORK__ 1
+#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
 #define __VFP_FP__ 1
 #define __arm__ 1
 #define __thumb2__ 1
@@ -536,20 +662,29 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 </code></pre>
 </div>
 
+<h2 id="floating-point">Floating point</h2>
+
+<p>To check if hardware floating point is enabled (<code class="highlighter-rouge">-mfloat-abi=softfp</code> or <code class="highlighter-rouge">-mfloat-abi=hard</code>):</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>#define __ARM_FP 12
+</code></pre>
+</div>
+
 <h2 id="freestanding">Freestanding</h2>
 
-<p>To check if -ffreestanding was defined, you can use the following:</p>
+<p>To check if <code class="highlighter-rouge">-ffreestanding</code> was defined, you can use the following:</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>#define __STDC_HOSTED__ 0
 </code></pre>
 </div>
 
-<p>By default, i.e. with -fhosted defined, the value is 1.</p>
+<p>By default, i.e. with <code class="highlighter-rouge">-fhosted</code> defined, the value is 1.</p>
 
 <h2 id="c-exceptions">C++ Exceptions</h2>
 
-<p>To check if a C++ program is compiled with -fexceptions, use:</p>
+<p>To check if a C++ program is compiled with <code class="highlighter-rouge">-fexceptions</code>, use:</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>#define __EXCEPTIONS 1
