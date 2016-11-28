@@ -324,7 +324,7 @@ To automate this process, some scripts are available from a <a href="https://git
   <li>rtos/os-clocks: after exiting deep sleep, when calling the <code class="highlighter-rouge">update_for_slept_time()</code> to update the internal count, the checks that allow timeout processing should also happen here; fixed, <code class="highlighter-rouge">internal_check_timestamps()</code> added;</li>
   <li>memory/first-fit-top: in memory full conditions the allocator risked to allocate past the limit; the problem was identified as a missing end of list initialisation in the initial free list chunk; fixed;</li>
   <li>startup: preprocessor floating point detection during hardware initialisations used wrong macros; fixed, new tests check <code class="highlighter-rouge">__ARM_FP</code>;</li>
-  <li>micro-os-plus-iii-cortexm.git/os-core: first projects using floating point revealed a problem with the context switching code, which, in certain conditions, did not handle the <code class="highlighter-rouge">EXC_RETURN</code> value properly, and the floating point registers were not saved/restored correctly; fixed, now the <code class="highlighter-rouge">EXC_RETURN</code> is saved on the thread stack;</li>
+  <li>micro-os-plus-iii-cortexm.git/os-core: the first projects using floating point revealed a problem with the context switching code, which, in certain conditions, did not handle the <code class="highlighter-rouge">EXC_RETURN</code> value properly, and the floating point registers were not saved/restored correctly; fixed, now the <code class="highlighter-rouge">EXC_RETURN</code> is saved on the thread stack;</li>
 </ul>
 
 <h2 id="other-changes">Other changes</h2>
@@ -344,7 +344,7 @@ To automate this process, some scripts are available from a <a href="https://git
 <p>Posted in
 
 <strong>releases</strong>, <strong>rtos</strong>, <strong>cmsis-plus</strong>, <strong>micro-os-plus</strong>.</p>
-<p>Last modified on Sun Nov 27 12:00:50 2016 UTC.</p>
+<p>Last modified on Mon Nov 28 01:56:27 2016 UTC.</p>
 <ul class="share-buttons">
   <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/blog/2016/11/27/micro-os-plus-v6-3-10-released/" data-layout="button"></div></li>
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
