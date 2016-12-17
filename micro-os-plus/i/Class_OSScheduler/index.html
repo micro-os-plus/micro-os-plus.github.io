@@ -129,7 +129,7 @@
 
   <div class="custom-sidebar">
     <div class="boxed-group-inner">
-      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+      <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
@@ -148,7 +148,7 @@
       
       <h4 id="home"><a href="/">Home</a></h4>
 
-<h4 id="os-iiie">µOS++ IIIe</h4>
+<h4 id="µos-iiie">µOS++ IIIe</h4>
 
 <ul>
   <li><a href="/micro-os-plus/">Overview</a></li>
@@ -224,7 +224,7 @@
   <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
 </ul>
 
-<h4 id="aboutabout"><a href="/about/">About</a></h4>
+<h4 id="about"><a href="/about/">About</a></h4>
 
     </div>
   </div>
@@ -305,13 +305,13 @@
 <a href="#static-void-setallowdeepsleepbool-flag"><span class="tocnumber">16</span> <span class="toctext">static void setAllowDeepSleep(bool flag)</span></a>
 </li>
 <li class="toc_level-1 toc_section-17">
-<a href="#inline-static-void-criticalentervoid-attribute--alwaysinline--"><span class="tocnumber">17</span> <span class="toctext">inline static void criticalEnter(void) attribute( ( always_inline ) )</span></a>
+<a href="#inline-static-void-criticalentervoid-attribute--always_inline--"><span class="tocnumber">17</span> <span class="toctext">inline static void criticalEnter(void) attribute( ( always_inline ) )</span></a>
 </li>
 <li class="toc_level-1 toc_section-18">
-<a href="#inline-static-void-criticalexitvoid-attribute--alwaysinline--"><span class="tocnumber">18</span> <span class="toctext">inline static void criticalExit(void) attribute( ( always_inline ) )</span></a>
+<a href="#inline-static-void-criticalexitvoid-attribute--always_inline--"><span class="tocnumber">18</span> <span class="toctext">inline static void criticalExit(void) attribute( ( always_inline ) )</span></a>
 </li>
 <li class="toc_level-1 toc_section-19">
-<a href="#static-oseventwaitreturnt-eventwaitoseventt-event"><span class="tocnumber">19</span> <span class="toctext">static OSEventWaitReturn_t eventWait(OSEvent_t event)</span></a>
+<a href="#static-oseventwaitreturn_t-eventwaitosevent_t-event"><span class="tocnumber">19</span> <span class="toctext">static OSEventWaitReturn_t eventWait(OSEvent_t event)</span></a>
 </li>
 <li class="toc_level-1 toc_section-20">
 <a href="#static-void-yieldvoid"><span class="tocnumber">20</span> <span class="toctext">static void yield(void)</span></a>
@@ -326,10 +326,10 @@
 <a href="#static-void-performcontextswitchvoid"><span class="tocnumber">23</span> <span class="toctext">static void performContextSwitch(void)</span></a>
 </li>
 <li class="toc_level-1 toc_section-24">
-<a href="#inline-static-void-interruptentervoid-attribute--alwaysinline--"><span class="tocnumber">24</span> <span class="toctext">inline static void interruptEnter(void) attribute( ( always_inline ) )</span></a>
+<a href="#inline-static-void-interruptentervoid-attribute--always_inline--"><span class="tocnumber">24</span> <span class="toctext">inline static void interruptEnter(void) attribute( ( always_inline ) )</span></a>
 </li>
 <li class="toc_level-1 toc_section-25">
-<a href="#inline-static-void-interruptentervoid-attribute--alwaysinline---1"><span class="tocnumber">25</span> <span class="toctext">inline static void interruptEnter(void) attribute( ( always_inline ) )</span></a>
+<a href="#inline-static-void-interruptentervoid-attribute--always_inline---1"><span class="tocnumber">25</span> <span class="toctext">inline static void interruptEnter(void) attribute( ( always_inline ) )</span></a>
 </li>
 <li class="toc_level-1 toc_section-26">
 <a href="#static-ostimerticks-timerticks"><span class="tocnumber">26</span> <span class="toctext">static OSTimerTicks timerTicks</span></a>
@@ -338,7 +338,7 @@
 <a href="#static-ostimerseconds-timerseconds"><span class="tocnumber">27</span> <span class="toctext">static OSTimerSeconds timerSeconds</span></a>
 </li>
 <li class="toc_level-1 toc_section-28">
-<a href="#static-ostask-msptaskrunning"><span class="tocnumber">28</span> <span class="toctext">static OSTask *ms_pTaskRunning</span></a>
+<a href="#static-ostask-ms_ptaskrunning"><span class="tocnumber">28</span> <span class="toctext">static OSTask *ms_pTaskRunning</span></a>
 </li>
 </ul>
 </td>
@@ -666,7 +666,7 @@
 
 <p>:* None.</p>
 
-<h2 id="inline-static-void-criticalentervoid-attribute--alwaysinline--">inline static void criticalEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
+<h2 id="inline-static-void-criticalentervoid-attribute--always_inline--">inline static void criticalEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
 
 <p>
 <strong>Description</strong>
@@ -686,7 +686,7 @@
 
 <p>:* None.</p>
 
-<h2 id="inline-static-void-criticalexitvoid-attribute--alwaysinline--">inline static void criticalExit(void) <strong>attribute</strong>( ( always_inline ) )</h2>
+<h2 id="inline-static-void-criticalexitvoid-attribute--always_inline--">inline static void criticalExit(void) <strong>attribute</strong>( ( always_inline ) )</h2>
 
 <p>
 <strong>Description</strong>
@@ -706,7 +706,7 @@
 
 <p>:* None.</p>
 
-<h2 id="static-oseventwaitreturnt-eventwaitoseventt-event">static OSEventWaitReturn_t eventWait(OSEvent_t event)</h2>
+<h2 id="static-oseventwaitreturn_t-eventwaitosevent_t-event">static OSEventWaitReturn_t eventWait(OSEvent_t event)</h2>
 
 <p>
 <strong>Description</strong>
@@ -824,7 +824,7 @@
 
 <p>:* None.</p>
 
-<h2 id="inline-static-void-interruptentervoid-attribute--alwaysinline--">inline static void interruptEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
+<h2 id="inline-static-void-interruptentervoid-attribute--always_inline--">inline static void interruptEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
 
 <p>
 <strong>Description</strong>
@@ -844,7 +844,7 @@
 
 <p>:* None.</p>
 
-<h2 id="inline-static-void-interruptentervoid-attribute--alwaysinline---1">inline static void interruptEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
+<h2 id="inline-static-void-interruptentervoid-attribute--always_inline---1">inline static void interruptEnter(void) <strong>attribute</strong>( ( always_inline ) )</h2>
 
 <p>
 <strong>Description</strong>
@@ -882,7 +882,7 @@
 
 <p>Timer expressed in seconds.</p>
 
-<h2 id="static-ostask-msptaskrunning">static OSTask *ms_pTaskRunning</h2>
+<h2 id="static-ostask-ms_ptaskrunning">static OSTask *ms_pTaskRunning</h2>
 
 <p>
 <strong>Description</strong>

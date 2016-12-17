@@ -129,7 +129,7 @@
 
   <div class="custom-sidebar">
     <div class="boxed-group-inner">
-      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+      <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
@@ -148,7 +148,7 @@
       
       <h4 id="home"><a href="/">Home</a></h4>
 
-<h4 id="os-iiie">µOS++ IIIe</h4>
+<h4 id="µos-iiie">µOS++ IIIe</h4>
 
 <ul>
   <li><a href="/micro-os-plus/">Overview</a></li>
@@ -224,7 +224,7 @@
   <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
 </ul>
 
-<h4 id="aboutabout"><a href="/about/">About</a></h4>
+<h4 id="about"><a href="/about/">About</a></h4>
 
     </div>
   </div>
@@ -257,13 +257,13 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#appdefinesh"><span class="tocnumber">1</span> <span class="toctext">App_Defines.h</span></a>
+<a href="#app_definesh"><span class="tocnumber">1</span> <span class="toctext">App_Defines.h</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#osappdefinesh"><span class="tocnumber">2</span> <span class="toctext">OS_App_Defines.h</span></a>
+<a href="#os_app_definesh"><span class="tocnumber">2</span> <span class="toctext">OS_App_Defines.h</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#osdefinesh"><span class="tocnumber">3</span> <span class="toctext">OS_Defines.h</span></a>
+<a href="#os_definesh"><span class="tocnumber">3</span> <span class="toctext">OS_Defines.h</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
 <a href="#osh-for-system-classes"><span class="tocnumber">4</span> <span class="toctext">OS.h (for system classes)</span></a>
@@ -290,7 +290,7 @@
 
 <p>Each µOS++ project should define two distinct header files, one for the application specific files and one for system specific files. The preferred location for these files is <strong>${ProjDirPath}/include</strong>.</p>
 
-<h2 id="appdefinesh">App_Defines.h</h2>
+<h2 id="app_definesh">App_Defines.h</h2>
 
 <p>Since all application files include uOS.h, extending the system definitions with application specific definitions can be conveniently done by including a custom header file <strong>at the end</strong> of uOS.h, <strong>after most of the other system include files</strong>.</p>
 
@@ -303,7 +303,7 @@
 </code></pre>
 </div>
 
-<h2 id="osappdefinesh">OS_App_Defines.h</h2>
+<h2 id="os_app_definesh">OS_App_Defines.h</h2>
 
 <p>Similarly, all µOS++ system files include at least <strong>portable/kernel/include/OS_Defines.h</strong>, as a common point for all system related defines. This file performs a hierarchical sequence of inclusions, from particular to general, assuming that each level will add defaults for definitions not yet encountered.</p>
 
@@ -317,7 +317,7 @@
 
 <h1 id="the-long-story">The long story</h1>
 
-<h2 id="osdefinesh">OS_Defines.h</h2>
+<h2 id="os_definesh">OS_Defines.h</h2>
 
 <p>One of the build characteristics of µOS++ is that, at the limit, any project should build without errors with all µOS++ source files, regardless of architecture/family/board specifics.</p>
 

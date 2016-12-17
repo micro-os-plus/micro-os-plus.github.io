@@ -129,7 +129,7 @@
 
   <div class="custom-sidebar">
     <div class="boxed-group-inner">
-      <h4 id="newsblog"><a href="/blog/">News</a></h4>
+      <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
@@ -148,7 +148,7 @@
       
       <h4 id="home"><a href="/">Home</a></h4>
 
-<h4 id="os-iiie">µOS++ IIIe</h4>
+<h4 id="µos-iiie">µOS++ IIIe</h4>
 
 <ul>
   <li><a href="/micro-os-plus/">Overview</a></li>
@@ -224,7 +224,7 @@
   <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
 </ul>
 
-<h4 id="aboutabout"><a href="/about/">About</a></h4>
+<h4 id="about"><a href="/about/">About</a></h4>
 
     </div>
   </div>
@@ -257,7 +257,7 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#ostaskconst-char-pname-ostaskmainptrt-entrypoint-void-pparameters-const-osstackt-pstack-unsigned-short-stacksize-ostaskpriorityt-priority"><span class="tocnumber">1</span> <span class="toctext">OSTask(const char *pName, OSTaskMainPtr_t entryPoint, void *pParameters, const OSStack_t *pStack, unsigned short stackSize, OSTaskPriority_t priority)</span></a>
+<a href="#ostaskconst-char-pname-ostaskmainptr_t-entrypoint-void-pparameters-const-osstack_t-pstack-unsigned-short-stacksize-ostaskpriority_t-priority"><span class="tocnumber">1</span> <span class="toctext">OSTask(const char *pName, OSTaskMainPtr_t entryPoint, void *pParameters, const OSStack_t *pStack, unsigned short stackSize, OSTaskPriority_t priority)</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
 <a href="#virtual-ostask"><span class="tocnumber">2</span> <span class="toctext">virtual ~OSTask()</span></a>
@@ -305,16 +305,16 @@
 <a href="#void-getcontextvoid"><span class="tocnumber">16</span> <span class="toctext">void *getContext(void)</span></a>
 </li>
 <li class="toc_level-1 toc_section-17">
-<a href="#ostaskpriorityt-getpriorityvoid"><span class="tocnumber">17</span> <span class="toctext">OSTaskPriority_t getPriority(void)</span></a>
+<a href="#ostaskpriority_t-getpriorityvoid"><span class="tocnumber">17</span> <span class="toctext">OSTaskPriority_t getPriority(void)</span></a>
 </li>
 <li class="toc_level-1 toc_section-18">
-<a href="#void-setpriorityostaskpriorityt-priority"><span class="tocnumber">18</span> <span class="toctext">void setPriority(OSTaskPriority_t priority)</span></a>
+<a href="#void-setpriorityostaskpriority_t-priority"><span class="tocnumber">18</span> <span class="toctext">void setPriority(OSTaskPriority_t priority)</span></a>
 </li>
 <li class="toc_level-1 toc_section-19">
-<a href="#oseventt-geteventvoid"><span class="tocnumber">19</span> <span class="toctext">OSEvent_t getEvent(void)</span></a>
+<a href="#osevent_t-geteventvoid"><span class="tocnumber">19</span> <span class="toctext">OSEvent_t getEvent(void)</span></a>
 </li>
 <li class="toc_level-1 toc_section-20">
-<a href="#void-seteventoseventt-event"><span class="tocnumber">20</span> <span class="toctext">void setEvent(OSEvent_t event)</span></a>
+<a href="#void-seteventosevent_t-event"><span class="tocnumber">20</span> <span class="toctext">void setEvent(OSEvent_t event)</span></a>
 </li>
 <li class="toc_level-1 toc_section-21">
 <a href="#unsigned-short-getstackusedvoid"><span class="tocnumber">21</span> <span class="toctext">unsigned short getStackUsed(void)</span></a>
@@ -323,7 +323,7 @@
 <a href="#void-setallowsleepbool-status"><span class="tocnumber">22</span> <span class="toctext">void setAllowSleep(bool status)</span></a>
 </li>
 <li class="toc_level-1 toc_section-23">
-<a href="#osstackt-mpstack"><span class="tocnumber">23</span> <span class="toctext">OSStack_t *m_pStack</span></a>
+<a href="#osstack_t-m_pstack"><span class="tocnumber">23</span> <span class="toctext">OSStack_t *m_pStack</span></a>
 </li>
 </ul>
 </td>
@@ -357,7 +357,7 @@
 
 <p>:* none</p>
 
-<h2 id="ostaskconst-char-pname-ostaskmainptrt-entrypoint-void-pparameters-const-osstackt-pstack-unsigned-short-stacksize-ostaskpriorityt-priority">OSTask(const char *pName, OSTaskMainPtr_t entryPoint, void *pParameters, const OSStack_t *pStack, unsigned short stackSize, OSTaskPriority_t priority)</h2>
+<h2 id="ostaskconst-char-pname-ostaskmainptr_t-entrypoint-void-pparameters-const-osstack_t-pstack-unsigned-short-stacksize-ostaskpriority_t-priority">OSTask(const char *pName, OSTaskMainPtr_t entryPoint, void *pParameters, const OSStack_t *pStack, unsigned short stackSize, OSTaskPriority_t priority)</h2>
 
 <p>
 <strong>Description</strong>
@@ -689,7 +689,7 @@
 
 <p>:* The task context.</p>
 
-<h2 id="ostaskpriorityt-getpriorityvoid">OSTaskPriority_t getPriority(void)</h2>
+<h2 id="ostaskpriority_t-getpriorityvoid">OSTaskPriority_t getPriority(void)</h2>
 
 <p>
 <strong>Description</strong>
@@ -709,7 +709,7 @@
 
 <p>:* The task priority.</p>
 
-<h2 id="void-setpriorityostaskpriorityt-priority">void setPriority(OSTaskPriority_t priority)</h2>
+<h2 id="void-setpriorityostaskpriority_t-priority">void setPriority(OSTaskPriority_t priority)</h2>
 
 <p>
 <strong>Description</strong>
@@ -729,7 +729,7 @@
 
 <p>:* none</p>
 
-<h2 id="oseventt-geteventvoid">OSEvent_t getEvent(void)</h2>
+<h2 id="osevent_t-geteventvoid">OSEvent_t getEvent(void)</h2>
 
 <p>
 <strong>Description</strong>
@@ -749,7 +749,7 @@
 
 <p>:* The event the task is waiting for.</p>
 
-<h2 id="void-seteventoseventt-event">void setEvent(OSEvent_t event)</h2>
+<h2 id="void-seteventosevent_t-event">void setEvent(OSEvent_t event)</h2>
 
 <p>
 <strong>Description</strong>
@@ -829,7 +829,7 @@
 
 <h1 id="variables">Variables</h1>
 
-<h2 id="osstackt-mpstack">OSStack_t *m_pStack</h2>
+<h2 id="osstack_t-m_pstack">OSStack_t *m_pStack</h2>
 
 <p>
 <strong>Description</strong>
