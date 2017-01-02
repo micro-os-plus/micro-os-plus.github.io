@@ -242,16 +242,16 @@
 <h1 class="page-title">FAQ</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Jan  2 21:18:19 2017 UTC.</td>
+    <td id="last-modified">Last modified on Mon Jan  2 21:31:43 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/support/faq.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
 <h2 id="why-i-cant-step-into-the-sprintf-function">Why I can’t step into the sprintf() function?</h2>
 
-<p>Stepping into any function requires the presence of the debug information. Normally, the implementation of the <code class="highlighter-rouge">printf()</code> family of functions in in the standard C library, which does not include debugging information.</p>
+<p>Stepping into any function requires the presence of the debug information. Normally, the implementation of the <code class="highlighter-rouge">printf()</code> family of functions is in the standard C library, which does not include debugging information.</p>
 
-<p>However, for common GCC setups, that use the open source <strong>newlib</strong> library, the source code of any function is available, can be (temporarily) brought into the project and compiled with debugging information.</p>
+<p>However, for common GCC setups, using the open source <strong>newlib</strong> library, the source code of any function is available; it can be (temporarily) brought into the project and compiled with debugging information.</p>
 
 <p>The <a href="https://sourceware.org/newlib/">newlib</a> sources can be cloned from:</p>
 
@@ -260,7 +260,7 @@
 </code></pre>
 </div>
 
-<p>Then create a subfolder in the source folder (for example <code class="highlighter-rouge">newlib-libc</code>) and copy the desired files from <code class="highlighter-rouge">newlib-cygwin.git/newlib/libc/stdio</code>. You may also need to copy some additional headers, from related folders.</p>
+<p>Create a subfolder in the source folder (for example <code class="highlighter-rouge">newlib-libc</code>) and copy the desired files from <code class="highlighter-rouge">newlib-cygwin.git/newlib/libc/stdio</code>. You may also need to copy some additional headers, from related folders.</p>
 
 <p>For example, to step into <code class="highlighter-rouge">snprintf()</code> and <code class="highlighter-rouge">trace::printf()</code>, the following files were required:</p>
 
