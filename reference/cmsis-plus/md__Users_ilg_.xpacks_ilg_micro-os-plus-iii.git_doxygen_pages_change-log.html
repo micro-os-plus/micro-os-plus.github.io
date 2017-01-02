@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.10</span>
+     &#160;<span id="projectnumber">v6.3.11</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('md__Users_ilg_.xpacks_ilg_micro-os-plu
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>RTOS</h2>
+<p>Records in chronologycal order.</p>
 <h3>v0.1.1 2016-03-11</h3>
 <ul>
 <li>initial version of the APIs announced on <a href="https://community.arm.com/groups/tools/blog/2016/03/11/cmsis-a-proposal-for-a-future-cmsis-written-in-c">ARM Connected Community</a></li>
@@ -289,7 +290,14 @@ $(document).ready(function(){initNavTree('md__Users_ilg_.xpacks_ilg_micro-os-plu
 <li>first-fit-top: fix free list chunk init</li>
 <li><a class="el" href="initialize-hardware_8c.html">startup/initialize-hardware.c</a>: use <code>__ARM_FP</code> instead of <code>__VFP_FP__</code></li>
 <li>micro-os-plus-iii-cortexm.git/os-core: fix PendSV stack frame for FP</li>
-<li>micro-os-plus-iii-cortexm.git/os-core: fix setMSP() optimisation bug <hr/>
+<li>micro-os-plus-iii-cortexm.git/os-core: fix setMSP() optimisation bug</li>
+</ul>
+<h3>v6.3.11 2017-01-02</h3>
+<ul>
+<li><a class="el" href="os-mqueue_8cpp.html">os-mqueue.cpp</a>: remove wrong assert from *_receive()</li>
+<li>cortexm/os-core.cpp: setMSP() with uint32_t* volatile vectors_addr</li>
+<li>cortexm/os-core.cpp: align thread stack to 8 byte boundary</li>
+<li>cortexm/os-core.cpp: assert both thread stack and MSP aligned <hr/>
  </li>
 </ul>
 </div></div><!-- contents -->
