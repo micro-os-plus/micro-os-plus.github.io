@@ -92,7 +92,7 @@
     <tr>
       <td>
         <a href="/">
-          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+          <img alt="Icon" class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
       </a>
       </td>
       <td>
@@ -134,7 +134,7 @@
 <ul>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released">µOS++ IIIe v6.3.9 released</a></li>
+  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
   <li><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">First µOS++ IIIe public version v6.3.7 released</a></li>
 </ul>
 
@@ -207,7 +207,6 @@
   <li><a href="/support/known-issues/">Known issues</a></li>
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
   <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
 </ul>
 
@@ -242,7 +241,7 @@
 <h1 class="page-title">CMSIS++ RTOS APIs</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
+    <td id="last-modified">Last modified on Sun Feb  5 19:19:24 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/cmsis-plus/rtos/overview.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -252,7 +251,7 @@
 <p>The CMSIS++ RTOS APIs are a set of RTOS interfaces, highly portable but designed to best match the ARM Cortex-M processor-based devices.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/cmsis-plus-rtos-overview.png">
+<img alt="Overview" src="/assets/images/2016/cmsis-plus-rtos-overview.png">
 </div>
 
 <h2 id="project-highlights">Project highlights</h2>
@@ -261,16 +260,16 @@
 
 <ul>
   <li>
-    <p>the core CMSIS++ RTOS is based on a C++ API (namespace <code class="highlighter-rouge">os::rtos</code>), defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/rtos/os.h">&lt;cmsis-plus/rtos/os.h&gt;</a>;</p>
+    <p>the core CMSIS++ RTOS is based on a C++ API (namespace <code class="highlighter-rouge">os::rtos</code>), defined in <a href="https://github.com/micro-os-plus/micro-os-plus-iii/blob/xpack/include/cmsis-plus/rtos/os.h">&lt;cmsis-plus/rtos/os.h&gt;</a>;</p>
   </li>
   <li>
-    <p>exactly the same functionality is provided in C, with a C wrapper, for those who prefer to use plain C; the C API is defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/rtos/os-c-api.h">&lt;cmsis-plus/rtos/os-c-api.h&gt;</a>;</p>
+    <p>exactly the same functionality is provided in C, with a C wrapper, for those who prefer to use plain C; the C API is defined in <a href="https://github.com/micro-os-plus/micro-os-plus-iii/blob/xpack/include/cmsis-plus/rtos/os-c-api.h">&lt;cmsis-plus/rtos/os-c-api.h&gt;</a>;</p>
   </li>
   <li>
-    <p>for compatibility reasons, the actual CMSIS API is also implemented in the C wrapper; it is defined in <a href="https://github.com/micro-os-plus/cmsis-plus/blob/xpack/include/cmsis-plus/legacy/cmsis_os.h">&lt;cmsis_os.h&gt;</a> (functional, passed the CMSIS RTOS validation, using the <a href="https://github.com/xpacks/freertos/blob/xpack/cmsis-plus/include/cmsis-plus/rtos/port/os-inlines.h">FreeRTOS port</a>);</p>
+    <p>for compatibility reasons, the actual CMSIS API is also implemented in the C wrapper; it is defined in <a href="https://github.com/micro-os-plus/micro-os-plus-iii/blob/xpack/include/cmsis-plus/legacy/cmsis_os.h">&lt;cmsis_os.h&gt;</a> (functional, passed the CMSIS RTOS validation, using the <a href="https://github.com/xpacks/freertos/blob/xpack/cmsis-plus/include/cmsis-plus/rtos/port/os-inlines.h">FreeRTOS port</a>);</p>
   </li>
   <li>
-    <p>on top of the core C++ API, the ISO standard thread library is fully implemented (namespace <code class="highlighter-rouge">os::estd</code>), and this is the recommended C++ API for future applications; the definitions are available from <a href="https://github.com/micro-os-plus/cmsis-plus/tree/xpack/include/cmsis-plus/iso">&lt;cmsis-plus/iso/*&gt;</a>;</p>
+    <p>on top of the core C++ API, the ISO standard thread library is fully implemented (namespace <code class="highlighter-rouge">os::estd</code>), and this is the recommended C++ API for future applications; the definitions are available from <a href="https://github.com/micro-os-plus/micro-os-plus-iii/tree/xpack/include/cmsis-plus/estd/">&lt;cmsis-plus/estd/*&gt;</a>;</p>
   </li>
   <li>
     <p>all RTOS objects are based on the core C++ objects, and objects created in C++ can be used in C and similarly objects created in C can be used in C++ (there is no mystery here, they represent exactly the same objects);</p>
@@ -321,7 +320,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2016 Liviu Ionescu</li>
+  <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
@@ -333,15 +332,15 @@
 
 
   </div>
-  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+  <a href="https://github.com/micro-os-plus/micro-os-plus-iii" aria-label="Homepage">
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
   </a>
   <div class="site-footer-links right">
     <ul>
   <li><a href="/">Home</a></li>
   <li><a href="/blog/">News</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues">Support</a></li>
   <li><a href="/about/">About</a></li>
 </ul>
 

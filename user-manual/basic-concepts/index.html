@@ -92,7 +92,7 @@
     <tr>
       <td>
         <a href="/">
-          <img class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+          <img alt="Icon" class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
       </a>
       </td>
       <td>
@@ -134,7 +134,7 @@
 <ul>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released">µOS++ IIIe v6.3.9 released</a></li>
+  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
   <li><a href="/blog/2016/09/15/micro-os-plus-v6-3-7-released/">First µOS++ IIIe public version v6.3.7 released</a></li>
 </ul>
 
@@ -207,7 +207,6 @@
   <li><a href="/support/known-issues/">Known issues</a></li>
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues/">Report CMSIS++ issues</a></li>
   <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
 </ul>
 
@@ -242,7 +241,7 @@
 <h1 class="page-title">Basic concepts</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Wed Aug 17 07:13:55 2016 UTC.</td>
+    <td id="last-modified">Last modified on Sat Feb  4 19:58:54 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/basic-concepts.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -460,7 +459,7 @@
 <p>In this architecture, the functions implementing the various functionalities are inherently, even if not formally declared as such, some kind of <a href="https://en.wikipedia.org/wiki/Finite-state_machine">finite state machines</a>, spinning around and switching states based on inputs provided by the ISRs.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/superloop.png">
+<img alt="Superloop" src="/assets/images/2016/superloop.png">
 <p>Superloop application</p>
 </div>
 
@@ -579,21 +578,21 @@
 <p>The biggest disadvantage of cooperative multi-tasking is a possible low reaction speed, for example when an interrupt wants to resume a high priority thread, this might not happen until the low priority thread decides to yield.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-cooperative.png">
+<img alt="Cooperative Scheduling" src="/assets/images/2016/scheduling-cooperative.png">
 <p>Cooperative context switching.</p>
 </div>
 
 <p>In this case the solution is to allow the interrupt to trigger a context switch from the low priority thread to the high priority thread without the threads event knowing about. This automatic kind of context switch is also called <strong>preemptive</strong> multi-tasking, since long running threads are <em>preempted</em> to hog the CPU in favour of higher priority threads.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-preemptive.png">
+<img alt="Preemptive Scheduling" src="/assets/images/2016/scheduling-preemptive.png">
 <p>Preemptive context switching</p>
 </div>
 
 <p>Once the mechanism for an interrupt to preempt a thread is functional, a further improvement can be added: a periodic timer (for example the timer used to keep track of time), can be used to automatically preempt threads and give a chance to equal priority threads to alternatively get the CPU.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/scheduling-preemptive-timer.png">
+<img alt="Preemptive Scheduling Timer" src="/assets/images/2016/scheduling-preemptive-timer.png">
 <p>Preemptive context switching with periodic timer</p>
 </div>
 
@@ -712,7 +711,7 @@
 </ul>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/priority-inversion.png">
+<img alt="Priority Inversion" src="/assets/images/2016/priority-inversion.png">
 <p>Priority inversion</p>
 </div>
 
@@ -723,7 +722,7 @@
 <p>One of the possible solutions to avoid this is for the high priority thread to temporarily boost the priority of the low priority thread, to prevent other threads to interfere and so help the low priority thread to complete its job sooner. This is known as <strong>priority inheritance</strong>.</p>
 
 <div style="text-align:center">
-<img src="/assets/images/2016/priority-inheritance.png">
+<img alt="Priority Inheritance" src="/assets/images/2016/priority-inheritance.png">
 <p>Priority inheritance</p>
 </div>
 
@@ -915,7 +914,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2016 Liviu Ionescu</li>
+  <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
@@ -927,15 +926,15 @@
 
 
   </div>
-  <a href="https://github.com/micro-os-plus/cmsis-plus" aria-label="Homepage">
+  <a href="https://github.com/micro-os-plus/micro-os-plus-iii" aria-label="Homepage">
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
   </a>
   <div class="site-footer-links right">
     <ul>
   <li><a href="/">Home</a></li>
   <li><a href="/blog/">News</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/releases">Releases</a></li>
-  <li><a href="https://github.com/micro-os-plus/cmsis-plus/issues">Support</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues">Support</a></li>
   <li><a href="/about/">About</a></li>
 </ul>
 
