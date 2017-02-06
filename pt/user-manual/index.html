@@ -146,7 +146,7 @@
   <div class="custom-sidebar">
     <div class="boxed-group-inner">
       
-      <h4 id="início"><a href="/pt">Início</a></h4>
+      <h4 id="início"><a href="/pt/">Início</a></h4>
 
 <h4 id="µos-iiie">µOS++ IIIe</h4>
 
@@ -175,12 +175,12 @@
     <ul>
       <li><a href="/pt/user-manual/getting-started/">Começando</a></li>
       <li><a href="/pt/user-manual/basic-concepts/">Conceitos básicos</a></li>
-      <li><a href="/pt/user-manual/features/">Características</a></li>
-      <li><a href="/pt/user-manual/threads/">Threads</a></li>
-      <li><a href="/pt/user-manual/thread-event-flags/">Thread event flags</a></li>
-      <li><a href="/pt/user-manual/semaphores/">Semaphores</a></li>
-      <li><a href="/pt/user-manual/event-flags/">Event flags</a></li>
-      <li><a href="/pt/user-manual/mutexes/">Mutexes</a></li>
+      <li><a href="/user-manual/features/">Características</a></li>
+      <li><a href="/user-manual/threads/">Threads</a></li>
+      <li><a href="/user-manual/thread-event-flags/">Thread event flags</a></li>
+      <li><a href="/user-manual/semaphores/">Semaphores</a></li>
+      <li><a href="/user-manual/event-flags/">Event flags</a></li>
+      <li><a href="/user-manual/mutexes/">Mutexes</a></li>
       <li>Condition variables</li>
       <li>Message queues</li>
       <li>Memory pools</li>
@@ -223,7 +223,7 @@
   <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
 </ul>
 
-<h4 id="sobre"><a href="/pt/about/">Sobre</a></h4>
+<h4 id="sobre"><a href="/about/">Sobre</a></h4>
 
     </div>
   </div>
@@ -241,7 +241,7 @@
 <h1 class="page-title">Manual do usuário</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 18:02:47 2016 UTC.</td>
+    <td id="last-modified">Last modified on Mon Feb  6 09:11:34 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/toc.pt.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -323,7 +323,7 @@
 </tbody>
 </table>
 </div>
-<p>Note: The User’s Manual is currently work in progress.</p>
+<p>Note: The User’s Manual is currently work in progress. Add <code class="highlighter-rouge">/pt/</code> after sub-headers are translated.</p>
 
 <h2 id="rtos">RTOS</h2>
 
@@ -332,13 +332,13 @@
 </h3>
 <ul>
   <li>
-<a href="/pt/user-manual/getting-started/#overview">Overview</a>
+<a href="/user-manual/getting-started/#overview">Overview</a>
     <ul>
-      <li><a href="/pt/user-manual/getting-started/#multiple-apis">Multiple APIs</a></li>
+      <li><a href="/user-manual/getting-started/#multiple-apis">Multiple APIs</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/getting-started/#the-osmain-and-the-main-thread">The <code class="highlighter-rouge">os_main()</code> and the main thread</a></li>
-  <li><a href="/pt/user-manual/getting-started/#multiple-thread-applications">Multiple thread applications</a></li>
+  <li><a href="/user-manual/getting-started/#the-os_main-and-the-main-thread">The <code class="highlighter-rouge">os_main()</code> and the main thread</a></li>
+  <li><a href="/user-manual/getting-started/#multiple-thread-applications">Multiple thread applications</a></li>
 </ul>
 
 <h3 id="conceitos-básicos">
@@ -346,179 +346,179 @@
 </h3>
 
 <ul>
-  <li><a href="/pt/user-manual/basic-concepts/#soft-vs-hard-real-time-systems">Soft vs hard real-time systems</a></li>
-  <li><a href="/pt/user-manual/basic-concepts/#superloop-foregroundbackground-applications">Superloop (foreground/background) applications</a></li>
+  <li><a href="/user-manual/basic-concepts/#soft-vs-hard-real-time-systems">Soft vs hard real-time systems</a></li>
+  <li><a href="/user-manual/basic-concepts/#superloop-foregroundbackground-applications">Superloop (foreground/background) applications</a></li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#multi-tasking">Multi-tasking</a>
+<a href="/user-manual/basic-concepts/#multi-tasking">Multi-tasking</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#tasks">Tasks</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#why-multiple-threads">Why multiple threads?</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#threads--processes">Threads &amp; processes</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#blocking-io">Blocking I/O</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#the-idle-thread">The idle thread</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#sleep-modes-and-power-savings">Sleep modes and power savings</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#context-switching">Context switching</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#thread-stacks">Thread stacks</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#cooperative-vs-preemptive-multi-tasking">Cooperative vs preemptive multi-tasking</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#thread-interruption-cancellation">Thread interruption/cancellation</a></li>
+      <li><a href="/user-manual/basic-concepts/#tasks">Tasks</a></li>
+      <li><a href="/user-manual/basic-concepts/#why-multiple-threads">Why multiple threads?</a></li>
+      <li><a href="/user-manual/basic-concepts/#threads-vs-processes">Threads &amp; processes</a></li>
+      <li><a href="/user-manual/basic-concepts/#blocking-io">Blocking I/O</a></li>
+      <li><a href="/user-manual/basic-concepts/#the-idle-thread">The idle thread</a></li>
+      <li><a href="/user-manual/basic-concepts/#sleep-modes-and-power-savings">Sleep modes and power savings</a></li>
+      <li><a href="/user-manual/basic-concepts/#context-switching">Context switching</a></li>
+      <li><a href="/user-manual/basic-concepts/#thread-stacks">Thread stacks</a></li>
+      <li><a href="/user-manual/basic-concepts/#cooperative-vs-preemptive-multi-tasking">Cooperative vs preemptive multi-tasking</a></li>
+      <li><a href="/user-manual/basic-concepts/#thread-interruptioncancellation">Thread interruption/cancellation</a></li>
     </ul>
   </li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#scheduling">Scheduling</a>
+<a href="/user-manual/basic-concepts/#scheduling">Scheduling</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#thread-states">Thread states</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#the-ready-list">The READY list</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#scheduling-algorithms">Scheduling algorithms</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#round-robin-vs-priority-scheduling">Round-robin vs priority scheduling</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#selecting-thread-priorities">Selecting thread priorities</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#priority-inversion--priority-inheritance">Priority inversion / priority inheritance</a></li>
+      <li><a href="/user-manual/basic-concepts/#thread-states">Thread states</a></li>
+      <li><a href="/user-manual/basic-concepts/#the-ready-list">The READY list</a></li>
+      <li><a href="/user-manual/basic-concepts/#scheduling-algorithms">Scheduling algorithms</a></li>
+      <li><a href="/user-manual/basic-concepts/#round-robin-vs-priority-scheduling">Round-robin vs priority scheduling</a></li>
+      <li><a href="/user-manual/basic-concepts/#selecting-thread-priorities">Selecting thread priorities</a></li>
+      <li><a href="/user-manual/basic-concepts/#priority-inversion--priority-inheritance">Priority inversion / priority inheritance</a></li>
     </ul>
   </li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#communicating-between-threads-andor-isrs">Communicating between threads and/or ISRs</a>
+<a href="/user-manual/basic-concepts/#communicating-between-threads-andor-isrs">Communicating between threads and/or ISRs</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#periodic-polling-vs-event-waiting">Periodic polling vs event waiting</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#passing-messages">Passing messages</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#event-flags">Event flags</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#semaphores">Semaphores</a></li>
+      <li><a href="/user-manual/basic-concepts/#periodic-polling-vs-event-waiting">Periodic polling vs event waiting</a></li>
+      <li><a href="/user-manual/basic-concepts/#passing-messages">Passing messages</a></li>
+      <li><a href="/user-manual/basic-concepts/#event-flags">Event flags</a></li>
+      <li><a href="/user-manual/basic-concepts/#semaphores">Semaphores</a></li>
     </ul>
   </li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#managing-common-resources">Managing common resources</a>
+<a href="/user-manual/basic-concepts/#managing-common-resources">Managing common resources</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#disable-enable-interrupts">Disable/enable interrupts</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#lock-unlock-the-scheduler">Lock/unlock the scheduler</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#counting-semaphores">Counting semaphores</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#mutual-exclusion-mutex">Mutual exclusion (mutex)</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#should-a-semaphore-or-a-mutex-be-used">Should a semaphore or a mutex be used?</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#deadlock-or-deadly-embrace">Deadlock (or deadly embrace)</a></li>
+      <li><a href="/user-manual/basic-concepts/#disableenable-interrupts">Disable/enable interrupts</a></li>
+      <li><a href="/user-manual/basic-concepts/#lockunlock-the-scheduler">Lock/unlock the scheduler</a></li>
+      <li><a href="/user-manual/basic-concepts/#counting-semaphores">Counting semaphores</a></li>
+      <li><a href="/user-manual/basic-concepts/#mutual-exclusion-mutex">Mutual exclusion (mutex)</a></li>
+      <li><a href="/user-manual/basic-concepts/#should-a-semaphore-or-a-mutex-be-used">Should a semaphore or a mutex be used?</a></li>
+      <li><a href="/user-manual/basic-concepts/#deadlock-or-deadly-embrace">Deadlock (or deadly embrace)</a></li>
     </ul>
   </li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#statically-vs-dynamically-allocated-objects">Statically vs. dynamically allocated objects</a>
+<a href="/user-manual/basic-concepts/#statically-vs-dynamically-allocated-objects">Statically vs. dynamically allocated objects</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#the-system-allocator">The system allocator</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#fragmentation">Fragmentation</a></li>
+      <li><a href="/user-manual/basic-concepts/#the-system-allocator">The system allocator</a></li>
+      <li><a href="/user-manual/basic-concepts/#fragmentation">Fragmentation</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/basic-concepts/#real-time-clock">Real-time clock</a></li>
+  <li><a href="/user-manual/basic-concepts/#real-time-clock">Real-time clock</a></li>
   <li>
-<a href="/pt/user-manual/basic-concepts/#terms-to-use-with-caution">Terms to use with caution</a>
+<a href="/user-manual/basic-concepts/#terms-to-use-with-caution">Terms to use with caution</a>
     <ul>
-      <li><a href="/pt/user-manual/basic-concepts/#kernel">Kernel</a></li>
-      <li><a href="/pt/user-manual/basic-concepts/#tasks-vs-threads">Tasks vs threads</a></li>
+      <li><a href="/user-manual/basic-concepts/#kernel">Kernel</a></li>
+      <li><a href="/user-manual/basic-concepts/#tasks-vs-threads">Tasks vs threads</a></li>
     </ul>
   </li>
 </ul>
 
 <h3 id="features">
-<a href="/pt/user-manual/features/">Features</a>
+<a href="/user-manual/features/">Features</a>
 </h3>
 
 <h3 id="threads">
-<a href="/pt/user-manual/threads/">Threads</a>
+<a href="/user-manual/threads/">Threads</a>
 </h3>
 <ul>
-  <li><a href="/pt/user-manual/threads/#overview">Overview</a></li>
-  <li><a href="/pt/user-manual/threads/#thread-functions">Thread functions</a></li>
-  <li><a href="/pt/user-manual/threads/#thread-priorities">Thread priorities</a></li>
-  <li><a href="/pt/user-manual/threads/#creating-threads">Creating threads</a></li>
-  <li><a href="/pt/user-manual/threads/#changing-thread-priorities">Changing thread priorities</a></li>
-  <li><a href="/pt/user-manual/threads/#other-thread-functions">Other thread functions</a></li>
-  <li><a href="/pt/user-manual/threads/#destroying-threads">Destroying threads</a></li>
-  <li><a href="/pt/user-manual/threads/#the-current-thread">The current thread</a></li>
-  <li><a href="/pt/user-manual/threads/#thread-states">Thread states</a></li>
-  <li><a href="/pt/user-manual/threads/#the-thread-stack">The thread stack</a></li>
-  <li><a href="/pt/user-manual/threads/#the-idle-thread">The idle thread</a></li>
-  <li><a href="/pt/user-manual/threads/#the-main-thread">The main thread</a></li>
+  <li><a href="/user-manual/threads/#overview">Overview</a></li>
+  <li><a href="/user-manual/threads/#thread-functions">Thread functions</a></li>
+  <li><a href="/user-manual/threads/#thread-priorities">Thread priorities</a></li>
+  <li><a href="/user-manual/threads/#creating-threads">Creating threads</a></li>
+  <li><a href="/user-manual/threads/#changing-thread-priorities">Changing thread priorities</a></li>
+  <li><a href="/user-manual/threads/#other-thread-functions">Other thread functions</a></li>
+  <li><a href="/user-manual/threads/#destroying-threads">Destroying threads</a></li>
+  <li><a href="/user-manual/threads/#the-current-thread">The current thread</a></li>
+  <li><a href="/user-manual/threads/#thread-states">Thread states</a></li>
+  <li><a href="/user-manual/threads/#the-thread-stack">The thread stack</a></li>
+  <li><a href="/user-manual/threads/#the-idle-thread">The idle thread</a></li>
+  <li><a href="/user-manual/threads/#the-main-thread">The main thread</a></li>
 </ul>
 
 <h3 id="thread-event-flags">
-<a href="/pt/user-manual/thread-event-flags/">Thread event flags</a>
+<a href="/user-manual/thread-event-flags/">Thread event flags</a>
 </h3>
 <ul>
-  <li><a href="/pt/user-manual/thread-event-flags/#overview">Overview</a></li>
-  <li><a href="/pt/user-manual/thread-event-flags/#raising-thread-event-flags">Raising thread event flags</a></li>
-  <li><a href="/pt/user-manual/thread-event-flags/#waiting-for-thread-event-flags">Waiting for thread event flags</a></li>
-  <li><a href="/pt/user-manual/thread-event-flags/#other-thread-event-flags-functions">Other thread event flags functions</a></li>
+  <li><a href="/user-manual/thread-event-flags/#overview">Overview</a></li>
+  <li><a href="/user-manual/thread-event-flags/#raising-thread-event-flags">Raising thread event flags</a></li>
+  <li><a href="/user-manual/thread-event-flags/#waiting-for-thread-event-flags">Waiting for thread event flags</a></li>
+  <li><a href="/user-manual/thread-event-flags/#other-thread-event-flags-functions">Other thread event flags functions</a></li>
 </ul>
 
 <h3 id="semaphores">
-<a href="/pt/user-manual/semaphores/">Semaphores</a>
+<a href="/user-manual/semaphores/">Semaphores</a>
 </h3>
 <ul>
-  <li><a href="/pt/user-manual/semaphores/#overview">Overview</a></li>
+  <li><a href="/user-manual/semaphores/#overview">Overview</a></li>
   <li>
-<a href="/pt/user-manual/semaphores/#semaphore-types">Semaphore types</a>
+<a href="/user-manual/semaphores/#semaphore-types">Semaphore types</a>
     <ul>
-      <li><a href="/pt/user-manual/semaphores/#binary-semaphores">Binary semaphores</a></li>
-      <li><a href="/pt/user-manual/semaphores/#counting-semaphores">Counting semaphores</a></li>
+      <li><a href="/user-manual/semaphores/#binary-semaphores">Binary semaphores</a></li>
+      <li><a href="/user-manual/semaphores/#counting-semaphores">Counting semaphores</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/semaphores/#creating-semaphores">Creating semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#creating-semaphores">Creating semaphores</a></li>
   <li>
-<a href="/pt/user-manual/semaphores/#posting-to-semaphores">Posting to semaphores</a>
+<a href="/user-manual/semaphores/#posting-to-semaphores">Posting to semaphores</a>
     <ul>
-      <li><a href="/pt/user-manual/semaphores/#posting-to-semaphores-from-isrs">Posting to semaphores from ISRs</a></li>
+      <li><a href="/user-manual/semaphores/#posting-to-semaphores-from-isrs">Posting to semaphores from ISRs</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/semaphores/#waiting-on-semaphores">Waiting on semaphores</a></li>
-  <li><a href="/pt/user-manual/semaphores/#multiple-threads-waiting-on-a-semaphore">Multiple threads waiting on a semaphore</a></li>
+  <li><a href="/user-manual/semaphores/#waiting-on-semaphores">Waiting on semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#multiple-threads-waiting-on-a-semaphore">Multiple threads waiting on a semaphore</a></li>
   <li>
-<a href="/pt/user-manual/semaphores/#other-semaphore-functions">Other semaphore functions</a>
+<a href="/user-manual/semaphores/#other-semaphore-functions">Other semaphore functions</a>
     <ul>
-      <li><a href="/pt/user-manual/semaphores/#getting-the-semaphore-name">Getting the semaphore name</a></li>
-      <li><a href="/pt/user-manual/semaphores/#getting-the-semaphore-value">Getting the semaphore value</a></li>
-      <li><a href="/pt/user-manual/semaphores/#getting-the-semaphore-maximum-value">Getting the semaphore maximum value</a></li>
-      <li><a href="/pt/user-manual/semaphores/#getting-the-semaphore-initial-value">Getting the semaphore initial value</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-name">Getting the semaphore name</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-value">Getting the semaphore value</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-maximum-value">Getting the semaphore maximum value</a></li>
+      <li><a href="/user-manual/semaphores/#getting-the-semaphore-initial-value">Getting the semaphore initial value</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/semaphores/#destroying-semaphores">Destroying semaphores</a></li>
-  <li><a href="/pt/user-manual/semaphores/#using-semaphores-for-resource-management">Using semaphores for resource management</a></li>
-  <li><a href="/pt/user-manual/semaphores/#unilateral-rendezvous">Unilateral rendezvous</a></li>
+  <li><a href="/user-manual/semaphores/#destroying-semaphores">Destroying semaphores</a></li>
+  <li><a href="/user-manual/semaphores/#using-semaphores-for-resource-management">Using semaphores for resource management</a></li>
+  <li><a href="/user-manual/semaphores/#unilateral-rendezvous">Unilateral rendezvous</a></li>
   <li>
-<a href="/pt/user-manual/semaphores/#semaphore-pitfalls">Semaphore pitfalls</a>
+<a href="/user-manual/semaphores/#semaphore-pitfalls">Semaphore pitfalls</a>
     <ul>
-      <li><a href="/pt/user-manual/semaphores/#unbalanced-waitpost">Unbalanced wait()/post()</a></li>
-      <li><a href="/pt/user-manual/semaphores/#recursive-deadlock">Recursive deadlock</a></li>
-      <li><a href="/pt/user-manual/semaphores/#thread-termination-deadlock">Thread-termination deadlock</a></li>
-      <li><a href="/pt/user-manual/semaphores/#priority-inversion">Priority inversion</a></li>
-      <li><a href="/pt/user-manual/semaphores/#wrong-initialisation">Wrong initialisation</a></li>
+      <li><a href="/user-manual/semaphores/#unbalanced-waitpost">Unbalanced wait()/post()</a></li>
+      <li><a href="/user-manual/semaphores/#recursive-deadlock">Recursive deadlock</a></li>
+      <li><a href="/user-manual/semaphores/#thread-termination-deadlock">Thread-termination deadlock</a></li>
+      <li><a href="/user-manual/semaphores/#priority-inversion">Priority inversion</a></li>
+      <li><a href="/user-manual/semaphores/#wrong-initialisation">Wrong initialisation</a></li>
     </ul>
   </li>
 </ul>
 
 <h3 id="event-flags">
-<a href="/pt/user-manual/event-flags/">Event flags</a>
+<a href="/user-manual/event-flags/">Event flags</a>
 </h3>
 <ul>
-  <li><a href="/pt/user-manual/event-flags/#overview">Overview</a></li>
-  <li><a href="/pt/user-manual/event-flags/#creating-event-flags">Creating event flags</a></li>
+  <li><a href="/user-manual/event-flags/#overview">Overview</a></li>
+  <li><a href="/user-manual/event-flags/#creating-event-flags">Creating event flags</a></li>
   <li>
-<a href="/pt/user-manual/event-flags/#raising-event-flags">Raising event flags</a>
+<a href="/user-manual/event-flags/#raising-event-flags">Raising event flags</a>
     <ul>
-      <li><a href="/pt/user-manual/event-flags/#raising-event-flags-from-isrs">Raising event flags from ISRs</a></li>
+      <li><a href="/user-manual/event-flags/#raising-event-flags-from-isrs">Raising event flags from ISRs</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/event-flags/#waiting-for-event-flags">Waiting for event flags</a></li>
-  <li><a href="/pt/user-manual/event-flags/#multiple-threads-waiting-on-event-flags">Multiple threads waiting on event flags</a></li>
+  <li><a href="/user-manual/event-flags/#waiting-for-event-flags">Waiting for event flags</a></li>
+  <li><a href="/user-manual/event-flags/#multiple-threads-waiting-on-event-flags">Multiple threads waiting on event flags</a></li>
   <li>
-<a href="/pt/user-manual/event-flags/#other-event-flags-functions">Other event flags functions</a>
+<a href="/user-manual/event-flags/#other-event-flags-functions">Other event flags functions</a>
     <ul>
-      <li><a href="/pt/user-manual/event-flags/#getting-the-event-flags-name">Getting the event flags name</a></li>
-      <li><a href="/pt/user-manual/event-flags/#getting-individual-flags">Getting individual flags</a></li>
-      <li><a href="/pt/user-manual/event-flags/#clearing-individual-flags">Clearing individual flags</a></li>
+      <li><a href="/user-manual/event-flags/#getting-the-event-flags-name">Getting the event flags name</a></li>
+      <li><a href="/user-manual/event-flags/#getting-individual-flags">Getting individual flags</a></li>
+      <li><a href="/user-manual/event-flags/#clearing-individual-flags">Clearing individual flags</a></li>
     </ul>
   </li>
-  <li><a href="/pt/user-manual/event-flags/#destroying-event-flags">Destroying event flags</a></li>
+  <li><a href="/user-manual/event-flags/#destroying-event-flags">Destroying event flags</a></li>
 </ul>
 
 <h3 id="mutexes">
-<a href="/pt/user-manual/mutexes/">Mutexes</a>
+<a href="/user-manual/mutexes/">Mutexes</a>
 </h3>
 <ul>
   <li>
-<a href="/pt/user-manual/mutexes/#overview">Overview</a>
+<a href="/user-manual/mutexes/#overview">Overview</a>
     <ul>
       <li>Normal mutexes</li>
       <li>Recursive mutexes</li>
