@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['p',['p',['../structos_event.html#a70b8f3f364cf158c9e538c5f590d1393',1,'osEvent']]],
+  ['p',['p',['../structosEvent.html#a70b8f3f364cf158c9e538c5f590d1393',1,'osEvent']]],
   ['parity_5feven',['PARITY_EVEN',['../namespaceos_1_1driver_1_1serial.html#a71fdef8394e0092bce3515642afbc341',1,'os::driver::serial']]],
   ['parity_5fmsk',['PARITY_Msk',['../namespaceos_1_1driver_1_1serial.html#a04d799211776a5ed9a0f7673526b4332',1,'os::driver::serial']]],
   ['parity_5fnone',['PARITY_NONE',['../namespaceos_1_1driver_1_1serial.html#a18a98960d8974e55b0c6a4386a69a45d',1,'os::driver::serial']]],
@@ -8,10 +8,10 @@ var searchData=
   ['parity_5fpos',['PARITY_Pos',['../namespaceos_1_1driver_1_1serial.html#a2e734fbabeee47bdc20caa0f28188f58',1,'os::driver::serial']]],
   ['pc',['pc',['../structexception__stack__frame__s.html#a7c09154074b5650e7e261b3e970e86f3',1,'exception_stack_frame_s']]],
   ['periodic_5finitializer',['periodic_initializer',['../group__cmsis-plus-rtos-timer.html#ga4b2c2f1ee0a2bb67e4780143cdf6005d',1,'os::rtos::timer']]],
-  ['pool',['pool',['../structos__mail__queue__s.html#a9a1d839f0090344d06f62359aa05e2c0',1,'os_mail_queue_s::pool()'],['../structos__pool__def.html#acf74f1070644e33a567bc13a944fcb87',1,'os_pool_def::pool()'],['../structos__mail_q__def.html#ad101580200e8c5ff720ff6545531901c',1,'os_mailQ_def::pool()'],['../classos_1_1rtos_1_1memory__pool_1_1arena.html#ac890bbd143cbd47a2a1cda296d285d24',1,'os::rtos::memory_pool::arena::pool()']]],
-  ['pool_5fitem_5fsz',['pool_item_sz',['../structos__mail_q__def.html#acb56289aa3aa6c7604c7cd74c7ba52e5',1,'os_mailQ_def']]],
-  ['pool_5fsz',['pool_sz',['../structos__pool__def.html#a7a455b537ba119df57a704a3c4ac8b40',1,'os_pool_def::pool_sz()'],['../structos__mail_q__def.html#aa3cea447ed62fbe28be8862e64662e4b',1,'os_mailQ_def::pool_sz()']]],
-  ['port_5fmask',['port_mask',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html#a57abb95c041cc6c140303dd3313acdc9',1,'os::driver::usb::host::Capabilities']]],
+  ['pool',['pool',['../structos__mail__queue__s.html#a9a1d839f0090344d06f62359aa05e2c0',1,'os_mail_queue_s::pool()'],['../structos__pool__def.html#acf74f1070644e33a567bc13a944fcb87',1,'os_pool_def::pool()'],['../structos__mailQ__def.html#ad101580200e8c5ff720ff6545531901c',1,'os_mailQ_def::pool()'],['../classos_1_1rtos_1_1memory__pool_1_1arena.html#ac890bbd143cbd47a2a1cda296d285d24',1,'os::rtos::memory_pool::arena::pool()']]],
+  ['pool_5fitem_5fsz',['pool_item_sz',['../structos__mailQ__def.html#acb56289aa3aa6c7604c7cd74c7ba52e5',1,'os_mailQ_def']]],
+  ['pool_5fsz',['pool_sz',['../structos__pool__def.html#a7a455b537ba119df57a704a3c4ac8b40',1,'os_pool_def::pool_sz()'],['../structos__mailQ__def.html#aa3cea447ed62fbe28be8862e64662e4b',1,'os_mailQ_def::pool_sz()']]],
+  ['port_5fmask',['port_mask',['../classos_1_1driver_1_1usb_1_1host_1_1Capabilities.html#a57abb95c041cc6c140303dd3313acdc9',1,'os::driver::usb::host::Capabilities']]],
   ['prev',['prev',['../structos__internal__double__list__links__s.html#a51b1438e304be9fa64f8559c8ae65e86',1,'os_internal_double_list_links_s::prev()'],['../structos__clock__node__s.html#a919f956c2b84125f841d6b99e45876b0',1,'os_clock_node_s::prev()']]],
   ['prev_5f',['prev_',['../classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293',1,'os::utils::static_double_list_links']]],
   ['prios',['prios',['../classos_1_1rtos_1_1message__queue_1_1arena.html#a679a09fb4e24817fa97e3c7f6085804e',1,'os::rtos::message_queue::arena']]],

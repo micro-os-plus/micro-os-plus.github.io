@@ -1,8 +1,8 @@
 var searchData=
 [
   ['back_5fcontiguous_5fbuffer',['back_contiguous_buffer',['../classos_1_1posix_1_1circular__buffer.html#a2b5e8d77a866c0f827ddf49e2026a09d',1,'os::posix::circular_buffer']]],
-  ['base',['Base',['../classos_1_1driver_1_1_base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
-  ['base',['Base',['../classos_1_1driver_1_1_base.html',1,'os::driver']]],
+  ['base',['Base',['../classos_1_1driver_1_1Base.html#a5d77b717c67a9e32bab1b6db483ed7cb',1,'os::driver::Base']]],
+  ['base',['Base',['../classos_1_1driver_1_1Base.html',1,'os::driver']]],
   ['begin',['begin',['../classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#adc274230c41798c1fed27de22123e087',1,'os::rtos::internal::waiting_threads_list::begin()'],['../classos_1_1utils_1_1intrusive__list.html#a57a01873d48c7c32f67c03b8a843b592',1,'os::utils::intrusive_list::begin()']]],
   ['below_5fhigh_5fwater_5fmark',['below_high_water_mark',['../classos_1_1posix_1_1circular__buffer.html#a830fbf5367f004f906367bdcbefde675',1,'os::posix::circular_buffer']]],
   ['below_5flow_5fwater_5fmark',['below_low_water_mark',['../classos_1_1posix_1_1circular__buffer.html#a60551450b4a2fac4ed894bafa27630ea',1,'os::posix::circular_buffer']]],

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['capabilities',['Capabilities',['../classos_1_1driver_1_1usb_1_1device_1_1_capabilities.html',1,'os::driver::usb::device']]],
-  ['capabilities',['Capabilities',['../classos_1_1driver_1_1serial_1_1_capabilities.html',1,'os::driver::serial']]],
-  ['capabilities',['Capabilities',['../classos_1_1driver_1_1usb_1_1host_1_1_capabilities.html',1,'os::driver::usb::host']]],
+  ['capabilities',['Capabilities',['../classos_1_1driver_1_1usb_1_1device_1_1Capabilities.html',1,'os::driver::usb::device']]],
+  ['capabilities',['Capabilities',['../classos_1_1driver_1_1serial_1_1Capabilities.html',1,'os::driver::serial']]],
+  ['capabilities',['Capabilities',['../classos_1_1driver_1_1usb_1_1host_1_1Capabilities.html',1,'os::driver::usb::host']]],
   ['circular_5fbuffer',['circular_buffer',['../classos_1_1posix_1_1circular__buffer.html',1,'os::posix']]],
   ['clock',['clock',['../classos_1_1rtos_1_1clock.html',1,'os::rtos']]],
   ['clock_5fhighres',['clock_highres',['../classos_1_1rtos_1_1clock__highres.html',1,'os::rtos']]],

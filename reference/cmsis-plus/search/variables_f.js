@@ -8,12 +8,12 @@ var searchData=
   ['range',['range',['../structos_1_1rtos_1_1thread_1_1priority.html#ac6eda42298fb0342b8aa20ecf8096cbd',1,'os::rtos::thread::priority']]],
   ['res_5f',['res_',['../classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#a38e068caa86a8551c467bf1a8f54fad0',1,'os::estd::pmr::polymorphic_allocator']]],
   ['return_5fok',['RETURN_OK',['../namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497',1,'os::driver']]],
-  ['ri',['ri',['../classos_1_1driver_1_1serial_1_1_modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b',1,'os::driver::serial::Modem_status::ri()'],['../classos_1_1driver_1_1serial_1_1_capabilities.html#aabdcd81f18c0daeff729367e22a87306',1,'os::driver::serial::Capabilities::ri()']]],
+  ['ri',['ri',['../classos_1_1driver_1_1serial_1_1Modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b',1,'os::driver::serial::Modem_status::ri()'],['../classos_1_1driver_1_1serial_1_1Capabilities.html#aabdcd81f18c0daeff729367e22a87306',1,'os::driver::serial::Capabilities::ri()']]],
   ['rtclock',['rtclock',['../group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a',1,'os::rtos']]],
-  ['rts',['rts',['../classos_1_1driver_1_1serial_1_1_capabilities.html#a6421e78157d0f6daa7af4a1761c96a4f',1,'os::driver::serial::Capabilities']]],
-  ['rx_5fbreak',['rx_break',['../classos_1_1driver_1_1serial_1_1_status.html#af9a39a9f0afa08587df69fa2f0d6ecc2',1,'os::driver::serial::Status']]],
-  ['rx_5fbusy',['rx_busy',['../classos_1_1driver_1_1serial_1_1_status.html#a62248d07854afc94575f6aa577724174',1,'os::driver::serial::Status']]],
-  ['rx_5fframing_5ferror',['rx_framing_error',['../classos_1_1driver_1_1serial_1_1_status.html#a6bd02482695b63b97edb70710524eec0',1,'os::driver::serial::Status']]],
-  ['rx_5foverflow',['rx_overflow',['../classos_1_1driver_1_1serial_1_1_status.html#a31be58a1890037a36187a9700cfdbea9',1,'os::driver::serial::Status']]],
-  ['rx_5fparity_5ferror',['rx_parity_error',['../classos_1_1driver_1_1serial_1_1_status.html#aeb97bc3a167f2ae0fe089620f79f0373',1,'os::driver::serial::Status']]]
+  ['rts',['rts',['../classos_1_1driver_1_1serial_1_1Capabilities.html#a6421e78157d0f6daa7af4a1761c96a4f',1,'os::driver::serial::Capabilities']]],
+  ['rx_5fbreak',['rx_break',['../classos_1_1driver_1_1serial_1_1Status.html#af9a39a9f0afa08587df69fa2f0d6ecc2',1,'os::driver::serial::Status']]],
+  ['rx_5fbusy',['rx_busy',['../classos_1_1driver_1_1serial_1_1Status.html#a62248d07854afc94575f6aa577724174',1,'os::driver::serial::Status']]],
+  ['rx_5fframing_5ferror',['rx_framing_error',['../classos_1_1driver_1_1serial_1_1Status.html#a6bd02482695b63b97edb70710524eec0',1,'os::driver::serial::Status']]],
+  ['rx_5foverflow',['rx_overflow',['../classos_1_1driver_1_1serial_1_1Status.html#a31be58a1890037a36187a9700cfdbea9',1,'os::driver::serial::Status']]],
+  ['rx_5fparity_5ferror',['rx_parity_error',['../classos_1_1driver_1_1serial_1_1Status.html#aeb97bc3a167f2ae0fe089620f79f0373',1,'os::driver::serial::Status']]]
 ];

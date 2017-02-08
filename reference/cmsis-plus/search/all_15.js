@@ -4,7 +4,7 @@ var searchData=
   ['utilities',['Utilities',['../group__cmsis-plus-utils.html',1,'']]],
   ['uio_2eh',['uio.h',['../uio_8h.html',1,'']]],
   ['umount',['umount',['../classos_1_1posix_1_1mount__manager.html#abed74f1118da754842b682404fd514ba',1,'os::posix::mount_manager']]],
-  ['unconfigure_5fendpoint',['unconfigure_endpoint',['../classos_1_1driver_1_1usb_1_1_device.html#a2f9b89ca802f5e33338560715acc7287',1,'os::driver::usb::Device']]],
+  ['unconfigure_5fendpoint',['unconfigure_endpoint',['../classos_1_1driver_1_1usb_1_1Device.html#a2f9b89ca802f5e33338560715acc7287',1,'os::driver::usb::Device']]],
   ['uncritical_5fsection',['uncritical_section',['../classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html',1,'os::rtos::port::interrupts']]],
   ['uncritical_5fsection',['uncritical_section',['../classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#ace3a8f1d03a4536be438702769e27672',1,'os::rtos::port::interrupts::uncritical_section::uncritical_section()'],['../classos_1_1rtos_1_1scheduler_1_1uncritical__section.html#a734f70ec83e1265b90608b9694931ca9',1,'os::rtos::scheduler::uncritical_section::uncritical_section()'],['../classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#ac0db825c34bafc3a5216d75cff6b185f',1,'os::rtos::interrupts::uncritical_section::uncritical_section()']]],
   ['uncritical_5fsection',['uncritical_section',['../classos_1_1rtos_1_1interrupts_1_1uncritical__section.html',1,'os::rtos::interrupts']]],

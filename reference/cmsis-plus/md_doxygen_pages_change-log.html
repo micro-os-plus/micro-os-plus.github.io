@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.8</span>
+     &#160;<span id="projectnumber">v6.3.11</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>RTOS</h2>
+<p>Records in chronologycal order.</p>
 <h3>v0.1.1 2016-03-11</h3>
 <ul>
 <li>initial version of the APIs announced on <a href="https://community.arm.com/groups/tools/blog/2016/03/11/cmsis-a-proposal-for-a-future-cmsis-written-in-c">ARM Connected Community</a></li>
@@ -271,7 +272,32 @@ $(document).ready(function(){initNavTree('md_doxygen_pages_change-log.html','');
 <li>rename folder <code>cmsis-plus/drivers</code> -&gt; <code>cmsis-plus/driver</code> (singular)</li>
 <li>update posix-io &amp; posix-driver to all lower case naming convention</li>
 <li>add separate utils, with generic utility code, like lists</li>
-<li>automate char device registry by using lists; no more need to manually add/remove devices <hr/>
+<li>automate char device registry by using lists; no more need to manually add/remove devices</li>
+</ul>
+<h3>v6.3.9 2016-10-13</h3>
+<ul>
+<li>assert stack size &gt; min_size_bytes_</li>
+<li><a class="el" href="trace_8cpp.html">diag/trace.cpp</a>: <code><a class="el" href="group__cmsis-plus-diag.html#ga7a7b4734b5d3db0422fffe79a44ca7dc" title="Write the string and a line terminator to the trace device. ">puts()</a></code> accepts empty string</li>
+<li><a class="el" href="os-main_8cpp.html">rtos/os-main.cpp</a>: display interrupts stack size</li>
+<li>rtos/os-clock: add <code>update_for_slept_time()</code></li>
+<li>rename <code>tests</code> -&gt; <code>test</code></li>
+<li>reorganise test with subfolders</li>
+<li>rework xpack.json (rename to <b>µOS++ IIIe</b>)</li>
+</ul>
+<h3>v6.3.10 2016-11-27</h3>
+<ul>
+<li>os-clocks: check timestamps to trigger timer actions after deep sleep</li>
+<li>first-fit-top: fix free list chunk init</li>
+<li><a class="el" href="initialize-hardware_8c.html">startup/initialize-hardware.c</a>: use <code>__ARM_FP</code> instead of <code>__VFP_FP__</code></li>
+<li>micro-os-plus-iii-cortexm.git/os-core: fix PendSV stack frame for FP</li>
+<li>micro-os-plus-iii-cortexm.git/os-core: fix setMSP() optimisation bug</li>
+</ul>
+<h3>v6.3.11 2017-01-02</h3>
+<ul>
+<li><a class="el" href="os-mqueue_8cpp.html">os-mqueue.cpp</a>: remove wrong assert from *_receive()</li>
+<li>cortexm/os-core.cpp: setMSP() with uint32_t* volatile vectors_addr</li>
+<li>cortexm/os-core.cpp: align thread stack to 8 byte boundary</li>
+<li>cortexm/os-core.cpp: assert both thread stack and MSP aligned <hr/>
  </li>
 </ul>
 </div></div><!-- contents -->

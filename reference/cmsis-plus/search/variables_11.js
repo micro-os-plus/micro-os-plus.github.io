@@ -11,6 +11,6 @@ var searchData=
   ['tmr',['tmr',['../classos_1_1rtos_1_1internal_1_1timer__node.html#a1ee3579c2d96777da696a894babfbf0e',1,'os::rtos::internal::timer_node']]],
   ['tpriority',['tpriority',['../structos__thread__def.html#a5e4e35a5f44d174a558a289688022e64',1,'os_thread_def']]],
   ['try_5fto_5flock',['try_to_lock',['../namespaceos_1_1estd.html#ab0fd06745caaaa2ad1adcb64821326ab',1,'os::estd']]],
-  ['tx_5fbusy',['tx_busy',['../classos_1_1driver_1_1serial_1_1_status.html#a38ea186dede403801e3ff21b26746c34',1,'os::driver::serial::Status']]],
-  ['tx_5funderflow',['tx_underflow',['../classos_1_1driver_1_1serial_1_1_status.html#a3e3f4274120334f284f3a556a078ea35',1,'os::driver::serial::Status']]]
+  ['tx_5fbusy',['tx_busy',['../classos_1_1driver_1_1serial_1_1Status.html#a38ea186dede403801e3ff21b26746c34',1,'os::driver::serial::Status']]],
+  ['tx_5funderflow',['tx_underflow',['../classos_1_1driver_1_1serial_1_1Status.html#a3e3f4274120334f284f3a556a078ea35',1,'os::driver::serial::Status']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['abort',['abort',['../exit_8c.html#a8dec7c95227ff149687066cf04029191',1,'exit.c']]],
-  ['abort_5ftransfer',['abort_transfer',['../classos_1_1driver_1_1usb_1_1_device.html#ad7e91441686c0f1a1049d59de6bdcbb3',1,'os::driver::usb::Device::abort_transfer()'],['../classos_1_1driver_1_1usb_1_1_host.html#affd928c099c3f1c99389fd7388437ac4',1,'os::driver::usb::Host::abort_transfer()']]],
+  ['abort_5ftransfer',['abort_transfer',['../classos_1_1driver_1_1usb_1_1Device.html#ad7e91441686c0f1a1049d59de6bdcbb3',1,'os::driver::usb::Device::abort_transfer()'],['../classos_1_1driver_1_1usb_1_1Host.html#affd928c099c3f1c99389fd7388437ac4',1,'os::driver::usb::Host::abort_transfer()']]],
   ['above_5fhigh_5fwater_5fmark',['above_high_water_mark',['../classos_1_1posix_1_1circular__buffer.html#aba59373fb75d1abfa900f4654a0cf494',1,'os::posix::circular_buffer']]],
   ['above_5flow_5fwater_5fmark',['above_low_water_mark',['../classos_1_1posix_1_1circular__buffer.html#a282e5a9c4e59dc8636427eaf3251bba3',1,'os::posix::circular_buffer']]],
   ['accept',['accept',['../classos_1_1posix_1_1socket.html#ad988e6784b93935c8e4f64cf95bdb1bb',1,'os::posix::socket::accept()'],['../sys_2socket_8h.html#a29c331fb36d757d993032ef83371c4e9',1,'accept(int socket, struct sockaddr *address, socklen_t *address_len):&#160;socket.h'],['../group__cmsis-plus-posix-io-c.html#ga29c331fb36d757d993032ef83371c4e9',1,'accept(int socket, struct sockaddr *address, socklen_t *address_len):&#160;c-syscalls-aliases-standard.h']]],

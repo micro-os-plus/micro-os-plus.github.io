@@ -15,11 +15,11 @@ var searchData=
   ['os_5finternal_5fthread_5fchildren_5flist_5fs',['os_internal_thread_children_list_s',['../structos__internal__thread__children__list__s.html',1,'']]],
   ['os_5finternal_5fwaiting_5fthread_5fnode_5fs',['os_internal_waiting_thread_node_s',['../structos__internal__waiting__thread__node__s.html',1,'']]],
   ['os_5fmail_5fqueue_5fs',['os_mail_queue_s',['../structos__mail__queue__s.html',1,'']]],
-  ['os_5fmailq_5fdef',['os_mailQ_def',['../structos__mail_q__def.html',1,'']]],
+  ['os_5fmailq_5fdef',['os_mailQ_def',['../structos__mailQ__def.html',1,'']]],
   ['os_5fmemory_5fs',['os_memory_s',['../structos__memory__s.html',1,'']]],
   ['os_5fmempool_5fattr_5fs',['os_mempool_attr_s',['../structos__mempool__attr__s.html',1,'']]],
   ['os_5fmempool_5fs',['os_mempool_s',['../structos__mempool__s.html',1,'']]],
-  ['os_5fmessageq_5fdef',['os_messageQ_def',['../structos__message_q__def.html',1,'']]],
+  ['os_5fmessageq_5fdef',['os_messageQ_def',['../structos__messageQ__def.html',1,'']]],
   ['os_5fmqueue_5fattr_5fs',['os_mqueue_attr_s',['../structos__mqueue__attr__s.html',1,'']]],
   ['os_5fmqueue_5fs',['os_mqueue_s',['../structos__mqueue__s.html',1,'']]],
   ['os_5fmutex_5fattr_5fs',['os_mutex_attr_s',['../structos__mutex__attr__s.html',1,'']]],
@@ -38,5 +38,5 @@ var searchData=
   ['os_5ftimer_5fattr_5fs',['os_timer_attr_s',['../structos__timer__attr__s.html',1,'']]],
   ['os_5ftimer_5fdef',['os_timer_def',['../structos__timer__def.html',1,'']]],
   ['os_5ftimer_5fs',['os_timer_s',['../structos__timer__s.html',1,'']]],
-  ['osevent',['osEvent',['../structos_event.html',1,'']]]
+  ['osevent',['osEvent',['../structosEvent.html',1,'']]]
 ];

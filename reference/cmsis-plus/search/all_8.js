@@ -16,8 +16,8 @@ var searchData=
   ['high_5fresolution_5fclock',['high_resolution_clock',['../classos_1_1estd_1_1chrono_1_1high__resolution__clock.html',1,'os::estd::chrono']]],
   ['high_5fspeed',['high_speed',['../namespaceos_1_1driver_1_1usb_1_1device.html#ac271252f96010635939d3fcb301ba435a2f3b780e4ca7e82f6c075dbc17e05c7c',1,'os::driver::usb::device']]],
   ['highest',['highest',['../group__cmsis-plus-rtos-thread.html#gga7812945316a2540d68c3933e0f497b66a899451bc782f7dc4679653d14625bcaf',1,'os::rtos::thread::priority']]],
-  ['host',['Host',['../classos_1_1driver_1_1usb_1_1_host.html#a247401845dc8fd26967f01947bf49557',1,'os::driver::usb::Host::Host() noexcept'],['../classos_1_1driver_1_1usb_1_1_host.html#a0673c1ec19ce71229ebd2993fa4d8141',1,'os::driver::usb::Host::Host(const Host &amp;)=delete'],['../classos_1_1driver_1_1usb_1_1_host.html#a595ecceabb0b1ce8a4465354579c63ff',1,'os::driver::usb::Host::Host(Host &amp;&amp;)=delete']]],
-  ['host',['Host',['../classos_1_1driver_1_1usb_1_1_host.html',1,'os::driver::usb']]],
+  ['host',['Host',['../classos_1_1driver_1_1usb_1_1Host.html#a247401845dc8fd26967f01947bf49557',1,'os::driver::usb::Host::Host() noexcept'],['../classos_1_1driver_1_1usb_1_1Host.html#a0673c1ec19ce71229ebd2993fa4d8141',1,'os::driver::usb::Host::Host(const Host &amp;)=delete'],['../classos_1_1driver_1_1usb_1_1Host.html#a595ecceabb0b1ce8a4465354579c63ff',1,'os::driver::usb::Host::Host(Host &amp;&amp;)=delete']]],
+  ['host',['Host',['../classos_1_1driver_1_1usb_1_1Host.html',1,'os::driver::usb']]],
   ['hrclock',['hrclock',['../group__cmsis-plus-rtos-clock.html#ga18ff478876ee99a5b7ce1b3f5b57d710',1,'os::rtos']]],
   ['hub_5faddr_5ft',['hub_addr_t',['../namespaceos_1_1driver_1_1usb.html#a3e4148235524a381072840100a1a7d94',1,'os::driver::usb']]],
   ['hub_5fport_5ft',['hub_port_t',['../namespaceos_1_1driver_1_1usb.html#ab26f1e6bb0eada0e15736ef1481d6601',1,'os::driver::usb']]]

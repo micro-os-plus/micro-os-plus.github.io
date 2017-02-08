@@ -8,7 +8,7 @@ var searchData=
   ['waiting_5fthread_5fnode',['waiting_thread_node',['../classos_1_1rtos_1_1internal_1_1waiting__thread__node.html#afc4cc7de7c07ccd97e3d2c03df38cf57',1,'os::rtos::internal::waiting_thread_node']]],
   ['waiting_5fthreads_5flist',['waiting_threads_list',['../classos_1_1rtos_1_1internal_1_1waiting__threads__list.html',1,'os::rtos::internal']]],
   ['waiting_5fthreads_5flist',['waiting_threads_list',['../classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#a82ddadd64624b04a3cf387990d815647',1,'os::rtos::internal::waiting_threads_list']]],
-  ['wakeup_5fremote',['wakeup_remote',['../classos_1_1driver_1_1usb_1_1_device.html#a62f47f0f6deed7375542dd4978e84d7c',1,'os::driver::usb::Device']]],
+  ['wakeup_5fremote',['wakeup_remote',['../classos_1_1driver_1_1usb_1_1Device.html#a62f47f0f6deed7375542dd4978e84d7c',1,'os::driver::usb::Device']]],
   ['write',['write',['../classos_1_1posix_1_1io.html#a9b2c3aa978c670d60b0643f1a41026e0',1,'os::posix::io::write()'],['../namespaceos_1_1trace.html#a5e626eea11f3605e19b207a68b13b822',1,'os::trace::write()'],['../group__cmsis-plus-posix-io-c.html#ga9e58c2a6f572a2d2cdad1306d7d2b802',1,'write():&#160;c-syscalls-aliases-standard.h']]],
   ['writev',['writev',['../classos_1_1posix_1_1io.html#af053373c6716c37bf7589bb3d6388fdd',1,'os::posix::io::writev()'],['../uio_8h.html#ab4cc4aa7bb93508f9c748c87dcdf963f',1,'writev(int fildes, const struct iovec *iov, int iovcnt):&#160;uio.h'],['../group__cmsis-plus-posix-io-c.html#gab4cc4aa7bb93508f9c748c87dcdf963f',1,'writev(int fildes, const struct iovec *iov, int iovcnt):&#160;c-syscalls-aliases-standard.h']]]
 ];

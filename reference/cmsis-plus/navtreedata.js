@@ -2,7 +2,7 @@ var NAVTREE =
 [
   [ "µOS++ IIIe / CMSIS++ / POSIX++ Reference", "index.html", [
     [ "Overview", "index.html", null ],
-    [ "Change log", "md__Users_ilg_.xpacks_ilg_micro-os-plus-iii.git_doxygen_pages_change-log.html", null ],
+    [ "Change log", "md_doxygen_pages_change-log.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
@@ -49,9 +49,9 @@ var NAVTREEINDEX =
 [
 "__sbrk_8c.html",
 "classos_1_1driver_1_1usart__wrapper.html#a22527c2bffe1f5b8d758f33b4db3bcb7",
-"classos_1_1driver_1_1usbh__wrapper.html#ad8e7726f38718e9dfd1f4c63878c6094",
-"classos_1_1memory_1_1block__pool__typed__allocated.html#a36805a0eae21688c136129059482c3dd",
-"classos_1_1memory_1_1lifo__inclusive.html#a43986889676bf5f4274e60538ccd76ee",
+"classos_1_1driver_1_1usbh__wrapper.html#aee6c72df0e9ef250cc322b51083622f0",
+"classos_1_1memory_1_1block__pool__typed__allocated.html#a2949e2fa9faf3dcbcc1822bce975e6dc",
+"classos_1_1memory_1_1lifo__inclusive.html#a2f4e57e4e77ead637b0720a9c6fee762",
 "classos_1_1posix_1_1file.html#a2784e8adb38757dc5ab882c7cf75b35d",
 "classos_1_1rtos_1_1clock__highres.html#ga4f6ee5cdd07c87db11f64d02e1c354d1",
 "classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a5cbffd2d61b3d464e6940b0daecb793c",
@@ -59,16 +59,16 @@ var NAVTREEINDEX =
 "classos_1_1rtos_1_1semaphore_1_1attributes.html",
 "classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a5d7e0d82010925866a1780e04a8134c4",
 "common_8h.html#a63a6cd9d06a1ebffdd165c17b64c2193",
-"globals_func_c.html",
-"group__cmsis-plus-posix-io-c.html#ga045606a1f57a37a66ce10ca54e109688",
-"group__cmsis-plus-rtos-c-core.html#ga578db6a5e55dc3f59df092a6a6eb54d4",
-"group__cmsis-plus-rtos-c-mqueue.html#gacb4df8da201aa2eb3314579a364ecffe",
-"group__cmsis-plus-rtos-c-thread.html#ga4e5b3ddf75427b389e06acf3bf21d5cf",
-"group__cmsis-plus-rtos-memres.html#ga4769d08c721d5e897a8792837d5eccf7",
-"namespaceos_1_1driver_1_1usb.html",
-"os-mutex_8h.html",
-"serial_8h.html#af22280c215b4e276cd2a53fce4a99e99",
-"system__error.html#a951c9b2c6401f3a3bb40d4b2c3213f46"
+"globals_func_g.html",
+"group__cmsis-plus-posix-io-c.html#ga08ba0dd26a850108a1746412faba2b21",
+"group__cmsis-plus-rtos-c-core.html#ga5dbd8d4a7c91345717f8f9e072faf153",
+"group__cmsis-plus-rtos-c-mqueue.html#gacf186011670e62d81b5ef52054fd0a65",
+"group__cmsis-plus-rtos-c-thread.html#ga51ca25f0f1104fcc4f7da7feda61fbab",
+"group__cmsis-plus-rtos-memres.html#ga57cf8f5462e5fbaf1cf80b7cedcc4339",
+"namespaceos_1_1driver_1_1usb_1_1host.html",
+"os-sched_8h.html#a447a6a5aa512129d0ab5a28b0fce6890",
+"serial_8h.html#af591b88b5cef3dfda1109689ece8f287af3b15ec3cecb44ccf8fe85b56044d7b8",
+"thread.html#a0d6ecee23a6a697b44ebc4b75eabf292"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
