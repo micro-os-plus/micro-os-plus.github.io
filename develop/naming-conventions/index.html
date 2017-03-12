@@ -241,7 +241,7 @@
 <h1 class="page-title">C/C++ naming conventions</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
+    <td id="last-modified">Last modified on Sun Mar 12 20:55:33 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/naming-conventions.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -290,82 +290,85 @@
 <a href="#templates"><span class="tocnumber">5</span> <span class="toctext">Templates</span></a>
 <ul>
 <li class="toc_level-2 toc_section-11">
-<a href="#template-class-names"><span class="tocnumber">5.1</span> <span class="toctext">Template class names</span></a>
+<a href="#class-template-vs-template-class"><span class="tocnumber">5.1</span> <span class="toctext">Class template vs template class?</span></a>
 </li>
 <li class="toc_level-2 toc_section-12">
-<a href="#template-parameter-types"><span class="tocnumber">5.2</span> <span class="toctext">Template parameter types</span></a>
+<a href="#class-template-names"><span class="tocnumber">5.2</span> <span class="toctext">Class template names</span></a>
+</li>
+<li class="toc_level-2 toc_section-13">
+<a href="#template-parameter-types"><span class="tocnumber">5.3</span> <span class="toctext">Template parameter types</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-13">
+<li class="toc_level-1 toc_section-14">
 <a href="#member-function-names"><span class="tocnumber">6</span> <span class="toctext">Member function names</span></a>
 <ul>
-<li class="toc_level-2 toc_section-14">
+<li class="toc_level-2 toc_section-15">
 <a href="#accessorsmutators"><span class="tocnumber">6.1</span> <span class="toctext">Accessors/mutators</span></a>
 </li>
-<li class="toc_level-2 toc_section-15">
+<li class="toc_level-2 toc_section-16">
 <a href="#getset-vs-readwrite"><span class="tocnumber">6.2</span> <span class="toctext">get/set vs. read/write</span></a>
 </li>
-<li class="toc_level-2 toc_section-16">
+<li class="toc_level-2 toc_section-17">
 <a href="#boolean-functions"><span class="tocnumber">6.3</span> <span class="toctext">Boolean functions</span></a>
 </li>
-<li class="toc_level-2 toc_section-17">
+<li class="toc_level-2 toc_section-18">
 <a href="#initialise-vs-configure"><span class="tocnumber">6.4</span> <span class="toctext">initialise() vs. configure()</span></a>
 </li>
-<li class="toc_level-2 toc_section-18">
+<li class="toc_level-2 toc_section-19">
 <a href="#set-vs-configure"><span class="tocnumber">6.5</span> <span class="toctext">set() vs. configure()</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-19">
+<li class="toc_level-1 toc_section-20">
 <a href="#member-variables-names"><span class="tocnumber">7</span> <span class="toctext">Member variables names</span></a>
 <ul>
-<li class="toc_level-2 toc_section-20">
+<li class="toc_level-2 toc_section-21">
 <a href="#private-member-variables-names"><span class="tocnumber">7.1</span> <span class="toctext">Private member variables names</span></a>
 </li>
-<li class="toc_level-2 toc_section-21">
+<li class="toc_level-2 toc_section-22">
 <a href="#static-member-variables-names"><span class="tocnumber">7.2</span> <span class="toctext">Static member variables names</span></a>
 </li>
-<li class="toc_level-2 toc_section-22">
+<li class="toc_level-2 toc_section-23">
 <a href="#public-member-names"><span class="tocnumber">7.3</span> <span class="toctext">Public member names</span></a>
 </li>
-<li class="toc_level-2 toc_section-23">
+<li class="toc_level-2 toc_section-24">
 <a href="#array-members"><span class="tocnumber">7.4</span> <span class="toctext">Array members</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-24">
+<li class="toc_level-1 toc_section-25">
 <a href="#const--volatile"><span class="tocnumber">8</span> <span class="toctext">const &amp; volatile</span></a>
 </li>
-<li class="toc_level-1 toc_section-25">
+<li class="toc_level-1 toc_section-26">
 <a href="#constants"><span class="tocnumber">9</span> <span class="toctext">Constants</span></a>
 <ul>
-<li class="toc_level-2 toc_section-26">
+<li class="toc_level-2 toc_section-27">
 <a href="#static-constexpr-vs-constexpr-static"><span class="tocnumber">9.1</span> <span class="toctext">static constexpr vs. constexpr static</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-27">
+<li class="toc_level-1 toc_section-28">
 <a href="#type-definitions"><span class="tocnumber">10</span> <span class="toctext">Type definitions</span></a>
 <ul>
-<li class="toc_level-2 toc_section-28">
+<li class="toc_level-2 toc_section-29">
 <a href="#language-type-definition"><span class="tocnumber">10.1</span> <span class="toctext">Language type definition</span></a>
 </li>
-<li class="toc_level-2 toc_section-29">
+<li class="toc_level-2 toc_section-30">
 <a href="#user-type-definitions"><span class="tocnumber">10.2</span> <span class="toctext">User type definitions</span></a>
 </li>
-<li class="toc_level-2 toc_section-30">
+<li class="toc_level-2 toc_section-31">
 <a href="#enumeration-definitions"><span class="tocnumber">10.3</span> <span class="toctext">Enumeration definitions</span></a>
 </li>
-<li class="toc_level-2 toc_section-31">
+<li class="toc_level-2 toc_section-32">
 <a href="#structure-definitions"><span class="tocnumber">10.4</span> <span class="toctext">Structure definitions</span></a>
 </li>
-<li class="toc_level-2 toc_section-32">
+<li class="toc_level-2 toc_section-33">
 <a href="#aliases-to-classes"><span class="tocnumber">10.5</span> <span class="toctext">Aliases to classes</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-33">
+<li class="toc_level-1 toc_section-34">
 <a href="#measuring-units"><span class="tocnumber">11</span> <span class="toctext">Measuring units</span></a>
 </li>
 </ul>
@@ -476,32 +479,38 @@ class circular_buffer;
 
 <p>Templates are a great C++ feature, that can be used for many purposes, with the common one being to implement compile time polymorphism.</p>
 
-<h3 id="template-class-names">Template class names</h3>
+<h3 id="class-template-vs-template-class">Class template vs template class?</h3>
 
-<p>Template class names follow the same convention as the class names. No need to prefix them with anything.</p>
+<p>As far as C++ is concerned, there is no such thing as a “template class,” there is only a “class template.”</p>
+
+<h3 id="class-template-names">Class template names</h3>
+
+<p>Class template names follow the same convention as the class names. No need to prefix them with anything.</p>
 
 <h3 id="template-parameter-types">Template parameter types</h3>
 
 <p>There are several template parameter types, parameters naming user-defined types (like classes), parameters naming primitive types and constant parameters (usually integer).</p>
 
-<p>Although not required by the language, it is recommended to define parameters naming types with <code class="highlighter-rouge">typename Name_T</code>.</p>
+<p>Although not required by the language, it is recommended to define parameters naming types with <code class="highlighter-rouge">typename T</code>.</p>
 
 <p>In class templates, it is recommended to alias the template parameters to new names, and use these new names in code, reserving the template parameters only to define the template syntax.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>template &lt;typename GPIO_T, typename Result_T = void, int Bit_T&gt;
+<pre class="highlight"><code>template &lt;typename T, typename U = void, int N&gt;
 class pin
 {
 public:
-  using gpio = GPIO_T;
-  using result_t = Result_T ;
-  static const int bit = Bit_T;
+  using gpio = T;
+  using result_t = U ;
+  static constexpr int bit = N;
  ...
 }
 
 // Explicit instantiation
 template class pin&lt;GPIOC1&gt;;
-using my_pin = class pin&lt;GPIOC1&gt; ;
+
+// Define a type alias. 
+using my_pin = class pin&lt;GPIOC1&gt;;
 </code></pre>
 </div>
 
