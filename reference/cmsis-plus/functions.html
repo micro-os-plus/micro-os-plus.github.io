@@ -182,6 +182,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>accept()
 : <a class="el" href="classos_1_1posix_1_1socket.html#ad988e6784b93935c8e4f64cf95bdb1bb">os::posix::socket</a>
 </li>
+<li>acquire()
+: <a class="el" href="classos_1_1posix_1_1pool.html#a8cd8c9dd3f8561521d6adbf40b095bfa">os::posix::pool</a>
+, <a class="el" href="classos_1_1posix_1_1pool__typed.html#a948c061a3af4469866389432ee7ee1b9">os::posix::pool_typed&lt; T &gt;</a>
+</li>
 <li>action()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1timeout__thread__node.html#ad999760cd77603a2a6ed7ec75b98ecea">os::rtos::internal::timeout_thread_node</a>
 , <a class="el" href="classos_1_1rtos_1_1internal_1_1timer__node.html#a6a071cff911a40654ca96eeae9753fb6">os::rtos::internal::timer_node</a>
@@ -230,7 +234,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a10fa4de78ee31f6dc506bed52570cffc">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
 </li>
 <li>allocator_stateless_default_resource()
-: <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#ab81cd127b6809c7bcfaca9804af8a438">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a35a75593e68760b10c50ba750bf514e5">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
 </li>
 <li>allocator_stateless_polymorphic_synchronized()
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a2f5e629c1a52c4c311f52e32aff00cf8">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
@@ -258,10 +262,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>api_
 : <a class="el" href="classos_1_1driver_1_1Version.html#ab69bb56c6d40fd05b0b6318f2f45f215">os::driver::Version</a>
 </li>
-<li>aquire()
-: <a class="el" href="classos_1_1posix_1_1pool.html#a627ea0859fd88179d73f4da6fb0f4b3e">os::posix::pool</a>
-, <a class="el" href="classos_1_1posix_1_1pool__typed.html#a54756be720eb8a7d1767d34f53cf5ad9">os::posix::pool_typed&lt; T &gt;</a>
-</li>
 <li>arena_
 : <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a0b3d51171623ce3cc363e22f7bf3ede4">os::rtos::memory_pool_inclusive&lt; T, N &gt;</a>
 </li>
@@ -274,10 +274,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>attributes()
 : <a class="el" href="classos_1_1rtos_1_1condition__variable_1_1attributes.html#a8e6f0ceafad3f07130d35b1ee223deb8">os::rtos::condition_variable::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1event__flags_1_1attributes.html#a864264b9d25bc57502405f1a8f4aad2c">os::rtos::event_flags::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html#ac4bde4a3c9d0f66fbe8a35d43262cb3d">os::rtos::memory_pool::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html#a754c855f5e7d34ffe4daef610aee5967">os::rtos::memory_pool::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue_1_1attributes.html#a5c7791910bcbf4d27be9f241e5513470">os::rtos::message_queue::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#acfcd7443670538ebcf8d7361ee2994de">os::rtos::mutex::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#afe3a997655c7dd00e0a54d6cf4545813">os::rtos::semaphore::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a2d5f1e79bf68df57d284ebb1feb52196">os::rtos::semaphore::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#abee316a47ca62e78bdac80ecea6a7b38">os::rtos::thread::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html#a25901891ddd23ca9878b716718c67d83">os::rtos::timer::attributes</a>
 </li>
@@ -291,10 +291,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a7d069a6c13cfb6c41f9d18150dc9fdfa">os::rtos::semaphore::attributes_counting</a>
 </li>
 <li>attributes_periodic()
-: <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a67ab5d0413195c59d1aa786ef8b9c824">os::rtos::timer::attributes_periodic</a>
+: <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes__periodic.html#a40597d650c10750877d414539f50b64a">os::rtos::timer::attributes_periodic</a>
 </li>
 <li>attributes_recursive()
-: <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes__recursive.html#a236e1694187d0ea57c877de5f99aba3f">os::rtos::mutex::attributes_recursive</a>
+: <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes__recursive.html#aafa7b611fcd2ddebc7c5565125c2f46e">os::rtos::mutex::attributes_recursive</a>
 </li>
 <li>auto_split
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1Capabilities.html#a8b33a8711d66ddd6a324fca5db9d0c72">os::driver::usb::host::Capabilities</a>
