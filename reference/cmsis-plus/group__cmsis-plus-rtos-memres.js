@@ -27,6 +27,9 @@ var group__cmsis_plus_rtos_memres =
       [ "operator=", "classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a8f07e5d8a3cbe35378ded2305da19cac", null ]
     ] ],
     [ "allocator_stateless_polymorphic_synchronized", "classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html", [
+      [ "rebind", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html", [
+        [ "other", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html#ae530b0bbf5b8b1a41d4959caaa97fe22", null ]
+      ] ],
       [ "locker_type", "classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a9661e542e08651280f7e7e4ce523515a", null ],
       [ "value_type", "classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a92bb72aea38addc67af6d8642ecea0ea", null ],
       [ "allocator_stateless_polymorphic_synchronized", "classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a2f5e629c1a52c4c311f52e32aff00cf8", null ],

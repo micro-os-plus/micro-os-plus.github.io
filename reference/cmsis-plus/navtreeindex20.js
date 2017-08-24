@@ -1,5 +1,9 @@
 var NAVTREEINDEX20 =
 {
+"serial_8h.html#af591b88b5cef3dfda1109689ece8f287":[6,0,1,0,3,1,12],
+"serial_8h.html#af591b88b5cef3dfda1109689ece8f287a848524acf5dec7dcc042cd0948daefe7":[6,0,1,0,3,1,12,0],
+"serial_8h.html#af591b88b5cef3dfda1109689ece8f287abe40086364f2c947267ef3bd4a0ba2b1":[6,0,1,0,3,1,12,2],
+"serial_8h.html#af591b88b5cef3dfda1109689ece8f287ad02280c27589d6022f02b94a6cda2d76":[6,0,1,0,3,1,12,3],
 "serial_8h.html#af591b88b5cef3dfda1109689ece8f287af3b15ec3cecb44ccf8fe85b56044d7b8":[6,0,1,0,3,1,12,1],
 "serial_8h.html#af836d36805afdb2a347b1afd1d839896":[6,0,1,0,3,1,33],
 "serial_8h.html#afa7c6b83b570e21d592abe22af266485":[6,0,1,0,3,1,37],
@@ -71,6 +75,8 @@ var NAVTREEINDEX20 =
 "structos_1_1estd_1_1once__flag.html#abc9f98680dfe5408550cda3480cdf4f5":[5,0,0,1,9,3],
 "structos_1_1estd_1_1once__flag.html#acfcf3c3af941cbfde7457f49a1d6535e":[5,0,0,1,9,1],
 "structos_1_1estd_1_1try__to__lock__t.html":[5,0,0,1,14],
+"structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html":[3,2,10,3,0],
+"structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html#ae530b0bbf5b8b1a41d4959caaa97fe22":[3,2,10,3,0,0],
 "structos_1_1rtos_1_1mutex_1_1protocol.html":[3,2,7,4],
 "structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a4a64c26ead3ae9ce0d7592b5c51337a1":[3,2,7,4,4],
 "structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a602ae9bef8705106bb613e78c0fe84ca":[3,2,7,4,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX20 =
 "system-error_8cpp.html#a951c9b2c6401f3a3bb40d4b2c3213f46":[6,0,2,3,6,1],
 "system-error_8cpp.html#ac596ba385da43ceb3605f700ea538ce5":[6,0,2,3,6,0],
 "system-error_8cpp_source.html":[6,0,2,3,6],
-"system__error.html":[6,0,1,0,4,4],
-"system__error.html#a3032c74c0f6b94be14392ca531c0ad3d":[6,0,1,0,4,4,0],
-"system__error.html#a951c9b2c6401f3a3bb40d4b2c3213f46":[6,0,1,0,4,4,2],
-"system__error.html#ac596ba385da43ceb3605f700ea538ce5":[6,0,1,0,4,4,1],
-"system__error_source.html":[6,0,1,0,4,4],
-"thread.html":[6,0,1,0,4,5],
-"thread.html#a073e4c567d383045100b7859923aa6b1":[6,0,1,0,4,5,7]
+"system__error.html":[6,0,1,0,4,4]
 };

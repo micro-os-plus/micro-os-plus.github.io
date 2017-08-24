@@ -1,6 +1,7 @@
 var os_memory_8h =
 [
     [ "lock_guard", "classos_1_1estd_1_1lock__guard.html", "classos_1_1estd_1_1lock__guard" ],
+    [ "rebind", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind" ],
     [ "allocator_typed", "os-memory_8h.html#ga5d95de6de72862ff044d5c973ca1b594", null ],
     [ "out_of_memory_handler_t", "os-memory_8h.html#ga165e1d42e364dcabcbf01e5322b9f554", null ],
     [ "unique_ptr", "os-memory_8h.html#gaec618354c35d9d8269647786d0c6bd6a", null ],

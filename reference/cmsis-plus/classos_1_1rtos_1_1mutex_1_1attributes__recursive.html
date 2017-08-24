@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: os::rtos::mutex::attributes_recursive Class Reference</title>
+<title>µOS++ IIIe Reference: os::rtos::mutex::attributes_recursive Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.11</span>
+     <div id="projectname">µOS++ IIIe Reference
+     &#160;<span id="projectnumber">v6.3.12</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source system, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('classos_1_1rtos_1_1mutex_1_1attributes
   <div class="summary">
 <a href="classos_1_1rtos_1_1mutex_1_1attributes__recursive-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::attributes_recursive Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
+<div class="title">os::rtos::mutex::attributes_recursive Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">µOS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -184,7 +184,7 @@ Public Attributes</h2></td></tr>
 <p>Allow to assign a name and custom attributes (like priority ceiling, robustness, etc) to the mutex.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00316">316</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00311">311</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acb24c36291e1a3f9e0a99b67744b8eb5"></a>
 <div class="memitem">
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 <p>Construct a recursive mutex attributes object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00817">817</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00812">812</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +351,7 @@ Public Attributes</h2></td></tr>
 <p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance. ">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock object instance. ">os::rtos::rtclock</a></code>, or any other user object derived from class <code><a class="el" href="classos_1_1rtos_1_1clock.html" title="Generic clock. ">os::rtos::clock</a></code>.</p>
 <p>If <code>nullptr</code>, the default clock is <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance. ">os::rtos::sysclock</a></code>. </p>
 
-<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00628">628</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p>Definition at line <a class="el" href="os-decls_8h_source.html#l00623">623</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +376,7 @@ Public Attributes</h2></td></tr>
 <p>Attribute with the mutex maximum recursive count. </p>
 <p>The <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a1eaad3426c177dd2156e30293f8bb987">mx_max_count</a> attribute defines the upper limit of recursion for a recursive mutex. Further attempts to lock the mutex will result in <code>EAGAIN</code>. </p>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00293">293</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00288">288</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +402,7 @@ Public Attributes</h2></td></tr>
 <p>The <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b">mx_priority_ceiling</a> attribute defines the priority ceiling of initialised mutexes, which is the minimum priority level at which the critical section guarded by the mutex is executed. In order to avoid priority inversion, the priority ceiling of the mutex shall be set to a priority higher than or equal to the highest priority of all the threads that may lock that mutex. The values of <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b">mx_priority_ceiling</a> are within the maximum range of priorities defined under the SCHED_FIFO scheduling policy.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_getprioceiling.html"><code>pthread_mutexattr_setprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00273">273</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00268">268</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -433,7 +433,7 @@ Differences from the standard:<ul>
 </ul>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00278">278</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00273">273</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ Differences from the standard:<ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html" title="Mutex robustness. ">mutex::robustness</a></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00283">283</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00278">278</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ Differences from the standard:<ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html" title="Mutex types. ">mutex::type</a></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_settype.html"><code>pthread_mutexattr_settype()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00288">288</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00283">283</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

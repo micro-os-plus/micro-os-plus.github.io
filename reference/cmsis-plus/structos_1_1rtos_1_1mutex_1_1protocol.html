@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: os::rtos::mutex::protocol Class Reference</title>
+<title>µOS++ IIIe Reference: os::rtos::mutex::protocol Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.11</span>
+     <div id="projectname">µOS++ IIIe Reference
+     &#160;<span id="projectnumber">v6.3.12</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source system, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('structos_1_1rtos_1_1mutex_1_1protocol.
 <a href="#pub-types">Public Types</a> &#124;
 <a href="classos_1_1rtos_1_1mutex_1_1protocol-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::rtos::mutex::protocol Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
+<div class="title">os::rtos::mutex::protocol Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">µOS++ RTOS C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-rtos-mutex.html">Mutexes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -173,7 +173,7 @@ Public Types</h2></td></tr>
 <p>When a thread makes a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock/acquire the mutex. ">mutex::lock()</a></code>, the mutex was initialised with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code>, when the calling thread is blocked because the mutex is owned by another thread, that owner thread shall inherit the priority level of the calling thread as long as it continues to own the mutex. The implementation shall update its execution priority to the maximum of its assigned priority and all its inherited priorities. Furthermore, if this owner thread itself becomes blocked on another mutex with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread. ">mutex::protocol::inherit</a></code>, the same priority inheritance effect shall be propagated to this other owner thread, in a recursive manner.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_getprotocol.html"><code>pthread_mutexattr_setprotocol()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00073">73</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00068">68</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a0a3a2506459afaf7cb613aaf1fd875a9"></a>
 <div class="memitem">
@@ -204,7 +204,7 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00078">78</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p>Definition at line <a class="el" href="os-mutex_8h_source.html#l00073">73</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

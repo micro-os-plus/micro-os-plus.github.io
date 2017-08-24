@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Memory management</title>
+<title>µOS++ IIIe Reference: Memory management</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.11</span>
+     <div id="projectname">µOS++ IIIe Reference
+     &#160;<span id="projectnumber">v6.3.12</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source system, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-memres.html',''
 <a href="#typedef-members">Types</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Memory management<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">CMSIS++ RTOS C++ API</a></div></div>  </div>
+<div class="title">Memory management<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">µOS++ RTOS C++ API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -350,7 +350,7 @@ Standard Memory Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C++ API memory management definitions. </p>
-<p>The CMSIS++ RTOS includes several advanced and flexible memory management features.</p>
+<p>The µOS++ RTOS includes several advanced and flexible memory management features.</p>
 <p>First, it defines a configurable memory manager for the application free store (also known as the "heap").</p>
 <p>Second, it defines a separate memory manager to be used by the RTOS system objects. This separate manager can be configured to use any allocation policy. It may use either a statically or a dynamically allocated area.</p>
 <p>The reason for the system memory manager is to allow RTOS system objects to be separated from application objects; this hase several advantages:</p>
@@ -368,7 +368,7 @@ Standard Memory Functions</h2></td></tr>
 <p>The default application memory manager is set in the <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store. ">os_startup_initialize_free_store()</a></code> function, called by the startup code when running on bare metal.</p>
 <p>On synthetic POSIX platforms the default memory manager is <code><a class="el" href="classos_1_1memory_1_1malloc__memory__resource.html" title="A memory manager that allocates memory via the system std::malloc() and deallocates via std::free()...">os::memory::malloc_memory_resource</a></code>, which uses memory from the system free store.</p>
 <p>By default the RTOS system memory manager is the same as the application memory manager, but, for isolation reasons, it is recommended to define a separate memory mamanger for the RTOS system objects.</p>
-<p>The basic memory management class is <code><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html" title="Memory resource manager (abstract class). ">os::rtos::memory::memory_resource</a></code>, which will be standard starting with C++17. The CMSIS++ version of this class includes several extensions, like out of memory processing and statistics (and this is the reason the class is not defined in <code><a class="el" href="namespaceos_1_1estd.html" title="Embedded std namespace. ">os::estd</a></code>). </p>
+<p>The basic memory management class is <code><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html" title="Memory resource manager (abstract class). ">os::rtos::memory::memory_resource</a></code>, which will be standard starting with C++17. The µOS++ version of this class includes several extensions, like out of memory processing and statistics (and this is the reason the class is not defined in <code><a class="el" href="namespaceos_1_1estd.html" title="Embedded std namespace. ">os::estd</a></code>). </p>
 <h2 class="groupheader">Types</h2>
 <a class="anchor" id="gac00e47b1a65850b96de7c9fe0e938da1"></a>
 <div class="memitem">
@@ -415,7 +415,7 @@ template&lt;typename T , typename U  = T&gt; </div>
 </dl>
 <p>The allocator uses scheduler critical sections to be thread safe, and the default memory resource associated with the given type. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01046">1046</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01061">1061</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -456,7 +456,7 @@ template&lt;typename T , typename U  = T&gt; </div>
 </dl>
 <p>The type is based on the standard unique pointer, but with the specific RTOS deleter. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01057">1057</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01072">1072</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -512,7 +512,7 @@ template&lt;typename T , typename A , typename... Args&gt; </div>
 <p>Standard allocator type definition.</p>
 <p>Standard allocator traits definition.</p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01658">1658</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01673">1673</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -574,7 +574,7 @@ template&lt;typename T , typename A , typename... Args&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance.</dd></dl>
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01106">1106</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01121">1121</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +632,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01134">1134</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01149">1149</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -661,7 +661,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01148">1148</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01163">1163</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -690,7 +690,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01162">1162</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01177">1177</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01176">1176</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01191">1191</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +748,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01190">1190</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01205">1205</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -777,7 +777,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01204">1204</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01219">1219</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +806,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01120">1120</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01135">1135</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -835,7 +835,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01218">1218</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01233">1233</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -878,7 +878,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os_8h_source.html#l00176">176</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<p>Definition at line <a class="el" href="os_8h_source.html#l00173">173</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1005,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00328">328</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00325">325</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1056,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00379">379</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00376">376</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1105,7 +1105,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00419">419</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00416">416</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1144,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00458">458</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00455">455</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1194,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00490">490</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00487">487</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1244,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00520">520</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00517">517</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1275,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00151">151</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00148">148</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1325,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00213">213</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00210">210</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1355,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00272">272</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00269">269</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1404,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="new_8cpp_source.html#l00295">295</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p>Definition at line <a class="el" href="new_8cpp_source.html#l00292">292</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
 
 </div>
 </div>
@@ -1456,7 +1456,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01444">1444</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01459">1459</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -1544,7 +1544,7 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01438">1438</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p>Definition at line <a class="el" href="os-memory_8h_source.html#l01453">1453</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>

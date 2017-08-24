@@ -69,6 +69,8 @@ var os_app_config_8h =
     [ "OS_USE_RTOS_PORT_TIMER", "group__cmsis-plus-app-config-port.html#ga4ce12f00cdfcde18ad2e4354c17dd052", null ],
     [ "OS_USE_SEMIHOSTING_SYSCALLS", "group__cmsis-plus-app-config-startup.html#ga133680f49dc70d2e183f8ee0b381e9f7", null ],
     [ "OS_USE_TRACE_ITM", "group__cmsis-plus-app-config-trace.html#ga1eef4714134677247530eb58af9282fb", null ],
+    [ "OS_USE_TRACE_POSIX_STDERR", "group__cmsis-plus-app-config-trace.html#ga30d4e7f0a4dc14f7d1583404c44539d2", null ],
+    [ "OS_USE_TRACE_POSIX_STDOUT", "group__cmsis-plus-app-config-trace.html#ga57c426ea9da684503374422b28481845", null ],
     [ "OS_USE_TRACE_SEGGER_RTT", "group__cmsis-plus-app-config-trace.html#ga0ced5ab4cd2a68835b0340e5d1e763b0", null ],
     [ "OS_USE_TRACE_SEMIHOSTING_DEBUG", "group__cmsis-plus-app-config-trace.html#gaa765edfa50b4e54df6e1b36e36ac6832", null ],
     [ "OS_USE_TRACE_SEMIHOSTING_STDOUT", "group__cmsis-plus-app-config-trace.html#ga5135483197df824b82993a2a975e27b8", null ],

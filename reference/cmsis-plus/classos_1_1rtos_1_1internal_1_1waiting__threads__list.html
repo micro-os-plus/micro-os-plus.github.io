@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: os::rtos::internal::waiting_threads_list Class Reference</title>
+<title>µOS++ IIIe Reference: os::rtos::internal::waiting_threads_list Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.11</span>
+     <div id="projectname">µOS++ IIIe Reference
+     &#160;<span id="projectnumber">v6.3.12</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source system, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -212,7 +212,7 @@ Protected Attributes</h2></td></tr>
 <p>On the other hand, typical waiting lists contain only one element, and in this case there is no distinction. Mutex objects occasionally might have two entries (and rarely more). Condition variables might also have several waiting threads, the number is usually small. In these cases, the distinction between the two strategies is also minimal.</p>
 <p>In the rare cases when the waiting list is large, the first strategy favours top node retrieval, possibly improving the response time, and is thus preferred. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00541">541</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00536">536</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a40df6d023d167dc1f21e3926b6c5ff6b"></a>
 <div class="memitem">
@@ -226,7 +226,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Iterator over the list threads. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00553">553</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00548">548</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Protected Attributes</h2></td></tr>
 <p>Construct a list of waiting threads. </p>
 <p>The initial list status is empty. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00927">927</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00922">922</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destruct the list. </p>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00933">933</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00928">928</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -311,7 +311,7 @@ Protected Attributes</h2></td></tr>
 <p>Iterator begin. </p>
 <dl class="section return"><dt>Returns</dt><dd>An iterator positioned at the first element. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00945">945</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00940">940</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ Protected Attributes</h2></td></tr>
 <p>Iterator begin. </p>
 <dl class="section return"><dt>Returns</dt><dd>An iterator positioned after the last element. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00953">953</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00948">948</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +436,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted pointer to head node. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00939">939</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p>Definition at line <a class="el" href="os-lists_8h_source.html#l00934">934</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
 </div>
 </div>

@@ -9,7 +9,7 @@ var os_c_decls_8h =
     [ "os_flags_all", "group__cmsis-plus-rtos-c-core.html#ga05b4355d261cd176a03edcc83dc56fb4", null ],
     [ "os_flags_any", "group__cmsis-plus-rtos-c-core.html#ga84611c2a8bb7cd483729253c74cf2cec", null ],
     [ "OS_THREAD_PRIO_SHIFT", "os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9", null ],
-    [ "OS_USE_CMSIS_PLUS", "os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae", null ],
+    [ "OS_USE_MICRO_OS_PLUS", "os-c-decls_8h.html#ac8bce6dc2aa7b81239e409044d4a2ef1", null ],
     [ "os_clock_duration_t", "group__cmsis-plus-rtos-c-core.html#gaeb56a88a7ee3a52c479d68da8d042feb", null ],
     [ "os_clock_offset_t", "group__cmsis-plus-rtos-c-core.html#gacabb40f479e1bed29ec21e8151e09ed1", null ],
     [ "os_clock_t", "group__cmsis-plus-rtos-c-clock.html#ga6e1c36bd6f6421b3565c262b5d77874e", null ],

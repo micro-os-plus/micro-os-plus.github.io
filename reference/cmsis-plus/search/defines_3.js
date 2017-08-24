@@ -20,7 +20,7 @@ var searchData=
   ['os_5fstring_5frtos_5fimpl_5fversion_5fbuild',['OS_STRING_RTOS_IMPL_VERSION_BUILD',['../os-versions_8h.html#adc616060b0455a26ec21fc305c5f9cd5',1,'os-versions.h']]],
   ['os_5fstring_5frtos_5fimpl_5fversion_5fpre_5frelease',['OS_STRING_RTOS_IMPL_VERSION_PRE_RELEASE',['../os-versions_8h.html#aa58c7b9efa7d6d239e8af9c3f1b81e43',1,'os-versions.h']]],
   ['os_5fthread_5fprio_5fshift',['OS_THREAD_PRIO_SHIFT',['../os-c-decls_8h.html#a775a0a8af9e10662654cb4e4799d28f9',1,'os-c-decls.h']]],
-  ['os_5fuse_5fcmsis_5fplus',['OS_USE_CMSIS_PLUS',['../os-c-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-c-decls.h'],['../os-decls_8h.html#a841b874bf63424159693407fe668c6ae',1,'OS_USE_CMSIS_PLUS():&#160;os-decls.h']]],
+  ['os_5fuse_5fmicro_5fos_5fplus',['OS_USE_MICRO_OS_PLUS',['../os-c-decls_8h.html#ac8bce6dc2aa7b81239e409044d4a2ef1',1,'OS_USE_MICRO_OS_PLUS():&#160;os-c-decls.h'],['../os-decls_8h.html#ac8bce6dc2aa7b81239e409044d4a2ef1',1,'OS_USE_MICRO_OS_PLUS():&#160;os-decls.h']]],
   ['oscmsis',['osCMSIS',['../cmsis__os_8h.html#a702196bacccbb978620c736b209387f1',1,'cmsis_os.h']]],
   ['oscmsis_5fkernel',['osCMSIS_KERNEL',['../cmsis__os_8h.html#ab78dce646fabec479c5f34bc5175b7de',1,'cmsis_os.h']]],
   ['osfeature_5fmailq',['osFeature_MailQ',['../cmsis__os_8h.html#aceb2e0071ce160d153047f2eac1aca8e',1,'cmsis_os.h']]],

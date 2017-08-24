@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>µOS++ IIIe / CMSIS++ / POSIX++ Reference: Memory management</title>
+<title>µOS++ IIIe Reference: Memory management</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,13 +43,13 @@
   <td id="projectlogo"><a href="$relpath/../../../.."><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div>
-     <div id="projectname">µOS++ IIIe / CMSIS++ / POSIX++ Reference
-     &#160;<span id="projectnumber">v6.3.11</span>
+     <div id="projectname">µOS++ IIIe Reference
+     &#160;<span id="projectnumber">v6.3.12</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
    </div>
-   <div id="projectbrief">The third edition of µOS++ and CMSIS++, a proposal for the next generation CMSIS, written in C++.</div>
+   <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source system, written in C++.</div>
   </td>
  </tr>
  </tbody>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-c-memres.html',
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Types</a>  </div>
   <div class="headertitle">
-<div class="title">Memory management<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos-c.html">CMSIS++ RTOS C API</a></div></div>  </div>
+<div class="title">Memory management<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos-c.html">µOS++ RTOS C API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -189,7 +189,7 @@ Standard functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>C API memory management definitions. </p>
-<p>The CMSIS++ RTOS includes several advanced and flexible memory management features.</p>
+<p>The µOS++ RTOS includes several advanced and flexible memory management features.</p>
 <p>Access to these classes from C can be done using the <code>os_memory_*()</code> functions.</p>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-memres.html">RTOS C++ API</a></dd></dl>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
@@ -248,7 +248,7 @@ Standard functions</h2></td></tr>
 <p>The <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga4caf6b14a04c9e260ea0e3b7dafbbe49" title="Allocate an array of memory blocks (initialised to zero). ">calloc()</a></code> function shall allocate unused space for an array of <em>nelem</em> elements each of whose size in bytes is <em>elbytes</em>. The space shall be initialised to all bits 0.</p>
 <p>The order and contiguity of storage allocated by successive calls to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga4caf6b14a04c9e260ea0e3b7dafbbe49" title="Allocate an array of memory blocks (initialised to zero). ">calloc()</a></code> is unspecified. The pointer returned if the allocation succeeds shall be suitably aligned so that it may be assigned to a pointer to any type of object and then used to access such an object or an array of such objects in the space allocated (until the space is explicitly freed or reallocated). Each such allocation shall yield a pointer to an object disjoint from any other object. The pointer returned shall point to the start (lowest byte address) of the allocated space. If the space cannot be allocated, a null pointer shall be returned. If the size of the space requested is 0, the behaviour is implementation-defined: the value returned shall be either a null pointer or a unique pointer.</p>
 <p>Upon successful completion with both <em>nelem</em> and <em>elbytes</em> non-zero, <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga4caf6b14a04c9e260ea0e3b7dafbbe49" title="Allocate an array of memory blocks (initialised to zero). ">calloc()</a></code> shall return a pointer to the allocated space. If either <em>nelem</em> or <em>elbytes</em> is 0, then either a null pointer or a unique pointer value that can be successfully passed to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> shall be returned. Otherwise, it shall return a null pointer and set <code>errno</code> to indicate the error.</p>
-<dl class="section note"><dt>Note</dt><dd>In CMSIS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In µOS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/calloc.html"><code>calloc()</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
@@ -281,7 +281,7 @@ Standard functions</h2></td></tr>
 <p>The <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> function shall cause the space pointed to by <em>ptr</em> to be deallocated; that is, made available for further allocation. If <em>ptr</em> is a null pointer, no action shall occur. Otherwise, if the argument does not match a pointer earlier returned by a function in POSIX.1-2008 that allocates memory as if by <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152" title="Allocate a memory block (non-initialised). ">malloc()</a></code>, or if the space has been deallocated by a call to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> or <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0699cd3a7ec9876643028bbf110e84ac" title="Reallocate the memory block (non-initialised). ">realloc()</a></code>, the behaviour is undefined.</p>
 <p>Any use of a pointer that refers to freed space results in undefined behaviour.</p>
 <p>The <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> function shall not return a value.</p>
-<dl class="section note"><dt>Note</dt><dd>In CMSIS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In µOS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/free.html"><code>free()</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
@@ -314,7 +314,7 @@ Standard functions</h2></td></tr>
 <p>The <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152" title="Allocate a memory block (non-initialised). ">malloc()</a></code> function shall allocate unused space for an object whose size is <em>bytes</em> and whose value is unspecified.</p>
 <p>The order and contiguity of storage allocated by successive calls to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152" title="Allocate a memory block (non-initialised). ">malloc()</a></code> is unspecified. The pointer returned if the allocation succeeds shall be suitably aligned so that it may be assigned to a pointer to any type of object and then used to access such an object in the space allocated (until the space is explicitly freed or reallocated). Each such allocation shall yield a pointer to an object disjoint from any other object. The pointer returned points to the start (lowest byte address) of the allocated space. If the space cannot be allocated, a null pointer shall be returned. If the size of the space requested is 0, the behaviour is implementation-defined: the value returned shall be either a null pointer or a unique pointer.</p>
 <p>Upon successful completion with size not equal to 0, <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0a234be5915426ab4736b4519ce4e152" title="Allocate a memory block (non-initialised). ">malloc()</a></code> shall return a pointer to the allocated space. If size is 0, either a null pointer or a unique pointer that can be successfully passed to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> shall be returned. Otherwise, it shall return a null pointer and set <code>errno</code> to indicate the error.</p>
-<dl class="section note"><dt>Note</dt><dd>In CMSIS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In µOS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/malloc.html"><code>malloc()</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
@@ -366,7 +366,7 @@ Standard functions</h2></td></tr>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815">os::rtos::memory::memory_resource::allocate()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03328">3328</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03325">3325</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a1ad8d18056f87e387cd86d2632566a53">os::rtos::memory::memory_resource::coalesce()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03379">3379</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03376">3376</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a43986889676bf5f4274e60538ccd76ee">os::rtos::memory::memory_resource::deallocate()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03345">3345</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03342">3342</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +490,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a4461f324ac21f845527f391ce47c2dd0">os::rtos::memory::memory_resource::allocated_bytes()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03411">3411</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03408">3408</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a2f4e57e4e77ead637b0720a9c6fee762">os::rtos::memory::memory_resource::allocated_chunks()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03443">3443</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03440">3440</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="group__cmsis-plus-rtos-memres.html#ga61c4946b90c917a9fc2a0b0f1c43ad89">os::rtos::memory::get_default_resource()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03313">3313</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03310">3310</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +575,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#af317cfeb595643a0e27901bc9a983f14">os::rtos::memory::memory_resource::free_bytes()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03427">3427</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03424">3424</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#ae6c44b3b065fd27a202d1a3dfa2f285f">os::rtos::memory::memory_resource::free_chunks()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03459">3459</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03456">3456</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -637,7 +637,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#aa4149d7ffaa8e6d5cabc26ef8c439fa8">os::rtos::memory::memory_resource::total_bytes()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03395">3395</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03392">3392</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -669,7 +669,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <dl class="section user"><dt>For the complete definition, see</dt><dd><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a7cf334270b97273de3ad4d8e32c31af3">os::rtos::memory::memory_resource::reset()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03363">3363</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-c-wrapper_8cpp_source.html#l03360">3360</a> of file <a class="el" href="os-c-wrapper_8cpp_source.html">os-c-wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -715,7 +715,7 @@ Not thread safe, use a scheduler critical section to protect it.</dd></dl>
 <li>A unique pointer that can be successfully passed to <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#gafbedc913aa4651b3c3b4b3aecd9b4711" title="Free the allocated memory block. ">free()</a></code> shall be returned, and the memory object pointed to by <em>ptr</em> shall be freed. The application shall ensure that the pointer is not used to access an object.</li>
 </ul>
 <p>If there is not enough available memory, <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0699cd3a7ec9876643028bbf110e84ac" title="Reallocate the memory block (non-initialised). ">realloc()</a></code> shall return a null pointer and set <code>errno</code> to <code>ENOMEM</code>. If <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga0699cd3a7ec9876643028bbf110e84ac" title="Reallocate the memory block (non-initialised). ">realloc()</a></code> returns a null pointer and <code>errno</code> has been set to <code>ENOMEM</code>, the memory referenced by <em>ptr</em> shall not be changed.</p>
-<dl class="section note"><dt>Note</dt><dd>In CMSIS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In µOS++ this function uses a scheduler critical section and is thread safe.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/realloc.html"><code>realloc()</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
