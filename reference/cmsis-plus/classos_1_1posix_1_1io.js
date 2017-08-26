@@ -1,0 +1,36 @@
+var classos_1_1posix_1_1io =
+[
+    [ "type_t", "classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
+    [ "type", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38ede", [
+      [ "unknown", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
+      [ "not_set", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
+      [ "device", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea30e4bba7a021a33e743b098abde12369", null ],
+      [ "file", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
+      [ "socket", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+    ] ],
+    [ "io", "classos_1_1posix_1_1io.html#ad1563123f1725034075efb57d71b1b7f", null ],
+    [ "~io", "classos_1_1posix_1_1io.html#acb6a41e0664927f1c32ae76b2e150dc1", null ],
+    [ "alloc_file_descriptor", "classos_1_1posix_1_1io.html#a92490027421a039ea56d1ad2f5cff989", null ],
+    [ "clear_file_descriptor", "classos_1_1posix_1_1io.html#aac56327ce05ea29b9d423edc45a7cece", null ],
+    [ "close", "classos_1_1posix_1_1io.html#aa1cc0a41339069ecac53c5ae60e69635", null ],
+    [ "do_close", "classos_1_1posix_1_1io.html#aaf7e5dcd87125eb11ed179344500e60c", null ],
+    [ "do_fstat", "classos_1_1posix_1_1io.html#a220d39855751e202263812ee13330fc9", null ],
+    [ "do_is_connected", "classos_1_1posix_1_1io.html#a0ceef2cd4cd07e8ebb8ffd5f124bf0cf", null ],
+    [ "do_is_opened", "classos_1_1posix_1_1io.html#af86964661db8e17cdaf99401296c822a", null ],
+    [ "do_isatty", "classos_1_1posix_1_1io.html#a8ce3151e46c1a37952ff3f9835d2a08e", null ],
+    [ "do_read", "classos_1_1posix_1_1io.html#a5c1ffeae5fd2d0e1bfa33530833eed71", null ],
+    [ "do_release", "classos_1_1posix_1_1io.html#a69bb7cad378627cd5d7ee29956584969", null ],
+    [ "do_vfcntl", "classos_1_1posix_1_1io.html#a10eb548dd7387acdfb63ac016836d173", null ],
+    [ "do_write", "classos_1_1posix_1_1io.html#a07e8c9c097782aa4bdb92daac6e7be39", null ],
+    [ "do_writev", "classos_1_1posix_1_1io.html#aa5224f5da3e56ebf3ead2a5cd34bb36c", null ],
+    [ "fcntl", "classos_1_1posix_1_1io.html#aa02f5bee86b8acfa44cee93c5710167a", null ],
+    [ "file_descriptor", "classos_1_1posix_1_1io.html#ad35401cd570eca88467fb768c35eb478", null ],
+    [ "file_descriptor", "classos_1_1posix_1_1io.html#a98d3b9609fdc70cd3b17a9b2345a5c30", null ],
+    [ "fstat", "classos_1_1posix_1_1io.html#a941bd15a7fd7315689e3739331e1ef22", null ],
+    [ "get_type", "classos_1_1posix_1_1io.html#ad28fccdc1b9c477ee06a71944b17bd78", null ],
+    [ "isatty", "classos_1_1posix_1_1io.html#a12b89343ee023d5f4b3298f6cf134436", null ],
+    [ "read", "classos_1_1posix_1_1io.html#acad20c85924c17edf5c2a7e455c093c3", null ],
+    [ "vfcntl", "classos_1_1posix_1_1io.html#af84ebeb02c028db886a636eb55d14540", null ],
+    [ "write", "classos_1_1posix_1_1io.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
+    [ "writev", "classos_1_1posix_1_1io.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+];
