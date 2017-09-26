@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Tue Sep 26 15:36:06 2017 UTC.</td>
+    <td id="last-modified">Last modified on Tue Sep 26 18:27:54 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -342,7 +342,7 @@
 
 <p>This modular approach with structured metadata greatly increase the code reusability and upgreadability, by allowing automated tools to bring into the project the required components, and to automatically manage the dependencies, accepting only combinations of compatible packages.</p>
 
-<p>Such solutions are already available for other languages, with the most successful one being <a href="https://www.npmjs.com">npm - The Node Package Manager</a>, for JavaScript modules.</p>
+<p>Such solutions are already available for other languages, with the most successful one being <a href="https://www.npmjs.com">npm</a> (The Node Package Manager), for JavaScript modules.</p>
 
 <p>There were also several attempts to create such solutions for C/C++ embedded applications, but they had limited success (for example CMSIS Packs, which uses huge packages and is more or less specific to Keil MDK, and yotta, originally from ARM mbed, but now abandoned, which mandates the use of cmake and python).</p>
 
@@ -357,8 +357,8 @@
 <p>An example of such a project structure is used in the <strong>SiFive project templates</strong>; most of the files are part of the application; the packages are grouped below the <code class="highlighter-rouge">xpacks</code> folder, and the package metadata is in <code class="highlighter-rouge">package.json</code>:</p>
 
 <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code><span class="gp">$ </span>tree -L 3 hifive1-blinky/
-hifive1-blinky/
+<pre class="highlight"><code><span class="gp">$ </span>tree -L 2 hifive1-blinky
+hifive1-blinky
 ├── LICENSE
 ├── README.md
 ├── build
@@ -403,8 +403,8 @@ hifive1-blinky/
 <pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="err">...</span><span class="w">
     </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.1"</span><span class="w">
-        </span><span class="p">,</span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.0.3"</span><span class="w">
+        </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.0.1"</span><span class="w">
+        </span><span class="p">,</span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.3"</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span><span class="err">...</span><span class="w">
 </span><span class="p">}</span><span class="w">
