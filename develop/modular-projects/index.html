@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Tue Sep 26 18:27:54 2017 UTC.</td>
+    <td id="last-modified">Last modified on Tue Sep 26 18:59:59 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -330,11 +330,11 @@
 
 <p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but if the number of libraries grows, and the libraries have inter-dependencies, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
 
-<p>This problem is agravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with the other libraries.</p>
+<p>The problem is agravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of the other libraries.</p>
 
 <h3 id="solution">Solution</h3>
 
-<p>Instead of a monolythic project, where the build processes a complicated folder hierarchy, one possible solution is to build the project from separate components, stored in separate packages.</p>
+<p>Instead of a monolythic project, where the build has to process a complicated folder hierarchy, one possible solution is to build the project from separate components, stored in separate packages.</p>
 
 <p>In practical terms, each package should have, in addition to the source files, some metadata, to define its own identity and a list of dependencies from other packages.</p>
 
