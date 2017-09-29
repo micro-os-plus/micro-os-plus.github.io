@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Fri Sep 29 14:01:05 2017 UTC.</td>
+    <td id="last-modified">Last modified on Fri Sep 29 20:22:54 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -259,7 +259,7 @@
 <a href="#objectives--benefits"><span class="tocnumber">1</span> <span class="toctext">Objectives &amp; benefits</span></a>
 <ul>
 <li class="toc_level-2 toc_section-2">
-<a href="#challanges"><span class="tocnumber">1.1</span> <span class="toctext">Challanges</span></a>
+<a href="#challenges"><span class="tocnumber">1.1</span> <span class="toctext">Challenges</span></a>
 </li>
 <li class="toc_level-2 toc_section-3">
 <a href="#solution"><span class="tocnumber">1.2</span> <span class="toctext">Solution</span></a>
@@ -328,9 +328,9 @@
 </div>
 <h2 id="objectives--benefits">Objectives &amp; benefits</h2>
 
-<h3 id="challanges">Challanges</h3>
+<h3 id="challenges">Challenges</h3>
 
-<p>One of the major challanges when developing software is reusing various pieces of code among applications.</p>
+<p>One of the major challenges when developing software is reusing various pieces of code among applications.</p>
 
 <p>The trivial approach is to simply copy/paste routines or entire files from one application to another. This is ok as long as the code does not change; once the code changes, manually updating all projects is no longer trivial.</p>
 
@@ -346,7 +346,7 @@
 
 <h3 id="benefits">Benefits</h3>
 
-<p>This modular approach with structured metadata greatly increase the code reusability and upgreadability, by allowing automated tools to bring into the project the required components, and to automatically manage the dependencies, accepting only combinations of compatible packages.</p>
+<p>This modular approach with structured metadata greatly increase the code reusability and upgradability, by allowing automated tools to bring into the project the required components, and to automatically manage the dependencies, accepting only combinations of compatible packages.</p>
 
 <p>Such solutions are already available for other languages, with the most successful one being <a href="https://www.npmjs.com">npm</a> (The Node Package Manager), for JavaScript modules.</p>
 
@@ -360,7 +360,7 @@
 
 <h3 id="example">Example</h3>
 
-<p>An example of such a project structure is used in the <strong>SiFive project templates</strong>; most of the files are part of the application; the packages are grouped below the <code class="highlighter-rouge">xpacks</code> folder, and the package metadata is in <code class="highlighter-rouge">package.json</code>:</p>
+<p>An example of such a project structure is used in the <strong>SiFive project templates</strong>; most of the files are part of the application; the packages are grouped under the <code class="highlighter-rouge">xpacks</code> folder, and the package metadata is located in <code class="highlighter-rouge">package.json</code>:</p>
 
 <div class="language-bash highlighter-rouge">
 <pre class="highlight"><code><span class="gp">$ </span>tree -L 2 hifive1-blinky
@@ -417,11 +417,11 @@ hifive1-blinky
 </span></code></pre>
 </div>
 
-<p>In other words, the application requires explicit support only for diagnostics and for the <strong>SiFive HiFive1</strong> board. Inspecting the above project structure, it is easy to identify seven packages, not two. The explanation is that the <code class="highlighter-rouge">sifive-hifive1-board</code> package pulled <code class="highlighter-rouge">sifive-coreplex-devices</code>, which pulled <code class="highlighter-rouge">micro-os-plus-riscv-arch</code>, which pulled <code class="highlighter-rouge">micro-os-plus-startup</code> and the two libraries.</p>
+<p>In other words, the application requires explicit support only for diagnostics and for the <strong>SiFive HiFive1</strong> board. Inspecting the project’s structure, it is easy to identify seven packages, not two. The explanation is that the <code class="highlighter-rouge">sifive-hifive1-board</code> package pulled <code class="highlighter-rouge">sifive-coreplex-devices</code>, which pulled <code class="highlighter-rouge">micro-os-plus-riscv-arch</code>, which pulled <code class="highlighter-rouge">micro-os-plus-startup</code> and the two libraries.</p>
 
 <h3 id="tools">Tools</h3>
 
-<p>To further automate things, packages can refer not only to other source packages, but to tools packages, which include separate applications required during the development cycle, like toolchains, debuggers, builders, etc.</p>
+<p>To further automate the build process, packages can refer not only to other source packages, but to tools packages, which include separate applications required during the development cycle, like toolchains, debuggers, builders, etc.</p>
 
 <p>This is a very powerful feature, that ensures, in a portable way, that the project can be built immediately after the install is complete.</p>
 
@@ -520,7 +520,7 @@ hifive1-blinky
 
 <h4 id="code">Code</h4>
 
-<p>The entire startup library consist of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/startup.git">micro-os-plus/startup</a>.</p>
+<p>The entire startup library consists of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/startup.git">micro-os-plus/startup</a>.</p>
 
 <h3 id="board-vs-device-vs-architecture">Board vs Device vs Architecture</h3>
 
@@ -945,7 +945,7 @@ hifive1-blinky
 
 <p>In modern architectures, interrupt processing is usually a no-op, there is almost nothing to do, apart from providing a list of pointers to interrupt handlers.</p>
 
-<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current µOS++ implementation tries to provide a similar user experience, by hidding all the implementation details. The application has nothing else to do then define some fixed name functions and enable interrupts.</p>
+<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current µOS++ implementation tries to provide a similar user experience, by hidding all the implementation details. The application has nothing else to do than to define some fixed name functions and enable interrupts.</p>
 
 <p>For example, to handle the machine timer interrupt, the application code looks like this:</p>
 
@@ -1000,7 +1000,7 @@ ldscripts
 
 <h3 id="the-c-and-c-libraries">The C and C++ libraries</h3>
 
-<p>These two packages complement the system libraries and provide missing functions are lighter implementations, more suitable in embedded applications.</p>
+<p>These two packages complement the system libraries and provide missing functions which are lighter implementations, more suitable for embedded applications.</p>
 
 <div class="language-bash highlighter-rouge">
 <pre class="highlight"><code><span class="gp">$ </span>tree c-libs.git 
@@ -1041,7 +1041,7 @@ cpp-libs.git
 
 <h3 id="tracing-support">Tracing support</h3>
 
-<p>Although modern debuggers are quite advanced and can display lots of useful information, there are many cases when the classical <code class="highlighter-rouge">printf()</code>, placed in the right location, can be more efficient in spotting bugs.</p>
+<p>Although modern debuggers are quite advanced and can display lots of useful information, there are many cases when the classical <code class="highlighter-rouge">printf()</code>, placed at the right location, can be more efficient in spotting bugs.</p>
 
 <h4 id="the-traditional-approach-redirect-stdoutstderr">The traditional approach, redirect STDOUT/STDERR</h4>
 
