@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Fri Sep 29 20:22:54 2017 UTC.</td>
+    <td id="last-modified">Last modified on Fri Sep 29 22:44:47 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -336,11 +336,11 @@
 
 <p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but if the libraries have inter-dependencies, and their number grows, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
 
-<p>The problem is agravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of the other libraries.</p>
+<p>The problem is aggravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of the other libraries.</p>
 
 <h3 id="solution">Solution</h3>
 
-<p>Instead of a monolythic project, where the build has to process a complicated folder hierarchy, one possible solution is to build the project from separate components, stored in separate packages.</p>
+<p>Instead of a monolithic project, where the build has to process a complicated folder hierarchy, one possible solution is to build the project from separate components, stored in separate packages.</p>
 
 <p>In practical terms, each package should have, in addition to the source files, some metadata, to define its own identity and a list of dependencies from other packages.</p>
 
@@ -356,7 +356,7 @@
 
 <h3 id="application-vs-packages">Application vs packages</h3>
 
-<p>In the proposed modular aproach, the application code is clearly separated from the external packages; the application folders are under full control of the user, who can edit/add/remove any files, while the packages are under the control of the package manager, and generally are read only, to prevent inadvertent changes.</p>
+<p>In the proposed modular approach, the application code is clearly separated from the external packages; the application folders are under full control of the user, who can edit/add/remove any files, while the packages are under the control of the package manager, and generally are read only, to prevent inadvertent changes.</p>
 
 <h3 id="example">Example</h3>
 
@@ -429,7 +429,7 @@ hifive1-blinky
 
 <h3 id="the-startup-code">The startup code</h3>
 
-<p>Traditionally, the startup code is writen in assembly, the justification being that, right after reset, the run-time is not yet suitable for higher level languages, like C/C++. For some modern architectures, like Cortex-M, this is plainly wrong, since the advanced core automatically loads the stack pointer before calling the <code class="highlighter-rouge">Reset_Handler</code>, and the startup code can be written in C/C++ from the very beginning.</p>
+<p>Traditionally, the startup code is writen in assembly, the justification being that, right after reset, the run-time is not yet suitable for higher level languages, like C/C++. For some modern architectures, like Cortex-M, this is plainly wrong, since the core automatically loads the stack pointer before calling the <code class="highlighter-rouge">Reset_Handler</code>, and the startup code can be written in C/C++ from the very beginning.</p>
 
 <h4 id="the-assembly-entry-code">The assembly entry code</h4>
 
@@ -516,7 +516,7 @@ hifive1-blinky
 <code class="highlighter-rouge">os_startup_initialize_hardware_early ()</code>
 </h4>
 
-<p>This approach is usualy enough, but for some cases running the first initialisations after the data &amp; bss might be too late. What if the board uses external RAM? If so, it obviously must be configured <em>before</em> initialising the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might trigger a reset before the application reaches the main code.</p>
+<p>This approach is usually enough, but for some cases running the first initialisations after the data &amp; bss might be too late. What if the board uses external RAM? If so, it obviously must be configured <em>before</em> initialising the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might trigger a reset before the application reaches the main code.</p>
 
 <h4 id="code">Code</h4>
 
@@ -526,7 +526,7 @@ hifive1-blinky
 
 <p>Traditionally, boards come with a BSP (Board Support Package), that provides all board specific definitions and drivers.</p>
 
-<p>However, for reusability reasons, in the µOS++ implementation, the BSP is not monolythic, but modular, with three explict levels:</p>
+<p>However, for reusability reasons, in the µOS++ implementation, the BSP is not monolithic, but modular, with three explicit levels:</p>
 
 <ul>
   <li>board (like <strong>HiFive1</strong>)</li>
@@ -536,7 +536,7 @@ hifive1-blinky
 
 <p>In other words, multiple boards can share the definitions of a single device, and multiple devices can share the definitions specific to a common architecture.</p>
 
-<p>The following examples include C++ code, and most of µOS++ is written in C++, but the application can be entirely witten in C, equivalent C APIs are also available at all levels.</p>
+<p>The following examples include C++ code, and most of µOS++ is written in C++, but the application can be entirely written in C, as equivalent C APIs are available at all levels.</p>
 
 <h4 id="board">Board</h4>
 
@@ -943,9 +943,9 @@ hifive1-blinky
 
 <h3 id="interrupts">Interrupts</h3>
 
-<p>In modern architectures, interrupt processing is usually a no-op, there is almost nothing to do, apart from providing a list of pointers to interrupt handlers.</p>
+<p>In modern architectures, the software requirements for interrupt processing are minimal, there is almost nothing to do, apart from providing a list of pointers to interrupt handlers.</p>
 
-<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current µOS++ implementation tries to provide a similar user experience, by hidding all the implementation details. The application has nothing else to do than to define some fixed name functions and enable interrupts.</p>
+<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current µOS++ implementation tries to provide a similar user experience, by hiding all the implementation details. The application has nothing else to do but define some fixed name functions and enable interrupts.</p>
 
 <p>For example, to handle the machine timer interrupt, the application code looks like this:</p>
 
@@ -989,18 +989,18 @@ ldscripts
 </code></pre>
 </div>
 
-<p>The names should be suggestive for the content: <code class="highlighter-rouge">libs.ld</code> defines the additional libraries, <code class="highlighter-rouge">mem.ld</code> defines the memory regions and <code class="highlighter-rouge">sections.ld</code> defines the  sections and the mapping to the memory regions.</p>
+<p>The names should indicate the content: <code class="highlighter-rouge">libs.ld</code> defines the additional libraries, <code class="highlighter-rouge">mem.ld</code> defines the memory regions and <code class="highlighter-rouge">sections.ld</code> defines the  sections and the mapping to the memory regions.</p>
 
 <p>To make the linker use them all, add something like this when invoking the linker:</p>
 
 <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code><span class="gp">$ </span>&lt;prefix&gt;-gcc ... -L ldscripts -T libs.ld -T mem.ld -T sections.ld ...
+<pre class="highlight"><code><span class="gp">$ </span>&lt;prefix&gt;-g++ ... -L ldscripts -T libs.ld -T mem.ld -T sections.ld ...
 </code></pre>
 </div>
 
 <h3 id="the-c-and-c-libraries">The C and C++ libraries</h3>
 
-<p>These two packages complement the system libraries and provide missing functions which are lighter implementations, more suitable for embedded applications.</p>
+<p>These two packages complement the system libraries and provide missing functions or have lighter implementations, more suitable for embedded applications.</p>
 
 <div class="language-bash highlighter-rouge">
 <pre class="highlight"><code><span class="gp">$ </span>tree c-libs.git 
@@ -1047,11 +1047,11 @@ cpp-libs.git
 
 <p>Using <code class="highlighter-rouge">printf()</code> in Unix environments is as easy as it can be since standard IO support is always available, but in embedded environments the full standard IO libraries may be too expensive, in terms of program size and especially in complexity; without system operating support, the traditional solution to make the trace messages go out via a dedicated peripheral (a hardware debug channel, like ARM ITM, or even an USART port), is to rewrite a low level function, like <code class="highlighter-rouge">_write()</code> in newlib; unfortunately, the path from <code class="highlighter-rouge">printf()</code> to the actual <code class="highlighter-rouge">_write()</code> is quite long.</p>
 
-<p>Plus that in some applications, like those using semihosting, the standard output and standard error are already used for a normal functionality (like outputing test results) and intermixing trace messages may interfere with the normal behaviour.</p>
+<p>Plus in some applications, like those using semihosting, the standard output and standard error are already used for normal functionality (like outputting test results) and intermixing trace messages may interfere with the normal behaviour.</p>
 
 <h4 id="use-a-separate-trace-channel">Use a separate trace channel</h4>
 
-<p>Since for debug purposes things should be as simple as possible, the prefered solution is to avoid using STDOUT or STDERR at all, and use a completely separated trace channel, that does not depend at all on the usual redirected system functions.</p>
+<p>Since for debug purposes things should be as simple as possible, the preferred solution is to avoid using STDOUT or STDERR at all, and use a completely separated trace channel, that does not depend at all on the usual redirected system functions.</p>
 
 <p>Using these functions is very simple, the prototypes being identical to the standard calls, but placed in a separate namespace (in C++) or a separate prefix (in C):</p>
 
@@ -1070,7 +1070,7 @@ cpp-libs.git
 </code></pre>
 </div>
 
-<p>The complete public API is:</p>
+<p>The complete public C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">printf</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
@@ -1112,7 +1112,7 @@ cpp-libs.git
 
 <h4 id="code-1">Code</h4>
 
-<p>The entire trace library consist of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/diag-trace.git">micro-os-plus/diag-trace</a> that has no other dependencies and can be included in any application.</p>
+<p>The entire trace library consists of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/diag-trace.git">micro-os-plus/diag-trace</a> that has no other dependencies and can be included in any application.</p>
 
 <h2 id="demo">Demo</h2>
 
@@ -1126,7 +1126,7 @@ cpp-libs.git
 <h3 id="command-line-template">Command line template</h3>
 
 <ul>
-  <li>generate projct</li>
+  <li>generate project</li>
   <li>build with xmake</li>
 </ul>
 
