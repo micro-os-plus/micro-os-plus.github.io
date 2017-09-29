@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Sep 28 21:15:04 2017 UTC.</td>
+    <td id="last-modified">Last modified on Fri Sep 29 14:01:05 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -290,10 +290,10 @@
 <a href="#embedded-projects-specifics"><span class="tocnumber">3</span> <span class="toctext">Embedded projects specifics</span></a>
 <ul>
 <li class="toc_level-2 toc_section-11">
-<a href="#board-vs-device-vs-architecture"><span class="tocnumber">3.1</span> <span class="toctext">Board vs Device vs Architecture</span></a>
+<a href="#the-startup-code"><span class="tocnumber">3.1</span> <span class="toctext">The startup code</span></a>
 </li>
 <li class="toc_level-2 toc_section-12">
-<a href="#the-startup-code"><span class="tocnumber">3.2</span> <span class="toctext">The startup code</span></a>
+<a href="#board-vs-device-vs-architecture"><span class="tocnumber">3.2</span> <span class="toctext">Board vs Device vs Architecture</span></a>
 </li>
 <li class="toc_level-2 toc_section-13">
 <a href="#interrupts"><span class="tocnumber">3.3</span> <span class="toctext">Interrupts</span></a>
@@ -302,17 +302,20 @@
 <a href="#linker-scripts"><span class="tocnumber">3.4</span> <span class="toctext">Linker scripts</span></a>
 </li>
 <li class="toc_level-2 toc_section-15">
-<a href="#tracing-support"><span class="tocnumber">3.5</span> <span class="toctext">Tracing support</span></a>
+<a href="#the-c-and-c-libraries"><span class="tocnumber">3.5</span> <span class="toctext">The C and C++ libraries</span></a>
+</li>
+<li class="toc_level-2 toc_section-16">
+<a href="#tracing-support"><span class="tocnumber">3.6</span> <span class="toctext">Tracing support</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-16">
+<li class="toc_level-1 toc_section-17">
 <a href="#demo"><span class="tocnumber">4</span> <span class="toctext">Demo</span></a>
 <ul>
-<li class="toc_level-2 toc_section-17">
+<li class="toc_level-2 toc_section-18">
 <a href="#eclipse-project-template"><span class="tocnumber">4.1</span> <span class="toctext">Eclipse project template</span></a>
 </li>
-<li class="toc_level-2 toc_section-18">
+<li class="toc_level-2 toc_section-19">
 <a href="#command-line-template"><span class="tocnumber">4.2</span> <span class="toctext">Command line template</span></a>
 </li>
 </ul>
@@ -327,11 +330,11 @@
 
 <h3 id="challanges">Challanges</h3>
 
-<p>One of the major challanges when developing software is reusing various pieces of code from other applications.</p>
+<p>One of the major challanges when developing software is reusing various pieces of code among applications.</p>
 
-<p>The trivial approach is to simply copy/paste routines or entire files from one application to another. This is ok as long as the code does not change; once this happens, manually updating all projects is no longer trivial.</p>
+<p>The trivial approach is to simply copy/paste routines or entire files from one application to another. This is ok as long as the code does not change; once the code changes, manually updating all projects is no longer trivial.</p>
 
-<p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but if the number of libraries grows, and the libraries have inter-dependencies, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
+<p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but if the libraries have inter-dependencies, and their number grows, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
 
 <p>The problem is agravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of the other libraries.</p>
 
@@ -347,7 +350,7 @@
 
 <p>Such solutions are already available for other languages, with the most successful one being <a href="https://www.npmjs.com">npm</a> (The Node Package Manager), for JavaScript modules.</p>
 
-<p>There were also several attempts to create such solutions for C/C++ embedded applications, but they had limited success (for example CMSIS Packs, which uses huge packages and is more or less specific to Keil MDK, and yotta, originally from ARM mbed, but now abandoned, which mandates the use of cmake and python).</p>
+<p>There were also several attempts to create such solutions for C/C++ embedded applications, but they had limited success (for example CMSIS Packs, which uses huge packages and is more or less specific to Keil MDK, and yotta, originally from ARM mbed, now abandoned, which mandates the use of cmake and python).</p>
 
 <h2 id="project-structure">Project structure</h2>
 
@@ -404,12 +407,12 @@ hifive1-blinky
 
 <div class="language-json highlighter-rouge">
 <pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="err">...</span><span class="w">
+    </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
     </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.0.1"</span><span class="w">
         </span><span class="p">,</span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.3"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-    </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 </div>
@@ -420,17 +423,15 @@ hifive1-blinky
 
 <p>To further automate things, packages can refer not only to other source packages, but to tools packages, which include separate applications required during the development cycle, like toolchains, debuggers, builders, etc.</p>
 
+<p>This is a very powerful feature, that ensures, in a portable way, that the project can be built immediately after the install is complete.</p>
+
 <h2 id="embedded-projects-specifics">Embedded projects specifics</h2>
-
-<h3 id="board-vs-device-vs-architecture">Board vs Device vs Architecture</h3>
-
-<p>TODO: explain each package type, with content, metadata and usage</p>
 
 <h3 id="the-startup-code">The startup code</h3>
 
 <p>Traditionally, the startup code is writen in assembly, the justification being that, right after reset, the run-time is not yet suitable for higher level languages, like C/C++. For some modern architectures, like Cortex-M, this is plainly wrong, since the advanced core automatically loads the stack pointer before calling the <code class="highlighter-rouge">Reset_Handler</code>, and the startup code can be written in C/C++ from the very beginning.</p>
 
-<h4 id="assembly-entry-code">Assembly entry code</h4>
+<h4 id="the-assembly-entry-code">The assembly entry code</h4>
 
 <p>Other, more traditional architectures, still require some small assembly code to explicitly set several registers.</p>
 
@@ -461,11 +462,11 @@ hifive1-blinky
 </code></pre>
 </div>
 
-<h4 id="portable-startup">Portable startup</h4>
+<h4 id="the-portable-startup-code">The portable startup code</h4>
 
 <p>The traditional functionality is to initialise the data &amp; bss sections, to call the C++ static constructors and then pass control to the application <code class="highlighter-rouge">main()</code>.</p>
 
-<p>For embedded applications, the sequence is basically the same, just that several specific initialisation routines are called.</p>
+<p>For embedded applications, the sequence is basically the same, just that several specific initialisation routines are added.</p>
 
 <p>A simplified version of the portable startup code is:</p>
 
@@ -499,33 +500,452 @@ hifive1-blinky
 </code></pre>
 </div>
 
-<p>The code is more or less self-documented. Perhaps the hardware initialisation hooks may raise some questions, especially why the initialisations are not done inside <code class="highlighter-rouge">main()</code>, and why there are two hardware initialisation routines.</p>
-
-<p>For very simple C applications, it is true that the initialisation code can be called from <code class="highlighter-rouge">main()</code>.</p>
+<p>The code is more or less self-documented. Perhaps some questions may be raised by the hardware initialisation hooks, especially why not doing the initialisations inside <code class="highlighter-rouge">main()</code>, and why are needed two hardware initialisation routines.</p>
 
 <h4 id="os_startup_initialize_hardware-">
 <code class="highlighter-rouge">os_startup_initialize_hardware ()</code>
 </h4>
 
-<p>For more complex applications, like most C++ applications, it is common to execute code before entering <code class="highlighter-rouge">main()</code> (like calling constructors for static objects).</p>
+<p>For very simple C applications, it is true that the initialisation code can be called from <code class="highlighter-rouge">main()</code>.</p>
 
-<p>This means the hardware must be initialised <em>before</em> entering <code class="highlighter-rouge">main()</code>, thus the <code class="highlighter-rouge">os_startup_initialize_hardware ()</code> hook, that must be defined by the application, and is called before the static constructors, and after the data &amp; bss are initialised.</p>
+<p>But for more complex applications, like most C++ applications, it is common to execute code before entering <code class="highlighter-rouge">main()</code> (like calling constructors for static objects).</p>
+
+<p>This implies that the hardware should be initialised <em>before</em> entering <code class="highlighter-rouge">main()</code>, thus the <code class="highlighter-rouge">os_startup_initialize_hardware ()</code> hook, that must be defined by the application, and is called after the data &amp; bss are initialised and before the static constructors.</p>
 
 <h4 id="os_startup_initialize_hardware_early-">
 <code class="highlighter-rouge">os_startup_initialize_hardware_early ()</code>
 </h4>
 
-<p>But for some cases this might be too late. What if the board uses external RAM? If so, it obviously must be configured <em>before</em> initialising the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might be possible to trigger a reset before the application reaches the main code.</p>
+<p>This approach is usualy enough, but for some cases running the first initialisations after the data &amp; bss might be too late. What if the board uses external RAM? If so, it obviously must be configured <em>before</em> initialising the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might trigger a reset before the application reaches the main code.</p>
 
-<h4 id="code-location">Code location</h4>
+<h4 id="code">Code</h4>
 
 <p>The entire startup library consist of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/startup.git">micro-os-plus/startup</a>.</p>
+
+<h3 id="board-vs-device-vs-architecture">Board vs Device vs Architecture</h3>
+
+<p>Traditionally, boards come with a BSP (Board Support Package), that provides all board specific definitions and drivers.</p>
+
+<p>However, for reusability reasons, in the µOS++ implementation, the BSP is not monolythic, but modular, with three explict levels:</p>
+
+<ul>
+  <li>board (like <strong>HiFive1</strong>)</li>
+  <li>device (like <strong>FE310-G000</strong>)</li>
+  <li>architecture (like <strong>RISC-V</strong>)</li>
+</ul>
+
+<p>In other words, multiple boards can share the definitions of a single device, and multiple devices can share the definitions specific to a common architecture.</p>
+
+<p>The following examples include C++ code, and most of µOS++ is written in C++, but the application can be entirely witten in C, equivalent C APIs are also available at all levels.</p>
+
+<h4 id="board">Board</h4>
+
+<p>The board definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/board.h&gt;
+</span></code></pre>
+</div>
+
+<p>There are currently not many mandatory definitions at board level, except a function that returns the frequency of the RTC oscillator.</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<span class="p">{</span>
+  <span class="k">namespace</span> <span class="n">board</span>
+  <span class="p">{</span>
+    <span class="kt">uint32_t</span>
+    <span class="n">rtc_frequency_hz</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="p">}</span> <span class="cm">/* namespace board */</span>
+<span class="p">}</span> <span class="cm">/* namespace riscv */</span>
+</code></pre>
+</div>
+
+<p>The board package also includes some metadata, used to automatically configure projects using the board, for example:</p>
+
+<div class="language-json highlighter-rouge">
+<pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"boards"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nt">"hifive1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive, Inc."</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@sifive.com"</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nt">"revision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A01"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.sifive.com/products/hifive1/"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"orderForm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.crowdsupply.com/sifive/hifive1/"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HiFive1"</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The HiFive1 is an Arduino-Compatible development kit featuring the Freedom E310, the industry’s first commercially available RISC-V SoC."</span><span class="p">,</span><span class="w">
+			</span><span class="nt">"installedDevice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe310-g000"</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nt">"compatibleDevices"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nt">"flash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+					</span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"128 Mb"</span><span class="p">,</span><span class="w">
+					</span><span class="nt">"interface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spi0"</span><span class="p">,</span><span class="w">
+					</span><span class="nt">"memoryRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rom"</span><span class="w">
+				</span><span class="p">},</span><span class="w">
+				</span><span class="nt">"hfxtal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 MHz"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"lfxtal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32768 Hz"</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nt">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nt">"interface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ftdi"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"connector"</span><span class="p">:</span><span class="w"> </span><span class="s2">"micro-usb"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"openocd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-f &amp;quot;board/sifive-freedom-e300-hifive1.cfg&amp;quot;"</span><span class="p">,</span><span class="w">
+				</span><span class="nt">"jlink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				    </span><span class="nt">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe310-g000"</span><span class="w">
+				</span><span class="p">}</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nt">"compile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+					</span><span class="s2">"&lt;micro-os-plus/board.h&gt;"</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="nt">"macros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+					</span><span class="s2">"SIFIVE_HIFIVE1_BOARD"</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h4 id="device">Device</h4>
+
+<p>The device definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/device.h&gt;
+</span></code></pre>
+</div>
+
+<p>For RISC-V, the device definitions include functions to access the memory mapped system registers, for example:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<span class="p">{</span>
+  <span class="k">namespace</span> <span class="n">device</span>
+  <span class="p">{</span>
+    <span class="kt">uint64_t</span>
+    <span class="n">mtime</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">mtime</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">value</span><span class="p">);</span>
+
+    <span class="kt">uint64_t</span>
+    <span class="n">mtimecmp</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">mtimecmp</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">value</span><span class="p">);</span>
+
+    <span class="c1">// ...
+</span>  <span class="p">}</span> <span class="cm">/* namespace device */</span>
+<span class="p">}</span> <span class="cm">/* namespace riscv */</span>
+</code></pre>
+</div>
+
+<p>There are also functions to access the PLIC registers:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<span class="p">{</span>
+  <span class="k">namespace</span> <span class="n">plic</span>
+  <span class="p">{</span>
+    <span class="kt">void</span>
+    <span class="n">initialize</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">clear_priorities</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="n">priority_t</span>
+    <span class="n">threshold</span> <span class="p">(</span><span class="n">priority_t</span> <span class="n">priority</span><span class="p">);</span>
+
+    <span class="n">priority_t</span>
+    <span class="n">threshold</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">enable_interrupt</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">disable_interrupt</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">);</span>
+
+    <span class="kt">bool</span>
+    <span class="n">is_interrupt_enabled</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">priority</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">,</span> <span class="n">priority_t</span> <span class="n">priority</span><span class="p">);</span>
+
+    <span class="n">priority_t</span>
+    <span class="n">priority</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">);</span>
+
+    <span class="n">source_t</span>
+    <span class="n">claim_interrupt</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">complete_interrupt</span> <span class="p">(</span><span class="n">source_t</span> <span class="n">global_interrupt_id</span><span class="p">);</span>
+
+  <span class="p">}</span> <span class="cm">/* namespace plic */</span>
+<span class="p">}</span> <span class="cm">/* namespace riscv */</span>
+</code></pre>
+</div>
+
+<p>There are also declarations for the local and global interrupt handlers, for example:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code>  <span class="c1">// ...
+</span>
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_wdogcmp</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_rtccmp</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_uart0</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_uart1</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_qspi0</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_qspi1</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_qspi2</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_interrupt_global_handle_gpio0</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="c1">// ...
+</span></code></pre>
+</div>
+
+<p>The device packages also include some metadata, to be consumed by automated tools, for example:</p>
+
+<div class="language-json highlighter-rouge">
+<pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"families"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"fe300"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive, Inc."</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@sifive.com"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E300"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E310-G000"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.sifive.com/products/freedom-e310/"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"compile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"&lt;micro-os-plus/device.h&gt;"</span><span class="w">
+                            </span><span class="p">],</span><span class="w">
+                            </span><span class="nt">"macros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"SIFIVE_FREEDOM_E310"</span><span class="w">
+                            </span><span class="p">],</span><span class="w">
+                            </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"-march=rv32imac"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"-mabi=ilp32"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"-mcmodel=medany"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"-msmall-data-limit=8"</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RV32IMAC"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32 bits"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"hfosc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13800 kHz"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"lfosc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32768 Hz"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"maxClock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"320 MHz"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qfn"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"leads"</span><span class="p">:</span><span class="w"> </span><span class="s2">"48"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"vcc"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"1.8 V"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3.3 V"</span><span class="w"> </span><span class="p">]</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"memoryRegions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"ram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nt">"onChip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x80000000"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 KiB"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rwx"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"On-Chip Volatile Memory - Data Tightly Integrated Memory (DTIM)"</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="nt">"rom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nt">"onChip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20000000"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"maxSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512 MiB"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rx"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Off-Chip Non-Volatile Memory - QSPI 0 eXecute-In-Place (XIP)"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"jtag"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nt">"tapindex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"idcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x10e31913"</span><span class="p">,</span><span class="w">
+                                </span><span class="nt">"irlen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"xsvd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsvd/fe310-g000-xsvd.json"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>To support debuggers and emulators, a special file with the structured definitions of the peripheral registered is used:</p>
+
+<div class="language-json highlighter-rouge">
+<pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E310-G000"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"busWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"resetValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00000000"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"resetMask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xFFFFFFFF"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rw"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"peripherals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"clint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coreplex-Local Interruptor (CLINT)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"baseAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x02000000"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x10000"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"msip0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSIP for hart 0"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"mtimecmp0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer compare register for hart 0"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4000"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nt">"mtime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer register"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xBFF8"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro"</span><span class="p">,</span><span class="w">
+                            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h4 id="architecture">Architecture</h4>
+
+<p>The architecture definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/architecture.h&gt;
+</span></code></pre>
+</div>
+
+<p>For RISC-V, the architecture definitions include functions to access the CSRs, for example:</p>
+
+<div class="language-c++ highlighter-rouge">
+<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<span class="p">{</span>
+  <span class="k">namespace</span> <span class="n">csr</span>
+  <span class="p">{</span>
+    <span class="n">arch</span><span class="o">::</span><span class="n">register_t</span>
+    <span class="n">mstatus</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">mstatus</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">value</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">clear_mstatus</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">mask</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">set_mstatus</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">mask</span><span class="p">);</span>
+
+    <span class="n">arch</span><span class="o">::</span><span class="n">register_t</span>
+    <span class="n">mtvec</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">mtvec</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">value</span><span class="p">);</span>
+
+    <span class="n">arch</span><span class="o">::</span><span class="n">register_t</span>
+    <span class="n">mcause</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="n">arch</span><span class="o">::</span><span class="n">register_t</span>
+    <span class="n">mie</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">mie</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">value</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">clear_mie</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">mask</span><span class="p">);</span>
+
+    <span class="kt">void</span>
+    <span class="n">set_mie</span> <span class="p">(</span><span class="n">arch</span><span class="o">::</span><span class="n">register_t</span> <span class="n">mask</span><span class="p">);</span>
+
+    <span class="kt">uint64_t</span>
+    <span class="n">mcycle</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">uint32_t</span>
+    <span class="n">mcycle_low</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="kt">uint32_t</span>
+    <span class="n">mcycle_high</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="n">arch</span><span class="o">::</span><span class="n">register_t</span>
+    <span class="n">mhartid</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+    <span class="c1">// ...
+</span>  <span class="p">}</span> <span class="cm">/* namespace csr */</span>
+<span class="p">}</span> <span class="cm">/* namespace riscv */</span>
+</code></pre>
+</div>
+
+<p>There are also declarations for the synchronous exceptions and the common local interrupt handlers, for example:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code>  <span class="kt">void</span>
+  <span class="n">riscv_exception_handle_misaligned_fetch</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_exception_handle_fault_fetch</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_exception_handle_illegal_instruction</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="kt">void</span>
+  <span class="n">riscv_exception_handle_breakpoint</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+  <span class="c1">// ...
+</span></code></pre>
+</div>
 
 <h3 id="interrupts">Interrupts</h3>
 
 <p>In modern architectures, interrupt processing is usually a no-op, there is almost nothing to do, apart from providing a list of pointers to interrupt handlers.</p>
 
-<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current implementation tries to provide a similar user experience, by hidding all the implementation details. The application has nothing else to do then define some fixed name functions and enable interrupts.</p>
+<p>Although for RISC-V the architecture specs make interrupt processing significantly more complicated, the current µOS++ implementation tries to provide a similar user experience, by hidding all the implementation details. The application has nothing else to do then define some fixed name functions and enable interrupts.</p>
 
 <p>For example, to handle the machine timer interrupt, the application code looks like this:</p>
 
@@ -551,9 +971,73 @@ hifive1-blinky
 </code></pre>
 </div>
 
+<p>The prototypes of these functions are provided by the device or architecture packages.</p>
+
 <h3 id="linker-scripts">Linker scripts</h3>
 
-<p>TODO: explain the multi-file linker scripts, with configuration</p>
+<p>As with most other projects generated by the GNU MCU Eclipse templates, the linker script is split into three parts:</p>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>tree ldscripts
+ldscripts
+├── libs.ld
+├── mem.ld
+└── sections.ld
+
+0 directories, 3 files
+<span class="err">$</span>
+</code></pre>
+</div>
+
+<p>The names should be suggestive for the content: <code class="highlighter-rouge">libs.ld</code> defines the additional libraries, <code class="highlighter-rouge">mem.ld</code> defines the memory regions and <code class="highlighter-rouge">sections.ld</code> defines the  sections and the mapping to the memory regions.</p>
+
+<p>To make the linker use them all, add something like this when invoking the linker:</p>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>&lt;prefix&gt;-gcc ... -L ldscripts -T libs.ld -T mem.ld -T sections.ld ...
+</code></pre>
+</div>
+
+<h3 id="the-c-and-c-libraries">The C and C++ libraries</h3>
+
+<p>These two packages complement the system libraries and provide missing functions are lighter implementations, more suitable in embedded applications.</p>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>tree c-libs.git 
+c-libs.git
+├── LICENSE
+├── README.md
+├── include
+│   └── newlib
+│       └── c-syscalls.h
+├── package-lock.json
+├── package.json
+└── src
+    ├── _sbrk.c
+    ├── c-syscalls-empty.c
+    └── stdlib
+        ├── assert.c
+        ├── atexit.cpp
+        ├── atexit.h
+        ├── exit.c
+        └── init-fini.c
+
+4 directories, 12 files
+
+<span class="gp">$ </span>tree cpp-libs.git
+cpp-libs.git
+├── LICENSE
+├── README.md
+├── include
+├── package-lock.json
+├── package.json
+└── src
+    └── cxx.cpp
+
+2 directories, 5 files
+<span class="err">$</span>
+</code></pre>
+</div>
 
 <h3 id="tracing-support">Tracing support</h3>
 
@@ -620,12 +1104,13 @@ hifive1-blinky
 
     <span class="kt">void</span>
     <span class="n">flush</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
   <span class="p">}</span> <span class="cm">/* namespace trace */</span>
 <span class="p">}</span> <span class="cm">/* namespace os */</span>
 </code></pre>
 </div>
 
-<h4 id="code-location-1">Code location</h4>
+<h4 id="code-1">Code</h4>
 
 <p>The entire trace library consist of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/diag-trace.git">micro-os-plus/diag-trace</a> that has no other dependencies and can be included in any application.</p>
 
