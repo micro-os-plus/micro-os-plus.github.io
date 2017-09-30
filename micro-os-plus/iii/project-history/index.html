@@ -241,7 +241,7 @@
 <h1 class="page-title">Project history</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Aug 24 15:43:47 2017 UTC.</td>
+    <td id="last-modified">Last modified on Sat Sep 30 20:31:20 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/iii/project-history.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -302,7 +302,7 @@
 <a href="#march-2014"><span class="tocnumber">6.2</span> <span class="toctext">March 2014</span></a>
 </li>
 <li class="toc_level-2 toc_section-15">
-<a href="#cmsis-packages"><span class="tocnumber">6.3</span> <span class="toctext">CMSIS packages?</span></a>
+<a href="#cmsis-packages"><span class="tocnumber">6.3</span> <span class="toctext">CMSIS packages</span></a>
 </li>
 <li class="toc_level-2 toc_section-16">
 <a href="#xpacksxcdl--migration-to-github"><span class="tocnumber">6.4</span> <span class="toctext">xPacks/XCDL &amp; migration to GitHub</span></a>
@@ -323,15 +323,15 @@
 </div>
 <h2 id="the-early-years">The early years</h2>
 
-<p>My interest in system programming dates from the first moments when I started to play with computers. After learning FORTRAN in my first college year, I wondered how does the big computer compile my programs and how is it able to run multiple jobs at the same time. However, my first hands-on experience with multitasking code was in the late 80s, when I ported the <a href="http://en.wikipedia.org/wiki/Version_7_Unix">Version 7 Unix</a> system on the <a href="http://en.wikipedia.org/wiki/68000">Motorola MC68000</a> microprocessor. Soon after this I designed and implemented a simple scheduler running on <a href="http://en.wikipedia.org/wiki/Z80">Zilog Z80</a>, that was successfully used in a commercial product. Another significant step towards the embedded world was in the late 90s, when I ported <a href="http://en.wikipedia.org/wiki/ECos">eCos</a> to run on <a href="http://en.wikipedia.org/wiki/I960">Intel i960</a>.</p>
+<p>My interest in system programming dates from the first moments when I started to play with computers. After learning FORTRAN in my first college year, I wondered how does the big computer compile my programs and how is it able to run multiple jobs at the same time. However, my first hands-on experience with multitasking code was in the late 80s, when I ported the <a href="http://en.wikipedia.org/wiki/Version_7_Unix">Version 7 Unix</a> system to the <a href="http://en.wikipedia.org/wiki/68000">Motorola MC68000</a> microprocessor. Soon after this I designed and implemented a simple scheduler running on <a href="http://en.wikipedia.org/wiki/Z80">Zilog Z80</a>, that was successfully used in a commercial product. Another significant step towards the embedded world was in the late 90s, when I ported <a href="http://en.wikipedia.org/wiki/ECos">eCos</a> to run on <a href="http://en.wikipedia.org/wiki/I960">Intel i960</a>.</p>
 
 <h2 id="why-a-new-embedded-operating-system">Why a new embedded operating system?</h2>
 
 <p>There were many embedded operating systems available by the time this project was initiated. However, the context I planned to use this embedded OS was slightly more specific, i.e. aviation instruments. I started to experiment with aviation instruments some years before, and one determining factor on the decision was an article stating that for the design of an aviation instrument, a framework is acceptable if it allows to complete the design within one day. Although this seems rather extreme, the idea is quite valid, and has important consequences.</p>
 
-<p>The first consequence is that is promotes modular design, i.e. instead of do-it-all box (a kind of a Swiss army knife like design), it is better to split the design into multiple independent modules, each at the limit of simplicity.</p>
+<p>The first consequence is that it promotes modular design, i.e. instead of do-it-all box (a kind of a Swiss army knife like design), it is better to split the design into multiple independent modules, each performing a specific job.</p>
 
-<p>The second consequence is that the framework should be very well structured, easily configurable and as light as possible, in order to run with limited resources on simple processors. By well structured I understand modular, object oriented design, favouring a high degree of code reuse, both between related projects, and between different hardware platforms.</p>
+<p>The second consequence is that the framework should be very well structured, easily configurable and as light as possible, in order to run with limited resources on simple processors. By well structured I mean modular, object oriented design, favouring a high degree of code reuse, both between related projects, and between different hardware platforms.</p>
 
 <p>After a long and detailed search, there were many partial solutions identified, but none was able to address all the requirements; so, based on my previous experience with multitasking systems, the decision to develop an in-house solution came naturally.</p>
 
@@ -339,7 +339,7 @@
 
 <p>The decision for C++ was a tough one, and I’m convinced it raises a lot of questions and critics. However, I’m also convinced it was a good decision, and those who take the time to seriously consider it will probably reach the same conclusion.</p>
 
-<p>First of all, by C++ I do not mean the full C++ implementation, but a limited subset: no exceptions, no real time typing, possibly no multiple inheritance; more or less a kind of <em>Embedded C++</em>, i.e. a more structured way of writing C. Writing object oriented code is perfectly possible in C too, but the syntax is significantly more complex. One usual argument agains C++ is a performance penalty, but most of those who claim this have no compile expertise, since for the subset of C++ that is needed for embedded applications the performance gain for C vs C++ is null for regular classes, and almost null for classes that require polymorphism.</p>
+<p>First of all, by C++ I do not mean the full C++ implementation, but a limited subset: no exceptions, no real time typing, possibly no multiple inheritance; more or less a kind of <em>Embedded C++</em>, i.e. a more structured way of writing C. Writing object oriented code is perfectly possible in C too, but the syntax is significantly more complex. One common argument against C++ is the assumed performance penalty, but most of those who claim this have no compiler expertise, since for the subset of C++ that is needed for embedded applications the performance gain for C vs C++ is null for regular classes, and almost null for classes that require polymorphism.</p>
 
 <p>Finally, the contributing factor on making the decision to use C++ came after reading Michael Barr’s book, <a href="http://www.amazon.com/Programming-Embedded-Systems-C/dp/1565923545">Programming Embedded Systems in C and C++</a>, that came with some good code samples written in C++.</p>
 
@@ -367,13 +367,13 @@
 
 <h3 id="use-of-the-xcdl-experimental-version">Use of the XCDL experimental version</h3>
 
-<p>The need for second edition of µOS++ become obvious while using it for several commercial projects, but active work started in early 2013, after the XCDL (eXtended Components Definition Language) project become functional.</p>
+<p>The need for second edition of µOS++ become obvious while using it for several commercial projects, but active work started in early 2013, after the <a href="http://xcdl.github.io">XCDL</a> (eXtended Components Definition Language) project become functional.</p>
 
-<p>The major critics of the first version was the lack of support for <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a>, requirements more and more observed for modern projects.</p>
+<p>The major criticism of the first version was the lack of support for <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> and <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a>, requirements more and more expected for modern projects.</p>
 
 <p>Starting from scratch, the first version of a unit testing infrastructure was implemented on the OS X synthetic platform.</p>
 
-<p>The SE project wiki was created, initially hosted in the SourceForge project web space, then moved to the livius.net domain due to major SourceForge shortcomings.</p>
+<p>The µOS++ SE (second edition) project wiki was created, initially hosted in the SourceForge project web space, then moved to the livius.net domain due to major SourceForge shortcomings.</p>
 
 <h3 id="the-cortex-m-port">The Cortex-M port</h3>
 
@@ -381,11 +381,11 @@
 
 <h3 id="full-version-functional">Full version functional</h3>
 
-<p>The project grew steadily, with the core classes functional, the preemptive scheduler was functional on STM32Fx cores, and the cooperative also on synthetic POSIX platforms (OS X and GNU/Linux). The sources compiled without warnings on GCC 4.7, GCC 4.8 and LLVM clang 3.2/3.3, in 32/64-bit variants, and a multitude of tests were running on OS X and Ubuntu.</p>
+<p>The project grew steadily, with the scheduler running on STM32Fx cores (in pre-emptive mode), and on synthetic POSIX platforms (OS X and GNU/Linux, in cooperative mode). The sources compiled without warnings on GCC 4.7, GCC 4.8 and LLVM clang 3.2/3.3, in 32/64-bit variants, and a multitude of tests were running on OS X and Ubuntu.</p>
 
-<p>The repository increased steadily, and in Octomber 2013 it counted more than 700 files, with more than 150K lines.</p>
+<p>The repository increased steadily, and in October 2013 it numbered more than 700 files, with more than 150K lines.</p>
 
-<p>Acknowledging the need for a better Eclipse integration, in Oct. 2013 the development was temporarily interrupted, with focus changes to <a href="http://gnuarmeclipse.livius.net/blog/">GNU ARM Eclipse plug-ins</a>.</p>
+<p>Acknowledging the need for a better Eclipse integration, in Oct. 2013 the development was temporarily interrupted, with focus changed to <a href="http://gnuarmeclipse.livius.net/blog/">GNU ARM Eclipse plug-ins</a>.</p>
 
 <h2 id="the-µos-third-edition">The µOS++ third edition</h2>
 
@@ -393,13 +393,13 @@
 
 <p>The need for the third edition of µOS++ become evident after the experience with GNU ARM Eclipse plug-ins and the obvious need to integrate µOS++ with Eclipse.</p>
 
-<p>Work on µOS++ IIIe officially started with creation of the new Git repository and the update of the Wiki.</p>
+<p>Work on µOS++ IIIe officially started with creation of the new Git repository <a href="https://github.com/micro-os-plus">micro-os-plus</a> and a new <a href="http://micro-os-plus.github.io">web</a>.</p>
 
 <h3 id="march-2014">March 2014</h3>
 
-<p>After experimenting with several implementation for the GpioPort &amp; Pin, it was concluded that best readability for accessing the hardware registers is offered by using the CMSIS large device header; the second choice was offered by using RegisterAccess policies, with the advantage of compile time checks for read/write violations, but with loss of readability.</p>
+<p>After experimenting with several implementations of the GpioPort &amp; Pin, it was concluded that best readability for accessing the hardware registers is offered by using the CMSIS large device header; the second choice was offered by using RegisterAccess policies, with the advantage of compile time checks for read/write violations, but with loss of readability.</p>
 
-<h3 id="cmsis-packages">CMSIS packages?</h3>
+<h3 id="cmsis-packages">CMSIS packages</h3>
 
 <p>In mid 2014 the documentation for the ARM CMSIS packages was studied and some tests were performed with the Keil tools and an experimental package manager was implemented as an Eclipse plug-in; something derived from the CMSIS packages might become the preferred distribution mechanism.</p>
 
@@ -407,7 +407,7 @@
 
 <h3 id="xpacksxcdl--migration-to-github">xPacks/XCDL &amp; migration to GitHub</h3>
 
-<p>Further research concluded that CMSIS Packs alone are not enough, and a more elaborate solution is necessary; inspired from yotta, in late 2015 the xPacks format was tested and adopted.</p>
+<p>Further research concluded that CMSIS Packs alone are not enough, and a more elaborate solution is necessary; inspired from <a href="https://github.com/ARMmbed/yotta">yotta</a>, in late 2015 the xPacks format was tested and adopted.</p>
 
 <p>In December 2015 the project was migrated to GitHub and restructured as xPacks, stored as separate sub-projects.</p>
 
@@ -415,11 +415,13 @@
 
 <p>In Jan 2016, the CMSIS++ repository was created, with a double intent: to act as a proposal for the next generation CMSIS, due in June 2016, and to serve as a portable API for the third edition of µOS++.</p>
 
-<p>In mid 2017 support for RISC-V was added and, for more portability, the use of the CMSIS name, associted with ARM, was discontinued.</p>
+<p>Unfortunately experience with CMSIS RTOS, Drivers and other components was disappointing, and further support for it was no longer considered appropriate.</p>
+
+<p>In mid 2017 support for RISC-V was added and, for more portability, the use of the CMSIS name, associated with ARM, was discontinued.</p>
 
 <h3 id="µos-rtos-api-v02">µOS++ RTOS API v0.2</h3>
 
-<p>In June 20 the reference implementation was complete, with two functional ports, one for Cortex-M and one for a synthetic POSIX platform.</p>
+<p>In June 20, 2016 the reference implementation was complete, with two functional ports, one for Cortex-M and one for a synthetic POSIX platform.</p>
 
 <p>The µOS++ RTOS API was tagged as v0.2.1.</p>
 
