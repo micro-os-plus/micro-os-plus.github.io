@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Oct  5 22:11:46 2017 UTC.</td>
+    <td id="last-modified">Last modified on Fri Oct  6 12:15:29 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -320,6 +320,32 @@
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-20">
+<a href="#future-plans"><span class="tocnumber">5</span> <span class="toctext">Future plans</span></a>
+<ul>
+<li class="toc_level-2 toc_section-21">
+<a href="#new-device-drivers"><span class="tocnumber">5.1</span> <span class="toctext">New device drivers</span></a>
+</li>
+<li class="toc_level-2 toc_section-22">
+<a href="#peripheral-register-view-in-eclipse"><span class="tocnumber">5.2</span> <span class="toctext">Peripheral register view in Eclipse</span></a>
+</li>
+<li class="toc_level-2 toc_section-23">
+<a href="#support-for-applications-using-an-rtos-and-middleware"><span class="tocnumber">5.3</span> <span class="toctext">Support for applications using an RTOS and middleware</span></a>
+</li>
+<li class="toc_level-2 toc_section-24">
+<a href="#new-and-improved-xpack-tools"><span class="tocnumber">5.4</span> <span class="toctext">New and improved xPack tools</span></a>
+</li>
+<li class="toc_level-2 toc_section-25">
+<a href="#documentation-pages"><span class="tocnumber">5.5</span> <span class="toctext">Documentation pages</span></a>
+</li>
+<li class="toc_level-2 toc_section-26">
+<a href="#many-more"><span class="tocnumber">5.6</span> <span class="toctext">Many more</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-27">
+<a href="#feedback"><span class="tocnumber">6</span> <span class="toctext">Feedback</span></a>
+</li>
 </ul>
 </td>
 </tr>
@@ -330,19 +356,19 @@
 
 <h3 id="challenges">Challenges</h3>
 
-<p>One of the major challenges when developing software is reusing various pieces of code among applications.</p>
+<p>One of the major challenges when developing software is reusing various pieces of code among applications and sharing code with other developers.</p>
 
 <p>The trivial approach is to simply copy/paste routines or entire files from one application to another. This is ok as long as the code does not change; once the code changes, manually updating all projects is no longer trivial.</p>
 
-<p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but for many libraries, especially when they have inter-dependencies, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
+<p>A slightly better solution is to create separate libraries, and include them <em>as is</em> in different projects. Initially this may look ok, but when having many libraries, especially with multiple inter-dependencies, knowing which libraries are compatible with each other may no longer be as easy as expected.</p>
 
-<p>The problem is aggravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of the other libraries.</p>
+<p>The problem is aggravated by the fact that each library has its own life cycle, and new versions may no longer be compatible with existing or newer versions of any of the other libraries.</p>
 
 <h3 id="solution">Solution</h3>
 
-<p>Instead of a monolithic project, where the build has to process a complicated folder hierarchy, one possible solution is to build the project from separate components, stored in separate packages.</p>
+<p>Instead of a monolithic project, where the build process has to deal with a complicated folder hierarchy, one possible solution is to build the project from separate components, stored as one or more files in separate packages.</p>
 
-<p>In practical terms, each package should have, in addition to the source files, some metadata, to define its own identity and a list of dependencies from other packages.</p>
+<p>In practical terms, each package should have, in addition to the source files, some <strong>metadata</strong>, to define its own <strong>identity</strong> and a list of <strong>dependencies</strong> from other packages.</p>
 
 <h3 id="benefits">Benefits</h3>
 
@@ -516,7 +542,13 @@ Folder 'xpacks/sifive-coreplex-devices' copied.
 
 <p>The first such tool is <code class="highlighter-rouge">xmake</code>, the xPack builder; it consumes <code class="highlighter-rouge">xmake.json</code> directly and generates <code class="highlighter-rouge">make</code> files. Future versions will also import/export Eclipse CDT configurations.</p>
 
-<p>To build the project, the standard method is to use <code class="highlighter-rouge">xpm build</code>, which, for the current project, invokes <code class="highlighter-rouge">xmake build</code>:</p>
+<p>To build the project, the standard method is to use <code class="highlighter-rouge">xpm build</code>, which, for the current project, invokes <code class="highlighter-rouge">xmake build</code>, which performs the following steps:</p>
+
+<ul>
+  <li>create the usual debug and release build configurations</li>
+  <li>generate the <code class="highlighter-rouge">make</code> files</li>
+  <li>finally invoke <code class="highlighter-rouge">make</code> to run the actual build.</li>
+</ul>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>$ xpm build
@@ -602,14 +634,6 @@ Invoking builder: 'make all'...
 'xpm build' completed in 11.346 sec.
 </code></pre>
 </div>
-
-<p>As it can be seen, <code class="highlighter-rouge">xmake</code>:</p>
-
-<ul>
-  <li>creates the usual debug and release build configurations</li>
-  <li>generates the <code class="highlighter-rouge">make</code> files</li>
-  <li>finally invokes <code class="highlighter-rouge">make</code> to run the actual build.</li>
-</ul>
 
 <p>As for any modern builder, subsequent invocations process only the changed file, if any:</p>
 
@@ -760,13 +784,13 @@ Build completed in 5.580 sec.
 
 <h3 id="eclipse-project">Eclipse project</h3>
 
-<p>To create a new Eclipse project, start the new project wizard (File → New → C++ project), enter a name and select <strong>SiFive C/C++ project</strong>:</p>
+<p>To create a new Eclipse project, start the new project wizard (File → New → C++ Project), enter a name and select <strong>SiFive C/C++ Project</strong>:</p>
 
 <p>
 <img src="/assets/images/2017/new-sifive-cpp.png" alt="New SiFive C++ project">
 </p>
 
-<p>Select the board (HiFive1, Coreplex E31 Arty, Coreplex E51 Arty), the content (empty, blinky), and the other configuration options:</p>
+<p>Select the board (HiFive1, Coreplex E31 Arty, Coreplex E51 Arty), the content (Empty, Blinky), and set the other configuration options:</p>
 
 <p>
 <img src="/assets/images/2017/new-sifive-cpp-settings.png" alt="New SiFive C++ project settings">
@@ -842,8 +866,8 @@ hifive1-blinky-cpp
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.0.2"</span><span class="w">
-      </span><span class="p">,</span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.5"</span><span class="w">
+      </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.0.2"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.5"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"@gnu-mcu-eclipse/riscv-none-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.1"</span><span class="p">,</span><span class="w">
@@ -1589,6 +1613,41 @@ cpp-libs.git
 
 <p>The entire trace library consists of only two files (one header and one source file), and is available as a separate GitHub project <a href="https://github.com/micro-os-plus/diag-trace-xpack.git">micro-os-plus/diag-trace-xpack</a> that has no other dependencies and can be included in any application.</p>
 
+<h2 id="future-plans">Future plans</h2>
+
+<p>Although the current templates already generate functional projects, there are many things that can be added/improved.</p>
+
+<h3 id="new-device-drivers">New device drivers</h3>
+
+<p>The first and most important one is better support for all SiFive device peripherals; new definitions of the memory mapped registers are under way, and new device drivers will be added.</p>
+
+<h3 id="peripheral-register-view-in-eclipse">Peripheral register view in Eclipse</h3>
+
+<p>With the new device packages including the structured definitions of the peripheral registers, it is perfecly possible to use these definitions to show the register bitfields during an Eclipse debug session, similar to using ARM SVD definitions.</p>
+
+<h3 id="support-for-applications-using-an-rtos-and-middleware">Support for applications using an RTOS and middleware</h3>
+
+<p>In addition to the simple blinky projects generated now, the future templates should be able to generate more complex projects, which include a RTOS and possibly the usual middleware (like POSIX IO, File System, Network).</p>
+
+<p>Support for FreeRTOS and µOS++ is planned.</p>
+
+<h3 id="new-and-improved-xpack-tools">New and improved xPack tools</h3>
+
+<p>In order to support scriptable builds and automated testing, the xPack tools (<code class="highlighter-rouge">xpm</code>, <code class="highlighter-rouge">xmake</code>, etc) will be enhanced with new features.</p>
+
+<h3 id="documentation-pages">Documentation pages</h3>
+
+<p>The current code already includes lots of Doxygen definitions, aiming to full reference manuals being generated from the source code, using the same approach as for the existing <a href="http://micro-os-plus.github.io/reference/cmsis-plus/">µOS++ reference pages</a>.</p>
+
+<p>Tutorials and User’s Manuals are also planned, similar to those partly available in the <a href="http://micro-os-plus.github.io/user-manual/">µOS++ User’s Manual</a>.</p>
+
+<h3 id="many-more">Many more</h3>
+
+<p>Being driven by the community needs, the list is open, and is limited only by our imagination.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>As usual for open source projects, any comments/criticism/suggestions are highly appreciated!</p>
 
 
 
