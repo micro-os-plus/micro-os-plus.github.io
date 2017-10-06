@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Fri Oct  6 12:15:29 2017 UTC.</td>
+    <td id="last-modified">Last modified on Fri Oct  6 13:04:05 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -336,14 +336,23 @@
 <a href="#new-and-improved-xpack-tools"><span class="tocnumber">5.4</span> <span class="toctext">New and improved xPack tools</span></a>
 </li>
 <li class="toc_level-2 toc_section-25">
-<a href="#documentation-pages"><span class="tocnumber">5.5</span> <span class="toctext">Documentation pages</span></a>
+<a href="#better-integration-with-eclipse"><span class="tocnumber">5.5</span> <span class="toctext">Better integration with Eclipse</span></a>
 </li>
 <li class="toc_level-2 toc_section-26">
-<a href="#many-more"><span class="tocnumber">5.6</span> <span class="toctext">Many more</span></a>
+<a href="#integration-with-other-editorsides"><span class="tocnumber">5.6</span> <span class="toctext">Integration with other editors/IDEs</span></a>
+</li>
+<li class="toc_level-2 toc_section-27">
+<a href="#improved-qemu-with-graphical-animated-leds--buttons"><span class="tocnumber">5.7</span> <span class="toctext">Improved QEMU with graphical animated LEDs &amp; buttons</span></a>
+</li>
+<li class="toc_level-2 toc_section-28">
+<a href="#documentation-pages"><span class="tocnumber">5.8</span> <span class="toctext">Documentation pages</span></a>
+</li>
+<li class="toc_level-2 toc_section-29">
+<a href="#many-more"><span class="tocnumber">5.9</span> <span class="toctext">Many more</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-27">
+<li class="toc_level-1 toc_section-30">
 <a href="#feedback"><span class="tocnumber">6</span> <span class="toctext">Feedback</span></a>
 </li>
 </ul>
@@ -1615,11 +1624,11 @@ cpp-libs.git
 
 <h2 id="future-plans">Future plans</h2>
 
-<p>Although the current templates already generate functional projects, there are many things that can be added/improved.</p>
+<p>Although the current templates are already able to generate functional projects, there are many things that can be added/improved.</p>
 
 <h3 id="new-device-drivers">New device drivers</h3>
 
-<p>The first and most important one is better support for all SiFive device peripherals; new definitions of the memory mapped registers are under way, and new device drivers will be added.</p>
+<p>First and foremost is better support for all SiFive device peripherals; new definitions of the memory mapped registers are already under way; APIs for new device drivers are currently in design phase, and will be implemented soon (as soon as the OpenCOD issues the hamper development will be addressed).</p>
 
 <h3 id="peripheral-register-view-in-eclipse">Peripheral register view in Eclipse</h3>
 
@@ -1627,17 +1636,37 @@ cpp-libs.git
 
 <h3 id="support-for-applications-using-an-rtos-and-middleware">Support for applications using an RTOS and middleware</h3>
 
-<p>In addition to the simple blinky projects generated now, the future templates should be able to generate more complex projects, which include a RTOS and possibly the usual middleware (like POSIX IO, File System, Network).</p>
+<p>In addition to the simple blinky projects generated now, the future templates should be able to generate more complex projects, including a RTOS and possibly some middleware (like POSIX IO, File System, Network).</p>
 
-<p>Support for FreeRTOS and µOS++ is planned.</p>
+<p>Support for FreeRTOS and µOS++ is planned, with the focus being on µOS++, as it supports both C and C++.</p>
 
 <h3 id="new-and-improved-xpack-tools">New and improved xPack tools</h3>
 
 <p>In order to support scriptable builds and automated testing, the xPack tools (<code class="highlighter-rouge">xpm</code>, <code class="highlighter-rouge">xmake</code>, etc) will be enhanced with new features.</p>
 
+<h3 id="better-integration-with-eclipse">Better integration with Eclipse</h3>
+
+<p>The SiFive C/C++ Project template is only the first step of using xPacks in Eclipse.</p>
+
+<p>After the command line tools will be fully functional, more xPack support will be added to Eclipse, first to complement the CMSIS Packs, then possibly as an alternate solution to the managed build support available now in Eclipse CDT.</p>
+
+<h3 id="integration-with-other-editorsides">Integration with other editors/IDEs</h3>
+
+<p>The main xPack tools will continue to be developed as command line tools.</p>
+
+<p>However, new editors and graphical IDEs are under continuous developpment and some of them get more and more traction (for example Visual Studio Code), so using them to build applications based on xPacks may become an attractive option.</p>
+
+<h3 id="improved-qemu-with-graphical-animated-leds--buttons">Improved QEMU with graphical animated LEDs &amp; buttons</h3>
+
+<p>Similarly to the way Cortex-M board are support in GNU MCU Eclipse QEMU, the HiFive1 board can be emulated in graphical mode, with animated LEDs and buttons.</p>
+
+<p>The first step is to emulate the board at such a level that not only allows the ‘blinky’ projects generated by the template to run, but also to show the LEDs blinking on top of the board image, and to trigger button actions when the button image is clicked on.</p>
+
+<p>In order to do this, the structured peripheral registers definitions available in the device xPack need to be validated, since the actual QEMU implementation code is automatically generated from the xsvd definitions.</p>
+
 <h3 id="documentation-pages">Documentation pages</h3>
 
-<p>The current code already includes lots of Doxygen definitions, aiming to full reference manuals being generated from the source code, using the same approach as for the existing <a href="http://micro-os-plus.github.io/reference/cmsis-plus/">µOS++ reference pages</a>.</p>
+<p>The current code already includes lots of Doxygen definitions, aiming to allowing the full reference manuals to be generated from the source code, using the same approach as for the existing <a href="http://micro-os-plus.github.io/reference/cmsis-plus/">µOS++ reference pages</a>.</p>
 
 <p>Tutorials and User’s Manuals are also planned, similar to those partly available in the <a href="http://micro-os-plus.github.io/user-manual/">µOS++ User’s Manual</a>.</p>
 
