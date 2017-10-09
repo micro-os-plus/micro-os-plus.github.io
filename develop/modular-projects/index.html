@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Fri Oct  6 13:21:14 2017 UTC.</td>
+    <td id="last-modified">Last modified on Mon Oct  9 14:33:54 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -383,11 +383,11 @@
 
 <p>This modular approach with structured metadata greatly increase the code <strong>reusability</strong> and <strong>upgradability</strong>, by allowing automated tools to bring into the project the required components, and to automatically manage the dependencies, accepting only combinations of compatible packages.</p>
 
-<p>Such solutions are already available for other languages, the most successful one being <a href="https://www.npmjs.com">npm</a> (The Node Package Manager), for JavaScript modules.</p>
+<p>Such solutions are already available for other languages, the most successful one being <a href="https://www.npmjs.com">npm</a> (The Node Package Manager), for Node.js/JavaScript modules.</p>
 
 <p>There were also several attempts to create similar solutions for C/C++ embedded applications, but they had limited success (for example CMSIS Packs, which uses huge packages and is more or less specific to Keil MDK, and yotta, originally from ARM mbed, now abandoned, based upon cmake and python).</p>
 
-<p>The current proposal uses a new technology, called <strong>xPack</strong>, that addresses the management of multi-version packages (for both source code and binary tools), and provides support for an automated build process, advanced application configuration and convenient debug.</p>
+<p>The current proposal uses a new technology, called <strong>xPack</strong>, that addresses the management of multi-version packages (for both source code and binary tools), and provides support for an automated build process, advanced application configuration and convenient debug (the <a href="https://xpack.github.io">project web</a> site is currently under construction).</p>
 
 <h2 id="examples">Examples</h2>
 
@@ -903,7 +903,7 @@ hifive1-blinky-cpp
   <li><code class="highlighter-rouge">@gnu-mcu-eclipse/openocd</code></li>
 </ul>
 
-<p><code class="highlighter-rouge">xmake</code> is a <code class="highlighter-rouge">npm</code> module, and is installed in <code class="highlighter-rouge">node_modules</code>, as required by the <code class="highlighter-rouge">Node.js</code> specifications.</p>
+<p><code class="highlighter-rouge">xmake</code> is a <code class="highlighter-rouge">npm</code> module, and is installed in <code class="highlighter-rouge">node_modules</code>, as required by the Node.js specifications.</p>
 
 <p>The other two are tool xPacks; they download and install, in a central location, platform specific binaries for the toolchain and OpenOCD, and make the path available to the current xPack.</p>
 
