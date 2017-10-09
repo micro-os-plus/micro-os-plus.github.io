@@ -241,7 +241,7 @@
 <h1 class="page-title">Modular projects</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Oct  9 14:33:54 2017 UTC.</td>
+    <td id="last-modified">Last modified on Mon Oct  9 15:12:29 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/modular-projects.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -644,7 +644,7 @@ Invoking builder: 'make all'...
 </code></pre>
 </div>
 
-<p>As for any modern builder, subsequent invocations process only the changed file, if any:</p>
+<p>As for any modern builder, subsequent invocations process only the changed files, if any:</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>$ xpm build
@@ -1000,7 +1000,7 @@ hifive1-blinky-cpp
 <code class="highlighter-rouge">os_startup_initialize_hardware_early ()</code>
 </h4>
 
-<p>This approach is usually enough, but for some cases running the first initializations after the data &amp; bss might be too late. What if the board uses external RAM? If so, it obviously must be configured <em>before</em> initializing the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might trigger a reset before the application reaches the main code.</p>
+<p>This approach is usually enough, but, for some cases, running the first initializations after the data &amp; bss inits might be too late. What if the board uses external RAM? If so, it obviously must be configured and enabled <em>before</em> initializing the data &amp; bss sections. Also, if the core starts at a very slow speed, it might be useful to raise the speed as early as possible, to ensure a fast startup. Another interesting case is when the device starts with a watchdog enabled; if the watchdog is not properly tailored to the application, it might trigger a reset before the application reaches the main code.</p>
 
 <h4 id="the-os-prefix-or-namespace">The <code class="highlighter-rouge">os</code> prefix or namespace</h4>
 
@@ -1030,7 +1030,7 @@ hifive1-blinky-cpp
 
 <p>The following examples include C++ code; actually most of µOS++ is written in C++, but this is only an implementation detail, the application can be entirely written in C, as equivalent C APIs are available at all levels.</p>
 
-<p>Although some voices advocate against using C++ in system code, these opinions are usually based more on believes, than on facts. C++ <strong>can</strong> be successfully used in embedded systems, and modern features, like constexpr, inline templates, can generate even smaller code.</p>
+<p>Although some voices advocate against using C++ in system/embedded code, these opinions are usually based more on believes, than on facts. C++ <strong>can</strong> be successfully used in embedded systems, and modern features, like constexpr, inline templates, can generate even smaller code.</p>
 
 <h4 id="board">Board</h4>
 
@@ -1041,7 +1041,7 @@ hifive1-blinky-cpp
 </span></code></pre>
 </div>
 
-<p>There are currently not many mandatory definitions at board level, except a function that returns the frequency of the RTC oscillator.</p>
+<p>For RISC-V, there are currently not many mandatory definitions at board level, except a function that returns the frequency of the RTC oscillator.</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
