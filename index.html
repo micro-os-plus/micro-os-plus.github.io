@@ -241,19 +241,35 @@
 <h1 class="page-title">The µOS++ IIIe Project</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Aug 24 15:43:47 2017 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 07:25:47 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/home.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
 
 
-<p>The <strong>µOS++ IIIe</strong> <em>(micro oh ɛs plus plus third edition)</em> project is the third iteration of µOS++, a POSIX-like, portable, open source, royalty-free, multi-tasking real-time operating system intended for 32/64-bits embedded applications, written in C++. The project is hosted on GitHub as <a href="https://github.com/micro-os-plus">micro-os-plus</a>. It has a comprehensive <a href="/user-manual/">User’s manual</a>. The APIs are documented in the <a href="/reference/cmsis-plus/">µOS++ reference</a>.</p>
+<p>The <strong>µOS++ IIIe</strong> <em>(micro oh ɛs plus plus third edition)</em> project is the third iteration of µOS++, a POSIX-like, portable, open source, royalty-free, multi-tasking real-time framework intended for 32/64-bits embedded applications, written in C++. The project is hosted on GitHub as <a href="https://github.com/micro-os-plus">micro-os-plus</a>. It has a comprehensive <a href="/user-manual/">User’s manual</a>. The APIs are documented in the <a href="/reference/cmsis-plus/">µOS++ reference</a>.</p>
 
 <p><strong>POSIX++</strong> is another point of view of the project; with most system APIs using the POSIX semantics, but being written in C++, the <strong>µOS++ IIIe</strong> APIs can also be seen as a C++ version of POSIX, thus the name <strong>POSIX++</strong>.</p>
 
-<h2 id="twofold-identity">Twofold identity</h2>
+<h2 id="manyfold-identity">Manyfold identity</h2>
 
-<p>The <strong>µOS++ IIIe</strong> project can be considered from two points of view.</p>
+<p>The <strong>µOS++ IIIe</strong> project can be considered from several points of view.</p>
+
+<h3 id="the-µos-frameworkapis">The µOS++ framework/APIs</h3>
+
+<p>Although generally associated with its RTOS, <strong>µOS++ IIIe</strong> is actually a framework, a collection of APIs, components and technologies.</p>
+
+<p>One of the main APIs is the µOS++ RTOS API, but applications based on µOS++ may run very well without a RTOS, or even use a different RTOS.</p>
+
+<p>For a better portability, the entire framework is layered, the µOS++ RTOS API provides a common public interface to the applications, but the implementation is separate, it might be that of its own µOS++ RTOS reference implementation, but it may very well be another implementation, even a custom one specific to the application.</p>
+
+<h3 id="the-µos-rtos-implementation">The µOS++ RTOS implementation</h3>
+
+<p>From an embedded system point of view, <strong>µOS++ IIIe</strong> provides the <strong>reference implementation</strong> for the <strong>scheduler</strong> and <strong>portable synchronisation</strong> objects (like mutex, semaphore, etc).</p>
+
+<div style="text-align:center">
+<img alt="µOS++ RTOS" src="/assets/images/2017/micro-os-plus-rtos.png">
+</div>
 
 <h3 id="the-µos-packages">The µOS++ packages</h3>
 
@@ -265,20 +281,12 @@
 </ul>
 
 <div style="text-align:center">
-<img alt="µOS++ Collection" src="/assets/images/2016/micro-os-plus-collection.png">
-</div>
-
-<h3 id="the-µos-rtos">The µOS++ RTOS</h3>
-
-<p>From an embedded system point of view, <strong>µOS++ IIIe</strong> provides the <strong>reference implementation</strong> for the <strong>scheduler</strong> and <strong>portable synchronisation</strong> objects (like mutex, semaphore, etc).</p>
-
-<div style="text-align:center">
-<img alt="µOS++ RTOS" src="/assets/images/2016/micro-os-plus-rtos.png">
+<img alt="µOS++ Collection" src="/assets/images/2017/micro-os-plus-collection.png">
 </div>
 
 <h2 id="license">License</h2>
 
-<p>Unless otherwise mentioned, all <strong>µOS++ IIIe</strong> components are provided <strong>free of charge</strong> under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<p>Unless otherwise mentioned, all <strong>µOS++ IIIe</strong> components are provided <strong>free of charge</strong> under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>, with all rights reserved to Liviu Ionescu.</p>
 
 
 
