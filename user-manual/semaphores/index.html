@@ -241,7 +241,7 @@
 <h1 class="page-title">Semaphores</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Sat Feb  4 19:58:54 2017 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/semaphores.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -471,27 +471,27 @@
 </span>
   <span class="c1">// Create a global binary semaphore object instance,
 </span>  <span class="c1">// with the initial count as 0.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="c1">// Create a global binary semaphore object instance,
 </span>  <span class="c1">// with the initial count as 1.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">,</span> <span class="s">"sb2"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">,</span> <span class="s">"sb2"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
   <span class="c1">// Create a global binary semaphore object instance,
 </span>  <span class="c1">// with max 7 items and the initial count as 0.
-</span>  <span class="n">os_semaphore_counting_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_counting_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="c1">// Create a global binary semaphore object instance,
 </span>  <span class="c1">// with max 7 items and the initial count as 7.
-</span>  <span class="n">os_semaphore_counting_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">,</span> <span class="s">"sc2"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_counting_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">,</span> <span class="s">"sc2"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the semaphores.
-</span>  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -601,36 +601,36 @@
 
   <span class="c1">// Create a binary semaphore,
 </span>  <span class="c1">// with the initial count as 0.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="c1">// Local storage for the semaphore object instance.
 </span>  <span class="n">os_semaphore_t</span> <span class="n">sb2</span><span class="p">;</span>
 
   <span class="c1">// Create a binary semaphore,
 </span>  <span class="c1">// with the initial count as 1.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">,</span> <span class="s">"sb2"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">,</span> <span class="s">"sb2"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
   <span class="c1">// Local storage for the semaphore object instance.
 </span>  <span class="n">os_semaphore_t</span> <span class="n">sc1</span><span class="p">;</span>
 
   <span class="c1">// Create a counting semaphore,
 </span>  <span class="c1">// with max 7 items and the initial count as 0.
-</span>  <span class="n">os_semaphore_counting_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_counting_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="c1">// Local storage for the semaphore object instance.
 </span>  <span class="n">os_semaphore_t</span> <span class="n">sc2</span><span class="p">;</span>
 
   <span class="c1">// Create a counting semaphore,
 </span>  <span class="c1">// with max 7 items and the initial count as 7.
-</span>  <span class="n">os_semaphore_counting_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">,</span> <span class="s">"sc2"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_counting_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">,</span> <span class="s">"sc2"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the semaphores.
-</span>  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb2</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc2</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -705,7 +705,7 @@
 
   <span class="c1">// Create a binary semaphore,
 </span>  <span class="c1">// with the initial count as 0.
-</span>  <span class="n">os_semaphore_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_b1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">,</span> <span class="s">"sb1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_b1</span><span class="p">);</span>
 
   <span class="n">os_semaphore_attr_t</span> <span class="n">attr_c2</span><span class="p">;</span>
   <span class="n">os_semaphore_attr_counting_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr_c2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
@@ -717,7 +717,7 @@
 
   <span class="c1">// Create a counting semaphore,
 </span>  <span class="c1">// with max 7 items and the initial count as 0.
-</span>  <span class="n">os_semaphore_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_c2</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">,</span> <span class="s">"sc1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_c2</span><span class="p">);</span>
 
   <span class="n">os_semaphore_attr_t</span> <span class="n">attr_g1</span><span class="p">;</span>
   <span class="n">os_semaphore_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr_g1</span><span class="p">);</span>
@@ -731,14 +731,14 @@
 
   <span class="c1">// Create a generic counting semaphore, with max 7 items
 </span>  <span class="c1">// and the initial count as 7.
-</span>  <span class="n">os_semaphore_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sg1</span><span class="p">,</span> <span class="s">"sg1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_g1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sg1</span><span class="p">,</span> <span class="s">"sg1"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr_g1</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the semaphores.
-</span>  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sg1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sb1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sc1</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sg1</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -873,7 +873,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_semaphore_t</span> <span class="n">sem</span><span class="p">;</span>
-<span class="n">os_semaphore_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
+<span class="n">os_semaphore_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">os_semaphore_get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
@@ -955,7 +955,7 @@
 
 <p>In C++, if the semaphores were created using the normal way, the destructors are automatically invoked when the current block exits, or, for the global semaphores instances, after the <code class="highlighter-rouge">main()</code> function returns. Semaphores created with placement <code class="highlighter-rouge">new</code> need to be destructed manually.</p>
 
-<p>In C, all semaphores must be destructed by explicit calls to <code class="highlighter-rouge">os_semaphore_destroy()</code>.</p>
+<p>In C, all semaphores must be destructed by explicit calls to <code class="highlighter-rouge">os_semaphore_destruct()</code>.</p>
 
 <p>There should be no threads waiting on the semaphore when it is destroyed, otherwise an assert check will trigger.</p>
 
@@ -1012,11 +1012,11 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a binary semaphore, with the initial count as 1.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1120,11 +1120,11 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a binary semaphore, with the initial count as 0.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1229,11 +1229,11 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a binary semaphore, with the initial count as 1.
-</span>  <span class="n">os_semaphore_binary_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span>  <span class="n">os_semaphore_binary_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
-  <span class="n">os_semaphore_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+  <span class="n">os_semaphore_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>

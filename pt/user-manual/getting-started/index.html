@@ -241,7 +241,7 @@
 <h1 class="page-title">Começando com μOS++ IIIe</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Aug 24 15:43:47 2017 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/getting-started.pt.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -502,10 +502,10 @@
 </span>  <span class="c1">// on a thread context, and all system functions are available.
 </span>
   <span class="c1">// Initialise the queue object and allocate the queue storage.
-</span>  <span class="n">os_mqueue_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mq</span><span class="p">,</span> <span class="s">"q"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msg_t</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_mqueue_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mq</span><span class="p">,</span> <span class="s">"q"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msg_t</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="n">user_led_t</span> <span class="n">led</span><span class="p">;</span>
 
@@ -519,8 +519,8 @@
   <span class="p">}</span>
 
   <span class="c1">// Not reached if the LED loop never ends.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
-  <span class="n">os_mqueue_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mq</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
+  <span class="n">os_mqueue_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mq</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>

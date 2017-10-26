@@ -241,7 +241,7 @@
 <h1 class="page-title">Thread event flags</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Mon Aug 15 16:38:39 2016 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/thread-event-flags.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -392,7 +392,7 @@
 </span>  <span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// Raise one flag. The condition is not enough to resume the thread.
 </span>  <span class="n">os_thread_flags_raise</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">);</span>
@@ -409,7 +409,7 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>

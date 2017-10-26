@@ -241,7 +241,7 @@
 <h1 class="page-title">Threads</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Aug 24 15:43:47 2017 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/threads.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -478,7 +478,7 @@
 </span>  <span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
@@ -488,7 +488,7 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -701,7 +701,7 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// The default stack size.
 </span>  <span class="kt">size_t</span> <span class="n">my_size</span> <span class="o">=</span> <span class="n">os_thread_stack_get_default_size</span><span class="p">();</span>
@@ -712,7 +712,7 @@
   <span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="n">my_size</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the user allocator.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">,</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr2</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">,</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr2</span><span class="p">);</span>
 
   <span class="n">os_thread_attr_t</span> <span class="n">attr3</span><span class="p">;</span>
   <span class="n">os_thread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
@@ -720,7 +720,7 @@
   <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the user allocator.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
@@ -730,9 +730,9 @@
   <span class="n">os_thread_join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// For completeness, destroy the threads.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
-  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">);</span>
-  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
+  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">);</span>
+  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">);</span>
 
   <span class="c1">// Free the allocated stack.
 </span>  <span class="n">my_allocator_deallocate</span><span class="p">(</span><span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_address</span><span class="p">,</span> <span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_size_bytes</span><span class="p">);</span>
@@ -897,7 +897,7 @@
 </span>  <span class="n">os_thread_t</span> <span class="n">th1</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// The default stack size.
 </span>  <span class="kt">size_t</span> <span class="n">my_size</span> <span class="o">=</span> <span class="n">os_thread_stack_get_default_size</span><span class="p">();</span>
@@ -911,7 +911,7 @@
 </span>  <span class="n">os_thread_t</span> <span class="n">th2</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is allocated with the user allocator.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">,</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr2</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">,</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr2</span><span class="p">);</span>
 
   <span class="n">os_thread_attr_t</span> <span class="n">attr3</span><span class="p">;</span>
   <span class="n">os_thread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
@@ -922,7 +922,7 @@
 </span>  <span class="n">os_thread_t</span> <span class="n">th3</span><span class="p">;</span>
 
   <span class="c1">// Create a thread; the stack is statically allocated.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
@@ -935,9 +935,9 @@
 </span>  <span class="n">my_allocator_deallocate</span><span class="p">(</span><span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_address</span><span class="p">,</span> <span class="n">attr2</span><span class="p">.</span><span class="n">th_stack_size_bytes</span><span class="p">);</span>
 
   <span class="c1">// For completeness, destroy the threads.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
-  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">);</span>
-  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
+  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th2</span><span class="p">);</span>
+  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1123,7 +1123,7 @@
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
 </span>  <span class="c1">// The initial priority is configured via the attributes as HIGH.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
@@ -1131,7 +1131,7 @@
 </span>  <span class="n">os_thread_join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1159,7 +1159,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
-<span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">os_thread_get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 </code></pre>
@@ -1183,7 +1183,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
-<span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">os_thread_get_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 <span class="n">os_thread_set_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="n">os_thread_priority_high</span><span class="p">);</span>
@@ -1213,7 +1213,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
-<span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_stack_t</span><span class="o">*</span> <span class="n">stack</span> <span class="o">=</span> <span class="n">os_thread_get_stack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 <span class="kt">size_t</span> <span class="n">sz</span> <span class="o">=</span> <span class="n">os_thread_stack_get_size</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
@@ -1234,7 +1234,7 @@
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
-<span class="n">os_thread_user_storage_t</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">user_storage</span><span class="p">();</span>
+<span class="n">os_thread_user_storage_t</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">user_storage</span><span class="p">();</span>
 </code></pre>
 </div>
 
@@ -1242,7 +1242,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
-<span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
+<span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_user_storage_t</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">os_thread_get_user_storage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 </code></pre>
@@ -1334,7 +1334,7 @@
 
   <span class="c1">// Create a thread; the stack is allocated with the default RTOS allocator.
 </span>  <span class="c1">// The initial priority is configured via the attributes as HIGH.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="s">"th1"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
 
   <span class="c1">// Request for thread interruption.
 </span>  <span class="n">os_thread_interrupt</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
@@ -1345,7 +1345,7 @@
 </span>  <span class="n">os_thread_join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th1</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1365,7 +1365,7 @@
 </li>
   <li>one thread may kill another thread using <code class="highlighter-rouge">thread::kill()</code>
 </li>
-  <li>for threads defined in a local scope, if the block terminates, the thread destructor is automatically invoked (in C, <code class="highlighter-rouge">os_thread_destroy()</code> must be manually invoked).</li>
+  <li>for threads defined in a local scope, if the block terminates, the thread destructor is automatically invoked (in C, <code class="highlighter-rouge">os_thread_destruct()</code> must be manually invoked).</li>
 </ul>
 
 <p>All these methods are functionally equivalent, in that the thread is destroyed, and, if the thread stack was dynamically allocated, this storage is automatically deallocated.</p>
@@ -1619,7 +1619,7 @@
 </span><span class="n">os_thread_t</span> <span class="n">th3</span><span class="p">;</span>
 
 <span class="c1">// Create a thread; the stack is statically allocated.
-</span><span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
+</span><span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
 </code></pre>
 </div>
 

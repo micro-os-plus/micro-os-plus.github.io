@@ -241,7 +241,7 @@
 <h1 class="page-title">Event flags</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Sat Feb  4 19:58:54 2017 UTC.</td>
+    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/event-flags.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -362,12 +362,12 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a global event flags object instance.
-</span>  <span class="n">os_evflags_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the event flags.
-</span>  <span class="n">os_evflags_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -461,12 +461,12 @@
 </span>  <span class="n">os_evflags_t</span> <span class="n">ev1</span><span class="p">;</span>
 
   <span class="c1">// Create an event flags object instance.
-</span>  <span class="n">os_evflags_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev1</span><span class="p">,</span> <span class="s">"ev1"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev1</span><span class="p">,</span> <span class="s">"ev1"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the event flags.
-</span>  <span class="n">os_evflags_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev1</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev1</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -521,12 +521,12 @@
 </span>  <span class="n">os_evflags_t</span> <span class="n">ev</span><span class="p">;</span>
 
   <span class="c1">// Create an event flags object instance.
-</span>  <span class="n">os_evflags_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span>
 
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the event flags.
-</span>  <span class="n">os_evflags_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -640,13 +640,13 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// Create a global event flags object instance.
-</span>  <span class="n">os_evflags_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// Local storage for the thread object.
 </span>  <span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 
   <span class="c1">// Initialise the thread object and allocate the thread stack.
-</span>  <span class="n">os_thread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span>  <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
   <span class="c1">// Raise one flag. The condition is not enough to resume the thread.
 </span>  <span class="n">os_evflags_raise</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
@@ -663,10 +663,10 @@
   <span class="c1">// ...
 </span>
   <span class="c1">// For completeness, destroy the thread.
-</span>  <span class="n">os_thread_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
+</span>  <span class="n">os_thread_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 
   <span class="c1">// For completeness, destroy the event flags.
-</span>  <span class="n">os_evflags_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
+</span>  <span class="n">os_evflags_destruct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -702,7 +702,7 @@
 
 <div class="language-c highlighter-rouge">
 <pre class="highlight"><code><span class="n">os_evflags_t</span> <span class="n">ev</span><span class="p">;</span>
-<span class="n">os_evflags_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span> <span class="p">};</span>
+<span class="n">os_evflags_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">,</span> <span class="s">"ev"</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">os_evflags_get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ev</span><span class="p">);</span>
 </code></pre>
@@ -750,7 +750,7 @@
 
 <p>In C++, if the event flags were created using the normal way, the destructors are automatically invoked when the current block exits, or, for the global event flags instances, after the <code class="highlighter-rouge">main()</code> function returns. Event flags created with placement <code class="highlighter-rouge">new</code> need to be destructed manually.</p>
 
-<p>In C, all event flags must be destructed by explicit calls to <code class="highlighter-rouge">os_evflags_destroy()</code>.</p>
+<p>In C, all event flags must be destructed by explicit calls to <code class="highlighter-rouge">os_evflags_destruct()</code>.</p>
 
 <p>There should be no threads waiting on the event flags when the object is destroyed, otherwise an assert check will trigger.</p>
 
