@@ -241,7 +241,7 @@
 <h1 class="page-title">Threads</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Oct 26 06:14:19 2017 UTC.</td>
+    <td id="last-modified">Last modified on Sat Feb 10 18:54:03 2018 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/user-manual/threads.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -636,8 +636,8 @@
 
 <span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">my_stack_size_bytes</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
 
-<span class="c1">// Create a thread; the stack is statically allocated.
-</span><span class="n">thread_static</span><span class="o">&lt;</span><span class="n">my_stack_size_bytes</span><span class="o">&gt;</span> <span class="n">th3</span> <span class="p">{</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+<span class="c1">// Create a thread; the stack is included in the definition.
+</span><span class="n">thread_inclusive</span><span class="o">&lt;</span><span class="n">my_stack_size_bytes</span><span class="o">&gt;</span> <span class="n">th3</span> <span class="p">{</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
 <span class="kt">int</span>
 <span class="nf">os_main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
@@ -840,7 +840,7 @@
   <span class="c1">// Create a thread; the stack is allocated with the user allocator.
 </span>  <span class="n">my_allocated_thread</span> <span class="n">th2</span> <span class="p">{</span> <span class="s">"th2"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
-  <span class="kr">thread</span><span class="o">::</span><span class="n">attributtes</span> <span class="n">attr</span><span class="p">;</span>
+  <span class="kr">thread</span><span class="o">::</span><span class="n">attributes</span> <span class="n">attr</span><span class="p">;</span>
   <span class="n">attr</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">th3_stack</span><span class="p">;</span>
   <span class="n">attr</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
 
@@ -1595,7 +1595,7 @@
 
 <h3 id="configuring-a-user-defined-stack">Configuring a user defined stack</h3>
 
-<p>Except when using the <code class="highlighter-rouge">thread_static</code> template, by default threads are created with a dynamically allocated stack. This can be changed to a user defined stack using the <code class="highlighter-rouge">th_stack_address</code> and <code class="highlighter-rouge">th_stack_size_bytes</code> thread attributes.</p>
+<p>Except when using the <code class="highlighter-rouge">thread_inclusive</code> template, by default threads are created with a dynamically allocated stack. This can be changed to a user defined stack using the <code class="highlighter-rouge">th_stack_address</code> and <code class="highlighter-rouge">th_stack_size_bytes</code> thread attributes.</p>
 
 <div class="language-c++ highlighter-rouge">
 <pre class="highlight"><code><span class="kr">thread</span><span class="o">::</span><span class="n">attributtes</span> <span class="n">attr</span><span class="p">;</span>
