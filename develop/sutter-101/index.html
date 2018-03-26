@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>C++ coding style</title>
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+
+  <meta property="og:title" content="C++ coding style">
+  <meta property="og:site_name" content="µOS++ IIIe">
+
+  <link rel="alternate" type="application/rss+xml" title="µOS++ IIIe" href="/feed.xml">
+
+
+  <meta property="article:published_time" content="2018-03-26">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+
+  <link rel="canonical" href="http://micro-os-plus.github.io/develop/sutter-101/">
+
+
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+  <div class="site-header">
+  <table style="width:100%">
+    <tr>
+      <td>
+        <a href="/">
+          <img alt="Icon" class="site-icon" src="/assets/icons/wall-e-icon.png" height="100" width="100">
+      </a>
+      </td>
+      <td>
+        <table class="site-title" style="width:100%">
+          <tr>
+            <td class="site-title">
+              <a href="/">µOS++ IIIe</a>
+            </td>
+            <td class="site-motto" align="right">
+              “Perfekt ist nicht gut genug”
+            </td>
+          </tr>
+          <tr>
+            <td class="site-description" colspan="2">
+              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+    <div class="site-body">
+
+      <div class="site-sidebar">
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      <h4 id="news"><a href="/blog/">News</a></h4>
+
+<ul>
+  <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
+  <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
+  <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
+  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+  <div class="custom-sidebar">
+    <div class="boxed-group-inner">
+      
+      <h4 id="home"><a href="/">Home</a></h4>
+
+<h4 id="µos-iiie">µOS++ IIIe</h4>
+
+<ul>
+  <li><a href="/micro-os-plus/">Overview</a></li>
+</ul>
+
+<h4 id="apis">APIs</h4>
+
+<ul>
+  <li><a href="/cmsis-plus/">Overview</a></li>
+  <li><a href="/cmsis-plus/rtos/">RTOS API</a></li>
+</ul>
+
+<h4 id="xpacksxcdl">xPacks/XCDL</h4>
+
+<ul>
+  <li><a href="/xpacks/">Overview</a></li>
+</ul>
+
+<h4 id="documentation">Documentation</h4>
+
+<ul>
+  <li>
+<a href="/user-manual/">User’s <strong>manual</strong></a>
+    <ul>
+      <li><a href="/user-manual/getting-started/">Getting started</a></li>
+      <li><a href="/user-manual/basic-concepts/">Basic concepts</a></li>
+      <li><a href="/user-manual/features/">Features</a></li>
+      <li><a href="/user-manual/threads/">Threads</a></li>
+      <li><a href="/user-manual/thread-event-flags/">Thread event flags</a></li>
+      <li><a href="/user-manual/semaphores/">Semaphores</a></li>
+      <li><a href="/user-manual/event-flags/">Event flags</a></li>
+      <li>Mutexes</li>
+      <li>Condition variables</li>
+      <li>Message queues</li>
+      <li>Memory pools</li>
+      <li>Software timers</li>
+      <li>Clocks</li>
+    </ul>
+  </li>
+  <li><a href="/reference/cmsis-plus/">µOS++ <strong>reference</strong></a></li>
+</ul>
+
+<h4 id="developer">Developer</h4>
+
+<ul>
+  <li><a href="/develop/">Overview</a></li>
+  <li><a href="/reference/cmsis-plus/md_doxygen_pages_change-log.html">Change log</a></li>
+  <li><a href="/develop/coding-style/">C++ coding style</a></li>
+  <li><a href="/develop/references/">Links &amp; references</a></li>
+</ul>
+
+<h4 id="support">Support</h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues/">Report µOS++ IIIe issues</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2016-06-24/">CMSIS++ RTOS: fully functional reference implementation</a></li>
+  <li><a href="/articles/arm-com-2016-03-11/">CMSIS++: a proposal for a future CMSIS, written in C++</a></li>
+</ul>
+
+<h4 id="license">License</h4>
+
+<ul>
+  <li><a href="https://opensource.org/licenses/MIT">MIT</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+    </div>
+  </div>
+
+  <div class="site-theme">
+    This site uses the <a href="https://github.com/ilg-ul/github-jekyll-theme">GitHub Wiki-like</a> theme by <a href="https://github.com/ilg-ul">Liviu Ionescu</a>.
+  </div>
+
+</div>
+
+
+      <div class="site-content">
+
+        
+<h1 class="page-title">C++ coding style</h1>
+<table id="last-modified">
+  <tr>
+    <td id="last-modified">Last modified on Mon Mar 26 13:52:10 2018 UTC.</td>
+    <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/suter-101.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
+  </tr>
+</table>
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#organizational-and-policy-issues"><span class="tocnumber">1</span> <span class="toctext">Organizational and Policy Issues</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#design-style"><span class="tocnumber">2</span> <span class="toctext">Design Style</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#coding-style"><span class="tocnumber">3</span> <span class="toctext">Coding Style</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#functions-and-operators"><span class="tocnumber">4</span> <span class="toctext">Functions and Operators</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#class-design-and-inheritance"><span class="tocnumber">5</span> <span class="toctext">Class Design and Inheritance</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#construction-destruction-and-copying"><span class="tocnumber">6</span> <span class="toctext">Construction, Destruction, and Copying</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#namespaces-and-modules"><span class="tocnumber">7</span> <span class="toctext">Namespaces and Modules</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#templates-and-genericity"><span class="tocnumber">8</span> <span class="toctext">Templates and Genericity</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#error-handling-and-exceptions"><span class="tocnumber">9</span> <span class="toctext">Error Handling and Exceptions</span></a>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#stl-containers"><span class="tocnumber">10</span> <span class="toctext">STL: Containers</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#stl-algorithms"><span class="tocnumber">11</span> <span class="toctext">STL: Algorithms</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#type-safety"><span class="tocnumber">12</span> <span class="toctext">Type Safety</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This page is reproduces content from the <em>Summary of Summaries</em> chapter of <strong>C++ Coding Standards: 101 Rules, Guidelines, and Best Practices</strong>, by Herb Sutter and Andrei Alexandrescu, published in 2005 by Pearson Education, Inc.</p>
+
+<h2 id="organizational-and-policy-issues">Organizational and Policy Issues</h2>
+
+<ol>
+  <li>
+    <p>Don’t sweat the small stuff. (Or: Know what not to standardize.)</p>
+
+    <p>Say only what needs saying: Don’t enforce personal tastes or obsolete practices.</p>
+  </li>
+  <li>
+    <p>Compile cleanly at high warning levels.</p>
+
+    <p>Take warnings to heart: Use your compiler’s highest warning level. Require clean (warning-free) builds. Understand all warnings. Eliminate warnings by changing your code, not by reducing the warning level.</p>
+  </li>
+  <li>
+    <p>Use an automated build system.</p>
+
+    <p>Push the (singular) button: Use a fully automatic (“one-action”) build system that builds the whole project without user intervention.</p>
+  </li>
+  <li>
+    <p>Use a version control system.</p>
+
+    <p>The palest of ink is better than the best memory (Chinese proverb): Use a version control system (VCS). Never keep files checked out for long periods. Check in frequently after your updated unit tests pass. Ensure that checked-in code does not break the build.</p>
+  </li>
+  <li>
+    <p>Invest in code reviews.</p>
+
+    <p>Re-view code: More eyes will help make more quality. Show your code, and read others’. You’ll all learn and benefit.</p>
+  </li>
+</ol>
+
+<h2 id="design-style">Design Style</h2>
+
+<ol>
+  <li>
+    <p>Give one entity one cohesive responsibility.</p>
+
+    <p>Focus on one thing at a time: Prefer to give each entity (variable, class, function, namespace, module, library) one well-defined responsibility. As an entity grows, its scope of responsibility naturally increases, but its responsibility should not diverge.</p>
+  </li>
+  <li>
+    <p>Correctness, simplicity, and clarity come first.</p>
+
+    <p>KISS (Keep It Simple Software): Correct is better than fast. Simple is better than complex. Clear is better than cute. Safe is better than insecure (see Items 83 and 99).</p>
+  </li>
+  <li>
+    <p>Know when and how to code for scalability.</p>
+
+    <p>Beware of explosive data growth: Without optimizing prematurely, keep an eye on asymptotic complexity. Algorithms that work on user data should take a predictable, and preferably no worse than linear, time with the amount of data processed. When optimization is provably necessary and important, and especially if it’s because data volumes are growing, focus on improving big-Oh complexity rather than on micro-optimizations like saving that one extra addition.</p>
+  </li>
+  <li>
+    <p>Don’t optimize prematurely.</p>
+
+    <p>Spur not a willing horse (Latin proverb): Premature optimization is as addictive as it is unproductive. The first rule of optimization is: Don’t do it. The second rule of optimization (for experts only) is: Don’t do it yet. Measure twice, optimize once.</p>
+  </li>
+  <li>
+    <p>Don’t pessimize prematurely.</p>
+
+    <p>Easy on yourself, easy on the code: All other things being equal, notably code complexity and readability, certain efficient design patterns and coding idioms should just flow naturally from your fingertips and are no harder to write than the pessimized alternatives. This is not premature optimization; it is avoiding gratuitous pessimization.</p>
+  </li>
+  <li>
+    <p>Minimize global and shared data.</p>
+
+    <p>Sharing causes contention: Avoid shared data, especially global data. Shared data increases coupling, which reduces maintainability and often performance.</p>
+  </li>
+  <li>
+    <p>Hide information.</p>
+
+    <p>Don’t tell: Don’t expose internal information from an entity that provides an abstraction.</p>
+  </li>
+  <li>
+    <p>Know when and how to code for concurrency.</p>
+
+    <p>Th<sub>sa</sub>rea<sub>fe</sub>d<sub>ly</sub>: If your application uses multiple threads or processes, know how to minimize sharing objects where possible (see Item 10) and share the right ones safely.</p>
+  </li>
+  <li>
+    <p>Ensure resources are owned by objects. Use explicit RAII and smart pointers.</p>
+
+    <p>Don’t saw by hand when you have power tools: C++’s “resource acquisition is initialization” (RAII) idiom is the power tool for correct resource handling. RAII allows the compiler to provide strong and automated guarantees that in other languages require fragile hand-coded idioms. When allocating a raw resource, immediately pass it to an owning object. Never allocate more than one resource in a single statement.</p>
+  </li>
+</ol>
+
+<h2 id="coding-style">Coding Style</h2>
+
+<ol>
+  <li>
+    <p>Prefer compile- and link-time errors to run-time errors.</p>
+
+    <p>Don’t put off ’til run time what you can do at build time: Prefer to write code that uses the compiler to check for invariants during compilation, instead of checking them at run time. Run-time checks are control- and data-dependent, which means you’ll seldom know whether they are exhaustive. In contrast, compile-time checking is not control- or data-dependent and typically offers higher degrees of confidence.</p>
+  </li>
+  <li>
+    <p>Use <code class="highlighter-rouge">const</code> proactively.</p>
+
+    <p><code class="highlighter-rouge">const</code> is your friend: Immutable values are easier to understand, track, and reason about, so prefer constants over variables wherever it is sensible and make <code class="highlighter-rouge">const</code> your default choice when you define a value: It’s safe, it’s checked at compile time (see Item 14), and it’s integrated with C++’s type system. Don’t cast away <code class="highlighter-rouge">const</code> except to call a const-incorrect function (see Item 94).</p>
+  </li>
+  <li>
+    <p>Avoid macros.</p>
+
+    <p><strong>TO PUT IT BLUNTLY</strong>: Macros are the bluntest instrument of C and C++’s abstraction facilities, ravenous wolves in functions’ clothing, hard to tame, marching to their own beat all over your scopes. Avoid them.</p>
+  </li>
+  <li>
+    <p>Avoid magic numbers.</p>
+
+    <p>Programming isn’t magic, so don’t incant it: Avoid spelling literal constants like <code class="highlighter-rouge">42</code> or <code class="highlighter-rouge">3.14159</code> in code. They are not self-explanatory and complicate maintenance by adding a hard-to-detect form of duplication. Use symbolic names and expressions instead, such as <code class="highlighter-rouge">width * aspectRatio</code>.</p>
+  </li>
+  <li>
+    <p>Declare variables as locally as possible.</p>
+
+    <p>Avoid scope bloat, as with requirements so too with variables: Variables introduce state, and you should have to deal with as little state as possible, with lifetimes as short as possible. This is a specific case of Item 10 that deserves its own treatment.</p>
+  </li>
+  <li>
+    <p>Always initialize variables.</p>
+
+    <p>Start with a clean slate: Uninitialized variables are a common source of bugs in C and C++ programs. Avoid such bugs by being disciplined about cleaning memory before you use it; initialize variables upon definition.</p>
+  </li>
+  <li>
+    <p>Avoid long functions. Avoid deep nesting.</p>
+
+    <p>Short is better than long, flat is better than deep: Excessively long functions and nested code blocks are often caused by failing to give one function one cohesive responsibility (see Item 5), and both are usually solved by better refactoring.</p>
+  </li>
+  <li>
+    <p>Avoid initialization dependencies across compilation units.</p>
+
+    <p>Keep (initialization) order: Namespace-level objects in different compilation units should never depend on each other for initialization, because their initialization order is undefined. Doing otherwise causes headaches ranging from mysterious crashes when you make small changes in your project to severe nonportability even to new releases of the same compiler.</p>
+  </li>
+  <li>
+    <p>Minimize definitional dependencies. Avoid cyclic dependencies.</p>
+
+    <p>Don’t be over-dependent: Don’t <code class="highlighter-rouge">#include</code> a definition when a forward declaration will do.</p>
+
+    <p>Don’t be co-dependent: Cyclic dependencies occur when two modules depend directly or indirectly on one another. A module is a cohesive unit of release (see page 103); modules that are interdependent are not really individual modules, but super-glued together into what’s really a larger module, a larger unit of release. Thus, cyclic dependencies work against modularity and are a bane of large projects. Avoid them.</p>
+  </li>
+  <li>
+    <p>Make header files self-sufficient.</p>
+
+    <p>Behave responsibly: Ensure that each header you write is compilable standalone, by having it include any headers its contents depend upon.</p>
+  </li>
+  <li>
+    <p>Always write internal <code class="highlighter-rouge">#include</code> guards. Never write external <code class="highlighter-rouge">#include</code> guards.</p>
+
+    <p>Wear head(er) protection: Prevent unintended multiple inclusions by using <code class="highlighter-rouge">#include</code> guards with unique names for all of your header files.</p>
+  </li>
+</ol>
+
+<h2 id="functions-and-operators">Functions and Operators</h2>
+
+<ol>
+  <li>
+    <p>Take parameters appropriately by value, (smart) pointer, or reference.</p>
+
+    <p>Parameterize well: Distinguish among input, output, and input/output parameters, and between value and reference parameters. Take them appropriately.</p>
+  </li>
+  <li>
+    <p>Preserve natural semantics for overloaded operators.</p>
+
+    <p>Programmers hate surprises: Overload operators only for good reason, and preserve natural semantics; if that’s difficult, you might be misusing operator overloading.</p>
+  </li>
+  <li>
+    <p>Preferthecanonicalformsofarithmeticandassignmentoperators.</p>
+
+    <p>If you <code class="highlighter-rouge">a+b</code>, also <code class="highlighter-rouge">a+=b</code>: When defining binary arithmetic operators, provide their assignment versions as well, and write to minimize duplication and maximize efficiency.</p>
+  </li>
+  <li>
+    <p>Prefer the canonical form of <code class="highlighter-rouge">++</code> and <code class="highlighter-rouge">--</code> . Prefer calling the prefix forms.</p>
+
+    <p>If you <code class="highlighter-rouge">++c</code>, also <code class="highlighter-rouge">c++</code>: The increment and decrement operators are tricky because each has pre- and postfix forms, with slightly different semantics. Define <code class="highlighter-rouge">operator++</code> and <code class="highlighter-rouge">operator--</code> such that they mimic the behavior of their built-in counterparts. Prefer to call the prefix versions if you don’t need the original value.</p>
+  </li>
+  <li>
+    <p>Consider overloading to avoid implicit type conversions.</p>
+
+    <p>Do not multiply objects beyond necessity (Occam’s Razor): Implicit type conversions provide syntactic convenience (but see Item 40). But when the work of creating temporary objects is unnecessary and optimization is appropriate (see Item 8), you can provide overloaded functions with signatures that match common argument types exactly and won’t cause conversions.</p>
+  </li>
+  <li>
+    <p>Avoid overloading <code class="highlighter-rouge">&amp;&amp;</code>, <code class="highlighter-rouge">||</code>, or <code class="highlighter-rouge">,</code>(comma).</p>
+
+    <p>Wisdom means knowing when to refrain: The built-in <code class="highlighter-rouge">&amp;&amp;,</code> <code class="highlighter-rouge">||</code>, and <code class="highlighter-rouge">,</code> (comma) enjoy special treatment from the compiler. If you overload them, they become ordinary functions with very different semantics (you will violate Items 26 and 31), and this is a sure way to introduce subtle bugs and fragilities. Don’t overload these operators naïvely.</p>
+  </li>
+  <li>
+    <p>Don’t write code that depends on the order of evaluation of function arguments.</p>
+
+    <p>Keep (evaluation) order: The order in which arguments of a function are evaluated is unspecified, so don’t rely on a specific ordering.</p>
+  </li>
+</ol>
+
+<h2 id="class-design-and-inheritance">Class Design and Inheritance</h2>
+
+<ol>
+  <li>
+    <p>Be clear what kind of class you’re writing.</p>
+
+    <p>Know thyself: There are different kinds of classes. Know which kind you are writing.</p>
+  </li>
+  <li>
+    <p>Prefer minimal classes to monolithic classes.</p>
+
+    <p>Divide and conquer: Small classes are easier to write, get right, test, and use. They are also more likely to be usable in a variety of situations. Prefer such small classes that embody simple concepts instead of kitchen-sink classes that try to implement many and/or complex concepts (see Items 5 and 6).</p>
+  </li>
+  <li>
+    <p>Prefer composition to inheritance.</p>
+
+    <p>Avoid inheritance taxes: Inheritance is the second-tightest coupling relationship in C++, second only to friendship. Tight coupling is undesirable and should be avoided where possible. Therefore, prefer composition to inheritance unless you know that the latter truly benefits your design.</p>
+  </li>
+  <li>
+    <p>Avoidinheritingfromclassesthatwerenotdesignedtobebaseclasses.</p>
+
+    <p>Some people don’t want to have kids: Classes meant to be used standalone obey a different blueprint than base classes (see Item 32). Using a standalone class as a base is a serious design error and should be avoided. To add behavior, prefer to add nonmember functions instead of member functions (see Item 44). To add state, prefer composition instead of inheritance (see Item 34). Avoid inheriting from concrete base classes.</p>
+  </li>
+  <li>
+    <p>Prefer providing abstract interfaces.</p>
+
+    <p>Love abstract art: Abstract interfaces help you focus on getting an abstraction right without muddling it with implementation or state management details. Prefer to design hierarchies that implement abstract interfaces that model abstract concepts.</p>
+  </li>
+  <li>
+    <p>Public inheritance is substitutability. Inherit, not to reuse,but to be reused.</p>
+
+    <p>Know what: Public inheritance allows a pointer or reference to the base class to actually refer to an object of some derived class, without destroying code correctness and without needing to change existing code. Know why: Don’t inherit publicly to reuse code (that exists in the base class); inherit publicly in order to be reused (by existing code that already uses base objects polymorphically).</p>
+  </li>
+  <li>
+    <p>Practice safe overriding.</p>
+
+    <p>Override responsibly: When overriding a virtual function, preserve substitutability; in particular, observe the function’s pre- and post-conditions in the base class. Don’t change default arguments of virtual functions. Prefer explicitly redeclaring overrides as virtual. Beware of hiding overloads in the base class.</p>
+  </li>
+  <li>
+    <p>Consider making virtual functions nonpublic, and public functions nonvirtual.</p>
+
+    <p>In base classes with a high cost of change (particularly ones in libraries and frameworks): Prefer to make public functions nonvirtual. Prefer to make virtual functions private, or protected if derived classes need to be able to call the base versions. (Note that this advice does not apply to destructors; see Item 50.)</p>
+  </li>
+  <li>
+    <p>Avoid providing implicit conversions.</p>
+
+    <p>Not all change is progress: Implicit conversions can often do more damage than good. Think twice before providing implicit conversions to and from the types you define, and prefer to rely on explicit conversions (<code class="highlighter-rouge">explicit</code> constructors and named conversion functions).</p>
+  </li>
+  <li>
+    <p>Make data members private, except in behaviorless aggregates (C-style <code class="highlighter-rouge">struct</code>s).</p>
+
+    <p>They’re none of your caller’s business: Keep data members private. Only in the case of simple C-style <code class="highlighter-rouge">struct</code> types that aggregate a bunch of values but don’t pretend to encapsulate or provide behavior, make all data members public. Avoid mixes of public and nonpublic data, which almost always signal a muddled design.</p>
+  </li>
+  <li>
+    <p>Don’t give away your internals.</p>
+
+    <p>Don’t volunteer too much: Avoid returning handles to internal data managed by your class, so clients won’t uncontrollably modify state that your object thinks it owns.</p>
+  </li>
+  <li>
+    <p>Pimpl judiciously.</p>
+
+    <p>Overcome the language’s separation anxiety: C++ makes private members inaccessible, but not invisible. Where the benefits warrant it, consider making private members truly invisible using the Pimpl idiom to implement compiler firewalls and increase information hiding. (See Items 11 and 41.)</p>
+  </li>
+  <li>
+    <p>Prefer writing nonmember nonfriend functions.</p>
+
+    <p>Avoid membership fees: Where possible, prefer making functions nonmember nonfriends.</p>
+  </li>
+  <li>
+    <p>Always provide <code class="highlighter-rouge">new</code> and <code class="highlighter-rouge">delete</code> together.</p>
+
+    <p>They’re a package deal: Every class-specific overload <code class="highlighter-rouge">void* operator new(parms)</code> must be accompanied by a corresponding overload <code class="highlighter-rouge">void operator delete(void*, parms)</code>, where <code class="highlighter-rouge">parms</code> is a list of extra parameter types (of which the first is always <code class="highlighter-rouge">std::size_t</code>). The same goes for the array forms <code class="highlighter-rouge">new[]</code> and <code class="highlighter-rouge">delete[]</code>.</p>
+  </li>
+  <li>
+    <p>If you provide any class-specific <code class="highlighter-rouge">new</code>, provide all of the standard forms (plain, in-place, and <code class="highlighter-rouge">nothrow</code>).</p>
+
+    <p>Don’t hide good <code class="highlighter-rouge">new</code>s: If a class defines any overload of <code class="highlighter-rouge">operator new</code>, it should provide overloads of all three of plain, in-place, and non-throwing <code class="highlighter-rouge">operator new</code>. If you don’t, they’ll be hidden and unavailable to users of your class.</p>
+  </li>
+</ol>
+
+<h2 id="construction-destruction-and-copying">Construction, Destruction, and Copying</h2>
+
+<ol>
+  <li>
+    <p>Define and initialize member variables in the same order.</p>
+
+    <p>Agree with your compiler: Member variables are always initialized in the order they are declared in the class definition; the order in which you write them in the constructor initialization list is ignored. Make sure the constructor code doesn’t confusingly specify a different order.</p>
+  </li>
+  <li>
+    <p>Prefer initialization to assignment in constructors.</p>
+
+    <p>Set once, use everywhere: In constructors, using initialization instead of assignment to set member variables prevents needless run-time work and takes the same amount of typing.</p>
+  </li>
+  <li>
+    <p>Avoidcallingvirtualfunctionsinconstructorsanddestructors.</p>
+
+    <p>Virtual functions only “virtually” always behave virtually: Inside constructors and destructors, they don’t. Worse, any direct or indirect call to an unimplemented pure virtual function from a constructor or destructor results in undefined behavior. If your design wants virtual dispatch into a derived class from a base class constructor or destructor, you need other techniques such as post-constructors.</p>
+  </li>
+  <li>
+    <p>Make base class destructors public and virtual, or protected and nonvirtual.</p>
+
+    <p>To delete, or not to delete; that is the question: If deletion through a pointer to a base Base should be allowed, then Base’s destructor must be public and virtual. Otherwise, it should be protected and nonvirtual.</p>
+  </li>
+  <li>
+    <p>Destructors, deallocation, and <code class="highlighter-rouge">swap</code> never fail.</p>
+
+    <p>Everything they attempt shall succeed: Never allow an error to be reported from a destructor, a resource deallocation function (e.g., <code class="highlighter-rouge">operator delete</code>), or a swap function. Specifically, types whose destructors may throw an exception are flatly forbidden from use with the C++ standard library.</p>
+  </li>
+  <li>
+    <p>Copy and destroy consistently.</p>
+
+    <p>What you create, also clean up: If you define any of the copy constructor, copy assignment operator, or destructor, you might need to define one or both of the others.</p>
+  </li>
+  <li>
+    <p>Explicitly enable or disable copying.</p>
+
+    <p>Copy consciously: Knowingly choose among using the compiler-generated copy constructor and assignment operator, writing your own versions, or explicitly disabling both if copying should not be allowed.</p>
+  </li>
+  <li>
+    <p>Avoid slicing. Consider <code class="highlighter-rouge">Clone</code> in stead of copying in base classes.</p>
+
+    <p>Sliced bread is good; sliced objects aren’t: Object slicing is automatic, invisible, and likely to bring wonderful polymorphic designs to a screeching halt. In base classes, consider disabling the copy constructor and copy assignment operator, and instead supplying a virtual <code class="highlighter-rouge">Clone</code> member function if clients need to make polymorphic (complete, deep) copies.</p>
+  </li>
+  <li>
+    <p>Prefer the canonical form of assignment.</p>
+
+    <p>Your assignment: When implementing <code class="highlighter-rouge">operator=</code>, prefer the canonical form—nonvirtual and with a specific signature.</p>
+  </li>
+  <li>
+    <p>Whenever it makes sense, provide a no-fail swap (and provide it correctly).</p>
+
+    <p><code class="highlighter-rouge">swap</code> is both a lightweight and a workhorse: Consider providing a <code class="highlighter-rouge">swap</code> function to efficiently and infallibly swap the internals of this object with another’s. Such a function can be handy for implementing a number of idioms, from smoothly moving objects around to implementing assignment easily to providing a guaranteed commit function that enables strongly error-safe calling code. (See also Item 51.)</p>
+  </li>
+</ol>
+
+<h2 id="namespaces-and-modules">Namespaces and Modules</h2>
+
+<ol>
+  <li>
+    <p>Keep a type and its nonmember function interface in the same namespace.</p>
+
+    <p>Nonmembers are functions too: Nonmember functions that are designed to be part of the interface of a class X (notably operators and helper functions) must be defined in the same namespace as the X in order to be called correctly.</p>
+  </li>
+  <li>
+    <p>Keep types and functions in separate namespaces unless they’re specifically intended to work together.</p>
+
+    <p>Help prevent name lookup accidents: Isolate types from unintentional argument-dependent lookup (ADL, also known as Koenig lookup), and encourage intentional ADL, by putting them in their own namespaces (along with their directly related nonmember functions; see Item 57). Avoid putting a type into the same namespace as a templated function or operator.</p>
+  </li>
+  <li>
+    <p>Don’t write namespace <code class="highlighter-rouge">using</code>s in a header file or before an <code class="highlighter-rouge">#include</code>.</p>
+
+    <p>Namespace <code class="highlighter-rouge">using</code>s are for your convenience, not for you to inflict on others: Never write a using declaration or a <code class="highlighter-rouge">using</code> directive before an <code class="highlighter-rouge">#include</code> directive.</p>
+
+    <p>Corollary: In header files, don’t write namespace-level <code class="highlighter-rouge">using</code> directives or <code class="highlighter-rouge">using</code> declarations; instead, explicitly namespace-qualify all names. (The second rule follows from the first, because headers can never know what other header <code class="highlighter-rouge">#includes</code> might appear after them.)</p>
+  </li>
+  <li>
+    <p>Avoid allocating and deallocating memory in different modules.</p>
+
+    <p>Put things back where you found them: Allocating memory in one module and deallocating it in a different module makes your program fragile by creating a subtle long-distance dependency between those modules. They must be compiled with the same compiler version and same flags (notably debug vs. <code class="highlighter-rouge">NDEBUG</code>) and the same standard library implementation, and in practice the module allocating the memory had better still be loaded when the deallocation happens.</p>
+  </li>
+  <li>
+    <p>Don’t define entities with linkage in a header file.</p>
+
+    <p>Repetition causes bloat: Entities with linkage, including namespace-level variables or functions, have memory allocated for them. Defining such entities in header files results in either link-time errors or memory waste. Put all entities with linkage in implementation files.</p>
+  </li>
+  <li>
+    <p>Don’t allow exceptions to propagate across module boundaries.</p>
+
+    <p>Don’t throw stones into your neighbor’s garden: There is no ubiquitous binary standard for C++ exception handling. Don’t allow exceptions to propagate between two pieces of code unless you control the compiler and compiler options used to build both sides; otherwise, the modules might not support compatible implementations for exception propagation. Typically, this boils down to: Don’t let exceptions propagate across module/subsystem boundaries.</p>
+  </li>
+  <li>
+    <p>Use sufficiently portable types in a module’s interface.</p>
+
+    <p>Take extra care when living on the edge (of a module): Don’t allow a type to appear in a module’s external interface unless you can ensure that all clients understand the type correctly. Use the highest level of abstraction that clients can understand.</p>
+  </li>
+</ol>
+
+<h2 id="templates-and-genericity">Templates and Genericity</h2>
+
+<ol>
+  <li>
+    <p>Blend static and dynamic polymorphism judiciously.</p>
+
+    <p>So much more than a mere sum of parts: Static and dynamic polymorphism are complementary. Understand their tradeoffs, use each for what it’s best at, and mix them to get the best of both worlds.</p>
+  </li>
+  <li>
+    <p>Customize intentionally and explicitly.</p>
+
+    <p>Intentional is better than accidental, and explicit is better than implicit: When writing a template, provide points of customization knowingly and correctly, and document them clearly. When using a template, know how the template intends for you to customize it for use with your type, and customize it appropriately.</p>
+  </li>
+  <li>
+    <p>Don’t specialize function templates.</p>
+
+    <p>Specialization is good only when it can be done correctly: When extending someone else’s function template (including <code class="highlighter-rouge">std::swap</code>), avoid trying to write a specialization; instead, write an overload of the function template, and put it in the namespace of the type(s) the overload is designed to be used for. (See Item 57.) When you write your own function template, avoid encouraging direct specialization of the function template itself.</p>
+  </li>
+  <li>
+    <p>Don’t write unintentionally nongeneric code.</p>
+
+    <p>Commit to abstractions, not to details: Use the most generic and abstract means to implement a piece of functionality.</p>
+  </li>
+</ol>
+
+<h2 id="error-handling-and-exceptions">Error Handling and Exceptions</h2>
+
+<ol>
+  <li>
+    <p>Assert liberally to document internal assumptions and invariants.</p>
+
+    <p>Be assertive! Use <code class="highlighter-rouge">assert</code> or an equivalent liberally to document assumptions internal to a module (i.e., where the caller and callee are maintained by the same person or team) that must always be true and otherwise represent programming errors (e.g., violations of a function’s postconditions detected by the caller of the function). (See also Item 70.) Ensure that assertions don’t perform side effects.</p>
+  </li>
+  <li>
+    <p>Establish a rational error handling policy, and follow it strictly.</p>
+
+    <p>Consciously specify, and conscientiously apply, what so many projects leave to ad-hoc (mis)judgment: Develop a practical, consistent, and rational error handling policy early in design, and then stick to it. Ensure that it includes:</p>
+
+    <ul>
+      <li>Identification: What conditions are errors.</li>
+      <li>Severity: How important or urgent each error is.</li>
+      <li>Detection: Which code is responsible for detecting the error.</li>
+      <li>Propagation: What mechanisms are used to report and propagate error notifications in each module.</li>
+      <li>Handling: What code is responsible for doing something about the error.</li>
+      <li>Reporting: How the error will be logged or users notified. Change error handling mechanisms only on module boundaries.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Distinguish between errors and non-errors.</p>
+
+    <p>A breach of contract is an error: A function is a unit of work. Thus, failures should be viewed as errors or otherwise based on their impact on functions. Within a function <code class="highlighter-rouge">f</code>, a failure is an error if and only if it violates one of <code class="highlighter-rouge">f</code>’s preconditions or prevents <code class="highlighter-rouge">f</code> from meeting any of its callees’ preconditions, achieving any of <code class="highlighter-rouge">f</code>’s own postconditions, or reestablishing any invariant that <code class="highlighter-rouge">f</code> shares responsibility for maintaining.</p>
+
+    <p>In particular, here we exclude internal programming errors (i.e., where the caller and callee are the responsibility of the same person or team, such as inside a module), which are a separate category normally dealt with using assertions (see Item 68).</p>
+  </li>
+  <li>
+    <p>Design and write error-safe code.</p>
+
+    <p>Promise, but don’t punish: In each function, give the strongest safety guarantee that won’t penalize callers who don’t need it. Always give at least the basic guarantee.</p>
+
+    <p>Ensure that errors always leave your program in a valid state. This is the basic guarantee. Beware of invariant-destroying errors (including but not limited to leaks), which are just plain bugs.</p>
+
+    <p>Prefer to additionally guarantee that the final state is either the original state (if there was an error the operation was rolled back) or the intended target state (if there was no error the operation was committed). This is the strong guarantee.</p>
+
+    <p>Prefer to additionally guarantee that the operation can never fail at all. Although this is not possible for most functions, it is required for functions like destructors and deallocation functions. This is the no-fail guarantee.</p>
+  </li>
+  <li>
+    <p>Prefer to use exceptions to report errors.</p>
+
+    <p>When harmed, take exception: Prefer using exceptions over error codes to report errors. Use status codes (e.g., return codes, <code class="highlighter-rouge">errno</code>) for errors when exceptions cannot be used (see Item 62), and for conditions that are not errors. Use other methods, such as graceful or ungraceful termination, when recovery is impossible or not required.</p>
+  </li>
+  <li>
+    <p>Throw by value, catch by reference.</p>
+
+    <p>Learn to <code class="highlighter-rouge">catch</code> properly: Throw exceptions by value (not pointer) and catch them by reference (usually to <code class="highlighter-rouge">const</code>). This is the combination that meshes best with exception semantics. When rethrowing the same exception, prefer just <code class="highlighter-rouge">throw</code>; to <code class="highlighter-rouge">throw e</code>;.</p>
+  </li>
+  <li>
+    <p>Report, handle, and translate errors appropriately.</p>
+
+    <p>Know when to say when: Report errors at the point they are detected and identified as errors. Handle or translate each error at the nearest level that can do it correctly.</p>
+  </li>
+  <li>
+    <p>Avoid exception specifications.</p>
+
+    <p>Take exception to these specifications: Don’t write exception specifications on your functions unless you’re forced to (because other code you can’t change has already introduced them; see Exceptions).</p>
+  </li>
+</ol>
+
+<h2 id="stl-containers">STL: Containers</h2>
+
+<ol>
+  <li>
+    <p>Use vector by default. Otherwise, choose an appropriate container.</p>
+
+    <p>Using the “right container” is great: If you have a good reason to use a specific container type, use that container type knowing that you did the right thing.</p>
+
+    <p>So is using <code class="highlighter-rouge">vector</code>: Otherwise, write <code class="highlighter-rouge">vector</code> and keep going without breaking stride, also knowing you did the right thing.</p>
+  </li>
+  <li>
+    <p>Use <code class="highlighter-rouge">vector</code> and <code class="highlighter-rouge">string</code> instead of arrays.</p>
+
+    <p>Why juggle Ming vases? Avoid implementing array abstractions with C-style arrays, pointer arithmetic, and memory management primitives. Using <code class="highlighter-rouge">vector</code> or <code class="highlighter-rouge">string</code> not only makes your life easier, but also helps you write safer and more scalable software.</p>
+  </li>
+  <li>
+    <p>Use <code class="highlighter-rouge">vector</code> (and <code class="highlighter-rouge">string::c_str</code>) to exchange data with non-C++ APIs.</p>
+
+    <p><code class="highlighter-rouge">vector</code> isn’t lost in translation: <code class="highlighter-rouge">vector</code> and <code class="highlighter-rouge">string::c_str</code> are your gateway to communicate with non-C++ APIs. But don’t assume iterators are pointers; to get the address of the element referred to by a <code class="highlighter-rouge">vector&lt;T&gt;::iterator iter</code>, use <code class="highlighter-rouge">&amp;*iter</code>.</p>
+  </li>
+  <li>
+    <p>Store only values and smart pointers in containers.</p>
+
+    <p>Store objects of value in containers: Containers assume they contain value-like types, including value types (held directly), smart pointers, and iterators.</p>
+  </li>
+  <li>
+    <p>Prefer push back to other ways of expanding a sequence.</p>
+
+    <p>push back all you can: If you don’t need to care about the insert position, prefer using push back to add an element to a sequence. Other means can be both vastly slower and less clear.</p>
+  </li>
+  <li>
+    <p>Prefer range operations to single-element operations.</p>
+
+    <p>Don’t use oars when the wind is fair (based on a Latin proverb): When adding elements to sequence containers, prefer to use range operations (e.g., the form of insert that takes a pair of iterators) instead of a series of calls to the single-element form of the operation. Calling the range operation is generally easier to write, easier to read, and more efficient than an explicit loop. (See also Item 84.)</p>
+  </li>
+  <li>
+    <p>Use the accepted idioms to really shrink capacity and really erase elements.</p>
+
+    <p>Use a diet that works: To really shed excess capacity from a container, use the “swap trick.” To really erase elements from a container, use the erase-remove idiom.</p>
+  </li>
+</ol>
+
+<h2 id="stl-algorithms">STL: Algorithms</h2>
+
+<ol>
+  <li>
+    <p>Use a checked STL implementation.</p>
+
+    <p>Safety first (see Item 6): Use a checked STL implementation, even if it’s only available for one of your compiler platforms, and even if it’s only used during pre-release testing.</p>
+  </li>
+  <li>
+    <p>Prefer algorithm calls to handwritten loops.</p>
+
+    <p>Use function objects judiciously: For very simple loops, handwritten loops can be the simplest and most efficient solution. But writing algorithm calls instead of handwritten loops can be more expressive and maintainable, less error-prone, and as efficient.</p>
+
+    <p>When calling algorithms, consider writing your own custom function object that encapsulates the logic you need. Avoid cobbling together parameter-binders and simple function objects (e.g., <code class="highlighter-rouge">bind2nd</code>, <code class="highlighter-rouge">plus</code>), which usually degrade clarity. Consider trying the [Boost] Lambda library, which automates the task of writing function objects.</p>
+  </li>
+  <li>
+    <p>Use the right STL search algorithm.</p>
+
+    <p>Search “just enough”—the right search may be STL (slower than light), but it’ll still be pretty fast: This Item applies to searching for a particular value in a range, or for the location where it would be if it were in the range. To search an unsorted range, use <code class="highlighter-rouge">find</code>/<code class="highlighter-rouge">find if</code> or <code class="highlighter-rouge">count</code>/<code class="highlighter-rouge">count if</code>. To search a sorted range, use lower bound, upper bound, equal range, or (rarely) binary search. (Despite its common name, binary search is usually not the right choice.)</p>
+  </li>
+  <li>
+    <p>Use the right STL sort algorithm.</p>
+
+    <p>Sort “just enough:” Understand what each of the sorting algorithms does, and use the cheapest algorithm that does what you need.</p>
+  </li>
+  <li>
+    <p>Make predicates pure functions.</p>
+
+    <p>Predicate purity: A predicate is a function object that returns a yes/no answer, typically as a <code class="highlighter-rouge">bool</code> value. A function is pure in the mathematical sense if its result depends only on its arguments (note that this use of “pure” has nothing to do with pure virtual functions).</p>
+
+    <p>Don’t allow predicates to hold or access state that affects the result of their <code class="highlighter-rouge">operator()</code>, including both member and global state. Prefer to make <code class="highlighter-rouge">operator()</code> a <code class="highlighter-rouge">const</code> member function for predicates (see Item 15).</p>
+  </li>
+  <li>
+    <p>Prefer function objects over functions as algorithm and comparer arguments.</p>
+
+    <p>Objects plug in better than functions: Prefer passing function objects, not functions, to algorithms. Comparers for associative containers must be function objects. Function objects are adaptable and, counterintuitively, they typically produce faster code than functions.</p>
+  </li>
+  <li>
+    <p>Write function objects correctly.</p>
+
+    <p>Be cheap, be adaptable: Design function objects to be values that are cheap to copy. Where possible, make them adaptable by inheriting from <code class="highlighter-rouge">unary</code> - or <code class="highlighter-rouge">binary function</code>.</p>
+  </li>
+</ol>
+
+<h2 id="type-safety">Type Safety</h2>
+
+<ol>
+  <li>
+    <p>Avoid type switchin  ;prefer polymorphism.</p>
+
+    <p>Switch off: Avoid switching on the type of an object to customize behavior. Use templates and virtual functions to let types (not their calling code) decide their behavior.</p>
+  </li>
+  <li>
+    <p>Rely on types, not on representations.</p>
+
+    <p>Don’t try to X-ray objects (see Item 96): Don’t make assumptions about how objects are exactly represented in memory. Instead, let types decide how their objects are written to and read from memory.</p>
+  </li>
+  <li>
+    <p>Avoid using <code class="highlighter-rouge">reinterpret_cast</code>.</p>
+
+    <p>Lies have short legs (German and Romanian proverb): Don’t try to use <code class="highlighter-rouge">reinterpret_cast</code> to force the compiler to reinterpret the bits of an object of one type as being the bits of an object of a different type. That’s the opposite of maintaining type safety, and <code class="highlighter-rouge">reinterpret_cast</code> isn’t even guaranteed to do that or anything else in particular.</p>
+  </li>
+  <li>
+    <p>Avoid using <code class="highlighter-rouge">static_cast</code> on pointers.</p>
+
+    <p>Pointers to dynamic objects don’t static cast: Safe alternatives range from using dynamic cast to refactoring to redesigning.</p>
+  </li>
+  <li>
+    <p>Avoid casting away <code class="highlighter-rouge">const</code>.</p>
+
+    <p>Some fibs are punishable: Casting away const sometimes results in undefined behavior, and it is a staple of poor programming style even when legal.</p>
+  </li>
+  <li>
+    <p>Don’t use C-style casts.</p>
+
+    <p>Age doesn’t always imply wisdom: C-style casts have different (and often dangerous) semantics depending on context, all disguised behind a single syntax. Replacing C-style casts with C++-style casts helps guard against unexpected errors.</p>
+  </li>
+  <li>
+    <p>Don’t <code class="highlighter-rouge">memcpy</code> or <code class="highlighter-rouge">memcmp</code> non-PODs.</p>
+
+    <p>Don’t try to X-ray objects (see Item 91): Don’t use memcpy and memcmp to copy or compare anything more structured than raw memory.</p>
+  </li>
+  <li>
+    <p>Don’t use unions to reinterpret representation.</p>
+
+    <p>A deceit is still a lie: Unions can be abused into obtaining a “cast without a cast” by writing one member and reading another. This is more insidious and even less predictable than <code class="highlighter-rouge">reinterpret_cast</code> (see Item 92).</p>
+  </li>
+  <li>
+    <p>Don’t use varargs (ellipsis).</p>
+
+    <p>Ellipses cause collapses: The ellipsis is a dangerous carryover from C. Avoid varargs, and use higher-level C++ constructs and libraries instead.</p>
+  </li>
+  <li>
+    <p>Don’tuseinvalidobjects.Don’tuseunsafefunctions.</p>
+
+    <p>Don’t use expired medicines: Both invalid objects and historical but unsafe functions wreak havoc on your program’s health.</p>
+  </li>
+  <li>
+    <p>Don’t treat arrays polymorphically.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>Arrays are ill-adjusted: Treating arrays polymorphically is a gross type error that your compiler will probably remain silent about. Don’t fall into the trap.
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+<ul class="share-buttons">
+  <li><div class="fb-share-button" data-href="http://micro-os-plus.github.io/develop/sutter-101/" data-layout="button"></div></li>
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+</ul>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub</li>
+  <li>
+    <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>
+  </li>
+  <li>
+<a href="http://twitter.com/micro_os_plus" class="twitter-follow-button" data-show-count="false">Follow @micro_os_plus</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
+</ul>
+
+
+  </div>
+  <a href="https://github.com/micro-os-plus/micro-os-plus-iii" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/releases">Releases</a></li>
+  <li><a href="https://github.com/micro-os-plus/micro-os-plus-iii/issues">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
