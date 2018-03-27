@@ -241,7 +241,7 @@
 <h1 class="page-title">Predefined compiler macros</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Sun Nov 27 11:24:52 2016 UTC.</td>
+    <td id="last-modified">Last modified on Tue Mar 27 22:47:49 2018 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/predefined-macros.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -300,79 +300,79 @@
 
 <p>If some parts of the code are platform dependent, test the following preprocessor definitions:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__APPLE__)
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__APPLE__)
 #if defined(__linux__)
 #if defined(__x86_64__)
-</code></pre>
+</span></code></pre>
 </div>
 
 <p>To check the compiler:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined (__GNUC__)
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined (__GNUC__)
 #if __GNUC__ == 4 &amp;&amp; __GNUC_MINOR__ == 7
 #if defined(__clang__)
-</code></pre>
+</span></code></pre>
 </div>
 
 <p>To check the size of the pointer:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if __SIZEOF_POINTER__ == __SIZEOF_INT__
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if __SIZEOF_POINTER__ == __SIZEOF_INT__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG_LONG__
-</code></pre>
+</span></code></pre>
 </div>
 
 <p>To check if there are no <strong>long long</strong> variables:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if !defined(__SIZEOF_LONG_LONG)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if !defined(__SIZEOF_LONG_LONG)
+</span></code></pre>
 </div>
 
 <p>To check if the compiling unit is C++:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined (__cplusplus)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined (__cplusplus)
+</span></code></pre>
 </div>
 
 <p>To check if the compiling unit is an assembly file:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__ASSEMBLER__)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__ASSEMBLER__)
+</span></code></pre>
 </div>
 
 <p>To check if optimisation is enabled (more than <code class="highlighter-rouge">-O0</code>):</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__OPTIMIZE__)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__OPTIMIZE__)
+</span></code></pre>
 </div>
 
 <p>To check if optimisation for size is enabled (<code class="highlighter-rouge">-Os</code>):</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__OPTIMIZE_SIZE__)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__OPTIMIZE_SIZE__)
+</span></code></pre>
 </div>
 
 <p>To check if no inlines are enabled:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__NO_INLINE__)
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__NO_INLINE__)
+</span></code></pre>
 </div>
 
 <p>To see the built-in definitions:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>g++ -dM -E - &lt; /dev/null
-clang++ -dM -E - &lt; /dev/null
-</code></pre>
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">g++</span><span class="kv"> -dM -E - &lt; /dev/null
+</span><span class="w">$ </span><span class="nc">clang++</span><span class="kv"> -dM -E - &lt; /dev/null
+</span></code></pre>
 </div>
 
 <h2 id="arm-cortex-m">ARM Cortex-M</h2>
@@ -381,9 +381,9 @@ clang++ -dM -E - &lt; /dev/null
 
 <h3 id="arm-cortex-m0m0">ARM Cortex-M0/M0+</h3>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_ARCH 6
 #define __ARM_ARCH_6M__ 1
 #define __ARM_ARCH_ISA_THUMB 1
@@ -402,8 +402,8 @@ clang++ -dM -E - &lt; /dev/null
 #define __arm__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_ARCH 6
 #define __ARM_ARCH_6M__ 1
 #define __ARM_ARCH_ISA_THUMB 1
@@ -426,9 +426,9 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egre
 
 <h3 id="arm-cortex-m3">ARM Cortex-M3</h3>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7M__ 1
@@ -461,9 +461,9 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egre
 
 <h3 id="arm-cortex-m4">ARM Cortex-M4</h3>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -494,8 +494,8 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egre
 #define __thumb2__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -526,8 +526,8 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /
 #define __thumb2__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -562,9 +562,9 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /de
 
 <h3 id="arm-cortex-m7">ARM Cortex-M7</h3>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -595,8 +595,8 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /de
 #define __thumb2__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -627,8 +627,8 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /
 #define __thumb2__ 1
 #define __thumb__ 1
 
-$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-#define __ARMEL__ 1
+<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
+</span>#define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
 #define __ARM_ARCH_7EM__ 1
@@ -665,18 +665,18 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /de
 
 <p>To check if hardware floating point is enabled (<code class="highlighter-rouge">-mfloat-abi=softfp</code> or <code class="highlighter-rouge">-mfloat-abi=hard</code>):</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#define __ARM_FP 12
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __ARM_FP 12
+</span></code></pre>
 </div>
 
 <h2 id="freestanding">Freestanding</h2>
 
 <p>To check if <code class="highlighter-rouge">-ffreestanding</code> was defined, you can use the following:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#define __STDC_HOSTED__ 0
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __STDC_HOSTED__ 0
+</span></code></pre>
 </div>
 
 <p>By default, i.e. with <code class="highlighter-rouge">-fhosted</code> defined, the value is 1.</p>
@@ -685,39 +685,50 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /de
 
 <p>To check if a C++ program is compiled with <code class="highlighter-rouge">-fexceptions</code>, use:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#define __EXCEPTIONS 1
-</code></pre>
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __EXCEPTIONS 1
+</span></code></pre>
 </div>
 
 <h2 id="other-macros">Other macros</h2>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>#define __CHAR_UNSIGNED__ 1
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __CHAR_UNSIGNED__ 1
 #define __LP64__ 1
-</code></pre>
+</span></code></pre>
 </div>
 
 <h2 id="warnings">Warnings</h2>
 
 <p>When compiling third party sources, it might be necessary to temporarily disable some warnings:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>// [ILG]
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wundef"
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpadded"
+</span>
+<span class="c1">// ...
+</span>
+<span class="cp">#pragma GCC diagnostic pop
+</span></code></pre>
+</div>
+
+<p>clang specific warnings must be issued only for clang:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsign-conversion"
-
-// [ILG]
-#pragma GCC diagnostic pop
-
-// [ILG]
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundef"
-
-// [ILG]
-#pragma clang diagnostic pop
-</code></pre>
+#if defined(__clang__)
+#pragma clang diagnostic ignored "-Wgnu-include-next"
+#pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
+#pragma clang diagnostic ignored "-Wmissing-variable-declarations"
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+#endif
+</span>
+<span class="c1">// ...
+</span>
+<span class="cp">#pragma GCC diagnostic pop
+</span></code></pre>
 </div>
 
 
