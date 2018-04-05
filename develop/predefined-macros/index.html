@@ -241,7 +241,7 @@
 <h1 class="page-title">Predefined compiler macros</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Tue Mar 27 22:47:49 2018 UTC.</td>
+    <td id="last-modified">Last modified on Thu Apr  5 10:07:35 2018 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/predefined-macros.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -313,6 +313,13 @@
 <pre class="highlight"><code><span class="cp">#if defined (__GNUC__)
 #if __GNUC__ == 4 &amp;&amp; __GNUC_MINOR__ == 7
 #if defined(__clang__)
+</span></code></pre>
+</div>
+
+<p>To check if GCC only:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)
 </span></code></pre>
 </div>
 
@@ -728,6 +735,53 @@
 <span class="c1">// ...
 </span>
 <span class="cp">#pragma GCC diagnostic pop
+</span></code></pre>
+</div>
+
+<p>To check if POSIX:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#include &lt;unistd.h&gt;
+</span>
+<span class="cp">#if defined(_POSIX_VERSION)
+</span><span class="c1">// ...
+</span><span class="cp">#endif
+</span></code></pre>
+</div>
+
+<p>To include next version:</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#include &lt;unistd.h&gt;
+</span>
+<span class="cp">#if defined(_POSIX_VERSION)
+</span>
+<span class="cp">#pragma GCC diagnostic push
+#if defined(__clang__)
+#pragma clang diagnostic ignored "-Wgnu-include-next"
+#endif
+#include_next &lt;termios.h&gt;
+#pragma GCC diagnostic pop
+</span>
+<span class="cp">#else
+</span>
+<span class="c1">// Avoid warnings for __BSD* definitions.
+</span><span class="cp">#pragma GCC system_header
+</span>
+<span class="cp">#ifdef __cplusplus
+</span><span class="k">extern</span> <span class="s">"C"</span>
+<span class="p">{</span>
+<span class="cp">#endif
+</span>
+<span class="c1">// ----------------------------------------------------------------------------
+//...
+// ----------------------------------------------------------------------------
+</span>
+<span class="cp">#ifdef __cplusplus
+</span><span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#endif </span><span class="cm">/* defined(_POSIX_VERSION) */</span><span class="cp">
 </span></code></pre>
 </div>
 
