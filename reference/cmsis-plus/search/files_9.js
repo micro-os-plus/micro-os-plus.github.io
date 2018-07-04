@@ -10,8 +10,6 @@ var searchData=
   ['module_2drtos_2dc_2edoxygen',['module-rtos-c.doxygen',['../module-rtos-c_8doxygen.html',1,'']]],
   ['module_2drtos_2edoxygen',['module-rtos.doxygen',['../module-rtos_8doxygen.html',1,'']]],
   ['modules_2edoxygen',['modules.doxygen',['../modules_8doxygen.html',1,'']]],
-  ['mount_2dmanager_2ecpp',['mount-manager.cpp',['../mount-manager_8cpp.html',1,'']]],
-  ['mount_2dmanager_2eh',['mount-manager.h',['../mount-manager_8h.html',1,'']]],
   ['mutex',['mutex',['../mutex.html',1,'']]],
   ['mutex_2ecpp',['mutex.cpp',['../mutex_8cpp.html',1,'']]]
 ];

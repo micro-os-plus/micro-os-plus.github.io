@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -196,7 +196,7 @@ Functions</h2></td></tr>
 <p>The actual C library function, used by newlib, is in <code><a class="el" href="os-core_8cpp.html">os-core.cpp</a></code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#afb95537285d0aa314fc611ec05897cbf" title="Implementation of the library __errno() function. ">__errno()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02050">2050</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02054">2054</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -230,11 +230,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Terminate the calling thread and make the value <em>value_ptr</em> available to any successful join with the terminating thread. Any cancellation cleanup handlers that have been pushed and not yet popped shall be popped in the reverse order that they were pushed and then executed. After all cancellation cleanup handlers have been executed, if the thread has any thread-specific data, appropriate destructor functions shall be called in an unspecified order. Thread termination does not release any application visible process resources, including, but not limited to, mutexes and file descriptors, nor does it perform any process-level cleanup actions, including, but not limited to, calling any <code><a class="el" href="atexit_8cpp.html#a8c2283e1e526c998ba7c1617b540a042" title="Request execution of functions at program exit. ">atexit()</a></code> routines that may exist. An implicit call to <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> is made when a thread other than the thread in which <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a> was first invoked returns from the start routine that was used to create it. The function's return value shall serve as the thread's exit code. The behaviour of <code>internal_exit_()</code> is undefined if called from a cancellation cleanup handler or destructor function that was invoked as a result of either an implicit or explicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code>. After a thread has terminated, the result of access to local (auto) variables of the thread is undefined. Thus, references to local variables of the exiting thread should not be used for the <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> <em>value_ptr</em> parameter value.</p>
+<p>Terminate the calling thread and make the value <em>value_ptr</em> available to any successful join with the terminating thread. Any cancellation cleanup handlers that have been pushed and not yet popped shall be popped in the reverse order that they were pushed and then executed. After all cancellation cleanup handlers have been executed, if the thread has any thread-specific data, appropriate destructor functions shall be called in an unspecified order. Thread termination does not release any application visible process resources, including, but not limited to, mutexes and file descriptors, nor does it perform any process-level cleanup actions, including, but not limited to, calling any <code>atexit()</code> routines that may exist. An implicit call to <a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a> is made when a thread other than the thread in which <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main(). ">main()</a> was first invoked returns from the start routine that was used to create it. The function's return value shall serve as the thread's exit code. The behaviour of <code>internal_exit_()</code> is undefined if called from a cancellation cleanup handler or destructor function that was invoked as a result of either an implicit or explicit call to <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code>. After a thread has terminated, the result of access to local (auto) variables of the thread is undefined. Thus, references to local variables of the exiting thread should not be used for the <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a9c68164be854d7fb8a2693726c6207ff" title="Terminate the current running thread. ">exit()</a></code> <em>value_ptr</em> parameter value.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_exit.html"><code>pthread_exit()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02035">2035</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l02039">2039</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01992">1992</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01996">1996</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -343,7 +343,7 @@ Functions</h2></td></tr>
 <p>If the mask is zero, return the full thread flags mask, without any masking or subsequent clearing.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01981">1981</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01985">1985</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -423,7 +423,7 @@ Functions</h2></td></tr>
 <p>If the <a class="el" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the event flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01962">1962</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01966">1966</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ Functions</h2></td></tr>
 <p>The function does not blocks, if the expected event flags are not raised, but returns <code>EGAIN</code>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01916">1916</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01920">1920</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Functions</h2></td></tr>
 <p>If the <a class="el" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a" title="Ask for flags to be cleared after read. ">flags::mode::clear</a> bit is set, the event flags that are returned are automatically cleared.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01899">1899</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01903">1903</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -584,11 +584,11 @@ Functions</h2></td></tr>
 <p>Suspend the current running thread to wait for an event. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<p>Remove the current running thread from the ready list and pass control to the next ready thread. The thread will not be automatically rescheduled, it requires some other tread or interrupt service routine to add it back to the READY state (via <code><a class="el" href="classos_1_1rtos_1_1thread.html#aea39969a90aad5de97abc2529485c18c" title="Resume the thread. ">thread::resume()</a></code>).</p>
+<p>Remove the current running thread from the ready list and pass control to the next ready thread. The thread will not be automatically rescheduled, it requires some other tread or interrupt service routine to add it back to the READY state (via <code><a class="el" href="classos_1_1rtos_1_1thread.html#a68efeb8a95a46317538141cdad11f73a" title="Resume the thread. ">thread::resume()</a></code>).</p>
 <p>This is different from <code><a class="el" href="namespaceos_1_1rtos_1_1this__thread.html#a6d6b2df07994ab81b2435596a93bbdb6" title="Yield execution to the next ready thread. ">yield()</a></code> which automatically reschedules the current thread before passing control to the next thread (which might be the same if no other threads with at least the same priority are ready).</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01872">1872</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8h_source.html#l01876">1876</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 
 </div>
 </div>
@@ -611,13 +611,16 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the current running thread.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01481">1481</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01541">1541</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a6d6b2df07994ab81b2435596a93bbdb6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void os::rtos::this_thread::yield </td>
@@ -627,15 +630,21 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Yield execution to the next ready thread. </p>
+<p>Yield the CPU to the next ready thread.</p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Pass control to next thread that is in <b>READY</b> state.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01500">1500</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="os-thread_8cpp_source.html#l01562">1562</a> of file <a class="el" href="os-thread_8cpp_source.html">os-thread.cpp</a>.</p>
 
 </div>
 </div>

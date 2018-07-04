@@ -22,6 +22,8 @@ var group__cmsis_plus_app_config_trace =
     [ "OS_TRACE_RTOS_THREAD_CONTEXT", "group__cmsis-plus-app-config-trace.html#ga7fb5ff380a08c210ed16b294271e4f95", null ],
     [ "OS_TRACE_RTOS_THREAD_FLAGS", "group__cmsis-plus-app-config-trace.html#ga50c9ec642e06fc5ec40b08117675041a", null ],
     [ "OS_TRACE_RTOS_TIMER", "group__cmsis-plus-app-config-trace.html#gabeb270812a276322b493be1b18bd48fe", null ],
+    [ "OS_TRACE_UTILS_LISTS", "group__cmsis-plus-app-config-trace.html#gae9caccd941227fabc6945fdb7c96992b", null ],
+    [ "OS_TRACE_UTILS_LISTS_CONSTRUCT", "group__cmsis-plus-app-config-trace.html#ga9ddda0465d77fce4d759e783ee260648", null ],
     [ "OS_USE_TRACE_ITM", "group__cmsis-plus-app-config-trace.html#ga1eef4714134677247530eb58af9282fb", null ],
     [ "OS_USE_TRACE_POSIX_STDERR", "group__cmsis-plus-app-config-trace.html#ga30d4e7f0a4dc14f7d1583404c44539d2", null ],
     [ "OS_USE_TRACE_POSIX_STDOUT", "group__cmsis-plus-app-config-trace.html#ga57c426ea9da684503374422b28481845", null ],

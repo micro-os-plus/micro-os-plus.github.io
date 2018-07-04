@@ -2,7 +2,7 @@ var classos_1_1memory_1_1malloc__memory__resource =
 [
     [ "malloc_memory_resource", "classos_1_1memory_1_1malloc__memory__resource.html#a0157388861d8b62f2ea7c8d7e600006b", null ],
     [ "malloc_memory_resource", "classos_1_1memory_1_1malloc__memory__resource.html#adc6355ad4ab33455ad63598b7ddae8b1", null ],
-    [ "~malloc_memory_resource", "classos_1_1memory_1_1malloc__memory__resource.html#a285f0b28a0ec16cc0977fe8a5a3eb02c", null ],
+    [ "~malloc_memory_resource", "classos_1_1memory_1_1malloc__memory__resource.html#adb39a31a29906bdad4b6e2d078895ebc", null ],
     [ "allocate", "classos_1_1memory_1_1malloc__memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815", null ],
     [ "allocated_bytes", "classos_1_1memory_1_1malloc__memory__resource.html#a4461f324ac21f845527f391ce47c2dd0", null ],
     [ "allocated_chunks", "classos_1_1memory_1_1malloc__memory__resource.html#a2f4e57e4e77ead637b0720a9c6fee762", null ],

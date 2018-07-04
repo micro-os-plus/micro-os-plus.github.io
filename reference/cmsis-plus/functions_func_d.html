@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -167,9 +167,16 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>deallocate()
 : <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#abdd5b9366a1761434b18ce4fe1fe5ebb">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1file__descriptors__manager.html#a6f3b3ae43bef719d5624b42303fec8a5">os::posix::file_descriptors_manager</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a070977f77b4fef4e886f045c940a3dd2">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#a0fe5b1668b2a24865f1c21a0912067f7">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a43986889676bf5f4274e60538ccd76ee">os::rtos::memory::memory_resource</a>
+</li>
+<li>deallocate_directories()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#ae5e9b592031e5156eecdb58030627127">os::posix::file_system</a>
+</li>
+<li>deallocate_files()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#abdef1b706bf46511cf7bc66ab4a57ff4">os::posix::file_system</a>
 </li>
 <li>deallocations()
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#ade278db4233cd15ab7e5519299a01a3b">os::rtos::memory::memory_resource</a>
@@ -177,36 +184,47 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 <li>default_size()
 : <a class="el" href="classos_1_1rtos_1_1thread_1_1stack.html#a99a6469f91a2fbf8db518d6052b48dd1">os::rtos::thread::stack</a>
 </li>
+<li>deferred_directories_list()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#a041d9d4d18720890eb8b5e19bd5f22b6">os::posix::file_system</a>
+</li>
+<li>deferred_files_list()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#aaebb5857dd24b4a39b88a999ddd09e11">os::posix::file_system</a>
+</li>
+<li>deferred_sockets_list()
+: <a class="el" href="classos_1_1posix_1_1net__stack.html#ae507f8986068f83bcc2f6899b72506a7">os::posix::net_stack</a>
+</li>
 <li>delete_function_object()
-: <a class="el" href="classos_1_1estd_1_1thread.html#accddeb5c8b094f1817351705c155b0b0">os::estd::thread</a>
+: <a class="el" href="classos_1_1estd_1_1thread.html#a2abe8177ddf11f7bbe01a4d29ae2f9bd">os::estd::thread</a>
+, <a class="el" href="classthread.html#a2abe8177ddf11f7bbe01a4d29ae2f9bd">thread</a>
 </li>
 <li>delete_pipe()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a26abbad8080e41dd14099938ecb761b6">os::driver::usb::Host</a>
 </li>
 <li>delete_system_thread()
-: <a class="el" href="classos_1_1estd_1_1thread.html#a49f5477cb3ee1311c2d4cd1905cd4132">os::estd::thread</a>
+: <a class="el" href="classos_1_1estd_1_1thread.html#a09b9ad5bb8412cf7b97351252205a17c">os::estd::thread</a>
+, <a class="el" href="classthread.html#a09b9ad5bb8412cf7b97351252205a17c">thread</a>
 </li>
 <li>detach()
-: <a class="el" href="classos_1_1estd_1_1thread.html#a6ce064c8a4a9cb40037466b9d86af05a">os::estd::thread</a>
-, <a class="el" href="classos_1_1rtos_1_1thread.html#a09b7123d2088c979ec43d5daf9c9ae02">os::rtos::thread</a>
+: <a class="el" href="classos_1_1estd_1_1thread.html#a5607159f9b9c9152d2bb8d207be241b4">os::estd::thread</a>
+, <a class="el" href="classos_1_1rtos_1_1thread.html#aafcfb047c0a8409b9df5f7aa94729700">os::rtos::thread</a>
+, <a class="el" href="classthread.html#a5607159f9b9c9152d2bb8d207be241b4">thread</a>
 </li>
 <li>Device()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#aefd2c04f314d809a54c7b3be7bb2b806">os::driver::usb::Device</a>
 </li>
 <li>device()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a41b3d7078fab8599b3d1b537a762afef">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1device.html#a12a79671e52c746dd5e6c3f63c9b640c">os::posix::device</a>
+, <a class="el" href="classos_1_1posix_1_1file__system.html#a16510b87f5095d875159422a71ec071f">os::posix::file_system</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__impl.html#afedcac7bcdee453c8a7df0e04535044a">os::posix::file_system_impl</a>
 </li>
-<li>device_block()
-: <a class="el" href="classos_1_1posix_1_1device__block.html#aa2ba76cf8970548a20aedfb1e4e45a69">os::posix::device_block</a>
-</li>
-<li>device_char()
-: <a class="el" href="classos_1_1posix_1_1device__char.html#a0936f8c655f0ac7ab3f3030621fb0bc0">os::posix::device_char</a>
-</li>
-<li>device_char_registry()
-: <a class="el" href="classos_1_1posix_1_1device__char__registry.html#a70f756b0a3cb91d7c878110eceaa61ef">os::posix::device_char_registry</a>
+<li>device_impl()
+: <a class="el" href="classos_1_1posix_1_1device__impl.html#a1b6d5decdae264ee0ba04fa1d9140000">os::posix::device_impl</a>
 </li>
 <li>device_prefix()
-: <a class="el" href="classos_1_1posix_1_1device__char.html#a7051b6dc87592fce2fc1d0ac1ec4efd1">os::posix::device_char</a>
+: <a class="el" href="classos_1_1posix_1_1device.html#a2e806df2da45813e8ff1df0d147bcd7b">os::posix::device</a>
+</li>
+<li>device_registry()
+: <a class="el" href="classos_1_1posix_1_1device__registry.html#a3a25f29ed762b520b6819de4423d8b99">os::posix::device_registry&lt; T &gt;</a>
 </li>
 <li>device_serial_buffered()
 : <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a7fbc7af2d47c0697d5634892bcf47bd6">os::posix::device_serial_buffered&lt; CS &gt;</a>
@@ -215,10 +233,16 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classos_1_1posix_1_1directory.html#ad525a8d836b63ec6758182a282d221a0">os::posix::directory</a>
 </li>
 <li>directory()
-: <a class="el" href="classos_1_1posix_1_1directory.html#a8bd08460174ae5e375752d681404205b">os::posix::directory</a>
+: <a class="el" href="classos_1_1posix_1_1directory.html#adfcf71b35fab4a39a2a2db95e0dc5d77">os::posix::directory</a>
 </li>
-<li>dirs_pool()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a858952efdffc78bb375dfe59a27e6e53">os::posix::file_system</a>
+<li>directory_impl()
+: <a class="el" href="classos_1_1posix_1_1directory__impl.html#a7a00c882d78b883402bcc7ade7755e48">os::posix::directory_impl</a>
+</li>
+<li>directory_implementable()
+: <a class="el" href="classos_1_1posix_1_1directory__implementable.html#aed2efa4aae1cde8ebba13cb62c6ca49b">os::posix::directory_implementable&lt; T &gt;</a>
+</li>
+<li>directory_lockable()
+: <a class="el" href="classos_1_1posix_1_1directory__lockable.html#a95f1fbda8be4d31e4666fbbcb4c35f70">os::posix::directory_lockable&lt; T, L &gt;</a>
 </li>
 <li>disconnect()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#acac73b082202bb106a61926ce2c34f08">os::driver::usb::Device</a>
@@ -230,7 +254,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#ae5b27fd2ce7f4e21afedd5dcfe7c9497">os::driver::usbh_wrapper</a>
 </li>
 <li>do_accept()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a73310b1a8b4f14b840d830ab7ea4774d">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a66a45a1106e6674674009345bf2185fd">os::posix::socket_impl</a>
 </li>
 <li>do_allocate()
 : <a class="el" href="classos_1_1memory_1_1block__pool.html#a75b58609ef9737eecb93977b71638e37">os::memory::block_pool</a>
@@ -242,15 +266,16 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a1c7b83647d869aa1a4c10c989a82665f">os::rtos::memory::memory_resource</a>
 </li>
 <li>do_bind()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a7f9ffb470251db4ed1006105a953ed35">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#ab682d833370572d6dd7df5824ea40aed">os::posix::socket_impl</a>
 </li>
 <li>do_chmod()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a225f872eaa3c9b2221bc90ee5a6f990d">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a6c3d2a9590f494f9624819fa2a219979">os::posix::file_system_impl</a>
 </li>
 <li>do_close()
-: <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a35981bcf36613f0f8afbdb4e1d646880">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1directory.html#a8986864cc35c103721d568a5f4027156">os::posix::directory</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#aaf7e5dcd87125eb11ed179344500e60c">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#a2819d2cf5d35008cecaff625f50702e6">os::posix::block_device_partition_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a35981bcf36613f0f8afbdb4e1d646880">os::posix::device_serial_buffered&lt; CS &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1directory__impl.html#a79d97d5abf2237560048ac40fff6d045">os::posix::directory_impl</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#a7f39b18c6364a0bf495c9a774017ae8e">os::posix::io_impl</a>
 </li>
 <li>do_coalesce()
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a2949e2fa9faf3dcbcc1822bce975e6dc">os::rtos::memory::memory_resource</a>
@@ -270,7 +295,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 <li>do_connect()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a8eec551321b0628ccdc67e55b5b1ec02">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a70157238dcb31a57f8c7b2c243a61b5a">os::driver::usbd_wrapper</a>
-, <a class="el" href="classos_1_1posix_1_1socket.html#a9b0202902babbc27f11bfbff6f629ec9">os::posix::socket</a>
+, <a class="el" href="classos_1_1posix_1_1socket__impl.html#af90be6f96dc2d6ed89e2b14230b53630">os::posix::socket_impl</a>
 </li>
 <li>do_control()
 : <a class="el" href="classos_1_1driver_1_1Serial.html#a4e0833640fc2c8c8e9cb6a02e3fbb388">os::driver::Serial</a>
@@ -290,6 +315,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1memory_1_1malloc__memory__resource.html#a3a429126caade821e5d50e721d95de25">os::memory::malloc_memory_resource</a>
 , <a class="el" href="classos_1_1memory_1_1new__delete__memory__resource.html#ae3f79d745934b187cd71fc9dbff1ae9e">os::memory::new_delete_memory_resource</a>
 , <a class="el" href="classos_1_1memory_1_1null__memory__resource.html#ad15a5b2bceeff0496ae29559956ef76e">os::memory::null_memory_resource</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#ade2f4b94ac22a4897daab3617a588383">os::posix::io_impl</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a2f060fa79195b407bf22502c3197ede3">os::rtos::memory::memory_resource</a>
 </li>
 <li>do_delete_pipe()
@@ -301,13 +327,13 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#ad2800cf0bbcdec6d0dad8152056b8f45">os::driver::usbd_wrapper</a>
 </li>
 <li>do_fstat()
-: <a class="el" href="classos_1_1posix_1_1io.html#a220d39855751e202263812ee13330fc9">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1io__impl.html#afcd653fb293a373fc0a1dc47dbc2a47d">os::posix::io_impl</a>
 </li>
 <li>do_fsync()
-: <a class="el" href="classos_1_1posix_1_1file.html#a31e5aa14fe3e1fead729fb24c5c413f2">os::posix::file</a>
+: <a class="el" href="classos_1_1posix_1_1file__impl.html#acfa69d9c67650409fafa8f82102d7609">os::posix::file_impl</a>
 </li>
 <li>do_ftruncate()
-: <a class="el" href="classos_1_1posix_1_1file.html#a37cf85336b5bae43ca6c276f1b9a44fa">os::posix::file</a>
+: <a class="el" href="classos_1_1posix_1_1file__impl.html#a6671960a0661294616778b908a293148">os::posix::file_impl</a>
 </li>
 <li>do_get_capabilities()
 : <a class="el" href="classos_1_1driver_1_1Serial.html#ae7fcbe4e83efc97d8c49afe9dc5ec6f4">os::driver::Serial</a>
@@ -358,34 +384,37 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#aad8a561e63e862138e93e25b68235827">os::driver::usbh_wrapper</a>
 </li>
 <li>do_getpeername()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a58e444464f0859f78d37c389475b5dad">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a633b63568dd85f2d410929f5aed6cbc4">os::posix::socket_impl</a>
 </li>
 <li>do_getsockname()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a02ad7f0aae01a8b3a49beaefa66f2ace">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#afa66388910893ce5cf25c86ade94df87">os::posix::socket_impl</a>
 </li>
 <li>do_getsockopt()
-: <a class="el" href="classos_1_1posix_1_1socket.html#aa4bf5dd41891f71488ad9966c3305e2b">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a206be68ac811b3e0bf107433e531851d">os::posix::socket_impl</a>
 </li>
 <li>do_is_connected()
 : <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a3e994b5c27426a28367e114b020e8e4f">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#a0ceef2cd4cd07e8ebb8ffd5f124bf0cf">os::posix::io</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#a2023f4c8a3f6a6ba93fc60f9096b79ab">os::posix::io_impl</a>
 </li>
 <li>do_is_equal()
 : <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a0dba387e2a6a2eeaf66b99075e758381">os::rtos::memory::memory_resource</a>
 </li>
 <li>do_is_opened()
-: <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aa4e15718e798d41c58752846ef0121be">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#af86964661db8e17cdaf99401296c822a">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1device__impl.html#a74932d67837e541b1ec6e15f876693aa">os::posix::device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aa4e15718e798d41c58752846ef0121be">os::posix::device_serial_buffered&lt; CS &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#a2beb1da77fa410cd38bb48fc62bad8a5">os::posix::io_impl</a>
 </li>
 <li>do_isatty()
-: <a class="el" href="classos_1_1posix_1_1device__char.html#abc8a31d65b988a2d499e8393daf2b239">os::posix::device_char</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#a8ce3151e46c1a37952ff3f9835d2a08e">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1io__impl.html#aa77fdba05ffaba109f07898d8fc54cca">os::posix::io_impl</a>
+, <a class="el" href="classos_1_1posix_1_1tty__impl.html#acf91dd9ed7b7d6376b69c2e5610c147d">os::posix::tty_impl</a>
 </li>
 <li>do_listen()
-: <a class="el" href="classos_1_1posix_1_1socket.html#adc0688a2af906cd3507622c2e658c1f8">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a265842a390e65d5b512c8daf6e1ba2c3">os::posix::socket_impl</a>
 </li>
 <li>do_lseek()
-: <a class="el" href="classos_1_1posix_1_1file.html#aae22f952961fdc6325948bd180cff0ec">os::posix::file</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a44191e4c386a27cc84cec89eed7c9a50">os::posix::block_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1char__device__impl.html#aaa57db18ae561265d134fdc81f2fb2c1">os::posix::char_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#affa77972b0a50968ef4ed2c4fffa9b9e">os::posix::io_impl</a>
 </li>
 <li>do_max_size()
 : <a class="el" href="classos_1_1memory_1_1block__pool.html#a74af8ec82a2160722a89d60671b3f067">os::memory::block_pool</a>
@@ -393,14 +422,14 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#ab7c9aae843a520c4514dbbabef65a922">os::rtos::memory::memory_resource</a>
 </li>
 <li>do_mkdir()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a3c32804be75e8ad39ff968cf008a954b">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a1bb5b0612a8f5cbc6d9a83e4474d67b6">os::posix::file_system_impl</a>
 </li>
 <li>do_modify_pipe()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a801b8df9aabe52e55584c3b3364fd02f">os::driver::usb::Host</a>
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a467ae620f0b2647684cd06c450cbff88">os::driver::usbh_wrapper</a>
 </li>
-<li>do_mount()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a8dd28c73718bdedaf1515c7916f442f8">os::posix::file_system</a>
+<li>do_opendir()
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#ab31b4c1b07a8a9c3c203ca7019533b9f">os::posix::file_system_impl</a>
 </li>
 <li>do_power()
 : <a class="el" href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">os::driver::Base</a>
@@ -413,9 +442,14 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#aacfa2de124af542eaa808958580aea82">os::driver::usbh_wrapper</a>
 </li>
 <li>do_read()
-: <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a2045b195a116e708d4a4803beafdf606">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1directory.html#a7b0beebf518bd99d2d3c88e7661f6bf1">os::posix::directory</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#a5c1ffeae5fd2d0e1bfa33530833eed71">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a42941c66eb8cbc88bebfda062c29060c">os::posix::block_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a2045b195a116e708d4a4803beafdf606">os::posix::device_serial_buffered&lt; CS &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1directory__impl.html#a13a9d566ffc85634f736f5eaa647a59d">os::posix::directory_impl</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#aea4699c0070028f199dc219258201418">os::posix::io_impl</a>
+</li>
+<li>do_read_block()
+: <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a48afcb935c8e901f149deb3a4da180dc">os::posix::block_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#ad23d8f96046ba0c0a65d30e3e936d00e">os::posix::block_device_partition_impl</a>
 </li>
 <li>do_read_setup_packet()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#abc7058730daddc915ebcd7b3c9d113e1">os::driver::usb::Device</a>
@@ -426,21 +460,16 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usart__wrapper.html#a60996f514191bd4320fcd7751c6fb645">os::driver::usart_wrapper</a>
 </li>
 <li>do_recv()
-: <a class="el" href="classos_1_1posix_1_1socket.html#ac1c0070ef7297763b80824030d90c754">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a5a771c05b57acfaf264a6ef0179ccdb0">os::posix::socket_impl</a>
 </li>
 <li>do_recvfrom()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a1bb013a2780c6704f6ea1e73286fe8e6">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#af19d1860d2ca350993a28b98f67a0448">os::posix::socket_impl</a>
 </li>
 <li>do_recvmsg()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a09abab323a354f6c6a235ba30d209d0c">os::posix::socket</a>
-</li>
-<li>do_release()
-: <a class="el" href="classos_1_1posix_1_1file.html#a34a94b3463b070e3d5e784231c7974e6">os::posix::file</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#a69bb7cad378627cd5d7ee29956584969">os::posix::io</a>
-, <a class="el" href="classos_1_1posix_1_1socket.html#a81295c880116a2b6abb7dcb9cb995ee9">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a97b9f17539230e2379d072fb791ec11c">os::posix::socket_impl</a>
 </li>
 <li>do_rename()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a78e996403bc69f6537b7c6c1185dc33d">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a1b02a0293ad7ef0204372f025d576806">os::posix::file_system_impl</a>
 </li>
 <li>do_reset()
 : <a class="el" href="classos_1_1memory_1_1block__pool.html#a1fd5dd991eba311e748f02fa79007c7a">os::memory::block_pool</a>
@@ -460,59 +489,68 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a0b22ae6a74088a2b5bebf176202982b6">os::driver::usbh_wrapper</a>
 </li>
 <li>do_rewind()
-: <a class="el" href="classos_1_1posix_1_1directory.html#a37a2ac2d70bb7a1b4e8774ec39226737">os::posix::directory</a>
+: <a class="el" href="classos_1_1posix_1_1directory__impl.html#abd93e72c11c3d05604ac700663d16cc3">os::posix::directory_impl</a>
 </li>
 <li>do_rmdir()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a961bc9b24d92e27cc924afd88830002f">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#adf9fff6c36af7e96985821b47952fe36">os::posix::file_system_impl</a>
 </li>
 <li>do_send()
 : <a class="el" href="classos_1_1driver_1_1Serial.html#adb94572f83ff7b81ef13fd76af18f471">os::driver::Serial</a>
 , <a class="el" href="classos_1_1driver_1_1usart__wrapper.html#a37f261e1c2ebd6461abc750727245ea2">os::driver::usart_wrapper</a>
-, <a class="el" href="classos_1_1posix_1_1socket.html#ae8108230f670e6ffed3006d385a0012c">os::posix::socket</a>
+, <a class="el" href="classos_1_1posix_1_1socket__impl.html#a6c81d1bf00c64cb45d450074cb46b093">os::posix::socket_impl</a>
 </li>
 <li>do_sendmsg()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a98a3461cb24c5b7750290c0be7523e6b">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#ae8d3921e51982e34a7e55065d8989ffc">os::posix::socket_impl</a>
 </li>
 <li>do_sendto()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a55cb8ea07b8f7193f3eca6acdac32c5f">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a7677ac7cbbc0533385608f198bb45ffc">os::posix::socket_impl</a>
 </li>
 <li>do_setsockopt()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a3bcc683886cf4d61919af6aa2eef4588">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#a2e95da68517bdb36759ca4c6bc877237">os::posix::socket_impl</a>
 </li>
 <li>do_shutdown()
-: <a class="el" href="classos_1_1posix_1_1socket.html#ade1aa87d56051a63e5e8c4b969e5342b">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#af9142e2c9f3b9723764731a4f2866644">os::posix::socket_impl</a>
 </li>
 <li>do_sockatmark()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a9896d52079128b4415a493d214f438ce">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1socket__impl.html#af8dee03ed726d66f60120270bb5684c7">os::posix::socket_impl</a>
 </li>
 <li>do_socket()
-: <a class="el" href="classos_1_1posix_1_1socket.html#a2b16fb84c7dec50cf409b3958c34b4e5">os::posix::socket</a>
+: <a class="el" href="classos_1_1posix_1_1net__stack__impl.html#adc0fb2e288cdbe3d8f171df48529ad06">os::posix::net_stack_impl</a>
 </li>
 <li>do_stall_endpoint()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a00f7d5328b28ccf92bc9402fa52f66e3">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a4ae509700826fa7e82c6e8f2e1cf5acf">os::driver::usbd_wrapper</a>
 </li>
 <li>do_stat()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a3d2f1d1db2e1eb24b65bab5d42864215">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a95f67ac08c46f47b112a2c88a7ebecf9">os::posix::file_system_impl</a>
+</li>
+<li>do_statvfs()
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#ac9cc4f9d081ddd101dddc957b933c5c1">os::posix::file_system_impl</a>
 </li>
 <li>do_suspend_port()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a0f4e618fc52a9460a2b9182669b6074c">os::driver::usb::Host</a>
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#af9fce3afcbd6514b04725bddff3dfc5e">os::driver::usbh_wrapper</a>
 </li>
 <li>do_sync()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a740145853098315c926683067432da89">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#a6840776346fa7fb6cb31ab2b4f94ac54">os::posix::block_device_partition_impl</a>
+, <a class="el" href="classos_1_1posix_1_1char__device__impl.html#a7601d83938ec23779c67e98ebdaed446">os::posix::char_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__impl.html#ac65db4ea24dc51098f2b4eecbbf82fe9">os::posix::device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a59a22a4f5302e1f131a4073f3ff87937">os::posix::file_system_impl</a>
+</li>
+<li>do_tcdrain()
+: <a class="el" href="classos_1_1posix_1_1tty__impl.html#ae4e96bb0d181a58808c44bdc2b8f0033">os::posix::tty_impl</a>
 </li>
 <li>do_tcflush()
-: <a class="el" href="classos_1_1posix_1_1tty.html#af84008a4b068b2bb8fc5f9ff8ca5a0a1">os::posix::tty</a>
+: <a class="el" href="classos_1_1posix_1_1tty__impl.html#a9f5c4d44d85fbba6c44af825a421a326">os::posix::tty_impl</a>
 </li>
 <li>do_tcgetattr()
-: <a class="el" href="classos_1_1posix_1_1tty.html#a2b1130fd37089b3be78ab835b4d0f140">os::posix::tty</a>
+: <a class="el" href="classos_1_1posix_1_1tty__impl.html#ae8300fe317feca9d9897730dab41f095">os::posix::tty_impl</a>
 </li>
 <li>do_tcsendbreak()
-: <a class="el" href="classos_1_1posix_1_1tty.html#acb1fb195e263ac38a09ba96722e637e2">os::posix::tty</a>
+: <a class="el" href="classos_1_1posix_1_1tty__impl.html#a0e2299db7b2cfb9b840d76d1fe3668da">os::posix::tty_impl</a>
 </li>
 <li>do_tcsetattr()
-: <a class="el" href="classos_1_1posix_1_1tty.html#ae38aca660d7043f9d5cfae1e9d2e1f9c">os::posix::tty</a>
+: <a class="el" href="classos_1_1posix_1_1tty__impl.html#a2dcacf2ad52fb85ca57c05ac500a8682">os::posix::tty_impl</a>
 </li>
 <li>do_transfer()
 : <a class="el" href="classos_1_1driver_1_1Serial.html#afb5a3c77e2c1de890efb88e5c808ee4b">os::driver::Serial</a>
@@ -523,49 +561,61 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classos_1_1driver_1_1usbh__wrapper.html#a74f42e3f9885ac91eddd379dafc733e1">os::driver::usbh_wrapper</a>
 </li>
 <li>do_truncate()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#ad8f73e133808601886a0bc675f03c65c">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a5c0905639194c5a8cada0e0b98b2c9e7">os::posix::file_system_impl</a>
+</li>
+<li>do_umount()
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a5605e48a90ae0ddf1097cc297b0a30c9">os::posix::file_system_impl</a>
 </li>
 <li>do_unconfigure_endpoint()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a45a2ca102e61cfd819da87adc6c83701">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a6696a1ace8409dce5c7601f6c1ac5c0d">os::driver::usbd_wrapper</a>
 </li>
 <li>do_unlink()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#ab742ef456a14b0bd2aae3762a2ef373a">os::posix::file_system</a>
-</li>
-<li>do_unmount()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#a23797d251ed45559594bddb1ae7fff98">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a2a1a41412bf6637457b70ddfa217275e">os::posix::file_system_impl</a>
 </li>
 <li>do_utime()
-: <a class="el" href="classos_1_1posix_1_1file__system.html#ab34d19a1bf50fb80bcff31e17b19808c">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#ad46d9b7b9bf58729dddaaae79b6e43c3">os::posix::file_system_impl</a>
 </li>
 <li>do_vfcntl()
-: <a class="el" href="classos_1_1posix_1_1io.html#a10eb548dd7387acdfb63ac016836d173">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1io__impl.html#aa350b4f251fa74bf1d029898ad7e2a69">os::posix::io_impl</a>
 </li>
 <li>do_vioctl()
-: <a class="el" href="classos_1_1posix_1_1device__char.html#a7f791933aff4ef5ebaa3f28d63788394">os::posix::device_char</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#a964fa660a878f81b2a852e4a2df7504b">os::posix::block_device_partition_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__impl.html#a35a49a779338773c726deff79ffaf005">os::posix::device_impl</a>
+</li>
+<li>do_vmkfs()
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a6aa9db6c7a33b5d2904a057c0cc54e53">os::posix::file_system_impl</a>
+</li>
+<li>do_vmount()
+: <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a74e1c01cc5b2b18d1092a981ceab0bf9">os::posix::file_system_impl</a>
 </li>
 <li>do_vopen()
-: <a class="el" href="classos_1_1posix_1_1device__char.html#ab6c402558ad64f21196ff38af7c610df">os::posix::device_char</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#a178e2f1b9dc26772c875e50d5dec3d9f">os::posix::block_device_partition_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__impl.html#aef590cd73d7fa59eae1885f7f9c6774f">os::posix::device_impl</a>
 , <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aabdb2cc7c6b6376d6c29e1f97ec714ca">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1directory.html#afee3bc5b6c6728ac866904e6c22b3f94">os::posix::directory</a>
-, <a class="el" href="classos_1_1posix_1_1file.html#acf78e9b8d93e52cbed824c791d322967">os::posix::file</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__impl.html#a89d62f6fd1e0d6c74b94f9c92a1bc4d9">os::posix::file_system_impl</a>
 </li>
 <li>do_wakeup_remote()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a3b69b92432a0de8318d0121113f79767">os::driver::usb::Device</a>
 , <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a029814cd93f47339487a969bffd8b6f5">os::driver::usbd_wrapper</a>
 </li>
 <li>do_write()
-: <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aeb903434848b85d088b51d5ecca22f23">os::posix::device_serial_buffered&lt; CS &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1io.html#a07e8c9c097782aa4bdb92daac6e7be39">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a9b57e0d768392c44fa21479a0f181e91">os::posix::block_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aeb903434848b85d088b51d5ecca22f23">os::posix::device_serial_buffered&lt; CS &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1io__impl.html#aaf72efcd064d35f9b93012ce18fd47c4">os::posix::io_impl</a>
+</li>
+<li>do_write_block()
+: <a class="el" href="classos_1_1posix_1_1block__device__impl.html#ae3b713a1faae0ada0baf7631eae42ed3">os::posix::block_device_impl</a>
+, <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#ab24a02c063452490c3a428336aff0d9c">os::posix::block_device_partition_impl</a>
 </li>
 <li>do_writev()
-: <a class="el" href="classos_1_1posix_1_1io.html#aa5224f5da3e56ebf3ead2a5cd34bb36c">os::posix::io</a>
+: <a class="el" href="classos_1_1posix_1_1io__impl.html#a435c0abcb3e507c8d535038771943b8c">os::posix::io_impl</a>
 </li>
 <li>double_list()
 : <a class="el" href="classos_1_1utils_1_1double__list.html#a60ec94c962eb6b2a612f3c0e10598a43">os::utils::double_list</a>
 </li>
 <li>double_list_iterator()
-: <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#a3cd80d9ed3475f3393c55df88f0c2aa4">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
+: <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#ab3b1787da41de434a184d1a6498004db">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
 </li>
 <li>double_list_links()
 : <a class="el" href="classos_1_1utils_1_1double__list__links.html#af37acabc88cfd6b14a0b908537f14386">os::utils::double_list_links</a>

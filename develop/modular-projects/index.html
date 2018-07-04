@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Modular projects</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Modular projects">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/modular-projects/">
+  <link rel="canonical" href="/develop/modular-projects/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -402,7 +402,9 @@
 <p>Create an empty folder and invoke <code class="highlighter-rouge">xpm init</code> in interactive mode, pointing to the desired template.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ mkdir -p /tmp/hifive1-blinky-cpp
+<div class="highlight">
+<pre class="highlight">
+<code>$ mkdir -p /tmp/hifive1-blinky-cpp
 $ cd /tmp/hifive1-blinky-cpp
 $ xpm init --template @sifive/coreplex-templates
 Generate a SiFive Coreplex C/C++ project
@@ -446,11 +448,14 @@ Folder 'xpacks/sifive-coreplex-devices' copied.
 'xpm init' completed in 253 ms.
 </code></pre>
 </div>
+</div>
 
 <p>In the interactive part, at any time it is possible to ask for more details by entering a question mark:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xpm init --template @sifive/coreplex-templates
+<div class="highlight">
+<pre class="highlight">
+<code>$ xpm init --template @sifive/coreplex-templates
 Generate a SiFive Coreplex C/C++ project
 
 Programming language? (c, cpp, ?) [cpp]: ?
@@ -499,11 +504,14 @@ Creating the C++ project 'hifive1-blinky-cpp'...
 ...
 </code></pre>
 </div>
+</div>
 
 <p>For scripting environments (like automated tests), it is also possible to pass all configuration choices as command line options. The only mandatory property is <code class="highlighter-rouge">boardName</code>, all other have reasonable defaults:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xpm init --template @sifive/coreplex-templates --property boardName=hifive1
+<div class="highlight">
+<pre class="highlight">
+<code>$ xpm init --template @sifive/coreplex-templates --property boardName=hifive1
 Generate a SiFive Coreplex C/C++ project
 
 Creating the C++ project 'hifive1-blinky-cpp'...
@@ -544,6 +552,7 @@ Folder 'xpacks/sifive-coreplex-devices' copied.
 'xpm init' completed in 176 ms.
 </code></pre>
 </div>
+</div>
 
 <p>Both methods produce the same result. The project itself is quite generic, and does not include any <code class="highlighter-rouge">make</code> files, or any other specific build system files. Instead, it includes a structured file (<code class="highlighter-rouge">xmake.json</code>) that contains all required details for an automated tool to generate the specific build system files.</p>
 
@@ -560,7 +569,9 @@ Folder 'xpacks/sifive-coreplex-devices' copied.
 </ul>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xpm build
+<div class="highlight">
+<pre class="highlight">
+<code>$ xpm build
 Build the package
 
 Changing current folder to '/tmp/hifive1-blinky-cpp'...
@@ -643,11 +654,14 @@ Invoking builder: 'make all'...
 'xpm build' completed in 11.346 sec.
 </code></pre>
 </div>
+</div>
 
 <p>As for any modern builder, subsequent invocations process only the changed files, if any:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xpm build
+<div class="highlight">
+<pre class="highlight">
+<code>$ xpm build
 Build the package
 
 Changing current folder to '/tmp/hifive1-blinky-cpp'...
@@ -680,11 +694,14 @@ make: Nothing to be done for `all'.
 'xpm build' completed in 538 ms.
 </code></pre>
 </div>
+</div>
 
 <p>To clean all builds, the project includes a <code class="highlighter-rouge">clean</code> script, which invokes <code class="highlighter-rouge">xmake</code>, which finally invokes <code class="highlighter-rouge">make</code> with the <code class="highlighter-rouge">clean</code> target:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xpm run clean
+<div class="highlight">
+<pre class="highlight">
+<code>$ xpm run clean
 Run package specific script
 
 Changing current folder to '/tmp/hifive1-blinky-cpp'...
@@ -717,11 +734,14 @@ Build completed in 48 ms.
 'xpm run clean' completed in 530 ms.
 </code></pre>
 </div>
+</div>
 
 <p>An even more verbose output can be obtained by invoking <code class="highlighter-rouge">xmake</code> with the <code class="highlighter-rouge">-v</code> option:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ xmake build -v
+<div class="highlight">
+<pre class="highlight">
+<code>$ xmake build -v
 Build one or all project configurations
 
 Generating the build files for 'hifive1-blinky-cpp', target 'hifive1', toolchain 'riscv64-elf-gcc', profile 'debug'...
@@ -788,6 +808,7 @@ Build completed in 5.580 sec.
 'xmake build' completed in 10.799 sec.
 </code></pre>
 </div>
+</div>
 
 <p>Note: at the time of preparing this page, the <code class="highlighter-rouge">xpm</code> tool is under development and the generic <code class="highlighter-rouge">xpm init</code> mechanism is not yet functional. As a temporary workaround, use the <code class="highlighter-rouge">xpm-init-sifive-coreplex-project</code> tool, available in the <code class="highlighter-rouge">@sifive/templates</code> <a href="https://www.npmjs.com/package/@sifive/templates">xPack</a>.</p>
 
@@ -826,7 +847,9 @@ Build completed in 5.580 sec.
 <p>The <strong>SiFive project templates</strong> created in the previous sections use this structure; most of the files are part of the application; the packages are grouped under the <code class="highlighter-rouge">xpacks</code> folder, and the package metadata is located in <code class="highlighter-rouge">package.json</code> and <code class="highlighter-rouge">xmake.json</code>:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ tree -L 2 hifive1-blinky-cpp
+<div class="highlight">
+<pre class="highlight">
+<code>$ tree -L 2 hifive1-blinky-cpp
 hifive1-blinky-cpp
 ├── LICENSE
 ├── README.md
@@ -859,6 +882,7 @@ hifive1-blinky-cpp
 11 directories, 16 files
 </code></pre>
 </div>
+</div>
 
 <h3 id="dependencies">Dependencies</h3>
 
@@ -867,24 +891,98 @@ hifive1-blinky-cpp
 <p>For the above project, the <code class="highlighter-rouge">package.json</code> file includes the following dependencies:</p>
 
 <div class="language-json highlighter-rouge">
-<pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"xmake"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.3.5"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"xpack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"@micro-os-plus/diag-trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.0.2"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"@sifive/hifive1-board"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.5"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"@gnu-mcu-eclipse/riscv-none-gcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.1"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"@gnu-mcu-eclipse/openocd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~0.0.1"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="p">{</span>
+<span class="w">
+  </span>
+<span class="s2">"..."</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"..."</span>
+<span class="p">,</span>
+<span class="w">
+  </span>
+<span class="s2">"dependencies"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{},</span>
+<span class="w">
+  </span>
+<span class="s2">"devDependencies"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+    </span>
+<span class="s2">"xmake"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"~0.3.5"</span>
+<span class="w">
+  </span>
+<span class="p">},</span>
+<span class="w">
+  </span>
+<span class="s2">"xpack"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+    </span>
+<span class="s2">"dependencies"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+      </span>
+<span class="s2">"@micro-os-plus/diag-trace"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"~1.0.2"</span>
+<span class="p">,</span>
+<span class="w">
+      </span>
+<span class="s2">"@sifive/hifive1-board"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"~0.0.5"</span>
+<span class="w">
+    </span>
+<span class="p">},</span>
+<span class="w">
+    </span>
+<span class="s2">"devDependencies"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+      </span>
+<span class="s2">"@gnu-mcu-eclipse/riscv-none-gcc"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"~0.0.1"</span>
+<span class="p">,</span>
+<span class="w">
+      </span>
+<span class="s2">"@gnu-mcu-eclipse/openocd"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"~0.0.1"</span>
+<span class="w">
+    </span>
+<span class="p">}</span>
+<span class="w">
+  </span>
+<span class="p">}</span>
+<span class="w">
+</span>
+<span class="p">}</span>
+<span class="w">
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>In other words, the application requires explicit support only for diagnostics and for the <strong>SiFive HiFive1</strong> board. Inspecting the project’s structure, it is easy to identify seven packages, not two. The explanation is that the <code class="highlighter-rouge">@sifive/hifive1-board</code> xPack pulled <code class="highlighter-rouge">@sifive/coreplex-devices</code>, which pulled <code class="highlighter-rouge">@micro-os-plus/riscv-arch</code>, which pulled <code class="highlighter-rouge">@micro-os-plus/startup</code> and the two libraries.</p>
@@ -922,8 +1020,10 @@ hifive1-blinky-cpp
 <p>For RISC-V, the current architecture specs require to manually load the SP and GP registers. However, after preparing these registers, it is perfectly possible to pass control to a portable C/C++ function, traditionally named <code class="highlighter-rouge">_start()</code>:</p>
 
 <div class="language-as highlighter-rouge">
-<pre class="highlight"><code>	<span class="p">.</span><span class="nx">section</span>	<span class="p">.</span><span class="nx">reset_entry</span><span class="p">,</span><span class="s2">"ax"</span><span class="p">,</span><span class="err">@</span><span class="nx">progbits</span>
-	<span class="p">.</span><span class="nx">align</span>		<span class="err">2</span> <span class="c1">// number of low order zeros, i.e. align to a multiple of 4</span>
+<div class="highlight">
+<pre class="highlight">
+<code>	<span class="p">.</span><span class="nx">section</span>	<span class="p">.</span><span class="nx">reset_entry</span><span class="p">,</span><span class="s2">"ax"</span><span class="p">,</span><span class="err">@</span><span class="nx">progbits</span>
+	<span class="p">.</span><span class="nx">align</span>		<span class="mi">2</span> <span class="c1">// number of low order zeros, i.e. align to a multiple of 4</span>
 	<span class="p">.</span><span class="nx">globl</span>		<span class="nx">riscv_reset_entry</span>
 	<span class="p">.</span><span class="nx">type</span>		<span class="nx">riscv_reset_entry</span><span class="p">,</span> <span class="err">@</span><span class="kd">function</span>
 <span class="nx">riscv_reset_entry</span><span class="o">:</span>
@@ -945,6 +1045,7 @@ hifive1-blinky-cpp
 
 </code></pre>
 </div>
+</div>
 
 <h4 id="the-portable-startup-code">The portable startup code</h4>
 
@@ -955,7 +1056,9 @@ hifive1-blinky-cpp
 <p>A simplified version of the portable startup code is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kt">void</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">void</span>
 <span class="nf">_start</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">os_startup_initialize_hardware_early</span> <span class="p">();</span>
@@ -982,6 +1085,7 @@ hifive1-blinky-cpp
     <span class="cm">/* NOTREACHED */</span>
 <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>The code is more or less self-documented. Perhaps some questions may be raised by the hardware initialization hooks, especially why not doing the initializations inside <code class="highlighter-rouge">main()</code>, and why are needed two hardware initialization routines.</p>
@@ -1037,14 +1141,21 @@ hifive1-blinky-cpp
 <p>The board definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/board.h&gt;
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#include &lt;micro-os-plus/board.h&gt;
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>For RISC-V, there are currently not many mandatory definitions at board level, except a function that returns the frequency of the RTC oscillator.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="k">namespace</span> <span class="n">riscv</span>
 <span class="p">{</span>
   <span class="k">namespace</span> <span class="n">board</span>
   <span class="p">{</span>
@@ -1055,61 +1166,289 @@ hifive1-blinky-cpp
 <span class="p">}</span> <span class="cm">/* namespace riscv */</span>
 </code></pre>
 </div>
+</div>
 
 <p>The board xPack also includes some metadata, used to automatically configure projects using the board, for example:</p>
 
 <div class="language-json highlighter-rouge">
-<pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-	</span><span class="nt">"boards"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nt">"hifive1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-			</span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive, Inc."</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@sifive.com"</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-			</span><span class="nt">"revision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A01"</span><span class="p">,</span><span class="w">
-			</span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.sifive.com/products/hifive1/"</span><span class="p">,</span><span class="w">
-			</span><span class="nt">"orderForm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.crowdsupply.com/sifive/hifive1/"</span><span class="p">,</span><span class="w">
-			</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HiFive1"</span><span class="p">,</span><span class="w">
-			</span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The HiFive1 is an Arduino-Compatible development kit featuring the Freedom E310, the industry’s first commercially available RISC-V SoC."</span><span class="p">,</span><span class="w">
-			</span><span class="nt">"installedDevice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe310-g000"</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-			</span><span class="nt">"compatibleDevices"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-			</span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"flash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-					</span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"128 Mb"</span><span class="p">,</span><span class="w">
-					</span><span class="nt">"interface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spi0"</span><span class="p">,</span><span class="w">
-					</span><span class="nt">"memoryRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rom"</span><span class="w">
-				</span><span class="p">},</span><span class="w">
-				</span><span class="nt">"hfxtal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 MHz"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"lfxtal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32768 Hz"</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-			</span><span class="nt">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"interface"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ftdi"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"connector"</span><span class="p">:</span><span class="w"> </span><span class="s2">"micro-usb"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"openocd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-f &amp;quot;board/sifive-freedom-e300-hifive1.cfg&amp;quot;"</span><span class="p">,</span><span class="w">
-				</span><span class="nt">"jlink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				    </span><span class="nt">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe310-g000"</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-			</span><span class="nt">"compile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="s2">"&lt;micro-os-plus/board.h&gt;"</span><span class="w">
-				</span><span class="p">],</span><span class="w">
-				</span><span class="nt">"macros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="s2">"SIFIVE_HIFIVE1_BOARD"</span><span class="w">
-				</span><span class="p">]</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">}</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="p">{</span>
+<span class="w">
+	</span>
+<span class="s2">"schemaVersion"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0.1.0"</span>
+<span class="p">,</span>
+<span class="w">
+	</span>
+<span class="s2">"boards"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+		</span>
+<span class="s2">"hifive1"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+			</span>
+<span class="s2">"vendor"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				</span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"sifive"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"id"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"1"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"displayName"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"SiFive"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"fullName"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"SiFive, Inc."</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"contact"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"info@sifive.com"</span>
+<span class="w">
+			</span>
+<span class="p">},</span>
+<span class="w">
+			</span>
+<span class="s2">"revision"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"A01"</span>
+<span class="p">,</span>
+<span class="w">
+			</span>
+<span class="s2">"url"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"https://www.sifive.com/products/hifive1/"</span>
+<span class="p">,</span>
+<span class="w">
+			</span>
+<span class="s2">"orderForm"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"https://www.crowdsupply.com/sifive/hifive1/"</span>
+<span class="p">,</span>
+<span class="w">
+			</span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"HiFive1"</span>
+<span class="p">,</span>
+<span class="w">
+			</span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"The HiFive1 is an Arduino-Compatible development kit featuring the Freedom E310, the industry’s first commercially available RISC-V SoC."</span>
+<span class="p">,</span>
+<span class="w">
+			</span>
+<span class="s2">"installedDevice"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				</span>
+<span class="s2">"vendor"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"sifive"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"id"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"1"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"fe310-g000"</span>
+<span class="w">
+			</span>
+<span class="p">},</span>
+<span class="w">
+			</span>
+<span class="s2">"compatibleDevices"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[],</span>
+<span class="w">
+			</span>
+<span class="s2">"features"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				</span>
+<span class="s2">"flash"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+					</span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"128 Mb"</span>
+<span class="p">,</span>
+<span class="w">
+					</span>
+<span class="s2">"interface"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"spi0"</span>
+<span class="p">,</span>
+<span class="w">
+					</span>
+<span class="s2">"memoryRegion"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"rom"</span>
+<span class="w">
+				</span>
+<span class="p">},</span>
+<span class="w">
+				</span>
+<span class="s2">"hfxtal"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"16 MHz"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"lfxtal"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"32768 Hz"</span>
+<span class="w">
+			</span>
+<span class="p">},</span>
+<span class="w">
+			</span>
+<span class="s2">"debug"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				</span>
+<span class="s2">"interface"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"ftdi"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"connector"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"micro-usb"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"openocd"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"-f &amp;quot;board/sifive-freedom-e300-hifive1.cfg&amp;quot;"</span>
+<span class="p">,</span>
+<span class="w">
+				</span>
+<span class="s2">"jlink"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				    </span>
+<span class="s2">"device"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"fe310-g000"</span>
+<span class="w">
+				</span>
+<span class="p">}</span>
+<span class="w">
+			</span>
+<span class="p">},</span>
+<span class="w">
+			</span>
+<span class="s2">"compile"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+				</span>
+<span class="s2">"headers"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w">
+					</span>
+<span class="s2">"&lt;micro-os-plus/board.h&gt;"</span>
+<span class="w">
+				</span>
+<span class="p">],</span>
+<span class="w">
+				</span>
+<span class="s2">"macros"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w">
+					</span>
+<span class="s2">"SIFIVE_HIFIVE1_BOARD"</span>
+<span class="w">
+				</span>
+<span class="p">]</span>
+<span class="w">
+			</span>
+<span class="p">}</span>
+<span class="w">
+		</span>
+<span class="p">}</span>
+<span class="w">
+	</span>
+<span class="p">}</span>
+<span class="w">
+</span>
+<span class="p">}</span>
+<span class="w">
+</span>
+</code></pre>
+</div>
 </div>
 
 <h5 id="code-1">Code</h5>
@@ -1121,14 +1460,21 @@ hifive1-blinky-cpp
 <p>The device definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/device.h&gt;
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#include &lt;micro-os-plus/device.h&gt;
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>For RISC-V, the device definitions include functions to access the memory mapped system registers, for example:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="k">namespace</span> <span class="n">riscv</span>
 <span class="p">{</span>
   <span class="k">namespace</span> <span class="n">device</span>
   <span class="p">{</span>
@@ -1149,11 +1495,14 @@ hifive1-blinky-cpp
 <span class="p">}</span> <span class="cm">/* namespace riscv */</span>
 </code></pre>
 </div>
+</div>
 
 <p>There are also functions to access the PLIC registers:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="k">namespace</span> <span class="n">riscv</span>
 <span class="p">{</span>
   <span class="k">namespace</span> <span class="n">plic</span>
   <span class="p">{</span>
@@ -1194,11 +1543,14 @@ hifive1-blinky-cpp
 <span class="p">}</span> <span class="cm">/* namespace riscv */</span>
 </code></pre>
 </div>
+</div>
 
 <p>There are also declarations for the local and global interrupt handlers, for example:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code>  <span class="c1">// ...
+<div class="highlight">
+<pre class="highlight">
+<code>  <span class="c1">// ...
 </span>
   <span class="kt">void</span>
   <span class="n">riscv_interrupt_global_handle_wdogcmp</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
@@ -1227,130 +1579,655 @@ hifive1-blinky-cpp
   <span class="c1">// ...
 </span></code></pre>
 </div>
+</div>
 
 <p>The device xPacks also include some metadata, to be consumed by automated tools, for example:</p>
 
 <div class="language-json highlighter-rouge">
-<pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"families"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"fe300"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"vendor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sifive"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"fullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SiFive, Inc."</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info@sifive.com"</span><span class="w">
-                </span><span class="p">},</span><span class="w">
-                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E300"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="nt">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E310-G000"</span><span class="p">,</span><span class="w">
-                        </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span><span class="p">,</span><span class="w">
-                        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.sifive.com/products/freedom-e310/"</span><span class="p">,</span><span class="w">
-                        </span><span class="nt">"compile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                                </span><span class="s2">"&lt;micro-os-plus/device.h&gt;"</span><span class="w">
-                            </span><span class="p">],</span><span class="w">
-                            </span><span class="nt">"macros"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                                </span><span class="s2">"SIFIVE_FREEDOM_E310"</span><span class="w">
-                            </span><span class="p">],</span><span class="w">
-                            </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                                </span><span class="s2">"-march=rv32imac"</span><span class="p">,</span><span class="w">
-                                </span><span class="s2">"-mabi=ilp32"</span><span class="p">,</span><span class="w">
-                                </span><span class="s2">"-mcmodel=medany"</span><span class="p">,</span><span class="w">
-                                </span><span class="s2">"-msmall-data-limit=8"</span><span class="w">
-                            </span><span class="p">]</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RV32IMAC"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32 bits"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"hfosc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13800 kHz"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"lfosc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32768 Hz"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"maxClock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"320 MHz"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qfn"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"leads"</span><span class="p">:</span><span class="w"> </span><span class="s2">"48"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"vcc"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"1.8 V"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3.3 V"</span><span class="w"> </span><span class="p">]</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"memoryRegions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"ram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nt">"onChip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x80000000"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 KiB"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rwx"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"On-Chip Volatile Memory - Data Tightly Integrated Memory (DTIM)"</span><span class="w">
-                            </span><span class="p">},</span><span class="w">
-                            </span><span class="nt">"rom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nt">"onChip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20000000"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"maxSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512 MiB"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rx"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Off-Chip Non-Volatile Memory - QSPI 0 eXecute-In-Place (XIP)"</span><span class="w">
-                            </span><span class="p">}</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"jtag"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                                </span><span class="nt">"tapindex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"idcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x10e31913"</span><span class="p">,</span><span class="w">
-                                </span><span class="nt">"irlen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
-                            </span><span class="p">}</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"xsvd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsvd/fe310-g000-xsvd.json"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="p">{</span>
+<span class="w">
+    </span>
+<span class="s2">"schemaVersion"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0.1.0"</span>
+<span class="p">,</span>
+<span class="w">
+    </span>
+<span class="s2">"devices"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+        </span>
+<span class="s2">"families"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+            </span>
+<span class="s2">"fe300"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                </span>
+<span class="s2">"vendor"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                    </span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"sifive"</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"id"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"1"</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"fullName"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"SiFive, Inc."</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"contact"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"info@sifive.com"</span>
+<span class="w">
+                </span>
+<span class="p">},</span>
+<span class="w">
+                </span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Freedom E300"</span>
+<span class="p">,</span>
+<span class="w">
+                </span>
+<span class="s2">"devices"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                    </span>
+<span class="s2">"fe310-g000"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                        </span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Freedom E310-G000"</span>
+<span class="p">,</span>
+<span class="w">
+                        </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span>
+<span class="p">,</span>
+<span class="w">
+                        </span>
+<span class="s2">"url"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"https://www.sifive.com/products/freedom-e310/"</span>
+<span class="p">,</span>
+<span class="w">
+                        </span>
+<span class="s2">"compile"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"headers"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w">
+                                </span>
+<span class="s2">"&lt;micro-os-plus/device.h&gt;"</span>
+<span class="w">
+                            </span>
+<span class="p">],</span>
+<span class="w">
+                            </span>
+<span class="s2">"macros"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w">
+                                </span>
+<span class="s2">"SIFIVE_FREEDOM_E310"</span>
+<span class="w">
+                            </span>
+<span class="p">],</span>
+<span class="w">
+                            </span>
+<span class="s2">"target"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w">
+                                </span>
+<span class="s2">"-march=rv32imac"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"-mabi=ilp32"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"-mcmodel=medany"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"-msmall-data-limit=8"</span>
+<span class="w">
+                            </span>
+<span class="p">]</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"features"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"core"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"RV32IMAC"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"width"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"32 bits"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"hfosc"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"13800 kHz"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"lfosc"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"32768 Hz"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"maxClock"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"320 MHz"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"package"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"qfn"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"leads"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"48"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"vcc"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">[</span>
+<span class="w"> </span>
+<span class="s2">"1.8 V"</span>
+<span class="p">,</span>
+<span class="w"> </span>
+<span class="s2">"3.3 V"</span>
+<span class="w"> </span>
+<span class="p">]</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"memoryRegions"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"ram"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                                </span>
+<span class="s2">"onChip"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"true"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"address"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x80000000"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"16 KiB"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"access"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"rwx"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"On-Chip Volatile Memory - Data Tightly Integrated Memory (DTIM)"</span>
+<span class="w">
+                            </span>
+<span class="p">},</span>
+<span class="w">
+                            </span>
+<span class="s2">"rom"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                                </span>
+<span class="s2">"onChip"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"false"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"address"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x20000000"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"maxSize"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"512 MiB"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"access"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"rx"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Off-Chip Non-Volatile Memory - QSPI 0 eXecute-In-Place (XIP)"</span>
+<span class="w">
+                            </span>
+<span class="p">}</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"debug"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"jtag"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                                </span>
+<span class="s2">"tapindex"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"idcode"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x10e31913"</span>
+<span class="p">,</span>
+<span class="w">
+                                </span>
+<span class="s2">"irlen"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"5"</span>
+<span class="w">
+                            </span>
+<span class="p">}</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"xsvd"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"xsvd/fe310-g000-xsvd.json"</span>
+<span class="w">
+                    </span>
+<span class="p">}</span>
+<span class="w">
+                </span>
+<span class="p">}</span>
+<span class="w">
+            </span>
+<span class="p">}</span>
+<span class="w">
+        </span>
+<span class="p">}</span>
+<span class="w">
+    </span>
+<span class="p">}</span>
+<span class="w">
+</span>
+<span class="p">}</span>
+<span class="w">
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To support debuggers and emulators, a special file with the structured definitions of the peripheral registered is used:</p>
 
 <div class="language-json highlighter-rouge">
-<pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"fe310-g000"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Freedom E310-G000"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"busWidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"resetValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00000000"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"resetMask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xFFFFFFFF"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rw"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"peripherals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"clint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coreplex-Local Interruptor (CLINT)"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"baseAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x02000000"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x10000"</span><span class="p">,</span><span class="w">
-                    </span><span class="nt">"registers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="nt">"msip0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSIP for hart 0"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000"</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"mtimecmp0"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer compare register for hart 0"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4000"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="nt">"mtime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Timer register"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"addressOffset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xBFF8"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro"</span><span class="p">,</span><span class="w">
-                            </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="w">
-                        </span><span class="p">}</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">},</span><span class="w">
-                </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="p">{</span>
+<span class="w">
+    </span>
+<span class="s2">"schemaVersion"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0.1.0"</span>
+<span class="p">,</span>
+<span class="w">
+    </span>
+<span class="s2">"devices"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+        </span>
+<span class="s2">"fe310-g000"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+            </span>
+<span class="s2">"version"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"1.0.0"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"name"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Freedom E310-G000"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"The FE310-G000 is the first Freedom E300 SoC, and is the industrys first commercially available RISC-V SoC. The FE310-G000 is built around the E31 Coreplex instantiated in the Freedom E300 platform."</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"busWidth"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"32"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"32"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"resetValue"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x00000000"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"resetMask"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0xFFFFFFFF"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"access"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"rw"</span>
+<span class="p">,</span>
+<span class="w">
+            </span>
+<span class="s2">"peripherals"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                </span>
+<span class="s2">"clint"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                    </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Coreplex-Local Interruptor (CLINT)"</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"baseAddress"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x02000000"</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x10000"</span>
+<span class="p">,</span>
+<span class="w">
+                    </span>
+<span class="s2">"registers"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                        </span>
+<span class="s2">"msip0"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"MSIP for hart 0"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"addressOffset"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x0000"</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"mtimecmp0"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Timer compare register for hart 0"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"addressOffset"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0x4000"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"64"</span>
+<span class="w">
+                        </span>
+<span class="p">},</span>
+<span class="w">
+                        </span>
+<span class="s2">"mtime"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="p">{</span>
+<span class="w">
+                            </span>
+<span class="s2">"description"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"Timer register"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"addressOffset"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"0xBFF8"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"access"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"ro"</span>
+<span class="p">,</span>
+<span class="w">
+                            </span>
+<span class="s2">"size"</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"64"</span>
+<span class="w">
+                        </span>
+<span class="p">}</span>
+<span class="w">
+                    </span>
+<span class="p">}</span>
+<span class="w">
+                </span>
+<span class="p">},</span>
+<span class="w">
+                </span>
+<span class="s2">"..."</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"..."</span>
+<span class="w">
+            </span>
+<span class="p">},</span>
+<span class="w">
+            </span>
+<span class="s2">"..."</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"..."</span>
+<span class="w">
+        </span>
+<span class="p">},</span>
+<span class="w">
+        </span>
+<span class="s2">"..."</span>
+<span class="p">:</span>
+<span class="w"> </span>
+<span class="s2">"..."</span>
+<span class="w">
+    </span>
+<span class="p">}</span>
+<span class="w">
+</span>
+<span class="p">}</span>
+<span class="w">
+</span>
+</code></pre>
+</div>
 </div>
 
 <h5 id="code-2">Code</h5>
@@ -1362,14 +2239,21 @@ hifive1-blinky-cpp
 <p>The architecture definitions can be included in the application with a single <code class="highlighter-rouge">#include</code> line:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/architecture.h&gt;
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#include &lt;micro-os-plus/architecture.h&gt;
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>For RISC-V, the architecture definitions include functions to access the CSRs, for example:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="k">namespace</span> <span class="n">riscv</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="k">namespace</span> <span class="n">riscv</span>
 <span class="p">{</span>
   <span class="k">namespace</span> <span class="n">csr</span>
   <span class="p">{</span>
@@ -1423,11 +2307,14 @@ hifive1-blinky-cpp
 <span class="p">}</span> <span class="cm">/* namespace riscv */</span>
 </code></pre>
 </div>
+</div>
 
 <p>There are also declarations for the synchronous exceptions and the common local interrupt handlers, for example:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code>  <span class="kt">void</span>
+<div class="highlight">
+<pre class="highlight">
+<code>  <span class="kt">void</span>
   <span class="n">riscv_exception_handle_misaligned_fetch</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
   <span class="kt">void</span>
@@ -1441,6 +2328,7 @@ hifive1-blinky-cpp
 
   <span class="c1">// ...
 </span></code></pre>
+</div>
 </div>
 
 <h5 id="code-3">Code</h5>
@@ -1456,7 +2344,9 @@ hifive1-blinky-cpp
 <p>For example, to handle the machine timer interrupt, the application code looks like this:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/device.h&gt;
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#include &lt;micro-os-plus/device.h&gt;
 </span>
 <span class="kt">void</span>
 <span class="nf">riscv_interrupt_local_handle_machine_timer</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -1465,16 +2355,20 @@ hifive1-blinky-cpp
 </span><span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>Similar definitions are available for global interrupts, for example to handle the interrupts generated by GPIO pin 4, the application code looks like this:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="kt">void</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">void</span>
 <span class="nf">riscv_interrupt_global_handle_gpio4</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// ...
 </span><span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>The prototypes of these functions are provided by the device or architecture xPacks.</p>
@@ -1484,7 +2378,9 @@ hifive1-blinky-cpp
 <p>As with most other projects generated by the GNU MCU Eclipse templates, the linker script is split into three parts:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ tree ldscripts
+<div class="highlight">
+<pre class="highlight">
+<code>$ tree ldscripts
 ldscripts
 ├── libs.ld
 ├── mem.ld
@@ -1493,14 +2389,18 @@ ldscripts
 0 directories, 3 files
 </code></pre>
 </div>
+</div>
 
 <p>The names should indicate the content: <code class="highlighter-rouge">libs.ld</code> defines the additional libraries, <code class="highlighter-rouge">mem.ld</code> defines the memory regions and <code class="highlighter-rouge">sections.ld</code> defines the  sections and the mapping to the memory regions.</p>
 
 <p>To make the build use them all, add something like this when invoking the linker:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ &lt;prefix&gt;-g++ ... -L ldscripts -T libs.ld -T mem.ld -T sections.ld ...
+<div class="highlight">
+<pre class="highlight">
+<code>$ &lt;prefix&gt;-g++ ... -L ldscripts -T libs.ld -T mem.ld -T sections.ld ...
 </code></pre>
+</div>
 </div>
 
 <h3 id="the-c-and-c-libraries">The C and C++ libraries</h3>
@@ -1508,7 +2408,9 @@ ldscripts
 <p>These two xPacks complement the system libraries and provide missing functions or have lighter implementations, more suitable for embedded applications.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ tree c-libs.git 
+<div class="highlight">
+<pre class="highlight">
+<code>$ tree c-libs.git 
 c-libs.git
 ├── LICENSE
 ├── README.md
@@ -1542,6 +2444,7 @@ cpp-libs.git
 2 directories, 5 files
 </code></pre>
 </div>
+</div>
 
 <h4 id="code-4">Code</h4>
 
@@ -1564,7 +2467,9 @@ cpp-libs.git
 <p>Using these functions is very simple, the prototypes being identical to the standard calls, but placed in a separate namespace (in C++) or a separate prefix (in C):</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;micro-os-plus/diag/trace.h&gt;
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#include &lt;micro-os-plus/diag/trace.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
 
@@ -1577,16 +2482,20 @@ cpp-libs.git
 </span><span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>The complete public C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">printf</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">printf</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
 <span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">putchar</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">puts</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">vprintf</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">va_list</span> <span class="n">args</span><span class="p">);</span>
 <span class="kt">ssize_t</span> <span class="n">os</span><span class="o">::</span><span class="n">trace</span><span class="o">::</span><span class="n">write</span> <span class="p">(</span><span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buf</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">nbyte</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h4 id="the-trace-macro">The TRACE macro</h4>
@@ -1600,7 +2509,9 @@ cpp-libs.git
 <p>The custom functions that need to be implemented by the application have a simple and unsurprising API:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="k">namespace</span> <span class="n">os</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="k">namespace</span> <span class="n">os</span>
 <span class="p">{</span>
   <span class="k">namespace</span> <span class="n">trace</span>
   <span class="p">{</span>
@@ -1616,6 +2527,7 @@ cpp-libs.git
   <span class="p">}</span> <span class="cm">/* namespace trace */</span>
 <span class="p">}</span> <span class="cm">/* namespace os */</span>
 </code></pre>
+</div>
 </div>
 
 <h4 id="code-5">Code</h4>
@@ -1704,7 +2616,7 @@ cpp-libs.git
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

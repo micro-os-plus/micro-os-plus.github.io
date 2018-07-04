@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -166,17 +166,15 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>object()
-: <a class="el" href="classos_1_1posix_1_1pool.html#af7d2da269cdbae31d64b3ce92cf5f43a">os::posix::pool</a>
-</li>
 <li>object_named()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named.html#a191fec2dd0076e286af417f2d12ed01d">os::rtos::internal::object_named</a>
 </li>
 <li>object_named_system()
-: <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named__system.html#a132fe97877e1dcc01f04e13aa0bc39fe">os::rtos::internal::object_named_system</a>
+: <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named__system.html#ab378ffa4fa3677369d3c4ba28864b887">os::rtos::internal::object_named_system</a>
 </li>
 <li>offset()
-: <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a8a24755cbeb7768dbebe42f8b7ee8cae">os::rtos::adjustable_clock</a>
+: <a class="el" href="classos_1_1posix_1_1io__impl.html#a5e5f831b8554dd3cc40cdb0382c462a8">os::posix::io_impl</a>
+, <a class="el" href="classos_1_1rtos_1_1adjustable__clock.html#a13b99b2fbecc82a2606fec13d2d32ca0">os::rtos::adjustable_clock</a>
 </li>
 <li>offset_t
 : <a class="el" href="group__cmsis-plus-rtos-clock.html#gabb59996de739574c5f5255e7b3d29c1c">os::rtos::clock</a>
@@ -184,21 +182,19 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <li>once
 : <a class="el" href="structos_1_1rtos_1_1timer_1_1run.html#a98c7aa532bda781126dc8dc0dbdfcc44a72b566411febd3d575bfb109b3346777">os::rtos::timer::run</a>
 </li>
-<li>once_flag()
-: <a class="el" href="structos_1_1estd_1_1once__flag.html#a7a0b5ce1ef496321e1c3c53c7fb4e215">os::estd::once_flag</a>
-</li>
 <li>once_initializer
 : <a class="el" href="classos_1_1rtos_1_1timer.html#ab84203ce8ce335462ba0e91049762343">os::rtos::timer</a>
 </li>
 <li>open()
-: <a class="el" href="classos_1_1posix_1_1file.html#a40fb5543367cce762955c5c65778fa80">os::posix::file</a>
-, <a class="el" href="classos_1_1posix_1_1file__system.html#a36be680dfe082a94622aadc207820ed5">os::posix::file_system</a>
+: <a class="el" href="classos_1_1posix_1_1device.html#a98ad900f30f12d282673142611007a0b">os::posix::device</a>
+, <a class="el" href="classos_1_1posix_1_1file__system.html#a0bd195b35e4ee983002394a7bbd179cc">os::posix::file_system</a>
+</li>
+<li>open_count()
+: <a class="el" href="classos_1_1posix_1_1device__impl.html#ac26644dfc21194430ee02c07b87ef16f">os::posix::device_impl</a>
 </li>
 <li>opendir()
 : <a class="el" href="classos_1_1posix_1_1file__system.html#af0ecaa5ce75841b7f028cff358e976eb">os::posix::file_system</a>
-</li>
-<li>operator bool()
-: <a class="el" href="classos_1_1estd_1_1unique__lock.html#a08befe3132e5a47e41d42f99a7cc5a0d">os::estd::unique_lock&lt; L &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__lockable.html#a168c9a5e5e1db5a352b521fc4fee8930">os::posix::file_system_lockable&lt; T, L &gt;</a>
 </li>
 <li>operator delete()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1object__named__system.html#aef5d78f2ac3f37daf3984758c9e2ddb2">os::rtos::internal::object_named_system</a>
@@ -219,6 +215,7 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 <li>operator()()
 : <a class="el" href="structos_1_1estd_1_1____lock__external.html#abfc124d90062cddb48492ab88e4cbd08">os::estd::__lock_external</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#acf13568492f20428586bac37c2584332">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
+, <a class="el" href="structstd_1_1hash_3_01os_1_1estd_1_1thread_1_1id_01_4.html#afdbdb93b30cfcd03e54a40bc13702535">std::hash&lt; os::estd::thread::id &gt;</a>
 </li>
 <li>operator*()
 : <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#ac05be771501a6fe46707c9f529ce6b12">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
@@ -226,7 +223,7 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 </li>
 <li>operator++()
 : <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#aa46ede71c220fd694b2173b78e9f7529">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
-, <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#acd012b1f51e63d4bdbe22efa418c5003">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#a5a275ec169fb6cddfef60777fe12e60a">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
 </li>
 <li>operator--()
 : <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#a0f5deafb65d29f06efb2a35a9ed325b0">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
@@ -238,6 +235,7 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 </li>
 <li>operator&lt;
 : <a class="el" href="classos_1_1estd_1_1thread_1_1id.html#aba72c9246b2537ccbb813d93ca3d6ca8">os::estd::thread::id</a>
+, <a class="el" href="classthread_1_1id.html#aba72c9246b2537ccbb813d93ca3d6ca8">thread::id</a>
 </li>
 <li>operator=()
 : <a class="el" href="classos_1_1driver_1_1Serial.html#a17fe13a6793018c6b0d3bd0c7b574c6d">os::driver::Serial</a>
@@ -249,32 +247,30 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 , <a class="el" href="classos_1_1driver_1_1Version.html#a80631ee0cc3b4a7bf26275ea104e91b0">os::driver::Version</a>
 , <a class="el" href="classos_1_1estd_1_1condition__variable.html#a33524189c9259b4e2635f0d37402d2e0">os::estd::condition_variable</a>
 , <a class="el" href="classos_1_1estd_1_1condition__variable__any.html#abffbd7ec4e028ca2689ebe7bfeaff4df">os::estd::condition_variable_any</a>
-, <a class="el" href="classos_1_1estd_1_1lock__guard.html#ab1ad57a0501827a98f15566b244b0f7d">os::estd::lock_guard&lt; L &gt;</a>
 , <a class="el" href="classos_1_1estd_1_1mutex.html#a9be25bcc6cc53c0e0b34ee90efce31c4">os::estd::mutex</a>
-, <a class="el" href="structos_1_1estd_1_1once__flag.html#a47ade730297b521d49ce3f44340a0d89">os::estd::once_flag</a>
 , <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#a501ed70ee6e3773711d4c4b33d5375af">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
 , <a class="el" href="classos_1_1estd_1_1recursive__mutex.html#aac68da740b85bb98a96fc0d6eb47386f">os::estd::recursive_mutex</a>
 , <a class="el" href="classos_1_1estd_1_1recursive__timed__mutex.html#afbc481bd2b36b5b5a09edce8f09500df">os::estd::recursive_timed_mutex</a>
 , <a class="el" href="classos_1_1estd_1_1thread_1_1id.html#a79af3ff052a778c4af7e14eba39b6b3b">os::estd::thread::id</a>
-, <a class="el" href="classos_1_1estd_1_1thread.html#aa486cd1b36b67677187bb473581b9095">os::estd::thread</a>
+, <a class="el" href="classos_1_1estd_1_1thread.html#a8fdefcec7b1269377d39744c2faaa600">os::estd::thread</a>
 , <a class="el" href="classos_1_1estd_1_1timed__mutex.html#a2e1afe8c1b55fbb01d7fa1cb1c3aaad9">os::estd::timed_mutex</a>
-, <a class="el" href="classos_1_1estd_1_1unique__lock.html#a1539f16c0869c56f9af93dcb13a83e63">os::estd::unique_lock&lt; L &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1tty.html#a76aaeb876f9539e6f459ea0fefa62fe6">os::posix::tty</a>
 , <a class="el" href="classos_1_1rtos_1_1condition__variable_1_1attributes.html#a562c39c0dd9589ca08015aaa2d0baf0f">os::rtos::condition_variable::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1event__flags_1_1attributes.html#a93f0b825249d787646c28f43c8c2e68a">os::rtos::event_flags::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#aa070186f485374bb65ba50794902d37e">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
-, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a6994e769f1a7d1fd1ce6c505cd8c9d91">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a5cbffd2d61b3d464e6940b0daecb793c">os::rtos::memory::allocator_deleter&lt; A &gt;</a>
+, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a8f07e5d8a3cbe35378ded2305da19cac">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#ade2e4dd568847914396266e8da6c3381">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;</a>
 , <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html#ab8aa3b8359ee0ac0684efac218cb9dd6">os::rtos::memory_pool::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1message__queue_1_1attributes.html#a4eee9aa32029c4faa5c0016d9a9c41da">os::rtos::message_queue::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#ab92b6f177989df5d72ee98be0a6be438">os::rtos::mutex::attributes</a>
 , <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes__recursive.html#ab2af34a849198baae48ca3f306821586">os::rtos::mutex::attributes_recursive</a>
 , <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a0776101304c8e1332f5c7293e8089576">os::rtos::semaphore::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a4ebde3091d436fa92da797bf4c91d865">os::rtos::semaphore::attributes_binary</a>
-, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a2383fad261e23ccfed437b33e70ab422">os::rtos::semaphore::attributes_counting</a>
+, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__binary.html#a36e2123946cadf43901018b23784d42d">os::rtos::semaphore::attributes_binary</a>
+, <a class="el" href="classos_1_1rtos_1_1semaphore_1_1attributes__counting.html#a90d9800d7f57a9cdfc4688da03f30168">os::rtos::semaphore::attributes_counting</a>
 , <a class="el" href="classos_1_1rtos_1_1thread_1_1attributes.html#a26652a74272d9c9846d0d9cf95df9010">os::rtos::thread::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html#acadcfe5200ab56e24d0cee738ab23641">os::rtos::timer::attributes</a>
-, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes__periodic.html#ac79af3c8a0ffe0073ba674609ad20745">os::rtos::timer::attributes_periodic</a>
+, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes.html#ad8b6b73ab2c78805e91049b14d2a2002">os::rtos::timer::attributes</a>
+, <a class="el" href="classos_1_1rtos_1_1timer_1_1attributes__periodic.html#aa6f04f7668f0a8a6663addf74befd55f">os::rtos::timer::attributes_periodic</a>
+, <a class="el" href="classthread_1_1id.html#a645275c82641e256c78f517a6caca08a">thread::id</a>
+, <a class="el" href="classthread.html#a89cd2a694a0b6bf102c21f8db28c087b">thread</a>
 </li>
 <li>operator==
 : <a class="el" href="classos_1_1estd_1_1thread_1_1id.html#a3bba9f754bf31fb701c59b68d122027a">os::estd::thread::id</a>
@@ -287,10 +283,11 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 , <a class="el" href="classos_1_1rtos_1_1semaphore.html#aa5a0d0614cc4e7bf6ce4bf0fb9a90cdf">os::rtos::semaphore</a>
 , <a class="el" href="classos_1_1rtos_1_1semaphore__binary.html#a0c129619b6c46c6e28e98dabcdaed08e">os::rtos::semaphore_binary</a>
 , <a class="el" href="classos_1_1rtos_1_1semaphore__counting.html#acdae459c0be1e458599869f0e121335f">os::rtos::semaphore_counting</a>
-, <a class="el" href="classos_1_1rtos_1_1thread.html#a08534b2e62374e78f823339750296552">os::rtos::thread</a>
+, <a class="el" href="classos_1_1rtos_1_1thread.html#ab118e0f8fb1cf93138f140fbef65aee0">os::rtos::thread</a>
 , <a class="el" href="classos_1_1rtos_1_1timer.html#a10f338d447a46b5ba4a4ec00924bb738">os::rtos::timer</a>
 , <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#a2ff33cbc887af4d0978c34131cab1626">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
 , <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#a38675e56c8af3db6ddfadc54b1a5df7c">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classthread_1_1id.html#a3bba9f754bf31fb701c59b68d122027a">thread::id</a>
 </li>
 <li>operator[]()
 : <a class="el" href="classos_1_1posix_1_1circular__buffer.html#a6dfff2645b23012b566c6991e813ba74">os::posix::circular_buffer&lt; T &gt;</a>
@@ -299,19 +296,13 @@ $(document).ready(function(){initNavTree('functions_o.html','');});
 : <a class="el" href="structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html#ae530b0bbf5b8b1a41d4959caaa97fe22">os::rtos::memory::allocator_stateless_polymorphic_synchronized&lt; T, L, get_resource &gt;::rebind&lt; U &gt;</a>
 </li>
 <li>out_of_memory_handler()
-: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#ad208c11d7df324b8bf0a010f29d88f50">os::rtos::memory::memory_resource</a>
+: <a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a5f26792209fb575350c8eba08960a809">os::rtos::memory::memory_resource</a>
 </li>
 <li>overcurrent
 : <a class="el" href="classos_1_1driver_1_1usb_1_1host_1_1Status.html#ae57ba4acb27438eb6faa2fa3c8cf7bcb">os::driver::usb::host::Status</a>
 </li>
 <li>owner()
 : <a class="el" href="classos_1_1rtos_1_1mutex.html#adcfacc498b568dd75fa1d2434ae9b1d8">os::rtos::mutex</a>
-</li>
-<li>owns_
-: <a class="el" href="classos_1_1estd_1_1unique__lock.html#acb408e782b05aa0941e8af60af3f603a">os::estd::unique_lock&lt; L &gt;</a>
-</li>
-<li>owns_lock()
-: <a class="el" href="classos_1_1estd_1_1unique__lock.html#a6776e816714b44f51adb723363027016">os::estd::unique_lock&lt; L &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

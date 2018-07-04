@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Interrupt service routines</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Interrupt service routines">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Interrupt_service_routines/">
+  <link rel="canonical" href="/micro-os-plus/i/Interrupt_service_routines/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Interrupt service routines - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Wed Mar  9 20:47:09 2011 UTC.</td>
+    <td id="last-modified">Page date Wed Mar  9 20:47:09 2011 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/Interrupt_service_routines.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -279,17 +279,14 @@
 
 <p>Calling the common interrupt service routine from the context handler should be done using his pointer:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>ms_pThis-&gt;interruptRxServiceRoutine();
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ms_pThis-&gt;interruptRxServiceRoutine();
+</code></pre></div></div>
 
 <h1 id="c-context-handlers">C++ context handlers</h1>
 
 <p>If the architecture allows to register any function as interrupt service routines, then it can be written in C++ without problems.</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>class MyClass
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass
 {
 public:
   MyClass();
@@ -324,15 +321,13 @@ MyClass::interruptRxServiceRoutine(void)
 {
   // Here the interesting things happen
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="c-context-handlers-1">C context handlers</h1>
 
 <p>For architectures that mandate interrupt service routines to be written in C, the code outline is slightly different.</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>extern "C" void __attribute__((naked))
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>extern "C" void __attribute__((naked))
 MyClass_contextHandler(void);
 
 class MyClass
@@ -367,8 +362,7 @@ MyClass::interruptServiceRoutine(void)
 {
   // Here the interesting things happen
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="configurable-preemption">Configurable preemption</h1>
 
@@ -380,11 +374,9 @@ MyClass::interruptServiceRoutine(void)
 
 <p>The configuration variables used to do this should conform to the following convention:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>OS_EXCLUDE_MYCLASS_ISR_PREEMPTION
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OS_EXCLUDE_MYCLASS_ISR_PREEMPTION
 OS_EXCLUDE_MYCLASS_MYCONDITION_ISR_PREEMPTION
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The MYCONDITION name adds some more specificity in case there are several interrupt service routines in a class, for example distinct RX and TX routines in the Usart driver.</p>
 
@@ -392,8 +384,7 @@ OS_EXCLUDE_MYCLASS_MYCONDITION_ISR_PREEMPTION
 
 <p>When the interruptEnter()/Exit() code is included, it also handles the activity LED (i.e. turn it on when interrupts are entered). To preserve the usefulness of the activity LED, when the interruptEnter()/Exit() code is not included, it is necessary to explicitly turn the LED on. In all cases it will be turned off when the processor enters the idle/sleep mode.</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>class MyClass
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass
 {
 public:
   MyClass();
@@ -439,8 +430,7 @@ MyClass::interruptServiceRoutine(void)
 {
   // Here the interesting things happen
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
 
@@ -468,7 +458,7 @@ MyClass::interruptServiceRoutine(void)
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

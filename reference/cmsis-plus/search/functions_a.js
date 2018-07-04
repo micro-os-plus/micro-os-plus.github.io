@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['join',['join',['../classos_1_1rtos_1_1thread.html#a7d3323ac7f60353146568999cf1b3078',1,'os::rtos::thread::join()'],['../classos_1_1estd_1_1thread.html#ad9a79f3504272f19b393b5ae42073192',1,'os::estd::thread::join()']]],
-  ['joinable',['joinable',['../classos_1_1estd_1_1thread.html#a4b43cf36bcf61dc21384872ae1070816',1,'os::estd::thread']]]
+  ['join',['join',['../classthread.html#aab29b0064bf571afd6aa2d44241d992b',1,'thread::join()'],['../classos_1_1rtos_1_1thread.html#a87d3bab3f4bfc33474e7fdb9dfda172e',1,'os::rtos::thread::join()'],['../classos_1_1estd_1_1thread.html#aab29b0064bf571afd6aa2d44241d992b',1,'os::estd::thread::join()']]],
+  ['joinable',['joinable',['../classthread.html#a0b446371c8a3affbbe656087e407a815',1,'thread::joinable()'],['../classos_1_1estd_1_1thread.html#a0b446371c8a3affbbe656087e407a815',1,'os::estd::thread::joinable()']]]
 ];

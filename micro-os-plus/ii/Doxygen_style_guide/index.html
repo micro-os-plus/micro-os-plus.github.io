@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Doxygen style guide</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Doxygen style guide">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/ii/Doxygen_style_guide/">
+  <link rel="canonical" href="/micro-os-plus/ii/Doxygen_style_guide/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Doxygen style guide - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Sat Aug 10 13:52:32 2013 UTC.</td>
+    <td id="last-modified">Page date Sat Aug 10 13:52:32 2013 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Doxygen_style_guide.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -348,9 +348,12 @@
 <p>Explicitly use the \brief command before the brief description. End the text with a dot. For visibility reasons, add an empty line inside the same comment block.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \brief Base for all architecture implementation classes.
+<div class="highlight">
+<pre class="highlight">
+<code>/// \brief Base for all architecture implementation classes.
 ///
 </code></pre>
+</div>
 </div>
 
 <h2 id="explicit-details">Explicit \details</h2>
@@ -360,11 +363,14 @@
 <p>For class member functions, the details should be placed before the implementation; although allowed by Doxygen, avoid placing details both at the declaration and definitions, since it is difficult to keep them consistent (see below).</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>///
+<div class="highlight">
+<pre class="highlight">
+<code>///
 /// \details
 /// The TraceOstreamBase class implements an ostream class
 /// to be used by the Trace class.
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-brief-with-declarations-and-details-with-definitions">Use \brief with declarations and \details with definitions</h2>
@@ -390,12 +396,15 @@
 <p>When including lines of code, surround them by \code, \endcode and add the language. For visibility reasons, add empty lines inside the comment block.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>///
+<div class="highlight">
+<pre class="highlight">
+<code>///
 /// \code{.cpp}
 /// setClassName("os::infra::TestSuite");
 /// \endcode
 ///
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-verbatim-for-other-pre-formatted-lines">Use \verbatim for other pre-formatted lines</h2>
@@ -403,12 +412,15 @@
 <p>When including other lines, like shell commands, surround them by \verbatim, \endverbatim:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>///
+<div class="highlight">
+<pre class="highlight">
+<code>///
 /// \verbatim
 /// /bin/bash micro-os-plus-se.git/scripts/runTests.sh
 /// \endverbatim
 ///
 </code></pre>
+</div>
 </div>
 
 <h2 id="lists">Lists</h2>
@@ -418,11 +430,14 @@
 <p>For multiple levels use additional indentations.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>- first level 1
+<div class="highlight">
+<pre class="highlight">
+<code>- first level 1
   - first level 2
   - second level 2
 - second level 1
 </code></pre>
+</div>
 </div>
 
 <h2 id="tables">Tables</h2>
@@ -430,11 +445,14 @@
 <p>Use the below syntax to enter tables. Columns can be left/right aligned.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>| Right | Center | Left  |
+<div class="highlight">
+<pre class="highlight">
+<code>| Right | Center | Left  |
 | ----: | :----: | :---- |
 | 10    | 10     | 10    |
 | 1000  | 1000   | 1000  |
 </code></pre>
+</div>
 </div>
 
 <h2 id="external-links">External links</h2>
@@ -442,8 +460,11 @@
 <p>Links to other pages can be expressed with the following markup:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>[The link text](http://example.net/)
+<div class="highlight">
+<pre class="highlight">
+<code>[The link text](http://example.net/)
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-tparam-for-template-parameters">Use \tparam for template parameters</h2>
@@ -451,8 +472,11 @@
 <p>Use \tparam for template parameters. Start the explanation with upper case and end it with dot.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \tparam Implementation_T  Type of the implementation class.
+<div class="highlight">
+<pre class="highlight">
+<code>/// \tparam Implementation_T  Type of the implementation class.
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-param-for-function-parameters">Use \param for function parameters</h2>
@@ -462,16 +486,22 @@
 <p>To make the explanation more readable, use tabs to right align the content.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \param [in]  c  An additional character to consume.
+<div class="highlight">
+<pre class="highlight">
+<code>/// \param [in]  c  An additional character to consume.
 </code></pre>
+</div>
 </div>
 
 <p>If the function has no parameters, use a custom paragraph containing <strong>None</strong>, indented with a tab and terminated with a dot.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \par Parameters
+<div class="highlight">
+<pre class="highlight">
+<code>/// \par Parameters
 ///    None.
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-return-or-retval-for-the-returned-result">Use \return or \retval for the returned result</h2>
@@ -479,25 +509,34 @@
 <p>If the function returns discrete values, enumerate them with <strong>\retval</strong> and terminate the list with an empty line.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \retval -1 Error
+<div class="highlight">
+<pre class="highlight">
+<code>/// \retval -1 Error
 /// \retval 0 OK
 ///
 </code></pre>
+</div>
 </div>
 
 <p>If the function returns a scalar value, use a <strong>\return</strong> and explain what the value represents.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \return The number of bytes actually written.
+<div class="highlight">
+<pre class="highlight">
+<code>/// \return The number of bytes actually written.
 </code></pre>
+</div>
 </div>
 
 <p>If the function has no return value, use a custom paragraph containing <strong>Nothing</strong>, indented with a tab and terminated with a dot.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \par Returns
+<div class="highlight">
+<pre class="highlight">
+<code>/// \par Returns
 ///    Nothing.
 </code></pre>
+</div>
 </div>
 
 <h2 id="use-headerfile-to-define-the-header-full-path">Use \headerfile to define the header full path</h2>
@@ -505,7 +544,9 @@
 <p>For each class, structure, enum or other object definition, use \headerfile to specify the full header path.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \headerfile CoreInterruptNumbers.h "hal/architecture/arm/cortexm/include/CoreInterruptNumbers.h"
+<div class="highlight">
+<pre class="highlight">
+<code>/// \headerfile CoreInterruptNumbers.h "hal/architecture/arm/cortexm/include/CoreInterruptNumbers.h"
 /// \nosubgrouping
 ///
 /// \brief ARM Cortex-M architecture interrupt numbers base
@@ -513,6 +554,7 @@
 /// Interrupt numbers defined by the Cortex-M0 light architecture.
 class CortexM0InterruptNumber ...
 </code></pre>
+</div>
 </div>
 
 <p>The first name should be present in the filesystem, so it might need some prefixing. The second name is passed to the output.</p>
@@ -532,7 +574,9 @@ class CortexM0InterruptNumber ...
 <p>Note: Groups do not nest.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \name Standard template types
+<div class="highlight">
+<pre class="highlight">
+<code>/// \name Standard template types
 ///
 /// These types permit a standardised way of
 /// referring to names of (or names dependent on) the template
@@ -561,11 +605,14 @@ virtual
 /// @} end of name Constructors/destructor
 </code></pre>
 </div>
+</div>
 
 <h2 id="template-sample">Template sample</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \headerfile Trace.h "portable/diagnostics/include/Trace.h"
+<div class="highlight">
+<pre class="highlight">
+<code>/// \headerfile Trace.h "portable/diagnostics/include/Trace.h"
 /// \ingroup diag
 /// \nosubgrouping
 ///
@@ -583,6 +630,7 @@ template&lt;class Implementation_T&gt;
   };
 </code></pre>
 </div>
+</div>
 
 <h2 id="grouping">Grouping</h2>
 
@@ -591,16 +639,21 @@ template&lt;class Implementation_T&gt;
 <p>To include a definition in one or more modules, use \ingroup.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \brief Stack size type.
+<div class="highlight">
+<pre class="highlight">
+<code>/// \brief Stack size type.
 /// \ingroup core_thread
 ///
 </code></pre>
+</div>
 </div>
 
 <p>If multiple definition are from the same group, they can be grouped with <strong>@{</strong> … <strong>@}</strong>:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \ingroup core_thread
+<div class="highlight">
+<pre class="highlight">
+<code>/// \ingroup core_thread
 /// @{
         &lt;- mandatory empty line
 /// \brief Stack element type.
@@ -612,6 +665,7 @@ typedef hal::arch::stackSize_t size_t;
 /// @} end of ingroup core_thread
 </code></pre>
 </div>
+</div>
 
 <p>Please note the mandatory empty lines after <strong>@{</strong> and before <strong>@}</strong>.</p>
 
@@ -622,7 +676,9 @@ typedef hal::arch::stackSize_t size_t;
 <p>This command allows to define the name of the section within a page. Usually it is used with <strong>@{</strong> … <strong>@}</strong>:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \name Constructors/destructor
+<div class="highlight">
+<pre class="highlight">
+<code>/// \name Constructors/destructor
 /// @{
         &lt;- mandatory empty line
 /// \brief Constructor.
@@ -634,11 +690,14 @@ MainThread(void);
 /// @} end of name Constructors/destructor
 </code></pre>
 </div>
+</div>
 
 <p>Recommended sections name are:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/// \name Types and constants
+<div class="highlight">
+<pre class="highlight">
+<code>/// \name Types and constants
 
 /// \name Constructors/destructor
 
@@ -650,6 +709,7 @@ MainThread(void);
 
 /// \name Private member variables
 </code></pre>
+</div>
 </div>
 
 
@@ -678,7 +738,7 @@ MainThread(void);
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

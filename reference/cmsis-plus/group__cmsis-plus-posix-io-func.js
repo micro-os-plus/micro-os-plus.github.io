@@ -8,6 +8,7 @@ var group__cmsis_plus_posix_io_func =
     [ "rmdir", "group__cmsis-plus-posix-io-func.html#ga863b41a7814fc6c1c0d7e38a00d555b4", null ],
     [ "socket", "group__cmsis-plus-posix-io-func.html#ga236d962e827e02459335c2146dc911e3", null ],
     [ "stat", "group__cmsis-plus-posix-io-func.html#gaa84d2210dbe8c15b89a7bd2fbe74623c", null ],
+    [ "statvfs", "group__cmsis-plus-posix-io-func.html#ga92959ead59f936ae28011ea3518c9123", null ],
     [ "sync", "group__cmsis-plus-posix-io-func.html#gad5309901087cd298df78d41b506a0811", null ],
     [ "truncate", "group__cmsis-plus-posix-io-func.html#gace59eb3cca75ecd52f2107607a724343", null ],
     [ "unlink", "group__cmsis-plus-posix-io-func.html#ga0cb17f1d94046e9eaad21660b452c52e", null ],

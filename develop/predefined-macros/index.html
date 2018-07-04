@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Predefined compiler macros</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Predefined compiler macros">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/predefined-macros/">
+  <link rel="canonical" href="/develop/predefined-macros/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -301,85 +301,138 @@
 <p>If some parts of the code are platform dependent, test the following preprocessor definitions:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__APPLE__)
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__APPLE__)
 #if defined(__linux__)
 #if defined(__x86_64__)
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check the compiler:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined (__GNUC__)
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined (__GNUC__)
 #if __GNUC__ == 4 &amp;&amp; __GNUC_MINOR__ == 7
 #if defined(__clang__)
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if GCC only:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check the size of the pointer:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if __SIZEOF_POINTER__ == __SIZEOF_INT__
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if __SIZEOF_POINTER__ == __SIZEOF_INT__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG_LONG__
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if there are no <strong>long long</strong> variables:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if !defined(__SIZEOF_LONG_LONG)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if !defined(__SIZEOF_LONG_LONG)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if the compiling unit is C++:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined (__cplusplus)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined (__cplusplus)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if the compiling unit is an assembly file:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__ASSEMBLER__)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__ASSEMBLER__)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if optimisation is enabled (more than <code class="highlighter-rouge">-O0</code>):</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__OPTIMIZE__)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__OPTIMIZE__)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if optimisation for size is enabled (<code class="highlighter-rouge">-Os</code>):</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__OPTIMIZE_SIZE__)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__OPTIMIZE_SIZE__)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To check if no inlines are enabled:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#if defined(__NO_INLINE__)
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#if defined(__NO_INLINE__)
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>To see the built-in definitions:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">g++</span><span class="kv"> -dM -E - &lt; /dev/null
-</span><span class="w">$ </span><span class="nc">clang++</span><span class="kv"> -dM -E - &lt; /dev/null
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> g++ <span class="nt">-dM</span> <span class="nt">-E</span> - &lt; /dev/null
+<span class="gp">$</span> clang++ <span class="nt">-dM</span> <span class="nt">-E</span> - &lt; /dev/null
+</code></pre>
+</div>
 </div>
 
 <h2 id="arm-cortex-m">ARM Cortex-M</h2>
@@ -389,283 +442,295 @@
 <h3 id="arm-cortex-m0m0">ARM Cortex-M0/M0+</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_ARCH 6
-#define __ARM_ARCH_6M__ 1
-#define __ARM_ARCH_ISA_THUMB 1
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_EABI__ 1
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __SOFTFP__ 1
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb__ 1
-
-<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m0plus -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_ARCH 6
-#define __ARM_ARCH_6M__ 1
-#define __ARM_ARCH_ISA_THUMB 1
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_EABI__ 1
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __SOFTFP__ 1
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb__ 1
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m0 <span class="nt">-mthumb</span> <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_ARCH 6
+<span class="gp">#</span>define __ARM_ARCH_6M__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 1
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __SOFTFP__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb__ 1
+<span class="go">
+</span><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m0plus <span class="nt">-mthumb</span> <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_ARCH 6
+<span class="gp">#</span>define __ARM_ARCH_6M__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 1
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __SOFTFP__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb__ 1
 </code></pre>
+</div>
 </div>
 
 <h3 id="arm-cortex-m3">ARM Cortex-M3</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7M__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __SOFTFP__ 1
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m3 <span class="nt">-mthumb</span> <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7M__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __SOFTFP__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
 </code></pre>
+</div>
 </div>
 
 <h3 id="arm-cortex-m4">ARM Cortex-M4</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __SOFTFP__ 1
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
-
-<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 12
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
-
-<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 12
-#define __ARM_PCS_VFP 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>soft <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __SOFTFP__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
+<span class="go">
+</span><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>softfp <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_FP 12
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
+<span class="go">
+</span><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>hard <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_FP 12
+<span class="gp">#</span>define __ARM_PCS_VFP 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
 </code></pre>
+</div>
 </div>
 
 <h3 id="arm-cortex-m7">ARM Cortex-M7</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=soft -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __SOFTFP__ 1
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
-
-<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=softfp -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 12
-#define __ARM_PCS 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
-
-<span class="w">$ </span><span class="nc">./arm-none-eabi-gcc</span><span class="kv"> -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp[^-]|version|abi' | sort
-</span>#define __ARMEL__ 1
-#define __ARM_32BIT_STATE 1
-#define __ARM_ARCH 7
-#define __ARM_ARCH_7EM__ 1
-#define __ARM_ARCH_EXT_IDIV__ 1
-#define __ARM_ARCH_ISA_THUMB 2
-#define __ARM_ARCH_PROFILE 77
-#define __ARM_ASM_SYNTAX_UNIFIED__ 1
-#define __ARM_EABI__ 1
-#define __ARM_FEATURE_CLZ 1
-#define __ARM_FEATURE_DSP 1
-#define __ARM_FEATURE_IDIV 1
-#define __ARM_FEATURE_LDREX 7
-#define __ARM_FEATURE_QBIT 1
-#define __ARM_FEATURE_SAT 1
-#define __ARM_FEATURE_SIMD32 1
-#define __ARM_FEATURE_UNALIGNED 1
-#define __ARM_FP 12
-#define __ARM_PCS_VFP 1
-#define __ARM_SIZEOF_MINIMAL_ENUM 1
-#define __ARM_SIZEOF_WCHAR_T 4
-#define __GXX_ABI_VERSION 1009
-#define __STDC_VERSION__ 201112L
-#define __THUMBEL__ 1
-#define __THUMB_INTERWORK__ 1
-#define __VERSION__ "5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"
-#define __VFP_FP__ 1
-#define __arm__ 1
-#define __thumb2__ 1
-#define __thumb__ 1
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>soft <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __SOFTFP__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
+<span class="go">
+</span><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>softfp <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_FP 12
+<span class="gp">#</span>define __ARM_PCS 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
+<span class="go">
+</span><span class="gp">$</span> ./arm-none-eabi-gcc <span class="nt">-mcpu</span><span class="o">=</span>cortex-m7 <span class="nt">-mthumb</span> <span class="nt">-mfloat-abi</span><span class="o">=</span>hard <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'thumb|arm|cortex|fp[^-]|version|abi'</span> | sort
+<span class="gp">#</span>define __ARMEL__ 1
+<span class="gp">#</span>define __ARM_32BIT_STATE 1
+<span class="gp">#</span>define __ARM_ARCH 7
+<span class="gp">#</span>define __ARM_ARCH_7EM__ 1
+<span class="gp">#</span>define __ARM_ARCH_EXT_IDIV__ 1
+<span class="gp">#</span>define __ARM_ARCH_ISA_THUMB 2
+<span class="gp">#</span>define __ARM_ARCH_PROFILE 77
+<span class="gp">#</span>define __ARM_ASM_SYNTAX_UNIFIED__ 1
+<span class="gp">#</span>define __ARM_EABI__ 1
+<span class="gp">#</span>define __ARM_FEATURE_CLZ 1
+<span class="gp">#</span>define __ARM_FEATURE_DSP 1
+<span class="gp">#</span>define __ARM_FEATURE_IDIV 1
+<span class="gp">#</span>define __ARM_FEATURE_LDREX 7
+<span class="gp">#</span>define __ARM_FEATURE_QBIT 1
+<span class="gp">#</span>define __ARM_FEATURE_SAT 1
+<span class="gp">#</span>define __ARM_FEATURE_SIMD32 1
+<span class="gp">#</span>define __ARM_FEATURE_UNALIGNED 1
+<span class="gp">#</span>define __ARM_FP 12
+<span class="gp">#</span>define __ARM_PCS_VFP 1
+<span class="gp">#</span>define __ARM_SIZEOF_MINIMAL_ENUM 1
+<span class="gp">#</span>define __ARM_SIZEOF_WCHAR_T 4
+<span class="gp">#</span>define __GXX_ABI_VERSION 1009
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __THUMBEL__ 1
+<span class="gp">#</span>define __THUMB_INTERWORK__ 1
+<span class="gp">#</span>define __VERSION__ <span class="s2">"5.4.1 20160919 (release) [ARM/embedded-5-branch revision 240496]"</span>
+<span class="gp">#</span>define __VFP_FP__ 1
+<span class="gp">#</span>define __arm__ 1
+<span class="gp">#</span>define __thumb2__ 1
+<span class="gp">#</span>define __thumb__ 1
 </code></pre>
+</div>
 </div>
 
 <h2 id="floating-point">Floating point</h2>
@@ -673,8 +738,13 @@
 <p>To check if hardware floating point is enabled (<code class="highlighter-rouge">-mfloat-abi=softfp</code> or <code class="highlighter-rouge">-mfloat-abi=hard</code>):</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __ARM_FP 12
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __ARM_FP 12
+</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="freestanding">Freestanding</h2>
@@ -682,8 +752,13 @@
 <p>To check if <code class="highlighter-rouge">-ffreestanding</code> was defined, you can use the following:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __STDC_HOSTED__ 0
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __STDC_HOSTED__ 0
+</span>
+</code></pre>
+</div>
 </div>
 
 <p>By default, i.e. with <code class="highlighter-rouge">-fhosted</code> defined, the value is 1.</p>
@@ -693,16 +768,26 @@
 <p>To check if a C++ program is compiled with <code class="highlighter-rouge">-fexceptions</code>, use:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __EXCEPTIONS 1
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __EXCEPTIONS 1
+</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="other-macros">Other macros</h2>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __CHAR_UNSIGNED__ 1
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __CHAR_UNSIGNED__ 1
 #define __LP64__ 1
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="warnings">Warnings</h2>
@@ -710,7 +795,9 @@
 <p>When compiling third party sources, it might be necessary to temporarily disable some warnings:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#pragma GCC diagnostic push
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wpadded"
 </span>
 <span class="c1">// ...
@@ -718,11 +805,14 @@
 <span class="cp">#pragma GCC diagnostic pop
 </span></code></pre>
 </div>
+</div>
 
 <p>clang specific warnings must be issued only for clang:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#pragma GCC diagnostic push
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsign-conversion"
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wgnu-include-next"
@@ -737,22 +827,28 @@
 <span class="cp">#pragma GCC diagnostic pop
 </span></code></pre>
 </div>
+</div>
 
 <p>To check if POSIX:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;unistd.h&gt;
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#include &lt;unistd.h&gt;
 </span>
 <span class="cp">#if defined(_POSIX_VERSION)
 </span><span class="c1">// ...
 </span><span class="cp">#endif
 </span></code></pre>
 </div>
+</div>
 
 <p>To include next version:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;unistd.h&gt;
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#include &lt;unistd.h&gt;
 </span>
 <span class="cp">#if defined(_POSIX_VERSION)
 </span>
@@ -784,6 +880,7 @@
 <span class="cp">#endif </span><span class="cm">/* defined(_POSIX_VERSION) */</span><span class="cp">
 </span></code></pre>
 </div>
+</div>
 
 
 
@@ -811,7 +908,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

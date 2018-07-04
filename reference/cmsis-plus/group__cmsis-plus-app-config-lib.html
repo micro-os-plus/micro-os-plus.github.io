@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -124,8 +124,11 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-lib.html'
 <p>Definitions used to configure various library options.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="memitem:ga67f34053fdcf8b9d22ee950ce344ef42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-lib.html#ga67f34053fdcf8b9d22ee950ce344ef42">OS_INCLUDE_ATEXIT_STATIC</a></td></tr>
+<tr class="memdesc:ga67f34053fdcf8b9d22ee950ce344ef42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a very lite atexit().  <a href="#ga67f34053fdcf8b9d22ee950ce344ef42">More...</a><br /></td></tr>
+<tr class="separator:ga67f34053fdcf8b9d22ee950ce344ef42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae98c5da8f0a9d07ff1898736ab411992"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-lib.html#gae98c5da8f0a9d07ff1898736ab411992">OS_INTEGER_ATEXIT_ARRAY_SIZE</a>&#160;&#160;&#160;(3)</td></tr>
-<tr class="memdesc:gae98c5da8f0a9d07ff1898736ab411992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the size of the <code><a class="el" href="atexit_8cpp.html#a8c2283e1e526c998ba7c1617b540a042" title="Request execution of functions at program exit. ">atexit()</a></code> array.  <a href="#gae98c5da8f0a9d07ff1898736ab411992">More...</a><br /></td></tr>
+<tr class="memdesc:gae98c5da8f0a9d07ff1898736ab411992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the size of the <code>atexit()</code> array.  <a href="#gae98c5da8f0a9d07ff1898736ab411992">More...</a><br /></td></tr>
 <tr class="separator:gae98c5da8f0a9d07ff1898736ab411992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5e007aea157a97e520b579680113ac35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-lib.html#ga5e007aea157a97e520b579680113ac35">OS_INTEGER_DIRENT_NAME_MAX</a>&#160;&#160;&#160;(256)</td></tr>
 <tr class="memdesc:ga5e007aea157a97e520b579680113ac35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the maximum size of a directory name.  <a href="#ga5e007aea157a97e520b579680113ac35">More...</a><br /></td></tr>
@@ -134,6 +137,23 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-lib.html'
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Definitions used to configure various library options. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga67f34053fdcf8b9d22ee950ce344ef42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_INCLUDE_ATEXIT_STATIC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use a very lite atexit(). </p>
+<p>The standard <code>atexit()</code> maintains a generic registry to keep track of the actions to be performed at exit. As storage, this uses an initial static buffer plus a series of dynamically allocated blocks. For very tight configurations this might be problematic, and a lite, always static version is provided. Please note that this version supports only simple actions registered via atexit(); more general cxa or dso handles are not supported, and when exception are enabled, this options is ignored. The size of the static array is configured via <code>OS_INTEGER_ATEXIT_ARRAY_SIZE</code>. </p>
+
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00613">613</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="gae98c5da8f0a9d07ff1898736ab411992"></a>
 <div class="memitem">
 <div class="memproto">
@@ -144,10 +164,10 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-lib.html'
       </table>
 </div><div class="memdoc">
 
-<p>Define the size of the <code><a class="el" href="atexit_8cpp.html#a8c2283e1e526c998ba7c1617b540a042" title="Request execution of functions at program exit. ">atexit()</a></code> array. </p>
+<p>Define the size of the <code>atexit()</code> array. </p>
 <p>To simplify the implementation and avoid dynamic allocations, a static array is used. This option defines the size of this array. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00594">594</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00622">622</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +183,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-lib.html'
 
 <p>Define the maximum size of a directory name. </p>
 
-<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00599">599</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
+<p>Definition at line <a class="el" href="os-app-config_8h_source.html#l00627">627</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
 </div>

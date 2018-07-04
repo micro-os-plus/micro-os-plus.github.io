@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Predefined macros</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Predefined macros">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/ii/Predefined_macros/">
+  <link rel="canonical" href="/micro-os-plus/ii/Predefined_macros/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Predefined macros - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Wed Aug  5 13:48:01 2015 UTC.</td>
+    <td id="last-modified">Page date Wed Aug  5 13:48:01 2015 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/Predefined_macros.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -298,78 +298,108 @@
 <p>If some parts of the code are platform dependent, test the following preprocessor definitions:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__APPLE__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined(__APPLE__)
 #if defined(__linux__)
 #if defined(__x86_64__)
 </code></pre>
+</div>
 </div>
 
 <p>To check the compiler:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined (__GNUC__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined (__GNUC__)
 #if __GNUC__ == 4 &amp;&amp; __GNUC_MINOR__ == 7
 #if defined(__clang__)
 </code></pre>
+</div>
 </div>
 
 <p>To check the size of the pointer:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if __SIZEOF_POINTER__ == __SIZEOF_INT__
+<div class="highlight">
+<pre class="highlight">
+<code>#if __SIZEOF_POINTER__ == __SIZEOF_INT__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG__
 #elif __SIZEOF_POINTER__ == __SIZEOF_LONG_LONG__
 </code></pre>
+</div>
 </div>
 
 <p>To check if there are no <strong>long long</strong> variables:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if !defined(__SIZEOF_LONG_LONG)
+<div class="highlight">
+<pre class="highlight">
+<code>#if !defined(__SIZEOF_LONG_LONG)
 </code></pre>
+</div>
 </div>
 
 <p>To check if the compiling unit is C++:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined (__cplusplus)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined (__cplusplus)
 </code></pre>
+</div>
 </div>
 
 <p>To check if the compiling unit is an assembly file:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__ASSEMBLER__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined(__ASSEMBLER__)
 </code></pre>
+</div>
 </div>
 
 <p>To check if optimisation is enabled (more than -O0):</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__OPTIMIZE__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined(__OPTIMIZE__)
 </code></pre>
+</div>
 </div>
 
 <p>To check if optimisation for size is enabled (-Os):</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__OPTIMIZE_SIZE__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined(__OPTIMIZE_SIZE__)
 </code></pre>
+</div>
 </div>
 
 <p>To check if no inlines are enabled:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#if defined(__NO_INLINE__)
+<div class="highlight">
+<pre class="highlight">
+<code>#if defined(__NO_INLINE__)
 </code></pre>
+</div>
 </div>
 
 <p>To see the GCC defines use:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>g++ -dM -E - &lt; /dev/null
+<div class="highlight">
+<pre class="highlight">
+<code>g++ -dM -E - &lt; /dev/null
 clang++ -dM -E - &lt; /dev/null
 </code></pre>
+</div>
 </div>
 
 <h2 id="arm-cortex-m">ARM Cortex-M</h2>
@@ -379,7 +409,9 @@ clang++ -dM -E - &lt; /dev/null
 <h3 id="arm-cortex-m0m0">ARM Cortex-M0/M0+</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<div class="highlight">
+<pre class="highlight">
+<code>$ ./arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
 #define __ARMEL__ 1
 #define __ARM_ARCH 6
 #define __ARM_ARCH_6M__ 1
@@ -398,11 +430,14 @@ clang++ -dM -E - &lt; /dev/null
 #define __thumb__ 1
 </code></pre>
 </div>
+</div>
 
 <h3 id="arm-cortex-m3">ARM Cortex-M3</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
+<div class="highlight">
+<pre class="highlight">
+<code>$ ./arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
 #define __ARM_ARCH 7
@@ -429,11 +464,14 @@ clang++ -dM -E - &lt; /dev/null
 #define __thumb__ 1
 </code></pre>
 </div>
+</div>
 
 <h3 id="arm-cortex-m4">ARM Cortex-M4</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft \
+<div class="highlight">
+<pre class="highlight">
+<code>$ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft \
 -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp__|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
@@ -498,11 +536,14 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 #define __thumb__ 1
 </code></pre>
 </div>
+</div>
 
 <h3 id="arm-cortex-m7">ARM Cortex-M7</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft \
+<div class="highlight">
+<pre class="highlight">
+<code>$ ./arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=soft \
 -E -dM - &lt; /dev/null | egrep -i 'thumb|arm|cortex|fp__|version|abi' | sort
 #define __ARMEL__ 1
 #define __ARM_32BIT_STATE 1
@@ -535,14 +576,18 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 #define __thumb__ 1
 </code></pre>
 </div>
+</div>
 
 <h2 id="freestanding">Freestanding</h2>
 
 <p>To check if -ffreestanding was defined, you can use the following:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#define __STDC_HOSTED__ 0
+<div class="highlight">
+<pre class="highlight">
+<code>#define __STDC_HOSTED__ 0
 </code></pre>
+</div>
 </div>
 
 <p>By default, i.e. with -fhosted defined, the value is 1.</p>
@@ -552,16 +597,22 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 <p>To check if a C++ program is compiled with -fexceptions, use:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#define __EXCEPTIONS 1
+<div class="highlight">
+<pre class="highlight">
+<code>#define __EXCEPTIONS 1
 </code></pre>
+</div>
 </div>
 
 <h2 id="other-macros">Other macros</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#define __CHAR_UNSIGNED__ 1
+<div class="highlight">
+<pre class="highlight">
+<code>#define __CHAR_UNSIGNED__ 1
 #define __LP64__ 1
 </code></pre>
+</div>
 </div>
 
 <h2 id="warnings">Warnings</h2>
@@ -569,7 +620,9 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 <p>When compiling third party sources, it might be necessary to temporarily disable some warnings:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>// [ILG]
+<div class="highlight">
+<pre class="highlight">
+<code>// [ILG]
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wundef"
 #pragma GCC diagnostic ignored "-Wsign-conversion"
@@ -584,6 +637,7 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
 // [ILG]
 #pragma clang diagnostic pop
 </code></pre>
+</div>
 </div>
 
 
@@ -612,7 +666,7 @@ $ ./arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard \
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

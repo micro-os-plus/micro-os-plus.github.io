@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Tasks</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Tasks">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Tasks/">
+  <link rel="canonical" href="/micro-os-plus/i/Tasks/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Tasks - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Mon Dec 13 23:06:31 2010 UTC.</td>
+    <td id="last-modified">Page date Mon Dec 13 23:06:31 2010 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/Tasks.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -317,9 +317,12 @@
 <h2 id="constructors">Constructors</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSTask(const char *pName, const OSStack_t *pStack, unsigned short stackSize,
+<div class="highlight">
+<pre class="highlight">
+<code>OSTask(const char *pName, const OSStack_t *pStack, unsigned short stackSize,
        OSTaskPriority_t priority = OS_TASK_DEFAULT_PRIORITY);
 </code></pre>
+</div>
 </div>
 
 <p>This constructor defines the task name, the stack and optionally a priority.</p>
@@ -329,15 +332,21 @@
 <h3 id="info-methods">Info Methods</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>char const *getName(void);
+<div class="highlight">
+<pre class="highlight">
+<code>char const *getName(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the task name.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>int getID(void);
+<div class="highlight">
+<pre class="highlight">
+<code>int getID(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the task ID.</p>
@@ -345,29 +354,41 @@
 <h3 id="status-methods">Status Methods</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void suspend(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void suspend(void);
 </code></pre>
+</div>
 </div>
 
 <p>Mark the task as suspended and remove it from the list of running tasks.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void resume(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void resume(void);
 </code></pre>
+</div>
 </div>
 
 <p>Clean the suspended status and add the task to the list of running tasks.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool isSuspended(void);
+<div class="highlight">
+<pre class="highlight">
+<code>bool isSuspended(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return true if the task is suspended.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool isWaiting(void);
+<div class="highlight">
+<pre class="highlight">
+<code>bool isWaiting(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return true if the task is waiting for an event.</p>
@@ -375,29 +396,41 @@
 <h3 id="stack-methods">Stack Methods</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>unsigned char *getStackBottom(void);
+<div class="highlight">
+<pre class="highlight">
+<code>unsigned char *getStackBottom(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the address of the stack bottom. Stack grows from high address to low address, so this is the maximum address the stack can grow.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>unsigned short getStackSize(void);
+<div class="highlight">
+<pre class="highlight">
+<code>unsigned short getStackSize(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the stack size given at task creation.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSStack_t *getStack(void);
+<div class="highlight">
+<pre class="highlight">
+<code>OSStack_t *getStack(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the current stack pointer of the task. This value is stored only during context switch, so the running task will not get the actual value.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>unsigned short getStackUsed(void);
+<div class="highlight">
+<pre class="highlight">
+<code>unsigned short getStackUsed(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the maximum usage of the stack.</p>
@@ -405,15 +438,21 @@
 <h3 id="priority-methods">Priority Methods</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSTaskPriority_t getPriority(void);
+<div class="highlight">
+<pre class="highlight">
+<code>OSTaskPriority_t getPriority(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return task priority.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void setPriority(OSTaskPriority_t priority);
+<div class="highlight">
+<pre class="highlight">
+<code>void setPriority(OSTaskPriority_t priority);
 </code></pre>
+</div>
 </div>
 
 <p>Set task priority to given value. Should be used with caution to avoid deadlocks and priority inversions.</p>
@@ -421,15 +460,21 @@
 <h3 id="events-methods">Events Methods</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSEvent_t getEvent(void);
+<div class="highlight">
+<pre class="highlight">
+<code>OSEvent_t getEvent(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the event the task is waiting for. Cancelling a waiting task can be done by notifying this event with a return value of OS_EVENT_WAIT_RETURN_CANCELED.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void setEvent(OSEvent_t event);
+<div class="highlight">
+<pre class="highlight">
+<code>void setEvent(OSEvent_t event);
 </code></pre>
+</div>
 </div>
 
 <p>Set the event the task is waiting for (defined only for completness, normally not necessary).</p>
@@ -441,7 +486,9 @@
 <h3 id="taskblinkh">TaskBlink.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#include "portable/kernel/include/OS.h"
+<div class="highlight">
+<pre class="highlight">
+<code>#include "portable/kernel/include/OS.h"
 
 #include "config_app.h"
 
@@ -460,11 +507,14 @@ private:
   };
 </code></pre>
 </div>
+</div>
 
 <h3 id="taskblinkcpp">TaskBlink.cpp</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#include "TaskBlink.h"
+<div class="highlight">
+<pre class="highlight">
+<code>#include "TaskBlink.h"
 
 TaskBlink::TaskBlink(const char *pName, schedTicks_t rate) :
   OSTask(pName, m_stack, sizeof(m_stack))
@@ -486,15 +536,19 @@ void TaskBlink::taskMain(void)
   }
 </code></pre>
 </div>
+</div>
 
 <h3 id="mainc">main.c</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>// ...
+<div class="highlight">
+<pre class="highlight">
+<code>// ...
 #include "TaskBlink.h"
 // ...
 TaskBlink t("blink"); // the new task is declared as a static object
 </code></pre>
+</div>
 </div>
 
 
@@ -523,7 +577,7 @@ TaskBlink t("blink"); // the new task is declared as a static object
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

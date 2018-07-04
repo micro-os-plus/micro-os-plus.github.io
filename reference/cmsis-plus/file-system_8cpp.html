@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -128,14 +128,12 @@ $(document).ready(function(){initNavTree('file-system_8cpp.html','');});
 <div class="title">file-system.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="directory_8h_source.html">cmsis-plus/posix-io/directory.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="file_8h_source.html">cmsis-plus/posix-io/file.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="file-system_8h_source.html">cmsis-plus/posix-io/file-system.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="io_8h_source.html">cmsis-plus/posix-io/io.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="mount-manager_8h_source.html">cmsis-plus/posix-io/mount-manager.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="pool_8h_source.html">cmsis-plus/posix-io/pool.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="file-system_8h_source.html">cmsis-plus/posix-io/file-system.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="block-device_8h_source.html">cmsis-plus/posix-io/block-device.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="device-registry_8h_source.html">cmsis-plus/posix-io/device-registry.h</a>&gt;</code><br />
 <code>#include &lt;cerrno&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 </div>
 <p><a href="file-system_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -168,6 +166,11 @@ Functions</h2></td></tr>
 <tr class="separator:ga0cb17f1d94046e9eaad21660b452c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6469a590d7e00e96fbde23474dcdc5ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#ga6469a590d7e00e96fbde23474dcdc5ff">os::posix::utime</a> (const char *path, const struct utimbuf *<a class="el" href="group__cmsis-plus-posix-io-c.html#ga73fc89d71a97e11d44bdd0bbb851a9cb">times</a>)</td></tr>
 <tr class="separator:ga6469a590d7e00e96fbde23474dcdc5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92959ead59f936ae28011ea3518c9123"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#ga92959ead59f936ae28011ea3518c9123">os::posix::statvfs</a> (const char *path, struct <a class="el" href="structstatvfs.html">statvfs</a> *buf)</td></tr>
+<tr class="separator:ga92959ead59f936ae28011ea3518c9123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd71a511456821fc67d35ef44d4e033e"><td class="memItemLeft" align="right" valign="top">directory *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#gadd71a511456821fc67d35ef44d4e033e">os::posix::opendir</a> (const char *dirname)</td></tr>
+<tr class="memdesc:gadd71a511456821fc67d35ef44d4e033e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open directory.  <a href="group__cmsis-plus-posix-io-func.html#gadd71a511456821fc67d35ef44d4e033e">More...</a><br /></td></tr>
+<tr class="separator:gadd71a511456821fc67d35ef44d4e033e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Jekyll style guide</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Jekyll style guide">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/jekyll-style-guide/">
+  <link rel="canonical" href="/develop/jekyll-style-guide/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -253,10 +253,13 @@
 <h2 id="centered-images">Centered images</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>&lt;div style="text-align:center"&gt;
+<div class="highlight">
+<pre class="highlight">
+<code>&lt;div style="text-align:center"&gt;
 &lt;img alt="Alternate" src="/assets/images/2016/micro-os-plus-collection.png" /&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 </div>
 
 <h2 id="code-blocks">Code blocks</h2>
@@ -264,17 +267,18 @@
 <figure class="highlight">
 <pre>
 <code class="language-cpp" data-lang="cpp">
-<table style="border-spacing: 0">
+<table class="rouge-table">
 <tbody>
 <tr>
-<td class="gutter gl" style="text-align: right">
+<td class="gutter gl">
 <pre class="lineno">1
 2
 3
 4
 5
 6
-7</pre>
+7
+</pre>
 </td>
 <td class="code">
 <pre><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
@@ -283,8 +287,7 @@
 <span class="nf">os_main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span><span class="w">
-</span></pre>
+<span class="p">}</span></pre>
 </td>
 </tr>
 </tbody>
@@ -295,7 +298,9 @@
 <p>Currently this is not acceptable.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
+<div class="highlight">
+<pre class="highlight">
+<code><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="kt">int</span>
 <span class="nf">os_main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
@@ -304,14 +309,18 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>To get such a display, use backticks and add the language:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>``` c++
+<div class="highlight">
+<pre class="highlight">
+<code>``` c++
 ...
 ```
 </code></pre>
+</div>
 </div>
 
 <p>The <code class="highlighter-rouge">highlight</code> would be preferable, but since it does not work properly, the second version will be used.</p>
@@ -342,7 +351,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

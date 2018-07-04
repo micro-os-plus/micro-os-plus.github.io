@@ -4,7 +4,7 @@ var classos_1_1rtos_1_1clock__highres =
     [ "offset_t", "classos_1_1rtos_1_1clock__highres.html#gabb59996de739574c5f5255e7b3d29c1c", null ],
     [ "timestamp_t", "classos_1_1rtos_1_1clock__highres.html#ga4f6ee5cdd07c87db11f64d02e1c354d1", null ],
     [ "clock_highres", "classos_1_1rtos_1_1clock__highres.html#a8c544b770b2967e97e4b30b23de131c0", null ],
-    [ "~clock_highres", "classos_1_1rtos_1_1clock__highres.html#a16fc1110744bfcc61e5c3b278fae28dc", null ],
+    [ "~clock_highres", "classos_1_1rtos_1_1clock__highres.html#a0998d77f4041a92d382c980440bf84f7", null ],
     [ "input_clock_frequency_hz", "classos_1_1rtos_1_1clock__highres.html#a57d441bdd4086cf1b87c50131ecfcb9b", null ],
     [ "internal_increment_count", "classos_1_1rtos_1_1clock__highres.html#a016cf469bb338aaa090d1a8268d58c51", null ],
     [ "name", "classos_1_1rtos_1_1clock__highres.html#a36805a0eae21688c136129059482c3dd", null ],

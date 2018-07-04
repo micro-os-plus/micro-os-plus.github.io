@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_20options',['Library Options',['../group__cmsis-plus-app-config-lib.html',1,'']]]
+  ['informative_20options',['Informative Options',['../group__cmsis-plus-app-config-info.html',1,'']]]
 ];

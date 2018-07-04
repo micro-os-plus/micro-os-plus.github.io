@@ -4,7 +4,7 @@ var classos_1_1rtos_1_1clock__rtc =
     [ "offset_t", "classos_1_1rtos_1_1clock__rtc.html#gabb59996de739574c5f5255e7b3d29c1c", null ],
     [ "timestamp_t", "classos_1_1rtos_1_1clock__rtc.html#ga4f6ee5cdd07c87db11f64d02e1c354d1", null ],
     [ "clock_rtc", "classos_1_1rtos_1_1clock__rtc.html#adb6c4c57480444009c25c59b74639f9d", null ],
-    [ "~clock_rtc", "classos_1_1rtos_1_1clock__rtc.html#a20fb31eb688ba0c8679c12f1ac6cc701", null ],
+    [ "~clock_rtc", "classos_1_1rtos_1_1clock__rtc.html#a96848bb6b4b89a9e86049e6fcf8eb865", null ],
     [ "internal_check_timestamps", "classos_1_1rtos_1_1clock__rtc.html#aed85a5194291acffc6f9a0e0da8426d3", null ],
     [ "name", "classos_1_1rtos_1_1clock__rtc.html#a36805a0eae21688c136129059482c3dd", null ],
     [ "now", "classos_1_1rtos_1_1clock__rtc.html#a2ff3189d8d88102a0e49fd094bc7c70b", null ],

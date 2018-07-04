@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Threads</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Threads">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/user-manual/threads/">
+  <link rel="canonical" href="/user-manual/threads/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -388,7 +388,9 @@
 <p>Apart from having a specific prototype, thread functions are regular C function; as such they benefit from all C functions features, including having local variables on their own stacks, calling as many functions as they need, etc.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">// Thread function.
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">// Thread function.
 </span><span class="kt">void</span><span class="o">*</span>
 <span class="nf">th_func</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
@@ -401,6 +403,7 @@
 </span>  <span class="k">return</span> <span class="nb">nullptr</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="reentrant-thread-functions">Reentrant thread functions</h3>
@@ -420,7 +423,9 @@
 <p>A run-to-completion thread starts, performs its function, and terminates. Later on such a thread can be reused as many times as necessary. However, there is a certain overhead involved with creating and destroying threads, and, if the thread is not configured to use a static stack, the stack area must be allocated and deallocated each time, which not only increases the overhead, but also may contribute to fragmentation.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -453,11 +458,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Thread function.
@@ -494,6 +502,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <h3 id="infinite-loop-threads">Infinite loop threads</h3>
 
@@ -504,7 +513,9 @@
 <p>The infinite loop must call a µOS++ service that will cause the thread to pass control back to the scheduler, for example a service to wait for an event to occur, or sleep for a certain duration. It is important that each thread will pass control back to the scheduler, otherwise the thread would be a true busy wait loop and will simply hog the CPU for the time quanta it is allowed to run. This concept of <strong>suspending waiting threads</strong> is key to an efficient CPU use in any RTOS.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -536,11 +547,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="k">typedef</span> <span class="k">struct</span> <span class="n">msg_s</span>
@@ -568,6 +582,7 @@
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>The µOS++ service used in this example to pass control back to the scheduler is the queue receive function. The thread will have nothing to do until the message is received. Once a message is send to the queue, the thread will be resumed and the message consumed.</p>
@@ -606,7 +621,9 @@
 <p>In C++, the global threads are created and initialised by the global static constructors mechanism, so they are already linked in the READY list when <code class="highlighter-rouge">main()</code> is executed.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -661,11 +678,14 @@
 </span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -741,11 +761,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>In C++, if it is necessary to control the moment when global objects instances are created, it is possible to separately allocate the storage as global variables, then use the placement <code class="highlighter-rouge">new</code> operator to initialise them.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -798,11 +821,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>Threads objects instances can also be created on the local stack, for example on the main thread stack. Just be sure the stack is large enough to store all defined local objects.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -863,11 +889,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -943,6 +972,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>The application programmer can create an unlimited number of threads (limited only by the available RAM).</p>
 
@@ -959,7 +989,9 @@
 <p>When using the <code class="highlighter-rouge">os::estd::</code> namespace it is recommended to avoid <code class="highlighter-rouge">using namespace</code> definitions below the <code class="highlighter-rouge">os</code> namespace; instead, use the <code class="highlighter-rouge">rtos</code> and <code class="highlighter-rouge">estd</code> namespaces explicitly.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/est/thread&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -995,6 +1027,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>The expected standard implementation dynamically allocates the underlying <code class="highlighter-rouge">rtos::thread</code> object instance, which in turn allocates the stack; it is not possible to configure static stacks with ISO C++ threads, neither to set a name for the thread.</p>
 
@@ -1007,7 +1040,9 @@
 <p>By default, threads are created with <code class="highlighter-rouge">thread::priority::normal</code> which is a middle value priority, but it can be changed at any moment during the thread lifetime.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1025,11 +1060,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Thread function.
@@ -1044,11 +1082,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>If, for any reasons, the initial thread priority must be different, it can be set to any legal value during the thread creation call, using the <code class="highlighter-rouge">th_priority</code> thread attribute.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -1089,11 +1130,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 #include &lt;my-allocator.h&gt;
 </span>
@@ -1137,6 +1181,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <h2 id="other-thread-functions">Other thread functions</h2>
 
@@ -1149,20 +1194,26 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">name</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">os_thread_get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="settinggetting-the-thread-priority">Setting/getting the thread priority</h3>
@@ -1172,22 +1223,28 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
 <span class="kr">thread</span><span class="o">::</span><span class="n">priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">priority</span><span class="p">();</span>
 <span class="n">th</span><span class="p">.</span><span class="n">priority</span><span class="p">(</span><span class="kr">thread</span><span class="o">::</span><span class="n">priority</span><span class="o">::</span><span class="n">high</span><span class="p">);</span>
 </code></pre>
 </div>
+</div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_priority_t</span> <span class="n">prio</span> <span class="o">=</span> <span class="n">os_thread_get_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 <span class="n">os_thread_set_priority</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="n">os_thread_priority_high</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="getting-the-thread-stack">Getting the thread stack</h3>
@@ -1197,7 +1254,9 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
 <span class="kr">thread</span><span class="o">::</span><span class="n">stack</span><span class="o">&amp;</span> <span class="n">stack</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">stack</span><span class="p">();</span>
 <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">sz</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
@@ -1208,11 +1267,14 @@
 <span class="kt">bool</span> <span class="n">tm</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="n">check_top_magic</span><span class="p">();</span>
 </code></pre>
 </div>
+</div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_stack_t</span><span class="o">*</span> <span class="n">stack</span> <span class="o">=</span> <span class="n">os_thread_get_stack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
@@ -1224,6 +1286,7 @@
 <span class="n">bool</span> <span class="n">tm</span> <span class="o">=</span> <span class="n">os_thread_stack_check_top_magic</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
 </code></pre>
 </div>
+</div>
 
 <h3 id="getting-the-thread-user-storage">Getting the thread user storage</h3>
 
@@ -1232,20 +1295,26 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kr">thread</span> <span class="n">th</span> <span class="p">{</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span> <span class="p">};</span>
 
 <span class="n">os_thread_user_storage_t</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">th</span><span class="p">.</span><span class="n">user_storage</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_thread_t</span> <span class="n">th</span><span class="p">;</span>
 <span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">,</span> <span class="s">"th"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span> <span class="p">};</span>
 
 <span class="n">os_thread_user_storage_t</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">os_thread_get_user_storage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <p>The content of <code class="highlighter-rouge">os_thread_user_storage_t</code> must be defined in <code class="highlighter-rouge">os-app-config.h</code>, together with <code class="highlighter-rouge">OS_INCLUDE_RTOS_CUSTOM_THREAD_USER_STORAGE</code>, which enables the user storage feature.</p>
@@ -1261,7 +1330,9 @@
 <p>After detecting the <code class="highlighter-rouge">EINTR</code> condition, the interrupted thread must clear the flag, with <code class="highlighter-rouge">thread::interrupt(false)</code> (in C <code class="highlighter-rouge">os_thread_set_interrupt(false)</code>).</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1303,11 +1374,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Thread function.
@@ -1351,6 +1425,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <h2 id="destroying-threads">Destroying threads</h2>
 
@@ -1385,7 +1460,9 @@
 <p>For more specific functions, a reference to the current thread can be obtained with <code class="highlighter-rouge">this_thread::thread()</code> (in C with <code class="highlighter-rouge">os_this_thread()</code>);</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1403,11 +1480,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// A thread function.
@@ -1421,6 +1501,7 @@
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="thread-states">Thread states</h2>
@@ -1476,7 +1557,9 @@
 <p>µOS++ provides support for computing the thread stack available space, and a user defined monitoring mechanism can invoke it and detect low stack conditions.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1502,11 +1585,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// A thread function.
@@ -1528,6 +1614,7 @@
   <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>Note: For reentrancy reasons, the <code class="highlighter-rouge">trace::printf()</code> facility requires some stack space for its internal buffers, space that must be added to the effective space required by the application; for Cortex-M applications running in debugging mode, a stack of <strong>2000 bytes</strong> is a good starting point.</p>
@@ -1551,7 +1638,9 @@
 <p>The recommended location to set these defaults is at the beginning of the <code class="highlighter-rouge">os_main()</code> function:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1571,11 +1660,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="kt">int</span>
@@ -1592,13 +1684,16 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <h3 id="configuring-a-user-defined-stack">Configuring a user defined stack</h3>
 
 <p>Except when using the <code class="highlighter-rouge">thread_inclusive</code> template, by default threads are created with a dynamically allocated stack. This can be changed to a user defined stack using the <code class="highlighter-rouge">th_stack_address</code> and <code class="highlighter-rouge">th_stack_size_bytes</code> thread attributes.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="kr">thread</span><span class="o">::</span><span class="n">attributtes</span> <span class="n">attr</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kr">thread</span><span class="o">::</span><span class="n">attributtes</span> <span class="n">attr</span><span class="p">;</span>
 <span class="n">attr</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">th3_stack</span><span class="p">;</span>
 <span class="n">attr</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
 
@@ -1606,11 +1701,14 @@
 </span><span class="kr">thread</span> <span class="n">th3</span> <span class="p">{</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="n">attr</span> <span class="p">};</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_thread_attr_t</span> <span class="n">attr3</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_thread_attr_t</span> <span class="n">attr3</span><span class="p">;</span>
 <span class="n">os_thread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
 <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_address</span> <span class="o">=</span> <span class="n">th3_stack</span><span class="p">;</span>
 <span class="n">attr3</span><span class="p">.</span><span class="n">th_stack_size_bytes</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">th3_stack</span><span class="p">);</span>
@@ -1621,6 +1719,7 @@
 <span class="c1">// Create a thread; the stack is statically allocated.
 </span><span class="n">os_thread_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">th3</span><span class="p">,</span> <span class="s">"th3"</span><span class="p">,</span> <span class="n">th_func</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">attr3</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="detecting-stack-overflow">Detecting stack overflow</h3>
@@ -1677,7 +1776,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

@@ -16,5 +16,8 @@ var searchData=
   ['b600',['B600',['../termios_8h.html#a4a0fb8730fc62c93222bdcfead0685e7',1,'termios.h']]],
   ['b75',['B75',['../termios_8h.html#a6c7fd334abc19a56421e4cabaeb9fe0f',1,'termios.h']]],
   ['b9600',['B9600',['../termios_8h.html#ad0539916b8412eb7ddfb9ae02aff0853',1,'termios.h']]],
+  ['blkgetsize64',['BLKGETSIZE64',['../ioctl_8h.html#a6d9a209a482f679387ff2a705054b838',1,'ioctl.h']]],
+  ['blkpbszget',['BLKPBSZGET',['../ioctl_8h.html#a1d952a745ef1343355ab39b814bc2718',1,'ioctl.h']]],
+  ['blksszget',['BLKSSZGET',['../ioctl_8h.html#af1f7903426b2f1e37edfad13faa6816b',1,'ioctl.h']]],
   ['brkint',['BRKINT',['../termios_8h.html#a51f85744efb808bc7cdfc9bf689cb043',1,'termios.h']]]
 ];

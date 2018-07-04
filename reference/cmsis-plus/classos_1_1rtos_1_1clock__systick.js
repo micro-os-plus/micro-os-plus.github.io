@@ -4,7 +4,7 @@ var classos_1_1rtos_1_1clock__systick =
     [ "offset_t", "classos_1_1rtos_1_1clock__systick.html#gabb59996de739574c5f5255e7b3d29c1c", null ],
     [ "timestamp_t", "classos_1_1rtos_1_1clock__systick.html#ga4f6ee5cdd07c87db11f64d02e1c354d1", null ],
     [ "clock_systick", "classos_1_1rtos_1_1clock__systick.html#ad32ae07f1c2e9c3cee3077e50a9c8fdd", null ],
-    [ "~clock_systick", "classos_1_1rtos_1_1clock__systick.html#aa95dac0d7efcb29819791d9ffa364053", null ],
+    [ "~clock_systick", "classos_1_1rtos_1_1clock__systick.html#a3714904ecc435583aa5e9694616fc830", null ],
     [ "name", "classos_1_1rtos_1_1clock__systick.html#a36805a0eae21688c136129059482c3dd", null ],
     [ "now", "classos_1_1rtos_1_1clock__systick.html#a965f1afa68128bdfaeac93e216e2196f", null ],
     [ "sleep_for", "classos_1_1rtos_1_1clock__systick.html#af97cadfe288c3a56749ac70ae85c93bb", null ],

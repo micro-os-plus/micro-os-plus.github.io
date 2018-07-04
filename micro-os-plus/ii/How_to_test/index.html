@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>How to test</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="How to test">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/ii/How_to_test/">
+  <link rel="canonical" href="/micro-os-plus/ii/How_to_test/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">How to test - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Thu Sep  5 22:42:56 2013 UTC.</td>
+    <td id="last-modified">Page date Thu Sep  5 22:42:56 2013 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/ii/How_to_test.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -295,22 +295,28 @@
 <p>Once the prerequisites are satisfied, create a dedicated folder for the tests, clone the repositories and run the script. In addition to the µOS++ SE repository, a second repository, containing the <strong>XCDL build tools</strong>, is required.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>mkdir -p ~/work/uOS
+<div class="highlight">
+<pre class="highlight">
+<code>mkdir -p ~/work/uOS
 cd ~/work/uOS
 
 git clone http://git.code.sf.net/p/micro-os-plus/second micro-os-plus-se.git
 git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 </code></pre>
 </div>
+</div>
 
 <p>If you already have local clones of the repositories, you can only update them:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>cd ~/work/uOS
+<div class="highlight">
+<pre class="highlight">
+<code>cd ~/work/uOS
 
 (cd micro-os-plus-se.git; git pull)
 (cd xcdl-python.git; git pull)
 </code></pre>
+</div>
 </div>
 
 <h2 id="how-to-run-the-posix-tests">How to run the POSIX tests</h2>
@@ -335,9 +341,12 @@ git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 <p>To perform a quick test, using only the default compiler, run the following commands:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>rm -rf /tmp/uOS/build
+<div class="highlight">
+<pre class="highlight">
+<code>rm -rf /tmp/uOS/build
 /bin/bash micro-os-plus-se.git/scripts/runPosixTests.sh --dest /tmp/uOS/build
 </code></pre>
+</div>
 </div>
 
 <p>(the remove command is useful if you already performed the tests before, and want a clean run).</p>
@@ -345,8 +354,11 @@ git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 <p>If the quick tests pass, it is recommended to run the full version, that includes all known compilers, in both 32 and 64 bit versions.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/bin/bash micro-os-plus-se.git/scripts/runPosixTests.sh --dest /tmp/uOS/build --full
+<div class="highlight">
+<pre class="highlight">
+<code>/bin/bash micro-os-plus-se.git/scripts/runPosixTests.sh --dest /tmp/uOS/build --full
 </code></pre>
+</div>
 </div>
 
 <h3 id="one-or-some-tests-stress-tests">One or some tests (stress tests)</h3>
@@ -356,8 +368,11 @@ git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 <p>However it is quite easy to run only a single test, or a given list of tests, by providing the names to the script:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/bin/bash micro-os-plus-se.git/scripts/runPosixTests.sh --dest /tmp/uOS/build --full sleepstress mutexstress
+<div class="highlight">
+<pre class="highlight">
+<code>/bin/bash micro-os-plus-se.git/scripts/runPosixTests.sh --dest /tmp/uOS/build --full sleepstress mutexstress
 </code></pre>
+</div>
 </div>
 
 <h3 id="one-single-variant-of-a-test">One single variant of a test</h3>
@@ -365,10 +380,13 @@ git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 <p>For debugging purposes, here is the command to build a single configuration:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>/bin/bash xcdl-python.git/scripts/xcdlBuild.sh --repository=micro-os-plus-se.git/packages \
+<div class="highlight">
+<pre class="highlight">
+<code>/bin/bash xcdl-python.git/scripts/xcdlBuild.sh --repository=micro-os-plus-se.git/packages \
 --build_dir=/tmp/uOS/build --build_dir=/tmp/uOS/build \
 --build_config=linux_yields_x64_gcc_Debug -Wr,-x,junit.xml run
 </code></pre>
+</div>
 </div>
 
 <h3 id="sample-output">Sample output</h3>
@@ -382,7 +400,9 @@ git clone http://git.code.sf.net/p/xcdl/python xcdl-python.git
 <p>The output produced by the <em>Debug</em> version of a test looks like:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>XCDL metadata processed in 30ms.
+<div class="highlight">
+<pre class="highlight">
+<code>XCDL metadata processed in 30ms.
 
 XCDL build started, using toolchain 'OS X Apple Debug LLVM x86_64'...
 
@@ -413,11 +433,14 @@ Finished running target: trace.elf
 XCDL build completed in 37ms.
 </code></pre>
 </div>
+</div>
 
 <p>The output produced by the <em>Release</em> version of the same test is slightly less verbose:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>XCDL metadata processed in 24ms.
+<div class="highlight">
+<pre class="highlight">
+<code>XCDL metadata processed in 24ms.
 
 XCDL build started, using toolchain 'OS X Apple Release LLVM x86_64'...
 
@@ -435,6 +458,7 @@ Finished running target: trace.elf
 XCDL build completed in 31ms.
 </code></pre>
 </div>
+</div>
 
 <h3 id="the-xml-output">The XML output</h3>
 
@@ -449,13 +473,16 @@ XCDL build completed in 31ms.
 <p>The resulting file looks like the following:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code> &lt;testsuites&gt;&lt;testsuite&gt;
+<div class="highlight">
+<pre class="highlight">
+<code> &lt;testsuites&gt;&lt;testsuite&gt;
  &lt;testcase classname="os::infra::TestSuite" name="check true constant"/&gt;
  &lt;testcase classname="os::infra::TestSuite" name="check false constant"&gt;&lt;failure/&gt;&lt;/testcase&gt;
  &lt;testcase classname="os::infra::TestSuite" name="a passed test"/&gt;
  &lt;testcase classname="os::infra::TestSuite" name="a failed test"&gt;&lt;failure/&gt;&lt;/testcase&gt;
  &lt;/testsuite&gt;&lt;/testsuites&gt;
 </code></pre>
+</div>
 </div>
 
 <h1 id="how-to-build-the-cortex-m-tests">How to build the Cortex-M tests</h1>
@@ -467,13 +494,16 @@ XCDL build completed in 31ms.
 <p>The current version of the build script uses a sequence like this:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>PATH_ARM="/usr/local/gcc-arm-none-eabi-4_7/bin"
+<div class="highlight">
+<pre class="highlight">
+<code>PATH_ARM="/usr/local/gcc-arm-none-eabi-4_7/bin"
 
 if [ -x "$PATH_ARM/arm-none-eabi-g++" ]
 then
     (PATH=$PATH_ARM:$PATH; runTestCollection "linux_aep_gcc" )
 fi
 </code></pre>
+</div>
 </div>
 
 <p>Changing the script for a different toolchain is easy, just update the PATH_ARM variable to the new location and rerun.</p>
@@ -487,9 +517,12 @@ fi
 <p>If you properly installed the cross toolchains, you can run the script to build various tests:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>cd work/uOS
+<div class="highlight">
+<pre class="highlight">
+<code>cd work/uOS
 /bin/bash micro-os-plus-se.git/scripts/buildCross.sh --dest /tmp/uOS/buildCross
 </code></pre>
+</div>
 </div>
 
 <h1 id="how-to-build-the-avr8-tests">How to build the AVR8 tests</h1>
@@ -522,7 +555,7 @@ fi
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

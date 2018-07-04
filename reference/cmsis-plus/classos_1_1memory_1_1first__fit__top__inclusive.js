@@ -18,6 +18,7 @@ var classos_1_1memory_1_1first__fit__top__inclusive =
     [ "do_reset", "classos_1_1memory_1_1first__fit__top__inclusive.html#a25dd0778bcfc631b5c98ace0e97ad31d", null ],
     [ "free_bytes", "classos_1_1memory_1_1first__fit__top__inclusive.html#af317cfeb595643a0e27901bc9a983f14", null ],
     [ "free_chunks", "classos_1_1memory_1_1first__fit__top__inclusive.html#ae6c44b3b065fd27a202d1a3dfa2f285f", null ],
+    [ "internal_align_", "classos_1_1memory_1_1first__fit__top__inclusive.html#a3515a7bdfff048822d1332bcd8d53af5", null ],
     [ "internal_construct_", "classos_1_1memory_1_1first__fit__top__inclusive.html#af588491392cb6a86f66b780e0eaf36a0", null ],
     [ "internal_decrease_allocated_statistics", "classos_1_1memory_1_1first__fit__top__inclusive.html#a8f9c4cd4381e5602c78e26180a173c78", null ],
     [ "internal_increase_allocated_statistics", "classos_1_1memory_1_1first__fit__top__inclusive.html#a45757206865ba37df96f4d445bd874a0", null ],

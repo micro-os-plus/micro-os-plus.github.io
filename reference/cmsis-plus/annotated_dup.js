@@ -1,11 +1,13 @@
 var annotated_dup =
 [
     [ "os", "namespaceos.html", "namespaceos" ],
+    [ "std", "namespacestd.html", "namespacestd" ],
     [ "attributes_binary", "classattributes__binary.html", null ],
     [ "attributes_periodic", "classattributes__periodic.html", null ],
     [ "DIR", "structDIR.html", null ],
     [ "dirent", "structdirent.html", "structdirent" ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],
+    [ "hash", "structhash.html", null ],
     [ "iovec", "structiovec.html", "structiovec" ],
     [ "os_clock_node_s", "structos__clock__node__s.html", "structos__clock__node__s" ],
     [ "os_clock_s", "structos__clock__s.html", null ],
@@ -44,5 +46,7 @@ var annotated_dup =
     [ "os_timer_s", "structos__timer__s.html", null ],
     [ "osEvent", "structosEvent.html", "structosEvent" ],
     [ "sockaddr", "structsockaddr.html", "structsockaddr" ],
-    [ "termios", "structtermios.html", "structtermios" ]
+    [ "statvfs", "structstatvfs.html", "structstatvfs" ],
+    [ "termios", "structtermios.html", "structtermios" ],
+    [ "thread", "classthread.html", "classthread" ]
 ];

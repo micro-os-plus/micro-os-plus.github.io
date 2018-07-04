@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('classos_1_1posix_1_1file.html','');});
   <div class="summary">
 <a href="classos_1_1posix_1_1file-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">os::posix::file Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__cmsis-plus-posix-io.html">µOS++ POSIX I/O C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-posix-io-base.html">Basic classes</a></div></div>  </div>
+<div class="title">os::posix::file Class Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-posix-io.html">µOS++ POSIX I/O C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-posix-io-base.html">Basic classes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -137,6 +137,8 @@ $(document).ready(function(){initNavTree('classos_1_1posix_1_1file.html','');});
 <p><code>#include &lt;<a class="el" href="file_8h_source.html">cmsis-plus/posix-io/file.h</a>&gt;</code></p>
 
 <p>Inherits <a class="el" href="classos_1_1posix_1_1io.html">os::posix::io</a>.</p>
+
+<p>Inherited by <a class="el" href="classos_1_1posix_1_1file__implementable.html">os::posix::file_implementable&lt; T &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -146,11 +148,15 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9">not_set</a> = 1 &lt;&lt; 0, 
 <br />
-&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea30e4bba7a021a33e743b098abde12369">device</a> = 1 &lt;&lt; 1, 
+&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9">char_device</a> = 1 &lt;&lt; 1, 
 <br />
-&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab">file</a> = 1 &lt;&lt; 2, 
+&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd">block_device</a> = 1 &lt;&lt; 2, 
 <br />
-&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a">socket</a> = 1 &lt;&lt; 3
+&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5">tty</a> = 1 &lt;&lt; 3, 
+<br />
+&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab">file</a> = 1 &lt;&lt; 4, 
+<br />
+&#160;&#160;<a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a">socket</a> = 1 &lt;&lt; 5
 <br />
  }</td></tr>
 <tr class="separator:af15a8dae890b73597de4807f15e38ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,85 +166,52 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:a640e549a7f4af7746b8534f2beba3927"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a640e549a7f4af7746b8534f2beba3927">file</a> ()</td></tr>
-<tr class="separator:a640e549a7f4af7746b8534f2beba3927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac985b3306388d0d8f202d86a0e39c42b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#ac985b3306388d0d8f202d86a0e39c42b">~file</a> ()</td></tr>
-<tr class="separator:ac985b3306388d0d8f202d86a0e39c42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad417731f6b6f191bcee98b0ae98bae52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#ad417731f6b6f191bcee98b0ae98bae52">file</a> (<a class="el" href="classos_1_1posix_1_1file__impl.html">file_impl</a> &amp;<a class="el" href="classos_1_1posix_1_1file.html#a5219b80b7778865c12276400841e2bab">impl</a>)</td></tr>
+<tr class="separator:ad417731f6b6f191bcee98b0ae98bae52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8cfd8c92445aefcd8811c183de159c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a7d8cfd8c92445aefcd8811c183de159c">~file</a> () override</td></tr>
+<tr class="separator:a7d8cfd8c92445aefcd8811c183de159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:a8637a5c0c6a31e3f6fe14d6524eab86c"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a8637a5c0c6a31e3f6fe14d6524eab86c">lseek</a> (off_t offset, int whence)</td></tr>
-<tr class="separator:a8637a5c0c6a31e3f6fe14d6524eab86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d36ea8bd53f4c6d80835cc769fb4656"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a6d36ea8bd53f4c6d80835cc769fb4656">ftruncate</a> (off_t length)</td></tr>
+<tr class="memitem:ad86314bd66d786bc8d20f93f633661d6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#ad86314bd66d786bc8d20f93f633661d6">close</a> (void) override</td></tr>
+<tr class="separator:ad86314bd66d786bc8d20f93f633661d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d36ea8bd53f4c6d80835cc769fb4656"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a6d36ea8bd53f4c6d80835cc769fb4656">ftruncate</a> (off_t length)</td></tr>
 <tr class="separator:a6d36ea8bd53f4c6d80835cc769fb4656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad38f6b20e95a7744fc5d021924d13e33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#ad38f6b20e95a7744fc5d021924d13e33">fsync</a> (void)</td></tr>
+<tr class="memitem:ad38f6b20e95a7744fc5d021924d13e33"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#ad38f6b20e95a7744fc5d021924d13e33">fsync</a> (void)</td></tr>
 <tr class="separator:ad38f6b20e95a7744fc5d021924d13e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b23666e3f39617bcace3f554c167a73"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a4b23666e3f39617bcace3f554c167a73">file_system</a> (void) const </td></tr>
-<tr class="separator:a4b23666e3f39617bcace3f554c167a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d57fcdab43739453b0031f340fa953"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a68d57fcdab43739453b0031f340fa953">fstatvfs</a> (struct <a class="el" href="structstatvfs.html">statvfs</a> *buf)</td></tr>
+<tr class="separator:a68d57fcdab43739453b0031f340fa953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f993aa9ecfe2a5f2c037066f556a1c"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a78f993aa9ecfe2a5f2c037066f556a1c">file_system</a> (void)</td></tr>
+<tr class="separator:a78f993aa9ecfe2a5f2c037066f556a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5219b80b7778865c12276400841e2bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1posix_1_1file__impl.html">file_impl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a5219b80b7778865c12276400841e2bab">impl</a> (void) const </td></tr>
+<tr class="separator:a5219b80b7778865c12276400841e2bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Public Member Functions</div></td></tr>
-<tr class="memitem:aa1cc0a41339069ecac53c5ae60e69635"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aa1cc0a41339069ecac53c5ae60e69635">close</a> (void)</td></tr>
-<tr class="separator:aa1cc0a41339069ecac53c5ae60e69635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acad20c85924c17edf5c2a7e455c093c3"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#acad20c85924c17edf5c2a7e455c093c3">read</a> (void *buf, std::size_t nbyte)</td></tr>
+<tr class="memitem:acad20c85924c17edf5c2a7e455c093c3"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#acad20c85924c17edf5c2a7e455c093c3">read</a> (void *buf, std::size_t nbyte)</td></tr>
 <tr class="separator:acad20c85924c17edf5c2a7e455c093c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b2c3aa978c670d60b0643f1a41026e0"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a9b2c3aa978c670d60b0643f1a41026e0">write</a> (const void *buf, std::size_t nbyte)</td></tr>
+<tr class="memitem:a9b2c3aa978c670d60b0643f1a41026e0"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a9b2c3aa978c670d60b0643f1a41026e0">write</a> (const void *buf, std::size_t nbyte)</td></tr>
 <tr class="separator:a9b2c3aa978c670d60b0643f1a41026e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af053373c6716c37bf7589bb3d6388fdd"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#af053373c6716c37bf7589bb3d6388fdd">writev</a> (const struct <a class="el" href="structiovec.html">iovec</a> *iov, int iovcnt)</td></tr>
+<tr class="memitem:af053373c6716c37bf7589bb3d6388fdd"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#af053373c6716c37bf7589bb3d6388fdd">writev</a> (const struct <a class="el" href="structiovec.html">iovec</a> *iov, int iovcnt)</td></tr>
 <tr class="separator:af053373c6716c37bf7589bb3d6388fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02f5bee86b8acfa44cee93c5710167a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aa02f5bee86b8acfa44cee93c5710167a">fcntl</a> (int cmd,...)</td></tr>
 <tr class="separator:aa02f5bee86b8acfa44cee93c5710167a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af84ebeb02c028db886a636eb55d14540"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#af84ebeb02c028db886a636eb55d14540">vfcntl</a> (int cmd, std::va_list args)</td></tr>
+<tr class="memitem:af84ebeb02c028db886a636eb55d14540"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#af84ebeb02c028db886a636eb55d14540">vfcntl</a> (int cmd, std::va_list args)</td></tr>
 <tr class="separator:af84ebeb02c028db886a636eb55d14540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12b89343ee023d5f4b3298f6cf134436"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a12b89343ee023d5f4b3298f6cf134436">isatty</a> (void)</td></tr>
 <tr class="separator:a12b89343ee023d5f4b3298f6cf134436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941bd15a7fd7315689e3739331e1ef22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a941bd15a7fd7315689e3739331e1ef22">fstat</a> (struct <a class="el" href="group__cmsis-plus-posix-io-func.html#gaa84d2210dbe8c15b89a7bd2fbe74623c">stat</a> *buf)</td></tr>
+<tr class="memitem:a941bd15a7fd7315689e3739331e1ef22"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a941bd15a7fd7315689e3739331e1ef22">fstat</a> (struct <a class="el" href="group__cmsis-plus-posix-io-func.html#gaa84d2210dbe8c15b89a7bd2fbe74623c">stat</a> *buf)</td></tr>
 <tr class="separator:a941bd15a7fd7315689e3739331e1ef22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad28fccdc1b9c477ee06a71944b17bd78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38ede">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#ad28fccdc1b9c477ee06a71944b17bd78">get_type</a> (void) const </td></tr>
-<tr class="separator:ad28fccdc1b9c477ee06a71944b17bd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c7318a45463b28d57681558b6d8f99"><td class="memItemLeft" align="right" valign="top">virtual off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a53c7318a45463b28d57681558b6d8f99">lseek</a> (off_t offset, int whence)</td></tr>
+<tr class="separator:a53c7318a45463b28d57681558b6d8f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba261f2f06b36a884cf42e39135abf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d">type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aeba261f2f06b36a884cf42e39135abf2">get_type</a> (void) const </td></tr>
+<tr class="separator:aeba261f2f06b36a884cf42e39135abf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35401cd570eca88467fb768c35eb478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1posix.html#a6b03fbc1f94583e9a5e43c752d688e98">file_descriptor_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#ad35401cd570eca88467fb768c35eb478">file_descriptor</a> (void) const </td></tr>
 <tr class="separator:ad35401cd570eca88467fb768c35eb478"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Public Static Member Functions</div></td></tr>
-<tr class="memitem:a40fb5543367cce762955c5c65778fa80"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classos_1_1posix_1_1file.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a40fb5543367cce762955c5c65778fa80">open</a> (const char *path, int oflag,...)</td></tr>
-<tr class="separator:a40fb5543367cce762955c5c65778fa80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbe64ae1d8bad3ebda338776e676717a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classos_1_1posix_1_1file.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#afbe64ae1d8bad3ebda338776e676717a">vopen</a> (const char *path, int oflag, std::va_list args)</td></tr>
-<tr class="separator:afbe64ae1d8bad3ebda338776e676717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bb1867c9f075af3331b1bc6d4f4fb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a68bb1867c9f075af3331b1bc6d4f4fb9">is_opened</a> (void)</td></tr>
+<tr class="separator:a68bb1867c9f075af3331b1bc6d4f4fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
-<tr class="memitem:acf78e9b8d93e52cbed824c791d322967"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#acf78e9b8d93e52cbed824c791d322967">do_vopen</a> (const char *path, int oflag, std::va_list args)=0</td></tr>
-<tr class="separator:acf78e9b8d93e52cbed824c791d322967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae22f952961fdc6325948bd180cff0ec"><td class="memItemLeft" align="right" valign="top">virtual off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#aae22f952961fdc6325948bd180cff0ec">do_lseek</a> (off_t offset, int whence)</td></tr>
-<tr class="separator:aae22f952961fdc6325948bd180cff0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37cf85336b5bae43ca6c276f1b9a44fa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a37cf85336b5bae43ca6c276f1b9a44fa">do_ftruncate</a> (off_t length)</td></tr>
-<tr class="separator:a37cf85336b5bae43ca6c276f1b9a44fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e5aa14fe3e1fead729fb24c5c413f2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a31e5aa14fe3e1fead729fb24c5c413f2">do_fsync</a> (void)</td></tr>
-<tr class="separator:a31e5aa14fe3e1fead729fb24c5c413f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34a94b3463b070e3d5e784231c7974e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a34a94b3463b070e3d5e784231c7974e6">do_release</a> (void) override</td></tr>
-<tr class="separator:a34a94b3463b070e3d5e784231c7974e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a942b71735fe7367767eef1335e9af805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file.html#a942b71735fe7367767eef1335e9af805">file_system</a> (class <a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> *<a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a>)</td></tr>
-<tr class="separator:a942b71735fe7367767eef1335e9af805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Private Member Functions</div></td></tr>
 <tr class="memitem:a98d3b9609fdc70cd3b17a9b2345a5c30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a98d3b9609fdc70cd3b17a9b2345a5c30">file_descriptor</a> (<a class="el" href="namespaceos_1_1posix.html#a6b03fbc1f94583e9a5e43c752d688e98">file_descriptor_t</a> fildes)</td></tr>
 <tr class="separator:a98d3b9609fdc70cd3b17a9b2345a5c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf7e5dcd87125eb11ed179344500e60c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aaf7e5dcd87125eb11ed179344500e60c">do_close</a> (void)</td></tr>
-<tr class="separator:aaf7e5dcd87125eb11ed179344500e60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1ffeae5fd2d0e1bfa33530833eed71"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a5c1ffeae5fd2d0e1bfa33530833eed71">do_read</a> (void *buf, std::size_t nbyte)</td></tr>
-<tr class="separator:a5c1ffeae5fd2d0e1bfa33530833eed71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e8c9c097782aa4bdb92daac6e7be39"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a07e8c9c097782aa4bdb92daac6e7be39">do_write</a> (const void *buf, std::size_t nbyte)</td></tr>
-<tr class="separator:a07e8c9c097782aa4bdb92daac6e7be39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5224f5da3e56ebf3ead2a5cd34bb36c"><td class="memItemLeft" align="right" valign="top">virtual ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aa5224f5da3e56ebf3ead2a5cd34bb36c">do_writev</a> (const struct <a class="el" href="structiovec.html">iovec</a> *iov, int iovcnt)</td></tr>
-<tr class="separator:aa5224f5da3e56ebf3ead2a5cd34bb36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10eb548dd7387acdfb63ac016836d173"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a10eb548dd7387acdfb63ac016836d173">do_vfcntl</a> (int cmd, std::va_list args)</td></tr>
-<tr class="separator:a10eb548dd7387acdfb63ac016836d173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce3151e46c1a37952ff3f9835d2a08e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a8ce3151e46c1a37952ff3f9835d2a08e">do_isatty</a> (void)</td></tr>
-<tr class="separator:a8ce3151e46c1a37952ff3f9835d2a08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220d39855751e202263812ee13330fc9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a220d39855751e202263812ee13330fc9">do_fstat</a> (struct <a class="el" href="group__cmsis-plus-posix-io-func.html#gaa84d2210dbe8c15b89a7bd2fbe74623c">stat</a> *buf)</td></tr>
-<tr class="separator:a220d39855751e202263812ee13330fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86964661db8e17cdaf99401296c822a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#af86964661db8e17cdaf99401296c822a">do_is_opened</a> (void)</td></tr>
-<tr class="separator:af86964661db8e17cdaf99401296c822a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ceef2cd4cd07e8ebb8ffd5f124bf0cf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a0ceef2cd4cd07e8ebb8ffd5f124bf0cf">do_is_connected</a> (void)</td></tr>
-<tr class="separator:a0ceef2cd4cd07e8ebb8ffd5f124bf0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac56327ce05ea29b9d423edc45a7cece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#aac56327ce05ea29b9d423edc45a7cece">clear_file_descriptor</a> (void)</td></tr>
 <tr class="separator:aac56327ce05ea29b9d423edc45a7cece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92490027421a039ea56d1ad2f5cff989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1posix_1_1io.html">io</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1io.html#a92490027421a039ea56d1ad2f5cff989">alloc_file_descriptor</a> (void)</td></tr>
@@ -247,7 +220,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File class. </p>
 
-<p>Definition at line <a class="el" href="file_8h_source.html#l00056">56</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p>Definition at line <a class="el" href="file_8h_source.html#l00064">64</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
 </div><h2 class="groupheader">Types</h2>
 <a class="anchor" id="a2784e8adb38757dc5ab882c7cf75b35d"></a>
 <div class="memitem">
@@ -267,7 +240,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00104">104</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00118">118</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +267,11 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9"></a>not_set&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edea30e4bba7a021a33e743b098abde12369"></a>device&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9"></a>char_device&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd"></a>block_device&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5"></a>tty&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab"></a>file&#160;</td><td class="fielddoc">
 </td></tr>
@@ -302,31 +279,35 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00105">105</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00119">119</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a640e549a7f4af7746b8534f2beba3927"></a>
+<a class="anchor" id="ad417731f6b6f191bcee98b0ae98bae52"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">os::posix::file::file </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classos_1_1posix_1_1file__impl.html">file_impl</a> &amp;&#160;</td>
+          <td class="paramname"><em>impl</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00056">56</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00043">43</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac985b3306388d0d8f202d86a0e39c42b"></a>
+<a class="anchor" id="a7d8cfd8c92445aefcd8811c183de159c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">os::posix::file::~file </td>
@@ -335,9 +316,14 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00062">62</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00052">52</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +350,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00141">141</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00195">195</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -390,11 +376,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00307">307</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00419">419</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa1cc0a41339069ecac53c5ae60e69635"></a>
+<a class="anchor" id="ad86314bd66d786bc8d20f93f633661d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -402,7 +388,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int os::posix::io::close </td>
+          <td class="memname">int os::posix::file::close </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -411,455 +397,16 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00173">173</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classos_1_1posix_1_1io.html#aa1cc0a41339069ecac53c5ae60e69635">os::posix::io</a>.</p>
 
-</div>
-</div>
-<a class="anchor" id="aaf7e5dcd87125eb11ed179344500e60c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::io::do_close </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1file__lockable.html#a8d5a820e37417195594b84ddce566817">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a35981bcf36613f0f8afbdb4e1d646880">os::posix::device_serial_buffered&lt; CS &gt;</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00386">386</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a220d39855751e202263812ee13330fc9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::io::do_fstat </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="group__cmsis-plus-posix-io-func.html#gaa84d2210dbe8c15b89a7bd2fbe74623c">stat</a> *&#160;</td>
-          <td class="paramname"><em>buf</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00445">445</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a31e5aa14fe3e1fead729fb24c5c413f2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::file::do_fsync </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00142">142</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a37cf85336b5bae43ca6c276f1b9a44fa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::file::do_ftruncate </td>
-          <td>(</td>
-          <td class="paramtype">off_t&#160;</td>
-          <td class="paramname"><em>length</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00133">133</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0ceef2cd4cd07e8ebb8ffd5f124bf0cf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool os::posix::io::do_is_connected </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a3e994b5c27426a28367e114b020e8e4f">os::posix::device_serial_buffered&lt; CS &gt;</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00208">208</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af86964661db8e17cdaf99401296c822a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool os::posix::io::do_is_opened </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aa4e15718e798d41c58752846ef0121be">os::posix::device_serial_buffered&lt; CS &gt;</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00202">202</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8ce3151e46c1a37952ff3f9835d2a08e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::io::do_isatty </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__char.html#abc8a31d65b988a2d499e8393daf2b239">os::posix::device_char</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00438">438</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aae22f952961fdc6325948bd180cff0ec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">off_t os::posix::file::do_lseek </td>
-          <td>(</td>
-          <td class="paramtype">off_t&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>whence</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00126">126</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5c1ffeae5fd2d0e1bfa33530833eed71"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ssize_t os::posix::io::do_read </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>nbyte</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#a2045b195a116e708d4a4803beafdf606">os::posix::device_serial_buffered&lt; CS &gt;</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00395">395</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a34a94b3463b070e3d5e784231c7974e6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::posix::file::do_release </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classos_1_1posix_1_1io.html#a69bb7cad378627cd5d7ee29956584969">os::posix::io</a>.</p>
-
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00070">70</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a10eb548dd7387acdfb63ac016836d173"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int os::posix::io::do_vfcntl </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cmd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::va_list&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00431">431</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acf78e9b8d93e52cbed824c791d322967"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int os::posix::file::do_vopen </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>oflag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::va_list&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>return 0 if success or -1 &amp; errno </p>
-
-</div>
-</div>
-<a class="anchor" id="a07e8c9c097782aa4bdb92daac6e7be39"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ssize_t os::posix::io::do_write </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>nbyte</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1device__serial__buffered.html#aeb903434848b85d088b51d5ecca22f23">os::posix::device_serial_buffered&lt; CS &gt;</a>.</p>
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00402">402</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa5224f5da3e56ebf3ead2a5cd34bb36c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ssize_t os::posix::io::do_writev </td>
-          <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structiovec.html">iovec</a> *&#160;</td>
-          <td class="paramname"><em>iov</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iovcnt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00413">413</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00062">62</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
@@ -895,7 +442,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00311">311</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00369">369</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -921,7 +468,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00313">313</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00425">425</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
@@ -947,11 +494,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00301">301</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00413">413</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4b23666e3f39617bcace3f554c167a73"></a>
+<a class="anchor" id="a78f993aa9ecfe2a5f2c037066f556a1c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -959,11 +506,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> * os::posix::file::file_system </td>
+          <td class="memname"><a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> &amp; os::posix::file::file_system </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -973,33 +520,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8h_source.html#l00224">224</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a942b71735fe7367767eef1335e9af805"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os::posix::file::file_system </td>
-          <td>(</td>
-          <td class="paramtype">class <a class="el" href="classos_1_1posix_1_1file__system.html">file_system</a> *&#160;</td>
-          <td class="paramname"><em>file_system</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8h_source.html#l00218">218</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p>Definition at line <a class="el" href="file_8h_source.html#l00449">449</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
 
 </div>
 </div>
@@ -1020,18 +541,49 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00354">354</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1file__lockable.html#a54087b5805c1200ceb1095312659ad43">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00416">416</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68d57fcdab43739453b0031f340fa953"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os::posix::file::fstatvfs </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structstatvfs.html">statvfs</a> *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00112">112</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="ad38f6b20e95a7744fc5d021924d13e33"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int os::posix::file::fsync </td>
@@ -1041,15 +593,25 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00112">112</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1file__lockable.html#af0f6da4631e01632ef5eb88ff6953159">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00099">99</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a6d36ea8bd53f4c6d80835cc769fb4656"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int os::posix::file::ftruncate </td>
@@ -1059,13 +621,20 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00097">97</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1file__lockable.html#acffc8f48a4ac80b1b205ce0f48bba6bc">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="file_8cpp_source.html#l00080">80</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad28fccdc1b9c477ee06a71944b17bd78"></a>
+<a class="anchor" id="aeba261f2f06b36a884cf42e39135abf2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1073,7 +642,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38ede">io::type</a> os::posix::io::get_type </td>
+          <td class="memname"><a class="el" href="classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d">io::type_t</a> os::posix::io::get_type </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1087,7 +656,59 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8h_source.html#l00295">295</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8h_source.html#l00407">407</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5219b80b7778865c12276400841e2bab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classos_1_1posix_1_1file__impl.html">file_impl</a> &amp; os::posix::file::impl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="file_8h_source.html#l00455">455</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68bb1867c9f075af3331b1bc6d4f4fb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool os::posix::io::is_opened </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="io_8h_source.html#l00431">431</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
 
 </div>
 </div>
@@ -1113,16 +734,19 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00344">344</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00406">406</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8637a5c0c6a31e3f6fe14d6524eab86c"></a>
+<a class="anchor" id="a53c7318a45463b28d57681558b6d8f99"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">off_t os::posix::file::lseek </td>
+          <td class="memname">off_t os::posix::io::lseek </td>
           <td>(</td>
           <td class="paramtype">off_t&#160;</td>
           <td class="paramname"><em>offset</em>, </td>
@@ -1139,51 +763,16 @@ Protected Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00088">88</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a40fb5543367cce762955c5c65778fa80"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classos_1_1posix_1_1file.html">file</a> * os::posix::file::open </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>oflag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="file_8cpp_source.html#l00043">43</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#a8159a668244650e272ee3e7ad9b43502">os::posix::block_device_lockable&lt; T, L &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html#a41ba4c175d6ff0da21faa1a2ec6a769b">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00447">447</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -1214,12 +803,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00218">218</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#a44cc3a538b82f77c6083018a4c7143b7">os::posix::block_device_lockable&lt; T, L &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html#a02b474df4d05b9f9c679e0095109f707">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00223">223</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -1250,54 +841,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00323">323</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#a3b603ad37c6a32a103f358957f579169">os::posix::block_device_lockable&lt; T, L &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html#a7bcfdbe5ca3ca27a9079b9048355f89a">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
 
-</div>
-</div>
-<a class="anchor" id="afbe64ae1d8bad3ebda338776e676717a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classos_1_1posix_1_1file.html">file</a> * os::posix::file::vopen </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>oflag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::va_list&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="file_8h_source.html#l00212">212</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00381">381</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -1328,12 +879,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00246">246</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#ae0a1fc0c63746887e1d4fc9221b096d7">os::posix::block_device_lockable&lt; T, L &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html#a75a3ab5c52917d45699819371fdee89c">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00274">274</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>
@@ -1364,12 +917,14 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="io_8cpp_source.html#l00278">278</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#a3c5a397ae247cdb9d46e7b3f2689036f">os::posix::block_device_lockable&lt; T, L &gt;</a>, and <a class="el" href="classos_1_1posix_1_1file__lockable.html#afdc093e955964faba233f21a4d3a4d33">os::posix::file_lockable&lt; T, L &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="io_8cpp_source.html#l00327">327</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
 
 </div>
 </div>

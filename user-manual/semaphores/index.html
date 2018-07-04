@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Semaphores</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Semaphores">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/user-manual/semaphores/">
+  <link rel="canonical" href="/user-manual/semaphores/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -411,7 +411,9 @@
 <p>In C++, the global semaphores are created and initialised by the global static constructors mechanism.</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -451,11 +453,14 @@
 </span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Global static storage for the semaphore objects instances.
@@ -497,11 +502,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>In C++, if it is necessary to control the moment when global objects instances are created, it is possible to separately allocate the storage as global variables, then use the placement <code class="highlighter-rouge">new</code> operator to initialise them.</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -542,11 +550,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>Semaphore objects instances can also be created on the local stack, for example on the main thread stack. Just be sure the stack is large enough to store all defined local objects.</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -584,11 +595,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="kt">int</span>
@@ -636,11 +650,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>For a total control over the semaphore creation (for example to set a custom clock), the semaphore attribute mechanism can be used.</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -683,11 +700,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="kt">int</span>
@@ -744,6 +764,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>The application programmer can create an unlimited number of semaphores (limited only by the available RAM).</p>
 
@@ -754,7 +775,9 @@
 <p>The name <strong>post</strong> comes from POSIX; other names used are <strong>P</strong>, <strong>signal</strong>, <strong>release</strong>.</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="n">result_t</span> <span class="n">res</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">result_t</span> <span class="n">res</span><span class="p">;</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">post</span><span class="p">();</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">result</span><span class="o">::</span><span class="n">ok</span><span class="p">)</span>
   <span class="p">{</span>
@@ -766,11 +789,14 @@
 </span>  <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_result_t</span> <span class="n">res</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_result_t</span> <span class="n">res</span><span class="p">;</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">os_semaphore_post</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">os_ok</span><span class="p">)</span>
   <span class="p">{</span>
@@ -781,6 +807,7 @@
     <span class="c1">// The maximum count value was exceeded.
 </span>  <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>When the semaphore is correctly posted, the value is increased and the oldest high priority thread waiting (if any) is added to the READY list, allowing it to acquire the semaphore.</p>
@@ -802,7 +829,9 @@
 <p>Along with the semaphore’s value, µOS++ also keeps track of the threads waiting for the semaphore’s availability (a double linked list, ordered by thread priorities).</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="n">result_t</span> <span class="n">res</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">result_t</span> <span class="n">res</span><span class="p">;</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">timed_wait</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span> <span class="c1">// The timeout is 100 clock ticks.
 </span><span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">result</span><span class="o">::</span><span class="n">ok</span><span class="p">)</span>
   <span class="p">{</span>
@@ -818,11 +847,14 @@
 </span>  <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_result_t</span> <span class="n">res</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_result_t</span> <span class="n">res</span><span class="p">;</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">os_semaphore_timed_wait</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="c1">// The timeout is 100 clock ticks.
 </span><span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="n">os_ok</span><span class="p">)</span>
   <span class="p">{</span>
@@ -837,6 +869,7 @@
     <span class="c1">// The wait ended due to an explicit interruption request.
 </span>  <span class="p">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>The name <strong>wait</strong> comes from POSIX; other names used are <strong>V</strong>, <strong>acquire</strong>, <strong>pend</strong>.</p>
@@ -863,20 +896,26 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="n">semaphore_binary</span> <span class="n">sem</span> <span class="p">{</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">semaphore_binary</span> <span class="n">sem</span> <span class="p">{</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">name</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_semaphore_t</span> <span class="n">sem</span><span class="p">;</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_semaphore_t</span> <span class="n">sem</span><span class="p">;</span>
 <span class="n">os_semaphore_construct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">,</span> <span class="s">"sem"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
 
 <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span> <span class="o">=</span> <span class="n">os_semaphore_get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="getting-the-semaphore-value">Getting the semaphore value</h3>
@@ -886,15 +925,21 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">value</span><span class="p">();</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">value</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="getting-the-semaphore-maximum-value">Getting the semaphore maximum value</h3>
@@ -904,15 +949,21 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">max_value</span><span class="p">();</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">max_value</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_max_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_max_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="getting-the-semaphore-initial-value">Getting the semaphore initial value</h3>
@@ -922,15 +973,21 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">initial_value</span><span class="p">();</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">sem</span><span class="p">.</span><span class="n">initial_value</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_initial_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kt">size_t</span> <span class="n">value</span> <span class="o">=</span> <span class="n">os_semaphore_get_initial_value</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="reseting-the-semaphore">Reseting the semaphore</h3>
@@ -940,15 +997,21 @@
 <p>The C++ API is:</p>
 
 <div class="language-c++ highlighter-rouge">
-<pre class="highlight"><code><span class="n">sem</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">sem</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span>
 </code></pre>
+</div>
 </div>
 
 <p>The C API is:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="n">os_semaphore_reset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">os_semaphore_reset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sem</span><span class="p">);</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="destroying-semaphores">Destroying semaphores</h2>
@@ -968,7 +1031,9 @@
 <p>The solution is to add a mechanism that allows one thread to gain exclusive access to the device and prevent other threads to write characters before the message is fully transferred. Such a critical section may use a binary semaphore, initialised to 1, and brace writing messages with <code class="highlighter-rouge">wait()</code> and <code class="highlighter-rouge">post()</code> calls.</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -996,11 +1061,14 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Global static global storage for the semaphore object instance.
@@ -1040,6 +1108,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 <p>**
 It is mandatory for the binary semaphore to be initialised with 1 (i.e. device available) for the first <code class="highlighter-rouge">wait()</code> to not block.</p>
 
@@ -1062,7 +1131,9 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 <p>An example code in C++ is:</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1104,11 +1175,14 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Global static global storage for the semaphore object instance.
@@ -1151,6 +1225,7 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>This example is for demonstrative purposes only. A real-world example would probably need to use a circular buffer to store multiple bytes, to avoid loosing data when multiple interrupts occur before the <code class="highlighter-rouge">read_byte()</code> is called.</p>
 
@@ -1171,7 +1246,9 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 <p>A typical scenario is to have a functional program, like the one protecting the <code class="highlighter-rouge">write_message()</code> function and try to “improve” it to protect a series of messages:</p>
 
 <div class="language-cpp highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.cpp
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.cpp
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os.h&gt;
 </span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">os</span><span class="p">;</span>
@@ -1213,11 +1290,14 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 <span class="p">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A similar example, but written in C:</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="c1">/// @file app-main.c
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">/// @file app-main.c
 </span><span class="cp">#include &lt;cmsis-plus/rtos/os-c-api.h&gt;
 </span>
 <span class="c1">// Global static global storage for the semaphore object instance.
@@ -1270,6 +1350,7 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
 
 </code></pre>
 </div>
+</div>
 
 <p>Well… bad idea! Since the semaphore was created as binary, the first <code class="highlighter-rouge">wait()</code> in <code class="highlighter-rouge">write_many_messages()</code> will lock it, and the inner <code class="highlighter-rouge">wait()</code> in <code class="highlighter-rouge">write_message()</code> will find it locked and block forever.</p>
 
@@ -1315,7 +1396,7 @@ It is mandatory for the binary semaphore to be initialised with 1 (i.e. device a
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

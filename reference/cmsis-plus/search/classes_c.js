@@ -2,7 +2,6 @@ var searchData=
 [
   ['object_5fnamed',['object_named',['../classos_1_1rtos_1_1internal_1_1object__named.html',1,'os::rtos::internal']]],
   ['object_5fnamed_5fsystem',['object_named_system',['../classos_1_1rtos_1_1internal_1_1object__named__system.html',1,'os::rtos::internal']]],
-  ['once_5fflag',['once_flag',['../structos_1_1estd_1_1once__flag.html',1,'os::estd']]],
   ['os_5fclock_5fnode_5fs',['os_clock_node_s',['../structos__clock__node__s.html',1,'']]],
   ['os_5fclock_5fs',['os_clock_s',['../structos__clock__s.html',1,'']]],
   ['os_5fcondvar_5fattr_5fs',['os_condvar_attr_s',['../structos__condvar__attr__s.html',1,'']]],

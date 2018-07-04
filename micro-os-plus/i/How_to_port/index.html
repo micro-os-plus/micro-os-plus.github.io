@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>How to port</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="How to port">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/How_to_port/">
+  <link rel="canonical" href="/micro-os-plus/i/How_to_port/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">How to port - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Tue Jan 18 22:00:35 2011 UTC.</td>
+    <td id="last-modified">Page date Tue Jan 18 22:00:35 2011 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/How_to_port.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -350,13 +350,16 @@
 <p>Edit ${Board}/include/OS_Board_defines.h</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>#define OS_CONFIG_ARCH_AVR32                    1
+<div class="highlight">
+<pre class="highlight">
+<code>#define OS_CONFIG_ARCH_AVR32                    1
 #define OS_CONFIG_FAMILY_AVR32UC3               1
 #define OS_CONFIG_VARIANT_AVR32UC3A3                1
 #if !defined(OS_CONFIG_BOARD_ATMEL_EVK1104)
 #define OS_CONFIG_BOARD_ATMEL_EVK1104               1
 #endif
 </code></pre>
+</div>
 </div>
 
 <h2 id="create-architecture-folder">Create architecture folder</h2>
@@ -382,21 +385,27 @@
 <h3 id="micro-os-plusportablekernelincludeos_definesh">/micro-os-plus/portable/kernel/include/OS_Defines.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_BOARD_ATMEL_EVK1104)
 #include "hal/boards/Atmel/evk1104/include/OS_Board_Defines.h"
 ...
 </code></pre>
 </div>
+</div>
 
 <h3 id="micro-os-plusportabledevicesdebugincludedevicedebugi2c_inlinesh">/micro-os-plus/portable/devices/debug/include/DeviceDebugI2C_Inlines.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_BOARD_ATMEL_EVK1104)
 #include "hal/boards/Atmel/evk1104/include/DeviceDebugI2C_Defines.h"
 ...
 </code></pre>
+</div>
 </div>
 
 <h2 id="update-references-to-architecturefamily-definitions">Update references to architecture/family definitions</h2>
@@ -404,7 +413,9 @@
 <h3 id="micro-os-plusportablekernelincludeos_definesh-1">/micro-os-plus/portable/kernel/include/OS_Defines.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_ARCH_AVR32)
 #  include "hal/arch/avr32/kernel/include/OS_Arch_Defines.h"
 
@@ -416,11 +427,14 @@
 ...
 </code></pre>
 </div>
+</div>
 
 <h3 id="micro-os-plusportablekernelincludeosschedulerh">/micro-os-plus/portable/kernel/include/OSScheduler.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_ARCH_AVR32)
 #include "hal/arch/avr32/kernel/include/OSScheduler_Arch_Inlines.h"
 
@@ -432,11 +446,14 @@
 ...
 </code></pre>
 </div>
+</div>
 
 <h3 id="micro-os-plusportablekernelincludeosh">/micro-os-plus/portable/kernel/include/OS.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_ARCH_AVR32)
 #include "hal/arch/avr32/kernel/include/OS_Arch_Inlines.h"
 #if defined(OS_CONFIG_FAMILY_AVR32UC3)
@@ -447,11 +464,14 @@
 ...
 </code></pre>
 </div>
+</div>
 
 <h3 id="micro-os-plusportabledevicesdebugincludedevicedebugi2c_inlinesh-1">/micro-os-plus/portable/devices/debug/include/DeviceDebugI2C_Inlines.h</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #elif defined(OS_CONFIG_ARCH_AVR32)
 #if defined(OS_CONFIG_FAMILY_AVR32UC3)
 #include "hal/arch/avr32/uc3/devices/debug/include/DeviceDebugI2CEmuMaster_Family_Inlines.h"
@@ -461,25 +481,32 @@
 ...
 </code></pre>
 </div>
+</div>
 
 <h2 id="update-architecturefamily-macros-in-source-files">Update architecture/family macros in source files</h2>
 
 <h3 id="micro-os-plushalarchavr32kernelsrccpp">/micro-os-plus/hal/arch/avr32/kernel/src/*.cpp</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #if defined(OS_CONFIG_ARCH_AVR32)
 ...
 </code></pre>
+</div>
 </div>
 
 <h3 id="micro-os-plushalarchavr32uc3kernelsrccpp">/micro-os-plus/hal/arch/avr32/uc3/kernel/src/*.cpp</h3>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>...
+<div class="highlight">
+<pre class="highlight">
+<code>...
 #if defined(OS_CONFIG_FAMILY_AVR32UC3)
 ...
 </code></pre>
+</div>
 </div>
 
 <h2 id="configure-compiler-and-linker">Configure compiler and linker</h2>
@@ -538,7 +565,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

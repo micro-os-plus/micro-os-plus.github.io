@@ -1,6 +1,6 @@
 var os_memory_8h =
 [
-    [ "lock_guard", "classos_1_1estd_1_1lock__guard.html", "classos_1_1estd_1_1lock__guard" ],
+    [ "lock_guard", "classos_1_1estd_1_1lock__guard.html", null ],
     [ "rebind", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind" ],
     [ "allocator_typed", "os-memory_8h.html#ga5d95de6de72862ff044d5c973ca1b594", null ],
     [ "out_of_memory_handler_t", "os-memory_8h.html#ga165e1d42e364dcabcbf01e5322b9f554", null ],
@@ -18,6 +18,7 @@ var os_memory_8h =
     [ "get_resource_typed< semaphore >", "os-memory_8h.html#ga850aa625ca611835d54ca82ce21c9477", null ],
     [ "get_resource_typed< thread >", "os-memory_8h.html#ga419dca3be320742d9191da26aac47e65", null ],
     [ "get_resource_typed< timer >", "os-memory_8h.html#ga9f80eed0cd0121e9d5c6f501e440fe69", null ],
+    [ "init_once_default_resource", "os-memory_8h.html#ga206b185012c2bd24b7b4f29b4db5aed6", null ],
     [ "malloc_resource", "os-memory_8h.html#ga3c3109d3de2ac643502566774021d5dd", null ],
     [ "max", "os-memory_8h.html#afacd1b21997494f713d53c8c7228bb2d", null ],
     [ "operator!=", "os-memory_8h.html#ga9042825a60e194355f0424b3a36e442e", null ],

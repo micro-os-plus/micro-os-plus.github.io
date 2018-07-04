@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['utility_20classes',['Utility classes',['../group__cmsis-plus-posix-io-utils.html',1,'']]],
-  ['utilities',['Utilities',['../group__cmsis-plus-utils.html',1,'']]]
+  ['trace_20options',['Trace Options',['../group__cmsis-plus-app-config-trace.html',1,'']]],
+  ['threads',['Threads',['../group__cmsis-plus-rtos-c-thread.html',1,'']]],
+  ['timers',['Timers',['../group__cmsis-plus-rtos-c-timer.html',1,'']]],
+  ['threads',['Threads',['../group__cmsis-plus-rtos-thread.html',1,'']]],
+  ['timers',['Timers',['../group__cmsis-plus-rtos-timer.html',1,'']]]
 ];

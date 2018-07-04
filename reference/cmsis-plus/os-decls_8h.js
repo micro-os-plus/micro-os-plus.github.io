@@ -17,7 +17,6 @@ var os_decls_8h =
     [ "OS_INTEGER_RTOS_IDLE_STACK_SIZE_BYTES", "os-decls_8h.html#aa8fdfffcd4b6d58c260d5dd4730b44d0", null ],
     [ "OS_INTEGER_RTOS_MAIN_STACK_SIZE_BYTES", "os-decls_8h.html#a1e2bd07321ee51c8de75ada8d6726cca", null ],
     [ "OS_INTEGER_SYSTICK_FREQUENCY_HZ", "os-decls_8h.html#ab657098ae141f5b84a1319f48c181052", null ],
-    [ "OS_USE_MICRO_OS_PLUS", "os-decls_8h.html#ac8bce6dc2aa7b81239e409044d4a2ef1", null ],
     [ "counter_t", "os-decls_8h.html#a1d1572b5e0742d0e4942819c3d3b232a", null ],
     [ "duration_t", "os-decls_8h.html#a0b143d63968082a8b6e73ecba956ac07", null ],
     [ "duration_t", "os-decls_8h.html#a5efa952516460ea56fdea19df09ef36a", null ],

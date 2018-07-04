@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>FAQ</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="FAQ">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/support/faq/">
+  <link rel="canonical" href="/support/faq/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -255,8 +255,11 @@
 <p>The <a href="https://sourceware.org/newlib/">newlib</a> sources can be cloned from:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>git clone git://sourceware.org/git/newlib-cygwin.git
+<div class="highlight">
+<pre class="highlight">
+<code>git clone git://sourceware.org/git/newlib-cygwin.git
 </code></pre>
+</div>
 </div>
 
 <p>Create a subfolder in the source folder (for example <code class="highlighter-rouge">newlib-libc</code>) and copy the desired files from <code class="highlighter-rouge">newlib-cygwin.git/newlib/libc/stdio</code>. You may also need to copy some additional headers, from related folders.</p>
@@ -264,7 +267,9 @@
 <p>For example, to step into <code class="highlighter-rouge">snprintf()</code> and <code class="highlighter-rouge">trace::printf()</code>, the following files were required:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ tree newlib-libc
+<div class="highlight">
+<pre class="highlight">
+<code>$ tree newlib-libc
 newlib-libc
 ├── locale
 │   └── setlocale.h
@@ -286,12 +291,16 @@ newlib-libc
 3 directories, 13 files
 </code></pre>
 </div>
+</div>
 
 <p>For the build to pass, it might be necessary to define some macros; for the above tree, the following definitions were required:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>STRING_ONLY
+<div class="highlight">
+<pre class="highlight">
+<code>STRING_ONLY
 </code></pre>
+</div>
 </div>
 
 <p>Please note that the newlib sources are far from warning free, and it is recommended to disable any warning checks for the <code class="highlighter-rouge">newlib-libc</code> folder.</p>
@@ -325,7 +334,7 @@ newlib-libc
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

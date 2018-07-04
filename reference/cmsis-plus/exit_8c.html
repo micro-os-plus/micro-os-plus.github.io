@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -223,7 +223,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p><code><a class="el" href="exit_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c">exit()</a></code> does several cleanups before ending the application:</p>
 <ul>
-<li>calls all application-defined cleanup functions enrolled with <code><a class="el" href="atexit_8cpp.html#a8c2283e1e526c998ba7c1617b540a042" title="Request execution of functions at program exit. ">atexit()</a></code>;</li>
+<li>calls all application-defined cleanup functions enrolled with <code>atexit()</code>;</li>
 <li>files and streams are cleaned up: any pending output is delivered to the host system, each open file or stream is closed, and files created by <code>tmpfile()</code> are deleted (wishful thinking, not implemented);</li>
 <li>call the static destructors (in reverse order of constructors)</li>
 </ul>

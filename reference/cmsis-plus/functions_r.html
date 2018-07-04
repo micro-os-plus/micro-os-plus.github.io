@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -189,8 +189,16 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="structos_1_1rtos_1_1thread_1_1priority.html#ac6eda42298fb0342b8aa20ecf8096cbd">os::rtos::thread::priority</a>
 </li>
 <li>read()
-: <a class="el" href="classos_1_1posix_1_1directory.html#a526f2fa001ef4cbc9764839b4b058333">os::posix::directory</a>
+: <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#a44cc3a538b82f77c6083018a4c7143b7">os::posix::block_device_lockable&lt; T, L &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1directory.html#a526f2fa001ef4cbc9764839b4b058333">os::posix::directory</a>
+, <a class="el" href="classos_1_1posix_1_1directory__lockable.html#ad280fca01bca5bf4b578718ea409d3cb">os::posix::directory_lockable&lt; T, L &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1file__lockable.html#a02b474df4d05b9f9c679e0095109f707">os::posix::file_lockable&lt; T, L &gt;</a>
 , <a class="el" href="classos_1_1posix_1_1io.html#acad20c85924c17edf5c2a7e455c093c3">os::posix::io</a>
+</li>
+<li>read_block()
+: <a class="el" href="classos_1_1posix_1_1block__device.html#ac98c246288c39c2c8f931d1a3e2d8a83">os::posix::block_device</a>
+, <a class="el" href="classos_1_1posix_1_1block__device__lockable.html#ada37da038ee443742ef4bc3450a85434">os::posix::block_device_lockable&lt; T, L &gt;</a>
+, <a class="el" href="classos_1_1posix_1_1block__device__partition__lockable.html#a29d711c4319cca837e239de7a895d3ff">os::posix::block_device_partition_lockable&lt; T, L &gt;</a>
 </li>
 <li>read_setup_packet()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a688de8e35598af531305da80e82d98c1">os::driver::usb::Device</a>
@@ -221,16 +229,20 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 </li>
 <li>recv()
 : <a class="el" href="classos_1_1posix_1_1socket.html#a5045fac436684c66d1a747c5876abe10">os::posix::socket</a>
+, <a class="el" href="classos_1_1posix_1_1socket__lockable.html#a1ba8567a289e5c6ad7e506c345c1518d">os::posix::socket_lockable&lt; T, L &gt;</a>
 </li>
 <li>recvfrom()
 : <a class="el" href="classos_1_1posix_1_1socket.html#a8fd62a17b89bb073d46425b3155fd085">os::posix::socket</a>
+, <a class="el" href="classos_1_1posix_1_1socket__lockable.html#a0b93d6628da1517f95e063cd88473a88">os::posix::socket_lockable&lt; T, L &gt;</a>
 </li>
 <li>recvmsg()
 : <a class="el" href="classos_1_1posix_1_1socket.html#a238b9c9f656d47273d92b4d85fc1b76e">os::posix::socket</a>
+, <a class="el" href="classos_1_1posix_1_1socket__lockable.html#a561d853a5264b26558546b90fbd162cb">os::posix::socket_lockable&lt; T, L &gt;</a>
 </li>
 <li>reference
-: <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#af72b12d95df9756ad1a1547b4f07e3c2">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
-, <a class="el" href="classos_1_1utils_1_1intrusive__list.html#a0ea9f8beb312d2b19b198a83c2488723">os::utils::intrusive_list&lt; T, N, MP &gt;</a>
+: <a class="el" href="classos_1_1posix_1_1device__registry.html#aa13c5849ce495d296ec5d814dd293c7d">os::posix::device_registry&lt; T &gt;</a>
+, <a class="el" href="classos_1_1utils_1_1double__list__iterator.html#af72b12d95df9756ad1a1547b4f07e3c2">os::utils::double_list_iterator&lt; T, N, MP, U &gt;</a>
+, <a class="el" href="classos_1_1utils_1_1intrusive__list.html#ab2c6a516807f6b44543697edf041f5ad">os::utils::intrusive_list&lt; T, N, MP, U &gt;</a>
 , <a class="el" href="classos_1_1utils_1_1intrusive__list__iterator.html#ad63abad1b28111806a65ff71010d2aca">os::utils::intrusive_list_iterator&lt; T, N, MP, U &gt;</a>
 </li>
 <li>register_callback()
@@ -248,13 +260,9 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 <li>register_port_callback()
 : <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a70ac146ce17aa07885d4154ef0a9ad9e">os::driver::usb::Host</a>
 </li>
-<li>release()
-: <a class="el" href="classos_1_1estd_1_1unique__lock.html#a92063c391caa6051d7d75abef710d51f">os::estd::unique_lock&lt; L &gt;</a>
-, <a class="el" href="classos_1_1posix_1_1pool.html#ad9db2a4b8195828dbc59d22b528c98d3">os::posix::pool</a>
-, <a class="el" href="classos_1_1posix_1_1pool__typed.html#a2986d7996630739d112d7e14e0f527a9">os::posix::pool_typed&lt; T &gt;</a>
-</li>
 <li>rename()
 : <a class="el" href="classos_1_1posix_1_1file__system.html#a136cac6eb1ca5a032a3e5a4039bf32c3">os::posix::file_system</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__lockable.html#ae2ee97f35ae7c8870492bab45d625019">os::posix::file_system_lockable&lt; T, L &gt;</a>
 </li>
 <li>rep
 : <a class="el" href="classos_1_1estd_1_1chrono_1_1high__resolution__clock.html#ae26dabf754ef0e37631fd62348252c41">os::estd::chrono::high_resolution_clock</a>
@@ -282,7 +290,7 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html#a9bfcfbf8505f597a70fe1bd145f817a1">os::estd::pmr::polymorphic_allocator&lt; T &gt;</a>
 </li>
 <li>resume()
-: <a class="el" href="classos_1_1rtos_1_1thread.html#aea39969a90aad5de97abc2529485c18c">os::rtos::thread</a>
+: <a class="el" href="classos_1_1rtos_1_1thread.html#a68efeb8a95a46317538141cdad11f73a">os::rtos::thread</a>
 </li>
 <li>resume_all()
 : <a class="el" href="classos_1_1rtos_1_1internal_1_1waiting__threads__list.html#ae310312d889099b09f87f33df752e4a7">os::rtos::internal::waiting_threads_list</a>
@@ -298,10 +306,15 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 </li>
 <li>rewind()
 : <a class="el" href="classos_1_1posix_1_1directory.html#afd487b1098b1f67265149b097dce7e4d">os::posix::directory</a>
+, <a class="el" href="classos_1_1posix_1_1directory__lockable.html#adeaa7723186ce4d3df90401407a7c235">os::posix::directory_lockable&lt; T, L &gt;</a>
 </li>
 <li>ri
 : <a class="el" href="classos_1_1driver_1_1serial_1_1Capabilities.html#aabdcd81f18c0daeff729367e22a87306">os::driver::serial::Capabilities</a>
 , <a class="el" href="classos_1_1driver_1_1serial_1_1Modem__status.html#a4c4ba237354ac84df6fdc12515fdc35b">os::driver::serial::Modem_status</a>
+</li>
+<li>rmdir()
+: <a class="el" href="classos_1_1posix_1_1file__system.html#aa769d0e58d7c61927dd004dbcdf4c38a">os::posix::file_system</a>
+, <a class="el" href="classos_1_1posix_1_1file__system__lockable.html#afb1bfa353958a70594304c4ea56fd9b7">os::posix::file_system_lockable&lt; T, L &gt;</a>
 </li>
 <li>robust
 : <a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">os::rtos::mutex::robustness</a>
@@ -312,14 +325,12 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 <li>robustness_t
 : <a class="el" href="group__cmsis-plus-rtos-mutex.html#ga763c7134e2f479dcc4b21912c0af89c7">os::rtos::mutex</a>
 </li>
-<li>root()
-: <a class="el" href="classos_1_1posix_1_1mount__manager.html#abca9c986c3d3fdd055a60eda23bdb9cb">os::posix::mount_manager</a>
-</li>
 <li>rts
 : <a class="el" href="classos_1_1driver_1_1serial_1_1Capabilities.html#a6421e78157d0f6daa7af4a1761c96a4f">os::driver::serial::Capabilities</a>
 </li>
 <li>run_function_object()
-: <a class="el" href="classos_1_1estd_1_1thread.html#ad7809b5e8b548d515ffdf00086d4f6c2">os::estd::thread</a>
+: <a class="el" href="classos_1_1estd_1_1thread.html#a36b9d002c1cf9ef86bdb42e0ca1d5be4">os::estd::thread</a>
+, <a class="el" href="classthread.html#a36b9d002c1cf9ef86bdb42e0ca1d5be4">thread</a>
 </li>
 <li>running
 : <a class="el" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">os::rtos::thread::state</a>

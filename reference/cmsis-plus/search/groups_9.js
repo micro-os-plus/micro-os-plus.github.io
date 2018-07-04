@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['trace_20options',['Trace Options',['../group__cmsis-plus-app-config-trace.html',1,'']]],
-  ['threads',['Threads',['../group__cmsis-plus-rtos-c-thread.html',1,'']]],
-  ['timers',['Timers',['../group__cmsis-plus-rtos-c-timer.html',1,'']]],
-  ['threads',['Threads',['../group__cmsis-plus-rtos-thread.html',1,'']]],
-  ['timers',['Timers',['../group__cmsis-plus-rtos-timer.html',1,'']]]
+  ['start_2dup_20_26_20general_20options',['Start-up &amp; General Options',['../group__cmsis-plus-app-config-startup.html',1,'']]],
+  ['semaphores',['Semaphores',['../group__cmsis-plus-rtos-c-semaphore.html',1,'']]],
+  ['semaphores',['Semaphores',['../group__cmsis-plus-rtos-semaphore.html',1,'']]]
 ];

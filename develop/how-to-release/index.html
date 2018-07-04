@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>How to release</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="How to release">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/develop/how-to-release/">
+  <link rel="canonical" href="/develop/how-to-release/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">How to release</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Thu Aug 24 18:35:00 2017 UTC.</td>
+    <td id="last-modified">Last modified on Wed Jul  4 13:25:49 2018 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/develop/how-to-release.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -271,28 +271,22 @@
 <a href="#update-os-versionsh"><span class="tocnumber">5</span> <span class="toctext">Update os-versions.h</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#update-the-xpackjson-file"><span class="tocnumber">6</span> <span class="toctext">Update the xpack.json file</span></a>
+<a href="#run-doxygen"><span class="tocnumber">6</span> <span class="toctext">Run doxygen</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#run-doxygen"><span class="tocnumber">7</span> <span class="toctext">Run doxygen</span></a>
+<a href="#check-the-jekyll-site"><span class="tocnumber">7</span> <span class="toctext">Check the jekyll site</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#check-the-jekyll-site"><span class="tocnumber">8</span> <span class="toctext">Check the jekyll site</span></a>
+<a href="#add-post-to-announce-new-release"><span class="tocnumber">8</span> <span class="toctext">Add post to announce new release</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#add-post-to-announce-new-release"><span class="tocnumber">9</span> <span class="toctext">Add post to announce new release</span></a>
+<a href="#commit-git-repos-1"><span class="tocnumber">9</span> <span class="toctext">Commit git repos</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#build-the-jekyll-site"><span class="tocnumber">10</span> <span class="toctext">Build the jekyll site</span></a>
+<a href="#publish-site"><span class="tocnumber">10</span> <span class="toctext">Publish site</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#commit-git-repos-1"><span class="tocnumber">11</span> <span class="toctext">Commit git repos</span></a>
-</li>
-<li class="toc_level-1 toc_section-12">
-<a href="#publish-site"><span class="tocnumber">12</span> <span class="toctext">Publish site</span></a>
-</li>
-<li class="toc_level-1 toc_section-13">
-<a href="#update-os-versionsh-1"><span class="tocnumber">13</span> <span class="toctext">Update os-versions.h</span></a>
+<a href="#update-os-versionsh-1"><span class="tocnumber">11</span> <span class="toctext">Update os-versions.h</span></a>
 </li>
 </ul>
 </td>
@@ -302,11 +296,12 @@
 </div>
 <h2 id="check-git-repos">Check git repos</h2>
 
-<p>In scripts.git, run <code class="highlighter-rouge">xpacks-git-status.mac.command</code> to check which repositories need to be updated.</p>
+<p>In <code class="highlighter-rouge">xPacks/ilg/scripts.git</code>, run <code class="highlighter-rouge">xpacks-git-status.mac.command</code> to check 
+which repositories need to be updated.</p>
 
 <h2 id="commit-git-repos">Commit git repos</h2>
 
-<p>With GitHub Desktop,</p>
+<p>With SourceTree,</p>
 
 <ul>
   <li>commit <code class="highlighter-rouge">micro-os-plus-iii.git</code>
@@ -320,7 +315,7 @@
 
 <ul>
   <li>add new <code class="highlighter-rouge">###</code> section, with version and date</li>
-  <li>copy from GitHub Desktop the relevant changes, in chronological order</li>
+  <li>copy from SourceTree the relevant changes, in reverse chronological order</li>
 </ul>
 
 <h2 id="update-the-doxygen-header-version">Update the doxygen header version</h2>
@@ -329,36 +324,28 @@
 
 <h2 id="update-os-versionsh">Update os-versions.h</h2>
 
-<p>With Eclipse,</p>
+<p>With Visual Studio Code,</p>
 
 <ul>
   <li>edit <code class="highlighter-rouge">micro-os-plus-iii.git/include/os-versions.h</code>, remove <code class="highlighter-rouge">-beta</code>
 </li>
 </ul>
 
-<h2 id="update-the-xpackjson-file">Update the xpack.json file</h2>
-
-<p>With Eclipse,</p>
-
-<ul>
-  <li>edit the <code class="highlighter-rouge">micro-os-plus-iii.git/xpack.json</code> and update the release number.</li>
-</ul>
-
-<p>With Terminal, in project folder, update README.</p>
-
-<div class="highlighter-rouge">
-<pre class="highlight"><code>$ xcdl update-readme
-</code></pre>
-</div>
-
 <h2 id="run-doxygen">Run doxygen</h2>
 
-<p>With Eclipse,</p>
+<p>With Terminal,</p>
 
-<ul>
-  <li>select the <code class="highlighter-rouge">micro-os-plus-iii</code> project</li>
-  <li>click the <code class="highlighter-rouge">@</code> button</li>
-</ul>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">cd</span> /Users/ilg/Library/xPacks/ilg/micro-os-plus-iii.git/doxygen
+<span class="gp">$</span> axbb
+<span class="gp">$</span> doxygen <span class="nt">--version</span>
+<span class="go">1.8.14
+</span><span class="gp">$</span> doxygen config.doxyfile
+</code></pre>
+</div>
+</div>
 
 <p>If errors, fix them and repeat.</p>
 
@@ -381,15 +368,6 @@
   <li>in <code class="highlighter-rouge">_posts/releases/</code>
 </li>
   <li>add a new post named file like <code class="highlighter-rouge">2016-11-27-micro-os-plus-v6-3-10-released.md</code>
-</li>
-</ul>
-
-<h2 id="build-the-jekyll-site">Build the jekyll site</h2>
-
-<p>In Finder,</p>
-
-<ul>
-  <li>double click the <code class="highlighter-rouge">jekyll-build.command</code>
 </li>
 </ul>
 
@@ -417,21 +395,15 @@
   <li>select the <code class="highlighter-rouge">develop</code> branch</li>
 </ul>
 
+<h2 id="publish-site">Publish site</h2>
+
+<p>With SourceTree,</p>
+
 <p>With SourceTree, update <code class="highlighter-rouge">micro-os-plus.github.io-source</code></p>
 
 <ul>
   <li>commit, message like v6.3.10</li>
   <li>click the <strong>Push</strong> button</li>
-</ul>
-
-<h2 id="publish-site">Publish site</h2>
-
-<p>With GitHub Desktop,</p>
-
-<ul>
-  <li>commit <code class="highlighter-rouge">micro-os-plus.github.io</code>
-</li>
-  <li>click the <strong>Sync</strong> button</li>
 </ul>
 
 <h2 id="update-os-versionsh-1">Update os-versions.h</h2>
@@ -476,7 +448,7 @@
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -124,12 +124,18 @@ $(document).ready(function(){initNavTree('file-system_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">file-system.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdarg&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="file_8h_source.html">cmsis-plus/posix-io/file.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="directory_8h_source.html">cmsis-plus/posix-io/directory.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lists_8h_source.html">cmsis-plus/utils/lists.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mutex_source.html">mutex</a>&gt;</code><br />
+<code>#include &lt;cstdarg&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="utime_8h_source.html">utime.h</a>&gt;</code><br />
 </div>
@@ -140,6 +146,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file__system.html">os::posix::file_system</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">File system class.  <a href="classos_1_1posix_1_1file__system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file__system__impl.html">os::posix::file_system_impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file__system__implementable.html">os::posix::file_system_implementable&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1file__system__lockable.html">os::posix::file_system_lockable&lt; T, L &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -148,6 +160,11 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceos_1_1posix"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1posix.html">os::posix</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a1b72b60bee6135568abbb1154d571379"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file-system_8h.html#a1b72b60bee6135568abbb1154d571379">FF_MOUNT_FLAGS_HAS_VOLUME</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a1b72b60bee6135568abbb1154d571379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -170,7 +187,27 @@ Functions</h2></td></tr>
 <tr class="separator:ga0cb17f1d94046e9eaad21660b452c52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6469a590d7e00e96fbde23474dcdc5ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#ga6469a590d7e00e96fbde23474dcdc5ff">os::posix::utime</a> (const char *path, const struct utimbuf *<a class="el" href="group__cmsis-plus-posix-io-c.html#ga73fc89d71a97e11d44bdd0bbb851a9cb">times</a>)</td></tr>
 <tr class="separator:ga6469a590d7e00e96fbde23474dcdc5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92959ead59f936ae28011ea3518c9123"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#ga92959ead59f936ae28011ea3518c9123">os::posix::statvfs</a> (const char *path, struct <a class="el" href="structstatvfs.html">statvfs</a> *buf)</td></tr>
+<tr class="separator:ga92959ead59f936ae28011ea3518c9123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd71a511456821fc67d35ef44d4e033e"><td class="memItemLeft" align="right" valign="top">directory *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-posix-io-func.html#gadd71a511456821fc67d35ef44d4e033e">os::posix::opendir</a> (const char *dirname)</td></tr>
+<tr class="memdesc:gadd71a511456821fc67d35ef44d4e033e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open directory.  <a href="group__cmsis-plus-posix-io-func.html#gadd71a511456821fc67d35ef44d4e033e">More...</a><br /></td></tr>
+<tr class="separator:gadd71a511456821fc67d35ef44d4e033e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a1b72b60bee6135568abbb1154d571379"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FF_MOUNT_FLAGS_HAS_VOLUME&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="file-system_8h_source.html#l00053">53</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,6 @@
 var classos_1_1memory_1_1new__delete__memory__resource =
 [
-    [ "~new_delete_memory_resource", "classos_1_1memory_1_1new__delete__memory__resource.html#a798d35e407de55848719838857c7c9ba", null ],
+    [ "~new_delete_memory_resource", "classos_1_1memory_1_1new__delete__memory__resource.html#a035e2f25ea9c48c51520ca8f07ac2e16", null ],
     [ "allocate", "classos_1_1memory_1_1new__delete__memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815", null ],
     [ "allocated_bytes", "classos_1_1memory_1_1new__delete__memory__resource.html#a4461f324ac21f845527f391ce47c2dd0", null ],
     [ "allocated_chunks", "classos_1_1memory_1_1new__delete__memory__resource.html#a2f4e57e4e77ead637b0720a9c6fee762", null ],

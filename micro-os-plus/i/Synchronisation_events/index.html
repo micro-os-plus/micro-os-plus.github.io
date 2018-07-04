@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Synchronisation events</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Synchronisation events">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Synchronisation_events/">
+  <link rel="canonical" href="/micro-os-plus/i/Synchronisation_events/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Synchronisation events - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Tue Mar  8 22:24:45 2011 UTC.</td>
+    <td id="last-modified">Page date Tue Mar  8 22:24:45 2011 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/Synchronisation_events.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -324,13 +324,16 @@
 <p>The first and simplest solution for the race condition is to include both the test of the condition and the eventWait() in a critical section</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>os.sched.criticalEnter();
+<div class="highlight">
+<pre class="highlight">
+<code>os.sched.criticalEnter();
 {
   if (!isAvailable())
     eventWait(event);
 }
 os.sched.criticalExit();
 </code></pre>
+</div>
 </div>
 
 <p>For applications that decide to squeeze every cycle from the CPU by minimising the critical sections, µOS++ also provides a finer grain access to the eventWait() internals: the eventWaitPrepare() and eventWaitPerform() methods.</p>
@@ -340,7 +343,9 @@ os.sched.criticalExit();
 <p>So, a more elaborate solution for the race condition would look like</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool doWait;
+<div class="highlight">
+<pre class="highlight">
+<code>bool doWait;
 doWait = false;
 
 setEventWaitReturn(OSEventWaitReturn::OS_IMMEDIATELY);
@@ -364,6 +369,7 @@ OSEventWaitReturn_t ret;
 ret = getEventWaitReturn();
 </code></pre>
 </div>
+</div>
 
 <h1 id="scheduler-vs-task-notifications">Scheduler vs. task notifications</h1>
 
@@ -384,8 +390,11 @@ ret = getEventWaitReturn();
 <p>When using this feature, it is recommended to explicitly set the return value to OSEventReturn::OS_ALL.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>os.sched.eventNotify(OSEvent::OS_ALL, OSEventReturn::OS_ALL);
+<div class="highlight">
+<pre class="highlight">
+<code>os.sched.eventNotify(OSEvent::OS_ALL, OSEventReturn::OS_ALL);
 </code></pre>
+</div>
 </div>
 
 <h1 id="waiting-for-any-event">Waiting for any event</h1>
@@ -393,8 +402,11 @@ ret = getEventWaitReturn();
 <p>Similarly, a task can arrange to be waken by all incoming events. For this, the same OSEvent::OS_ALL can be used.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>os.sched.eventWait(OSEvent::OS_ALL);
+<div class="highlight">
+<pre class="highlight">
+<code>os.sched.eventWait(OSEvent::OS_ALL);
 </code></pre>
+</div>
 </div>
 
 <p>Obviously, after waking up, the task should check for the condition it is expecting, and if not fulfilled, to loop to eventWait().</p>
@@ -408,8 +420,11 @@ ret = getEventWaitReturn();
 <p>In order to differentiate between all these possible cases, µOS++ provides an additional argument to eventNotify(event, ret). When the eventNotify() is processed, this value is simply passed as a return value for eventWait(). The default for this value is defined as OSEventReturn::OS_VOID, but it is recommended to duplicate the event as the event return value.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>os.sched.eventNotify(event, (OSEventReturn_t)event);
+<div class="highlight">
+<pre class="highlight">
+<code>os.sched.eventNotify(event, (OSEventReturn_t)event);
 </code></pre>
+</div>
 </div>
 
 <p>Other special values for OSEventReturn are defined for timeouts (OSEventReturn::OS_TIMEOUT), cancelled tasks (OSEventReturn::OS_CANCELLED and other cases. It is recommended to use these values for similar functionality.</p>
@@ -423,8 +438,11 @@ ret = getEventWaitReturn();
 <h2 id="wait-for-event">Wait for event</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSEventWaitReturn_t eventWait(OSEvent_t event);
+<div class="highlight">
+<pre class="highlight">
+<code>OSEventWaitReturn_t eventWait(OSEvent_t event);
 </code></pre>
+</div>
 </div>
 
 <p>Block the current task and wait for the event to occur (task is <em>put to sleep</em>). The task is removed from the running list and will no longer be scheduled to run until the event occurs. The first notification addressed to the given event will unblock the task and the specified value will be returned (<em>wake up</em> the task).</p>
@@ -443,8 +461,11 @@ ret = getEventWaitReturn();
 <h2 id="notify-event">Notify event</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>int eventNotify(OSEvent_t event, OSEventWaitReturn_t ret=OSEventWaitReturn::OS_VOID);
+<div class="highlight">
+<pre class="highlight">
+<code>int eventNotify(OSEvent_t event, OSEventWaitReturn_t ret=OSEventWaitReturn::OS_VOID);
 </code></pre>
+</div>
 </div>
 
 <p>Notifies all tasks waiting on the given event. Notified tasks are inserted into the running list (in the order they were registered to the schedulers) and will wait their turn for the CPU. Only the first notification addresed to a blocked task is significative, i.e. only the ‘ret’ value of the first notification will be returned by corresponding <strong>evenWait()</strong> functions; all further notifications addressed to a task waiting to run or running will be silently discarded.</p>
@@ -479,7 +500,7 @@ ret = getEventWaitReturn();
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

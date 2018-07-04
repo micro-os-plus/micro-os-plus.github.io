@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -131,16 +131,22 @@ $(document).ready(function(){initNavTree('thread.html','');});
 <div class="title">thread File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="chrono_source.html">cmsis-plus/estd/chrono</a>&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;<a class="el" href="os_8h_source.html">cmsis-plus/rtos/os.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="chrono_source.html">cmsis-plus/estd/chrono</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="thread__internal_8h_source.html">thread_internal.h</a>&quot;</code><br />
 </div>
 <p><a href="thread_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structos_1_1estd_1_1hash.html">os::estd::hash&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01os_1_1estd_1_1thread_1_1id_01_4.html">std::hash&lt; os::estd::thread::id &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread_1_1id.html">os::estd::thread::id</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread unique id.  <a href="classos_1_1estd_1_1thread_1_1id.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1estd_1_1thread.html">os::estd::thread</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard thread.  <a href="classos_1_1estd_1_1thread.html#details">More...</a><br /></td></tr>
@@ -157,58 +163,60 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceos_1_1estd_1_1this__thread"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html">os::estd::this_thread</a></td></tr>
 <tr class="memdesc:namespaceos_1_1estd_1_1this__thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">A namespace for functions applying to the current thread. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="memdesc:namespacestd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard <b>std</b> namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a538f4b42eb77c68d337683d0b2b4fed1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread.html#a538f4b42eb77c68d337683d0b2b4fed1">CMSIS_PLUS_STD_THREAD_</a></td></tr>
-<tr class="separator:a538f4b42eb77c68d337683d0b2b4fed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bbf396f7bdd33e9f19057a7edad74a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread.html#a50bbf396f7bdd33e9f19057a7edad74a">CMSIS_PLUS_ESTD_THREAD_</a></td></tr>
+<tr class="separator:a50bbf396f7bdd33e9f19057a7edad74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab094814dcb121739e0e9287d538d2bae"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
-<tr class="memitem:ab094814dcb121739e0e9287d538d2bae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#ab094814dcb121739e0e9287d538d2bae">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::realtime_clock, Duration_T &gt; &amp;abs_time)</td></tr>
-<tr class="separator:ab094814dcb121739e0e9287d538d2bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
-<tr class="memitem:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a193ad6a6b51c48e2967e9de3462adfb1">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; chrono::systick_clock, Duration_T &gt; &amp;abs_time)</td></tr>
-<tr class="separator:a193ad6a6b51c48e2967e9de3462adfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cdd27328fdf1dee2e48eed9596eb768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classthread_1_1id.html">thread::id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a4cdd27328fdf1dee2e48eed9596eb768">os::estd::this_thread::get_id</a> () noexcept</td></tr>
+<tr class="memdesc:a4cdd27328fdf1dee2e48eed9596eb768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <b>id</b> of the current running thread.  <a href="namespaceos_1_1estd_1_1this__thread.html#a4cdd27328fdf1dee2e48eed9596eb768">More...</a><br /></td></tr>
+<tr class="separator:a4cdd27328fdf1dee2e48eed9596eb768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = os::estd::chrono::systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
+<tr class="memitem:a55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a55cae14b5431f6b55ee0bdae86ccc058">os::estd::this_thread::sleep_for</a> (const std::chrono::duration&lt; Rep_T, Period_T &gt; &amp;rel_time)</td></tr>
+<tr class="memdesc:a55cae14b5431f6b55ee0bdae86ccc058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a given duration.  <a href="namespaceos_1_1estd_1_1this__thread.html#a55cae14b5431f6b55ee0bdae86ccc058">More...</a><br /></td></tr>
+<tr class="separator:a55cae14b5431f6b55ee0bdae86ccc058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ee0667f80c91ef149b810bfd487631"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T , typename Duration_T &gt; </td></tr>
+<tr class="memitem:a03ee0667f80c91ef149b810bfd487631"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a03ee0667f80c91ef149b810bfd487631">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; Clock_T, Duration_T &gt; &amp;abs_time)</td></tr>
+<tr class="memdesc:a03ee0667f80c91ef149b810bfd487631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep until a given time point.  <a href="namespaceos_1_1estd_1_1this__thread.html#a03ee0667f80c91ef149b810bfd487631">More...</a><br /></td></tr>
+<tr class="separator:a03ee0667f80c91ef149b810bfd487631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c3491dde36bb9318950678c383bd58"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
+<tr class="memitem:ad3c3491dde36bb9318950678c383bd58"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#ad3c3491dde36bb9318950678c383bd58">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; <a class="el" href="classos_1_1estd_1_1chrono_1_1realtime__clock.html">os::estd::chrono::realtime_clock</a>, Duration_T &gt; &amp;abs_time)</td></tr>
+<tr class="separator:ad3c3491dde36bb9318950678c383bd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8f29fabd934f1a744f3de75f7f7d67"><td class="memTemplParams" colspan="2">template&lt;typename Duration_T &gt; </td></tr>
+<tr class="memitem:a6c8f29fabd934f1a744f3de75f7f7d67"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a6c8f29fabd934f1a744f3de75f7f7d67">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; <a class="el" href="classos_1_1estd_1_1chrono_1_1systick__clock.html">os::estd::chrono::systick_clock</a>, Duration_T &gt; &amp;abs_time)</td></tr>
+<tr class="separator:a6c8f29fabd934f1a744f3de75f7f7d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842731dce88575e1dada90478fa85da2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd_1_1this__thread.html#a842731dce88575e1dada90478fa85da2">os::estd::this_thread::yield</a> () noexcept</td></tr>
+<tr class="memdesc:a842731dce88575e1dada90478fa85da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield the CPU to the next ready thread.  <a href="namespaceos_1_1estd_1_1this__thread.html#a842731dce88575e1dada90478fa85da2">More...</a><br /></td></tr>
+<tr class="separator:a842731dce88575e1dada90478fa85da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af16fff9147064db064b361580ceb5ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#af16fff9147064db064b361580ceb5ae2">os::estd::swap</a> (thread &amp;x, thread &amp;y) noexcept</td></tr>
+<tr class="memitem:af16fff9147064db064b361580ceb5ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#af16fff9147064db064b361580ceb5ae2">os::estd::swap</a> (<a class="el" href="classthread.html">thread</a> &amp;x, <a class="el" href="classthread.html">thread</a> &amp;y) noexcept</td></tr>
 <tr class="separator:af16fff9147064db064b361580ceb5ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a911b236a2a452e9eca286e55489e459b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a911b236a2a452e9eca286e55489e459b">os::estd::operator==</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:a911b236a2a452e9eca286e55489e459b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a911b236a2a452e9eca286e55489e459b">os::estd::operator==</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:a911b236a2a452e9eca286e55489e459b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18720cab8b8105e8cf1163eab764daf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a18720cab8b8105e8cf1163eab764daf6">os::estd::operator!=</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:a18720cab8b8105e8cf1163eab764daf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a18720cab8b8105e8cf1163eab764daf6">os::estd::operator!=</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:a18720cab8b8105e8cf1163eab764daf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a770a5632ad9d3eaecda84bf9c635b9f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a770a5632ad9d3eaecda84bf9c635b9f6">os::estd::operator&lt;</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:a770a5632ad9d3eaecda84bf9c635b9f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a770a5632ad9d3eaecda84bf9c635b9f6">os::estd::operator&lt;</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:a770a5632ad9d3eaecda84bf9c635b9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af79986bc671344e6a6f859ae6bf6e2b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#af79986bc671344e6a6f859ae6bf6e2b9">os::estd::operator&lt;=</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:af79986bc671344e6a6f859ae6bf6e2b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#af79986bc671344e6a6f859ae6bf6e2b9">os::estd::operator&lt;=</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:af79986bc671344e6a6f859ae6bf6e2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a073e4c567d383045100b7859923aa6b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a073e4c567d383045100b7859923aa6b1">os::estd::operator&gt;</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:a073e4c567d383045100b7859923aa6b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a073e4c567d383045100b7859923aa6b1">os::estd::operator&gt;</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:a073e4c567d383045100b7859923aa6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6ecee23a6a697b44ebc4b75eabf292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a0d6ecee23a6a697b44ebc4b75eabf292">os::estd::operator&gt;=</a> (thread::id x, thread::id y) noexcept</td></tr>
+<tr class="memitem:a0d6ecee23a6a697b44ebc4b75eabf292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceos_1_1estd.html#a0d6ecee23a6a697b44ebc4b75eabf292">os::estd::operator&gt;=</a> (<a class="el" href="classthread_1_1id.html">thread::id</a> x, <a class="el" href="classthread_1_1id.html">thread::id</a> y) noexcept</td></tr>
 <tr class="separator:a0d6ecee23a6a697b44ebc4b75eabf292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ga4cdd27328fdf1dee2e48eed9596eb768"><td class="memItemLeft" align="right" valign="top">thread::id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga4cdd27328fdf1dee2e48eed9596eb768">os::estd::this_thread::get_id</a> () noexcept</td></tr>
-<tr class="memdesc:ga4cdd27328fdf1dee2e48eed9596eb768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <b>id</b> of the current running thread.  <a href="group__cmsis-plus-iso.html#ga4cdd27328fdf1dee2e48eed9596eb768">More...</a><br /></td></tr>
-<tr class="separator:ga4cdd27328fdf1dee2e48eed9596eb768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga842731dce88575e1dada90478fa85da2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">os::estd::this_thread::yield</a> () noexcept</td></tr>
-<tr class="memdesc:ga842731dce88575e1dada90478fa85da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield the CPU to the next ready thread.  <a href="group__cmsis-plus-iso.html#ga842731dce88575e1dada90478fa85da2">More...</a><br /></td></tr>
-<tr class="separator:ga842731dce88575e1dada90478fa85da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T  = chrono::systick_clock, typename Rep_T , typename Period_T &gt; </td></tr>
-<tr class="memitem:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">os::estd::this_thread::sleep_for</a> (const std::chrono::duration&lt; Rep_T, Period_T &gt; &amp;rel_time)</td></tr>
-<tr class="memdesc:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for a given duration.  <a href="group__cmsis-plus-iso.html#ga55cae14b5431f6b55ee0bdae86ccc058">More...</a><br /></td></tr>
-<tr class="separator:ga55cae14b5431f6b55ee0bdae86ccc058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03ee0667f80c91ef149b810bfd487631"><td class="memTemplParams" colspan="2">template&lt;typename Clock_T , typename Duration_T &gt; </td></tr>
-<tr class="memitem:ga03ee0667f80c91ef149b810bfd487631"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631">os::estd::this_thread::sleep_until</a> (const std::chrono::time_point&lt; Clock_T, Duration_T &gt; &amp;abs_time)</td></tr>
-<tr class="memdesc:ga03ee0667f80c91ef149b810bfd487631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep until a given time point.  <a href="group__cmsis-plus-iso.html#ga03ee0667f80c91ef149b810bfd487631">More...</a><br /></td></tr>
-<tr class="separator:ga03ee0667f80c91ef149b810bfd487631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a538f4b42eb77c68d337683d0b2b4fed1"></a>
+<a class="anchor" id="a50bbf396f7bdd33e9f19057a7edad74a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CMSIS_PLUS_STD_THREAD_</td>
+          <td class="memname">#define CMSIS_PLUS_ESTD_THREAD_</td>
         </tr>
       </table>
 </div><div class="memdoc">

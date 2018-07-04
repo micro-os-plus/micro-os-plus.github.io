@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>Scheduler</title>
-  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source system, written in C++.">
+  <meta name="description" content="The third edition of µOS++, a POSIX inspired open source framework, written in C++.">
 
   <meta property="og:title" content="Scheduler">
   <meta property="og:site_name" content="µOS++ IIIe">
@@ -28,11 +28,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201608151703" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201608151703" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css?201807041643" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="http://micro-os-plus.github.io/micro-os-plus/i/Scheduler/">
+  <link rel="canonical" href="/micro-os-plus/i/Scheduler/">
 
 
 
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td class="site-description" colspan="2">
-              The third edition of µOS++, a POSIX inspired open source system, written in C++.
+              The third edition of µOS++, a POSIX inspired open source framework, written in C++.
             </td>
           </tr>
         </table>
@@ -132,10 +132,10 @@
       <h4 id="news"><a href="/blog/">News</a></h4>
 
 <ul>
+  <li><a href="/blog/2018/07/04/micro-os-plus-v6-3-14-released/">µOS++ IIIe v6.3.14 released</a></li>
   <li><a href="/blog/2017/08/26/micro-os-plus-v6-3-13-released/">µOS++ IIIe v6.3.13 released</a></li>
   <li><a href="/blog/2017/01/02/micro-os-plus-v6-3-11-released/">µOS++ IIIe v6.3.11 released</a></li>
   <li><a href="/blog/2016/11/27/micro-os-plus-v6-3-10-released/">µOS++ IIIe v6.3.10 released</a></li>
-  <li><a href="/blog/2016/10/13/micro-os-plus-v6-3-9-released/">µOS++ IIIe v6.3.9 released</a></li>
 </ul>
 
 
@@ -241,7 +241,7 @@
 <h1 class="page-title">Scheduler - DEPRECATED</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Page date Thu Mar  3 13:35:53 2011 UTC.</td>
+    <td id="last-modified">Page date Thu Mar  3 13:35:53 2011 .</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/micro-os-plus.github.io-source/edit/master/pages/micro-os-plus/i/Scheduler.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -507,15 +507,21 @@
 <h2 id="starting-methods">Starting methods</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void start(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void start(void);
 </code></pre>
+</div>
 </div>
 
 <p>Enable the scheduler to run and start the task with the highest priority. This function is automatically called in the default <strong>main()</strong> function, called after all static constructors were executed.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool isRunning(void);
+<div class="highlight">
+<pre class="highlight">
+<code>bool isRunning(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return true if the the scheduler was started. Please note that once started, the scheduler cannot be stopped, so this function will return false before <strong>main()</strong> (i.e. while running static constructors) and true after <strong>main()</strong>.</p>
@@ -523,29 +529,41 @@
 <h2 id="locking-methods">Locking methods</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void lock(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void lock(void);
 </code></pre>
+</div>
 </div>
 
 <p>Lock the scheduler to the current task, i.e. do not allow the scheduler to switch to another task. Please note that interrupts are not affected, the interrupt service routines will be executed normally and event notifications might wakeup tasks with higher priorities, but switching to another task will be permited only after <strong>unlock()</strong>. While locked, <strong>yield()</strong> will immediately return to the same task, and <strong>eventWait()</strong> will immediately return with OSEventWaitReturn::OS_LOCKED.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void unlock(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void unlock(void);
 </code></pre>
+</div>
 </div>
 
 <p>Unlock the scheduler, so at the next rescheduling moment another task might get the CPU.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool isLocked(void);
+<div class="highlight">
+<pre class="highlight">
+<code>bool isLocked(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return true if the scheduler is locked.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void setLock(bool flag);
+<div class="highlight">
+<pre class="highlight">
+<code>void setLock(bool flag);
 </code></pre>
+</div>
 </div>
 
 <p>Lock the scheduler if the flag is true, unlock otherwise.</p>
@@ -553,15 +571,21 @@
 <h2 id="preemption-methods">Preemption methods</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>bool isPreemptive(void);
+<div class="highlight">
+<pre class="highlight">
+<code>bool isPreemptive(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return true if the scheduler runs in preemptive mode.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void setPreemptive(bool flag);
+<div class="highlight">
+<pre class="highlight">
+<code>void setPreemptive(bool flag);
 </code></pre>
+</div>
 </div>
 
 <p>Set the scheduler to run in cooperative mode if flag is false, set to preemptive mode if flag is true (default).</p>
@@ -569,29 +593,41 @@
 <h2 id="task-management-methods">Task management methods</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSTask *getTaskCurrent(void);
+<div class="highlight">
+<pre class="highlight">
+<code>OSTask *getTaskCurrent(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return a pointer to the task currently running on the CPU.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSTask *getTaskIdle(void);
+<div class="highlight">
+<pre class="highlight">
+<code>OSTask *getTaskIdle(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return a pointer to the Idle task.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>int getTasksCount(void);
+<div class="highlight">
+<pre class="highlight">
+<code>int getTasksCount(void);
 </code></pre>
+</div>
 </div>
 
 <p>Return the number of tasks registered to the scheduler.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>OSTask *getTask(int i);
+<div class="highlight">
+<pre class="highlight">
+<code>OSTask *getTask(int i);
 </code></pre>
+</div>
 </div>
 
 <p>Return the i-th task registered to the scheduler, or <strong>OS_TASK_NONE</strong> for illegal index.</p>
@@ -599,15 +635,21 @@
 <h2 id="system-critical-section-methods">System critical section methods</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void criticalEnter(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void criticalEnter(void);
 </code></pre>
+</div>
 </div>
 
 <p>Enter a critical section, i.e. a section where interrupts are not allowed. It is mandatory to be braced by a <strong>criticalExit()</strong>, failure to do so leads to unexpected results. The usual implementations save the current status of the interrupt flag and disable interrupts.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void criticalExit(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void criticalExit(void);
 </code></pre>
+</div>
 </div>
 
 <p>Exit critical section. Usual implementations restore the interrupt flag to the value saved by <strong>criticalEnter()</strong>.</p>
@@ -615,8 +657,11 @@
 <h2 id="yield-method">Yield method</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>void yield(void);
+<div class="highlight">
+<pre class="highlight">
+<code>void yield(void);
 </code></pre>
+</div>
 </div>
 
 <p>Suspend the current task and reschedule the CPU to the next task.</p>
@@ -630,7 +675,9 @@
 <h2 id="using-application-critical-sections">Using application critical sections</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>// ...
+<div class="highlight">
+<pre class="highlight">
+<code>// ...
 os.sched.lock();
   {
     // ...
@@ -640,13 +687,16 @@ os.sched.unlock();
 // ...
 </code></pre>
 </div>
+</div>
 
 <p>Application critical sections are required for syncronization events triggered by other application tasks. The braced code is guaranteed to be executed atomically within the current task, without sharing the CPU with other tasks. However interrupts remain active and interrupts services routines are normally executed; for synchronization events triggered by interrupts please use system critical sections.</p>
 
 <h2 id="using-system-critical-sections">Using system critical sections</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>// ...
+<div class="highlight">
+<pre class="highlight">
+<code>// ...
 os.sched.criticalEnter();
   {
     // ...
@@ -656,13 +706,16 @@ os.sched.criticalExit();
 // ...
 </code></pre>
 </div>
+</div>
 
 <p>System critical sections are required for syncronization events triggered by interrupt service routines. The braced code is guaranteed to be executed atomically with interrupts disabled. Should be used with caution, since long critical sections may degrade system performance.</p>
 
 <h2 id="enumerating-registered-tasks">Enumerating registered tasks</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>// ...
+<div class="highlight">
+<pre class="highlight">
+<code>// ...
 os.sched.lock();
   {
     int i;
@@ -680,6 +733,7 @@ os.sched.lock();
 os.sched.unlock();
 // ...
 </code></pre>
+</div>
 </div>
 
 <p>Enumerate all registered tasks, including the idle task.</p>
@@ -710,7 +764,7 @@ os.sched.unlock();
   <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2017 Liviu Ionescu</li>
+  <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub</li>
   <li>
     <p><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></p>

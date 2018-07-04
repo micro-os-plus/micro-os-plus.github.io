@@ -44,7 +44,7 @@
   <td id="projectalign">
    <div>
      <div id="projectname">µOS++ IIIe Reference
-     &#160;<span id="projectnumber">v6.3.13</span>
+     &#160;<span id="projectnumber">v6.3.14</span>
      </div>
      <div id="projectmotto" class="float:right;">“Perfekt ist nicht gut genug”</div>
      </div>  
@@ -132,12 +132,13 @@ $(document).ready(function(){initNavTree('c-syscalls-posix_8cpp.html','');});
 <code>#include &lt;<a class="el" href="types_8h_source.html">cmsis-plus/posix-io/types.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="file-descriptors-manager_8h_source.html">cmsis-plus/posix-io/file-descriptors-manager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="io_8h_source.html">cmsis-plus/posix-io/io.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="device-char_8h_source.html">cmsis-plus/posix-io/device-char.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="char-device_8h_source.html">cmsis-plus/posix-io/char-device.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="tty_8h_source.html">cmsis-plus/posix-io/tty.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="file_8h_source.html">cmsis-plus/posix-io/file.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="file-system_8h_source.html">cmsis-plus/posix-io/file-system.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="mount-manager_8h_source.html">cmsis-plus/posix-io/mount-manager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="directory_8h_source.html">cmsis-plus/posix-io/directory.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="io_2socket_8h_source.html">cmsis-plus/posix-io/socket.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="net-stack_8h_source.html">cmsis-plus/posix-io/net-stack.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="uio_8h_source.html">cmsis-plus/posix/sys/uio.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
 <code>#include &lt;cstdarg&gt;</code><br />
@@ -173,6 +174,8 @@ Functions</h2></td></tr>
 <tr class="separator:a64d6e50003dd97a34f8318cdd6174489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace398f7a1c5612801dde978d6438dbca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#ace398f7a1c5612801dde978d6438dbca">__posix_fstat</a> (int fildes, struct <a class="el" href="group__cmsis-plus-posix-io-c.html#ga3dc1b07404b646712a144e2057359876">stat</a> *buf)</td></tr>
 <tr class="separator:ace398f7a1c5612801dde978d6438dbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bee5d5f1404207e78d3f858ecfc08b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a8bee5d5f1404207e78d3f858ecfc08b8">__posix_fstatvfs</a> (int fildes, struct <a class="el" href="structstatvfs.html">statvfs</a> *buf)</td></tr>
+<tr class="separator:a8bee5d5f1404207e78d3f858ecfc08b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c962e1af51b34f7326b4d86699557f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a3c962e1af51b34f7326b4d86699557f8">__posix_fsync</a> (int fildes)</td></tr>
 <tr class="separator:a3c962e1af51b34f7326b4d86699557f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7edf92787c143bc2632bc27af1ed22fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a7edf92787c143bc2632bc27af1ed22fd">__posix_ftruncate</a> (int fildes, off_t length)</td></tr>
@@ -251,12 +254,24 @@ Functions</h2></td></tr>
 <tr class="separator:afce04c487ec7f76ea85024803eb16fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af901694b9760411f0d8da9102054e1a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#af901694b9760411f0d8da9102054e1a4">__posix_stat</a> (const char *path, struct <a class="el" href="group__cmsis-plus-posix-io-c.html#ga3dc1b07404b646712a144e2057359876">stat</a> *buf)</td></tr>
 <tr class="separator:af901694b9760411f0d8da9102054e1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b372c746f7e5c87b9ea465f5ff6c9ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a0b372c746f7e5c87b9ea465f5ff6c9ae">__posix_statvfs</a> (const char *path, struct <a class="el" href="structstatvfs.html">statvfs</a> *buf)</td></tr>
+<tr class="separator:a0b372c746f7e5c87b9ea465f5ff6c9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e494c9ab9e5cf8a4270f62e75ce6081"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a5e494c9ab9e5cf8a4270f62e75ce6081">__posix_symlink</a> (const char *existing, const char *_new)</td></tr>
 <tr class="separator:a5e494c9ab9e5cf8a4270f62e75ce6081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0feac2d2ada76dd9831ce8fde58c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a2f0feac2d2ada76dd9831ce8fde58c6e">__posix_sync</a> (void)</td></tr>
 <tr class="separator:a2f0feac2d2ada76dd9831ce8fde58c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0242e09ba0472134f85ba2b5864cc286"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a0242e09ba0472134f85ba2b5864cc286">__posix_system</a> (const char *command)</td></tr>
 <tr class="separator:a0242e09ba0472134f85ba2b5864cc286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7eacab461e7ad4ce2acf2be5b28f28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a9a7eacab461e7ad4ce2acf2be5b28f28">__posix_tcdrain</a> (int fildes)</td></tr>
+<tr class="separator:a9a7eacab461e7ad4ce2acf2be5b28f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745ad251d48ebd1d5b99795bc1b2d20a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a745ad251d48ebd1d5b99795bc1b2d20a">__posix_tcflush</a> (int fildes, int queue_selector)</td></tr>
+<tr class="separator:a745ad251d48ebd1d5b99795bc1b2d20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04eeb67fd0a377a1bb2e9fac226637e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a04eeb67fd0a377a1bb2e9fac226637e9">__posix_tcgetattr</a> (int fildes, struct <a class="el" href="structtermios.html">termios</a> *termios_p)</td></tr>
+<tr class="separator:a04eeb67fd0a377a1bb2e9fac226637e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5fdbed7c03946bedc1ac7fdb9f91e10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#af5fdbed7c03946bedc1ac7fdb9f91e10">__posix_tcsendbreak</a> (int fildes, int duration)</td></tr>
+<tr class="separator:af5fdbed7c03946bedc1ac7fdb9f91e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32706c84395d230894cd69cdb97bc72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#af32706c84395d230894cd69cdb97bc72">__posix_tcsetattr</a> (int fildes, int optional_actions, const struct <a class="el" href="structtermios.html">termios</a> *termios_p)</td></tr>
+<tr class="separator:af32706c84395d230894cd69cdb97bc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0b8804a972fa7ed4ca60cef72ec15c4"><td class="memItemLeft" align="right" valign="top">clock_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#af0b8804a972fa7ed4ca60cef72ec15c4">__posix_times</a> (struct tms *buf)</td></tr>
 <tr class="separator:af0b8804a972fa7ed4ca60cef72ec15c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2443543573855dfd4df04a130d3e651c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c-syscalls-posix_8cpp.html#a2443543573855dfd4df04a130d3e651c">__posix_truncate</a> (const char *path, off_t length)</td></tr>
@@ -305,7 +320,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00453">453</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00582">582</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +354,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00466">466</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00595">595</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +372,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00708">708</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00839">839</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +400,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00309">309</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00432">432</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +434,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00781">781</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00912">912</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +452,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00725">725</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00856">856</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +470,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00107">107</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00108">108</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -473,7 +488,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00408">408</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00537">537</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -507,7 +522,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00478">478</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00607">607</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +556,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00732">732</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00863">863</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +590,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00236">236</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00339">339</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -593,7 +608,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00739">739</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00870">870</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +636,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00254">254</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00357">357</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bee5d5f1404207e78d3f858ecfc08b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_fstatvfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structstatvfs.html">statvfs</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00369">369</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +682,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00286">286</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00409">409</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -667,7 +710,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00266">266</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00389">389</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -695,7 +738,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00715">715</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00846">846</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -729,7 +772,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00491">491</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00620">620</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -747,7 +790,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00746">746</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00877">877</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -781,7 +824,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00504">504</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00633">633</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -827,7 +870,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00517">517</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00646">646</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -855,7 +898,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00686">686</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00815">815</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +932,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00169">169</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00170">170</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -910,7 +953,7 @@ Functions</h2></td></tr>
 <p>Test for a terminal device. </p>
 <p>This function shall test whether <em>fildes</em>, an open file descriptor, is associated with a terminal device. </p>
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00220">220</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00221">221</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -938,7 +981,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00753">753</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00884">884</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +1009,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00788">788</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00919">919</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1037,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00530">530</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00659">659</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1071,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00194">194</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00195">195</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1099,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00348">348</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00477">477</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1136,7 @@ Functions</h2></td></tr>
 <p>Open file relative to directory file descriptor. </p>
 <p>The <code><a class="el" href="group__cmsis-plus-posix-io-c.html#ga62e93eb794fed24c0f46c6acda6ea510">open()</a></code> function shall establish the connection between a file and a file descriptor. It shall create an open file description that refers to a file and a file descriptor that refers to that open file description. The file descriptor is used by other I/O functions to refer to that file. The <em>path</em> argument points to a pathname naming the file. </p>
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00089">89</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00090">90</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1154,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00369">369</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00498">498</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1172,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00760">760</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00891">891</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1206,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00123">123</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00124">124</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1181,7 +1224,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00375">375</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00504">504</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1215,7 +1258,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00672">672</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00801">801</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1249,7 +1292,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00802">802</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00933">933</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1332,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00542">542</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00671">671</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1384,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00554">554</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00683">683</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1418,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00567">567</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00696">696</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1446,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00327">327</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00450">450</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1464,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00396">396</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00525">525</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1439,7 +1482,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00354">354</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00483">483</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1528,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00693">693</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00824">824</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1568,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00579">579</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00708">708</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1602,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00591">591</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00720">720</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1654,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00603">603</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00732">732</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1657,7 +1700,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00616">616</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00745">745</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1728,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00629">629</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00758">758</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1746,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00641">641</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00770">770</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1737,7 +1780,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00432">432</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00561">561</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1777,7 +1820,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00679">679</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00808">808</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1805,7 +1848,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00315">315</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00438">438</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b372c746f7e5c87b9ea465f5ff6c9ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_statvfs </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structstatvfs.html">statvfs</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00468">468</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1833,7 +1904,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00795">795</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00926">926</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1851,7 +1922,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00360">360</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00489">489</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1940,143 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00767">767</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00898">898</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a7eacab461e7ad4ce2acf2be5b28f28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_tcdrain </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00237">237</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a745ad251d48ebd1d5b99795bc1b2d20a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_tcflush </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>queue_selector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00299">299</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04eeb67fd0a377a1bb2e9fac226637e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_tcgetattr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structtermios.html">termios</a> *&#160;</td>
+          <td class="paramname"><em>termios_p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00257">257</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5fdbed7c03946bedc1ac7fdb9f91e10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_tcsendbreak </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00319">319</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af32706c84395d230894cd69cdb97bc72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __posix_tcsetattr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optional_actions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structtermios.html">termios</a> *&#160;</td>
+          <td class="paramname"><em>termios_p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00277">277</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1887,7 +2094,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00701">701</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00832">832</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1915,7 +2122,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00321">321</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00444">444</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1933,7 +2140,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00333">333</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00456">456</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1961,7 +2168,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00339">339</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00462">462</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -1979,7 +2186,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00774">774</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00905">905</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -2013,7 +2220,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00140">140</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00141">141</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -2047,7 +2254,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00157">157</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00158">158</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>
@@ -2065,7 +2272,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00814">814</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
+<p>Definition at line <a class="el" href="c-syscalls-posix_8cpp_source.html#l00945">945</a> of file <a class="el" href="c-syscalls-posix_8cpp_source.html">c-syscalls-posix.cpp</a>.</p>
 
 </div>
 </div>

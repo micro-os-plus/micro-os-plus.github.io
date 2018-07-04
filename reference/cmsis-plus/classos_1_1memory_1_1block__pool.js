@@ -3,7 +3,7 @@ var classos_1_1memory_1_1block__pool =
     [ "block_pool", "classos_1_1memory_1_1block__pool.html#a0b3c224b4f4424a665c716303d68e2c1", null ],
     [ "block_pool", "classos_1_1memory_1_1block__pool.html#aa324289a8c8147eb8fb2270b72470418", null ],
     [ "block_pool", "classos_1_1memory_1_1block__pool.html#aef80470ea332e6f902a11682c9b20b91", null ],
-    [ "~block_pool", "classos_1_1memory_1_1block__pool.html#a931dceae0c30262e704005845f046246", null ],
+    [ "~block_pool", "classos_1_1memory_1_1block__pool.html#add326aa007afd07b5d8d732881fc5e3e", null ],
     [ "allocate", "classos_1_1memory_1_1block__pool.html#a5284ae746c3d0f71a02acdb9ed69f815", null ],
     [ "allocated_bytes", "classos_1_1memory_1_1block__pool.html#a4461f324ac21f845527f391ce47c2dd0", null ],
     [ "allocated_chunks", "classos_1_1memory_1_1block__pool.html#a2f4e57e4e77ead637b0720a9c6fee762", null ],

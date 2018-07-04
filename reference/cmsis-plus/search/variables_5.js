@@ -3,6 +3,7 @@ var searchData=
   ['endpoint_5fdirection_5fmask',['ENDPOINT_DIRECTION_MASK',['../namespaceos_1_1driver_1_1usb.html#a548c62407c11ed606e4cc5cc7f55fe34',1,'os::driver::usb']]],
   ['endpoint_5fmax_5fpacket_5fsize_5fmask',['ENDPOINT_MAX_PACKET_SIZE_MASK',['../namespaceos_1_1driver_1_1usb.html#a35b05d720a148af938e1ea8e2716c8e8',1,'os::driver::usb']]],
   ['endpoint_5fnumber_5fmask',['ENDPOINT_NUMBER_MASK',['../namespaceos_1_1driver_1_1usb.html#a930a5ac1ebd04a3adb8a9febd9f82d87',1,'os::driver::usb']]],
+  ['errno_5f',['errno_',['../classos_1_1rtos_1_1thread.html#a649c72d336c3b64853965f5f96c28755',1,'os::rtos::thread']]],
   ['error',['ERROR',['../namespaceos_1_1driver.html#aa0c726a6c160b3f630ad0f45db91e789',1,'os::driver']]],
   ['error_5fbaudrate',['ERROR_BAUDRATE',['../namespaceos_1_1driver_1_1serial.html#ac9029ae92680c24acdaa4bc99cad32b2',1,'os::driver::serial']]],
   ['error_5fbusy',['ERROR_BUSY',['../namespaceos_1_1driver.html#ae2d4b937f6d9678989a0d5b33568b19b',1,'os::driver']]],
