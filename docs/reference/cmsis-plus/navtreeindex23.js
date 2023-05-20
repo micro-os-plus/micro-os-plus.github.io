@@ -1,5 +1,9 @@
 var NAVTREEINDEX23 =
 {
+"redefinitions_8h.html#a7768f1286a0b9af467eb4b0eeb3a5314":[6,0,1,0,9,14,18],
+"redefinitions_8h.html#a797f78e62bc335d886b3e77c84f5113f":[6,0,1,0,9,14,5],
+"redefinitions_8h.html#a7fbaa9d9521ef8d200a54300627fbad0":[6,0,1,0,9,14,20],
+"redefinitions_8h.html#a8250df96dadcd1d358db89a0cd247f99":[6,0,1,0,9,14,21],
 "redefinitions_8h.html#a8786e4769eadc9434045ebca3414d014":[6,0,1,0,9,14,45],
 "redefinitions_8h.html#a8881446be0bdf2a8e82b353476024b22":[6,0,1,0,9,14,49],
 "redefinitions_8h.html#a8c37cc80476449837cb1a143093e8ca4":[6,0,1,0,9,14,42],
@@ -218,18 +222,17 @@ var NAVTREEINDEX23 =
 "structiovec.html#a07aeddeccf80f14520fdd7ef0759442b":[5,0,8,0],
 "structiovec.html#a17b5ac2078fd1adfabb262a95808a07d":[5,0,8,1],
 "structosEvent.html":[5,0,44],
+"structosEvent.html#a1e815de1015bac118ccb3e6724401d00":[5,0,44,0],
 "structosEvent.html#a5d2bb38f7be9c75f508646c24d2de4b1":[5,0,44,6],
-"structosEvent.html#a6ab3a136fcbc038e555992db3d3e95ba":[5,0,44,7],
 "structosEvent.html#a70b8f3f364cf158c9e538c5f590d1393":[5,0,44,3],
-"structosEvent.html#a90f9650ceb8eb3a9481270a99caaa47f":[5,0,44,0],
 "structosEvent.html#aafcd2cedd08e033f9df25fd9875caaf2":[5,0,44,5],
 "structosEvent.html#ad63c33b8b5d3bb37b45433d7c67d1e09":[5,0,44,4],
+"structosEvent.html#ad759680596c29d49337e1eacaa839eb8":[5,0,44,7],
 "structosEvent.html#aeeccddfa51120e20a2316e73bdba099a":[5,0,44,1],
 "structosEvent.html#af759bde42477c29f56ed1bf8a19c4db8":[5,0,44,2],
 "structos_1_1estd_1_1____lock__external.html":[5,0,0,1,2],
 "structos_1_1estd_1_1____lock__external.html#abfc124d90062cddb48492ab88e4cbd08":[5,0,0,1,2,0],
 "structos_1_1estd_1_1chrono_1_1has__sleep__for.html":[5,0,0,1,0,0],
-"structos_1_1estd_1_1hash.html":[5,0,0,1,5],
 "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html":[3,2,10,3,0],
 "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html#ae530b0bbf5b8b1a41d4959caaa97fe22":[3,2,10,3,0,0],
 "structos_1_1rtos_1_1mutex_1_1protocol.html":[3,2,7,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX23 =
 "structos_1_1rtos_1_1mutex_1_1type.html":[3,2,7,6],
 "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a11821e1c1c8622e6a40e4f22348e430b":[3,2,7,6,4],
 "structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a13f0f971d2e78a3df70abd60e559f939":[3,2,7,6,0],
-"structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6":[3,2,7,6,3],
-"structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a77c021f70c077e034edf3044329c2d26":[3,2,7,6,1],
-"structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9af017289ec993ae32eaf61107612b857f":[3,2,7,6,2],
-"structos_1_1rtos_1_1thread_1_1priority.html":[3,2,1,3]
+"structos_1_1rtos_1_1mutex_1_1type.html#a236f83dd04e1c18f388949b26fe5f4b9a56455f6bda2e6d1dae18e46057dbead6":[3,2,7,6,3]
 };
