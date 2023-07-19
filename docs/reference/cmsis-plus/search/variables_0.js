@@ -14,6 +14,7 @@ var searchData=
   ['_5fedata_11',['_edata',['../startup_8cpp.html#aa271d502d9a165bb4896f2e4a0e7921b',1,'startup.cpp']]],
   ['_5fheap_5fbegin_12',['_Heap_Begin',['../startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e',1,'startup.cpp']]],
   ['_5fheap_5flimit_13',['_Heap_Limit',['../exception-handlers_8c.html#a5152997e1184b6b02c627062a8b1b1f0',1,'_Heap_Limit:&#160;exception-handlers.c'],['../startup_8cpp.html#a000ff36b580f32054d95c832eae95738',1,'_Heap_Limit:&#160;startup.cpp']]],
-  ['_5fsdata_14',['_sdata',['../startup_8cpp.html#a5003b70cf06371aede7f4f2fb51b8d67',1,'startup.cpp']]],
-  ['_5fsidata_15',['_sidata',['../startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9',1,'startup.cpp']]]
+  ['_5finterrupt_5fvectors_14',['_interrupt_vectors',['../exception-handlers_8c.html#ad8b5e9d3d89e0dae84e940e7c167d087',1,'exception-handlers.c']]],
+  ['_5fsdata_15',['_sdata',['../startup_8cpp.html#a5003b70cf06371aede7f4f2fb51b8d67',1,'startup.cpp']]],
+  ['_5fsidata_16',['_sidata',['../startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9',1,'startup.cpp']]]
 ];

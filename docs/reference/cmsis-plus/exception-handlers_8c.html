@@ -52,7 +52,7 @@ DoxygenAwesomeTabs.init()
  <tr id="projectrow">
   <td id="projectlogo"><a href="$relpath/../../../"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
-   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;6.3.17</span>
+   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;7.0.0</span>
    </div>
    <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source framework, written in C++</div>
   </td>
@@ -118,13 +118,13 @@ $(document).ready(function(){initNavTree('exception-handlers_8c.html',''); initR
 
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">exception-handlers.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cmsis-plus/os-app-config.h&gt;</code><br />
-<code>#include &lt;cmsis-plus/rtos/port/os-c-decls.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;cmsis-plus/rtos/port/os-c-decls.h&gt;</code><br />
 <code>#include &lt;cmsis_device.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="semihosting_8h_source.html">cmsis-plus/arm/semihosting.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="trace_8h_source.html">cmsis-plus/diag/trace.h</a>&gt;</code><br />
@@ -133,6 +133,11 @@ $(document).ready(function(){initNavTree('exception-handlers_8c.html',''); initR
 </div>
 <p><a href="exception-handlers_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ad99f0fb10951609507b5ea3ac3907b70"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exception-handlers_8c.html#ad99f0fb10951609507b5ea3ac3907b70">handler_ptr_t</a>) (void)</td></tr>
+<tr class="separator:ad99f0fb10951609507b5ea3ac3907b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga8b67a6ff3f33fae9b3f1b142005c0bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a> (void)</td></tr>
@@ -155,7 +160,26 @@ Variables</h2></td></tr>
 <tr class="separator:a02439aa1dd4dacc6807cf953370088a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5152997e1184b6b02c627062a8b1b1f0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exception-handlers_8c.html#a5152997e1184b6b02c627062a8b1b1f0">_Heap_Limit</a></td></tr>
 <tr class="separator:a5152997e1184b6b02c627062a8b1b1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b5e9d3d89e0dae84e940e7c167d087"><td class="memItemLeft" align="right" valign="top"><a class="el" href="exception-handlers_8c.html#ad99f0fb10951609507b5ea3ac3907b70">handler_ptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exception-handlers_8c.html#ad8b5e9d3d89e0dae84e940e7c167d087">_interrupt_vectors</a> []</td></tr>
+<tr class="separator:ad8b5e9d3d89e0dae84e940e7c167d087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ad99f0fb10951609507b5ea3ac3907b70" name="ad99f0fb10951609507b5ea3ac3907b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99f0fb10951609507b5ea3ac3907b70">&#9670;&#160;</a></span>handler_ptr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* handler_ptr_t) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00049">49</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a6ad7a5e3ee69cb6db6a6b9111ba898bc" name="a6ad7a5e3ee69cb6db6a6b9111ba898bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ad7a5e3ee69cb6db6a6b9111ba898bc">&#9670;&#160;</a></span>NMI_Handler()</h2>
@@ -173,7 +197,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00091">91</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00119">119</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
 
 </div>
 </div>
@@ -193,7 +217,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00698">698</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00726">726</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
 
 </div>
 </div>
@@ -213,7 +237,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00079">79</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00083">83</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
 
 </div>
 </div>
@@ -233,7 +257,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00658">658</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00686">686</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
 
 </div>
 </div>
@@ -253,7 +277,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00718">718</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00746">746</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
 
 </div>
 </div>
@@ -291,6 +315,28 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">unsigned int _Heap_Limit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8b5e9d3d89e0dae84e940e7c167d087" name="ad8b5e9d3d89e0dae84e940e7c167d087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b5e9d3d89e0dae84e940e7c167d087">&#9670;&#160;</a></span>_interrupt_vectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="exception-handlers_8c.html#ad99f0fb10951609507b5ea3ac3907b70">handler_ptr_t</a> _interrupt_vectors[]</td>
         </tr>
       </table>
   </td>

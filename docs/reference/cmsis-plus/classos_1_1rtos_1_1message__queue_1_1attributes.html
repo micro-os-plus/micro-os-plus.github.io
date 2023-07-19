@@ -52,7 +52,7 @@ DoxygenAwesomeTabs.init()
  <tr id="projectrow">
   <td id="projectlogo"><a href="$relpath/../../../"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
-   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;6.3.17</span>
+   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;7.0.0</span>
    </div>
    <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source framework, written in C++</div>
   </td>
@@ -175,9 +175,10 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Message queue attributes. </p>
 <p>Allow to assign a name and custom attributes (like a static address) to the message queue.</p>
 <p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
+<p>If the attributes are modified <b>after</b> the <a class="el" href="classos_1_1rtos_1_1message__queue.html" title="POSIX compliant message queue, using the default RTOS allocator.">message_queue</a> creation, the <a class="el" href="classos_1_1rtos_1_1message__queue.html" title="POSIX compliant message queue, using the default RTOS allocator.">message_queue</a> attributes shall not be affected.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>mq_attr</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/mqueue.h.html">&lt;mqueue.h&gt;</a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00142">142</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00151">151</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7bde696df24d7a139eccab60a03351ba" name="a7bde696df24d7a139eccab60a03351ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bde696df24d7a139eccab60a03351ba">&#9670;&#160;</a></span>attributes() <span class="overload">[1/3]</span></h2>
@@ -205,7 +206,7 @@ Public Attributes</h2></td></tr>
 <p>Construct a message queue attributes object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l01257">1257</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l01274">1274</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +387,7 @@ Public Attributes</h2></td></tr>
 <p>Set this variable to a user defined memory area large enough to store the message queue. Usually this is a statically allocated array of structures.</p>
 <p>The default value is <code>nullptr</code>, which means there is no user defined message queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00188">188</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00197">197</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +407,7 @@ Public Attributes</h2></td></tr>
 <p>The message queue size must match exactly the allocated size. It is used for validation; when the message queue is initialised, this size must be large enough to accommodate the desired message queue.</p>
 <p>If the <a class="el" href="classos_1_1rtos_1_1message__queue_1_1attributes.html#a7c679f6f48c4899a02d684e50d87b7d5">mq_queue_address</a> is <code>nullptr</code>, this variable is not checked, but it is recommended to leave it zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00193">193</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mqueue_8h_source.html#l00202">202</a> of file <a class="el" href="os-mqueue_8h_source.html">os-mqueue.h</a>.</p>
 
 </div>
 </div>

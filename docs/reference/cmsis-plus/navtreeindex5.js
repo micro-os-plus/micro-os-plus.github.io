@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"classos_1_1memory_1_1block__pool__typed__inclusive.html#ad208c11d7df324b8bf0a010f29d88f50":[3,2,10,6,27],
 "classos_1_1memory_1_1block__pool__typed__inclusive.html#ade278db4233cd15ab7e5519299a01a3b":[3,2,10,6,10],
 "classos_1_1memory_1_1block__pool__typed__inclusive.html#ae6c44b3b065fd27a202d1a3dfa2f285f":[3,2,10,6,18],
 "classos_1_1memory_1_1block__pool__typed__inclusive.html#af029ff63ffcaafd58f00bfb6714a2b96":[3,2,10,6,16],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "classos_1_1memory_1_1malloc__memory__resource.html#ad208c11d7df324b8bf0a010f29d88f50":[3,2,10,13,24],
 "classos_1_1memory_1_1malloc__memory__resource.html#adb39a31a29906bdad4b6e2d078895ebc":[3,2,10,13,2],
 "classos_1_1memory_1_1malloc__memory__resource.html#adc6355ad4ab33455ad63598b7ddae8b1":[3,2,10,13,1],
-"classos_1_1memory_1_1malloc__memory__resource.html#ade278db4233cd15ab7e5519299a01a3b":[3,2,10,13,9]
+"classos_1_1memory_1_1malloc__memory__resource.html#ade278db4233cd15ab7e5519299a01a3b":[3,2,10,13,9],
+"classos_1_1memory_1_1malloc__memory__resource.html#ae6c44b3b065fd27a202d1a3dfa2f285f":[3,2,10,13,17]
 };

@@ -52,7 +52,7 @@ DoxygenAwesomeTabs.init()
  <tr id="projectrow">
   <td id="projectlogo"><a href="$relpath/../../../"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
-   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;6.3.17</span>
+   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;7.0.0</span>
    </div>
    <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source framework, written in C++</div>
   </td>
@@ -236,7 +236,7 @@ v6.3.8 2016-10-05</h2>
 <h2><a class="anchor" id="autotoc_md15"></a>
 v6.3.7 2016-09-14</h2>
 <ul>
-<li>always include <code><a class="el" href="assert_8c.html#a2532ff72b1a2ff82f65e8c2a5a4dde00">assert_failed()</a></code> (used by STM HAL)</li>
+<li>always include <code>assert_failed()</code> (used by STM HAL)</li>
 <li>for ARMv7-M, in default handlers use BKPT(0) only if C_DEBUGEN is enabled, to prevent crashes when not connected to debugger</li>
 <li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7" title="Hook to enter a power saving mode.">os_rtos_idle_enter_power_saving_mode_hook()</a></code></li>
 <li>rename include folder <code>cmsis-plus/iso</code> -&gt; <code>cmsis-plus/estd</code></li>
@@ -260,7 +260,7 @@ v6.3.7 2016-09-14</h2>
 <li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga85eb51a7565c1bc022d222fc04e97059" title="Get the interrupts stack.">os_irq_get_stack()</a></code> to the C API</li>
 <li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772" title="Display statistics and say goodbye before terminating.">os_terminate_goodbye()</a></code> to display memory usage statistics</li>
 <li>refubish the exit code to avoid crashes when building freestanding apps</li>
-<li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">os_initialize_args()</a></code> -&gt; <code><a class="el" href="types_8h.html#a93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args()</a></code></li>
+<li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">os_initialize_args()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61" title="Initialise arguments.">os_startup_initialize_args()</a></code></li>
 <li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">os_initialize_hardware_early()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d" title="Initialise hardware early.">os_startup_initialize_hardware_early()</a></code></li>
 <li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">os_initialize_hardware()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware.">os_startup_initialize_hardware()</a></code></li>
 <li>add <em>out of memory</em> hooks to memory managers</li>

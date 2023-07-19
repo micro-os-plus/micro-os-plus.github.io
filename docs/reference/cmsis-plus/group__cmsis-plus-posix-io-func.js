@@ -12,6 +12,6 @@ var group__cmsis_plus_posix_io_func =
     [ "os::posix::sync", "group__cmsis-plus-posix-io-func.html#gad5309901087cd298df78d41b506a0811", null ],
     [ "os::posix::truncate", "group__cmsis-plus-posix-io-func.html#gace59eb3cca75ecd52f2107607a724343", null ],
     [ "os::posix::unlink", "group__cmsis-plus-posix-io-func.html#ga0cb17f1d94046e9eaad21660b452c52e", null ],
-    [ "os::posix::utime", "group__cmsis-plus-posix-io-func.html#ga6469a590d7e00e96fbde23474dcdc5ff", null ],
+    [ "os::posix::utime", "group__cmsis-plus-posix-io-func.html#ga01fdd4358b6c87da939fd37ace06f600", null ],
     [ "os::posix::vopen", "group__cmsis-plus-posix-io-func.html#ga320bee7d0accfdf461a5d89ef79b90ba", null ]
 ];

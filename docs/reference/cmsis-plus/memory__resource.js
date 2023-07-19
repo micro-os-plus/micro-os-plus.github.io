@@ -2,7 +2,6 @@ var memory__resource =
 [
     [ "os::estd::pmr::polymorphic_allocator< T >", "classos_1_1estd_1_1pmr_1_1polymorphic__allocator.html", "classos_1_1estd_1_1pmr_1_1polymorphic__allocator" ],
     [ "memory_resource", "memory__resource.html#a1a9b09f8187dcfee7e91c01b7b0731ba", null ],
-    [ "__throw_bad_alloc", "memory__resource.html#afdfb11bebd11da95682c3379cd1b48a9", null ],
     [ "get_default_resource", "memory__resource.html#ga984b9c524b3d5f8eaa560e4f98c55928", null ],
     [ "new_delete_resource", "memory__resource.html#ga8f397e557371996c5f32b40532e8ca9b", null ],
     [ "null_memory_resource", "memory__resource.html#gacfbbe9d8cb4c6a8358adff7d21dd590f", null ],

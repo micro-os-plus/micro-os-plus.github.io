@@ -18,6 +18,7 @@ var group__cmsis_plus_app_config_trace =
     [ "OS_TRACE_RTOS_SCHEDULER", "group__cmsis-plus-app-config-trace.html#ga812d5625eff1fa1e742904fcd1deb0df", null ],
     [ "OS_TRACE_RTOS_SEMAPHORE", "group__cmsis-plus-app-config-trace.html#gab785125128a110d270bc946392d534b7", null ],
     [ "OS_TRACE_RTOS_SYSCLOCK_TICK", "group__cmsis-plus-app-config-trace.html#ga48866b89110f8e75c2b99e34d4e646cc", null ],
+    [ "OS_TRACE_RTOS_SYSCLOCK_TICK_BRACES", "group__cmsis-plus-app-config-trace.html#ga2d7f0de76ab17d6b9e54682466800c4d", null ],
     [ "OS_TRACE_RTOS_THREAD", "group__cmsis-plus-app-config-trace.html#gace2dc3105c18c670c09567686521341c", null ],
     [ "OS_TRACE_RTOS_THREAD_CONTEXT", "group__cmsis-plus-app-config-trace.html#ga7fb5ff380a08c210ed16b294271e4f95", null ],
     [ "OS_TRACE_RTOS_THREAD_FLAGS", "group__cmsis-plus-app-config-trace.html#ga50c9ec642e06fc5ec40b08117675041a", null ],

@@ -52,7 +52,7 @@ DoxygenAwesomeTabs.init()
  <tr id="projectrow">
   <td id="projectlogo"><a href="$relpath/../../../"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
-   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;6.3.17</span>
+   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;7.0.0</span>
    </div>
    <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source framework, written in C++</div>
   </td>
@@ -123,98 +123,89 @@ $(document).ready(function(){initNavTree('os-hooks_8h_source.html',''); initResi
 <a href="os-hooks_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * This file is part of the µOS++ distribution.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *   (https://github.com/micro-os-plus)</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2016 Liviu Ionescu.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2016-2023 Liviu Ionescu. All rights reserved.</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Permission is hereby granted, free of charge, to any person</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * obtaining a copy of this software and associated documentation</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * files (the &quot;Software&quot;), to deal in the Software without</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * restriction, including without limitation the rights to use,</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * copy, modify, merge, publish, distribute, sublicense, and/or</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * sell copies of the Software, and to permit persons to whom</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * the Software is furnished to do so, subject to the following</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * conditions:</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * The above copyright notice and this permission notice shall be</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * included in all copies or substantial portions of the Software.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * OTHER DEALINGS IN THE SOFTWARE.</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef CMSIS_PLUS_RTOS_OS_HOOKS_H_</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define CMSIS_PLUS_RTOS_OS_HOOKS_H_</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  __attribute__ ((noreturn))</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">   90</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a> (<span class="keywordtype">void</span>* heap_address, <span class="keywordtype">size_t</span> heap_size_bytes);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a> (<span class="keywordtype">int</span>* p_argc, <span class="keywordtype">char</span>*** p_argv);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">  108</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">os_startup_create_thread_idle</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Permission to use, copy, modify, and/or distribute this software</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * for any purpose is hereby granted, under the terms of the MIT license.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * If a copy of the license was not distributed with this file, it can</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * be obtained from https://opensource.org/licenses/mit/.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef CMSIS_PLUS_RTOS_OS_HOOKS_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define CMSIS_PLUS_RTOS_OS_HOOKS_H_</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wreserved-identifier&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wredundant-decls&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  __attribute__ ((noreturn))</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">   81</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a> (<span class="keywordtype">void</span>* heap_address, <span class="keywordtype">size_t</span> heap_size_bytes);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a> (<span class="keywordtype">int</span>* p_argc, <span class="keywordtype">char</span>*** p_argv);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">   99</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">os_startup_create_thread_idle</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772">os_terminate_goodbye</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772">os_terminate_goodbye</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  __attribute__ ((noreturn))</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">  137</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">os_terminate</a> (<span class="keywordtype">int</span> code);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">bool</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7">os_rtos_idle_enter_power_saving_mode_hook</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga6aa820f05a12d8ca33e2940f335f8959">os_rtos_application_out_of_memory_hook</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gae1529966372cdc4b3c19aaee9e419e5f">os_rtos_system_out_of_memory_hook</a> (<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">  187</a></span><span class="preprocessor">#define os_initialize_hardware_early os_startup_initialize_hardware_early</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">  188</a></span><span class="preprocessor">#define os_initialize_hardware os_startup_initialize_hardware</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">  189</a></span><span class="preprocessor">#define os_initialize_args os_startup_initialize_args</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#endif </span><span class="comment">/* CMSIS_PLUS_RTOS_OS_HOOKS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  __attribute__ ((noreturn))</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">  128</a></span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">os_terminate</a> (<span class="keywordtype">int</span> code);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7">os_rtos_idle_enter_power_saving_mode_hook</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga6aa820f05a12d8ca33e2940f335f8959">os_rtos_application_out_of_memory_hook</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gae1529966372cdc4b3c19aaee9e419e5f">os_rtos_system_out_of_memory_hook</a> (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">  178</a></span><span class="preprocessor">#define os_initialize_hardware_early os_startup_initialize_hardware_early</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">  179</a></span><span class="preprocessor">#define os_initialize_hardware os_startup_initialize_hardware</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">  180</a></span><span class="preprocessor">#define os_initialize_args os_startup_initialize_args</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#if defined(__cplusplus)</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif </span><span class="comment">/* CMSIS_PLUS_RTOS_OS_HOOKS_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga01b26889454af3742929c1996401bb40"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga01b26889454af3742929c1996401bb40">os_startup_create_thread_idle</a></div><div class="ttdeci">void os_startup_create_thread_idle(void)</div><div class="ttdoc">Create the idle thread.</div></div>
 <div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga348982bfc48b68b86a9771dbda12c505"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a></div><div class="ttdeci">void os_startup_initialize_free_store(void *heap_address, size_t heap_size_bytes)</div><div class="ttdoc">Initialise free store.</div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga5d70c5328916fbd871e99173c6c2375d"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a></div><div class="ttdeci">void os_startup_initialize_hardware_early(void)</div><div class="ttdoc">Initialise hardware early.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00060">initialize-hardware.c:60</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga5d70c5328916fbd871e99173c6c2375d"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a></div><div class="ttdeci">void os_startup_initialize_hardware_early(void)</div><div class="ttdoc">Initialise hardware early.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00055">initialize-hardware.c:55</a></div></div>
 <div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga65cb603487e23470319b222097c9e95e"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga65cb603487e23470319b222097c9e95e">os_terminate</a></div><div class="ttdeci">void os_terminate(int code)</div><div class="ttdoc">Terminate the application. There is no more life after this.</div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga6771db6e5df087433ff0e4cb407de772"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772">os_terminate_goodbye</a></div><div class="ttdeci">void os_terminate_goodbye(void)</div><div class="ttdoc">Display statistics and say goodbye before terminating.</div><div class="ttdef"><b>Definition</b> <a href="os-main_8cpp_source.html#l00187">os-main.cpp:187</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga6aa820f05a12d8ca33e2940f335f8959"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga6aa820f05a12d8ca33e2940f335f8959">os_rtos_application_out_of_memory_hook</a></div><div class="ttdeci">void os_rtos_application_out_of_memory_hook(void)</div><div class="ttdoc">Hook to handle out of memory in the application free store.</div><div class="ttdef"><b>Definition</b> <a href="initialise-free-store_8cpp_source.html#l00293">initialise-free-store.cpp:293</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga8b67a6ff3f33fae9b3f1b142005c0bc2"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a></div><div class="ttdeci">void _start(void)</div><div class="ttdoc">The standard C application entry point.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00258">startup.cpp:258</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga93965d610e08f0905fc7c8dff44bed61"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a></div><div class="ttdeci">void os_startup_initialize_args(int *p_argc, char ***p_argv)</div><div class="ttdoc">Initialise arguments.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00413">startup.cpp:413</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gaaac13d67ff6331d34415f14b5029eeb7"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7">os_rtos_idle_enter_power_saving_mode_hook</a></div><div class="ttdeci">bool os_rtos_idle_enter_power_saving_mode_hook(void)</div><div class="ttdoc">Hook to enter a power saving mode.</div><div class="ttdef"><b>Definition</b> <a href="os-idle_8cpp_source.html#l00063">os-idle.cpp:63</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gab9703b4858dc67c7bae54570ffa4ea4f"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a></div><div class="ttdeci">void os_startup_initialize_hardware(void)</div><div class="ttdoc">Initialise hardware.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00120">initialize-hardware.c:120</a></div></div>
-<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gae1529966372cdc4b3c19aaee9e419e5f"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gae1529966372cdc4b3c19aaee9e419e5f">os_rtos_system_out_of_memory_hook</a></div><div class="ttdeci">void os_rtos_system_out_of_memory_hook(void)</div><div class="ttdoc">Hook to handle out of memory in the RTOS dynamic memory.</div><div class="ttdef"><b>Definition</b> <a href="initialise-free-store_8cpp_source.html#l00316">initialise-free-store.cpp:316</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga6771db6e5df087433ff0e4cb407de772"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772">os_terminate_goodbye</a></div><div class="ttdeci">void os_terminate_goodbye(void)</div><div class="ttdoc">Display statistics and say goodbye before terminating.</div><div class="ttdef"><b>Definition</b> <a href="os-main_8cpp_source.html#l00186">os-main.cpp:186</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga6aa820f05a12d8ca33e2940f335f8959"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga6aa820f05a12d8ca33e2940f335f8959">os_rtos_application_out_of_memory_hook</a></div><div class="ttdeci">void os_rtos_application_out_of_memory_hook(void)</div><div class="ttdoc">Hook to handle out of memory in the application free store.</div><div class="ttdef"><b>Definition</b> <a href="initialise-free-store_8cpp_source.html#l00291">initialise-free-store.cpp:291</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga8b67a6ff3f33fae9b3f1b142005c0bc2"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a></div><div class="ttdeci">void _start(void)</div><div class="ttdoc">The standard C application entry point.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00250">startup.cpp:250</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga93965d610e08f0905fc7c8dff44bed61"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a></div><div class="ttdeci">void os_startup_initialize_args(int *p_argc, char ***p_argv)</div><div class="ttdoc">Initialise arguments.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00417">startup.cpp:417</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gaaac13d67ff6331d34415f14b5029eeb7"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gaaac13d67ff6331d34415f14b5029eeb7">os_rtos_idle_enter_power_saving_mode_hook</a></div><div class="ttdeci">bool os_rtos_idle_enter_power_saving_mode_hook(void)</div><div class="ttdoc">Hook to enter a power saving mode.</div><div class="ttdef"><b>Definition</b> <a href="os-idle_8cpp_source.html#l00059">os-idle.cpp:59</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gab9703b4858dc67c7bae54570ffa4ea4f"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a></div><div class="ttdeci">void os_startup_initialize_hardware(void)</div><div class="ttdoc">Initialise hardware.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00115">initialize-hardware.c:115</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gae1529966372cdc4b3c19aaee9e419e5f"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gae1529966372cdc4b3c19aaee9e419e5f">os_rtos_system_out_of_memory_hook</a></div><div class="ttdeci">void os_rtos_system_out_of_memory_hook(void)</div><div class="ttdoc">Hook to handle out of memory in the RTOS dynamic memory.</div><div class="ttdef"><b>Definition</b> <a href="initialise-free-store_8cpp_source.html#l00314">initialise-free-store.cpp:314</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

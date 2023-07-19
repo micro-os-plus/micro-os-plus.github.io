@@ -19,7 +19,7 @@ var classos_1_1posix_1_1block__device__partition__impl =
     [ "do_vopen", "classos_1_1posix_1_1block__device__partition__impl.html#a178e2f1b9dc26772c875e50d5dec3d9f", null ],
     [ "do_write", "classos_1_1posix_1_1block__device__partition__impl.html#a9b57e0d768392c44fa21479a0f181e91", null ],
     [ "do_write_block", "classos_1_1posix_1_1block__device__partition__impl.html#ab24a02c063452490c3a428336aff0d9c", null ],
-    [ "do_writev", "classos_1_1posix_1_1block__device__partition__impl.html#a435c0abcb3e507c8d535038771943b8c", null ],
+    [ "do_writev", "classos_1_1posix_1_1block__device__partition__impl.html#a826e91ac762e6c480c523da8af9049f1", null ],
     [ "offset", "classos_1_1posix_1_1block__device__partition__impl.html#aac61bc01f58e13064a34d1a34ca44293", null ],
     [ "offset", "classos_1_1posix_1_1block__device__partition__impl.html#a5e5f831b8554dd3cc40cdb0382c462a8", null ],
     [ "open_count", "classos_1_1posix_1_1block__device__partition__impl.html#ac26644dfc21194430ee02c07b87ef16f", null ],

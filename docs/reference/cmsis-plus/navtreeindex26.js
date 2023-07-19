@@ -1,5 +1,16 @@
 var NAVTREEINDEX26 =
 {
+"os-thread_8h.html#aa1700e9473b69e5acbad3d87a279712d":[6,0,1,0,10,15,2],
+"os-thread_8h.html#ae6267f94a724efd5ec8d3025a1165dc3":[6,0,1,0,10,15,3],
+"os-thread_8h.html#af0f2307e56de88739dd287739a08e530":[6,0,1,0,10,15,6],
+"os-thread_8h.html#afb95537285d0aa314fc611ec05897cbf":[6,0,1,0,10,15,0],
+"os-thread_8h_source.html":[6,0,1,0,10,15],
+"os-timer_8cpp.html":[6,0,2,6,14],
+"os-timer_8cpp_source.html":[6,0,2,6,14],
+"os-timer_8h.html":[6,0,1,0,10,16],
+"os-timer_8h_source.html":[6,0,1,0,10,16],
+"os-types_8h.html":[6,0,1,0,10,17],
+"os-types_8h_source.html":[6,0,1,0,10,17],
 "os-versions_8h.html":[6,0,1,0,12],
 "os-versions_8h.html#a08fca5bd87c536cad12ccaf03f436bc2":[6,0,1,0,12,7],
 "os-versions_8h.html#a162ae848d47ce4417a45303dd38e2d85":[6,0,1,0,12,1],
@@ -104,7 +115,6 @@ var NAVTREEINDEX26 =
 "redefinitions_8h.html#af8cc9927255a6a233979f3bbea1b62fe":[6,0,1,0,9,14,43],
 "redefinitions_8h_source.html":[6,0,1,0,9,14],
 "reset-hardware_8c.html":[6,0,2,8,3],
-"reset-hardware_8c.html#a1b47d17e90b6a03e7bd1ec6a0d549b46":[6,0,2,8,3,1],
 "reset-hardware_8c.html#ab6d978ce88666a8d604f2d6ebce2a4f4":[6,0,2,8,3,0],
 "reset-hardware_8c_source.html":[6,0,2,8,3],
 "select_8h.html":[6,0,1,0,7,0,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX26 =
 "serial_8h.html#afb8668099f59b55c6cb309cf37d1e152":[6,0,1,0,3,1,22],
 "serial_8h_source.html":[6,0,1,0,3,1],
 "socket_8cpp.html":[6,0,2,5,11],
-"socket_8cpp_source.html":[6,0,2,5,11],
-"startup_8cpp.html":[6,0,2,8,4],
-"startup_8cpp.html#a000ff36b580f32054d95c832eae95738":[6,0,2,8,4,19],
-"startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9":[6,0,2,8,4,21],
-"startup_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97":[6,0,2,8,4,2],
-"startup_8cpp.html#a1814473106d54cf28b3a7ec44a80de46":[6,0,2,8,4,6],
-"startup_8cpp.html#a2431ecc498e90c57e8281de8972c5af8":[6,0,2,8,4,9],
-"startup_8cpp.html#a2871bd852700dcb1d792787281af771f":[6,0,2,8,4,11],
-"startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e":[6,0,2,8,4,18],
-"startup_8cpp.html#a425f65080a3b89e3c42e571a5cd0215a":[6,0,2,8,4,0],
-"startup_8cpp.html#a4be4e32ccbd908caca10f9f9badc2494":[6,0,2,8,4,4]
+"socket_8cpp_source.html":[6,0,2,5,11]
 };

@@ -3,13 +3,13 @@ var classos_1_1posix_1_1char__device__implementable =
     [ "type_t", "classos_1_1posix_1_1char__device__implementable.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
     [ "value_type", "classos_1_1posix_1_1char__device__implementable.html#aacedd429341853f519e76af00d836d8c", null ],
     [ "type", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38ede", [
-      [ "unknown", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-      [ "not_set", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-      [ "char_device", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-      [ "block_device", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-      [ "tty", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-      [ "file", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-      [ "socket", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+      [ "unknown", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+      [ "not_set", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+      [ "char_device", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+      [ "block_device", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+      [ "tty", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+      [ "file", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+      [ "socket", "classos_1_1posix_1_1char__device__implementable.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
     ] ],
     [ "char_device_implementable", "classos_1_1posix_1_1char__device__implementable.html#ae5b7a9e648e99ab28d9878b29c5f35fb", null ],
     [ "~char_device_implementable", "classos_1_1posix_1_1char__device__implementable.html#a6454bc58d70bfbb59f96678a2fce3633", null ],
@@ -36,5 +36,5 @@ var classos_1_1posix_1_1char__device__implementable =
     [ "vioctl", "classos_1_1posix_1_1char__device__implementable.html#a4654630f647d4d633bba4a1da0bb6d80", null ],
     [ "vopen", "classos_1_1posix_1_1char__device__implementable.html#a3ad7edd1a6bef0edaba42b96630cc672", null ],
     [ "write", "classos_1_1posix_1_1char__device__implementable.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-    [ "writev", "classos_1_1posix_1_1char__device__implementable.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+    [ "writev", "classos_1_1posix_1_1char__device__implementable.html#a1820901b718cb2990080983de9b46fcc", null ]
 ];

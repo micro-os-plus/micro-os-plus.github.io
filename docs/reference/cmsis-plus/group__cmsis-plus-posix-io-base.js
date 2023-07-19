@@ -4,13 +4,13 @@ var group__cmsis_plus_posix_io_base =
       [ "blknum_t", "classos_1_1posix_1_1block__device.html#ab53a9d3dff17e6d4a0b214060f4bec7f", null ],
       [ "type_t", "classos_1_1posix_1_1block__device.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1block__device.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "block_device", "classos_1_1posix_1_1block__device.html#ac38cde89df2107b46a90d0aedb8740bb", null ],
       [ "~block_device", "classos_1_1posix_1_1block__device.html#a55a8a37180fa2695ec84537d7c97408d", null ],
@@ -42,19 +42,19 @@ var group__cmsis_plus_posix_io_base =
       [ "vopen", "classos_1_1posix_1_1block__device.html#a3ad7edd1a6bef0edaba42b96630cc672", null ],
       [ "write", "classos_1_1posix_1_1block__device.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
       [ "write_block", "classos_1_1posix_1_1block__device.html#ad25353456198e4758682aed5ec44e069", null ],
-      [ "writev", "classos_1_1posix_1_1block__device.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1block__device.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::block_device_partition", "classos_1_1posix_1_1block__device__partition.html", [
       [ "blknum_t", "classos_1_1posix_1_1block__device__partition.html#ab53a9d3dff17e6d4a0b214060f4bec7f", null ],
       [ "type_t", "classos_1_1posix_1_1block__device__partition.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1block__device__partition.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "block_device_partition", "classos_1_1posix_1_1block__device__partition.html#aaa76f717fbf55550f8064b2734e2bf9e", null ],
       [ "~block_device_partition", "classos_1_1posix_1_1block__device__partition.html#acdcd8715c34ce151e14507eaeb80f27a", null ],
@@ -87,18 +87,18 @@ var group__cmsis_plus_posix_io_base =
       [ "vopen", "classos_1_1posix_1_1block__device__partition.html#a3ad7edd1a6bef0edaba42b96630cc672", null ],
       [ "write", "classos_1_1posix_1_1block__device__partition.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
       [ "write_block", "classos_1_1posix_1_1block__device__partition.html#ad25353456198e4758682aed5ec44e069", null ],
-      [ "writev", "classos_1_1posix_1_1block__device__partition.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1block__device__partition.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::char_device", "classos_1_1posix_1_1char__device.html", [
       [ "type_t", "classos_1_1posix_1_1char__device.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1char__device.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "char_device", "classos_1_1posix_1_1char__device.html#abd18c519069c5a632f8048bd0fec613b", null ],
       [ "~char_device", "classos_1_1posix_1_1char__device.html#a4332ed92283ca24055c4081cfb9a204f", null ],
@@ -125,18 +125,18 @@ var group__cmsis_plus_posix_io_base =
       [ "vioctl", "classos_1_1posix_1_1char__device.html#a4654630f647d4d633bba4a1da0bb6d80", null ],
       [ "vopen", "classos_1_1posix_1_1char__device.html#a3ad7edd1a6bef0edaba42b96630cc672", null ],
       [ "write", "classos_1_1posix_1_1char__device.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-      [ "writev", "classos_1_1posix_1_1char__device.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1char__device.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::device", "classos_1_1posix_1_1device.html", [
       [ "type_t", "classos_1_1posix_1_1device.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1device.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "device", "classos_1_1posix_1_1device.html#a12a79671e52c746dd5e6c3f63c9b640c", null ],
       [ "~device", "classos_1_1posix_1_1device.html#a91520223616ecf373f2d74a04a4889c3", null ],
@@ -163,7 +163,7 @@ var group__cmsis_plus_posix_io_base =
       [ "vioctl", "classos_1_1posix_1_1device.html#a4654630f647d4d633bba4a1da0bb6d80", null ],
       [ "vopen", "classos_1_1posix_1_1device.html#a3ad7edd1a6bef0edaba42b96630cc672", null ],
       [ "write", "classos_1_1posix_1_1device.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-      [ "writev", "classos_1_1posix_1_1device.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1device.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::device_registry< T >", "classos_1_1posix_1_1device__registry.html", [
       [ "pointer", "classos_1_1posix_1_1device__registry.html#afc1f69f3a949d4c03fab7732b9cdebae", null ],
@@ -178,22 +178,22 @@ var group__cmsis_plus_posix_io_base =
       [ "directory", "classos_1_1posix_1_1directory.html#adfcf71b35fab4a39a2a2db95e0dc5d77", null ],
       [ "~directory", "classos_1_1posix_1_1directory.html#a2ee581d74ab60d195159a1048414fa9a", null ],
       [ "close", "classos_1_1posix_1_1directory.html#a09ad8f122bfff56d277da8eefe5bffb1", null ],
-      [ "dir_entry", "classos_1_1posix_1_1directory.html#ad525a8d836b63ec6758182a282d221a0", null ],
-      [ "file_system", "classos_1_1posix_1_1directory.html#a968453f26b69a120a21f02c79cba95c8", null ],
+      [ "dir_entry", "classos_1_1posix_1_1directory.html#a053643735e9f95a090ac95d221c04390", null ],
+      [ "get_file_system", "classos_1_1posix_1_1directory.html#a4b460a386b622fdd5c01ded2fe9f2d6f", null ],
       [ "impl", "classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7", null ],
-      [ "read", "classos_1_1posix_1_1directory.html#a526f2fa001ef4cbc9764839b4b058333", null ],
+      [ "read", "classos_1_1posix_1_1directory.html#a4bc9d1cc83362fc8e7624bddd251ab62", null ],
       [ "rewind", "classos_1_1posix_1_1directory.html#afd487b1098b1f67265149b097dce7e4d", null ]
     ] ],
     [ "os::posix::file", "classos_1_1posix_1_1file.html", [
       [ "type_t", "classos_1_1posix_1_1file.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1file.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "file", "classos_1_1posix_1_1file.html#ad417731f6b6f191bcee98b0ae98bae52", null ],
       [ "~file", "classos_1_1posix_1_1file.html#a7d8cfd8c92445aefcd8811c183de159c", null ],
@@ -203,11 +203,11 @@ var group__cmsis_plus_posix_io_base =
       [ "fcntl", "classos_1_1posix_1_1file.html#aa02f5bee86b8acfa44cee93c5710167a", null ],
       [ "file_descriptor", "classos_1_1posix_1_1file.html#a98d3b9609fdc70cd3b17a9b2345a5c30", null ],
       [ "file_descriptor", "classos_1_1posix_1_1file.html#a2736d78d50886fec9adba7904540b90c", null ],
-      [ "file_system", "classos_1_1posix_1_1file.html#a78f993aa9ecfe2a5f2c037066f556a1c", null ],
       [ "fstat", "classos_1_1posix_1_1file.html#a941bd15a7fd7315689e3739331e1ef22", null ],
       [ "fstatvfs", "classos_1_1posix_1_1file.html#a68d57fcdab43739453b0031f340fa953", null ],
       [ "fsync", "classos_1_1posix_1_1file.html#ad38f6b20e95a7744fc5d021924d13e33", null ],
       [ "ftruncate", "classos_1_1posix_1_1file.html#a6d36ea8bd53f4c6d80835cc769fb4656", null ],
+      [ "get_file_system", "classos_1_1posix_1_1file.html#a87f2c62aba52391c17b55eb404d7f151", null ],
       [ "get_type", "classos_1_1posix_1_1file.html#ae30a520c158f7c9ab48ce3d40080c6db", null ],
       [ "impl", "classos_1_1posix_1_1file.html#a22476045370da1506388b4d028f81b7a", null ],
       [ "is_opened", "classos_1_1posix_1_1file.html#a68bb1867c9f075af3331b1bc6d4f4fb9", null ],
@@ -216,7 +216,7 @@ var group__cmsis_plus_posix_io_base =
       [ "read", "classos_1_1posix_1_1file.html#acad20c85924c17edf5c2a7e455c093c3", null ],
       [ "vfcntl", "classos_1_1posix_1_1file.html#af84ebeb02c028db886a636eb55d14540", null ],
       [ "write", "classos_1_1posix_1_1file.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-      [ "writev", "classos_1_1posix_1_1file.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1file.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::file_descriptors_manager", "classos_1_1posix_1_1file__descriptors__manager.html", [
       [ "file_descriptors_manager", "classos_1_1posix_1_1file__descriptors__manager.html#a8e546a487d47b555ada00f99355c02e4", null ],
@@ -226,7 +226,7 @@ var group__cmsis_plus_posix_io_base =
       [ "deallocate", "classos_1_1posix_1_1file__descriptors__manager.html#a6f3b3ae43bef719d5624b42303fec8a5", null ],
       [ "io", "classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd", null ],
       [ "size", "classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49", null ],
-      [ "socket", "classos_1_1posix_1_1file__descriptors__manager.html#a55ae1a7bf7f54c5df225e052dc6a7d92", null ],
+      [ "socket", "classos_1_1posix_1_1file__descriptors__manager.html#a055173c70536635813f827f561429c33", null ],
       [ "used", "classos_1_1posix_1_1file__descriptors__manager.html#a781c2f853891a40f62ccff1faea760a8", null ],
       [ "valid", "classos_1_1posix_1_1file__descriptors__manager.html#a664fdcceb03b842110109df1aa0115c3", null ]
     ] ],
@@ -264,7 +264,7 @@ var group__cmsis_plus_posix_io_base =
       [ "truncate", "classos_1_1posix_1_1file__system.html#a067347f1a323a9d20245f263123eea3b", null ],
       [ "umount", "classos_1_1posix_1_1file__system.html#aa0f0d03553af9d80439d20fbf8b0d024", null ],
       [ "unlink", "classos_1_1posix_1_1file__system.html#a30f8945d15ae172f6394922542329d74", null ],
-      [ "utime", "classos_1_1posix_1_1file__system.html#a263697125e18d526fbd895a17bc7383a", null ],
+      [ "utime", "classos_1_1posix_1_1file__system.html#a4fc3553ff8e9eee3f9ae8644351e3595", null ],
       [ "vmkfs", "classos_1_1posix_1_1file__system.html#ad9f9249007c31f1226cd1e528ae7a17e", null ],
       [ "vmount", "classos_1_1posix_1_1file__system.html#a98f58dd514a18b5b87fd6dd175353b83", null ],
       [ "vopen", "classos_1_1posix_1_1file__system.html#aa0810056f7febdef5613ab198fe0fd9c", null ]
@@ -272,13 +272,13 @@ var group__cmsis_plus_posix_io_base =
     [ "os::posix::io", "classos_1_1posix_1_1io.html", [
       [ "type_t", "classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
       [ "io", "classos_1_1posix_1_1io.html#a3cc92bb749daddf9c7a6fb450633980e", null ],
       [ "~io", "classos_1_1posix_1_1io.html#acb6a41e0664927f1c32ae76b2e150dc1", null ],
@@ -297,7 +297,7 @@ var group__cmsis_plus_posix_io_base =
       [ "read", "classos_1_1posix_1_1io.html#acad20c85924c17edf5c2a7e455c093c3", null ],
       [ "vfcntl", "classos_1_1posix_1_1io.html#af84ebeb02c028db886a636eb55d14540", null ],
       [ "write", "classos_1_1posix_1_1io.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-      [ "writev", "classos_1_1posix_1_1io.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1io.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ],
     [ "os::posix::net_interface", "classos_1_1posix_1_1net__interface.html", [
       [ "net_interface", "classos_1_1posix_1_1net__interface.html#a0c073cd078c36bcf98682146e7ece74e", null ],
@@ -319,29 +319,29 @@ var group__cmsis_plus_posix_io_base =
     [ "os::posix::socket", "classos_1_1posix_1_1socket.html", [
       [ "type_t", "classos_1_1posix_1_1socket.html#a2784e8adb38757dc5ab882c7cf75b35d", null ],
       [ "type", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38ede", [
-        [ "unknown", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea74049fbe000d4429cc94bd992936f9d8", null ],
-        [ "not_set", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeaed96afbf0a065f2e22d773dc39da03f9", null ],
-        [ "char_device", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9", null ],
-        [ "block_device", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea6f2cb69416b5b781624f9d658e2cacdd", null ],
-        [ "tty", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeadd4f387414cfade44971c99a1d8cffd5", null ],
-        [ "file", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea1b8193a5a82655cf753e8938c6aad5ab", null ],
-        [ "socket", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a", null ]
+        [ "unknown", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeaad921d60486366258809553a3db49a4a", null ],
+        [ "not_set", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea0de8ddf24fd4424e2a0d29a21de4880e", null ],
+        [ "char_device", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2", null ],
+        [ "block_device", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edeaf7eac60d1209d75e07fc49ff2685ca35", null ],
+        [ "tty", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea031928d3db34261c9602a1af495b4ba8", null ],
+        [ "file", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea8c7dd922ad47494fc02c388e12c00eac", null ],
+        [ "socket", "classos_1_1posix_1_1socket.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa", null ]
       ] ],
-      [ "socket", "classos_1_1posix_1_1socket.html#a03e091bd396dc6dce2b0c09f33c1834f", null ],
+      [ "socket", "classos_1_1posix_1_1socket.html#a23b23190d4e1cd0673fb0578ef5f0347", null ],
       [ "~socket", "classos_1_1posix_1_1socket.html#ac0a44edcf479325ff0af648f848dbb6a", null ],
-      [ "accept", "classos_1_1posix_1_1socket.html#ad988e6784b93935c8e4f64cf95bdb1bb", null ],
+      [ "accept", "classos_1_1posix_1_1socket.html#a26bc3fb78580e4571fa1ab69b99b75a3", null ],
       [ "alloc_file_descriptor", "classos_1_1posix_1_1socket.html#a92490027421a039ea56d1ad2f5cff989", null ],
-      [ "bind", "classos_1_1posix_1_1socket.html#ad2d7eeaf074361f151ac5b39635158af", null ],
+      [ "bind", "classos_1_1posix_1_1socket.html#a2e488580429bc7f7bde7e66a27bcbb89", null ],
       [ "clear_file_descriptor", "classos_1_1posix_1_1socket.html#aac56327ce05ea29b9d423edc45a7cece", null ],
       [ "close", "classos_1_1posix_1_1socket.html#aa1cc0a41339069ecac53c5ae60e69635", null ],
-      [ "connect", "classos_1_1posix_1_1socket.html#aa643d671f1e4202cfafada021e92ad63", null ],
+      [ "connect", "classos_1_1posix_1_1socket.html#a86f4a25546b4d731598449faea7ecbab", null ],
       [ "fcntl", "classos_1_1posix_1_1socket.html#aa02f5bee86b8acfa44cee93c5710167a", null ],
       [ "file_descriptor", "classos_1_1posix_1_1socket.html#a98d3b9609fdc70cd3b17a9b2345a5c30", null ],
       [ "file_descriptor", "classos_1_1posix_1_1socket.html#a2736d78d50886fec9adba7904540b90c", null ],
       [ "fstat", "classos_1_1posix_1_1socket.html#a941bd15a7fd7315689e3739331e1ef22", null ],
       [ "get_type", "classos_1_1posix_1_1socket.html#ae30a520c158f7c9ab48ce3d40080c6db", null ],
-      [ "getpeername", "classos_1_1posix_1_1socket.html#a3f11c8e27ad02c788baa888058a36190", null ],
-      [ "getsockname", "classos_1_1posix_1_1socket.html#a11f1b06cb058ad045c2565fa4362dcf0", null ],
+      [ "getpeername", "classos_1_1posix_1_1socket.html#a7427c17f5ff6af7295667a231effe87c", null ],
+      [ "getsockname", "classos_1_1posix_1_1socket.html#a1f49a85f094e6c140bbc74b38ee0f6f4", null ],
       [ "getsockopt", "classos_1_1posix_1_1socket.html#ad97197c7c75e8c62980d5c8090491d69", null ],
       [ "impl", "classos_1_1posix_1_1socket.html#adb2861869cacd0e4e1044166ec5b69a5", null ],
       [ "is_opened", "classos_1_1posix_1_1socket.html#a68bb1867c9f075af3331b1bc6d4f4fb9", null ],
@@ -351,16 +351,16 @@ var group__cmsis_plus_posix_io_base =
       [ "net_stack", "classos_1_1posix_1_1socket.html#aef1d265b4b4347ad4862bd8d8777daa2", null ],
       [ "read", "classos_1_1posix_1_1socket.html#acad20c85924c17edf5c2a7e455c093c3", null ],
       [ "recv", "classos_1_1posix_1_1socket.html#a5045fac436684c66d1a747c5876abe10", null ],
-      [ "recvfrom", "classos_1_1posix_1_1socket.html#a8fd62a17b89bb073d46425b3155fd085", null ],
-      [ "recvmsg", "classos_1_1posix_1_1socket.html#a238b9c9f656d47273d92b4d85fc1b76e", null ],
+      [ "recvfrom", "classos_1_1posix_1_1socket.html#a8fae3b0a7c2b556fc5740d49261ee7ec", null ],
+      [ "recvmsg", "classos_1_1posix_1_1socket.html#ace96864b7b976ccdcb52b88c559ed635", null ],
       [ "send", "classos_1_1posix_1_1socket.html#a60fd24131a47f4ce4c5329132ff9e8f0", null ],
-      [ "sendmsg", "classos_1_1posix_1_1socket.html#a33556d2d758ad4a37f026a441f3623e8", null ],
-      [ "sendto", "classos_1_1posix_1_1socket.html#af01ecd608018b7c2bca97d3b04e6c3b9", null ],
+      [ "sendmsg", "classos_1_1posix_1_1socket.html#a8625abbc65c33fd620dc461376f6209e", null ],
+      [ "sendto", "classos_1_1posix_1_1socket.html#a569faf6f952c661df16e222049252cf0", null ],
       [ "setsockopt", "classos_1_1posix_1_1socket.html#a03477d4c1c58b8b12b43aab43e073333", null ],
       [ "shutdown", "classos_1_1posix_1_1socket.html#a90a243afba45499c0431dc9927977e90", null ],
       [ "sockatmark", "classos_1_1posix_1_1socket.html#a036aa00be56bae2eea21b21ba5afaace", null ],
       [ "vfcntl", "classos_1_1posix_1_1socket.html#af84ebeb02c028db886a636eb55d14540", null ],
       [ "write", "classos_1_1posix_1_1socket.html#a9b2c3aa978c670d60b0643f1a41026e0", null ],
-      [ "writev", "classos_1_1posix_1_1socket.html#af053373c6716c37bf7589bb3d6388fdd", null ]
+      [ "writev", "classos_1_1posix_1_1socket.html#a1820901b718cb2990080983de9b46fcc", null ]
     ] ]
 ];

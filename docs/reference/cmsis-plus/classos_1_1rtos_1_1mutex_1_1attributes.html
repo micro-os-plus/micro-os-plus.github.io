@@ -52,7 +52,7 @@ DoxygenAwesomeTabs.init()
  <tr id="projectrow">
   <td id="projectlogo"><a href="$relpath/../../../"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
-   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;6.3.17</span>
+   <div id="projectname">µOS++ IIIe Reference<span id="projectnumber">&#160;7.0.0</span>
    </div>
    <div id="projectbrief">The third edition of µOS++, a POSIX inspired open source framework, written in C++</div>
   </td>
@@ -185,9 +185,10 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Mutex attributes. </p>
 <p>Allow to assign a name and custom attributes (like priority ceiling, robustness, etc) to the mutex.</p>
 <p>To simplify access, the member variables are public and do not require accessors or mutators.</p>
+<p>If the attributes are modified <b>after</b> the mutex creation, the mutex attributes shall not be affected.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <code>pthread_mutexattr_t</code> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00207">207</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00206">206</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a28eb5402c90304a1bb0cdda860b81750" name="a28eb5402c90304a1bb0cdda860b81750"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28eb5402c90304a1bb0cdda860b81750">&#9670;&#160;</a></span>attributes() <span class="overload">[1/3]</span></h2>
@@ -215,7 +216,7 @@ Public Attributes</h2></td></tr>
 <p>Construct a mutex attributes object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00797">797</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00795">795</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +396,7 @@ Public Attributes</h2></td></tr>
 <p>Attribute with the mutex maximum recursive count. </p>
 <p>The <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a1eaad3426c177dd2156e30293f8bb987">mx_max_count</a> attribute defines the upper limit of recursion for a recursive mutex. Further attempts to lock the mutex will result in <code>EAGAIN</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00288">288</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00287">287</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -415,7 +416,7 @@ Public Attributes</h2></td></tr>
 <p>The <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b">mx_priority_ceiling</a> attribute defines the priority ceiling of initialised mutexes, which is the minimum priority level at which the critical section guarded by the mutex is executed. In order to avoid priority inversion, the priority ceiling of the mutex shall be set to a priority higher than or equal to the highest priority of all the threads that may lock that mutex. The values of <a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html#a7a39de9662c71667e0a41d616699266b">mx_priority_ceiling</a> are within the maximum range of priorities defined under the SCHED_FIFO scheduling policy.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_getprioceiling.html"><code>pthread_mutexattr_setprioceiling()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00268">268</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00267">267</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -440,7 +441,7 @@ Differences from the standard:<ul>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00273">273</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00272">272</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +462,7 @@ Differences from the standard:<ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html" title="Mutex robustness.">mutex::robustness</a></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00278">278</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00277">277</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>
@@ -482,7 +483,7 @@ Differences from the standard:<ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structos_1_1rtos_1_1mutex_1_1type.html" title="Mutex types.">mutex::type</a></dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_settype.html"><code>pthread_mutexattr_settype()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00283">283</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00282">282</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 
 </div>
 </div>

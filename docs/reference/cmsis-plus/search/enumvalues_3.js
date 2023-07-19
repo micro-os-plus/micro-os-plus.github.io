@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['char_5fdevice_0',['char_device',['../classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeaa0b37f2acb924cc23e1805078b4e3db9',1,'os::posix::io']]],
+  ['char_5fdevice_0',['char_device',['../classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edeab5c86bd849b360343269b973a345bfd2',1,'os::posix::io']]],
   ['clear_1',['clear',['../namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a',1,'os::rtos::flags::mode']]],
   ['clear_5fdtr_2',['clear_dtr',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287abe40086364f2c947267ef3bd4a0ba2b1',1,'os::driver::serial']]],
   ['clear_5frts_3',['clear_rts',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287a848524acf5dec7dcc042cd0948daefe7',1,'os::driver::serial']]],

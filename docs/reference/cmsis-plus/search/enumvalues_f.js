@@ -28,7 +28,7 @@ var searchData=
   ['set_5fdtr_25',['set_dtr',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287ad02280c27589d6022f02b94a6cda2d76',1,'os::driver::serial']]],
   ['set_5frts_26',['set_rts',['../namespaceos_1_1driver_1_1serial.html#af591b88b5cef3dfda1109689ece8f287af3b15ec3cecb44ccf8fe85b56044d7b8',1,'os::driver::serial']]],
   ['setup_27',['setup',['../namespaceos_1_1driver_1_1usb_1_1device.html#aa54cbb59440f3be58ec61a52efe494efa150f1ea821a3e2ebff496b942a8a0c66',1,'os::driver::usb::device']]],
-  ['socket_28',['socket',['../classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea168c4c2a5646d357c32f97f6c0eea61a',1,'os::posix::io']]],
+  ['socket_28',['socket',['../classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa',1,'os::posix::io']]],
   ['stalled_29',['stalled',['../structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6',1,'os::rtos::mutex::robustness']]],
   ['stopped_30',['stopped',['../structos_1_1rtos_1_1timer_1_1state.html#afab3e383c0c151dc956f9074b43fc8f3a688eb7909a2c7b328a940f9ed26f7654',1,'os::rtos::timer::state']]],
   ['suspend_31',['suspend',['../namespaceos_1_1driver_1_1usb_1_1device.html#ac271252f96010635939d3fcb301ba435a365843f20764d1f34a01033c24f1d299',1,'os::driver::usb::device::suspend'],['../namespaceos_1_1driver_1_1usb_1_1host.html#a29f43829f9945aefa55c484f4e3021a0abf0a2f14ebe5881e02fd6cc25808b90a',1,'os::driver::usb::host::suspend']]],
