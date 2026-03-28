@@ -1,6 +1,5 @@
 var group__cmsis_plus_rtos_memres =
 [
-    [ "std", "namespacestd.html", null ],
     [ "os::rtos::memory::allocator_deleter< A >", "classos_1_1rtos_1_1memory_1_1allocator__deleter.html", [
       [ "allocator_traits", "classos_1_1rtos_1_1memory_1_1allocator__deleter.html#abc672faf7d90e95af5398501f927cceb", null ],
       [ "allocator_type", "classos_1_1rtos_1_1memory_1_1allocator__deleter.html#a4d1f4859491f3752751fd5675e2a256a", null ],
@@ -501,13 +500,12 @@ var group__cmsis_plus_rtos_memres =
       [ "max_align", "classos_1_1memory_1_1null__memory__resource.html#af8258a63966f621605804691ae4d2179", null ]
     ] ],
     [ "os::rtos::memory::allocator", "group__cmsis-plus-rtos-memres.html#gac00e47b1a65850b96de7c9fe0e938da1", null ],
-    [ "os::rtos::memory::allocator_typed", "group__cmsis-plus-rtos-memres.html#ga82d08410dc0d1e8cfb011ad843f871ec", null ],
-    [ "os::rtos::memory::out_of_memory_handler_t", "group__cmsis-plus-rtos-memres.html#ga165e1d42e364dcabcbf01e5322b9f554", null ],
+    [ "os::rtos::memory::allocator_typed", "group__cmsis-plus-rtos-memres.html#gaad5673b9a6f5b280eb5c59657a937174", null ],
+    [ "os::rtos::memory::out_of_memory_handler_t", "group__cmsis-plus-rtos-memres.html#ga584da84e822c3f3574ce2e1f14ee0f7e", null ],
     [ "os::rtos::memory::unique_ptr", "group__cmsis-plus-rtos-memres.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb", null ],
     [ "os::rtos::memory::allocate_unique", "group__cmsis-plus-rtos-memres.html#gabf21181167520330c0aba45ad045bce3", null ],
     [ "os::estd::pmr::get_default_resource", "group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928", null ],
     [ "os::rtos::memory::get_default_resource", "group__cmsis-plus-rtos-memres.html#ga61c4946b90c917a9fc2a0b0f1c43ad89", null ],
-    [ "std::get_new_handler", "group__cmsis-plus-rtos-memres.html#ga2aab280c9a87214e453f8f598827d13b", null ],
     [ "os::rtos::memory::get_resource_typed", "group__cmsis-plus-rtos-memres.html#ga1a04af7fafdc21f54317211e60a8e948", null ],
     [ "os::rtos::memory::get_resource_typed< condition_variable >", "group__cmsis-plus-rtos-memres.html#ga064d84e6ecdbcd39ba2a2b5a8a0cc2b4", null ],
     [ "os::rtos::memory::get_resource_typed< event_flags >", "group__cmsis-plus-rtos-memres.html#gaee22560cdfcdab32a538fa367fafba20", null ],
@@ -529,7 +527,6 @@ var group__cmsis_plus_rtos_memres =
     [ "os::rtos::memory::operator==", "group__cmsis-plus-rtos-memres.html#ga4769d08c721d5e897a8792837d5eccf7", null ],
     [ "os::estd::pmr::set_default_resource", "group__cmsis-plus-rtos-memres.html#gacbb72d3cad1991160e1c3c5c8538f6c4", null ],
     [ "os::rtos::memory::set_default_resource", "group__cmsis-plus-rtos-memres.html#ga34cf8ec3444242cb4c9bd0849c7ce439", null ],
-    [ "std::set_new_handler", "group__cmsis-plus-rtos-memres.html#ga6519f396a0019421c491bcdccab811b3", null ],
     [ "os::rtos::memory::set_resource_typed", "group__cmsis-plus-rtos-memres.html#ga55d739ea53bab615eacae4ada35546af", null ],
     [ "os::rtos::memory::set_resource_typed< condition_variable >", "group__cmsis-plus-rtos-memres.html#ga4af1d058b3b53828b3d6c7f1bc71cda4", null ],
     [ "os::rtos::memory::set_resource_typed< event_flags >", "group__cmsis-plus-rtos-memres.html#ga8feae91943adab3bd057ce09c2b27f4f", null ],
@@ -538,7 +535,5 @@ var group__cmsis_plus_rtos_memres =
     [ "os::rtos::memory::set_resource_typed< mutex >", "group__cmsis-plus-rtos-memres.html#gab6cb16d9873d8a50e8995a531daf0e49", null ],
     [ "os::rtos::memory::set_resource_typed< semaphore >", "group__cmsis-plus-rtos-memres.html#gabf7151b6c67a779c0f061d5f97d041c4", null ],
     [ "os::rtos::memory::set_resource_typed< thread >", "group__cmsis-plus-rtos-memres.html#gac4df8b5306c8cb1a3bb584d324a36def", null ],
-    [ "os::rtos::memory::set_resource_typed< timer >", "group__cmsis-plus-rtos-memres.html#gafb9431faf4191c85a8570dd511d87e2e", null ],
-    [ "anonymous_namespace{new.cpp}::new_handler_", "group__cmsis-plus-rtos-memres.html#ga099e4657626730e767ff1b87868e1379", null ],
-    [ "std::nothrow", "group__cmsis-plus-rtos-memres.html#gae4b7b14b5246bacb54f2a4ae366ccd44", null ]
+    [ "os::rtos::memory::set_resource_typed< timer >", "group__cmsis-plus-rtos-memres.html#gafb9431faf4191c85a8570dd511d87e2e", null ]
 ];

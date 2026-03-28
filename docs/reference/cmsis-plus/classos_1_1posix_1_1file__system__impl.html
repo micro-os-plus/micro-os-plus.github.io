@@ -174,7 +174,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00421">421</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00418">418</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2cd9b2f6263a51ea7cb3d6f9cf64e0bb" name="a2cd9b2f6263a51ea7cb3d6f9cf64e0bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cd9b2f6263a51ea7cb3d6f9cf64e0bb">&#9670;&#160;</a></span>file_system_impl()</h2>
@@ -192,7 +192,17 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-system_8cpp_source.html#l01046">1046</a> of file <a class="el" href="file-system_8cpp_source.html">file-system.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-system_8cpp_source.html#l01051">1051</a> of file <a class="el" href="file-system_8cpp_source.html">file-system.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1052</span>        : device_ (<a class="code hl_function" href="classos_1_1posix_1_1file__system__impl.html#a6e0540af695f2dfd7f5c41492496f30b">device</a>)</div>
+<div class="line"><span class="lineno"> 1053</span>    {</div>
+<div class="line"><span class="lineno"> 1054</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE_SYSTEM)</span></div>
+<div class="line"><span class="lineno"> 1055</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_system_impl::%s()=%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1056</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1057</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1file__system__impl_html_a6e0540af695f2dfd7f5c41492496f30b"><div class="ttname"><a href="classos_1_1posix_1_1file__system__impl.html#a6e0540af695f2dfd7f5c41492496f30b">os::posix::file_system_impl::device</a></div><div class="ttdeci">block_device &amp; device(void) const</div><div class="ttdef"><b>Definition</b> <a href="file-system_8h_source.html#l00992">file-system.h:992</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -219,7 +229,14 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-system_8cpp_source.html#l01054">1054</a> of file <a class="el" href="file-system_8cpp_source.html">file-system.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-system_8cpp_source.html#l01059">1059</a> of file <a class="el" href="file-system_8cpp_source.html">file-system.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1060</span>    {</div>
+<div class="line"><span class="lineno"> 1061</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE_SYSTEM)</span></div>
+<div class="line"><span class="lineno"> 1062</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_system_impl::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1063</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1064</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -248,7 +265,12 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00988">988</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00992">992</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  993</span>    {</div>
+<div class="line"><span class="lineno">  994</span>      <span class="keywordflow">return</span> device_;</div>
+<div class="line"><span class="lineno">  995</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="file-system_8h_source.html#l00816">os::posix::file_system::device()</a>.</p>
 
 </div>
 </div>
@@ -286,6 +308,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00828">os::posix::file_system::chmod()</a>.</p>
+
 </div>
 </div>
 <a id="a1bb5b0612a8f5cbc6d9a83e4474d67b6" name="a1bb5b0612a8f5cbc6d9a83e4474d67b6"></a>
@@ -321,6 +345,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00748">os::posix::file_system::mkdir()</a>.</p>
 
 </div>
 </div>
@@ -358,6 +384,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00719">os::posix::file_system::opendir()</a>.</p>
+
 </div>
 </div>
 <a id="a1b02a0293ad7ef0204372f025d576806" name="a1b02a0293ad7ef0204372f025d576806"></a>
@@ -394,6 +422,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00921">os::posix::file_system::rename()</a>.</p>
+
 </div>
 </div>
 <a id="adf9fff6c36af7e96985821b47952fe36" name="adf9fff6c36af7e96985821b47952fe36"></a>
@@ -419,6 +449,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00778">os::posix::file_system::rmdir()</a>.</p>
 
 </div>
 </div>
@@ -456,6 +488,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00859">os::posix::file_system::stat()</a>.</p>
+
 </div>
 </div>
 <a id="ac9cc4f9d081ddd101dddc957b933c5c1" name="ac9cc4f9d081ddd101dddc957b933c5c1"></a>
@@ -482,6 +516,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l01029">os::posix::file_system::statvfs()</a>.</p>
+
 </div>
 </div>
 <a id="a59a22a4f5302e1f131a4073f3ff87937" name="a59a22a4f5302e1f131a4073f3ff87937"></a>
@@ -507,6 +543,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00808">os::posix::file_system::sync()</a>, and <a class="el" href="file-system_8cpp_source.html#l00589">os::posix::file_system::umount()</a>.</p>
 
 </div>
 </div>
@@ -544,6 +582,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00890">os::posix::file_system::truncate()</a>.</p>
+
 </div>
 </div>
 <a id="a5605e48a90ae0ddf1097cc297b0a30c9" name="a5605e48a90ae0ddf1097cc297b0a30c9"></a>
@@ -570,6 +610,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00589">os::posix::file_system::umount()</a>.</p>
+
 </div>
 </div>
 <a id="a2a1a41412bf6637457b70ddfa217275e" name="a2a1a41412bf6637457b70ddfa217275e"></a>
@@ -595,6 +637,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00953">os::posix::file_system::unlink()</a>.</p>
 
 </div>
 </div>
@@ -632,6 +676,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00985">os::posix::file_system::utime()</a>.</p>
+
 </div>
 </div>
 <a id="a6aa9db6c7a33b5d2904a057c0cc54e53" name="a6aa9db6c7a33b5d2904a057c0cc54e53"></a>
@@ -668,6 +714,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00482">os::posix::file_system::vmkfs()</a>.</p>
+
 </div>
 </div>
 <a id="a74e1c01cc5b2b18d1092a981ceab0bf9" name="a74e1c01cc5b2b18d1092a981ceab0bf9"></a>
@@ -703,6 +751,8 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00516">os::posix::file_system::vmount()</a>.</p>
 
 </div>
 </div>
@@ -752,6 +802,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="file-system_8cpp_source.html#l00689">os::posix::file_system::vopen()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Symbol Documentation</h2>
@@ -775,7 +827,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00425">425</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-system_8h_source.html#l00422">422</a> of file <a class="el" href="file-system_8h_source.html">file-system.h</a>.</p>
 
 </div>
 </div>

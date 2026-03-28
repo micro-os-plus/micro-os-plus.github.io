@@ -149,10 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a21d7e5c7a940d67d8aa81dd151362749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scheduler standard locker. </p>
-<p>Locker meeting the standard <code>Lockable</code> requirements (30.2.5.3). </p>
+<div class="textblock"><p>Locker meeting the standard <code>Lockable</code> requirements (30.2.5.3). </p>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00313">313</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00316">316</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a36f5361fc46e8c6d3ba2d3be429a220d" name="a36f5361fc46e8c6d3ba2d3be429a220d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36f5361fc46e8c6d3ba2d3be429a220d">&#9670;&#160;</a></span>lockable()</h2>
@@ -176,13 +175,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a lockable object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00970">970</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00965">965</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  965</span>                                    : state_ (port::scheduler::state::init)</div>
+<div class="line"><span class="lineno">  966</span>      {</div>
+<div class="line"><span class="lineno">  967</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a66901d8519bc1529667871d4b81024" name="a4a66901d8519bc1529667871d4b81024"></a>
@@ -207,12 +207,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the lockable object instance. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00979">979</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00972">972</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  973</span>      {</div>
+<div class="line"><span class="lineno">  974</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -239,13 +239,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Lock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00987">987</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00980">980</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  981</span>      {</div>
+<div class="line"><span class="lineno">  982</span>        state_ = <a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#a871b3eae039da2fd49e1cec17779fe00">scheduler::lock</a> ();</div>
+<div class="line"><span class="lineno">  983</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1scheduler_html_a871b3eae039da2fd49e1cec17779fe00"><div class="ttname"><a href="namespaceos_1_1rtos_1_1scheduler.html#a871b3eae039da2fd49e1cec17779fe00">os::rtos::scheduler::lock</a></div><div class="ttdeci">state_t lock(void)</div><div class="ttdoc">Lock the scheduler.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00871">os-sched.h:871</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l00871">os::rtos::scheduler::lock()</a>.</p>
 
 </div>
 </div>
@@ -272,8 +276,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Try to lock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -284,7 +286,13 @@ Public Member Functions</h2></td></tr>
 <p>Somehow redundant, since the lock will always succeed; but used to meet the lockableable requirements.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01000">1000</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00993">993</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  994</span>      {</div>
+<div class="line"><span class="lineno">  995</span>        state_ = <a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#a871b3eae039da2fd49e1cec17779fe00">scheduler::lock</a> ();</div>
+<div class="line"><span class="lineno">  996</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  997</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l00871">os::rtos::scheduler::lock()</a>.</p>
 
 </div>
 </div>
@@ -311,13 +319,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Unlock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01010">1010</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01003">1003</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1004</span>      {</div>
+<div class="line"><span class="lineno"> 1005</span>        <a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">scheduler::locked</a> (state_);</div>
+<div class="line"><span class="lineno"> 1006</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1scheduler_html_adc237cecdf686cfb10780a29931166a4"><div class="ttname"><a href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">os::rtos::scheduler::locked</a></div><div class="ttdeci">bool locked(void)</div><div class="ttdoc">Check if the scheduler is locked.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00858">os-sched.h:858</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l00858">os::rtos::scheduler::locked()</a>.</p>
 
 </div>
 </div>

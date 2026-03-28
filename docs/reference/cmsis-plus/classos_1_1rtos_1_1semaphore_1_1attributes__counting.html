@@ -173,9 +173,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5d7e0d82010925866a1780e04a8134c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Counting semaphore attributes. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00214">214</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00220">220</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5f2330065b8c01127482f39b3e6a892f" name="a5f2330065b8c01127482f39b3e6a892f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f2330065b8c01127482f39b3e6a892f">&#9670;&#160;</a></span>attributes_counting() <span class="overload">[1/3]</span></h2>
@@ -210,8 +209,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a counting semaphore attributes object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">max_value</td><td>Maximum count value. </td></tr>
@@ -220,8 +217,15 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00699">699</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00701">701</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  703</span>        : <a class="code hl_function" href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a5dd04e209841d994a940715002748661">attributes</a>{ <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a734d5093eb06194dbecd13d2c63797a8">max_value</a>, <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a84a0ed04d86929e8bb9e1193cbb38da3">initial_value</a> }</div>
+<div class="line"><span class="lineno">  704</span>          <span class="comment">// Use the protected constructor.</span></div>
+<div class="line"><span class="lineno">  705</span>    {</div>
+<div class="line"><span class="lineno">  706</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1semaphore_1_1attributes_html_a5dd04e209841d994a940715002748661"><div class="ttname"><a href="classos_1_1rtos_1_1semaphore_1_1attributes.html#a5dd04e209841d994a940715002748661">os::rtos::semaphore::attributes::attributes</a></div><div class="ttdeci">constexpr attributes()</div><div class="ttdoc">Construct a semaphore attributes object instance.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00673">os-semaphore.h:673</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1semaphore_html_a734d5093eb06194dbecd13d2c63797a8"><div class="ttname"><a href="classos_1_1rtos_1_1semaphore.html#a734d5093eb06194dbecd13d2c63797a8">os::rtos::semaphore::max_value</a></div><div class="ttdeci">count_t max_value(void) const</div><div class="ttdoc">Get the semaphore maximum count value.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00774">os-semaphore.h:774</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1semaphore_html_a84a0ed04d86929e8bb9e1193cbb38da3"><div class="ttname"><a href="classos_1_1rtos_1_1semaphore.html#a84a0ed04d86929e8bb9e1193cbb38da3">os::rtos::semaphore::initial_value</a></div><div class="ttdeci">count_t initial_value(void) const</div><div class="ttdoc">Get the semaphore initial count value.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00762">os-semaphore.h:762</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d069a6c13cfb6c41f9d18150dc9fdfa" name="a7d069a6c13cfb6c41f9d18150dc9fdfa"></a>
@@ -299,8 +303,6 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destruct the semaphore attributes object instance. </p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -376,12 +378,12 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Attribute with the address of the clock to be used for timeouts. </p>
 <p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance.">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock object instance.">os::rtos::rtclock</a></code>, or any other user object derived from class <code><a class="el" href="classos_1_1rtos_1_1clock.html" title="Generic clock.">os::rtos::clock</a></code>.</p>
 <p>If <code>nullptr</code>, the default clock is <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance.">os::rtos::sysclock</a></code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00615">615</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00612">612</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-evflags_8cpp_source.html#l00163">os::rtos::event_flags::event_flags()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00507">os::rtos::mutex::mutex()</a>, and <a class="el" href="os-timer_8cpp_source.html#l00166">os::rtos::timer::timer()</a>.</p>
 
 </div>
 </div>
@@ -404,11 +406,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Semaphore initial count value. </p>
 <p>This values represents the number of resources initially available to the semaphore. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00150">150</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00146">146</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
 
 </div>
 </div>
@@ -431,11 +431,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Semaphore max count value. </p>
 <p>This values represents the maximum number of resources available to the semaphore. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00145">145</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00141">141</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
 
 </div>
 </div>

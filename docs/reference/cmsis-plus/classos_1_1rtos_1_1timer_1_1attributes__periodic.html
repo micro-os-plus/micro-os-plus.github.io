@@ -170,9 +170,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5d7e0d82010925866a1780e04a8134c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Periodic timer attributes. </p>
+<div class="textblock"><p>Allow to assign a name to the timer. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00215">215</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00210">210</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a67ab5d0413195c59d1aa786ef8b9c824" name="a67ab5d0413195c59d1aa786ef8b9c824"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67ab5d0413195c59d1aa786ef8b9c824">&#9670;&#160;</a></span>attributes_periodic() <span class="overload">[1/3]</span></h2>
@@ -196,12 +196,15 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct periodic timer attributes object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00477">477</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00464">464</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  465</span>        : <a class="code hl_function" href="classos_1_1rtos_1_1timer_1_1attributes.html#a25901891ddd23ca9878b716718c67d83">attributes</a>{ <a class="code hl_enumvalue" href="structos_1_1rtos_1_1timer_1_1run.html#a98c7aa532bda781126dc8dc0dbdfcc44a769a204cfa7ca17e3a8329a23c925bd6">run::periodic</a> }</div>
+<div class="line"><span class="lineno">  466</span>    {</div>
+<div class="line"><span class="lineno">  467</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1timer_1_1attributes_html_a25901891ddd23ca9878b716718c67d83"><div class="ttname"><a href="classos_1_1rtos_1_1timer_1_1attributes.html#a25901891ddd23ca9878b716718c67d83">os::rtos::timer::attributes::attributes</a></div><div class="ttdeci">constexpr attributes()</div><div class="ttdoc">Construct a timer attributes object instance.</div><div class="ttdef"><b>Definition</b> <a href="os-timer_8h_source.html#l00447">os-timer.h:447</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1timer_1_1run_html_a98c7aa532bda781126dc8dc0dbdfcc44a769a204cfa7ca17e3a8329a23c925bd6"><div class="ttname"><a href="structos_1_1rtos_1_1timer_1_1run.html#a98c7aa532bda781126dc8dc0dbdfcc44a769a204cfa7ca17e3a8329a23c925bd6">os::rtos::timer::run::periodic</a></div><div class="ttdeci">@ periodic</div><div class="ttdoc">Run periodically.</div><div class="ttdef"><b>Definition</b> <a href="os-timer_8h_source.html#l00093">os-timer.h:92</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a40597d650c10750877d414539f50b64a" name="a40597d650c10750877d414539f50b64a"></a>
@@ -279,8 +282,6 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destruct the periodic timer attributes object instance. </p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -356,12 +357,12 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Attribute with the address of the clock to be used for timeouts. </p>
 <p>It may be one of <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance.">os::rtos::sysclock</a></code>, <code><a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a" title="The real time clock object instance.">os::rtos::rtclock</a></code>, or any other user object derived from class <code><a class="el" href="classos_1_1rtos_1_1clock.html" title="Generic clock.">os::rtos::clock</a></code>.</p>
 <p>If <code>nullptr</code>, the default clock is <code><a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a" title="The system clock object instance.">os::rtos::sysclock</a></code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00615">615</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00612">612</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-evflags_8cpp_source.html#l00163">os::rtos::event_flags::event_flags()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00507">os::rtos::mutex::mutex()</a>, and <a class="el" href="os-timer_8cpp_source.html#l00166">os::rtos::timer::timer()</a>.</p>
 
 </div>
 </div>
@@ -385,9 +386,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Timer type attribute. </p>
+<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00187">187</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="os-timer_8h_source.html#l00195">195</a> of file <a class="el" href="os-timer_8h_source.html">os-timer.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-timer_8cpp_source.html#l00166">os::rtos::timer::timer()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l03822">osTimerCreate()</a>.</p>
 
 </div>
 </div>

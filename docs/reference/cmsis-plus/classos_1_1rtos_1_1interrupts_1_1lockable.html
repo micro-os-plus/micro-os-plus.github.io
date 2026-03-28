@@ -149,10 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad30dbac581b773f1c31dea966cc07a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interrupts standard locker. </p>
-<p>Locker meeting the standard <code>Lockable</code> requirements (30.2.5.3). </p>
+<div class="textblock"><p>Locker meeting the standard <code>Lockable</code> requirements (30.2.5.3). </p>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00699">699</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00704">704</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af0216b65401ee1a71eea6925677e585f" name="af0216b65401ee1a71eea6925677e585f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0216b65401ee1a71eea6925677e585f">&#9670;&#160;</a></span>lockable()</h2>
@@ -176,13 +175,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct an interrupts lock. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01201">1201</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01185">1185</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1185</span>                                    : state_ (port::interrupts::state::init)</div>
+<div class="line"><span class="lineno"> 1186</span>      {</div>
+<div class="line"><span class="lineno"> 1187</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6ba023c84d7c83ef2514e17bd11bddcd" name="a6ba023c84d7c83ef2514e17bd11bddcd"></a>
@@ -207,12 +207,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the interrupts lock. </p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01211">1211</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01192">1192</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1193</span>      {</div>
+<div class="line"><span class="lineno"> 1194</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -239,13 +239,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Lock the interrupts. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01220">1220</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01200">1200</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1201</span>      {</div>
+<div class="line"><span class="lineno"> 1202</span>        state_ = <a class="code hl_function" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#adbacb147546e7166311b22c960f41e6a">critical_section::enter</a> ();</div>
+<div class="line"><span class="lineno"> 1203</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1interrupts_1_1critical__section_html_adbacb147546e7166311b22c960f41e6a"><div class="ttname"><a href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#adbacb147546e7166311b22c960f41e6a">os::rtos::interrupts::critical_section::enter</a></div><div class="ttdeci">static state_t enter(void)</div><div class="ttdoc">Enter an interrupts critical section.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01128">os-sched.h:1128</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01128">os::rtos::interrupts::critical_section::enter()</a>.</p>
 
 </div>
 </div>
@@ -272,8 +276,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Try to lock the interrupts. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -284,7 +286,13 @@ Public Member Functions</h2></td></tr>
 <p>Somehow redundant, since the lock will always succeed; but used to meet the Lockable requirements.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01234">1234</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01213">1213</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1214</span>      {</div>
+<div class="line"><span class="lineno"> 1215</span>        state_ = <a class="code hl_function" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#adbacb147546e7166311b22c960f41e6a">critical_section::enter</a> ();</div>
+<div class="line"><span class="lineno"> 1216</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1217</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01128">os::rtos::interrupts::critical_section::enter()</a>.</p>
 
 </div>
 </div>
@@ -311,13 +319,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Unlock the interrupts. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01245">1245</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01223">1223</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1224</span>      {</div>
+<div class="line"><span class="lineno"> 1225</span>        <a class="code hl_function" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#a6541da78ed161f672026eea3a295bef5">critical_section::exit</a> (state_);</div>
+<div class="line"><span class="lineno"> 1226</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1interrupts_1_1critical__section_html_a6541da78ed161f672026eea3a295bef5"><div class="ttname"><a href="classos_1_1rtos_1_1interrupts_1_1critical__section.html#a6541da78ed161f672026eea3a295bef5">os::rtos::interrupts::critical_section::exit</a></div><div class="ttdeci">static void exit(state_t state)</div><div class="ttdoc">Exit the interrupts critical section.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01137">os-sched.h:1137</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01137">os::rtos::interrupts::critical_section::exit()</a>.</p>
 
 </div>
 </div>

@@ -145,7 +145,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constructors &amp; Destructor</div></td></tr>
-<tr class="memitem:aacbeb9aee5445e5a4dfabb0f5bf420b7"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:aacbeb9aee5445e5a4dfabb0f5bf420b7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:aacbeb9aee5445e5a4dfabb0f5bf420b7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1net__stack__implementable.html#aacbeb9aee5445e5a4dfabb0f5bf420b7">net_stack_implementable</a> (const char *<a class="el" href="classos_1_1posix_1_1net__stack.html#ac7267982468c0c7a8ae60841ce54db3a">name</a>, <a class="el" href="classos_1_1posix_1_1net__interface.html">net_interface</a> &amp;<a class="el" href="classos_1_1posix_1_1net__stack.html#a88cfceee12ee3503aac8ec20d2cda709">interface</a>, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:aacbeb9aee5445e5a4dfabb0f5bf420b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89ca3a7c4b42e799a0e08eecb3690b58"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1posix_1_1net__stack__implementable.html#a89ca3a7c4b42e799a0e08eecb3690b58">~net_stack_implementable</a> ()</td></tr>
@@ -177,7 +177,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class os::posix::net_stack_implementable&lt; T &gt;</div>
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00291">291</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00286">286</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a2759a9588452c27db2d6c29423f64705" name="a2759a9588452c27db2d6c29423f64705"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2759a9588452c27db2d6c29423f64705">&#9670;&#160;</a></span>deferred_sockets_list_t</h2>
@@ -199,7 +199,7 @@ class os::posix::net_stack_implementable&lt; T &gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00134">134</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00132">132</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
 
 </div>
 </div>
@@ -217,7 +217,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00297">297</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00291">291</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
 <div class="memtemplate">
-template&lt;typename ... Args&gt; </div>
+template&lt;typename... Args&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classos_1_1posix_1_1net__stack__implementable.html">os::posix::net_stack_implementable</a>&lt; T &gt;::net_stack_implementable </td>
@@ -258,7 +258,21 @@ template&lt;typename ... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00575">575</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00564">564</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  566</span>        : <a class="code hl_function" href="classos_1_1posix_1_1net__stack.html#a077cf344949876746f675a0a6d0d5702">net_stack</a>{ impl_instance_, <a class="code hl_function" href="classos_1_1posix_1_1net__stack.html#ac7267982468c0c7a8ae60841ce54db3a">name</a> }, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  567</span>          impl_instance_{ <a class="code hl_function" href="classos_1_1posix_1_1net__stack.html#a88cfceee12ee3503aac8ec20d2cda709">interface</a>, std::forward&lt;Args&gt; (args)... }</div>
+<div class="line"><span class="lineno">  568</span>    {</div>
+<div class="line"><span class="lineno">  569</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_NET_STACK)</span></div>
+<div class="line"><span class="lineno">  570</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;net_stack_implementable::%s(\&quot;%s\&quot;)=@%p\n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">  571</span>                     name_, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  572</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  573</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack_html_a077cf344949876746f675a0a6d0d5702"><div class="ttname"><a href="classos_1_1posix_1_1net__stack.html#a077cf344949876746f675a0a6d0d5702">os::posix::net_stack::net_stack</a></div><div class="ttdeci">net_stack(net_stack_impl &amp;impl, const char *name)</div><div class="ttdef"><b>Definition</b> <a href="net-stack_8cpp_source.html#l00081">net-stack.cpp:81</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack_html_a88cfceee12ee3503aac8ec20d2cda709"><div class="ttname"><a href="classos_1_1posix_1_1net__stack.html#a88cfceee12ee3503aac8ec20d2cda709">os::posix::net_stack::interface</a></div><div class="ttdeci">net_interface &amp; interface(void) const</div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack_html_ac7267982468c0c7a8ae60841ce54db3a"><div class="ttname"><a href="classos_1_1posix_1_1net__stack.html#ac7267982468c0c7a8ae60841ce54db3a">os::posix::net_stack::name</a></div><div class="ttdeci">const char * name(void) const</div><div class="ttdef"><b>Definition</b> <a href="net-stack_8h_source.html#l00450">net-stack.h:450</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -284,7 +298,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00589">589</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00576">576</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  577</span>    {</div>
+<div class="line"><span class="lineno">  578</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_NET_STACK)</span></div>
+<div class="line"><span class="lineno">  579</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;net_stack_implementable::%s() @%p %s\n&quot;</span>, __func__, <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  580</span>                     name_);</div>
+<div class="line"><span class="lineno">  581</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  582</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -313,8 +335,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00480">480</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00469">469</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  470</span>    {</div>
+<div class="line"><span class="lineno">  471</span>      deferred_sockets_list_.link (*sock);</div>
+<div class="line"><span class="lineno">  472</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af208b8f040cec2726c3314c0c706ff64" name="af208b8f040cec2726c3314c0c706ff64"></a>
@@ -343,8 +368,40 @@ template&lt;typename T , typename L &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00529">529</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00518">518</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  519</span>    {</div>
+<div class="line"><span class="lineno">  520</span>      <span class="keyword">using </span>socket_type = T;</div>
+<div class="line"><span class="lineno">  521</span> </div>
+<div class="line"><span class="lineno">  522</span>      socket_type* sock;</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>      <span class="keywordflow">if</span> (deferred_sockets_list_.empty ())</div>
+<div class="line"><span class="lineno">  525</span>        {</div>
+<div class="line"><span class="lineno">  526</span>          sock = <span class="keyword">new</span> socket_type (*<span class="keyword">this</span>, locker);</div>
+<div class="line"><span class="lineno">  527</span>        }</div>
+<div class="line"><span class="lineno">  528</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  529</span>        {</div>
+<div class="line"><span class="lineno">  530</span>          sock = <span class="keyword">static_cast&lt;</span>socket_type*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  531</span>              deferred_sockets_list_.unlink_head ());</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>          <span class="comment">// Call the constructor before reusing the object,</span></div>
+<div class="line"><span class="lineno">  534</span>          sock-&gt;~socket_type ();</div>
+<div class="line"><span class="lineno">  535</span> </div>
+<div class="line"><span class="lineno">  536</span>          <span class="comment">// Placement new, run only the constructor.</span></div>
+<div class="line"><span class="lineno">  537</span>          <span class="keyword">new</span> (sock) socket_type (*<span class="keyword">this</span>, locker);</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>          <span class="comment">// Deallocate all remaining elements in the list.</span></div>
+<div class="line"><span class="lineno">  540</span>          <span class="keywordflow">while</span> (!deferred_sockets_list_.empty ())</div>
+<div class="line"><span class="lineno">  541</span>            {</div>
+<div class="line"><span class="lineno">  542</span>              socket_type* s = <span class="keyword">static_cast&lt;</span>socket_type*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  543</span>                  deferred_sockets_list_.unlink_head ());</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>              <span class="comment">// Call the destructor and the deallocator.</span></div>
+<div class="line"><span class="lineno">  546</span>              <span class="keyword">delete</span> s;</div>
+<div class="line"><span class="lineno">  547</span>            }</div>
+<div class="line"><span class="lineno">  548</span>        }</div>
+<div class="line"><span class="lineno">  549</span>      <span class="keywordflow">return</span> sock;</div>
+<div class="line"><span class="lineno">  550</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a710f6bde7eae126346acd4b9f4546a8a" name="a710f6bde7eae126346acd4b9f4546a8a"></a>
@@ -373,8 +430,40 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00493">493</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00482">482</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>      <span class="keyword">using </span>socket_type = T;</div>
+<div class="line"><span class="lineno">  485</span> </div>
+<div class="line"><span class="lineno">  486</span>      socket_type* sock;</div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>      <span class="keywordflow">if</span> (deferred_sockets_list_.empty ())</div>
+<div class="line"><span class="lineno">  489</span>        {</div>
+<div class="line"><span class="lineno">  490</span>          sock = <span class="keyword">new</span> socket_type (*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  491</span>        }</div>
+<div class="line"><span class="lineno">  492</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  493</span>        {</div>
+<div class="line"><span class="lineno">  494</span>          sock = <span class="keyword">static_cast&lt;</span>socket_type*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  495</span>              deferred_sockets_list_.unlink_head ());</div>
+<div class="line"><span class="lineno">  496</span> </div>
+<div class="line"><span class="lineno">  497</span>          <span class="comment">// Call the constructor before reusing the object,</span></div>
+<div class="line"><span class="lineno">  498</span>          sock-&gt;~socket_type ();</div>
+<div class="line"><span class="lineno">  499</span> </div>
+<div class="line"><span class="lineno">  500</span>          <span class="comment">// Placement new, run only the constructor.</span></div>
+<div class="line"><span class="lineno">  501</span>          <span class="keyword">new</span> (sock) socket_type (*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  502</span> </div>
+<div class="line"><span class="lineno">  503</span>          <span class="comment">// Deallocate all remaining elements in the list.</span></div>
+<div class="line"><span class="lineno">  504</span>          <span class="keywordflow">while</span> (!deferred_sockets_list_.empty ())</div>
+<div class="line"><span class="lineno">  505</span>            {</div>
+<div class="line"><span class="lineno">  506</span>              socket_type* s = <span class="keyword">static_cast&lt;</span>socket_type*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  507</span>                  deferred_sockets_list_.unlink_head ());</div>
+<div class="line"><span class="lineno">  508</span> </div>
+<div class="line"><span class="lineno">  509</span>              <span class="comment">// Call the destructor and the deallocator.</span></div>
+<div class="line"><span class="lineno">  510</span>              <span class="keyword">delete</span> s;</div>
+<div class="line"><span class="lineno">  511</span>            }</div>
+<div class="line"><span class="lineno">  512</span>        }</div>
+<div class="line"><span class="lineno">  513</span>      <span class="keywordflow">return</span> sock;</div>
+<div class="line"><span class="lineno">  514</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae507f8986068f83bcc2f6899b72506a7" name="ae507f8986068f83bcc2f6899b72506a7"></a>
@@ -401,8 +490,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00486">486</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00475">475</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  476</span>    {</div>
+<div class="line"><span class="lineno">  477</span>      <span class="keywordflow">return</span> deferred_sockets_list_;</div>
+<div class="line"><span class="lineno">  478</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1893464657a3f3454f8fb8baa34b4cb" name="ad1893464657a3f3454f8fb8baa34b4cb"></a>
@@ -423,8 +515,12 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00599">599</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00586">586</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  587</span>    {</div>
+<div class="line"><span class="lineno">  588</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1net__stack__implementable.html#acb4f7466d4aafe1b89fddc70aff29594">value_type</a>&amp;<span class="keyword">&gt;</span> (impl_);</div>
+<div class="line"><span class="lineno">  589</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack__implementable_html_acb4f7466d4aafe1b89fddc70aff29594"><div class="ttname"><a href="classos_1_1posix_1_1net__stack__implementable.html#acb4f7466d4aafe1b89fddc70aff29594">os::posix::net_stack_implementable::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition</b> <a href="net-stack_8h_source.html#l00291">net-stack.h:291</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88cfceee12ee3503aac8ec20d2cda709" name="a88cfceee12ee3503aac8ec20d2cda709"></a>
@@ -477,8 +573,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00461">461</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="net-stack_8h_source.html#l00450">450</a> of file <a class="el" href="net-stack_8h_source.html">net-stack.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>      <span class="keywordflow">return</span> name_;</div>
+<div class="line"><span class="lineno">  453</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad3c0c5d80d0bb1cd44ef98e7eaddabae" name="ad3c0c5d80d0bb1cd44ef98e7eaddabae"></a>
@@ -521,7 +620,18 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="net-stack_8cpp_source.html#l00105">105</a> of file <a class="el" href="net-stack_8cpp_source.html">net-stack.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="net-stack_8cpp_source.html#l00104">104</a> of file <a class="el" href="net-stack_8cpp_source.html">net-stack.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>      errno = 0;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1posix_1_1net__stack.html#a691562e13fd670c1a0060844761070be">impl</a> ().<a class="code hl_function" href="classos_1_1posix_1_1net__stack__impl.html#a3019963f81dded53faf2b35cf4677d2f">do_socket</a> (domain, type, protocol);</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack__impl_html_a3019963f81dded53faf2b35cf4677d2f"><div class="ttname"><a href="classos_1_1posix_1_1net__stack__impl.html#a3019963f81dded53faf2b35cf4677d2f">os::posix::net_stack_impl::do_socket</a></div><div class="ttdeci">virtual class socket * do_socket(int domain, int type, int protocol)=0</div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1net__stack_html_a691562e13fd670c1a0060844761070be"><div class="ttname"><a href="classos_1_1posix_1_1net__stack.html#a691562e13fd670c1a0060844761070be">os::posix::net_stack::impl</a></div><div class="ttdeci">net_stack_impl &amp; impl(void) const</div><div class="ttdef"><b>Definition</b> <a href="net-stack_8h_source.html#l00456">net-stack.h:456</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1posix_1_1net__stack__impl.html#a3019963f81dded53faf2b35cf4677d2f">os::posix::net_stack_impl::do_socket()</a>, and <a class="el" href="net-stack_8h_source.html#l00456">os::posix::net_stack::impl()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="net-stack_8cpp_source.html#l00062">os::posix::socket()</a>.</p>
 
 </div>
 </div>

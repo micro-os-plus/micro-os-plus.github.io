@@ -4,11 +4,15 @@ var namespaces_dup =
       [ "__verbose_terminate_handler", "namespace____gnu__cxx.html#af51888cedbc669a114cd79e39e0cd9be", null ]
     ] ],
     [ "anonymous_namespace{new.cpp}", "namespaceanonymous__namespace_02new_8cpp_03.html", [
-      [ "new_handler_", "group__cmsis-plus-rtos-memres.html#ga099e4657626730e767ff1b87868e1379", null ]
+      [ "new_handler_", "namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379", null ]
     ] ],
     [ "anonymous_namespace{os-core.cpp}", "namespaceanonymous__namespace_02os-core_8cpp_03.html", null ],
     [ "os", "namespaceos.html", "namespaceos" ],
-    [ "std", "namespacestd.html", "namespacestd" ],
+    [ "std", "namespacestd.html", [
+      [ "get_new_handler", "namespacestd.html#a2aab280c9a87214e453f8f598827d13b", null ],
+      [ "set_new_handler", "namespacestd.html#a6519f396a0019421c491bcdccab811b3", null ],
+      [ "nothrow", "namespacestd.html#ae4b7b14b5246bacb54f2a4ae366ccd44", null ]
+    ] ],
     [ "this_thread", "namespacethis__thread.html", [
       [ "get_id", "namespacethis__thread.html#a0853c122bfad98e6641b630b9ac54736", null ],
       [ "sleep_for", "namespacethis__thread.html#a6d6a4945e61188e3edcb17ce1b4b7c50", null ],

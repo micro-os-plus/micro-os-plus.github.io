@@ -151,10 +151,9 @@ Public Types</h2></td></tr>
 <tr class="separator:a0aeb2faf49c001494f12a5d893ffb5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thread states. </p>
-<p>The <a class="el" href="structos_1_1rtos_1_1thread_1_1state.html" title="Thread states.">os::rtos::thread::state</a> definition is a container for thread states. </p>
+<div class="textblock"><p>The <a class="el" href="structos_1_1rtos_1_1thread_1_1state.html" title="Thread states.">os::rtos::thread::state</a> definition is a container for thread states. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00366">366</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00368">368</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a0aeb2faf49c001494f12a5d893ffb5cf" name="a0aeb2faf49c001494f12a5d893ffb5cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0aeb2faf49c001494f12a5d893ffb5cf">&#9670;&#160;</a></span>anonymous enum</h2>
@@ -167,8 +166,6 @@ Public Types</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>An enumeration with all possible thread states. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b" name="a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b"></a>undefined&#160;</td><td class="fielddoc"><p>Used to catch uninitialised threads. </p>
 </td></tr>
@@ -186,8 +183,24 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00371">371</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00373">373</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  374</span>        {</div>
+<div class="line"><span class="lineno">  378</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b">undefined</a> = 0, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  382</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">ready</a> = 1, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  386</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">running</a> = 2, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  390</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a">suspended</a> = 3, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  394</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec">terminated</a> = 4, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  398</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31">destroyed</a> = 5, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  402</span><span class="comment"></span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa7fb1f30286cfc09e02f7b9113e2ef9af">initializing</a> = 6 <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  403</span>        };</div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">os::rtos::thread::state::running</a></div><div class="ttdeci">@ running</div><div class="ttdoc">Has the CPU and runs.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00386">os-thread.h:386</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa220cec61dc8f7e06877e15f3f46fdb31">os::rtos::thread::state::destroyed</a></div><div class="ttdeci">@ destroyed</div><div class="ttdoc">Terminated and resources (like stack) released.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00398">os-thread.h:398</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfa7fb1f30286cfc09e02f7b9113e2ef9af"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa7fb1f30286cfc09e02f7b9113e2ef9af">os::rtos::thread::state::initializing</a></div><div class="ttdeci">@ initializing</div><div class="ttdoc">Used to check reused threads.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00403">os-thread.h:402</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfab28a7fb1c80b69c2fa9252cddaa840ec">os::rtos::thread::state::terminated</a></div><div class="ttdeci">@ terminated</div><div class="ttdoc">No longer usable, but resources not yet released.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00394">os-thread.h:394</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">os::rtos::thread::state::ready</a></div><div class="ttdeci">@ ready</div><div class="ttdoc">Present in the READY list and competing for CPU.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00382">os-thread.h:382</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaebd5fdfb4335ddbe126ad20e3afb5b2b">os::rtos::thread::state::undefined</a></div><div class="ttdeci">@ undefined</div><div class="ttdoc">Used to catch uninitialised threads.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00378">os-thread.h:378</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfaf46d088e5341fbed8cf7b0f3978b819a">os::rtos::thread::state::suspended</a></div><div class="ttdeci">@ suspended</div><div class="ttdoc">Not present in the READY list, waiting for an event.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00390">os-thread.h:390</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

@@ -162,7 +162,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
 <tr class="separator:gac00f459f783f32a82bde991663c0bb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Definitions used to configure the memory management features. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga721680307e22398c71310504278739fc" name="ga721680307e22398c71310504278739fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga721680307e22398c71310504278739fc">&#9670;&#160;</a></span>OS_EXCLUDE_DYNAMIC_MEMORY_ALLOCATIONS</h2>
@@ -175,8 +174,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prevent any dynamic memory allocation, everything should be static. </p>
 <p>For special applications that require all objects to be statically allocated, this option not only allocates all system objects statically (like the main and idle thread), but also installs a null memory manager, that guarantees a loud <em>bang</em> if a dynamic allocation (like <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga7f27d2fe0e31336c7c67110e9d645b82" title="Allocate a memory block (non-initialised).">malloc()</a></code> or <code>new</code>) is attempted by the application.</p>
 <dl class="section user"><dt>Default</dt><dd>Allow dynamic allocations. </dd></dl>
 
@@ -195,8 +192,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of condition variable objects. </p>
 <p>This option instructs the startup code to create a pool of empty condition variable objects of the given size. This pool can be used as an allocator to create life condition variable objects using <code>rtos::memory::allocate_unique&lt;condition_variable&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of condition variable objects. </dd></dl>
@@ -216,8 +211,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of event flags objects. </p>
 <p>This option instructs the startup code to create a pool of empty event flags objects of the given size. This pool can be used as an allocator to create life event flags objects using <code>rtos::memory::allocate_unique&lt;event_flags&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of event flags objects. </dd></dl>
@@ -237,8 +230,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of memory pool objects. </p>
 <p>This option instructs the startup code to create a pool of empty memory pool objects of the given size. This pool can be used as an allocator to create life memory pool objects using <code>rtos::memory::allocate_unique&lt;memory_pool&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of memory pool objects. </dd></dl>
@@ -258,8 +249,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of message queue objects. </p>
 <p>This option instructs the startup code to create a pool of empty message queue objects of the given size. This pool can be used as an allocator to create life message queue objects using <code>rtos::memory::allocate_unique&lt;message_queue&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of message queue objects. </dd></dl>
@@ -279,8 +268,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of mutex objects. </p>
 <p>This option instructs the startup code to create a pool of empty mutex objects of the given size. This pool can be used as an allocator to create life mutex objects using <code>rtos::memory::allocate_unique&lt;mutex&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of mutex objects. </dd></dl>
@@ -300,8 +287,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of semaphore objects. </p>
 <p>This option instructs the startup code to create a pool of empty semaphore objects of the given size. This pool can be used as an allocator to create life semaphore objects using <code>rtos::memory::allocate_unique&lt;semaphore&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of semaphore objects. </dd></dl>
@@ -321,8 +306,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of thread objects. </p>
 <p>This option instructs the startup code to create a pool of empty thread objects of the given size. This pool can be used as an allocator to create life thread objects using <code>rtos::memory::allocate_unique&lt;thread&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of thread objects. </dd></dl>
@@ -342,8 +325,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define a pool of timer objects. </p>
 <p>This option instructs the startup code to create a pool of empty timer objects of the given size. This pool can be used as an allocator to create life timer objects using <code>rtos::memory::allocate_unique&lt;timer&gt; (...)</code>.</p>
 <p>The pool is dynamically allocated, and never deallocated.</p>
 <dl class="section user"><dt>Default</dt><dd>Do not create the pool of timer objects. </dd></dl>
@@ -363,8 +344,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Ask for separate RTOS dynamic memory and define its size. </p>
 <p>To protect the system objects from possible application bugs, it is recommended to define a separate allocation arena with a separate memory manager.</p>
 <p>If this definition is present, a memory block with the requested size is allocated with the application allocator (thus reducing the size of the application free store), and a memory resource object is created to use this separate memory.</p>
 <p>The default memory manager is <code><a class="el" href="classos_1_1memory_1_1lifo.html" title="Memory resource implementing the LIFO allocation/deallocation policies, using an existing arena.">os::memory::lifo</a></code> and can be change by defining <code>OS_TYPE_RTOS_MEMORY_RESOURCE</code>.</p>
@@ -385,8 +364,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The type of the memory manager to be used for the application free store. </p>
 <p>The default memory manager is <code><a class="el" href="classos_1_1memory_1_1first__fit__top.html" title="Memory resource implementing the first fit, top-down allocation policies, using an existing arena.">os::memory::first_fit_top</a></code>, which is not deterministic, but reasonably fast.</p>
 <p>If your application is very active with random allocation, be sure tolerates restarts due to fragmentation.</p>
 <dl class="section user"><dt>Default</dt><dd>The default memory manager is <code><a class="el" href="classos_1_1memory_1_1first__fit__top.html" title="Memory resource implementing the first fit, top-down allocation policies, using an existing arena.">os::memory::first_fit_top</a></code>. </dd></dl>
@@ -406,8 +383,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-mem.html'
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The type of the memory manager to be used for the RTOS system area. </p>
 <p>The default memory manager is <code><a class="el" href="classos_1_1memory_1_1lifo.html" title="Memory resource implementing the LIFO allocation/deallocation policies, using an existing arena.">os::memory::lifo</a></code>, which is guaranteed deterministic for allocations and prevents fragmentation, but has the disadvantage that favours deallocations when performed in the reverse order of allocations (actually older blocks are reused only after all more recent blocks are freed).</p>
 <p>The LIFO allocation policy is a perfect fit when most objects are created during the initialisation phase, and later on thee is little activity.</p>
 <p>Redefine it to <code><a class="el" href="classos_1_1memory_1_1first__fit__top.html" title="Memory resource implementing the first fit, top-down allocation policies, using an existing arena.">os::memory::first_fit_top</a></code> if your application is more dynamic, but be sure it tolerates restarts due to fragmentation.</p>

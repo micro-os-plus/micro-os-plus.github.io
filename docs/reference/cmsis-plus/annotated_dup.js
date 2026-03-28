@@ -184,11 +184,6 @@ var annotated_dup =
         [ "static_double_list_links", "classos_1_1utils_1_1static__double__list__links.html", "classos_1_1utils_1_1static__double__list__links" ]
       ] ]
     ] ],
-    [ "std", "namespacestd.html", [
-      [ "hash< os::estd::thread::id >", "structstd_1_1hash_3_01os_1_1estd_1_1thread_1_1id_01_4.html", "structstd_1_1hash_3_01os_1_1estd_1_1thread_1_1id_01_4" ]
-    ] ],
-    [ "attributes_binary", "classattributes__binary.html", null ],
-    [ "attributes_periodic", "classattributes__periodic.html", null ],
     [ "DIR", "structDIR.html", null ],
     [ "dirent", "structdirent.html", "structdirent" ],
     [ "exception_stack_frame_s", "structexception__stack__frame__s.html", "structexception__stack__frame__s" ],

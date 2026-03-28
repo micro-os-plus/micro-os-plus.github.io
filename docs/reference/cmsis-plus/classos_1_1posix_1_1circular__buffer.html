@@ -124,10 +124,10 @@ $(document).ready(function(){initNavTree('classos_1_1posix_1_1circular__buffer.h
 </div><!--header-->
 <div class="contents">
 
-<p>Circular buffer class template.  
+<p>Circular buffer class template.&lt;<a class="el" href="circular-buffer_8h.html">cmsis-plus/posix-driver/circular-buffer.h</a>&gt;  
  <a href="classos_1_1posix_1_1circular__buffer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="circular-buffer_8h_source.html">cmsis-plus/posix-driver/circular-buffer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -188,8 +188,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class os::posix::circular_buffer&lt; T &gt;</div><p>Circular buffer class template. </p>
-
+class os::posix::circular_buffer&lt; T &gt;</div>
 <p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00037">37</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="abc9c86b49ae2d291b1b1818f5f5bcd17" name="abc9c86b49ae2d291b1b1818f5f5bcd17"></a>
@@ -206,9 +205,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Standard type definition. </p>
-
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00046">46</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00045">45</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +250,20 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00211">211</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00209">209</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>        : buf_ (buf), <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  214</span>          size_ (siz), <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  215</span>          high_water_mark_ (high_water_mark &lt;= size_ ? high_water_mark</div>
+<div class="line"><span class="lineno">  216</span>                                                     : siz), <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  217</span>          low_water_mark_ (low_water_mark)</div>
+<div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>      assert (low_water_mark_ &lt;= high_water_mark_);</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>      <a class="code hl_function" href="classos_1_1posix_1_1circular__buffer.html#a525740f410e9755f382df4e8d2bcd908">clear</a> ();</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_a525740f410e9755f382df4e8d2bcd908"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#a525740f410e9755f382df4e8d2bcd908">os::posix::circular_buffer::clear</a></div><div class="ttdeci">void clear(void)</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00242">circular-buffer.h:242</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="circular-buffer_8h_source.html#l00242">os::posix::circular_buffer&lt; T &gt;::clear()</a>.</p>
 
 </div>
 </div>
@@ -285,7 +295,15 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00226">226</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00225">225</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>        : <a class="code hl_function" href="classos_1_1posix_1_1circular__buffer.html#a5649dbc15b28032a3a1d34b4e94d74a5">circular_buffer</a>{ buf, siz, siz, 0 }</div>
+<div class="line"><span class="lineno">  228</span>    {</div>
+<div class="line"><span class="lineno">  229</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%p,%u) %p\n&quot;</span>, __func__, buf, siz, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_a5649dbc15b28032a3a1d34b4e94d74a5"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#a5649dbc15b28032a3a1d34b4e94d74a5">os::posix::circular_buffer::circular_buffer</a></div><div class="ttdeci">circular_buffer(const value_type *buf, std::size_t size, std::size_t high_water_mark, std::size_t low_water_mark=0)</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00209">circular-buffer.h:209</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -303,7 +321,12 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00235">235</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00233">233</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -334,8 +357,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00277">277</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00275">275</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>    {</div>
+<div class="line"><span class="lineno">  277</span>      <span class="comment">// Allow for water mark to be size.</span></div>
+<div class="line"><span class="lineno">  278</span>      <span class="keywordflow">return</span> (len_ &gt;= high_water_mark_);</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adf2d518e16270236885b5c722efc6157" name="adf2d518e16270236885b5c722efc6157"></a>
@@ -364,8 +391,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00300">300</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00298">298</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  299</span>    {</div>
+<div class="line"><span class="lineno">  300</span>      <span class="keywordflow">return</span> !<a class="code hl_function" href="classos_1_1posix_1_1circular__buffer.html#a90b2f640de4e80f02dabdde0bb20d4f4">below_low_water_mark</a> ();</div>
+<div class="line"><span class="lineno">  301</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_a90b2f640de4e80f02dabdde0bb20d4f4"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#a90b2f640de4e80f02dabdde0bb20d4f4">os::posix::circular_buffer::below_low_water_mark</a></div><div class="ttdeci">bool below_low_water_mark(void) const</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00283">circular-buffer.h:283</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0e6d3846be79ced01d579d03d3bdea6" name="af0e6d3846be79ced01d579d03d3bdea6"></a>
@@ -386,8 +417,30 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00383">383</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00381">381</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  382</span>    {</div>
+<div class="line"><span class="lineno">  383</span>      std::size_t adjust = count;</div>
+<div class="line"><span class="lineno">  384</span>      <span class="keywordflow">if</span> (count &gt; (size_ - len_))</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>          adjust = size_ - len_;</div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+<div class="line"><span class="lineno">  388</span> </div>
+<div class="line"><span class="lineno">  389</span>      <span class="keywordflow">if</span> (adjust == 0)</div>
+<div class="line"><span class="lineno">  390</span>        {</div>
+<div class="line"><span class="lineno">  391</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  392</span>        }</div>
+<div class="line"><span class="lineno">  393</span> </div>
+<div class="line"><span class="lineno">  394</span>      back_ += adjust;</div>
+<div class="line"><span class="lineno">  395</span>      <span class="keywordflow">if</span> (back_ &gt;= (buf_ + size_))</div>
+<div class="line"><span class="lineno">  396</span>        {</div>
+<div class="line"><span class="lineno">  397</span>          <span class="comment">// Wrap.</span></div>
+<div class="line"><span class="lineno">  398</span>          back_ -= size_;</div>
+<div class="line"><span class="lineno">  399</span>        }</div>
+<div class="line"><span class="lineno">  400</span>      len_ += adjust;</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>      <span class="keywordflow">return</span> adjust;</div>
+<div class="line"><span class="lineno">  403</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41dee72c5790e262c7bf0e6a25902147" name="a41dee72c5790e262c7bf0e6a25902147"></a>
@@ -408,8 +461,30 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00484">484</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00481">481</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  482</span>    {</div>
+<div class="line"><span class="lineno">  483</span>      <span class="keywordflow">if</span> (count == 0)</div>
+<div class="line"><span class="lineno">  484</span>        {</div>
+<div class="line"><span class="lineno">  485</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  486</span>        }</div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>      std::size_t adjust = count;</div>
+<div class="line"><span class="lineno">  489</span>      <span class="keywordflow">if</span> (adjust &gt; len_)</div>
+<div class="line"><span class="lineno">  490</span>        {</div>
+<div class="line"><span class="lineno">  491</span>          adjust = len_;</div>
+<div class="line"><span class="lineno">  492</span>        }</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>      front_ += adjust;</div>
+<div class="line"><span class="lineno">  495</span>      <span class="keywordflow">if</span> (front_ &gt;= (buf_ + size_))</div>
+<div class="line"><span class="lineno">  496</span>        {</div>
+<div class="line"><span class="lineno">  497</span>          <span class="comment">// Wrap.</span></div>
+<div class="line"><span class="lineno">  498</span>          front_ -= size_;</div>
+<div class="line"><span class="lineno">  499</span>        }</div>
+<div class="line"><span class="lineno">  500</span>      len_ -= adjust;</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>      <span class="keywordflow">return</span> adjust;</div>
+<div class="line"><span class="lineno">  503</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2b5e8d77a866c0f827ddf49e2026a09d" name="a2b5e8d77a866c0f827ddf49e2026a09d"></a>
@@ -430,8 +505,22 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00529">529</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00525">525</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  526</span>    {</div>
+<div class="line"><span class="lineno">  527</span>      assert (ppbuf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  528</span> </div>
+<div class="line"><span class="lineno">  529</span>      *ppbuf = back_;</div>
+<div class="line"><span class="lineno">  530</span> </div>
+<div class="line"><span class="lineno">  531</span>      std::size_t sizeToEnd = size_ - <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (back_ - buf_);</div>
+<div class="line"><span class="lineno">  532</span>      std::size_t len = sizeToEnd;</div>
+<div class="line"><span class="lineno">  533</span>      <span class="keywordflow">if</span> (len &gt; (size_ - len_))</div>
+<div class="line"><span class="lineno">  534</span>        {</div>
+<div class="line"><span class="lineno">  535</span>          len = size_ - len_;</div>
+<div class="line"><span class="lineno">  536</span>        }</div>
+<div class="line"><span class="lineno">  537</span> </div>
+<div class="line"><span class="lineno">  538</span>      <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  539</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a365f9c5464c3c08dd3f697cfe544c75f" name="a365f9c5464c3c08dd3f697cfe544c75f"></a>
@@ -460,8 +549,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00293">293</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00291">291</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  292</span>    {</div>
+<div class="line"><span class="lineno">  293</span>      <span class="keywordflow">return</span> !<a class="code hl_function" href="classos_1_1posix_1_1circular__buffer.html#a9c1115fe9dc2ee28138b1971aad3c3b6">above_high_water_mark</a> ();</div>
+<div class="line"><span class="lineno">  294</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_a9c1115fe9dc2ee28138b1971aad3c3b6"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#a9c1115fe9dc2ee28138b1971aad3c3b6">os::posix::circular_buffer::above_high_water_mark</a></div><div class="ttdeci">bool above_high_water_mark(void) const</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00275">circular-buffer.h:275</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a90b2f640de4e80f02dabdde0bb20d4f4" name="a90b2f640de4e80f02dabdde0bb20d4f4"></a>
@@ -490,8 +583,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00285">285</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00283">283</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>    {</div>
+<div class="line"><span class="lineno">  285</span>      <span class="comment">// Allow for water mark to be 0.</span></div>
+<div class="line"><span class="lineno">  286</span>      <span class="keywordflow">return</span> (len_ &lt;= low_water_mark_);</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a525740f410e9755f382df4e8d2bcd908" name="a525740f410e9755f382df4e8d2bcd908"></a>
@@ -512,7 +609,18 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00244">244</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00242">242</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>    {</div>
+<div class="line"><span class="lineno">  244</span>      back_ = front_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  245</span>      len_ = 0;</div>
+<div class="line"><span class="lineno">  246</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><span class="lineno">  247</span>      std::memset (<span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span> (<span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>*<span class="keyword">&gt;</span> (buf_)), <span class="charliteral">&#39;?&#39;</span>,</div>
+<div class="line"><span class="lineno">  248</span>                   size_ * <span class="keyword">sizeof</span> (<a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>));</div>
+<div class="line"><span class="lineno">  249</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_abc9c86b49ae2d291b1b1818f5f5bcd17"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">os::posix::circular_buffer::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdoc">Standard type definition.</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00045">circular-buffer.h:45</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="circular-buffer_8h_source.html#l00209">os::posix::circular_buffer&lt; T &gt;::circular_buffer()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +642,14 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00547">547</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00543">543</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  544</span>    {</div>
+<div class="line"><span class="lineno">  545</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a> (<span class="stringliteral">&quot;%s @%p {buf=%p, size=%d, len=%d, hwm=%d, lwn=%d}\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  546</span>                         __PRETTY_FUNCTION__, buf_, size_, len_,</div>
+<div class="line"><span class="lineno">  547</span>                         high_water_mark_, low_water_mark_);</div>
+<div class="line"><span class="lineno">  548</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -564,8 +679,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00263">263</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00261">261</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>    {</div>
+<div class="line"><span class="lineno">  263</span>      <span class="keywordflow">return</span> (len_ == 0);</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6baeb0a88556656f489deda6e3c3c943" name="a6baeb0a88556656f489deda6e3c3c943"></a>
@@ -586,8 +704,22 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00510">510</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00507">507</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  508</span>    {</div>
+<div class="line"><span class="lineno">  509</span>      assert (ppbuf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>      *ppbuf = front_;</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>      std::size_t sizeToEnd = size_ - <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (front_ - buf_);</div>
+<div class="line"><span class="lineno">  514</span>      std::size_t len = sizeToEnd;</div>
+<div class="line"><span class="lineno">  515</span>      <span class="keywordflow">if</span> (len &gt; len_)</div>
+<div class="line"><span class="lineno">  516</span>        {</div>
+<div class="line"><span class="lineno">  517</span>          len = len_;</div>
+<div class="line"><span class="lineno">  518</span>        }</div>
+<div class="line"><span class="lineno">  519</span> </div>
+<div class="line"><span class="lineno">  520</span>      <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  521</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a76f39f936fdee11b732af91dbb0f62db" name="a76f39f936fdee11b732af91dbb0f62db"></a>
@@ -616,8 +748,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00270">270</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00268">268</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>      <span class="keywordflow">return</span> (len_ &gt;= size_);</div>
+<div class="line"><span class="lineno">  271</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af95d937d5cea3efd0a28f6117387fcd5" name="af95d937d5cea3efd0a28f6117387fcd5"></a>
@@ -646,8 +781,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00307">307</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00305">305</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  306</span>    {</div>
+<div class="line"><span class="lineno">  307</span>      <span class="keywordflow">return</span> len_;</div>
+<div class="line"><span class="lineno">  308</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adfb4c24d426ff918c747b35b1813aae4" name="adfb4c24d426ff918c747b35b1813aae4"></a>
@@ -676,8 +814,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00256">256</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00254">254</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  255</span>    {</div>
+<div class="line"><span class="lineno">  256</span>      <span class="keywordflow">return</span> buf_[idx];</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01238a84facc4bf23cdc0d8f6fdde64c" name="a01238a84facc4bf23cdc0d8f6fdde64c"></a>
@@ -698,8 +839,28 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00425">425</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00423">423</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  424</span>    {</div>
+<div class="line"><span class="lineno">  425</span>      assert (buf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  426</span> </div>
+<div class="line"><span class="lineno">  427</span>      <a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a> c;</div>
+<div class="line"><span class="lineno">  428</span>      <span class="keywordflow">if</span> (len_ == 0)</div>
+<div class="line"><span class="lineno">  429</span>        {</div>
+<div class="line"><span class="lineno">  430</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  431</span>        }</div>
+<div class="line"><span class="lineno">  432</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  433</span>        {</div>
+<div class="line"><span class="lineno">  434</span>          c = *front_++;</div>
+<div class="line"><span class="lineno">  435</span>          <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (front_ - buf_) &gt;= size_)</div>
+<div class="line"><span class="lineno">  436</span>            {</div>
+<div class="line"><span class="lineno">  437</span>              front_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  438</span>            }</div>
+<div class="line"><span class="lineno">  439</span>          len_--;</div>
+<div class="line"><span class="lineno">  440</span>          *buf = c;</div>
+<div class="line"><span class="lineno">  441</span>          <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  442</span>        }</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9dd545ab36825867f205bc5bb60cca40" name="a9dd545ab36825867f205bc5bb60cca40"></a>
@@ -730,8 +891,38 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00449">449</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00447">447</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  448</span>    {</div>
+<div class="line"><span class="lineno">  449</span>      assert (buf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>      std::size_t len = siz;</div>
+<div class="line"><span class="lineno">  452</span>      <span class="keywordflow">if</span> (len &gt; len_)</div>
+<div class="line"><span class="lineno">  453</span>        {</div>
+<div class="line"><span class="lineno">  454</span>          len = len_;</div>
+<div class="line"><span class="lineno">  455</span>        }</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>      std::size_t sizeToEnd = size_ - <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (front_ - buf_);</div>
+<div class="line"><span class="lineno">  458</span>      <span class="keywordflow">if</span> (len &lt;= sizeToEnd)</div>
+<div class="line"><span class="lineno">  459</span>        {</div>
+<div class="line"><span class="lineno">  460</span>          std::memcpy (buf, front_, len);</div>
+<div class="line"><span class="lineno">  461</span>          front_ += len;</div>
+<div class="line"><span class="lineno">  462</span>          <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (front_ - buf_) &gt;= size_)</div>
+<div class="line"><span class="lineno">  463</span>            {</div>
+<div class="line"><span class="lineno">  464</span>              front_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  465</span>            }</div>
+<div class="line"><span class="lineno">  466</span>          len_ -= len;</div>
+<div class="line"><span class="lineno">  467</span>        }</div>
+<div class="line"><span class="lineno">  468</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  469</span>        {</div>
+<div class="line"><span class="lineno">  470</span>          std::memcpy (buf, front_, sizeToEnd);</div>
+<div class="line"><span class="lineno">  471</span>          front_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  472</span>          std::memcpy (buf + sizeToEnd, front_, len - sizeToEnd);</div>
+<div class="line"><span class="lineno">  473</span>          front_ += (len - sizeToEnd);</div>
+<div class="line"><span class="lineno">  474</span>          len_ -= len;</div>
+<div class="line"><span class="lineno">  475</span>        }</div>
+<div class="line"><span class="lineno">  476</span>      <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  477</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac9344518f17288d2b444bfe26bff9435" name="ac9344518f17288d2b444bfe26bff9435"></a>
@@ -762,8 +953,45 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00342">342</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00340">340</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>      assert (buf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>      std::size_t len = count;</div>
+<div class="line"><span class="lineno">  345</span>      <span class="keywordflow">if</span> (count &gt; (size_ - len_))</div>
+<div class="line"><span class="lineno">  346</span>        {</div>
+<div class="line"><span class="lineno">  347</span>          len = size_ - len_;</div>
+<div class="line"><span class="lineno">  348</span>        }</div>
+<div class="line"><span class="lineno">  349</span> </div>
+<div class="line"><span class="lineno">  350</span>      <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">  351</span>        {</div>
+<div class="line"><span class="lineno">  352</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  353</span>        }</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>      std::size_t sizeToEnd = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  356</span>          size_ - <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (back_ - buf_));</div>
+<div class="line"><span class="lineno">  357</span>      <span class="keywordflow">if</span> (len &lt;= sizeToEnd)</div>
+<div class="line"><span class="lineno">  358</span>        {</div>
+<div class="line"><span class="lineno">  359</span>          std::memcpy (back_, buf, len);</div>
+<div class="line"><span class="lineno">  360</span>          back_ += len;</div>
+<div class="line"><span class="lineno">  361</span>          <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (back_ - buf_) &gt;= size_)</div>
+<div class="line"><span class="lineno">  362</span>            {</div>
+<div class="line"><span class="lineno">  363</span>              <span class="comment">// Wrap.</span></div>
+<div class="line"><span class="lineno">  364</span>              back_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  365</span>            }</div>
+<div class="line"><span class="lineno">  366</span>          len_ += len;</div>
+<div class="line"><span class="lineno">  367</span>        }</div>
+<div class="line"><span class="lineno">  368</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  369</span>        {</div>
+<div class="line"><span class="lineno">  370</span>          std::memcpy (back_, buf, sizeToEnd);</div>
+<div class="line"><span class="lineno">  371</span>          back_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  372</span>          std::memcpy (back_, buf + sizeToEnd, len - sizeToEnd);</div>
+<div class="line"><span class="lineno">  373</span>          back_ += (len - sizeToEnd);</div>
+<div class="line"><span class="lineno">  374</span>          len_ += len;</div>
+<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  376</span>      <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  377</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adee9f8bca41607a1d00c47e5ee15d893" name="adee9f8bca41607a1d00c47e5ee15d893"></a>
@@ -784,8 +1012,25 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00321">321</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00319">319</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1posix_1_1circular__buffer.html#a76f39f936fdee11b732af91dbb0f62db">full</a> ())</div>
+<div class="line"><span class="lineno">  322</span>        {</div>
+<div class="line"><span class="lineno">  323</span>          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  324</span>        }</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>      <span class="comment">// Add to back.</span></div>
+<div class="line"><span class="lineno">  327</span>      *back_++ = v;</div>
+<div class="line"><span class="lineno">  328</span>      <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (back_ - buf_) &gt;= size_)</div>
+<div class="line"><span class="lineno">  329</span>        {</div>
+<div class="line"><span class="lineno">  330</span>          <span class="comment">// Wrap.</span></div>
+<div class="line"><span class="lineno">  331</span>          back_ = <span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>* volatile<span class="keyword">&gt;</span> (buf_);</div>
+<div class="line"><span class="lineno">  332</span>        }</div>
+<div class="line"><span class="lineno">  333</span>      len_++;</div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1circular__buffer_html_a76f39f936fdee11b732af91dbb0f62db"><div class="ttname"><a href="classos_1_1posix_1_1circular__buffer.html#a76f39f936fdee11b732af91dbb0f62db">os::posix::circular_buffer::full</a></div><div class="ttdeci">bool full(void) const</div><div class="ttdef"><b>Definition</b> <a href="circular-buffer_8h_source.html#l00268">circular-buffer.h:268</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a70cd8ec6cc6b2f2812ec9846200ee785" name="a70cd8ec6cc6b2f2812ec9846200ee785"></a>
@@ -806,8 +1051,20 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00409">409</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00407">407</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>    {</div>
+<div class="line"><span class="lineno">  409</span>      <span class="keywordflow">if</span> (back_ == buf_)</div>
+<div class="line"><span class="lineno">  410</span>        {</div>
+<div class="line"><span class="lineno">  411</span>          back_ = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>*<span class="keyword">&gt;</span> (<span class="keyword">const_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1circular__buffer.html#abc9c86b49ae2d291b1b1818f5f5bcd17">value_type</a>*<span class="keyword">&gt;</span> (buf_)</div>
+<div class="line"><span class="lineno">  412</span>                                            + size_ - 1);</div>
+<div class="line"><span class="lineno">  413</span>        }</div>
+<div class="line"><span class="lineno">  414</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  415</span>        {</div>
+<div class="line"><span class="lineno">  416</span>          back_ -= 1;</div>
+<div class="line"><span class="lineno">  417</span>        }</div>
+<div class="line"><span class="lineno">  418</span>      len_--;</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46e54b10a064c6e8327712e603b8a45a" name="a46e54b10a064c6e8327712e603b8a45a"></a>
@@ -836,8 +1093,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00314">314</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="circular-buffer_8h_source.html#l00312">312</a> of file <a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  313</span>    {</div>
+<div class="line"><span class="lineno">  314</span>      <span class="keywordflow">return</span> size_;</div>
+<div class="line"><span class="lineno">  315</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

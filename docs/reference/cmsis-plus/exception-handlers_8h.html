@@ -233,8 +233,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00119">119</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00117">117</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><span class="lineno">  120</span><span class="preprocessor">#if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)</span></div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">if</span> ((CoreDebug-&gt;DHCSR &amp; CoreDebug_DHCSR_C_DEBUGEN_Msk) != 0)</div>
+<div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>      __BKPT (0);</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  126</span>  __BKPT (0);</div>
+<div class="line"><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">/* defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  128</span><span class="preprocessor">#endif </span><span class="comment">/* defined(DEBUG) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>      __NOP ();</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6303e1f258cbdc1f970ce579cc015623" name="a6303e1f258cbdc1f970ce579cc015623"></a>
@@ -253,8 +270,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00726">726</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00725">725</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  726</span>{</div>
+<div class="line"><span class="lineno">  727</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><span class="lineno">  728</span><span class="preprocessor">#if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)</span></div>
+<div class="line"><span class="lineno">  729</span>  <span class="keywordflow">if</span> ((CoreDebug-&gt;DHCSR &amp; CoreDebug_DHCSR_C_DEBUGEN_Msk) != 0)</div>
+<div class="line"><span class="lineno">  730</span>    {</div>
+<div class="line"><span class="lineno">  731</span>      __BKPT (0);</div>
+<div class="line"><span class="lineno">  732</span>    }</div>
+<div class="line"><span class="lineno">  733</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  734</span>  __BKPT (0);</div>
+<div class="line"><span class="lineno">  735</span><span class="preprocessor">#endif </span><span class="comment">/* defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  736</span><span class="preprocessor">#endif </span><span class="comment">/* defined(DEBUG) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  737</span> </div>
+<div class="line"><span class="lineno">  738</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  739</span>    {</div>
+<div class="line"><span class="lineno">  740</span>      __NOP ();</div>
+<div class="line"><span class="lineno">  741</span>    }</div>
+<div class="line"><span class="lineno">  742</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae7ee340978f5c25f52f0cad1457c6616" name="ae7ee340978f5c25f52f0cad1457c6616"></a>
@@ -273,7 +307,46 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00083">83</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00081">81</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>{</div>
+<div class="line"><span class="lineno">   83</span>  <span class="comment">// For just in case, when started via QEMU.</span></div>
+<div class="line"><span class="lineno">   84</span>  __asm__ (<span class="stringliteral">&quot; MSR msp, %0 &quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(&amp;<a class="code hl_variable" href="exception-handlers_8c.html#a02439aa1dd4dacc6807cf953370088a0">__stack</a>) :);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  <span class="comment">// SCB</span></div>
+<div class="line"><span class="lineno">   87</span>  <span class="comment">// https://developer.arm.com/documentation/dui0552/a/cortex-m3-peripherals/system-control-block</span></div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <span class="comment">// SCB-&gt;VTOR</span></div>
+<div class="line"><span class="lineno">   90</span>  <span class="comment">// https://developer.arm.com/documentation/dui0552/a/cortex-m3-peripherals/system-control-block/vector-table-offset-register</span></div>
+<div class="line"><span class="lineno">   91</span>  <span class="comment">// Mandatory when running from RAM. Not available on Cortex-M0.</span></div>
+<div class="line"><span class="lineno">   92</span><span class="preprocessor">#if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)</span></div>
+<div class="line"><span class="lineno">   93</span>  *((uint32_t*)0xE000ED08)</div>
+<div class="line"><span class="lineno">   94</span>      = ((uint32_t)<a class="code hl_variable" href="exception-handlers_8c.html#ad8b5e9d3d89e0dae84e940e7c167d087">_interrupt_vectors</a> &amp; (uint32_t)(~0x3F));</div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span><span class="preprocessor">#if defined(__ARM_FP)</span></div>
+<div class="line"><span class="lineno">   98</span>  <span class="comment">// Enable CP10 and CP11 coprocessor.</span></div>
+<div class="line"><span class="lineno">   99</span>  <span class="comment">// SCB-&gt;CPACR |= (0xF &lt;&lt; 20);</span></div>
+<div class="line"><span class="lineno">  100</span>  *((uint32_t*)0xE000ED88) |= (uint32_t)(0xF &lt;&lt; 20);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>  <span class="comment">// Lazy save.</span></div>
+<div class="line"><span class="lineno">  103</span>  <span class="comment">// FPU-&gt;FPCCR |= FPU_FPCCR_ASPEN_Msk | FPU_FPCCR_LSPEN_Msk;</span></div>
+<div class="line"><span class="lineno">  104</span>  *((uint32_t*)0xE000EF34) |= (uint32_t)(0x3 &lt;&lt; 29);</div>
+<div class="line"><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// defined(__ARM_FP)</span></div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>  <span class="comment">// Fill the main stack with a pattern, to detect usage and underflow.</span></div>
+<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* p = &amp;<a class="code hl_variable" href="exception-handlers_8c.html#a5152997e1184b6b02c627062a8b1b1f0">_Heap_Limit</a>; p &lt; &amp;<a class="code hl_variable" href="exception-handlers_8c.html#a02439aa1dd4dacc6807cf953370088a0">__stack</a>;)</div>
+<div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>      *p++ = OS_INTEGER_RTOS_STACK_FILL_MAGIC; <span class="comment">// DEADBEEF</span></div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a> ();</div>
+<div class="line"><span class="lineno">  114</span>}</div>
+<div class="ttc" id="aexception-handlers_8c_html_a02439aa1dd4dacc6807cf953370088a0"><div class="ttname"><a href="exception-handlers_8c.html#a02439aa1dd4dacc6807cf953370088a0">__stack</a></div><div class="ttdeci">unsigned int __stack</div></div>
+<div class="ttc" id="aexception-handlers_8c_html_a5152997e1184b6b02c627062a8b1b1f0"><div class="ttname"><a href="exception-handlers_8c.html#a5152997e1184b6b02c627062a8b1b1f0">_Heap_Limit</a></div><div class="ttdeci">unsigned int _Heap_Limit</div></div>
+<div class="ttc" id="aexception-handlers_8c_html_ad8b5e9d3d89e0dae84e940e7c167d087"><div class="ttname"><a href="exception-handlers_8c.html#ad8b5e9d3d89e0dae84e940e7c167d087">_interrupt_vectors</a></div><div class="ttdeci">handler_ptr_t _interrupt_vectors[]</div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga8b67a6ff3f33fae9b3f1b142005c0bc2"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2">_start</a></div><div class="ttdeci">void _start(void)</div><div class="ttdoc">The standard C application entry point.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00241">startup.cpp:241</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="exception-handlers_8c.html#a02439aa1dd4dacc6807cf953370088a0">__stack</a>, <a class="el" href="exception-handlers_8c.html#a5152997e1184b6b02c627062a8b1b1f0">_Heap_Limit</a>, <a class="el" href="exception-handlers_8c.html#ad8b5e9d3d89e0dae84e940e7c167d087">_interrupt_vectors</a>, and <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>.</p>
 
 </div>
 </div>
@@ -293,8 +366,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00686">686</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00685">685</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  686</span>{</div>
+<div class="line"><span class="lineno">  687</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><span class="lineno">  688</span><span class="preprocessor">#if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)</span></div>
+<div class="line"><span class="lineno">  689</span>  <span class="keywordflow">if</span> ((CoreDebug-&gt;DHCSR &amp; CoreDebug_DHCSR_C_DEBUGEN_Msk) != 0)</div>
+<div class="line"><span class="lineno">  690</span>    {</div>
+<div class="line"><span class="lineno">  691</span>      __BKPT (0);</div>
+<div class="line"><span class="lineno">  692</span>    }</div>
+<div class="line"><span class="lineno">  693</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  694</span>  __BKPT (0);</div>
+<div class="line"><span class="lineno">  695</span><span class="preprocessor">#endif </span><span class="comment">/* defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  696</span><span class="preprocessor">#endif </span><span class="comment">/* defined(DEBUG) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  697</span> </div>
+<div class="line"><span class="lineno">  698</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  699</span>    {</div>
+<div class="line"><span class="lineno">  700</span>      __NOP ();</div>
+<div class="line"><span class="lineno">  701</span>    }</div>
+<div class="line"><span class="lineno">  702</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab5e09814056d617c521549e542639b7e" name="ab5e09814056d617c521549e542639b7e"></a>
@@ -313,8 +403,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00746">746</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="exception-handlers_8c_source.html#l00745">745</a> of file <a class="el" href="exception-handlers_8c_source.html">exception-handlers.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  746</span>{</div>
+<div class="line"><span class="lineno">  747</span>  <span class="comment">// DO NOT loop, just return.</span></div>
+<div class="line"><span class="lineno">  748</span>  <span class="comment">// Useful in case someone (like STM HAL) always enables SysTick.</span></div>
+<div class="line"><span class="lineno">  749</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

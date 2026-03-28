@@ -158,14 +158,13 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
 <tr class="memdesc:ga20b7aa5c5dbff8b57e7e0252c48c7b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force the stack trace to start with a 0x0.  <br /></td></tr>
 <tr class="separator:ga20b7aa5c5dbff8b57e7e0252c48c7b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a>&#160;&#160;&#160;(true)</td></tr>
-<tr class="memdesc:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the preemption flag.  <br /></td></tr>
+<tr class="memdesc:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default definition for the pre-emption flag.  <br /></td></tr>
 <tr class="separator:ga06cdcf78fd8d8a0e8dd564e597108e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2be577ef06cbd48ea7a9713b86540346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-app-config-rtos.html#ga2be577ef06cbd48ea7a9713b86540346">OS_EXCLUDE_RTOS_IDLE_SLEEP</a></td></tr>
 <tr class="memdesc:ga2be577ef06cbd48ea7a9713b86540346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not enter sleep in the idle thread.  <br /></td></tr>
 <tr class="separator:ga2be577ef06cbd48ea7a9713b86540346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Definitions used to configure the RTOS. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga8b8d4cff816a87836292f6a70a0cfc94" name="ga8b8d4cff816a87836292f6a70a0cfc94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8b8d4cff816a87836292f6a70a0cfc94">&#9670;&#160;</a></span>OS_BOOL_RTOS_MESSAGE_QUEUE_SIZE_16BITS</h2>
@@ -178,8 +177,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Extend the message size to 16 bits. </p>
 <p>For embedded applications the message queues are optimised for small messages, up to 256 bytes.</p>
 <p>If larger messages are needed, this option extends the message size to 65536 bytes.</p>
 <dl class="section user"><dt>Default</dt><dd>False (short messages). </dd></dl>
@@ -199,8 +196,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Force the stack trace to start with a 0x0. </p>
 <p>This option has no functional consequences, it is only cosmetic, affecting how a debugger displays the stack trace.</p>
 <p>If your debugger has difficulties to properly display the thread stack trace, enable this option and the stack will always start with a 0x0.</p>
 <dl class="section user"><dt>Default</dt><dd>False (the stack trace starts with the first function). </dd></dl>
@@ -220,10 +215,8 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Default definition for the preemption flag. </p>
 <p>This option sets the initial value of the <code>scheduler::preemptive()</code> flag. It can be changed at any time.</p>
-<dl class="section user"><dt>Default</dt><dd>True (preemption is enabled). </dd></dl>
+<dl class="section user"><dt>Default</dt><dd>True (pre-emption is enabled). </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00464">464</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
@@ -240,8 +233,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Push down the idle thread priority. </p>
 <p>Normally the applications should not create threads with the idle priority.</p>
 <p>However, some applications, like the ARM CMSIS RTOS validator, need to test the behaviour of idle threads. For such cases, to guarantee that the idle thread is the lowest priority thread, its priority can be lowered one additional step.</p>
 <dl class="section user"><dt>Default</dt><dd>False (the idle thread has the idle priority). </dd></dl>
@@ -261,8 +252,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Do not enter sleep in the idle thread. </p>
 <p>Very fast debuggers need direct access to a RAM buffer, which in turn need the clock that powers the bus where the RAM is connected to be permanently on.</p>
 <p>Unfortunately, most devices disable this clock when entering even the shallow sleep mode, disabling the debugger access to the device.</p>
 <p>To prevent this, usually for the debug configurations, it is possible to exclude the code that puts the device to sleep. </p>
@@ -283,8 +272,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
       </table>
 </div><div class="memdoc">
 
-<p>Add a user defined storage to each thread. </p>
-
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00403">403</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
@@ -300,8 +287,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Include statistics to count thread context switches. </p>
 <p>Add support to count the number of times each thread was scheduled to run.</p>
 <p>At each context switch, the thread counter is incremented. At the same time a global counter is also incremented.</p>
 <p>The RAM overhead of enabling this option is a uint64_t variable for each thread and one global variable.</p>
@@ -326,8 +311,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Include statistics to count thread CPU cycles. </p>
 <p>Add support to measure and accumulate accurate thread duration statistics.</p>
 <p>At each context switch, the high resolution clock is sampled and the difference is added to the current thread statistics variables. At the same time the value is added to a global variable.</p>
 <p>The RAM overhead of enabling this option is a uint64_t variable for each thread and one global variable.</p>
@@ -352,8 +335,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>For Cortex-M[347], define the interrupt priority level. </p>
 <p>Simple devices implement critical sections by disabling/enabling all interrupts. Cortex-M[347] devices can selectively disable interrupts up to a given priority (by using the BASEPRI register).</p>
 <p>When used, this option configures the critical sections to disable all interrupts with priorities up to the given value and keep enabled interrupts with higher priorities.</p>
 <dl class="section note"><dt>Note</dt><dd>Considering the confusing ARM priority scheme, this means priorities with a numeric value higher or equal the given value will be disabled and priorities with a numeric value lower thant he given value will remain enabled.</dd></dl>
@@ -378,8 +359,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
       </table>
 </div><div class="memdoc">
 
-<p>Define the default thread stack size, in bytes. </p>
-
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00337">337</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
 
 </div>
@@ -395,8 +374,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define the <b>idle</b> thread stack size. </p>
 <dl class="section note"><dt>Note</dt><dd>Ignored for synthetic platforms. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00351">351</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
@@ -414,8 +391,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define the <b>main</b> thread stack size, in bytes. </p>
 <dl class="section note"><dt>Note</dt><dd>Ignored for synthetic platforms. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00344">344</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
@@ -433,8 +408,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-rtos.html
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Define the scheduler frequency, in Hz. </p>
 <dl class="section user"><dt>Default</dt><dd>1000. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00297">297</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>

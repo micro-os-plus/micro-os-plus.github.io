@@ -1,8 +1,8 @@
 var os_memory_8h =
 [
     [ "os::rtos::memory::allocator_stateless_polymorphic_synchronized< T, L, get_resource >::rebind< U >", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html", "structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind" ],
-    [ "allocator_typed", "os-memory_8h.html#ga82d08410dc0d1e8cfb011ad843f871ec", null ],
-    [ "out_of_memory_handler_t", "os-memory_8h.html#ga165e1d42e364dcabcbf01e5322b9f554", null ],
+    [ "allocator_typed", "os-memory_8h.html#gaad5673b9a6f5b280eb5c59657a937174", null ],
+    [ "out_of_memory_handler_t", "os-memory_8h.html#ga584da84e822c3f3574ce2e1f14ee0f7e", null ],
     [ "unique_ptr", "os-memory_8h.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb", null ],
     [ "__throw_bad_alloc", "os-memory_8h.html#afdfb11bebd11da95682c3379cd1b48a9", null ],
     [ "align_size", "os-memory_8h.html#a25da2be40090a8169f6955a2a04597f8", null ],

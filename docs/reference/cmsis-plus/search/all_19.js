@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7eadjustable_5fclock_0',['~adjustable_clock',['../classos_1_1rtos_1_1adjustable__clock.html#a04db6a86d5e684648c9c7d91f11673a9',1,'os::rtos::adjustable_clock']]],
+  ['_7eadjustable_5fclock_0',['~adjustable_clock',['../classos_1_1rtos_1_1adjustable__clock.html#a7b342010da0edb9135580b228fe880b9',1,'os::rtos::adjustable_clock']]],
   ['_7eallocator_5fdeleter_1',['~allocator_deleter',['../classos_1_1rtos_1_1memory_1_1allocator__deleter.html#ae63698c4f4c8b3f40b7e6d727521edda',1,'os::rtos::memory::allocator_deleter']]],
   ['_7eallocator_5fstateless_5fdefault_5fresource_2',['~allocator_stateless_default_resource',['../classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#adebf59c21167a997ed5c51332f4691d3',1,'os::rtos::memory::allocator_stateless_default_resource']]],
   ['_7eallocator_5fstateless_5fpolymorphic_5fsynchronized_3',['~allocator_stateless_polymorphic_synchronized',['../classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html#af97deb36a0ba3398ea9522f9f2401a83',1,'os::rtos::memory::allocator_stateless_polymorphic_synchronized']]],
@@ -27,9 +27,9 @@ var searchData=
   ['_7echar_5fdevice_5fimplementable_24',['~char_device_implementable',['../classos_1_1posix_1_1char__device__implementable.html#a6454bc58d70bfbb59f96678a2fce3633',1,'os::posix::char_device_implementable']]],
   ['_7ecircular_5fbuffer_25',['~circular_buffer',['../classos_1_1posix_1_1circular__buffer.html#ac9e14edef2d74126a589fd0d988511aa',1,'os::posix::circular_buffer']]],
   ['_7eclock_26',['~clock',['../classos_1_1rtos_1_1clock.html#ae823d4ebdf4c3453e24eb3e4929e7b0e',1,'os::rtos::clock']]],
-  ['_7eclock_5fhighres_27',['~clock_highres',['../classos_1_1rtos_1_1clock__highres.html#a0998d77f4041a92d382c980440bf84f7',1,'os::rtos::clock_highres']]],
-  ['_7eclock_5frtc_28',['~clock_rtc',['../classos_1_1rtos_1_1clock__rtc.html#a96848bb6b4b89a9e86049e6fcf8eb865',1,'os::rtos::clock_rtc']]],
-  ['_7eclock_5fsystick_29',['~clock_systick',['../classos_1_1rtos_1_1clock__systick.html#a3714904ecc435583aa5e9694616fc830',1,'os::rtos::clock_systick']]],
+  ['_7eclock_5fhighres_27',['~clock_highres',['../classos_1_1rtos_1_1clock__highres.html#a20bfaaeda2d1d0d7948a96f2a6d2c60c',1,'os::rtos::clock_highres']]],
+  ['_7eclock_5frtc_28',['~clock_rtc',['../classos_1_1rtos_1_1clock__rtc.html#a9f5522a3ffb88e3fa84c22ff86685f01',1,'os::rtos::clock_rtc']]],
+  ['_7eclock_5fsystick_29',['~clock_systick',['../classos_1_1rtos_1_1clock__systick.html#af3962ba2aa62fbb4784802f6d8c5c18f',1,'os::rtos::clock_systick']]],
   ['_7eclock_5ftimestamps_5flist_30',['~clock_timestamps_list',['../classos_1_1rtos_1_1internal_1_1clock__timestamps__list.html#a8347c985a20e61df7ba8e20e1bd5a3e7',1,'os::rtos::internal::clock_timestamps_list']]],
   ['_7econdition_5fvariable_31',['~condition_variable',['../classos_1_1rtos_1_1condition__variable.html#adaa0dad7f07e3fbc6f2ff8bd865bd0df',1,'os::rtos::condition_variable::~condition_variable()'],['../classos_1_1estd_1_1condition__variable.html#a06b9e91ec5b7c680e14850d0a7cb67ee',1,'os::estd::condition_variable::~condition_variable()']]],
   ['_7econdition_5fvariable_5fany_32',['~condition_variable_any',['../classos_1_1estd_1_1condition__variable__any.html#aecbf8158dee74556cf103903f68ae3ad',1,'os::estd::condition_variable_any']]],

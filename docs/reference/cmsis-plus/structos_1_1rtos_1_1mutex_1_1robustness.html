@@ -145,8 +145,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a5b273639f9cbba3efd3034a468bbd406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Mutex robustness. </p>
-<p>Allow to define the behaviour when the thread owning a mutex terminates.</p>
+<div class="textblock"><p>Allow to define the behaviour when the thread owning a mutex terminates.</p>
 <p>The mutex robustness is defined via the <code>mx_robustness</code> attribute of the <code><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html" title="Mutex attributes.">mutex::attributes</a></code> class. Valid values are:</p>
 <ul>
 <li><p class="startli"><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6" title="Normal robustness.">mutex::robustness::stalled</a></code></p>
@@ -158,7 +157,7 @@ Public Types</h2></td></tr>
 </ul>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_setrobust.html"><code>pthread_mutexattr_setrobust()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00113">113</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00110">110</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a5b273639f9cbba3efd3034a468bbd406" name="a5b273639f9cbba3efd3034a468bbd406"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b273639f9cbba3efd3034a468bbd406">&#9670;&#160;</a></span>anonymous enum</h2>
@@ -171,8 +170,6 @@ Public Types</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enumeration of mutex robustness. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6" name="a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6"></a>stalled&#160;</td><td class="fielddoc"><p>Normal robustness. </p>
 </td></tr>
@@ -184,8 +181,21 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00118">118</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00115">115</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  120</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6">stalled</a> = 0,</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  125</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">robust</a> = 1,</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  130</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a4de573a7ab4d3111d41f671ae034a9d8">default_</a> = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6">stalled</a>,</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  135</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346">max_</a> = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">robust</a></div>
+<div class="line"><span class="lineno">  136</span>        };</div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1robustness_html_a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a1bf6d4ba92636894c92beb315bfdc346">os::rtos::mutex::robustness::max_</a></div><div class="ttdeci">@ max_</div><div class="ttdoc">Maximum value, for validation purposes.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00136">os-mutex.h:135</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1robustness_html_a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a41e4c3e4193c9e9b0f7802e2f7531dd6">os::rtos::mutex::robustness::stalled</a></div><div class="ttdeci">@ stalled</div><div class="ttdoc">Normal robustness.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00120">os-mutex.h:120</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1robustness_html_a5b273639f9cbba3efd3034a468bbd406a4de573a7ab4d3111d41f671ae034a9d8"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406a4de573a7ab4d3111d41f671ae034a9d8">os::rtos::mutex::robustness::default_</a></div><div class="ttdeci">@ default_</div><div class="ttdoc">Default value.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00130">os-mutex.h:130</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1robustness_html_a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1robustness.html#a5b273639f9cbba3efd3034a468bbd406ae3dbc178c25550d13df1f9761b97031f">os::rtos::mutex::robustness::robust</a></div><div class="ttdeci">@ robust</div><div class="ttdoc">Enhanced robustness at thread termination.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00125">os-mutex.h:125</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

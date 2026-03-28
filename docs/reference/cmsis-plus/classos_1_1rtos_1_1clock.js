@@ -6,6 +6,8 @@ var classos_1_1rtos_1_1clock =
     [ "~clock", "classos_1_1rtos_1_1clock.html#ae823d4ebdf4c3453e24eb3e4929e7b0e", null ],
     [ "name", "classos_1_1rtos_1_1clock.html#a3103a84c5e0521c3639306f5879526ba", null ],
     [ "now", "classos_1_1rtos_1_1clock.html#a965f1afa68128bdfaeac93e216e2196f", null ],
+    [ "offset", "classos_1_1rtos_1_1clock.html#a51b892d6dcc9061345e66e78ffdcd432", null ],
+    [ "offset", "classos_1_1rtos_1_1clock.html#a090cea7ba20c96e09f18f0091c0494d8", null ],
     [ "sleep_for", "classos_1_1rtos_1_1clock.html#af97cadfe288c3a56749ac70ae85c93bb", null ],
     [ "sleep_until", "classos_1_1rtos_1_1clock.html#a7720aceded20f868c541755b26027901", null ],
     [ "start", "classos_1_1rtos_1_1clock.html#addb7972fd07f3be0abb5287d470987f9", null ],

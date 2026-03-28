@@ -169,7 +169,6 @@ Variables</h2></td></tr>
 <tr class="separator:gabb59996de739574c5f5255e7b3d29c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>C++ API clocks definitions. </p>
 <dl class="section user"><dt>Examples</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// TODO</span></div>
 </div><!-- fragment --> <h2 class="groupheader">Typedef Documentation</h2>
@@ -184,11 +183,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of variables holding clock durations. </p>
 <p>A numeric type intended to store a clock duration, either in ticks or in seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00076">76</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00078">78</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -203,11 +200,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of variables holding clock offsets. </p>
 <p>A numeric type intended to store a clock offset (difference to epoch), either in ticks or in seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00095">95</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00099">99</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -222,11 +217,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of variables holding clock time stamps. </p>
 <p>A numeric type intended to store a clock timestamp, either in ticks or in seconds. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00085">85</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-clocks_8h_source.html#l00088">88</a> of file <a class="el" href="os-clocks_8h_source.html">os-clocks.h</a>.</p>
 
 </div>
 </div>
@@ -236,17 +229,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classos_1_1rtos_1_1clock__highres.html">clock_highres</a> os::rtos::hrclock</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>The high resolution clock object instance. </p>
-<p>Kind of singleton instance of the <a class="el" href="classos_1_1rtos_1_1clock__highres.html" title="High Resolution derived clock.">clock_highres</a> class. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00717">717</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="chrono_8cpp_source.html#l00104">os::estd::chrono::high_resolution_clock::now()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01396">os_clock_get_hrclock()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00036">os_systick_handler()</a>, and <a class="el" href="os-core_8cpp_source.html#l00193">os::rtos::scheduler::start()</a>.</p>
 
 </div>
 </div>
@@ -255,17 +253,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classos_1_1rtos_1_1clock__rtc.html">clock_rtc</a> os::rtos::rtclock</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>The real time clock object instance. </p>
-<p>Kind of singleton instance of the <a class="el" href="classos_1_1rtos_1_1clock__rtc.html" title="Real time clock.">clock_rtc</a> class. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00666">666</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00843">__posix_gettimeofday()</a>, <a class="el" href="chrono_8cpp_source.html#l00057">os::estd::chrono::realtime_clock::now()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01384">os_clock_get_rtclock()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00095">os_rtc_handler()</a>, and <a class="el" href="os-core_8cpp_source.html#l00193">os::rtos::scheduler::start()</a>.</p>
 
 </div>
 </div>
@@ -274,17 +277,22 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classos_1_1rtos_1_1clock__systick.html">clock_systick</a> os::rtos::sysclock</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>The system clock object instance. </p>
-<p>Kind of singleton instance of the <a class="el" href="classos_1_1rtos_1_1clock__systick.html" title="SysTick derived clock.">clock_systick</a> class. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-clocks_8cpp_source.html#l00565">565</a> of file <a class="el" href="os-clocks_8cpp_source.html">os-clocks.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-evflags_8cpp_source.html#l00163">os::rtos::event_flags::event_flags()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00507">os::rtos::mutex::mutex()</a>, <a class="el" href="os-timer_8cpp_source.html#l00166">os::rtos::timer::timer()</a>, <a class="el" href="os-lists_8cpp_source.html#l00490">os::rtos::internal::clock_timestamps_list::check_timestamp()</a>, <a class="el" href="chrono_8cpp_source.html#l00048">os::estd::chrono::systick_clock::now()</a>, <a class="el" href="chrono_8cpp_source.html#l00068">os::estd::chrono::system_clock::now()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01372">os_clock_get_sysclock()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01410">os_sysclock_now()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01422">os_sysclock_sleep_for()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01434">os_sysclock_sleep_until()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l01446">os_sysclock_wait_for()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00036">os_systick_handler()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l03734">osDelay()</a>, and <a class="el" href="os-core_8cpp_source.html#l00193">os::rtos::scheduler::start()</a>.</p>
 
 </div>
 </div>

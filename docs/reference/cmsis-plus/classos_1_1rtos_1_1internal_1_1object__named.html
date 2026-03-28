@@ -175,11 +175,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3103a84c5e0521c3639306f5879526ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for named objects. </p>
-<p>This class serves as a base class for all objects that have a name (most of the RTOS classes do have a name).</p>
+<div class="textblock"><p>This class serves as a base class for all objects that have a name (most of the RTOS classes do have a name).</p>
 <p>Attributes use a separate constexpr object. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00350">350</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00351">351</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a191fec2dd0076e286af417f2d12ed01d" name="a191fec2dd0076e286af417f2d12ed01d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a191fec2dd0076e286af417f2d12ed01d">&#9670;&#160;</a></span>object_named() <span class="overload">[1/2]</span></h2>
@@ -196,10 +195,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a named object instance. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00606">606</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00620">620</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  621</span>      {</div>
+<div class="line"><span class="lineno">  622</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4d2ac12be6af9e7739a88d65b4c9fd9" name="ac4d2ac12be6af9e7739a88d65b4c9fd9"></a>
@@ -217,8 +216,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct a named object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned.</td></tr>
@@ -228,8 +225,12 @@ Public Member Functions</h2></td></tr>
 <p>Prefer the given name, otherwise default to '-'.</p>
 <p>To save space, instead of copying the null terminated string locally, the pointer to the string is copied, so the caller must ensure that the pointer life cycle is at least as long as the object life cycle. A constant string (stored in flash) is preferred. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00621">621</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00635">635</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  636</span>          : name_ (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> != <span class="keyword">nullptr</span> ? <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> : <span class="stringliteral">&quot;-&quot;</span>)</div>
+<div class="line"><span class="lineno">  637</span>      {</div>
+<div class="line"><span class="lineno">  638</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1object__named_html_a3103a84c5e0521c3639306f5879526ba"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">os::rtos::internal::object_named::name</a></div><div class="ttdeci">const char * name(void) const</div><div class="ttdoc">Get object name.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00753">os-decls.h:753</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8506a11a851d54c7190bc0ea6f9fa668" name="a8506a11a851d54c7190bc0ea6f9fa668"></a>
@@ -254,8 +255,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the named object instance. </p>
 
 </div>
 </div>
@@ -283,14 +282,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00759">759</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00753">753</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  754</span>      {</div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">return</span> name_;</div>
+<div class="line"><span class="lineno">  756</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lifo_8h_source.html#l00365">os::memory::lifo::lifo()</a>, <a class="el" href="malloc_8h_source.html#l00214">os::memory::malloc_memory_resource::malloc_memory_resource()</a>, <a class="el" href="os-mqueue_8h_source.html#l01551">os::rtos::message_queue_typed&lt; T, Allocator &gt;::message_queue_typed()</a>, <a class="el" href="block-pool_8cpp_source.html#l00034">os::memory::block_pool::~block_pool()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00201">os::rtos::event_flags::~event_flags()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00034">os::memory::first_fit_top::~first_fit_top()</a>, <a class="el" href="lifo_8cpp_source.html#l00034">os::memory::lifo::~lifo()</a>, <a class="el" href="malloc_8h_source.html#l00225">os::memory::malloc_memory_resource::~malloc_memory_resource()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00400">os::rtos::memory_pool::~memory_pool()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00485">os::rtos::message_queue::~message_queue()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00570">os::rtos::mutex::~mutex()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00224">os::rtos::semaphore::~semaphore()</a>, <a class="el" href="os-thread_8cpp_source.html#l00595">os::rtos::thread::~thread()</a>, <a class="el" href="os-timer_8cpp_source.html#l00209">os::rtos::timer::~timer()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>, <a class="el" href="os-thread_8cpp_source.html#l00995">os::rtos::thread::cancel()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00575">os::rtos::event_flags::clear()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01530">os::rtos::mutex::consistent()</a>, <a class="el" href="os-thread_8cpp_source.html#l00883">os::rtos::thread::detach()</a>, <a class="el" href="malloc_8h_source.html#l00277">os::memory::new_delete_memory_resource::do_allocate()</a>, <a class="el" href="block-pool_8cpp_source.html#l00047">os::memory::block_pool::do_allocate()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00112">os::memory::first_fit_top::do_allocate()</a>, <a class="el" href="lifo_8cpp_source.html#l00068">os::memory::lifo::do_allocate()</a>, <a class="el" href="malloc_8h_source.html#l00239">os::memory::malloc_memory_resource::do_allocate()</a>, <a class="el" href="os-thread_8cpp_source.html#l01313">os::rtos::thread::flags_raise()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00781">os::rtos::memory_pool::free()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00614">os::rtos::event_flags::get()</a>, <a class="el" href="os-thread_8cpp_source.html#l01020">os::rtos::thread::interrupt()</a>, <a class="el" href="os-thread_8cpp_source.html#l00941">os::rtos::thread::join()</a>, <a class="el" href="os-thread_8cpp_source.html#l01231">os::rtos::thread::kill()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01003">os::rtos::mutex::lock()</a>, <a class="el" href="os-memory_8h_source.html#l01375">os::rtos::memory::memory_resource::out_of_memory_handler()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00339">os::rtos::semaphore::post()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01461">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01417">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-thread_8cpp_source.html#l00734">os::rtos::thread::priority()</a>, <a class="el" href="os-thread_8cpp_source.html#l00802">os::rtos::thread::priority_inherited()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00540">os::rtos::event_flags::raise()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01269">os::rtos::message_queue::receive()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00846">os::rtos::memory_pool::reset()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01596">os::rtos::message_queue::reset()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01567">os::rtos::mutex::reset()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00759">os::rtos::semaphore::reset()</a>, <a class="el" href="os-thread_8cpp_source.html#l00630">os::rtos::thread::resume()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00929">os::rtos::message_queue::send()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00175">os::rtos::clock::sleep_for()</a>, <a class="el" href="os-timer_8cpp_source.html#l00243">os::rtos::timer::start()</a>, <a class="el" href="os-timer_8cpp_source.html#l00307">os::rtos::timer::stop()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01205">os::rtos::mutex::timed_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01484">os::rtos::message_queue::timed_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01129">os::rtos::message_queue::timed_send()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00598">os::rtos::semaphore::timed_wait()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00425">os::rtos::event_flags::timed_wait()</a>, <a class="el" href="os-memory_8h_source.html#l01444">os::rtos::memory::memory_resource::trace_print_statistics()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00604">os::rtos::memory_pool::try_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01126">os::rtos::mutex::try_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01383">os::rtos::message_queue::try_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01042">os::rtos::message_queue::try_send()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00343">os::rtos::event_flags::try_wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00524">os::rtos::semaphore::try_wait()</a>, <a class="el" href="os-lists_8cpp_source.html#l00126">os::rtos::internal::ready_threads_list::unlink_head()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01379">os::rtos::mutex::unlock()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00241">os::rtos::event_flags::wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00424">os::rtos::semaphore::wait()</a>, and <a class="el" href="os-evflags_8cpp_source.html#l00642">os::rtos::event_flags::waiting()</a>.</p>
 
 </div>
 </div>

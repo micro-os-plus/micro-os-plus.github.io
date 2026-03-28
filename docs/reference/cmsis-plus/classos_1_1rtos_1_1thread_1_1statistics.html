@@ -149,9 +149,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac5688be9bca5e0ba9b5e5366d0d2cf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thread statistics. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00889">889</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00893">893</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a951e6d94c45466d64f8c0243b6c5bfa6" name="a951e6d94c45466d64f8c0243b6c5bfa6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a951e6d94c45466d64f8c0243b6c5bfa6">&#9670;&#160;</a></span>statistics()</h2>
@@ -175,8 +174,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a thread attributes object instance. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 
 </div>
@@ -204,8 +201,6 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destruct the thread attributes object instance. </p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -232,8 +227,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Clear the thread statistic counters. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>This function sets all statistic counters to zero.</p>
@@ -241,8 +234,17 @@ Public Member Functions</h2></td></tr>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02317">2317</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02322">2322</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2323</span>    {</div>
+<div class="line"><span class="lineno"> 2324</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES)</span></div>
+<div class="line"><span class="lineno"> 2325</span>      context_switches_ = 0;</div>
+<div class="line"><span class="lineno"> 2326</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno"> 2327</span> </div>
+<div class="line"><span class="lineno"> 2328</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES)</span></div>
+<div class="line"><span class="lineno"> 2329</span>      cpu_cycles_ = 0;</div>
+<div class="line"><span class="lineno"> 2330</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno"> 2331</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3b883578ce8fcbb5226515b5799e2bdc" name="a3b883578ce8fcbb5226515b5799e2bdc"></a>
@@ -268,8 +270,6 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the number of thread context switches. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A long integer with the number of times the thread was scheduled for execution.</dd></dl>
 <p>Each time the scheduler performs a context switch, it increments the thread counter and the scheduler total counter.</p>
@@ -278,8 +278,11 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02273">2273</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02278">2278</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2279</span>    {</div>
+<div class="line"><span class="lineno"> 2280</span>      <span class="keywordflow">return</span> context_switches_;</div>
+<div class="line"><span class="lineno"> 2281</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a789a41ac20fff4b8a37eeba367070d84" name="a789a41ac20fff4b8a37eeba367070d84"></a>
@@ -305,8 +308,6 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the thread execution time. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A long integer with accumulated number of CPU cycles.</dd></dl>
 <p>This value can be used together with the corresponding scheduler function, to compute percentages.</p>
@@ -314,8 +315,11 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02294">2294</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02299">2299</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2300</span>    {</div>
+<div class="line"><span class="lineno"> 2301</span>      <span class="keywordflow">return</span> cpu_cycles_;</div>
+<div class="line"><span class="lineno"> 2302</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

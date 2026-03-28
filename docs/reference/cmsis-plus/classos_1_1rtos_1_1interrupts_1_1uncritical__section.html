@@ -149,9 +149,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aaa1e80e66be19cd8921b2c6a7b615b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interrupts critical section <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> helper. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00598">598</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00604">604</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac0db825c34bafc3a5216d75cff6b185f" name="ac0db825c34bafc3a5216d75cff6b185f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0db825c34bafc3a5216d75cff6b185f">&#9670;&#160;</a></span>uncritical_section()</h2>
@@ -175,13 +174,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Enter an interrupts uncritical section. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01160">1160</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01148">1148</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1149</span>          : state_ (<a class="code hl_function" href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#a80d772d2ab134bfc4fa35e1f85dff7fd">enter</a> ())</div>
+<div class="line"><span class="lineno"> 1150</span>      {</div>
+<div class="line"><span class="lineno"> 1151</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1interrupts_1_1uncritical__section_html_a80d772d2ab134bfc4fa35e1f85dff7fd"><div class="ttname"><a href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#a80d772d2ab134bfc4fa35e1f85dff7fd">os::rtos::interrupts::uncritical_section::enter</a></div><div class="ttdeci">static state_t enter(void)</div><div class="ttdoc">Enter interrupts uncritical section.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01166">os-sched.h:1166</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a642a7ab37371856d85e0a57f902e312b" name="a642a7ab37371856d85e0a57f902e312b"></a>
@@ -206,11 +207,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Exit the interrupts uncritical section. </p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01170">1170</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01157">1157</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1158</span>      {</div>
+<div class="line"><span class="lineno"> 1159</span>        <a class="code hl_function" href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#aaa1e80e66be19cd8921b2c6a7b615b2f">exit</a> (state_);</div>
+<div class="line"><span class="lineno"> 1160</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1interrupts_1_1uncritical__section_html_aaa1e80e66be19cd8921b2c6a7b615b2f"><div class="ttname"><a href="classos_1_1rtos_1_1interrupts_1_1uncritical__section.html#aaa1e80e66be19cd8921b2c6a7b615b2f">os::rtos::interrupts::uncritical_section::exit</a></div><div class="ttdeci">static void exit(state_t state)</div><div class="ttdoc">Exit interrupts uncritical section.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01175">os-sched.h:1175</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01175">exit()</a>.</p>
 
 </div>
 </div>
@@ -238,13 +243,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Enter interrupts uncritical section. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous value of the interrupts priority register.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01180">1180</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01166">1166</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1167</span>      {</div>
+<div class="line"><span class="lineno"> 1168</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#ae3af8cfa5762f0441494ab2894c444b9">port::interrupts::uncritical_section::enter</a> ();</div>
+<div class="line"><span class="lineno"> 1169</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section_html_ae3af8cfa5762f0441494ab2894c444b9"><div class="ttname"><a href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#ae3af8cfa5762f0441494ab2894c444b9">os::rtos::port::interrupts::uncritical_section::enter</a></div><div class="ttdeci">static rtos::interrupts::state_t enter(void)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#ae3af8cfa5762f0441494ab2894c444b9">os::rtos::port::interrupts::uncritical_section::enter()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00597">os_irq_uncritical_enter()</a>.</p>
 
 </div>
 </div>
@@ -271,8 +282,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Exit interrupts uncritical section. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">state</td><td>The value to restore the interrupts priority register. </td></tr>
@@ -282,7 +291,15 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01190">1190</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01175">1175</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1176</span>      {</div>
+<div class="line"><span class="lineno"> 1177</span>        <a class="code hl_function" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#a7d592f53fa8edc476d4f1d7ae69f7282">port::interrupts::uncritical_section::exit</a> (state);</div>
+<div class="line"><span class="lineno"> 1178</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section_html_a7d592f53fa8edc476d4f1d7ae69f7282"><div class="ttname"><a href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#a7d592f53fa8edc476d4f1d7ae69f7282">os::rtos::port::interrupts::uncritical_section::exit</a></div><div class="ttdeci">static void exit(rtos::interrupts::state_t state)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html#a7d592f53fa8edc476d4f1d7ae69f7282">os::rtos::port::interrupts::uncritical_section::exit()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-sched_8h_source.html#l01157">~uncritical_section()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l00609">os_irq_uncritical_exit()</a>.</p>
 
 </div>
 </div>

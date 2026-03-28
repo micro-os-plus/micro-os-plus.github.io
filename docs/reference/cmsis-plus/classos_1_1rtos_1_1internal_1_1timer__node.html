@@ -192,9 +192,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5ec8dc9337ccc4095c6130e3ccb955e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Double linked list node, with time stamp and timer. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00315">315</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00310">310</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6e2ca39da8e64bba4c927cd9392884fe" name="a6e2ca39da8e64bba4c927cd9392884fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e2ca39da8e64bba4c927cd9392884fe">&#9670;&#160;</a></span>timer_node()</h2>
@@ -221,8 +220,6 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct a clock timer node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>Time stamp. </td></tr>
@@ -232,6 +229,18 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00362">362</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  363</span>          : <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1timestamp__node.html#a989ea0be24e90160a44d8f404be6e77d">timestamp_node</a>{ ts }, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  364</span>            <a class="code hl_variable" href="classos_1_1rtos_1_1internal_1_1timer__node.html#a1ee3579c2d96777da696a894babfbf0e">tmr</a> (tm)</div>
+<div class="line"><span class="lineno">  365</span>      {</div>
+<div class="line"><span class="lineno">  366</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS_CONSTRUCT)</span></div>
+<div class="line"><span class="lineno">  367</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p \n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  368</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  369</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1timer__node_html_a1ee3579c2d96777da696a894babfbf0e"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1timer__node.html#a1ee3579c2d96777da696a894babfbf0e">os::rtos::internal::timer_node::tmr</a></div><div class="ttdeci">timer &amp; tmr</div><div class="ttdoc">Reference to waiting timer.</div><div class="ttdef"><b>Definition</b> <a href="os-lists_8h_source.html#l00378">os-lists.h:378</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1timestamp__node_html_a989ea0be24e90160a44d8f404be6e77d"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1timestamp__node.html#a989ea0be24e90160a44d8f404be6e77d">os::rtos::internal::timestamp_node::timestamp_node</a></div><div class="ttdeci">timestamp_node(port::clock::timestamp_t ts)</div><div class="ttdoc">Construct a node with a time stamp.</div><div class="ttdef"><b>Definition</b> <a href="os-lists_8cpp_source.html#l00311">os-lists.cpp:311</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -258,9 +267,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destruct the node. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00372">372</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00371">371</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  372</span>      {</div>
+<div class="line"><span class="lineno">  373</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS_CONSTRUCT)</span></div>
+<div class="line"><span class="lineno">  374</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p \n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  375</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  376</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -288,15 +302,20 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Action to perform when the time stamp is reached. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Remove the node from the list and perform the timer actions. </p>
 
 <p>Implements <a class="el" href="classos_1_1rtos_1_1internal_1_1timestamp__node.html#a1707812edd3486165026bbf86188d311">os::rtos::internal::timestamp_node</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00384">384</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00383">383</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  384</span>      {</div>
+<div class="line"><span class="lineno">  385</span>        this-&gt;<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#aa2d021981feffcc46ccc61f7c5bd248c">unlink</a> ();</div>
+<div class="line"><span class="lineno">  386</span>        <a class="code hl_variable" href="classos_1_1rtos_1_1internal_1_1timer__node.html#a1ee3579c2d96777da696a894babfbf0e">tmr</a>.internal_interrupt_service_routine ();</div>
+<div class="line"><span class="lineno">  387</span>      }</div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_aa2d021981feffcc46ccc61f7c5bd248c"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#aa2d021981feffcc46ccc61f7c5bd248c">os::utils::static_double_list_links::unlink</a></div><div class="ttdeci">void unlink(void)</div><div class="ttdoc">Remove the node from the list.</div><div class="ttdef"><b>Definition</b> <a href="lists_8cpp_source.html#l00059">lists.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-lists_8h_source.html#l00378">tmr</a>, and <a class="el" href="lists_8cpp_source.html#l00059">os::utils::static_double_list_links::unlink()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +343,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00865">865</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00847">847</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  848</span>    {</div>
+<div class="line"><span class="lineno">  849</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a> = n;</div>
+<div class="line"><span class="lineno">  850</span>    }</div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_a5ec8dc9337ccc4095c6130e3ccb955e6"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">os::utils::static_double_list_links::next_</a></div><div class="ttdeci">static_double_list_links * next_</div><div class="ttdoc">Pointer to next node.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00137">lists.h:137</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00137">os::utils::static_double_list_links::next_</a>.</p>
 
 </div>
 </div>
@@ -352,7 +377,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00853">853</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00835">835</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  836</span>    {</div>
+<div class="line"><span class="lineno">  837</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a>;</div>
+<div class="line"><span class="lineno">  838</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00137">os::utils::static_double_list_links::next_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-lists_8h_source.html#l00937">os::rtos::internal::waiting_threads_list::begin()</a>, <a class="el" href="os-lists_8cpp_source.html#l00490">os::rtos::internal::clock_timestamps_list::check_timestamp()</a>, <a class="el" href="lists_8cpp_source.html#l00108">os::utils::static_double_list::clear()</a>, <a class="el" href="lists_8h_source.html#l01001">os::utils::static_double_list::empty()</a>, <a class="el" href="lists_8h_source.html#l01008">os::utils::static_double_list::head()</a>, and <a class="el" href="lists_8cpp_source.html#l00121">os::utils::static_double_list::insert_after()</a>.</p>
 
 </div>
 </div>
@@ -380,7 +412,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00871">871</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00853">853</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  854</span>    {</div>
+<div class="line"><span class="lineno">  855</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a> = n;</div>
+<div class="line"><span class="lineno">  856</span>    }</div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_a4a93c0791ec94f9f06bb61d3498f2293"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">os::utils::static_double_list_links::prev_</a></div><div class="ttdeci">static_double_list_links * prev_</div><div class="ttdoc">Pointer to previous node.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00132">lists.h:132</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00132">os::utils::static_double_list_links::prev_</a>.</p>
 
 </div>
 </div>
@@ -408,7 +446,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00859">859</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00841">841</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  842</span>    {</div>
+<div class="line"><span class="lineno">  843</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a>;</div>
+<div class="line"><span class="lineno">  844</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00132">os::utils::static_double_list_links::prev_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lists_8cpp_source.html#l00108">os::utils::static_double_list::clear()</a>, <a class="el" href="lists_8cpp_source.html#l00121">os::utils::static_double_list::insert_after()</a>, <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">os::rtos::internal::ready_threads_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00194">os::rtos::internal::waiting_threads_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="lists_8h_source.html#l01014">os::utils::static_double_list::tail()</a>, and <a class="el" href="lists_8h_source.html#l00994">os::utils::static_double_list::uninitialized()</a>.</p>
 
 </div>
 </div>
@@ -435,13 +480,39 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Remove the node from the list. </p>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Update the neighbours to point to each other, skipping the node.</p>
 <p>For more robustness, to prevent unexpected accesses, the links in the removed node are nullified. </p>
 
-<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00057">57</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00059">59</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>      <span class="comment">// Check if not already unlinked.</span></div>
+<div class="line"><span class="lineno">   62</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a1d76056af2b73899693e5b8a239d53ca">unlinked</a> ())</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>          assert (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   65</span><span class="preprocessor">#if defined(OS_TRACE_UTILS_LISTS)</span></div>
+<div class="line"><span class="lineno">   66</span>          <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p nop\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   68</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span><span class="preprocessor">#if defined(OS_TRACE_UTILS_LISTS)</span></div>
+<div class="line"><span class="lineno">   72</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p \n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>      <span class="comment">// Make neighbours point to each other.</span></div>
+<div class="line"><span class="lineno">   76</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a>-&gt;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a> = <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a>;</div>
+<div class="line"><span class="lineno">   77</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a>-&gt;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a> = <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a>;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>      <span class="comment">// Nullify both pointers in the unlinked node.</span></div>
+<div class="line"><span class="lineno">   80</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a4a93c0791ec94f9f06bb61d3498f2293">prev_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   81</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_a1d76056af2b73899693e5b8a239d53ca"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#a1d76056af2b73899693e5b8a239d53ca">os::utils::static_double_list_links::unlinked</a></div><div class="ttdeci">bool unlinked(void)</div><div class="ttdoc">Check if the node is unlinked.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00829">lists.h:829</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00137">os::utils::static_double_list_links::next_</a>, <a class="el" href="lists_8h_source.html#l00132">os::utils::static_double_list_links::prev_</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, and <a class="el" href="lists_8h_source.html#l00829">os::utils::static_double_list_links::unlinked()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00346">os::rtos::internal::timeout_thread_node::action()</a>, <a class="el" href="os-lists_8cpp_source.html#l00383">action()</a>, and <a class="el" href="os-idle_8cpp_source.html#l00063">os_rtos_idle_actions()</a>.</p>
 
 </div>
 </div>
@@ -468,8 +539,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the node is unlinked. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The node is not linked. </td></tr>
@@ -478,7 +547,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00847">847</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00829">829</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  830</span>    {</div>
+<div class="line"><span class="lineno">  831</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list__links.html#a5ec8dc9337ccc4095c6130e3ccb955e6">next_</a> == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  832</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00137">os::utils::static_double_list_links::next_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lists_8cpp_source.html#l00059">os::utils::static_double_list_links::unlink()</a>.</p>
 
 </div>
 </div>
@@ -503,9 +579,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to next node. </p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00137">137</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00138">138</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lists_8h_source.html#l00860">os::utils::double_list_links::double_list_links()</a>, <a class="el" href="lists_8h_source.html#l00847">os::utils::static_double_list_links::next()</a>, <a class="el" href="lists_8h_source.html#l00835">os::utils::static_double_list_links::next()</a>, <a class="el" href="lists_8cpp_source.html#l00059">os::utils::static_double_list_links::unlink()</a>, and <a class="el" href="lists_8h_source.html#l00829">os::utils::static_double_list_links::unlinked()</a>.</p>
 
 </div>
 </div>
@@ -529,9 +605,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to previous node. </p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00132">132</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00133">133</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lists_8h_source.html#l00860">os::utils::double_list_links::double_list_links()</a>, <a class="el" href="lists_8h_source.html#l00853">os::utils::static_double_list_links::prev()</a>, <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>, and <a class="el" href="lists_8cpp_source.html#l00059">os::utils::static_double_list_links::unlink()</a>.</p>
 
 </div>
 </div>
@@ -555,9 +631,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Time stamp when the next action will be performed. </p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00198">198</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00200">200</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00490">os::rtos::internal::clock_timestamps_list::check_timestamp()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>.</p>
 
 </div>
 </div>
@@ -573,9 +649,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reference to waiting timer. </p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00378">378</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00385">385</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00383">action()</a>.</p>
 
 </div>
 </div>

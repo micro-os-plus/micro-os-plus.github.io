@@ -147,8 +147,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a0a3a2506459afaf7cb613aaf1fd875a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Mutex protocols. </p>
-<p>Allow to define the behaviour of the mutex related to scheduling.</p>
+<div class="textblock"><p>Allow to define the behaviour of the mutex related to scheduling.</p>
 <p>The mutex protocol is defined via the <code>mx_protocol</code> attribute of the <code><a class="el" href="classos_1_1rtos_1_1mutex_1_1attributes.html" title="Mutex attributes.">mutex::attributes</a></code> class. Valid values are:</p>
 <ul>
 <li><code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b" title="Priority and scheduling not affected by mutex ownership.">mutex::protocol::none</a></code></li>
@@ -165,7 +164,7 @@ Public Types</h2></td></tr>
 <p>When a thread makes a call to <code><a class="el" href="classos_1_1rtos_1_1mutex.html#a0fd459d4da59662256bbd807b73c263e" title="Lock/acquire the mutex.">mutex::lock()</a></code>, the mutex was initialised with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread.">mutex::protocol::inherit</a></code>, when the calling thread is blocked because the mutex is owned by another thread, that owner thread shall inherit the priority level of the calling thread as long as it continues to own the mutex. The implementation shall update its execution priority to the maximum of its assigned priority and all its inherited priorities. Furthermore, if this owner thread itself becomes blocked on another mutex with the protocol attribute having the value <code><a class="el" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4" title="Inherit priority from highest priority thread.">mutex::protocol::inherit</a></code>, the same priority inheritance effect shall be propagated to this other owner thread, in a recursive manner.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutexattr_getprotocol.html"><code>pthread_mutexattr_setprotocol()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/pthread.h.html"><code>&lt;pthread.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00067">67</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00065">65</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a0a3a2506459afaf7cb613aaf1fd875a9" name="a0a3a2506459afaf7cb613aaf1fd875a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a3a2506459afaf7cb613aaf1fd875a9">&#9670;&#160;</a></span>anonymous enum</h2>
@@ -178,8 +177,6 @@ Public Types</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enumeration of mutex protocols. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b" name="a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b"></a>none&#160;</td><td class="fielddoc"><p>Priority and scheduling not affected by mutex ownership. </p>
 </td></tr>
@@ -193,8 +190,24 @@ Public Types</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00072">72</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mutex_8h_source.html#l00070">70</a> of file <a class="el" href="os-mutex_8h_source.html">os-mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   75</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b">none</a> = 0,</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   80</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4">inherit</a> = 1,</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   85</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb">protect</a> = 2,</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   90</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a602ae9bef8705106bb613e78c0fe84ca">default_</a> = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4">inherit</a>,</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   95</span>          <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a4a64c26ead3ae9ce0d7592b5c51337a1">max_</a> = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb">protect</a></div>
+<div class="line"><span class="lineno">   96</span>        };</div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1protocol_html_a0a3a2506459afaf7cb613aaf1fd875a9a4a64c26ead3ae9ce0d7592b5c51337a1"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a4a64c26ead3ae9ce0d7592b5c51337a1">os::rtos::mutex::protocol::max_</a></div><div class="ttdeci">@ max_</div><div class="ttdoc">Maximum value, for validation purposes.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00096">os-mutex.h:95</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1protocol_html_a0a3a2506459afaf7cb613aaf1fd875a9a602ae9bef8705106bb613e78c0fe84ca"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a602ae9bef8705106bb613e78c0fe84ca">os::rtos::mutex::protocol::default_</a></div><div class="ttdeci">@ default_</div><div class="ttdoc">Default value. Differs from POSIX, which uses none.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00090">os-mutex.h:90</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1protocol_html_a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9a89f31cb2b1c5b230b8ba0bcad0c8c39b">os::rtos::mutex::protocol::none</a></div><div class="ttdeci">@ none</div><div class="ttdoc">Priority and scheduling not affected by mutex ownership.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00075">os-mutex.h:75</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1protocol_html_a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9ac288479da49bf12ecbb0e31cb4d5fde4">os::rtos::mutex::protocol::inherit</a></div><div class="ttdeci">@ inherit</div><div class="ttdoc">Inherit priority from highest priority thread.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00080">os-mutex.h:80</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1mutex_1_1protocol_html_a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb"><div class="ttname"><a href="structos_1_1rtos_1_1mutex_1_1protocol.html#a0a3a2506459afaf7cb613aaf1fd875a9aebac25e02252bdd4f038dd200b2ef7cb">os::rtos::mutex::protocol::protect</a></div><div class="ttdeci">@ protect</div><div class="ttdoc">Execute at the highest priority.</div><div class="ttdef"><b>Definition</b> <a href="os-mutex_8h_source.html#l00085">os-mutex.h:85</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

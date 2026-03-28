@@ -149,7 +149,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reset-hardware_8c_source.html#l00051">51</a> of file <a class="el" href="reset-hardware_8c_source.html">reset-hardware.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reset-hardware_8c_source.html#l00050">50</a> of file <a class="el" href="reset-hardware_8c_source.html">reset-hardware.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span><span class="preprocessor">#if defined(DEBUG) || defined(OS_DISABLE_RESET_HARDWARE)</span></div>
+<div class="line"><span class="lineno">   53</span>  <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;__reset_hardware()&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">while</span> (1)</div>
+<div class="line"><span class="lineno">   55</span>    __WFI ();</div>
+<div class="line"><span class="lineno">   56</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   57</span>  NVIC_SystemReset ();</div>
+<div class="line"><span class="lineno">   58</span>  __builtin_unreachable ();</div>
+<div class="line"><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="atrace_8h_html_a6a6492d4a967fc866e4825f6146cec37"><div class="ttname"><a href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a></div><div class="ttdeci">int trace_printf(const char *format,...)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf()</a>.</p>
 
 </div>
 </div>

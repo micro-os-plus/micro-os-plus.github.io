@@ -143,12 +143,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a405ff125b0936a3f52eebff9be33f8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thread context. </p>
-<p>The thread context includes the stack object and port specific structures.</p>
+<div class="textblock"><p>The thread context includes the stack object and port specific structures.</p>
 <p>On some ports (like the Cortex-M) the thread context is stored on the stack and a pointer to the current location is kept in the context object instance.</p>
 <p>On other ports (like the synthetic POSIX port), the makecontext() functions create and manage large ucontex_t structures stored in the context object instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00656">656</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l00660">660</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1fcb344f266923391a26c244a4186f7c" name="a1fcb344f266923391a26c244a4186f7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fcb344f266923391a26c244a4186f7c">&#9670;&#160;</a></span>context()</h2>
@@ -172,12 +171,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a thread context object instance. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02241">2241</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02246">2246</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2247</span>    {</div>
+<div class="line"><span class="lineno"> 2248</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae027df45a723a85dbe7476ca0e93f559" name="ae027df45a723a85dbe7476ca0e93f559"></a>
@@ -202,8 +201,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the context object instance. </p>
 
 </div>
 </div>
@@ -231,14 +228,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the associated stack. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to stack object.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02249">2249</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-thread_8h_source.html#l02254">2254</a> of file <a class="el" href="os-thread_8h_source.html">os-thread.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2255</span>    {</div>
+<div class="line"><span class="lineno"> 2256</span>      <span class="keywordflow">return</span> stack_;</div>
+<div class="line"><span class="lineno"> 2257</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

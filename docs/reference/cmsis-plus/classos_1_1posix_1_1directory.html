@@ -162,9 +162,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afdc0a72882b6bb5a7990fcc70ed2d9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Directory class. </p>
-
-<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00075">75</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00074">74</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adfcf71b35fab4a39a2a2db95e0dc5d77" name="adfcf71b35fab4a39a2a2db95e0dc5d77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfcf71b35fab4a39a2a2db95e0dc5d77">&#9670;&#160;</a></span>directory()</h2>
@@ -182,7 +181,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00034">34</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00033">33</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                              : impl_ (<a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a>)</div>
+<div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_DIRECTORY)</span></div>
+<div class="line"><span class="lineno">   36</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s()=%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory_html_afdc0a72882b6bb5a7990fcc70ed2d9f7"><div class="ttname"><a href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">os::posix::directory::impl</a></div><div class="ttdeci">directory_impl &amp; impl(void) const</div><div class="ttdef"><b>Definition</b> <a href="directory_8h_source.html#l00503">directory.h:503</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -209,7 +218,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00042">42</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00040">40</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_DIRECTORY)</span></div>
+<div class="line"><span class="lineno">   43</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -240,7 +256,35 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1posix_1_1directory__lockable.html#a6babe603e537a79816844826468612b4">os::posix::directory_lockable&lt; T, L &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00086">86</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00084">84</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_DIRECTORY)</span></div>
+<div class="line"><span class="lineno">   87</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>      <span class="comment">// assert(file_system_ != nullptr);</span></div>
+<div class="line"><span class="lineno">   91</span>      errno = 0;</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>      <span class="comment">// Execute the implementation specific code.</span></div>
+<div class="line"><span class="lineno">   94</span>      <span class="keywordtype">int</span> ret = <a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a> ().<a class="code hl_function" href="classos_1_1posix_1_1directory__impl.html#a79d97d5abf2237560048ac40fff6d045">do_close</a> ();</div>
+<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">if</span> (ret != 0)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>          <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s() @%p do_close() returned %d\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   98</span>                         __func__, <span class="keyword">this</span>, ret);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>      <span class="comment">// The file object will be deallocated at the next open.</span></div>
+<div class="line"><span class="lineno">  102</span>      <a class="code hl_function" href="classos_1_1posix_1_1directory.html#a4b460a386b622fdd5c01ded2fe9f2d6f">get_file_system</a> ().<a class="code hl_function" href="classos_1_1posix_1_1file__system.html#a1abdccab8f5edb32a96ca57a6cfec85f">add_deferred_directory</a> (<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory__impl_html_a79d97d5abf2237560048ac40fff6d045"><div class="ttname"><a href="classos_1_1posix_1_1directory__impl.html#a79d97d5abf2237560048ac40fff6d045">os::posix::directory_impl::do_close</a></div><div class="ttdeci">virtual int do_close(void)=0</div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory_html_a4b460a386b622fdd5c01ded2fe9f2d6f"><div class="ttname"><a href="classos_1_1posix_1_1directory.html#a4b460a386b622fdd5c01ded2fe9f2d6f">os::posix::directory::get_file_system</a></div><div class="ttdeci">class file_system &amp; get_file_system(void) const</div><div class="ttdef"><b>Definition</b> <a href="directory_8h_source.html#l00491">directory.h:491</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1file__system_html_a1abdccab8f5edb32a96ca57a6cfec85f"><div class="ttname"><a href="classos_1_1posix_1_1file__system.html#a1abdccab8f5edb32a96ca57a6cfec85f">os::posix::file_system::add_deferred_directory</a></div><div class="ttdeci">void add_deferred_directory(directory *dir)</div><div class="ttdef"><b>Definition</b> <a href="file-system_8h_source.html#l00828">file-system.h:828</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="file-system_8h_source.html#l00828">os::posix::file_system::add_deferred_directory()</a>, <a class="el" href="classos_1_1posix_1_1directory__impl.html#a79d97d5abf2237560048ac40fff6d045">os::posix::directory_impl::do_close()</a>, <a class="el" href="directory_8h_source.html#l00491">get_file_system()</a>, <a class="el" href="directory_8h_source.html#l00503">impl()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00552">__posix_closedir()</a>, and <a class="el" href="directory_8h_source.html#l00608">os::posix::directory_lockable&lt; T, L &gt;::close()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +312,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00506">506</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00497">497</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  498</span>    {</div>
+<div class="line"><span class="lineno">  499</span>      <span class="keywordflow">return</span> &amp;(<a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a> ().dir_entry_);</div>
+<div class="line"><span class="lineno">  500</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="directory_8h_source.html#l00503">impl()</a>.</p>
 
 </div>
 </div>
@@ -296,7 +345,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00500">500</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00491">491</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  492</span>    {</div>
+<div class="line"><span class="lineno">  493</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a> ().<a class="code hl_function" href="classos_1_1posix_1_1directory__impl.html#a6e56d45fde8d23cd68f546f655961fd3">get_file_system</a> ();</div>
+<div class="line"><span class="lineno">  494</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory__impl_html_a6e56d45fde8d23cd68f546f655961fd3"><div class="ttname"><a href="classos_1_1posix_1_1directory__impl.html#a6e56d45fde8d23cd68f546f655961fd3">os::posix::directory_impl::get_file_system</a></div><div class="ttdeci">class file_system &amp; get_file_system(void) const</div><div class="ttdef"><b>Definition</b> <a href="directory_8h_source.html#l00511">directory.h:511</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="directory_8h_source.html#l00511">os::posix::directory_impl::get_file_system()</a>, and <a class="el" href="directory_8h_source.html#l00503">impl()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="directory_8cpp_source.html#l00084">close()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +381,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00512">512</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8h_source.html#l00503">503</a> of file <a class="el" href="directory_8h_source.html">directory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  504</span>    {</div>
+<div class="line"><span class="lineno">  505</span>      <span class="keywordflow">return</span> <span class="comment">/* static_cast&lt;directory_impl&amp;&gt; */</span> (impl_);</div>
+<div class="line"><span class="lineno">  506</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="directory_8cpp_source.html#l00084">close()</a>, <a class="el" href="directory_8h_source.html#l00497">dir_entry()</a>, <a class="el" href="directory_8h_source.html#l00491">get_file_system()</a>, <a class="el" href="directory_8cpp_source.html#l00050">read()</a>, and <a class="el" href="directory_8cpp_source.html#l00068">rewind()</a>.</p>
 
 </div>
 </div>
@@ -354,7 +416,27 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1posix_1_1directory__lockable.html#ab71cd71e29330408406b305775d1404d">os::posix::directory_lockable&lt; T, L &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00052">52</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00050">50</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_DIRECTORY)</span></div>
+<div class="line"><span class="lineno">   53</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>      <span class="comment">// assert(file_system_ != nullptr);</span></div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>      <span class="comment">// POSIX requires not to change errno when end of directory is</span></div>
+<div class="line"><span class="lineno">   59</span>      <span class="comment">// encountered. However, in this implementation, errno is</span></div>
+<div class="line"><span class="lineno">   60</span>      <span class="comment">// always cleared when entering system calls.</span></div>
+<div class="line"><span class="lineno">   61</span>      errno = 0;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>      <span class="comment">// Execute the implementation specific code.</span></div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a> ().<a class="code hl_function" href="classos_1_1posix_1_1directory__impl.html#ab8e703f2ebce2cc7b658c7851709f5c8">do_read</a> ();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory__impl_html_ab8e703f2ebce2cc7b658c7851709f5c8"><div class="ttname"><a href="classos_1_1posix_1_1directory__impl.html#ab8e703f2ebce2cc7b658c7851709f5c8">os::posix::directory_impl::do_read</a></div><div class="ttdeci">virtual dirent * do_read(void)=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1posix_1_1directory__impl.html#ab8e703f2ebce2cc7b658c7851709f5c8">os::posix::directory_impl::do_read()</a>, <a class="el" href="directory_8h_source.html#l00503">impl()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00513">__posix_readdir()</a>, and <a class="el" href="directory_8h_source.html#l00582">os::posix::directory_lockable&lt; T, L &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +466,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1posix_1_1directory__lockable.html#adeaa7723186ce4d3df90401407a7c235">os::posix::directory_lockable&lt; T, L &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00070">70</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="directory_8cpp_source.html#l00068">68</a> of file <a class="el" href="directory_8cpp_source.html">directory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_DIRECTORY)</span></div>
+<div class="line"><span class="lineno">   71</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;directory::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>      <span class="comment">// assert(file_system_ != nullptr);</span></div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>      <span class="comment">// POSIX does not mention what to do with errno.</span></div>
+<div class="line"><span class="lineno">   77</span>      errno = 0;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>      <span class="comment">// Execute the implementation specific code.</span></div>
+<div class="line"><span class="lineno">   80</span>      <a class="code hl_function" href="classos_1_1posix_1_1directory.html#afdc0a72882b6bb5a7990fcc70ed2d9f7">impl</a> ().<a class="code hl_function" href="classos_1_1posix_1_1directory__impl.html#abd93e72c11c3d05604ac700663d16cc3">do_rewind</a> ();</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1directory__impl_html_abd93e72c11c3d05604ac700663d16cc3"><div class="ttname"><a href="classos_1_1posix_1_1directory__impl.html#abd93e72c11c3d05604ac700663d16cc3">os::posix::directory_impl::do_rewind</a></div><div class="ttdeci">virtual void do_rewind(void)=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1posix_1_1directory__impl.html#abd93e72c11c3d05604ac700663d16cc3">os::posix::directory_impl::do_rewind()</a>, <a class="el" href="directory_8h_source.html#l00503">impl()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00537">__posix_rewinddir()</a>, and <a class="el" href="directory_8h_source.html#l00595">os::posix::directory_lockable&lt; T, L &gt;::rewind()</a>.</p>
 
 </div>
 </div>

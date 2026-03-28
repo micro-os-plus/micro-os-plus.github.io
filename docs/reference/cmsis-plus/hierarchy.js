@@ -6,7 +6,6 @@ var hierarchy =
     [ "os::rtos::memory::allocator_stateless_polymorphic_synchronized< T, L, get_resource >", "classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html", null ],
     [ "os::rtos::memory_pool::arena< T, blocks, block_size_bytes >", "classos_1_1rtos_1_1memory__pool_1_1arena.html", null ],
     [ "os::rtos::message_queue::arena< T, msgs, msg_size_bytes >", "classos_1_1rtos_1_1message__queue_1_1arena.html", null ],
-    [ "attributes_binary", "classattributes__binary.html", null ],
     [ "os::rtos::internal::attributes_clocked", "classos_1_1rtos_1_1internal_1_1attributes__clocked.html", [
       [ "os::rtos::condition_variable::attributes", "classos_1_1rtos_1_1condition__variable_1_1attributes.html", null ],
       [ "os::rtos::event_flags::attributes", "classos_1_1rtos_1_1event__flags_1_1attributes.html", null ],
@@ -24,7 +23,6 @@ var hierarchy =
         [ "os::rtos::timer::attributes_periodic", "classos_1_1rtos_1_1timer_1_1attributes__periodic.html", null ]
       ] ]
     ] ],
-    [ "attributes_periodic", "classattributes__periodic.html", null ],
     [ "os::driver::Base", "classos_1_1driver_1_1Base.html", [
       [ "os::driver::Serial", "classos_1_1driver_1_1Serial.html", [
         [ "os::driver::usart_wrapper", "classos_1_1driver_1_1usart__wrapper.html", null ]
@@ -266,9 +264,6 @@ var hierarchy =
     [ "os::rtos::port::thread", "classos_1_1rtos_1_1port_1_1thread.html", null ],
     [ "thread", "classthread.html", null ],
     [ "os::rtos::mutex::type", "structos_1_1rtos_1_1mutex_1_1type.html", null ],
-    [ "std::unary_function", null, [
-      [ "std::hash< os::estd::thread::id >", "structstd_1_1hash_3_01os_1_1estd_1_1thread_1_1id_01_4.html", null ]
-    ] ],
     [ "os::rtos::interrupts::uncritical_section", "classos_1_1rtos_1_1interrupts_1_1uncritical__section.html", null ],
     [ "os::rtos::port::interrupts::uncritical_section", "classos_1_1rtos_1_1port_1_1interrupts_1_1uncritical__section.html", null ],
     [ "os::rtos::scheduler::uncritical_section", "classos_1_1rtos_1_1scheduler_1_1uncritical__section.html", null ],

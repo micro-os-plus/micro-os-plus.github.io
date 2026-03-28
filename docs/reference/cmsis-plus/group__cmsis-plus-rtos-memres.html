@@ -118,11 +118,9 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-memres.html',''
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Memory management<div class="ingroups"><a class="el" href="group__cmsis-plus-rtos.html">µOS++ RTOS C++ API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -130,12 +128,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-rtos-memres.html',''
 <p>C++ API memory management definitions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
-<tr class="memdesc:namespacestd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard <b>std</b> namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html">os::rtos::memory::allocator_deleter&lt; A &gt;</a></td></tr>
@@ -193,48 +185,37 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gac00e47b1a65850b96de7c9fe0e938da1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gac00e47b1a65850b96de7c9fe0e938da1">os::rtos::memory::allocator</a> = <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html">allocator_stateless_default_resource</a>&lt; T &gt;</td></tr>
 <tr class="memdesc:gac00e47b1a65850b96de7c9fe0e938da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of allocator used by the system objects. Must be stateless.  <br /></td></tr>
 <tr class="separator:gac00e47b1a65850b96de7c9fe0e938da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82d08410dc0d1e8cfb011ad843f871ec"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U  = T&gt; </td></tr>
-<tr class="memitem:ga82d08410dc0d1e8cfb011ad843f871ec"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga82d08410dc0d1e8cfb011ad843f871ec">os::rtos::memory::allocator_typed</a> = <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1lockable.html">scheduler::lockable</a>, <a class="el" href="group__cmsis-plus-rtos-memres.html#ga1a04af7fafdc21f54317211e60a8e948">get_resource_typed</a>&lt; U &gt; &gt;</td></tr>
-<tr class="memdesc:ga82d08410dc0d1e8cfb011ad843f871ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of an allocator for objects of type T.  <br /></td></tr>
-<tr class="separator:ga82d08410dc0d1e8cfb011ad843f871ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga165e1d42e364dcabcbf01e5322b9f554"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga165e1d42e364dcabcbf01e5322b9f554">os::rtos::memory::out_of_memory_handler_t</a> = void(*)(void)</td></tr>
-<tr class="memdesc:ga165e1d42e364dcabcbf01e5322b9f554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of out of memory handler.  <br /></td></tr>
-<tr class="separator:ga165e1d42e364dcabcbf01e5322b9f554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad5673b9a6f5b280eb5c59657a937174"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U  = T&gt; </td></tr>
+<tr class="memitem:gaad5673b9a6f5b280eb5c59657a937174"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaad5673b9a6f5b280eb5c59657a937174">os::rtos::memory::allocator_typed</a> = <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1lockable.html">scheduler::lockable</a>, <a class="el" href="group__cmsis-plus-rtos-memres.html#ga1a04af7fafdc21f54317211e60a8e948">get_resource_typed</a>&lt; U &gt; &gt;</td></tr>
+<tr class="memdesc:gaad5673b9a6f5b280eb5c59657a937174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of an allocator for objects of type T.  <br /></td></tr>
+<tr class="separator:gaad5673b9a6f5b280eb5c59657a937174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga584da84e822c3f3574ce2e1f14ee0f7e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga584da84e822c3f3574ce2e1f14ee0f7e">os::rtos::memory::out_of_memory_handler_t</a> = void(*)(void)</td></tr>
+<tr class="memdesc:ga584da84e822c3f3574ce2e1f14ee0f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of out of memory handler.  <br /></td></tr>
+<tr class="separator:ga584da84e822c3f3574ce2e1f14ee0f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4a11d49fdbc2f58aa1c0c5fa56f13ebb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U  = T&gt; </td></tr>
-<tr class="memitem:ga4a11d49fdbc2f58aa1c0c5fa56f13ebb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb">os::rtos::memory::unique_ptr</a> = std::unique_ptr&lt; T, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html">allocator_deleter</a>&lt; <a class="el" href="group__cmsis-plus-rtos-memres.html#ga82d08410dc0d1e8cfb011ad843f871ec">allocator_typed</a>&lt; T, U &gt; &gt; &gt;</td></tr>
+<tr class="memitem:ga4a11d49fdbc2f58aa1c0c5fa56f13ebb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb">os::rtos::memory::unique_ptr</a> = std::unique_ptr&lt; T, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html">allocator_deleter</a>&lt; <a class="el" href="group__cmsis-plus-rtos-memres.html#gaad5673b9a6f5b280eb5c59657a937174">allocator_typed</a>&lt; T, U &gt; &gt; &gt;</td></tr>
 <tr class="memdesc:ga4a11d49fdbc2f58aa1c0c5fa56f13ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a RTOS unique pointer to objects of type T.  <br /></td></tr>
 <tr class="separator:ga4a11d49fdbc2f58aa1c0c5fa56f13ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabf21181167520330c0aba45ad045bce3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename A , typename ... Args&gt; </td></tr>
+<tr class="memitem:gabf21181167520330c0aba45ad045bce3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename A , typename... Args&gt; </td></tr>
 <tr class="memitem:gabf21181167520330c0aba45ad045bce3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gabf21181167520330c0aba45ad045bce3">os::rtos::memory::allocate_unique</a> (const A &amp;<a class="el" href="group__cmsis-plus-rtos-memres.html#gac00e47b1a65850b96de7c9fe0e938da1">allocator</a>, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:gabf21181167520330c0aba45ad045bce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function template to allocate a unique pointer.  <br /></td></tr>
 <tr class="separator:gabf21181167520330c0aba45ad045bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2aab280c9a87214e453f8f598827d13b"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga2aab280c9a87214e453f8f598827d13b">std::get_new_handler</a> () noexcept</td></tr>
-<tr class="memdesc:ga2aab280c9a87214e453f8f598827d13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current handler.  <br /></td></tr>
-<tr class="separator:ga2aab280c9a87214e453f8f598827d13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82b16d9669ee0bc96e631b50517cb32f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ... Args&gt; </td></tr>
+<tr class="memitem:ga82b16d9669ee0bc96e631b50517cb32f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:ga82b16d9669ee0bc96e631b50517cb32f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_array&lt; T &gt;::value, std::shared_ptr&lt; T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga82b16d9669ee0bc96e631b50517cb32f">os::rtos::make_shared</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:ga82b16d9669ee0bc96e631b50517cb32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an object that is owned by a <code>shared_ptr</code> and is allocated using the RTOS system allocator.  <br /></td></tr>
 <tr class="separator:ga82b16d9669ee0bc96e631b50517cb32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaf49323f24a089fbe455e5a7b4678bfa3">operator new</a> (std::size_t bytes)</td></tr>
+<tr class="memdesc:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for a new object instance.  <br /></td></tr>
+<tr class="separator:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1362aa6b80e1d9a0bf85db6ab6953e46"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </td></tr>
 <tr class="memitem:ga1362aa6b80e1d9a0bf85db6ab6953e46"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga1362aa6b80e1d9a0bf85db6ab6953e46">os::rtos::memory::operator!=</a> (const <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T1, L, get_resource &gt; &amp;lhs, const <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T2, L, get_resource &gt; &amp;rhs) noexcept</td></tr>
 <tr class="separator:ga1362aa6b80e1d9a0bf85db6ab6953e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa114b293300994ebcc1ec965b78de8f4"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </td></tr>
 <tr class="memitem:gaa114b293300994ebcc1ec965b78de8f4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaa114b293300994ebcc1ec965b78de8f4">os::rtos::memory::operator==</a> (const <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T1, L, get_resource &gt; &amp;lhs, const <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T2, L, get_resource &gt; &amp;rhs) noexcept</td></tr>
 <tr class="separator:gaa114b293300994ebcc1ec965b78de8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6519f396a0019421c491bcdccab811b3"><td class="memItemLeft" align="right" valign="top">new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga6519f396a0019421c491bcdccab811b3">std::set_new_handler</a> (new_handler handler) noexcept</td></tr>
-<tr class="memdesc:ga6519f396a0019421c491bcdccab811b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the function designated by handler as the current <code>new_handler</code>.  <br /></td></tr>
-<tr class="separator:ga6519f396a0019421c491bcdccab811b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ga099e4657626730e767ff1b87868e1379"><td class="memItemLeft" align="right" valign="top">std::new_handler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga099e4657626730e767ff1b87868e1379">anonymous_namespace{new.cpp}::new_handler_</a></td></tr>
-<tr class="memdesc:ga099e4657626730e767ff1b87868e1379"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current new handler.  <br /></td></tr>
-<tr class="separator:ga099e4657626730e767ff1b87868e1379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae4b7b14b5246bacb54f2a4ae366ccd44"><td class="memItemLeft" align="right" valign="top">const nothrow_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gae4b7b14b5246bacb54f2a4ae366ccd44">std::nothrow</a></td></tr>
-<tr class="separator:gae4b7b14b5246bacb54f2a4ae366ccd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">RTOS System Memory Functions</h2></td></tr>
 <tr class="memitem:ga3c3109d3de2ac643502566774021d5dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga3c3109d3de2ac643502566774021d5dd">os::rtos::memory::malloc_resource</a> (void) noexcept</td></tr>
@@ -315,11 +296,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ga9f80eed0cd0121e9d5c6f501e440fe69"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html">memory_resource</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga9f80eed0cd0121e9d5c6f501e440fe69">os::rtos::memory::get_resource_typed&lt; timer &gt;</a> (void) noexcept</td></tr>
 <tr class="separator:ga9f80eed0cd0121e9d5c6f501e440fe69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">Standard operators</h2></td></tr>
-<tr class="memitem:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#gaf49323f24a089fbe455e5a7b4678bfa3">operator new</a> (std::size_t bytes)</td></tr>
-<tr class="memdesc:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for a new object instance.  <br /></td></tr>
-<tr class="separator:gaf49323f24a089fbe455e5a7b4678bfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Standard Memory Functions</h2></td></tr>
 <tr class="memitem:ga8f397e557371996c5f32b40532e8ca9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-memres.html#ga8f397e557371996c5f32b40532e8ca9b">os::estd::pmr::new_delete_resource</a> (void) noexcept</td></tr>
 <tr class="memdesc:ga8f397e557371996c5f32b40532e8ca9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of a memory manager based on <code>new/delete</code>.  <br /></td></tr>
@@ -335,7 +311,6 @@ Variables</h2></td></tr>
 <tr class="separator:ga984b9c524b3d5f8eaa560e4f98c55928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>C++ API memory management definitions. </p>
 <p>The µOS++ RTOS includes several advanced and flexible memory management features.</p>
 <p>First, it defines a configurable memory manager for the application free store (also known as the "heap").</p>
 <p>Second, it defines a separate memory manager to be used by the RTOS system objects. This separate manager can be configured to use any allocation policy. It may use either a statically or a dynamically allocated area.</p>
@@ -353,7 +328,7 @@ Variables</h2></td></tr>
 </ul>
 <p>The default application memory manager is set in the <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code> function, called by the startup code when running on bare metal.</p>
 <p>On synthetic POSIX platforms the default memory manager is <code><a class="el" href="classos_1_1memory_1_1malloc__memory__resource.html" title="A memory manager that allocates memory via the system std::malloc() and deallocates via std::free().">os::memory::malloc_memory_resource</a></code>, which uses memory from the system free store.</p>
-<p>By default the RTOS system memory manager is the same as the application memory manager, but, for isolation reasons, it is recommended to define a separate memory mananger for the RTOS system objects.</p>
+<p>By default the RTOS system memory manager is the same as the application memory manager, but, for isolation reasons, it is recommended to define a separate memory manager for the RTOS system objects.</p>
 <p>The basic memory management class is <code><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html" title="Memory resource manager (abstract class).">os::rtos::memory::memory_resource</a></code>, which will be standard starting with C++17. The µOS++ version of this class includes several extensions, like out of memory processing and statistics (and this is the reason the class is not defined in <code><a class="el" href="namespaceos_1_1estd.html" title="Embedded std namespace.">os::estd</a></code>). </p>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="gac00e47b1a65850b96de7c9fe0e938da1" name="gac00e47b1a65850b96de7c9fe0e938da1"></a>
@@ -369,8 +344,6 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of allocator used by the system objects. Must be stateless. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type of elements to be allocated. </td></tr>
@@ -378,12 +351,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-types_8h_source.html#l00054">54</a> of file <a class="el" href="os-types_8h_source.html">os-types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-types_8h_source.html#l00053">53</a> of file <a class="el" href="os-types_8h_source.html">os-types.h</a>.</p>
 
 </div>
 </div>
-<a id="ga82d08410dc0d1e8cfb011ad843f871ec" name="ga82d08410dc0d1e8cfb011ad843f871ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga82d08410dc0d1e8cfb011ad843f871ec">&#9670;&#160;</a></span>allocator_typed</h2>
+<a id="gaad5673b9a6f5b280eb5c59657a937174" name="gaad5673b9a6f5b280eb5c59657a937174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad5673b9a6f5b280eb5c59657a937174">&#9670;&#160;</a></span>allocator_typed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,12 +364,10 @@ template&lt;typename T &gt; </div>
 template&lt;typename T , typename U  = T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#ga82d08410dc0d1e8cfb011ad843f871ec">os::rtos::memory::allocator_typed</a> = typedef <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt;T, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1lockable.html">scheduler::lockable</a>, <a class="el" href="group__cmsis-plus-rtos-memres.html#ga1a04af7fafdc21f54317211e60a8e948">get_resource_typed</a>&lt;U&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#gaad5673b9a6f5b280eb5c59657a937174">os::rtos::memory::allocator_typed</a> = typedef <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized.html">allocator_stateless_polymorphic_synchronized</a>&lt; T, <a class="el" href="classos_1_1rtos_1_1scheduler_1_1lockable.html">scheduler::lockable</a>, <a class="el" href="group__cmsis-plus-rtos-memres.html#ga1a04af7fafdc21f54317211e60a8e948">get_resource_typed</a>&lt;U&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of an allocator for objects of type T. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>type of object.</td></tr>
@@ -405,25 +376,23 @@ template&lt;typename T , typename U  = T&gt; </div>
 </dl>
 <p>The allocator uses scheduler critical sections to be thread safe, and the default memory resource associated with the given type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01073">1073</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01074">1074</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
-<a id="ga165e1d42e364dcabcbf01e5322b9f554" name="ga165e1d42e364dcabcbf01e5322b9f554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga165e1d42e364dcabcbf01e5322b9f554">&#9670;&#160;</a></span>out_of_memory_handler_t</h2>
+<a id="ga584da84e822c3f3574ce2e1f14ee0f7e" name="ga584da84e822c3f3574ce2e1f14ee0f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga584da84e822c3f3574ce2e1f14ee0f7e">&#9670;&#160;</a></span>out_of_memory_handler_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#ga165e1d42e364dcabcbf01e5322b9f554">os::rtos::memory::out_of_memory_handler_t</a> = typedef void (*)(void)</td>
+          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#ga584da84e822c3f3574ce2e1f14ee0f7e">os::rtos::memory::out_of_memory_handler_t</a> = typedef void (*) (void)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Type of out of memory handler. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l00142">142</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l00141">141</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -436,12 +405,10 @@ template&lt;typename T , typename U  = T&gt; </div>
 template&lt;typename T , typename U  = T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb">os::rtos::memory::unique_ptr</a> = typedef std::unique_ptr&lt;T, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html">allocator_deleter</a>&lt;<a class="el" href="group__cmsis-plus-rtos-memres.html#ga82d08410dc0d1e8cfb011ad843f871ec">allocator_typed</a>&lt;T, U&gt; &gt;&gt;</td>
+          <td class="memname">using <a class="el" href="group__cmsis-plus-rtos-memres.html#ga4a11d49fdbc2f58aa1c0c5fa56f13ebb">os::rtos::memory::unique_ptr</a> = typedef std::unique_ptr&lt;T, <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__deleter.html">allocator_deleter</a>&lt;<a class="el" href="group__cmsis-plus-rtos-memres.html#gaad5673b9a6f5b280eb5c59657a937174">allocator_typed</a>&lt;T, U&gt; &gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of a RTOS unique pointer to objects of type T. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>type of object.</td></tr>
@@ -450,7 +417,7 @@ template&lt;typename T , typename U  = T&gt; </div>
 </dl>
 <p>The type is based on the standard unique pointer, but with the specific RTOS deleter. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01084">1084</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01086">1086</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +428,7 @@ template&lt;typename T , typename U  = T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename A , typename ... Args&gt; </div>
+template&lt;typename T , typename A , typename... Args&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto os::rtos::memory::allocate_unique </td>
@@ -482,8 +449,6 @@ template&lt;typename T , typename A , typename ... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Function template to allocate a unique pointer. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type of object to be allocated. </td></tr>
@@ -526,13 +491,20 @@ template&lt;typename T , typename A , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the default application memory manager. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance.</dd></dl>
 <p>If not set explicitly by the user, this function will return an instance of <code>malloc_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="memory__resource_source.html#l00184">184</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__resource_source.html#l00181">181</a> of file <a class="el" href="memory__resource_source.html">memory_resource</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>      {</div>
+<div class="line"><span class="lineno">  183</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a>;</div>
+<div class="line"><span class="lineno">  185</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1estd_1_1pmr_html_a367830a029fdc04046d060dd0b53efdc"><div class="ttname"><a href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">os::estd::pmr::default_resource</a></div><div class="ttdeci">memory_resource * default_resource</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">os::estd::pmr::default_resource</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="malloc_8cpp_source.html#l00153">calloc()</a>, <a class="el" href="malloc_8cpp_source.html#l00347">free()</a>, <a class="el" href="malloc_8cpp_source.html#l00084">malloc()</a>, <a class="el" href="new_8cpp_source.html#l00136">operator new()</a>, <a class="el" href="os-main_8cpp_source.html#l00194">os_terminate_goodbye()</a>, and <a class="el" href="malloc_8cpp_source.html#l00254">realloc()</a>.</p>
 
 </div>
 </div>
@@ -559,45 +531,19 @@ template&lt;typename T , typename A , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the default RTOS system memory manager. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance.</dd></dl>
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01133">1133</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01136">1136</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1137</span>      {</div>
+<div class="line"><span class="lineno"> 1138</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1139</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a>;</div>
+<div class="line"><span class="lineno"> 1140</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
-</div>
-</div>
-<a id="ga2aab280c9a87214e453f8f598827d13b" name="ga2aab280c9a87214e453f8f598827d13b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2aab280c9a87214e453f8f598827d13b">&#9670;&#160;</a></span>get_new_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">new_handler std::get_new_handler </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the current handler. </p>
-<dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to user function, or <code>nullptr</code> if not set.</dd></dl>
-<p>The initial <code>new_handler</code> is a null pointer. </p>
-
-<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00108">108</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l03209">os_memory_get_default()</a>, and <a class="el" href="os-main_8cpp_source.html#l00194">os_terminate_goodbye()</a>.</p>
 
 </div>
 </div>
@@ -626,8 +572,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Function template to get a memory resource. </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to current memory resource. </dd></dl>
 
 </div>
@@ -659,7 +603,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01162">1162</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01165">1165</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1167</span>      {</div>
+<div class="line"><span class="lineno"> 1168</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1169</span>        <span class="keywordflow">return</span> resource_condition_variable;</div>
+<div class="line"><span class="lineno"> 1170</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -690,7 +640,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01177">1177</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01180">1180</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1182</span>      {</div>
+<div class="line"><span class="lineno"> 1183</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1184</span>        <span class="keywordflow">return</span> resource_event_flags;</div>
+<div class="line"><span class="lineno"> 1185</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -721,7 +677,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01192">1192</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01195">1195</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1197</span>      {</div>
+<div class="line"><span class="lineno"> 1198</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1199</span>        <span class="keywordflow">return</span> resource_memory_pool;</div>
+<div class="line"><span class="lineno"> 1200</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -752,7 +714,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01207">1207</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01210">1210</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1212</span>      {</div>
+<div class="line"><span class="lineno"> 1213</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1214</span>        <span class="keywordflow">return</span> resource_message_queue;</div>
+<div class="line"><span class="lineno"> 1215</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -783,7 +751,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01222">1222</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01225">1225</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1227</span>      {</div>
+<div class="line"><span class="lineno"> 1228</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1229</span>        <span class="keywordflow">return</span> resource_mutex;</div>
+<div class="line"><span class="lineno"> 1230</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +788,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01237">1237</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01240">1240</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1242</span>      {</div>
+<div class="line"><span class="lineno"> 1243</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1244</span>        <span class="keywordflow">return</span> resource_semaphore;</div>
+<div class="line"><span class="lineno"> 1245</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -845,7 +825,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01147">1147</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01150">1150</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1152</span>      {</div>
+<div class="line"><span class="lineno"> 1153</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1154</span>        <span class="keywordflow">return</span> resource_thread;</div>
+<div class="line"><span class="lineno"> 1155</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -876,7 +862,13 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>If not set explicitly by the user, this function will return an instance of <code>null_memory_resource</code> on bare metal platforms and of <code>malloc_memory_resource</code> on POSIX platforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01252">1252</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01255">1255</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1257</span>      {</div>
+<div class="line"><span class="lineno"> 1258</span>        rtos::memory::init_once_default_resource ();</div>
+<div class="line"><span class="lineno"> 1259</span>        <span class="keywordflow">return</span> resource_timer;</div>
+<div class="line"><span class="lineno"> 1260</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-memres.html#ga206b185012c2bd24b7b4f29b4db5aed6">os::rtos::memory::init_once_default_resource()</a>.</p>
 
 </div>
 </div>
@@ -896,6 +888,8 @@ template&lt;&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="os-memory_8h_source.html#l01136">os::rtos::memory::get_default_resource()</a>, <a class="el" href="os-memory_8h_source.html#l01166">os::rtos::memory::get_resource_typed&lt; condition_variable &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01181">os::rtos::memory::get_resource_typed&lt; event_flags &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01196">os::rtos::memory::get_resource_typed&lt; memory_pool &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01211">os::rtos::memory::get_resource_typed&lt; message_queue &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01226">os::rtos::memory::get_resource_typed&lt; mutex &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01241">os::rtos::memory::get_resource_typed&lt; semaphore &gt;()</a>, <a class="el" href="os-memory_8h_source.html#l01151">os::rtos::memory::get_resource_typed&lt; thread &gt;()</a>, and <a class="el" href="os-memory_8h_source.html#l01256">os::rtos::memory::get_resource_typed&lt; timer &gt;()</a>.</p>
+
 </div>
 </div>
 <a id="ga82b16d9669ee0bc96e631b50517cb32f" name="ga82b16d9669ee0bc96e631b50517cb32f"></a>
@@ -904,7 +898,7 @@ template&lt;&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename ... Args&gt; </div>
+template&lt;typename T , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -923,8 +917,6 @@ template&lt;typename T , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Create an object that is owned by a <code>shared_ptr</code> and is allocated using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>Arguments for the <em>T</em> object's constructor. </td></tr>
@@ -939,8 +931,14 @@ template&lt;typename T , typename ... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os_8h_source.html#l00176">176</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os_8h_source.html#l00177">177</a> of file <a class="el" href="os_8h_source.html">os.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>    {</div>
+<div class="line"><span class="lineno">  179</span>      <span class="comment">// -Wno-psabi to disble the ABI warning.</span></div>
+<div class="line"><span class="lineno">  180</span>      <span class="keyword">typedef</span> <span class="keyword">typename</span> std::remove_const&lt;T&gt;::type T_nc;</div>
+<div class="line"><span class="lineno">  181</span>      <span class="keywordflow">return</span> std::allocate_shared&lt;T&gt; (memory::allocator&lt;T_nc&gt; (),</div>
+<div class="line"><span class="lineno">  182</span>                                      std::forward&lt;Args&gt; (args)...);</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ga3c3109d3de2ac643502566774021d5dd" name="ga3c3109d3de2ac643502566774021d5dd"></a>
@@ -966,14 +964,16 @@ template&lt;typename T , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the address of a memory manager based on POSIX <code><a class="el" href="group__cmsis-plus-rtos-c-memres.html#ga7f27d2fe0e31336c7c67110e9d645b82" title="Allocate a memory block (non-initialised).">malloc()</a></code>. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd>malloc_memory_resource </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00189">189</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00190">190</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>      {</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>*<span class="keyword">&gt;</span> (&amp;malloc_res);</div>
+<div class="line"><span class="lineno">  193</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1estd_1_1pmr_html_a1a9b09f8187dcfee7e91c01b7b0731ba"><div class="ttname"><a href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">os::estd::pmr::memory_resource</a></div><div class="ttdeci">rtos::memory::memory_resource memory_resource</div><div class="ttdef"><b>Definition</b> <a href="memory__resource_source.html#l00047">memory_resource:47</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ga8f397e557371996c5f32b40532e8ca9b" name="ga8f397e557371996c5f32b40532e8ca9b"></a>
@@ -999,8 +999,6 @@ template&lt;typename T , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the address of a memory manager based on <code>new/delete</code>. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance. </dd></dl>
 
@@ -1029,8 +1027,6 @@ template&lt;typename T , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the address of an ineffective memory manager. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to a memory manager object instance. </dd></dl>
 
@@ -1051,8 +1047,6 @@ template&lt;typename T , typename ... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Allocate space for a new object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -1065,7 +1059,52 @@ template&lt;typename T , typename ... Args&gt; </div>
 <dl class="section note"><dt>Note</dt><dd>A C++ program may define a function with this function signature that displaces the default version defined by the C++ standard library.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00143">143</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00136">136</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>{</div>
+<div class="line"><span class="lineno">  138</span>  assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">rtos::interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">if</span> (bytes == 0)</div>
+<div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>      bytes = 1;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>  <span class="comment">// ----- Begin of critical section ------------------------------------------</span></div>
+<div class="line"><span class="lineno">  145</span>  <a class="code hl_class" href="classos_1_1rtos_1_1scheduler_1_1critical__section.html">rtos::scheduler::critical_section</a> scs;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>      <span class="keywordtype">void</span>* mem = <a class="code hl_function" href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">estd::pmr::get_default_resource</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815">allocate</a> (bytes);</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">if</span> (mem != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span><span class="preprocessor">#if defined(OS_TRACE_LIBCPP_OPERATOR_NEW)</span></div>
+<div class="line"><span class="lineno">  154</span>          <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;::%s(%d)=%p\n&quot;</span>, __func__, bytes, mem);</div>
+<div class="line"><span class="lineno">  155</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  156</span>          <span class="keywordflow">return</span> mem;</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>      <span class="comment">// If allocate() fails and there is a new_handler,</span></div>
+<div class="line"><span class="lineno">  160</span>      <span class="comment">// call it to try free up memory.</span></div>
+<div class="line"><span class="lineno">  161</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379">new_handler_</a>)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>          <a class="code hl_variable" href="namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379">new_handler_</a> ();</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="line"><span class="lineno">  165</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>          <a class="code hl_function" href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">estd::__throw_bad_alloc</a> ();</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>  <span class="comment">// ----- End of critical section --------------------------------------------</span></div>
+<div class="line"><span class="lineno">  172</span>}</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory_1_1memory__resource_html_a5284ae746c3d0f71a02acdb9ed69f815"><div class="ttname"><a href="classos_1_1rtos_1_1memory_1_1memory__resource.html#a5284ae746c3d0f71a02acdb9ed69f815">os::rtos::memory::memory_resource::allocate</a></div><div class="ttdeci">void * allocate(std::size_t bytes, std::size_t alignment=max_align)</div><div class="ttdoc">Allocate a memory block.</div><div class="ttdef"><b>Definition</b> <a href="os-memory_8h_source.html#l01290">os-memory.h:1290</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1scheduler_1_1critical__section_html"><div class="ttname"><a href="classos_1_1rtos_1_1scheduler_1_1critical__section.html">os::rtos::scheduler::critical_section</a></div><div class="ttdoc">Scheduler critical section RAII helper.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00170">os-sched.h:171</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-memres_html_ga984b9c524b3d5f8eaa560e4f98c55928"><div class="ttname"><a href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">os::estd::pmr::get_default_resource</a></div><div class="ttdeci">memory_resource * get_default_resource(void) noexcept</div><div class="ttdoc">Get the default application memory manager.</div><div class="ttdef"><b>Definition</b> <a href="memory__resource_source.html#l00181">memory_resource:181</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02new_8cpp_03_html_a099e4657626730e767ff1b87868e1379"><div class="ttname"><a href="namespaceanonymous__namespace_02new_8cpp_03.html#a099e4657626730e767ff1b87868e1379">anonymous_namespace{new.cpp}::new_handler_</a></div><div class="ttdeci">std::new_handler new_handler_</div><div class="ttdoc">The current new handler.</div><div class="ttdef"><b>Definition</b> <a href="new_8cpp_source.html#l00053">new.cpp:53</a></div></div>
+<div class="ttc" id="anamespaceos_1_1estd_html_afdfb11bebd11da95682c3379cd1b48a9"><div class="ttname"><a href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">os::estd::__throw_bad_alloc</a></div><div class="ttdeci">void __throw_bad_alloc(void)</div><div class="ttdef"><b>Definition</b> <a href="memory-resource_8cpp_source.html#l00042">memory-resource.cpp:42</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1interrupts_html_acb9f50dd130d6226b861ffaee191ee5a"><div class="ttname"><a href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">os::rtos::interrupts::in_handler_mode</a></div><div class="ttdeci">bool in_handler_mode(void)</div><div class="ttdoc">Check if the CPU is in handler mode.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01101">os-sched.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="memory-resource_8cpp_source.html#l00042">os::estd::__throw_bad_alloc()</a>, <a class="el" href="os-memory_8h_source.html#l01290">os::rtos::memory::memory_resource::allocate()</a>, <a class="el" href="memory__resource_source.html#l00181">os::estd::pmr::get_default_resource()</a>, <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="new_8cpp_source.html#l00053">anonymous_namespace{new.cpp}::new_handler_</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1140,8 +1179,6 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compare the <code><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html" title="Memory resource manager (abstract class).">memory_resource</a></code> instances for inequality. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lhs</td><td>First instance to compare. </td></tr>
@@ -1157,8 +1194,11 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01468">1468</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01470">1470</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1472</span>      {</div>
+<div class="line"><span class="lineno"> 1473</span>        <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><span class="lineno"> 1474</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="gaa114b293300994ebcc1ec965b78de8f4" name="gaa114b293300994ebcc1ec965b78de8f4"></a>
@@ -1232,8 +1272,6 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compare the <code><a class="el" href="classos_1_1rtos_1_1memory_1_1memory__resource.html" title="Memory resource manager (abstract class).">memory_resource</a></code> instances for equality. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lhs</td><td>First instance to compare. </td></tr>
@@ -1249,8 +1287,11 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01462">1462</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-memory_8h_source.html#l01463">1463</a> of file <a class="el" href="os-memory_8h_source.html">os-memory.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1465</span>      {</div>
+<div class="line"><span class="lineno"> 1466</span>        <span class="keywordflow">return</span> &amp;lhs == &amp;rhs || lhs.is_equal (rhs);</div>
+<div class="line"><span class="lineno"> 1467</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="gacbb72d3cad1991160e1c3c5c8538f6c4" name="gacbb72d3cad1991160e1c3c5c8538f6c4"></a>
@@ -1276,8 +1317,6 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Set the default application memory manager. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">res</td><td>Pointer to new memory manager object instance. </td></tr>
@@ -1286,7 +1325,19 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to previous memory manager object instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00058">58</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00057">57</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>      {</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;estd::pmr::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a>;</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a> = res;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">   65</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">os::estd::pmr::default_resource</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="initialise-free-store_8cpp_source.html#l00082">os_startup_initialize_free_store()</a>.</p>
 
 </div>
 </div>
@@ -1313,8 +1364,6 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Set the default RTOS system memory manager. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">res</td><td>Pointer to new memory manager object instance. </td></tr>
@@ -1325,46 +1374,19 @@ template&lt;typename T1 , typename T2 , typename L , F get_resource&gt; </div>
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager handling the free RAM.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This function is not thread safe. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00206">206</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00207">207</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>      {</div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a>;</div>
+<div class="line"><span class="lineno">  212</span>        <a class="code hl_variable" href="namespaceos_1_1estd_1_1pmr.html#a367830a029fdc04046d060dd0b53efdc">default_resource</a> = res;</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  215</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
-</div>
-</div>
-<a id="ga6519f396a0019421c491bcdccab811b3" name="ga6519f396a0019421c491bcdccab811b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6519f396a0019421c491bcdccab811b3">&#9670;&#160;</a></span>set_new_handler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">new_handler std::set_new_handler </td>
-          <td>(</td>
-          <td class="paramtype">new_handler&#160;</td>
-          <td class="paramname"><em>handler</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Establishes the function designated by handler as the current <code>new_handler</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handler</td><td>Pointer to user function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The previous handler.</dd></dl>
-<p>This handler is invoked when the standard <a class="el" href="group__cmsis-plus-rtos-memres.html#gaf49323f24a089fbe455e5a7b4678bfa3" title="Allocate space for a new object instance.">operator new()</a> detect an out of memory condition, to give a chance to the application process it properly. If the application can arrange for more memory to be used for allocation, this function should return and the allocation process is retried. If not, this function should gracefully shut down and restart.</p>
-<p>The initial <code>new_handler</code> is a null pointer. </p>
-
-<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00086">86</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="initialise-free-store_8cpp_source.html#l00082">os_startup_initialize_free_store()</a>.</p>
 
 </div>
 </div>
@@ -1393,8 +1415,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Function template to set a memory resource. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">res</td><td>Pointer to memory resource. </td></tr>
@@ -1432,7 +1452,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00243">243</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00244">244</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>      {</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_condition_variable;</div>
+<div class="line"><span class="lineno">  250</span>        resource_condition_variable = res;</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  253</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1493,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00261">261</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00262">262</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>      {</div>
+<div class="line"><span class="lineno">  265</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_event_flags;</div>
+<div class="line"><span class="lineno">  268</span>        resource_event_flags = res;</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  271</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1494,7 +1534,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00279">279</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00280">280</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>      {</div>
+<div class="line"><span class="lineno">  283</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_memory_pool;</div>
+<div class="line"><span class="lineno">  286</span>        resource_memory_pool = res;</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  289</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1575,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00297">297</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00298">298</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>      {</div>
+<div class="line"><span class="lineno">  301</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_message_queue;</div>
+<div class="line"><span class="lineno">  304</span>        resource_message_queue = res;</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  307</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1556,7 +1616,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00315">315</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00316">316</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>      {</div>
+<div class="line"><span class="lineno">  319</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_mutex;</div>
+<div class="line"><span class="lineno">  322</span>        resource_mutex = res;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  325</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1657,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00333">333</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00334">334</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  336</span>      {</div>
+<div class="line"><span class="lineno">  337</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_semaphore;</div>
+<div class="line"><span class="lineno">  340</span>        resource_semaphore = res;</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  343</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1618,7 +1698,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00225">225</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00226">226</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>      {</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_thread;</div>
+<div class="line"><span class="lineno">  232</span>        resource_thread = res;</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  235</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1649,45 +1739,17 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <p>On bare metal applications, this function is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505" title="Initialise free store.">os_startup_initialize_free_store()</a></code>, during the system startup, with a memory manager specific to this object type. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00351">351</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ga099e4657626730e767ff1b87868e1379" name="ga099e4657626730e767ff1b87868e1379"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga099e4657626730e767ff1b87868e1379">&#9670;&#160;</a></span>new_handler_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::new_handler anonymous_namespace{new.cpp}::new_handler_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The current new handler. </p>
-<p>The initial <code>new_handler</code> is a null pointer, initialised as part of the .bss section. </p>
-
-<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00054">54</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
-
-</div>
-</div>
-<a id="gae4b7b14b5246bacb54f2a4ae366ccd44" name="gae4b7b14b5246bacb54f2a4ae366ccd44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae4b7b14b5246bacb54f2a4ae366ccd44">&#9670;&#160;</a></span>nothrow</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const nothrow_t std::nothrow</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= nothrow_t</div>
-<div class="line">    { }</div>
+<p class="definition">Definition at line <a class="el" href="os-memory_8cpp_source.html#l00352">352</a> of file <a class="el" href="os-memory_8cpp_source.html">os-memory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>      {</div>
+<div class="line"><span class="lineno">  355</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;rtos::memory::%s(%p) \n&quot;</span>, __func__, res);</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>        <a class="code hl_typedef" href="namespaceos_1_1estd_1_1pmr.html#a1a9b09f8187dcfee7e91c01b7b0731ba">memory_resource</a>* old = resource_timer;</div>
+<div class="line"><span class="lineno">  358</span>        resource_timer = res;</div>
+<div class="line"><span class="lineno">  359</span> </div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">return</span> old;</div>
+<div class="line"><span class="lineno">  361</span>      }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="new_8cpp_source.html#l00066">66</a> of file <a class="el" href="new_8cpp_source.html">new.cpp</a>.</p>
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>

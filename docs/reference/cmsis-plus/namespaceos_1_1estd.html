@@ -173,8 +173,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga363a215f669d5e9b210bd61701f24241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Embedded <b>std</b> namespace. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"></div><h2 class="groupheader">Function Documentation</h2>
 <a id="afdfb11bebd11da95682c3379cd1b48a9" name="afdfb11bebd11da95682c3379cd1b48a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdfb11bebd11da95682c3379cd1b48a9">&#9670;&#160;</a></span>__throw_bad_alloc()</h2>
 
@@ -191,7 +190,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00043">43</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory-resource_8cpp_source.html#l00042">42</a> of file <a class="el" href="memory-resource_8cpp_source.html">memory-resource.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span><span class="preprocessor">#if defined(__EXCEPTIONS)</span></div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">throw</span> std::bad_alloc ();</div>
+<div class="line"><span class="lineno">   46</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   47</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;bad_alloc()\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span>      std::abort ();</div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="block-pool_8h_source.html#l00515">os::memory::block_pool_typed_allocated&lt; T, A &gt;::block_pool_typed_allocated()</a>, <a class="el" href="first-fit-top_8h_source.html#l00532">os::memory::first_fit_top_allocated&lt; A &gt;::first_fit_top_allocated()</a>, <a class="el" href="lifo_8h_source.html#l00410">os::memory::lifo_allocated&lt; A &gt;::lifo_allocated()</a>, <a class="el" href="null_8h_source.html#l00152">os::memory::null_memory_resource::do_allocate()</a>, <a class="el" href="new_8cpp_source.html#l00136">operator new()</a>, <a class="el" href="initialise-free-store_8cpp_source.html#l00299">os_rtos_application_out_of_memory_hook()</a>, and <a class="el" href="initialise-free-store_8cpp_source.html#l00322">os_rtos_system_out_of_memory_hook()</a>.</p>
 
 </div>
 </div>
@@ -222,6 +234,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="system-error_8cpp_source.html#l00124">124</a> of file <a class="el" href="system-error_8cpp_source.html">system-error.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span><span class="preprocessor">#if defined(__EXCEPTIONS)</span></div>
+<div class="line"><span class="lineno">  127</span>      <span class="comment">// error: copying parameter of type &#39;os::estd::cmsis_error_category&#39; when</span></div>
+<div class="line"><span class="lineno">  128</span>      <span class="comment">// binding a reference to a temporary would invoke a deleted constructor</span></div>
+<div class="line"><span class="lineno">  129</span>      <span class="comment">// in C++98 [-Werror,-Wc++98-compat-bind-to-temporary-copy]</span></div>
+<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">throw</span> std::system_error (std::error_code (ev, cmsis_error_category ()),</div>
+<div class="line"><span class="lineno">  131</span>                               what_arg);</div>
+<div class="line"><span class="lineno">  132</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  133</span>      <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;system_error(%d, %s)\n&quot;</span>, ev, what_arg);</div>
+<div class="line"><span class="lineno">  134</span>      std::abort ();</div>
+<div class="line"><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="ttc" id="atrace_8h_html_a6a6492d4a967fc866e4825f6146cec37"><div class="ttname"><a href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a></div><div class="ttdeci">int trace_printf(const char *format,...)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="system-error_8cpp_source.html#l00124">__throw_cmsis_error()</a>, and <a class="el" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="system-error_8cpp_source.html#l00124">__throw_cmsis_error()</a>, <a class="el" href="mutex_8cpp_source.html#l00029">os::estd::mutex::lock()</a>, <a class="el" href="mutex_8cpp_source.html#l00074">os::estd::recursive_mutex::lock()</a>, <a class="el" href="condition-variable_8cpp_source.html#l00042">os::estd::condition_variable::notify_all()</a>, <a class="el" href="condition-variable_8cpp_source.html#l00029">os::estd::condition_variable::notify_one()</a>, <a class="el" href="mutex_8cpp_source.html#l00041">os::estd::mutex::try_lock()</a>, <a class="el" href="mutex_8cpp_source.html#l00086">os::estd::recursive_mutex::try_lock()</a>, <a class="el" href="mutex_8cpp_source.html#l00060">os::estd::mutex::unlock()</a>, <a class="el" href="mutex_8cpp_source.html#l00105">os::estd::recursive_mutex::unlock()</a>, and <a class="el" href="condition-variable_8cpp_source.html#l00055">os::estd::condition_variable::wait()</a>.</p>
 
 </div>
 </div>
@@ -251,7 +280,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="system-error_8cpp_source.html#l00111">111</a> of file <a class="el" href="system-error_8cpp_source.html">system-error.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="system-error_8cpp_source.html#l00109">109</a> of file <a class="el" href="system-error_8cpp_source.html">system-error.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span><span class="preprocessor">#if defined(__EXCEPTIONS)</span></div>
+<div class="line"><span class="lineno">  112</span>      <span class="comment">// error: copying parameter of type &#39;os::estd::system_error_category&#39;</span></div>
+<div class="line"><span class="lineno">  113</span>      <span class="comment">// when binding a reference to a temporary would invoke a deleted</span></div>
+<div class="line"><span class="lineno">  114</span>      <span class="comment">// constructor in C++98 [-Werror,-Wc++98-compat-bind-to-temporary-copy]</span></div>
+<div class="line"><span class="lineno">  115</span>      <span class="keywordflow">throw</span> std::system_error (std::error_code (ev, system_error_category ()),</div>
+<div class="line"><span class="lineno">  116</span>                               what_arg);</div>
+<div class="line"><span class="lineno">  117</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  118</span>      <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;system_error(%d, %s)\n&quot;</span>, ev, what_arg);</div>
+<div class="line"><span class="lineno">  119</span>      std::abort ();</div>
+<div class="line"><span class="lineno">  120</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="system-error_8cpp_source.html#l00109">__throw_system_error()</a>, and <a class="el" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="system-error_8cpp_source.html#l00109">__throw_system_error()</a>, <a class="el" href="mutex_source.html#l00215">os::estd::timed_mutex::try_lock_for()</a>, <a class="el" href="mutex_source.html#l00269">os::estd::recursive_timed_mutex::try_lock_for()</a>, and <a class="el" href="condition-variable_8cpp_source.html#l00055">os::estd::condition_variable::wait()</a>.</p>
 
 </div>
 </div>

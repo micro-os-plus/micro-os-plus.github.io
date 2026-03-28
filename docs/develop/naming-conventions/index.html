@@ -242,7 +242,7 @@
 <h1 class="page-title">C/C++ naming conventions</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Sat Jul 22 11:30:02 2023 UTC.</td>
+    <td id="last-modified">Last modified on Sat Mar 28 11:34:05 2026 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/web-jekyll/edit/master/pages/develop/naming-conventions.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -772,6 +772,210 @@ the presence of parenthesis is a clear sign of an array.</p>
 </code></pre></div></div>
 
 <p>If possible, use the full unit names.</p>
+
+<h2 id="modern-c-attributes">Modern C++ attributes</h2>
+
+<p>Starting with C++11, the language intorduced various attribute specifiers</p>
+
+<h3 id="standard-c-attributes-both-gcc-and-clang">Standard C++ attributes (both GCC and Clang)</h3>
+
+<p>Defined by the C++ standard, supported by both:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Since</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[noreturn]]</code></td>
+      <td>C++11</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[carries_dependency]]</code></td>
+      <td>C++11</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">[[deprecated]]</code> / <code class="language-plaintext highlighter-rouge">[[deprecated("msg")]]</code>
+</td>
+      <td>C++14</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[fallthrough]]</code></td>
+      <td>C++17</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">[[nodiscard]]</code> / <code class="language-plaintext highlighter-rouge">[[nodiscard("msg")]]</code>
+</td>
+      <td>C++17 / C++20</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[maybe_unused]]</code></td>
+      <td>C++17</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">[[likely]]</code> / <code class="language-plaintext highlighter-rouge">[[unlikely]]</code>
+</td>
+      <td>C++20</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[no_unique_address]]</code></td>
+      <td>C++20</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">[[assume(expr)]]</code></td>
+      <td>C++23</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Explanations:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[noreturn]]</code> — function never returns (e.g. calls <code class="language-plaintext highlighter-rouge">exit()</code> or <code class="language-plaintext highlighter-rouge">abort()</code>)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[carries_dependency]]</code> — propagates memory-order dependency into/out of a function (used with <code class="language-plaintext highlighter-rouge">std::memory_order_consume</code>)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[deprecated]]</code> / <code class="language-plaintext highlighter-rouge">[[deprecated("msg")]]</code> — marks a declaration as obsolete; compiler warns on use</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[fallthrough]]</code> — suppresses warning when a <code class="language-plaintext highlighter-rouge">switch</code> case intentionally falls through to the next</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[nodiscard]]</code> / <code class="language-plaintext highlighter-rouge">[[nodiscard("msg")]]</code> — warns if the return value is discarded by the caller</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[maybe_unused]]</code> — suppresses unused-variable/function/parameter warnings</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[likely]]</code> / <code class="language-plaintext highlighter-rouge">[[unlikely]]</code> — hints to the optimiser which branch of an <code class="language-plaintext highlighter-rouge">if</code>/<code class="language-plaintext highlighter-rouge">switch</code> is more probable</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[no_unique_address]]</code> — allows an empty member to share the address of another member (saves space)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[assume(expr)]]</code> — tells the optimiser the expression is always true; undefined behaviour if it is not</li>
+</ul>
+
+<h3 id="gcc-specific-__attribute__-syntax">GCC-specific (<code class="language-plaintext highlighter-rouge">__attribute__((...))</code> syntax)</h3>
+
+<p>Notable ones relevant to embedded/systems code:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((packed))</code> — suppress padding</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((aligned(n)))</code> — force alignment</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((weak))</code> — weak symbol linkage</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((visibility("default|hidden")))</code> — symbol visibility</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((section("name")))</code> — place in named section</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((constructor))</code> / <code class="language-plaintext highlighter-rouge">__attribute__((destructor))</code> — run at load/unload</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((format(printf, n, m)))</code> — printf-style format checking</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((noinline))</code> / <code class="language-plaintext highlighter-rouge">__attribute__((always_inline))</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((pure))</code> / <code class="language-plaintext highlighter-rouge">__attribute__((const))</code> — optimisation hints</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((interrupt))</code> — ISR functions (ARM/AVR)</li>
+</ul>
+
+<h3 id="clang-specific-__attribute__-or-clang">Clang-specific (<code class="language-plaintext highlighter-rouge">__attribute__((...))</code> or <code class="language-plaintext highlighter-rouge">[[clang::...]]</code>)</h3>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[clang::nodiscard]]</code> — pre-C++17 equivalent</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[clang::trivial_abi]]</code> — allow trivial ABI for non-trivial types</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">[[clang::no_sanitize("address")]]</code> — suppress sanitiser for a function</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((objc_...))</code> — Objective-C interop</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">__attribute__((annotate("string")))</code> — arbitrary annotations for static analysis</li>
+</ul>
+
+<p>Clang also accepts most GCC <code class="language-plaintext highlighter-rouge">__attribute__</code> extensions for compatibility. The overlapping set (<code class="language-plaintext highlighter-rouge">packed</code>, <code class="language-plaintext highlighter-rouge">aligned</code>, <code class="language-plaintext highlighter-rouge">weak</code>, <code class="language-plaintext highlighter-rouge">visibility</code>, <code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">format</code>, <code class="language-plaintext highlighter-rouge">noinline</code>, <code class="language-plaintext highlighter-rouge">always_inline</code>, <code class="language-plaintext highlighter-rouge">pure</code>, <code class="language-plaintext highlighter-rouge">const</code>) is available in both.</p>
+
+<h2 id="headers">Headers</h2>
+
+<p>The Google C++ Style Guide (the most widely cited convention) recommends:</p>
+
+<ul>
+  <li>
+<strong>The configuration header</strong> (<code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/config.h&gt;</code>, conditionally included based on <code class="language-plaintext highlighter-rouge">MICRO_OS_PLUS_INCLUDE_CONFIG_H</code>)</li>
+  <li>Blank line</li>
+  <li>
+<strong>The related header</strong> (the <code class="language-plaintext highlighter-rouge">.h</code> for this <code class="language-plaintext highlighter-rouge">.cpp</code> file, if applicable)</li>
+  <li>Blank line</li>
+  <li>
+<strong>Project headers</strong> (your own <code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/...&gt;</code>)</li>
+  <li>Blank line</li>
+  <li><strong>Third-party library headers</strong></li>
+  <li>Blank line</li>
+  <li>
+<strong>System/standard headers</strong> (<code class="language-plaintext highlighter-rouge">&lt;cstddef&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;vector&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;stdio.h&gt;</code>, etc.)</li>
+</ul>
+
+<p>The rationale is <strong>dependency hygiene</strong>: by putting your own headers first, you force them to be self-sufficient — if a project header accidentally relies on a system header being included before it, the compiler will catch it immediately rather than silently working due to transitive inclusion from a system header.</p>
+
+<p>The reverse order (system first, project last) is also common in practice and avoids macro pollution from project headers affecting system headers, which can be a concern on some platforms. LLVM uses this ordering.</p>
+
+<p>Both are defensible; the key rule that is universally agreed upon is: <strong>the related header always comes first</strong> in a <code class="language-plaintext highlighter-rouge">.cpp</code> file, and <strong>each group is separated by a blank line</strong> so that auto-formatters (like <code class="language-plaintext highlighter-rouge">clang-format</code> with <code class="language-plaintext highlighter-rouge">SortIncludes</code>) keep groups stable rather than sorting everything together.</p>
+
+<p>Example:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#if defined(MICRO_OS_PLUS_INCLUDE_CONFIG_H)
+#include &lt;micro-os-plus/config.h&gt;
+#endif // MICRO_OS_PLUS_INCLUDE_CONFIG_H
+</span>
+<span class="cp">#include &lt;micro-os-plus/micro-test-plus.h&gt;
+</span>
+<span class="cp">#include &lt;time.h&gt;
+</span></code></pre></div></div>
+
+<h3 id="inline-single-line-methods">Inline single line methods</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nl">public:</span>
+    <span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span> <span class="k">constexpr</span> <span class="kt">size_t</span>
+    <span class="nf">index</span> <span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="n">index_</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">constexpr</span> <span class="kt">size_t</span>
+    <span class="nf">increment_index</span> <span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="o">++</span><span class="n">index_</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">protected</span><span class="o">:</span>
+    <span class="cm">/**
+     * @brief The test case index, counting from 1.
+     */</span>
+    <span class="kt">size_t</span> <span class="n">index_</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="inline-headers">Inline headers</h3>
+
+<p>Template methods longer than one line should be moved to a separate file, located in an <code class="language-plaintext highlighter-rouge">inlines</code> sub-folder, and possibly using the <code class="language-plaintext highlighter-rouge">-inlines.h</code> prefix to make them easier to distinguish in a multi-tab editor.</p>
+
+<p>All these inline headers should be included at the end of the application header.</p>
+
+<p>Example:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ============================================================================</span>
+<span class="c1">// ===== Inlines &amp; templates implementations ==================================</span>
+
+<span class="c1">// All inlines are included **after** all declarations.</span>
+<span class="cp">#include "micro-test-plus/inlines/literals-inlines.h"
+</span><span class="p">...</span>
+</code></pre></div></div>
 
 <h2 id="configuration-macros">Configuration macros</h2>
 

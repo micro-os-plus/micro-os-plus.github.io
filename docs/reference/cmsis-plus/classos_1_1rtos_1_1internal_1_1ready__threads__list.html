@@ -187,9 +187,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a12d3d03f037f3d4b8a14517069784bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Priority ordered list of threads waiting too run. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00465">465</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00458">458</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7a43ec2c9e7fe4e20980354b84f772c" name="ab7a43ec2c9e7fe4e20980354b84f772c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7a43ec2c9e7fe4e20980354b84f772c">&#9670;&#160;</a></span>ready_threads_list()</h2>
@@ -213,12 +212,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a list of waiting threads. </p>
 <p>The initial list status is empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00906">906</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00895">895</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  896</span>      {</div>
+<div class="line"><span class="lineno">  897</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ada010cd4f58ffd552ca97165c84ee588" name="ada010cd4f58ffd552ca97165c84ee588"></a>
@@ -244,10 +243,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destruct the list. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00911">911</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00899">899</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  900</span>      {</div>
+<div class="line"><span class="lineno">  901</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -274,13 +273,28 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Clear the list. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>Initialise the mandatory node with links to itself. </p>
 
-<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00105">105</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00108">108</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  111</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  112</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  113</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  115</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a5213db5fb707043b394a2857465e3e08">next</a> (<span class="keyword">const_cast&lt;</span>static_double_list_links*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>));</div>
+<div class="line"><span class="lineno">  116</span>      <a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a8495800ed1dd533b412381f15c7eec12">prev</a> (<span class="keyword">const_cast&lt;</span>static_double_list_links*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>));</div>
+<div class="line"><span class="lineno">  117</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_a5213db5fb707043b394a2857465e3e08"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#a5213db5fb707043b394a2857465e3e08">os::utils::static_double_list_links::next</a></div><div class="ttdeci">static_double_list_links * next(void) const</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00835">lists.h:835</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list__links_html_a8495800ed1dd533b412381f15c7eec12"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list__links.html#a8495800ed1dd533b412381f15c7eec12">os::utils::static_double_list_links::prev</a></div><div class="ttdeci">static_double_list_links * prev(void) const</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00841">lists.h:841</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list_html_a12d3d03f037f3d4b8a14517069784bec"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">os::utils::static_double_list::head_</a></div><div class="ttdeci">static_double_list_links head_</div><div class="ttdoc">A list node used to point to head and tail.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l00473">lists.h:473</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00473">os::utils::static_double_list::head_</a>, <a class="el" href="lists_8h_source.html#l00835">os::utils::static_double_list_links::next()</a>, and <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lists_8cpp_source.html#l00153">os::utils::double_list::double_list()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>.</p>
 
 </div>
 </div>
@@ -307,8 +321,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the list is empty. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -318,7 +330,15 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l01028">1028</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l01001">1001</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1002</span>    {</div>
+<div class="line"><span class="lineno"> 1003</span>      <span class="comment">// If it points to itself, it is empty.</span></div>
+<div class="line"><span class="lineno"> 1004</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a5213db5fb707043b394a2857465e3e08">next</a> () == &amp;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>) || (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a5213db5fb707043b394a2857465e3e08">next</a> () == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno"> 1005</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00473">os::utils::static_double_list::head_</a>, and <a class="el" href="lists_8h_source.html#l00835">os::utils::static_double_list_links::next()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lists_8cpp_source.html#l00166">os::utils::double_list::~double_list()</a>, <a class="el" href="os-lists_8cpp_source.html#l00490">os::rtos::internal::clock_timestamps_list::check_timestamp()</a>, <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00194">os::rtos::internal::waiting_threads_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00266">os::rtos::internal::waiting_threads_list::resume_one()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00126">unlink_head()</a>.</p>
 
 </div>
 </div>
@@ -345,12 +365,16 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get list head. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted pointer to head node. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00916">916</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8h_source.html#l00904">904</a> of file <a class="el" href="os-lists_8h_source.html">os-lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  905</span>      {</div>
+<div class="line"><span class="lineno">  906</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">volatile </span>waiting_thread_node*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  907</span>            static_double_list::head ());</div>
+<div class="line"><span class="lineno">  908</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00126">unlink_head()</a>.</p>
 
 </div>
 </div>
@@ -387,8 +411,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Insert a new node after existing node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>Reference to node to insert. </td></tr>
@@ -398,7 +420,35 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00118">118</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8cpp_source.html#l00121">121</a> of file <a class="el" href="lists_8cpp_source.html">lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span><span class="preprocessor">#if defined(OS_TRACE_UTILS_LISTS)</span></div>
+<div class="line"><span class="lineno">  125</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() n=%p after %p\n&quot;</span>, __func__, &amp;node, after);</div>
+<div class="line"><span class="lineno">  126</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>      <span class="comment">// Unlinked nodes must have both pointers null.</span></div>
+<div class="line"><span class="lineno">  129</span>      <span class="comment">// If not, most probably the node was already linked.</span></div>
+<div class="line"><span class="lineno">  130</span>      <span class="comment">// Or the memory is corrupted.</span></div>
+<div class="line"><span class="lineno">  131</span>      assert (node.prev () == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  132</span>      assert (node.next () == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>      <span class="comment">// The `after` node must be linked. Only the `next` pointer is</span></div>
+<div class="line"><span class="lineno">  135</span>      <span class="comment">// tested, since only it is used.</span></div>
+<div class="line"><span class="lineno">  136</span>      assert (after-&gt;next () != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>      <span class="comment">// Make the new node point to its neighbours.</span></div>
+<div class="line"><span class="lineno">  139</span>      node.prev (after);</div>
+<div class="line"><span class="lineno">  140</span>      node.next (after-&gt;next ());</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>      <span class="comment">// Make the neighbours point to the node. The order is important.</span></div>
+<div class="line"><span class="lineno">  143</span>      after-&gt;next ()-&gt;prev (&amp;node);</div>
+<div class="line"><span class="lineno">  144</span>      after-&gt;next (&amp;node);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00835">os::utils::static_double_list_links::next()</a>, <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00037">os::rtos::internal::thread_children_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00194">os::rtos::internal::waiting_threads_list::link()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>.</p>
 
 </div>
 </div>
@@ -417,8 +467,6 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Add a new thread node to the list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>Reference to a list node. </td></tr>
@@ -427,7 +475,88 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00048">48</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00047">47</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>      {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a8495800ed1dd533b412381f15c7eec12">prev</a> () == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   50</span>          {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="comment">// If this is the first time, initialise the list to empty.</span></div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_function" href="classos_1_1utils_1_1static__double__list.html#a396a893431a46cf5541a744931957172">clear</a> ();</div>
+<div class="line"><span class="lineno">   53</span>          }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_typedef" href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">thread::priority_t</a> prio = node.thread_-&gt;priority ();</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>        waiting_thread_node* after = <span class="keyword">static_cast&lt;</span>waiting_thread_node*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keyword">const_cast&lt;</span>utils::static_double_list_links*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1utils_1_1static__double__list.html#a8995c948656b19b0aa4cfcdfc931d76d">tail</a> ()));</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1utils_1_1static__double__list.html#a3552b923d0b2e8716566550ffcc44a2e">empty</a> ())</div>
+<div class="line"><span class="lineno">   61</span>          {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="comment">// Insert at the end of the list.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS)</span></div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;ready %s() empty +%u\n&quot;</span>, __func__, prio);</div>
+<div class="line"><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   66</span>          }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prio &lt;= after-&gt;thread_-&gt;priority ())</div>
+<div class="line"><span class="lineno">   68</span>          {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="comment">// Insert at the end of the list.</span></div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS)</span></div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;ready %s() back %u +%u \n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">   72</span>                           after-&gt;thread_-&gt;priority (), prio);</div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   74</span>          }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (prio &gt; <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afad9bc69ecef5371316259ae20f631db">head</a> ()-&gt;thread_-&gt;priority ())</div>
+<div class="line"><span class="lineno">   76</span>          {</div>
+<div class="line"><span class="lineno">   77</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   78</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">   79</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">   80</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   82</span>            <span class="comment">// Insert at the beginning of the list.</span></div>
+<div class="line"><span class="lineno">   83</span>            after = <span class="keyword">static_cast&lt;</span>waiting_thread_node*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keyword">const_cast&lt;</span>utils::static_double_list_links*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>));</div>
+<div class="line"><span class="lineno">   85</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS)</span></div>
+<div class="line"><span class="lineno">   88</span>            <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;ready %s() front +%u %u \n&quot;</span>, __func__, prio,</div>
+<div class="line"><span class="lineno">   89</span>                           <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afad9bc69ecef5371316259ae20f631db">head</a> ()-&gt;thread_-&gt;priority ());</div>
+<div class="line"><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   91</span>          }</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   93</span>          {</div>
+<div class="line"><span class="lineno">   94</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">   97</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   99</span>            <span class="comment">// Insert in the middle of the list.</span></div>
+<div class="line"><span class="lineno">  100</span>            <span class="comment">// The loop is guaranteed to terminate, and not hit the head.</span></div>
+<div class="line"><span class="lineno">  101</span>            <span class="comment">// The weight is relatively small, priority() is not heavy.</span></div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">while</span> (prio &gt; after-&gt;thread_-&gt;priority ())</div>
+<div class="line"><span class="lineno">  103</span>              {</div>
+<div class="line"><span class="lineno">  104</span>                after = <span class="keyword">static_cast&lt;</span>waiting_thread_node*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  105</span>                    <span class="keyword">const_cast&lt;</span>utils::static_double_list_links*<span class="keyword">&gt;</span> (</div>
+<div class="line"><span class="lineno">  106</span>                        after-&gt;prev ()));</div>
+<div class="line"><span class="lineno">  107</span>              }</div>
+<div class="line"><span class="lineno">  108</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS)</span></div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;ready %s() middle %u +%u \n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">  112</span>                           after-&gt;thread_-&gt;priority (), prio);</div>
+<div class="line"><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  114</span>          }</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="classos_1_1utils_1_1static__double__list.html#a14f1de97ead702b9e0918068981eb2a3">insert_after</a> (node, after);</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>        node.thread_-&gt;state_ = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">thread::state::ready</a>;</div>
+<div class="line"><span class="lineno">  119</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1ready__threads__list_html_afad9bc69ecef5371316259ae20f631db"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afad9bc69ecef5371316259ae20f631db">os::rtos::internal::ready_threads_list::head</a></div><div class="ttdeci">volatile waiting_thread_node * head(void) const</div><div class="ttdoc">Get list head.</div><div class="ttdef"><b>Definition</b> <a href="os-lists_8h_source.html#l00904">os-lists.h:904</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list_html_a14f1de97ead702b9e0918068981eb2a3"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list.html#a14f1de97ead702b9e0918068981eb2a3">os::utils::static_double_list::insert_after</a></div><div class="ttdeci">void insert_after(static_double_list_links &amp;node, static_double_list_links *after)</div><div class="ttdoc">Insert a new node after existing node.</div><div class="ttdef"><b>Definition</b> <a href="lists_8cpp_source.html#l00121">lists.cpp:121</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list_html_a3552b923d0b2e8716566550ffcc44a2e"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list.html#a3552b923d0b2e8716566550ffcc44a2e">os::utils::static_double_list::empty</a></div><div class="ttdeci">bool empty(void) const</div><div class="ttdoc">Check if the list is empty.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l01001">lists.h:1001</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list_html_a396a893431a46cf5541a744931957172"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list.html#a396a893431a46cf5541a744931957172">os::utils::static_double_list::clear</a></div><div class="ttdeci">void clear(void)</div><div class="ttdoc">Clear the list.</div><div class="ttdef"><b>Definition</b> <a href="lists_8cpp_source.html#l00108">lists.cpp:108</a></div></div>
+<div class="ttc" id="aclassos_1_1utils_1_1static__double__list_html_a8995c948656b19b0aa4cfcdfc931d76d"><div class="ttname"><a href="classos_1_1utils_1_1static__double__list.html#a8995c948656b19b0aa4cfcdfc931d76d">os::utils::static_double_list::tail</a></div><div class="ttdeci">volatile static_double_list_links * tail(void) const</div><div class="ttdoc">Get the list tail.</div><div class="ttdef"><b>Definition</b> <a href="lists_8h_source.html#l01014">lists.h:1014</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-thread_html_gaa5d09b05379b4799f126477d0ac29c36"><div class="ttname"><a href="group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36">os::rtos::thread::priority_t</a></div><div class="ttdeci">uint8_t priority_t</div><div class="ttdoc">Type of variables holding thread priorities.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00271">os-thread.h:271</a></div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfae1f7262514170b9e93e077a0e8e73033">os::rtos::thread::state::ready</a></div><div class="ttdeci">@ ready</div><div class="ttdoc">Present in the READY list and competing for CPU.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00382">os-thread.h:382</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8cpp_source.html#l00108">os::utils::static_double_list::clear()</a>, <a class="el" href="lists_8h_source.html#l01001">os::utils::static_double_list::empty()</a>, <a class="el" href="os-lists_8h_source.html#l00904">head()</a>, <a class="el" href="lists_8h_source.html#l00473">os::utils::static_double_list::head_</a>, <a class="el" href="lists_8cpp_source.html#l00121">os::utils::static_double_list::insert_after()</a>, <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="os-thread_8cpp_source.html#l00734">os::rtos::thread::priority()</a>, <a class="el" href="os-thread_8h_source.html#l00382">os::rtos::thread::state::ready</a>, <a class="el" href="lists_8h_source.html#l01014">os::utils::static_double_list::tail()</a>, and <a class="el" href="os-lists_8h_source.html#l00107">os::rtos::internal::waiting_thread_node::thread_</a>.</p>
 
 </div>
 </div>
@@ -454,12 +583,17 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the list tail. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to tail node. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l01041">1041</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l01014">1014</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1015</span>    {</div>
+<div class="line"><span class="lineno"> 1016</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a8495800ed1dd533b412381f15c7eec12">prev</a> ());</div>
+<div class="line"><span class="lineno"> 1017</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00473">os::utils::static_double_list::head_</a>, and <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-lists_8cpp_source.html#l00037">os::rtos::internal::thread_children_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00194">os::rtos::internal::waiting_threads_list::link()</a>, and <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>.</p>
 
 </div>
 </div>
@@ -486,8 +620,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the list is uninitialised. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -497,7 +629,13 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l01021">1021</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00994">994</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  995</span>    {</div>
+<div class="line"><span class="lineno">  996</span>      <span class="comment">// If it points to nowhere, it is not yet initialised.</span></div>
+<div class="line"><span class="lineno">  997</span>      <span class="keywordflow">return</span> (<a class="code hl_variable" href="classos_1_1utils_1_1static__double__list.html#a12d3d03f037f3d4b8a14517069784bec">head_</a>.<a class="code hl_function" href="classos_1_1utils_1_1static__double__list__links.html#a8495800ed1dd533b412381f15c7eec12">prev</a> () == <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  998</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l00473">os::utils::static_double_list::head_</a>, and <a class="el" href="lists_8h_source.html#l00841">os::utils::static_double_list_links::prev()</a>.</p>
 
 </div>
 </div>
@@ -516,13 +654,37 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Remove the top node from the list. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to thread.</dd></dl>
 <p>Must be called in a critical section. </p>
 
 <p class="definition">Definition at line <a class="el" href="os-lists_8cpp_source.html#l00126">126</a> of file <a class="el" href="os-lists_8cpp_source.html">os-lists.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>      {</div>
+<div class="line"><span class="lineno">  128</span>        assert (!<a class="code hl_function" href="classos_1_1utils_1_1static__double__list.html#a3552b923d0b2e8716566550ffcc44a2e">empty</a> ());</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_class" href="classthread.html">thread</a>* th = <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afad9bc69ecef5371316259ae20f631db">head</a> ()-&gt;<a class="code hl_variable" href="classos_1_1rtos_1_1internal_1_1waiting__thread__node.html#a196f37522a92fa1db238c09fb402f1e3">thread_</a>;</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_LISTS)</span></div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;ready %s() %p %s\n&quot;</span>, __func__, th, th-&gt;name ());</div>
+<div class="line"><span class="lineno">  134</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>        <span class="keyword">const_cast&lt;</span>waiting_thread_node*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1ready__threads__list.html#afad9bc69ecef5371316259ae20f631db">head</a> ())-&gt;<a class="code hl_function" href="group__cmsis-plus-posix-io-c.html#ga1bf2f9d00e15a9cf2f60b7b2b633e5d8">unlink</a> ();</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>        assert (th != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>        <span class="comment">// Unlinking is immediately followed by a context switch,</span></div>
+<div class="line"><span class="lineno">  141</span>        <span class="comment">// so in order to guarantee that the thread is marked as</span></div>
+<div class="line"><span class="lineno">  142</span>        <span class="comment">// running, it is saver to do it here.</span></div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        th-&gt;state_ = <a class="code hl_enumvalue" href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">thread::state::running</a>;</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> th;</div>
+<div class="line"><span class="lineno">  146</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1waiting__thread__node_html_a196f37522a92fa1db238c09fb402f1e3"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1waiting__thread__node.html#a196f37522a92fa1db238c09fb402f1e3">os::rtos::internal::waiting_thread_node::thread_</a></div><div class="ttdeci">rtos::thread * thread_</div><div class="ttdoc">Pointer to waiting thread.</div><div class="ttdef"><b>Definition</b> <a href="os-lists_8h_source.html#l00107">os-lists.h:107</a></div></div>
+<div class="ttc" id="aclassthread_html"><div class="ttname"><a href="classthread.html">thread</a></div><div class="ttdoc">Standard thread.</div><div class="ttdef"><b>Definition</b> <a href="thread__internal_8h_source.html#l00039">thread_internal.h:40</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-posix-io-c_html_ga1bf2f9d00e15a9cf2f60b7b2b633e5d8"><div class="ttname"><a href="group__cmsis-plus-posix-io-c.html#ga1bf2f9d00e15a9cf2f60b7b2b633e5d8">unlink</a></div><div class="ttdeci">int unlink(const char *name)</div></div>
+<div class="ttc" id="astructos_1_1rtos_1_1thread_1_1state_html_a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3"><div class="ttname"><a href="structos_1_1rtos_1_1thread_1_1state.html#a0aeb2faf49c001494f12a5d893ffb5cfa1d3ea68df5ed3a7ca874dd554151a6c3">os::rtos::thread::state::running</a></div><div class="ttdeci">@ running</div><div class="ttdoc">Has the CPU and runs.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00386">os-thread.h:386</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lists_8h_source.html#l01001">os::utils::static_double_list::empty()</a>, <a class="el" href="os-lists_8h_source.html#l00904">head()</a>, <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="os-thread_8h_source.html#l00386">os::rtos::thread::state::running</a>, <a class="el" href="os-lists_8h_source.html#l00107">os::rtos::internal::waiting_thread_node::thread_</a>, and <a class="el" href="group__cmsis-plus-posix-io-c.html#ga1bf2f9d00e15a9cf2f60b7b2b633e5d8">unlink()</a>.</p>
 
 </div>
 </div>
@@ -546,11 +708,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>A list node used to point to head and tail. </p>
 <p>To simplify processing, the list always has a node. </p>
 
-<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00482">482</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lists_8h_source.html#l00473">473</a> of file <a class="el" href="lists_8h_source.html">lists.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-lists_8h_source.html#l00937">os::rtos::internal::waiting_threads_list::begin()</a>, <a class="el" href="os-lists_8cpp_source.html#l00490">os::rtos::internal::clock_timestamps_list::check_timestamp()</a>, <a class="el" href="lists_8cpp_source.html#l00108">os::utils::static_double_list::clear()</a>, <a class="el" href="lists_8h_source.html#l01001">os::utils::static_double_list::empty()</a>, <a class="el" href="os-lists_8h_source.html#l00946">os::rtos::internal::waiting_threads_list::end()</a>, <a class="el" href="lists_8h_source.html#l01008">os::utils::static_double_list::head()</a>, <a class="el" href="os-lists_8cpp_source.html#l00413">os::rtos::internal::clock_timestamps_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00047">link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00194">os::rtos::internal::waiting_threads_list::link()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="lists_8h_source.html#l01014">os::utils::static_double_list::tail()</a>, and <a class="el" href="lists_8h_source.html#l00994">os::utils::static_double_list::uninitialized()</a>.</p>
 
 </div>
 </div>

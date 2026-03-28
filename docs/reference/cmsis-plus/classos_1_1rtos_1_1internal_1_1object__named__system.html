@@ -187,9 +187,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:adc1c29f4a020deee857f22330e0277ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for named system objects. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00444">444</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00442">442</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a132fe97877e1dcc01f04e13aa0bc39fe" name="a132fe97877e1dcc01f04e13aa0bc39fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a132fe97877e1dcc01f04e13aa0bc39fe">&#9670;&#160;</a></span>object_named_system() <span class="overload">[1/2]</span></h2>
@@ -214,10 +213,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a named system object instance. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00767">767</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00760">760</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  761</span>      {</div>
+<div class="line"><span class="lineno">  762</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab378ffa4fa3677369d3c4ba28864b887" name="ab378ffa4fa3677369d3c4ba28864b887"></a>
@@ -243,8 +242,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a named system object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Null terminated name. If <code>nullptr</code>, "-" is assigned. </td></tr>
@@ -252,8 +249,13 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00772">772</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00764">764</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  765</span>          : <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a191fec2dd0076e286af417f2d12ed01d">object_named</a> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a>)</div>
+<div class="line"><span class="lineno">  766</span>      {</div>
+<div class="line"><span class="lineno">  767</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1object__named_html_a191fec2dd0076e286af417f2d12ed01d"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1object__named.html#a191fec2dd0076e286af417f2d12ed01d">os::rtos::internal::object_named::object_named</a></div><div class="ttdeci">object_named()</div><div class="ttdoc">Construct a named object instance.</div><div class="ttdef"><b>Definition</b> <a href="os-core_8cpp_source.html#l00620">os-core.cpp:620</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1object__named_html_a3103a84c5e0521c3639306f5879526ba"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">os::rtos::internal::object_named::name</a></div><div class="ttdeci">const char * name(void) const</div><div class="ttdoc">Get object name.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00753">os-decls.h:753</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a64cc58835ae0b48e5d9b6844359a6364" name="a64cc58835ae0b48e5d9b6844359a6364"></a>
@@ -278,8 +280,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the named system object instance. </p>
 
 </div>
 </div>
@@ -307,14 +307,17 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00759">759</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00753">753</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  754</span>      {</div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">return</span> name_;</div>
+<div class="line"><span class="lineno">  756</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lifo_8h_source.html#l00365">os::memory::lifo::lifo()</a>, <a class="el" href="malloc_8h_source.html#l00214">os::memory::malloc_memory_resource::malloc_memory_resource()</a>, <a class="el" href="os-mqueue_8h_source.html#l01551">os::rtos::message_queue_typed&lt; T, Allocator &gt;::message_queue_typed()</a>, <a class="el" href="block-pool_8cpp_source.html#l00034">os::memory::block_pool::~block_pool()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00201">os::rtos::event_flags::~event_flags()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00034">os::memory::first_fit_top::~first_fit_top()</a>, <a class="el" href="lifo_8cpp_source.html#l00034">os::memory::lifo::~lifo()</a>, <a class="el" href="malloc_8h_source.html#l00225">os::memory::malloc_memory_resource::~malloc_memory_resource()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00400">os::rtos::memory_pool::~memory_pool()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00485">os::rtos::message_queue::~message_queue()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00570">os::rtos::mutex::~mutex()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00224">os::rtos::semaphore::~semaphore()</a>, <a class="el" href="os-thread_8cpp_source.html#l00595">os::rtos::thread::~thread()</a>, <a class="el" href="os-timer_8cpp_source.html#l00209">os::rtos::timer::~timer()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>, <a class="el" href="os-thread_8cpp_source.html#l00995">os::rtos::thread::cancel()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00575">os::rtos::event_flags::clear()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01530">os::rtos::mutex::consistent()</a>, <a class="el" href="os-thread_8cpp_source.html#l00883">os::rtos::thread::detach()</a>, <a class="el" href="malloc_8h_source.html#l00277">os::memory::new_delete_memory_resource::do_allocate()</a>, <a class="el" href="block-pool_8cpp_source.html#l00047">os::memory::block_pool::do_allocate()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00112">os::memory::first_fit_top::do_allocate()</a>, <a class="el" href="lifo_8cpp_source.html#l00068">os::memory::lifo::do_allocate()</a>, <a class="el" href="malloc_8h_source.html#l00239">os::memory::malloc_memory_resource::do_allocate()</a>, <a class="el" href="os-thread_8cpp_source.html#l01313">os::rtos::thread::flags_raise()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00781">os::rtos::memory_pool::free()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00614">os::rtos::event_flags::get()</a>, <a class="el" href="os-thread_8cpp_source.html#l01020">os::rtos::thread::interrupt()</a>, <a class="el" href="os-thread_8cpp_source.html#l00941">os::rtos::thread::join()</a>, <a class="el" href="os-thread_8cpp_source.html#l01231">os::rtos::thread::kill()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01003">os::rtos::mutex::lock()</a>, <a class="el" href="os-memory_8h_source.html#l01375">os::rtos::memory::memory_resource::out_of_memory_handler()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00339">os::rtos::semaphore::post()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01461">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01417">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-thread_8cpp_source.html#l00734">os::rtos::thread::priority()</a>, <a class="el" href="os-thread_8cpp_source.html#l00802">os::rtos::thread::priority_inherited()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00540">os::rtos::event_flags::raise()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01269">os::rtos::message_queue::receive()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00846">os::rtos::memory_pool::reset()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01596">os::rtos::message_queue::reset()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01567">os::rtos::mutex::reset()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00759">os::rtos::semaphore::reset()</a>, <a class="el" href="os-thread_8cpp_source.html#l00630">os::rtos::thread::resume()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00929">os::rtos::message_queue::send()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00175">os::rtos::clock::sleep_for()</a>, <a class="el" href="os-timer_8cpp_source.html#l00243">os::rtos::timer::start()</a>, <a class="el" href="os-timer_8cpp_source.html#l00307">os::rtos::timer::stop()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01205">os::rtos::mutex::timed_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01484">os::rtos::message_queue::timed_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01129">os::rtos::message_queue::timed_send()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00598">os::rtos::semaphore::timed_wait()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00425">os::rtos::event_flags::timed_wait()</a>, <a class="el" href="os-memory_8h_source.html#l01444">os::rtos::memory::memory_resource::trace_print_statistics()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00604">os::rtos::memory_pool::try_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01126">os::rtos::mutex::try_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01383">os::rtos::message_queue::try_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01042">os::rtos::message_queue::try_send()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00343">os::rtos::event_flags::try_wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00524">os::rtos::semaphore::try_wait()</a>, <a class="el" href="os-lists_8cpp_source.html#l00126">os::rtos::internal::ready_threads_list::unlink_head()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01379">os::rtos::mutex::unlock()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00241">os::rtos::event_flags::wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00424">os::rtos::semaphore::wait()</a>, and <a class="el" href="os-evflags_8cpp_source.html#l00642">os::rtos::event_flags::waiting()</a>.</p>
 
 </div>
 </div>
@@ -351,8 +354,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated object instance. using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to object. </td></tr>
@@ -367,7 +368,16 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00122">122</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00120">120</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>      {</div>
+<div class="line"><span class="lineno">  122</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        rtos::memory::allocator&lt;char&gt; ().deallocate (<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (ptr),</div>
+<div class="line"><span class="lineno">  125</span>                                                     bytes);</div>
+<div class="line"><span class="lineno">  126</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1interrupts_html_acb9f50dd130d6226b861ffaee191ee5a"><div class="ttname"><a href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">os::rtos::interrupts::in_handler_mode</a></div><div class="ttdeci">bool in_handler_mode(void)</div><div class="ttdoc">Check if the CPU is in handler mode.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01101">os-sched.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a070977f77b4fef4e886f045c940a3dd2">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::deallocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -404,8 +414,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated array of object. instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to array of objects. </td></tr>
@@ -419,8 +427,12 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00143">143</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00141">141</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>      {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="comment">// Forward array deallocation to single element deallocation.</span></div>
+<div class="line"><span class="lineno">  144</span>        <span class="keyword">operator</span> <span class="keyword">delete</span> (ptr, bytes);</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1456983acc3a56e02cd4a48a220f222c" name="a1456983acc3a56e02cd4a48a220f222c"></a>
@@ -446,8 +458,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for a new object instance using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -459,7 +469,14 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00044">44</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00043">43</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>      {</div>
+<div class="line"><span class="lineno">   45</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> rtos::memory::allocator&lt;char&gt; ().allocate (bytes);</div>
+<div class="line"><span class="lineno">   48</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#ae960d872a45386c6d51ebb721ffadafd">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::allocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -496,8 +513,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace a new object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -510,8 +525,11 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00081">81</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00080">80</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>      {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><span class="lineno">   83</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a27026070d8fd2c51873036cfd1661ce4" name="a27026070d8fd2c51873036cfd1661ce4"></a>
@@ -537,8 +555,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for an array of new object instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -550,8 +566,12 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00062">62</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00061">61</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>      {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes);</div>
+<div class="line"><span class="lineno">   65</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad415429ae3487ec5ae1258b4d2a5787f" name="ad415429ae3487ec5ae1258b4d2a5787f"></a>
@@ -587,8 +607,6 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace an array of new object instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -601,8 +619,12 @@ Static Public Member Functions</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00098">98</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00097">97</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>      {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes, ptr);</div>
+<div class="line"><span class="lineno">  101</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

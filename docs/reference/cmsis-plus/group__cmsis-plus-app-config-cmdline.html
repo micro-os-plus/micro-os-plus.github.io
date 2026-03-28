@@ -135,7 +135,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-cmdline.h
 <tr class="separator:ga8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Definitions passed via the compiler command line. </p>
 <p>Most of the configuration options can be passed via the configuration file, but this requires each source file to include the configuration files. However some options are too important to be missed and should be passed via the compiler command line. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gad72dbcf6d0153db1b8d8a58001feed83" name="gad72dbcf6d0153db1b8d8a58001feed83"></a>
@@ -149,8 +148,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-cmdline.h
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enable debug support. </p>
 <p>This definition must always be used in <b>debug</b> configurations. </p>
 
 <p class="definition">Definition at line <a class="el" href="os-app-config_8h_source.html#l00026">26</a> of file <a class="el" href="os-app-config_8h_source.html">os-app-config.h</a>.</p>
@@ -168,8 +165,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-cmdline.h
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Disable assert support. </p>
 <p>This is the standard ISO/ANSI definition used to disable all <code>assert()</code> statements. Without this definition all <code>assert()</code> statements are active, regardless of the presence or absence of the <code>DEBUG</code> definition.</p>
 <p>Assertions are a very valuable mechanism to detect out-of-range conditions, usually in debug configurations, but might add a significant overhead in code size, and a certain overhead in execution time.</p>
 <p>It is recommended to always use <code>NDEBUG</code> in <b>release</b> configurations. </p>
@@ -189,8 +184,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-config-cmdline.h
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Enable trace support. </p>
 <p>This definition can be used to enable trace support. Without this definition, all trace calls are inlined to empty statements.</p>
 <p>It is recommended to use <code>TRACE</code> in <b>debug</b> configurations. </p>
 

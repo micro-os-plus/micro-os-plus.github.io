@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('namespaceos_1_1rtos_1_1scheduler_1_1st
 <div class="contents">
 
 <p>Scheduler statistics.  
-<a href="namespaceos_1_1rtos_1_1scheduler_1_1statistics.html#details">More...</a></p>
+</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -137,9 +137,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a52e675e601f071a951a43146744ad1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total duration of all threads.  <br /></td></tr>
 <tr class="separator:a52e675e601f071a951a43146744ad1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scheduler statistics. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ae44f40aa8fa983d31ece88234b0d944c" name="ae44f40aa8fa983d31ece88234b0d944c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae44f40aa8fa983d31ece88234b0d944c">&#9670;&#160;</a></span>clear()</h2>
 
@@ -168,8 +166,17 @@ Functions</h2></td></tr>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01082">1082</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01075">1075</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1076</span>        {</div>
+<div class="line"><span class="lineno"> 1077</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES)</span></div>
+<div class="line"><span class="lineno"> 1078</span>          context_switches_ = 0;</div>
+<div class="line"><span class="lineno"> 1079</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno"> 1080</span> </div>
+<div class="line"><span class="lineno"> 1081</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES)</span></div>
+<div class="line"><span class="lineno"> 1082</span>          cpu_cycles_ = 0;</div>
+<div class="line"><span class="lineno"> 1083</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno"> 1084</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abc542863616e2eaefe98c96e2645f928" name="abc542863616e2eaefe98c96e2645f928"></a>
@@ -195,8 +202,6 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the total number of context switches. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer with the total number of context switches since scheduler start.</dd></dl>
 <p>Each time the scheduler performs a context switch, it increments the thread counter and the scheduler total counter.</p>
 <p>This value can be used together with the corresponding thread function, to compute percentages.</p>
@@ -204,7 +209,12 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01034">1034</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01027">1027</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1028</span>        {</div>
+<div class="line"><span class="lineno"> 1029</span>          <span class="keywordflow">return</span> context_switches_;</div>
+<div class="line"><span class="lineno"> 1030</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00523">os_sched_stat_get_context_switches()</a>.</p>
 
 </div>
 </div>
@@ -231,8 +241,6 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the total duration of all threads. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer with the number of CPU cycles, possibly divided by some prescaller.</dd></dl>
 <p>For Cortex-M ports, this value is usually derived from the clock that drives the SysTick, which most of the times is the system clock.</p>
 <p>This value can be used together with the corresponding thread function, to compute percentages.</p>
@@ -240,7 +248,12 @@ Can be invoked from Interrupt Service Routines. </dd></dl>
 <dd>
 Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01059">1059</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l01052">1052</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1053</span>        {</div>
+<div class="line"><span class="lineno"> 1054</span>          <span class="keywordflow">return</span> cpu_cycles_;</div>
+<div class="line"><span class="lineno"> 1055</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00540">os_sched_stat_get_cpu_cycles()</a>.</p>
 
 </div>
 </div>

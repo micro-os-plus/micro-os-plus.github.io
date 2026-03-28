@@ -167,7 +167,7 @@ v6.3.14 2018-07-04</h2>
 <li>rtos/thread: unlock dangling mutexes</li>
 <li>add support for Chan FatFS to the POSIX I/O layer</li>
 <li>add <code>file_descriptors_manager::used()</code> to tell how many file descriptors are used</li>
-<li>[#41] add nonstandard <code><a class="el" href="timegm_8c.html#abbb8f848fba36d0d6fc71f3befd489de">timegm()</a></code>, as the opposite of <code>gmtime()</code></li>
+<li>[#41] add non-standard <code><a class="el" href="timegm_8c.html#abbb8f848fba36d0d6fc71f3befd489de">timegm()</a></code>, as the opposite of <code>gmtime()</code></li>
 <li>implement alignment in memory allocators</li>
 <li>[#40] posix: add <code><a class="el" href="structstatvfs.html">statvfs()</a></code>/<code><a class="el" href="group__cmsis-plus-posix-io-c.html#gad01b91e499d7bab0def53341cbb0c9f6">fstatvfs()</a></code></li>
 <li>[#36] posix: add <code><a class="el" href="group__cmsis-plus-posix-io-c.html#ga086cf63d4fef5534795c6ca85523e05a">tcdrain()</a></code>/<code><a class="el" href="group__cmsis-plus-posix-io-c.html#gae89b26aca8d2dd3a8e0abfe88256596a">tcflush()</a></code>/<code><a class="el" href="group__cmsis-plus-posix-io-c.html#ga6fb28fd3c8b187985d5e05c2e87beff5">tcgetattr()</a></code>/<code><a class="el" href="group__cmsis-plus-posix-io-c.html#ga0e456e172ac44f4e6be06f110b1b85f4">tcsendbreak()</a></code>/ <code><a class="el" href="group__cmsis-plus-posix-io-c.html#ga6fb28fd3c8b187985d5e05c2e87beff5">tcgetattr()</a></code> to POSIX aliases</li>
@@ -185,7 +185,7 @@ v6.3.13 2017-08-26</h2>
 <h2><a class="anchor" id="autotoc_md10"></a>
 v6.3.12 2017-08-24</h2>
 <ul>
-<li>[#13] Fix typo (aquire -&gt; acquire)</li>
+<li>[#13] Fix typo (acquire -&gt; acquire)</li>
 <li>[#13] fix typos in documentation</li>
 <li>replace most CMSIS++ references by µOS++</li>
 </ul>
@@ -259,7 +259,7 @@ v6.3.7 2016-09-14</h2>
 <li>for Cortex-M, manage the interrupts stack via the <code>thread::stack</code> class; initialise interrupts stack with pattern and check the bottom marker in the idle thread</li>
 <li>add <code><a class="el" href="group__cmsis-plus-rtos-c-core.html#ga85eb51a7565c1bc022d222fc04e97059" title="Get the interrupts stack.">os_irq_get_stack()</a></code> to the C API</li>
 <li>add <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6771db6e5df087433ff0e4cb407de772" title="Display statistics and say goodbye before terminating.">os_terminate_goodbye()</a></code> to display memory usage statistics</li>
-<li>refubish the exit code to avoid crashes when building freestanding apps</li>
+<li>refurbish the exit code to avoid crashes when building free-standing apps</li>
 <li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#gad1551d37cf9ec69bab33cbf502c8d925">os_initialize_args()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61" title="Initialise arguments.">os_startup_initialize_args()</a></code></li>
 <li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga6d103a632522f9d7548905eede2c6eb8">os_initialize_hardware_early()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d" title="Initialise hardware early.">os_startup_initialize_hardware_early()</a></code></li>
 <li>rename <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga4c2dc77cf2ea26763c5318b1e1c70151">os_initialize_hardware()</a></code> -&gt; <code><a class="el" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f" title="Initialise hardware.">os_startup_initialize_hardware()</a></code></li>
@@ -296,7 +296,7 @@ v6.3.6 2016-08-07</h2>
 <h2><a class="anchor" id="autotoc_md18"></a>
 v6.3.5 2016-07-31</h2>
 <ul>
-<li>addd <code>OS_TRACE_RTOS_LISTS_CLOCKS</code></li>
+<li>add <code>OS_TRACE_RTOS_LISTS_CLOCKS</code></li>
 <li>refurbish scheduler <code>lock()</code>, <code>unlock()</code>, <code>locked(state_t)</code></li>
 <li>rename <code>os_irq_status_t</code> -&gt; <code>os_irq_state_t</code></li>
 <li>rename <code>interrupts::status_t</code> -&gt; <code>interrupts::state_t</code></li>
@@ -338,7 +338,7 @@ v6.3.2 2016-07-11</h2>
 <li>semaphores refurbished (make default as binary, add classes <code>semaphore_binary</code> and <code>semaphore_counting</code>)</li>
 <li>add <code>binary_attributes</code></li>
 <li>os-semaphore: add explicit <code>initial_value</code> to <code><a class="el" href="group__cmsis-plus-rtos-c-semaphore.html#ga5dfaeb38bd8c5ee8003d8104a8c808a5" title="Initialise the binary semaphore attributes.">os_semaphore_attr_binary_init()</a></code> and <code><a class="el" href="group__cmsis-plus-rtos-c-thread.html#gab264af2883d8dfe5a1d9ff9de6d14f79">os_semaphore_binary_create()</a></code></li>
-<li>os-semaphore: rename <code><a class="el" href="classattributes__binary.html">attributes_binary</a></code>, <code>attributes_counting</code>, <code>initializer_binary</code></li>
+<li>os-semaphore: rename <code>attributes_binary</code>, <code>attributes_counting</code>, <code>initializer_binary</code></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md22"></a>
 v6.3.1 2016-07-10</h2>

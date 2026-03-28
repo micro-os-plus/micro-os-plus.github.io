@@ -166,7 +166,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atexit_8h_source.html#l00040">40</a> of file <a class="el" href="atexit_8h_source.html">atexit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atexit_8h_source.html#l00039">39</a> of file <a class="el" href="atexit_8h_source.html">atexit.h</a>.</p>
 
 </div>
 </div>
@@ -188,8 +188,16 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad" name="a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad"></a>__et_cxa&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="atexit_8h_source.html#l00030">30</a> of file <a class="el" href="atexit_8h_source.html">atexit.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="atexit_8h_source.html#l00029">29</a> of file <a class="el" href="atexit_8h_source.html">atexit.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  {</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_enumvalue" href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8ae61f35f4d6da8a0b6b4fe229ddc9cae9">__et_atexit</a>, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8a41239a04145107d1baaf18b936f0e2e6">__et_onexit</a>, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   33</span>    <a class="code hl_enumvalue" href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad">__et_cxa</a></div>
+<div class="line"><span class="lineno">   34</span>  };</div>
+<div class="ttc" id="aatexit_8h_html_a74ade975dfecc91ff661cd85bd538ec8a41239a04145107d1baaf18b936f0e2e6"><div class="ttname"><a href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8a41239a04145107d1baaf18b936f0e2e6">__et_onexit</a></div><div class="ttdeci">@ __et_onexit</div><div class="ttdef"><b>Definition</b> <a href="atexit_8h_source.html#l00032">atexit.h:32</a></div></div>
+<div class="ttc" id="aatexit_8h_html_a74ade975dfecc91ff661cd85bd538ec8ae61f35f4d6da8a0b6b4fe229ddc9cae9"><div class="ttname"><a href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8ae61f35f4d6da8a0b6b4fe229ddc9cae9">__et_atexit</a></div><div class="ttdeci">@ __et_atexit</div><div class="ttdef"><b>Definition</b> <a href="atexit_8h_source.html#l00031">atexit.h:31</a></div></div>
+<div class="ttc" id="aatexit_8h_html_a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad"><div class="ttname"><a href="atexit_8h.html#a74ade975dfecc91ff661cd85bd538ec8aef1a86adee1640a09b0ad4b07ab6edad">__et_cxa</a></div><div class="ttdeci">@ __et_cxa</div><div class="ttdef"><b>Definition</b> <a href="atexit_8h_source.html#l00034">atexit.h:33</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -218,6 +226,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="exit_8c_source.html#l00070">exit()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +287,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00197">197</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00187">187</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>{</div>
+<div class="line"><span class="lineno">  189</span>  <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;%s()\n&quot;</span>, __func__);</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>  <span class="keywordtype">int</span> count = <a class="code hl_variable" href="startup_8cpp.html#a6c88c8ce5dfc994b8f8569cae5b1b2ac">__fini_array_end</a> - <a class="code hl_variable" href="startup_8cpp.html#a2871bd852700dcb1d792787281af771f">__fini_array_start</a>;</div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = count; i &gt; 0; i--)</div>
+<div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>      <a class="code hl_variable" href="startup_8cpp.html#a2871bd852700dcb1d792787281af771f">__fini_array_start</a>[i - 1]();</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>  <span class="comment">// If the application needs to run the code in the .fini section,</span></div>
+<div class="line"><span class="lineno">  198</span>  <span class="comment">// please use the startup files, since this requires the code in</span></div>
+<div class="line"><span class="lineno">  199</span>  <span class="comment">// crti.o and crtn.o to add the function prologue/epilogue.</span></div>
+<div class="line"><span class="lineno">  200</span>  <span class="comment">//_fini(); // DO NOT ENABLE THIS!</span></div>
+<div class="line"><span class="lineno">  201</span>}</div>
+<div class="ttc" id="astartup_8cpp_html_a2871bd852700dcb1d792787281af771f"><div class="ttname"><a href="startup_8cpp.html#a2871bd852700dcb1d792787281af771f">__fini_array_start</a></div><div class="ttdeci">void(* __fini_array_start[])(void)</div></div>
+<div class="ttc" id="astartup_8cpp_html_a6c88c8ce5dfc994b8f8569cae5b1b2ac"><div class="ttname"><a href="startup_8cpp.html#a6c88c8ce5dfc994b8f8569cae5b1b2ac">__fini_array_end</a></div><div class="ttdeci">void(* __fini_array_end[])(void)</div></div>
+<div class="ttc" id="atrace_8h_html_a6a6492d4a967fc866e4825f6146cec37"><div class="ttname"><a href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a></div><div class="ttdeci">int trace_printf(const char *format,...)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="startup_8cpp.html#a6c88c8ce5dfc994b8f8569cae5b1b2ac">__fini_array_end</a>, <a class="el" href="startup_8cpp.html#a2871bd852700dcb1d792787281af771f">__fini_array_start</a>, and <a class="el" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="exit_8c_source.html#l00070">exit()</a>.</p>
 
 </div>
 </div>

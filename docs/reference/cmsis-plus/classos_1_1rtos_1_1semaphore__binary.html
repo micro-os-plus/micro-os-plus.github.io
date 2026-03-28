@@ -231,9 +231,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ga52960bb03444802faaff6fb110156fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>POSIX compliant <b>binary semaphore</b>. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00511">511</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00515">515</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a853d5f9048fe423b9d44b1251686cb54" name="a853d5f9048fe423b9d44b1251686cb54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a853d5f9048fe423b9d44b1251686cb54">&#9670;&#160;</a></span>semaphore_binary() <span class="overload">[1/2]</span></h2>
@@ -258,8 +257,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a binary semaphore object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">initial_value</td><td>Initial count value; 0 if missing.</td></tr>
@@ -271,8 +268,14 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_init.html"><code>sem_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00797">797</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00802">802</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  803</span>        : <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a722459e3f83bb595777960716a15d83f">semaphore</a>{ <span class="keyword">nullptr</span>, 1, <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a84a0ed04d86929e8bb9e1193cbb38da3">initial_value</a>, <a class="code hl_variable" href="group__cmsis-plus-rtos-semaphore.html#ga6a97b5ca045e295b4928b4741f0d949e">initializer_binary</a> }</div>
+<div class="line"><span class="lineno">  804</span>    {</div>
+<div class="line"><span class="lineno">  805</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1semaphore_html_a722459e3f83bb595777960716a15d83f"><div class="ttname"><a href="classos_1_1rtos_1_1semaphore.html#a722459e3f83bb595777960716a15d83f">os::rtos::semaphore::semaphore</a></div><div class="ttdeci">semaphore(const attributes &amp;attr=initializer_binary)</div><div class="ttdoc">Construct a semaphore object instance.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00740">os-semaphore.h:740</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1semaphore_html_a84a0ed04d86929e8bb9e1193cbb38da3"><div class="ttname"><a href="classos_1_1rtos_1_1semaphore.html#a84a0ed04d86929e8bb9e1193cbb38da3">os::rtos::semaphore::initial_value</a></div><div class="ttdeci">count_t initial_value(void) const</div><div class="ttdoc">Get the semaphore initial count value.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00762">os-semaphore.h:762</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-semaphore_html_ga6a97b5ca045e295b4928b4741f0d949e"><div class="ttname"><a href="group__cmsis-plus-rtos-semaphore.html#ga6a97b5ca045e295b4928b4741f0d949e">os::rtos::semaphore::initializer_binary</a></div><div class="ttdeci">static const attributes_binary initializer_binary</div><div class="ttdoc">Default binary semaphore initialiser.</div><div class="ttdef"><b>Definition</b> <a href="os-semaphore_8h_source.html#l00211">os-semaphore.h:211</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c514c23a827be55eed37ea545101f13" name="a7c514c23a827be55eed37ea545101f13"></a>
@@ -308,8 +311,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct a named binary semaphore object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
@@ -322,8 +323,12 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_init.html"><code>sem_init()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00822">822</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00828">828</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  830</span>        : <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a722459e3f83bb595777960716a15d83f">semaphore</a>{ <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a>, 1, <a class="code hl_function" href="classos_1_1rtos_1_1semaphore.html#a84a0ed04d86929e8bb9e1193cbb38da3">initial_value</a> }</div>
+<div class="line"><span class="lineno">  831</span>    {</div>
+<div class="line"><span class="lineno">  832</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1object__named_html_a3103a84c5e0521c3639306f5879526ba"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">os::rtos::internal::object_named::name</a></div><div class="ttdeci">const char * name(void) const</div><div class="ttdoc">Get object name.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00753">os-decls.h:753</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a037f760996f8b5ac05fe5f8202ad314c" name="a037f760996f8b5ac05fe5f8202ad314c"></a>
@@ -348,15 +353,15 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the semaphore object instance. </p>
 <p>This destructor shall destroy the semaphore object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
 <p>It is safe to destroy an initialised semaphore upon which no threads are currently blocked. The effect of destroying a semaphore upon which other threads are currently blocked is undefined.</p>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_destroy.html"><code>sem_destroy()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00848">848</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00855">855</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  856</span>    {</div>
+<div class="line"><span class="lineno">  857</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -383,15 +388,16 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the semaphore initial count value. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The numeric value set from attributes.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00759">759</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00762">762</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  763</span>    {</div>
+<div class="line"><span class="lineno">  764</span>      <span class="keywordflow">return</span> initial_value_;</div>
+<div class="line"><span class="lineno">  765</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a734d5093eb06194dbecd13d2c63797a8" name="a734d5093eb06194dbecd13d2c63797a8"></a>
@@ -417,15 +423,16 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the semaphore maximum count value. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The numeric value set from attributes.</dd></dl>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00771">771</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00774">774</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  775</span>    {</div>
+<div class="line"><span class="lineno">  776</span>      <span class="keywordflow">return</span> max_value_;</div>
+<div class="line"><span class="lineno">  777</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3103a84c5e0521c3639306f5879526ba" name="a3103a84c5e0521c3639306f5879526ba"></a>
@@ -451,14 +458,17 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00759">759</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00753">753</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  754</span>      {</div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">return</span> name_;</div>
+<div class="line"><span class="lineno">  756</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lifo_8h_source.html#l00365">os::memory::lifo::lifo()</a>, <a class="el" href="malloc_8h_source.html#l00214">os::memory::malloc_memory_resource::malloc_memory_resource()</a>, <a class="el" href="os-mqueue_8h_source.html#l01551">os::rtos::message_queue_typed&lt; T, Allocator &gt;::message_queue_typed()</a>, <a class="el" href="block-pool_8cpp_source.html#l00034">os::memory::block_pool::~block_pool()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00201">os::rtos::event_flags::~event_flags()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00034">os::memory::first_fit_top::~first_fit_top()</a>, <a class="el" href="lifo_8cpp_source.html#l00034">os::memory::lifo::~lifo()</a>, <a class="el" href="malloc_8h_source.html#l00225">os::memory::malloc_memory_resource::~malloc_memory_resource()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00400">os::rtos::memory_pool::~memory_pool()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00485">os::rtos::message_queue::~message_queue()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00570">os::rtos::mutex::~mutex()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00224">os::rtos::semaphore::~semaphore()</a>, <a class="el" href="os-thread_8cpp_source.html#l00595">os::rtos::thread::~thread()</a>, <a class="el" href="os-timer_8cpp_source.html#l00209">os::rtos::timer::~timer()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>, <a class="el" href="os-thread_8cpp_source.html#l00995">os::rtos::thread::cancel()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00575">os::rtos::event_flags::clear()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01530">os::rtos::mutex::consistent()</a>, <a class="el" href="os-thread_8cpp_source.html#l00883">os::rtos::thread::detach()</a>, <a class="el" href="malloc_8h_source.html#l00277">os::memory::new_delete_memory_resource::do_allocate()</a>, <a class="el" href="block-pool_8cpp_source.html#l00047">os::memory::block_pool::do_allocate()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00112">os::memory::first_fit_top::do_allocate()</a>, <a class="el" href="lifo_8cpp_source.html#l00068">os::memory::lifo::do_allocate()</a>, <a class="el" href="malloc_8h_source.html#l00239">os::memory::malloc_memory_resource::do_allocate()</a>, <a class="el" href="os-thread_8cpp_source.html#l01313">os::rtos::thread::flags_raise()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00781">os::rtos::memory_pool::free()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00614">os::rtos::event_flags::get()</a>, <a class="el" href="os-thread_8cpp_source.html#l01020">os::rtos::thread::interrupt()</a>, <a class="el" href="os-thread_8cpp_source.html#l00941">os::rtos::thread::join()</a>, <a class="el" href="os-thread_8cpp_source.html#l01231">os::rtos::thread::kill()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01003">os::rtos::mutex::lock()</a>, <a class="el" href="os-memory_8h_source.html#l01375">os::rtos::memory::memory_resource::out_of_memory_handler()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00339">os::rtos::semaphore::post()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01461">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01417">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-thread_8cpp_source.html#l00734">os::rtos::thread::priority()</a>, <a class="el" href="os-thread_8cpp_source.html#l00802">os::rtos::thread::priority_inherited()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00540">os::rtos::event_flags::raise()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01269">os::rtos::message_queue::receive()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00846">os::rtos::memory_pool::reset()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01596">os::rtos::message_queue::reset()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01567">os::rtos::mutex::reset()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00759">os::rtos::semaphore::reset()</a>, <a class="el" href="os-thread_8cpp_source.html#l00630">os::rtos::thread::resume()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00929">os::rtos::message_queue::send()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00175">os::rtos::clock::sleep_for()</a>, <a class="el" href="os-timer_8cpp_source.html#l00243">os::rtos::timer::start()</a>, <a class="el" href="os-timer_8cpp_source.html#l00307">os::rtos::timer::stop()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01205">os::rtos::mutex::timed_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01484">os::rtos::message_queue::timed_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01129">os::rtos::message_queue::timed_send()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00598">os::rtos::semaphore::timed_wait()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00425">os::rtos::event_flags::timed_wait()</a>, <a class="el" href="os-memory_8h_source.html#l01444">os::rtos::memory::memory_resource::trace_print_statistics()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00604">os::rtos::memory_pool::try_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01126">os::rtos::mutex::try_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01383">os::rtos::message_queue::try_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01042">os::rtos::message_queue::try_send()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00343">os::rtos::event_flags::try_wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00524">os::rtos::semaphore::try_wait()</a>, <a class="el" href="os-lists_8cpp_source.html#l00126">os::rtos::internal::ready_threads_list::unlink_head()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01379">os::rtos::mutex::unlock()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00241">os::rtos::event_flags::wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00424">os::rtos::semaphore::wait()</a>, and <a class="el" href="os-evflags_8cpp_source.html#l00642">os::rtos::event_flags::waiting()</a>.</p>
 
 </div>
 </div>
@@ -495,8 +505,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated object instance. using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to object. </td></tr>
@@ -511,7 +519,16 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00122">122</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00120">120</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>      {</div>
+<div class="line"><span class="lineno">  122</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        rtos::memory::allocator&lt;char&gt; ().deallocate (<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (ptr),</div>
+<div class="line"><span class="lineno">  125</span>                                                     bytes);</div>
+<div class="line"><span class="lineno">  126</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1interrupts_html_acb9f50dd130d6226b861ffaee191ee5a"><div class="ttname"><a href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">os::rtos::interrupts::in_handler_mode</a></div><div class="ttdeci">bool in_handler_mode(void)</div><div class="ttdoc">Check if the CPU is in handler mode.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01101">os-sched.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a070977f77b4fef4e886f045c940a3dd2">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::deallocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -548,8 +565,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated array of object. instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to array of objects. </td></tr>
@@ -563,8 +578,12 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00143">143</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00141">141</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>      {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="comment">// Forward array deallocation to single element deallocation.</span></div>
+<div class="line"><span class="lineno">  144</span>        <span class="keyword">operator</span> <span class="keyword">delete</span> (ptr, bytes);</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1456983acc3a56e02cd4a48a220f222c" name="a1456983acc3a56e02cd4a48a220f222c"></a>
@@ -590,8 +609,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for a new object instance using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -603,7 +620,14 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00044">44</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00043">43</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>      {</div>
+<div class="line"><span class="lineno">   45</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> rtos::memory::allocator&lt;char&gt; ().allocate (bytes);</div>
+<div class="line"><span class="lineno">   48</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#ae960d872a45386c6d51ebb721ffadafd">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::allocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -640,8 +664,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace a new object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -654,8 +676,11 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00081">81</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00080">80</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>      {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><span class="lineno">   83</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a27026070d8fd2c51873036cfd1661ce4" name="a27026070d8fd2c51873036cfd1661ce4"></a>
@@ -681,8 +706,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for an array of new object instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -694,8 +717,12 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00062">62</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00061">61</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>      {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes);</div>
+<div class="line"><span class="lineno">   65</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad415429ae3487ec5ae1258b4d2a5787f" name="ad415429ae3487ec5ae1258b4d2a5787f"></a>
@@ -731,8 +758,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace an array of new object instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -745,8 +770,12 @@ Static Public Attributes</h2></td></tr>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00098">98</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00097">97</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>      {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes, ptr);</div>
+<div class="line"><span class="lineno">  101</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af2a81648cf800bfbf76dd31d94b80cd4" name="af2a81648cf800bfbf76dd31d94b80cd4"></a>
@@ -772,8 +801,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compare semaphores. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The given semaphore is the same as this semaphore. </td></tr>
@@ -783,8 +810,11 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <p>Identical semaphores should have the same memory address. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00747">747</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8h_source.html#l00750">750</a> of file <a class="el" href="os-semaphore_8h_source.html">os-semaphore.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  751</span>    {</div>
+<div class="line"><span class="lineno">  752</span>      <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;rhs;</div>
+<div class="line"><span class="lineno">  753</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d6ccc11175c7938ea16e64eb3d082ad" name="a7d6ccc11175c7938ea16e64eb3d082ad"></a>
@@ -802,8 +832,6 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Compare semaphores. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The given semaphore is the same as this semaphore. </td></tr>
@@ -837,8 +865,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Post (unlock) the semaphore. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -856,7 +882,61 @@ Static Public Attributes</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00335">335</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00339">339</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  345</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  346</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>      <span class="keywordflow">return</span> port::semaphore::post (<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  349</span> </div>
+<div class="line"><span class="lineno">  350</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>      <span class="comment">// Don&#39;t call this from high priority interrupts.</span></div>
+<div class="line"><span class="lineno">  353</span>      assert (port::interrupts::is_priority_valid ());</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>      {</div>
+<div class="line"><span class="lineno">  356</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  357</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">if</span> (count_ &gt;= this-&gt;max_value_)</div>
+<div class="line"><span class="lineno">  360</span>          {</div>
+<div class="line"><span class="lineno">  361</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  362</span>            <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s EAGAIN\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  363</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">return</span> EAGAIN;</div>
+<div class="line"><span class="lineno">  365</span>          }</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  368</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  369</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">  370</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  371</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">  372</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  373</span>        ++count_;</div>
+<div class="line"><span class="lineno">  374</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  377</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s count %u\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> (),</div>
+<div class="line"><span class="lineno">  378</span>                       count_);</div>
+<div class="line"><span class="lineno">  379</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  380</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  381</span>      }</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>      <span class="comment">// Wake-up one thread.</span></div>
+<div class="line"><span class="lineno">  384</span>      list_.resume_one ();</div>
+<div class="line"><span class="lineno">  385</span> </div>
+<div class="line"><span class="lineno">  386</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1result_html_a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b"><div class="ttname"><a href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a></div><div class="ttdeci">@ ok</div><div class="ttdoc">Function completed; no errors or events occurred.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00181">os-decls.h:179</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -883,8 +963,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reset the semaphore. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -897,7 +975,35 @@ Static Public Attributes</h2></td></tr>
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Extension to standard, no POSIX similar functionality identified.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00742">742</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00759">759</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  760</span>    {</div>
+<div class="line"><span class="lineno">  761</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  762</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s &lt;%u\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> (), count_);</div>
+<div class="line"><span class="lineno">  763</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  764</span> </div>
+<div class="line"><span class="lineno">  765</span>      <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  766</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  767</span> </div>
+<div class="line"><span class="lineno">  768</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  769</span> </div>
+<div class="line"><span class="lineno">  770</span>      <span class="keywordflow">return</span> port::semaphore::reset (<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  771</span> </div>
+<div class="line"><span class="lineno">  772</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  773</span> </div>
+<div class="line"><span class="lineno">  774</span>      {</div>
+<div class="line"><span class="lineno">  775</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  776</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  777</span> </div>
+<div class="line"><span class="lineno">  778</span>        internal_init_ ();</div>
+<div class="line"><span class="lineno">  779</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  780</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  781</span>      }</div>
+<div class="line"><span class="lineno">  782</span> </div>
+<div class="line"><span class="lineno">  783</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  784</span>    }</div>
+<div class="ttc" id="aos-decls_8h_html_ae9cede0de19446e3a5eb930b6b10dd39"><div class="ttname"><a href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a></div><div class="ttdeci">#define os_assert_err(__e, __er)</div><div class="ttdoc">Assert or return an error.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l01101">os-decls.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -924,8 +1030,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Timed wait to lock the semaphore. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout to wait. </td></tr>
@@ -958,7 +1062,130 @@ Differences from the standard:<ul>
 <dd>
 Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00583">583</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00598">598</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  599</span>    {</div>
+<div class="line"><span class="lineno">  600</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  601</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  602</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  603</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  604</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">  605</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  606</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%u) @%p %s &lt;%u\n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">  607</span>                     <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span> (timeout), <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> (),</div>
+<div class="line"><span class="lineno">  608</span>                     count_);</div>
+<div class="line"><span class="lineno">  609</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  610</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  611</span> </div>
+<div class="line"><span class="lineno">  612</span>      <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  613</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  614</span>      <span class="comment">// Don&#39;t call this from critical regions.</span></div>
+<div class="line"><span class="lineno">  615</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">scheduler::locked</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  616</span> </div>
+<div class="line"><span class="lineno">  617</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  618</span> </div>
+<div class="line"><span class="lineno">  619</span>      <span class="keywordflow">return</span> port::semaphore::timed_wait (<span class="keyword">this</span>, timeout);</div>
+<div class="line"><span class="lineno">  620</span> </div>
+<div class="line"><span class="lineno">  621</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>      <span class="comment">// Extra test before entering the loop, with its inherent weight.</span></div>
+<div class="line"><span class="lineno">  624</span>      <span class="comment">// Trade size for speed.</span></div>
+<div class="line"><span class="lineno">  625</span>      {</div>
+<div class="line"><span class="lineno">  626</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  627</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  628</span> </div>
+<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">if</span> (internal_try_wait_ ())</div>
+<div class="line"><span class="lineno">  630</span>          {</div>
+<div class="line"><span class="lineno">  631</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  632</span>          }</div>
+<div class="line"><span class="lineno">  633</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  634</span>      }</div>
+<div class="line"><span class="lineno">  635</span> </div>
+<div class="line"><span class="lineno">  636</span>      <a class="code hl_class" href="classthread.html">thread</a>&amp; crt_thread = <a class="code hl_function" href="namespaceos_1_1rtos_1_1this__thread.html#a60661f0e3a2380c9afbec42c3b505bc4">this_thread::thread</a> ();</div>
+<div class="line"><span class="lineno">  637</span> </div>
+<div class="line"><span class="lineno">  638</span>      <span class="comment">// Prepare a list node pointing to the current thread.</span></div>
+<div class="line"><span class="lineno">  639</span>      <span class="comment">// Do not worry for being on stack, it is temporarily linked to the</span></div>
+<div class="line"><span class="lineno">  640</span>      <span class="comment">// list and guaranteed to be removed before this function returns.</span></div>
+<div class="line"><span class="lineno">  641</span>      internal::waiting_thread_node node{ crt_thread };</div>
+<div class="line"><span class="lineno">  642</span> </div>
+<div class="line"><span class="lineno">  643</span>      internal::clock_timestamps_list&amp; clock_list = clock_-&gt;steady_list ();</div>
+<div class="line"><span class="lineno">  644</span>      <a class="code hl_typedef" href="group__cmsis-plus-rtos-clock.html#ga4f6ee5cdd07c87db11f64d02e1c354d1">clock::timestamp_t</a> timeout_timestamp = clock_-&gt;steady_now () + <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">timeout</a>;</div>
+<div class="line"><span class="lineno">  645</span> </div>
+<div class="line"><span class="lineno">  646</span>      <span class="comment">// Prepare a timeout node pointing to the current thread.</span></div>
+<div class="line"><span class="lineno">  647</span>      internal::timeout_thread_node timeout_node{ timeout_timestamp,</div>
+<div class="line"><span class="lineno">  648</span>                                                  crt_thread };</div>
+<div class="line"><span class="lineno">  649</span> </div>
+<div class="line"><span class="lineno">  650</span>      <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  651</span>        {</div>
+<div class="line"><span class="lineno">  652</span>          {</div>
+<div class="line"><span class="lineno">  653</span>            <span class="comment">// ----- Enter critical section -----------------------------------</span></div>
+<div class="line"><span class="lineno">  654</span>            interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  655</span> </div>
+<div class="line"><span class="lineno">  656</span>            <span class="keywordflow">if</span> (internal_try_wait_ ())</div>
+<div class="line"><span class="lineno">  657</span>              {</div>
+<div class="line"><span class="lineno">  658</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  659</span>              }</div>
+<div class="line"><span class="lineno">  660</span> </div>
+<div class="line"><span class="lineno">  661</span>            <span class="comment">// Add this thread to the semaphore waiting list,</span></div>
+<div class="line"><span class="lineno">  662</span>            <span class="comment">// and the clock timeout list.</span></div>
+<div class="line"><span class="lineno">  663</span>            scheduler::internal_link_node (list_, node, clock_list,</div>
+<div class="line"><span class="lineno">  664</span>                                           timeout_node);</div>
+<div class="line"><span class="lineno">  665</span>            <span class="comment">// state::suspended set in above link().</span></div>
+<div class="line"><span class="lineno">  666</span>            <span class="comment">// ----- Exit critical section ------------------------------------</span></div>
+<div class="line"><span class="lineno">  667</span>          }</div>
+<div class="line"><span class="lineno">  668</span> </div>
+<div class="line"><span class="lineno">  669</span>          <a class="code hl_function" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">port::scheduler::reschedule</a> ();</div>
+<div class="line"><span class="lineno">  670</span> </div>
+<div class="line"><span class="lineno">  671</span>          <span class="comment">// Remove the thread from the semaphore waiting list,</span></div>
+<div class="line"><span class="lineno">  672</span>          <span class="comment">// if not already removed by post() and from the clock</span></div>
+<div class="line"><span class="lineno">  673</span>          <span class="comment">// timeout list, if not already removed by the timer.</span></div>
+<div class="line"><span class="lineno">  674</span>          scheduler::internal_unlink_node (node, timeout_node);</div>
+<div class="line"><span class="lineno">  675</span> </div>
+<div class="line"><span class="lineno">  676</span>          <span class="keywordflow">if</span> (crt_thread.interrupted ())</div>
+<div class="line"><span class="lineno">  677</span>            {</div>
+<div class="line"><span class="lineno">  678</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  679</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  680</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  681</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  682</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">  683</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  684</span>              <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%u) EINTR @%p %s\n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">  685</span>                             <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span> (timeout), <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  686</span>                             <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  687</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  688</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  689</span>              <span class="keywordflow">return</span> EINTR;</div>
+<div class="line"><span class="lineno">  690</span>            }</div>
+<div class="line"><span class="lineno">  691</span> </div>
+<div class="line"><span class="lineno">  692</span>          <span class="keywordflow">if</span> (clock_-&gt;steady_now () &gt;= timeout_timestamp)</div>
+<div class="line"><span class="lineno">  693</span>            {</div>
+<div class="line"><span class="lineno">  694</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  695</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  696</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  697</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  698</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuseless-cast&quot;</span></div>
+<div class="line"><span class="lineno">  699</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  700</span>              <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%u) ETIMEDOUT @%p %s\n&quot;</span>, __func__,</div>
+<div class="line"><span class="lineno">  701</span>                             <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span> (timeout), <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  702</span>                             <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  703</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  704</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  705</span>              <span class="keywordflow">return</span> ETIMEDOUT;</div>
+<div class="line"><span class="lineno">  706</span>            }</div>
+<div class="line"><span class="lineno">  707</span>        }</div>
+<div class="line"><span class="lineno">  708</span> </div>
+<div class="line"><span class="lineno">  709</span>      <span class="comment">/* NOTREACHED */</span></div>
+<div class="line"><span class="lineno">  710</span>      <span class="keywordflow">return</span> ENOTRECOVERABLE;</div>
+<div class="line"><span class="lineno">  711</span> </div>
+<div class="line"><span class="lineno">  712</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  713</span>    }</div>
+<div class="ttc" id="aclassthread_html"><div class="ttname"><a href="classthread.html">thread</a></div><div class="ttdoc">Standard thread.</div><div class="ttdef"><b>Definition</b> <a href="thread__internal_8h_source.html#l00039">thread_internal.h:40</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-iso_html_gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc"><div class="ttname"><a href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::cv_status::timeout</a></div><div class="ttdeci">@ timeout</div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-clock_html_ga4f6ee5cdd07c87db11f64d02e1c354d1"><div class="ttname"><a href="group__cmsis-plus-rtos-clock.html#ga4f6ee5cdd07c87db11f64d02e1c354d1">os::rtos::clock::timestamp_t</a></div><div class="ttdeci">port::clock::timestamp_t timestamp_t</div><div class="ttdoc">Type of variables holding clock time stamps.</div><div class="ttdef"><b>Definition</b> <a href="os-clocks_8h_source.html#l00088">os-clocks.h:88</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1port_1_1scheduler_html_a8b50858a899f97e824e5f963253b860e"><div class="ttname"><a href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">os::rtos::port::scheduler::reschedule</a></div><div class="ttdeci">void reschedule(void)</div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1scheduler_html_adc237cecdf686cfb10780a29931166a4"><div class="ttname"><a href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">os::rtos::scheduler::locked</a></div><div class="ttdeci">bool locked(void)</div><div class="ttdoc">Check if the scheduler is locked.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00858">os-sched.h:858</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1this__thread_html_a60661f0e3a2380c9afbec42c3b505bc4"><div class="ttname"><a href="namespaceos_1_1rtos_1_1this__thread.html#a60661f0e3a2380c9afbec42c3b505bc4">os::rtos::this_thread::thread</a></div><div class="ttdeci">thread &amp; thread(void)</div><div class="ttdoc">Get the current running thread.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8cpp_source.html#l01651">os-thread.cpp:1651</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="os-thread_8h_source.html#l02373">os::rtos::thread::interrupted()</a>, <a class="el" href="os-sched_8h_source.html#l00858">os::rtos::scheduler::locked()</a>, <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">os::rtos::port::scheduler::reschedule()</a>, and <a class="el" href="os-thread_8cpp_source.html#l01651">os::rtos::this_thread::thread()</a>.</p>
 
 </div>
 </div>
@@ -985,8 +1212,6 @@ Applications using these functions may be subject to priority inversion. </dd></
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Try to lock the semaphore. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -1005,7 +1230,40 @@ Applications using these functions may be subject to priority inversion. </dd></
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00513">513</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00524">524</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  525</span>    {</div>
+<div class="line"><span class="lineno">  526</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  527</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s &lt;%u\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> (), count_);</div>
+<div class="line"><span class="lineno">  528</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  529</span> </div>
+<div class="line"><span class="lineno">  530</span>      <span class="comment">// Don&#39;t call this from high priority interrupts.</span></div>
+<div class="line"><span class="lineno">  531</span>      assert (port::interrupts::is_priority_valid ());</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  534</span> </div>
+<div class="line"><span class="lineno">  535</span>      <span class="keywordflow">return</span> port::semaphore::try_wait (<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  536</span> </div>
+<div class="line"><span class="lineno">  537</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>      {</div>
+<div class="line"><span class="lineno">  540</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  541</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  542</span> </div>
+<div class="line"><span class="lineno">  543</span>        <span class="keywordflow">if</span> (internal_try_wait_ ())</div>
+<div class="line"><span class="lineno">  544</span>          {</div>
+<div class="line"><span class="lineno">  545</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  546</span>          }</div>
+<div class="line"><span class="lineno">  547</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  548</span>          {</div>
+<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">return</span> EWOULDBLOCK;</div>
+<div class="line"><span class="lineno">  550</span>          }</div>
+<div class="line"><span class="lineno">  551</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  552</span>      }</div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  555</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1032,8 +1290,6 @@ Applications using these functions may be subject to priority inversion. </dd></
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the semaphore count value. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The semaphore count value.</dd></dl>
 <p>The <code><a class="el" href="classos_1_1rtos_1_1semaphore.html#aea52f748c776af2a5e067e50bbae909b" title="Get the semaphore count value.">value()</a></code> function shall return the value of the semaphore without affecting the state of the semaphore. The value represents an actual semaphore value that occurred at some unspecified time during the call, but it need not be the actual value of the semaphore when it is returned to the calling process. This value reflects the number of available resources.</p>
@@ -1041,8 +1297,15 @@ Applications using these functions may be subject to priority inversion. </dd></
 <dl class="section user"><dt>POSIX compatibility</dt><dd>Inspired by <a href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/sem_getvalue.html"><code>sem_getvalue()</code></a> from <a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html"><code>&lt;semaphore.h&gt;</code></a> (<a href="http://pubs.opengroup.org/onlinepubs/9699919799/nframe.html">IEEE Std 1003.1, 2013 Edition</a>).</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00723">723</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00740">740</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  741</span>    {</div>
+<div class="line"><span class="lineno">  742</span><span class="preprocessor">#if !defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  743</span>      <span class="keywordflow">return</span> (count_ &gt; 0) ? count_ : 0;</div>
+<div class="line"><span class="lineno">  744</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  745</span>      <span class="keywordflow">return</span> count_;</div>
+<div class="line"><span class="lineno">  746</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  747</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a25bf8989fbd11f6b4add24837a22cd29" name="a25bf8989fbd11f6b4add24837a22cd29"></a>
@@ -1068,8 +1331,6 @@ Applications using these functions may be subject to priority inversion. </dd></
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Lock the semaphore, possibly waiting. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -1091,7 +1352,82 @@ Applications using these functions may be subject to priority inversion. </dd></
 <dd>
 Applications using these functions may be subject to priority inversion. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00416">416</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-semaphore_8cpp_source.html#l00424">424</a> of file <a class="el" href="os-semaphore_8cpp_source.html">os-semaphore.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>    {</div>
+<div class="line"><span class="lineno">  426</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  427</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s &lt;%u\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> (), count_);</div>
+<div class="line"><span class="lineno">  428</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>      <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  431</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  432</span>      <span class="comment">// Don&#39;t call this from critical regions.</span></div>
+<div class="line"><span class="lineno">  433</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">scheduler::locked</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  436</span> </div>
+<div class="line"><span class="lineno">  437</span>      <span class="keywordflow">return</span> port::semaphore::wait (<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>      <span class="comment">// Extra test before entering the loop, with its inherent weight.</span></div>
+<div class="line"><span class="lineno">  442</span>      <span class="comment">// Trade size for speed.</span></div>
+<div class="line"><span class="lineno">  443</span>      {</div>
+<div class="line"><span class="lineno">  444</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  445</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  446</span> </div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (internal_try_wait_ ())</div>
+<div class="line"><span class="lineno">  448</span>          {</div>
+<div class="line"><span class="lineno">  449</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  450</span>          }</div>
+<div class="line"><span class="lineno">  451</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  452</span>      }</div>
+<div class="line"><span class="lineno">  453</span> </div>
+<div class="line"><span class="lineno">  454</span>      <a class="code hl_class" href="classthread.html">thread</a>&amp; crt_thread = <a class="code hl_function" href="namespaceos_1_1rtos_1_1this__thread.html#a60661f0e3a2380c9afbec42c3b505bc4">this_thread::thread</a> ();</div>
+<div class="line"><span class="lineno">  455</span> </div>
+<div class="line"><span class="lineno">  456</span>      <span class="comment">// Prepare a list node pointing to the current thread.</span></div>
+<div class="line"><span class="lineno">  457</span>      <span class="comment">// Do not worry for being on stack, it is temporarily linked to the</span></div>
+<div class="line"><span class="lineno">  458</span>      <span class="comment">// list and guaranteed to be removed before this function returns.</span></div>
+<div class="line"><span class="lineno">  459</span>      internal::waiting_thread_node node{ crt_thread };</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  462</span>        {</div>
+<div class="line"><span class="lineno">  463</span>          {</div>
+<div class="line"><span class="lineno">  464</span>            <span class="comment">// ----- Enter critical section -----------------------------------</span></div>
+<div class="line"><span class="lineno">  465</span>            interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  466</span> </div>
+<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">if</span> (internal_try_wait_ ())</div>
+<div class="line"><span class="lineno">  468</span>              {</div>
+<div class="line"><span class="lineno">  469</span>                <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  470</span>              }</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>            <span class="comment">// Add this thread to the semaphore waiting list.</span></div>
+<div class="line"><span class="lineno">  473</span>            scheduler::internal_link_node (list_, node);</div>
+<div class="line"><span class="lineno">  474</span>            <span class="comment">// state::suspended set in above link().</span></div>
+<div class="line"><span class="lineno">  475</span>            <span class="comment">// ----- Exit critical section ------------------------------------</span></div>
+<div class="line"><span class="lineno">  476</span>          }</div>
+<div class="line"><span class="lineno">  477</span> </div>
+<div class="line"><span class="lineno">  478</span>          <a class="code hl_function" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">port::scheduler::reschedule</a> ();</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>          <span class="comment">// Remove the thread from the semaphore waiting list,</span></div>
+<div class="line"><span class="lineno">  481</span>          <span class="comment">// if not already removed by post().</span></div>
+<div class="line"><span class="lineno">  482</span>          scheduler::internal_unlink_node (node);</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>          <span class="keywordflow">if</span> (crt_thread.interrupted ())</div>
+<div class="line"><span class="lineno">  485</span>            {</div>
+<div class="line"><span class="lineno">  486</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SEMAPHORE)</span></div>
+<div class="line"><span class="lineno">  487</span>              <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() EINTR @%p %s\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  488</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  489</span>              <span class="keywordflow">return</span> EINTR;</div>
+<div class="line"><span class="lineno">  490</span>            }</div>
+<div class="line"><span class="lineno">  491</span>        }</div>
+<div class="line"><span class="lineno">  492</span> </div>
+<div class="line"><span class="lineno">  493</span>      <span class="comment">/* NOTREACHED */</span></div>
+<div class="line"><span class="lineno">  494</span>      <span class="keywordflow">return</span> ENOTRECOVERABLE;</div>
+<div class="line"><span class="lineno">  495</span> </div>
+<div class="line"><span class="lineno">  496</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  497</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="os-thread_8h_source.html#l02373">os::rtos::thread::interrupted()</a>, <a class="el" href="os-sched_8h_source.html#l00858">os::rtos::scheduler::locked()</a>, <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a8b50858a899f97e824e5f963253b860e">os::rtos::port::scheduler::reschedule()</a>, and <a class="el" href="os-thread_8cpp_source.html#l01651">os::rtos::this_thread::thread()</a>.</p>
 
 </div>
 </div>

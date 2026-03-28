@@ -123,10 +123,10 @@ $(document).ready(function(){initNavTree('classos_1_1posix_1_1file__descriptors_
 </div><!--header-->
 <div class="contents">
 
-<p>File descriptors manager static class.  
+<p>File descriptors manager static class.&lt;<a class="el" href="file-descriptors-manager_8h.html">cmsis-plus/posix-io/file-descriptors-manager.h</a>&gt;  
  <a href="classos_1_1posix_1_1file__descriptors__manager.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="file-descriptors-manager_8h_source.html">cmsis-plus/posix-io/file-descriptors-manager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="file-descriptors-manager_8h_source.html">file-descriptors-manager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,8 +157,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a781c2f853891a40f62ccff1faea760a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>File descriptors manager static class. </p>
-
+<div class="textblock">
 <p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8h_source.html#l00058">58</a> of file <a class="el" href="file-descriptors-manager_8h_source.html">file-descriptors-manager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8e546a487d47b555ada00f99355c02e4" name="a8e546a487d47b555ada00f99355c02e4"></a>
@@ -177,7 +176,31 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00054">54</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00058">58</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_descriptors_manager::%s(%d)=%p\n&quot;</span>, __func__, <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">size</a>,</div>
+<div class="line"><span class="lineno">   61</span>                     <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>      assert (<a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">size</a> &gt; 0);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>      size__ = <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">size</a> + reserved__; <span class="comment">// Add space for standard files.</span></div>
+<div class="line"><span class="lineno">   66</span>      descriptors_array__ = <span class="keyword">new</span> <span class="keyword">class </span><a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>*[size__];</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">file_descriptors_manager::size</a> (); ++i)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   71</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">   72</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   74</span>          descriptors_array__[i] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1file__descriptors__manager_html_a3e17b1e557ac5451f5599372e6099f49"><div class="ttname"><a href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">os::posix::file_descriptors_manager::size</a></div><div class="ttdeci">static size_t size(void)</div><div class="ttdef"><b>Definition</b> <a href="file-descriptors-manager_8h_source.html#l00168">file-descriptors-manager.h:168</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1file__descriptors__manager_html_ad5bc8cbcdb5fd2987438ce2a52fe35fd"><div class="ttname"><a href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">os::posix::file_descriptors_manager::io</a></div><div class="ttdeci">static class io * io(int fildes)</div><div class="ttdef"><b>Definition</b> <a href="file-descriptors-manager_8cpp_source.html#l00090">file-descriptors-manager.cpp:90</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, and <a class="el" href="file-descriptors-manager_8h_source.html#l00168">size()</a>.</p>
 
 </div>
 </div>
@@ -196,7 +219,15 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00070">70</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00079">79</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_descriptors_manager::%s(%) @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>      <span class="keyword">delete</span>[] descriptors_array__;</div>
+<div class="line"><span class="lineno">   84</span>      size__ = 0;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -225,7 +256,47 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00103">103</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00117">117</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE_DESCRIPTORS_MANAGER)</span></div>
+<div class="line"><span class="lineno">  120</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_descriptors_manager::%s(%p)\n&quot;</span>, __func__, io);</div>
+<div class="line"><span class="lineno">  121</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>-&gt;<a class="code hl_function" href="classos_1_1posix_1_1io.html#a2736d78d50886fec9adba7904540b90c">file_descriptor</a> () &gt;= 0)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>          <span class="comment">// Already allocated</span></div>
+<div class="line"><span class="lineno">  126</span>          errno = EBUSY;</div>
+<div class="line"><span class="lineno">  127</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">for</span> (std::size_t i = reserved__; i &lt; size__; ++i)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  133</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  134</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  136</span>          <span class="keywordflow">if</span> (descriptors_array__[i] == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>              descriptors_array__[i] = <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>;</div>
+<div class="line"><span class="lineno">  139</span>              <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>-&gt;<a class="code hl_function" href="classos_1_1posix_1_1io.html#a2736d78d50886fec9adba7904540b90c">file_descriptor</a> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (i));</div>
+<div class="line"><span class="lineno">  140</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE_DESCRIPTORS_MANAGER)</span></div>
+<div class="line"><span class="lineno">  141</span>              <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_descriptors_manager::%s(%p) fd=%d\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  142</span>                             __func__, io, i);</div>
+<div class="line"><span class="lineno">  143</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  144</span>              <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (i);</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>      <span class="comment">// Too many files open in system.</span></div>
+<div class="line"><span class="lineno">  150</span>      errno = ENFILE;</div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1io_html_a2736d78d50886fec9adba7904540b90c"><div class="ttname"><a href="classos_1_1posix_1_1io.html#a2736d78d50886fec9adba7904540b90c">os::posix::io::file_descriptor</a></div><div class="ttdeci">file_descriptor_t file_descriptor(void) const</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00452">io.h:452</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="io_8h_source.html#l00452">os::posix::io::file_descriptor()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00189">os::posix::io::alloc_file_descriptor()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +334,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00136">136</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00155">155</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>      <span class="keywordflow">if</span> ((fildes &lt; 0) || (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (fildes) &gt;= size__))</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>          errno = EBADF;</div>
+<div class="line"><span class="lineno">  160</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>-&gt;<a class="code hl_function" href="classos_1_1posix_1_1io.html#a2736d78d50886fec9adba7904540b90c">file_descriptor</a> () &gt;= 0)</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>          <span class="comment">// Already allocated</span></div>
+<div class="line"><span class="lineno">  166</span>          errno = EBUSY;</div>
+<div class="line"><span class="lineno">  167</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  168</span>        }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  171</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  172</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  173</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  174</span>      descriptors_array__[fildes] = <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>;</div>
+<div class="line"><span class="lineno">  175</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  176</span>      <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>-&gt;<a class="code hl_function" href="classos_1_1posix_1_1io.html#a2736d78d50886fec9adba7904540b90c">file_descriptor</a> (fildes);</div>
+<div class="line"><span class="lineno">  177</span>      <span class="keywordflow">return</span> fildes;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="io_8h_source.html#l00452">os::posix::io::file_descriptor()</a>.</p>
 
 </div>
 </div>
@@ -291,7 +387,31 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00157">157</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00181">181</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>    {</div>
+<div class="line"><span class="lineno">  183</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE_DESCRIPTORS_MANAGER)</span></div>
+<div class="line"><span class="lineno">  184</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_descriptors_manager::%s(%d)\n&quot;</span>, __func__, fildes);</div>
+<div class="line"><span class="lineno">  185</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>      <span class="keywordflow">if</span> ((fildes &lt; 0) || (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (fildes) &gt;= size__))</div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>          errno = EBADF;</div>
+<div class="line"><span class="lineno">  190</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  194</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  195</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  196</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  197</span>      descriptors_array__[fildes]-&gt;clear_file_descriptor ();</div>
+<div class="line"><span class="lineno">  198</span>      descriptors_array__[fildes] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  199</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  200</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00164">os::posix::io::close()</a>.</p>
 
 </div>
 </div>
@@ -319,7 +439,23 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00081">81</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00090">90</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>      <span class="comment">// Check if valid descriptor or buffer not yet initialised</span></div>
+<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">if</span> ((fildes &lt; 0) || (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (fildes) &gt;= size__)</div>
+<div class="line"><span class="lineno">   94</span>          || (descriptors_array__ == <span class="keyword">nullptr</span>))</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>          <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   99</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  100</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  102</span>      <span class="keywordflow">return</span> descriptors_array__[fildes];</div>
+<div class="line"><span class="lineno">  103</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00103">__posix_close()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00342">__posix_fcntl()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00360">__posix_fstat()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00372">__posix_fstatvfs()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00416">__posix_fsync()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00394">__posix_ftruncate()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00165">__posix_ioctl()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00219">__posix_isatty()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00192">__posix_lseek()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00119">__posix_read()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00235">__posix_tcdrain()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00300">__posix_tcflush()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00256">__posix_tcgetattr()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00321">__posix_tcsendbreak()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00277">__posix_tcsetattr()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00136">__posix_write()</a>, and <a class="el" href="c-syscalls-posix_8cpp_source.html#l00153">__posix_writev()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +483,12 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8h_source.html#l00169">169</a> of file <a class="el" href="file-descriptors-manager_8h_source.html">file-descriptors-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8h_source.html#l00168">168</a> of file <a class="el" href="file-descriptors-manager_8h_source.html">file-descriptors-manager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>      <span class="keywordflow">return</span> size__;</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="file-descriptors-manager_8cpp_source.html#l00058">file_descriptors_manager()</a>, and <a class="el" href="file-descriptors-manager_8cpp_source.html#l00221">used()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +516,29 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00175">175</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00204">204</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>      assert ((fildes &gt;= 0) &amp;&amp; (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (fildes) &lt; size__));</div>
+<div class="line"><span class="lineno">  207</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  208</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  209</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  211</span>      <span class="keyword">auto</span>* <span class="keyword">const</span> <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a> = descriptors_array__[fildes];</div>
+<div class="line"><span class="lineno">  212</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  213</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>-&gt;<a class="code hl_function" href="classos_1_1posix_1_1io.html#ae30a520c158f7c9ab48ce3d40080c6db">get_type</a> () != <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d">posix::io::type_t</a><span class="keyword">&gt;</span> (<a class="code hl_enumvalue" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa">io::type::socket</a>))</div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>          <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>      <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>class <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a055173c70536635813f827f561429c33">socket</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#ad5bc8cbcdb5fd2987438ce2a52fe35fd">io</a>);</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1file__descriptors__manager_html_a055173c70536635813f827f561429c33"><div class="ttname"><a href="classos_1_1posix_1_1file__descriptors__manager.html#a055173c70536635813f827f561429c33">os::posix::file_descriptors_manager::socket</a></div><div class="ttdeci">static class socket * socket(int fildes)</div><div class="ttdef"><b>Definition</b> <a href="file-descriptors-manager_8cpp_source.html#l00204">file-descriptors-manager.cpp:204</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1io_html_a2784e8adb38757dc5ab882c7cf75b35d"><div class="ttname"><a href="classos_1_1posix_1_1io.html#a2784e8adb38757dc5ab882c7cf75b35d">os::posix::io::type_t</a></div><div class="ttdeci">unsigned int type_t</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00125">io.h:125</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1io_html_ae30a520c158f7c9ab48ce3d40080c6db"><div class="ttname"><a href="classos_1_1posix_1_1io.html#ae30a520c158f7c9ab48ce3d40080c6db">os::posix::io::get_type</a></div><div class="ttdeci">type_t get_type(void) const</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00434">io.h:434</a></div></div>
+<div class="ttc" id="aclassos_1_1posix_1_1io_html_af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa"><div class="ttname"><a href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa">os::posix::io::type::socket</a></div><div class="ttdeci">@ socket</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="io_8h_source.html#l00434">os::posix::io::get_type()</a>, and <a class="el" href="classos_1_1posix_1_1io.html#af15a8dae890b73597de4807f15e38edea61f2529360aec54f5dc9804b842cf3fa">os::posix::io::socket</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="c-syscalls-posix_8cpp_source.html#l00603">__posix_accept()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00617">__posix_bind()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00630">__posix_connect()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00643">__posix_getpeername()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00656">__posix_getsockname()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00669">__posix_getsockopt()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00682">__posix_listen()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00694">__posix_recv()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00706">__posix_recvfrom()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00719">__posix_recvmsg()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00731">__posix_send()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00743">__posix_sendmsg()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00755">__posix_sendto()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00768">__posix_setsockopt()</a>, <a class="el" href="c-syscalls-posix_8cpp_source.html#l00781">__posix_shutdown()</a>, and <a class="el" href="c-syscalls-posix_8cpp_source.html#l00793">__posix_sockatmark()</a>.</p>
 
 </div>
 </div>
@@ -403,7 +566,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00187">187</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00221">221</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>    {</div>
+<div class="line"><span class="lineno">  223</span>      std::size_t count = reserved__;</div>
+<div class="line"><span class="lineno">  224</span>      <span class="keywordflow">for</span> (std::size_t i = reserved__; i &lt; <a class="code hl_function" href="classos_1_1posix_1_1file__descriptors__manager.html#a3e17b1e557ac5451f5599372e6099f49">file_descriptors_manager::size</a> ();</div>
+<div class="line"><span class="lineno">  225</span>           ++i)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  228</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  229</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  230</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  231</span>          <span class="keywordflow">if</span> (descriptors_array__[i] != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  232</span>            {</div>
+<div class="line"><span class="lineno">  233</span>              ++count;</div>
+<div class="line"><span class="lineno">  234</span>            }</div>
+<div class="line"><span class="lineno">  235</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  236</span>        }</div>
+<div class="line"><span class="lineno">  237</span>      <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="file-descriptors-manager_8h_source.html#l00168">size()</a>.</p>
 
 </div>
 </div>
@@ -431,8 +613,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00093">93</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="file-descriptors-manager_8cpp_source.html#l00107">107</a> of file <a class="el" href="file-descriptors-manager_8cpp_source.html">file-descriptors-manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>      <span class="keywordflow">if</span> ((fildes &lt; 0) || (<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (fildes) &gt;= size__))</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

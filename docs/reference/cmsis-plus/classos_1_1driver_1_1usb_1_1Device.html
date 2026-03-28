@@ -272,7 +272,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00201">201</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00192">192</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aefd2c04f314d809a54c7b3be7bb2b806" name="aefd2c04f314d809a54c7b3be7bb2b806"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefd2c04f314d809a54c7b3be7bb2b806">&#9670;&#160;</a></span>Device() <span class="overload">[1/3]</span></h2>
@@ -297,7 +297,23 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00039">39</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00038">38</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>      {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#a6268a093ada872cafe8a0fd1c2b8f5ac">cb_device_func_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#adb3791de59c0cc27bf62751694369c12">cb_device_object_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab0d0aa18489db4d89db6478673ce3d74">cb_endpoint_func_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab2bb9559a8f39589cb49076653e7061b">cb_endpoint_object_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   47</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a6268a093ada872cafe8a0fd1c2b8f5ac"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a6268a093ada872cafe8a0fd1c2b8f5ac">os::driver::usb::Device::cb_device_func_</a></div><div class="ttdeci">device::signal_device_event_t cb_device_func_</div><div class="ttdoc">Pointer to static function that implements the device callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-device_8h_source.html#l00442">usb-device.h:442</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_ab0d0aa18489db4d89db6478673ce3d74"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#ab0d0aa18489db4d89db6478673ce3d74">os::driver::usb::Device::cb_endpoint_func_</a></div><div class="ttdeci">device::signal_endpoint_event_t cb_endpoint_func_</div><div class="ttdoc">Pointer to static function that implements the endpoint callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-device_8h_source.html#l00448">usb-device.h:448</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_ab2bb9559a8f39589cb49076653e7061b"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#ab2bb9559a8f39589cb49076653e7061b">os::driver::usb::Device::cb_endpoint_object_</a></div><div class="ttdeci">const void * cb_endpoint_object_</div><div class="ttdoc">Pointer to object instance associated with the endpoint callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-device_8h_source.html#l00451">usb-device.h:451</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_adb3791de59c0cc27bf62751694369c12"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#adb3791de59c0cc27bf62751694369c12">os::driver::usb::Device::cb_device_object_</a></div><div class="ttdeci">const void * cb_device_object_</div><div class="ttdoc">Pointer to object instance associated with the device callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-device_8h_source.html#l00445">usb-device.h:445</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="usb-device_8h_source.html#l00442">cb_device_func_</a>, <a class="el" href="usb-device_8h_source.html#l00445">cb_device_object_</a>, <a class="el" href="usb-device_8h_source.html#l00448">cb_endpoint_func_</a>, <a class="el" href="usb-device_8h_source.html#l00451">cb_endpoint_object_</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -376,7 +392,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00050">50</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00049">49</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>      {</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   52</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -404,8 +425,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Abort current USB Endpoint transfer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -418,7 +437,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00553">553</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00556">556</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  557</span>      {</div>
+<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a9a5c578553be3eb5f186c813866fe24c">do_abort_transfer</a> (ep_addr);</div>
+<div class="line"><span class="lineno">  559</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a9a5c578553be3eb5f186c813866fe24c"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a9a5c578553be3eb5f186c813866fe24c">os::driver::usb::Device::do_abort_transfer</a></div><div class="ttdeci">virtual return_t do_abort_transfer(endpoint_t ep_addr) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a9a5c578553be3eb5f186c813866fe24c">do_abort_transfer()</a>.</p>
 
 </div>
 </div>
@@ -445,8 +470,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Set USB <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a> Address. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dev_addr</td><td><a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a> Address </td></tr>
@@ -455,7 +478,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00516">516</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00519">519</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  520</span>      {</div>
+<div class="line"><span class="lineno">  521</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a01116cdd0a7925955aafa71acfd7e7b2">do_configure_address</a> (dev_addr);</div>
+<div class="line"><span class="lineno">  522</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a01116cdd0a7925955aafa71acfd7e7b2"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a01116cdd0a7925955aafa71acfd7e7b2">os::driver::usb::Device::do_configure_address</a></div><div class="ttdeci">virtual return_t do_configure_address(device_address_t dev_addr) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a01116cdd0a7925955aafa71acfd7e7b2">do_configure_address()</a>.</p>
 
 </div>
 </div>
@@ -498,8 +527,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Configure USB Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -514,7 +541,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00528">528</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00531">531</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  533</span>      {</div>
+<div class="line"><span class="lineno">  534</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#ab83173dadf5c4161d241b8dd52bfdbfa">do_configure_endpoint</a> (ep_addr, ep_type, ep_max_packet_size);</div>
+<div class="line"><span class="lineno">  535</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_ab83173dadf5c4161d241b8dd52bfdbfa"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#ab83173dadf5c4161d241b8dd52bfdbfa">os::driver::usb::Device::do_configure_endpoint</a></div><div class="ttdeci">virtual return_t do_configure_endpoint(endpoint_t ep_addr, Endpoint_type ep_type, packet_size_t ep_max_packet_size) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#ab83173dadf5c4161d241b8dd52bfdbfa">do_configure_endpoint()</a>.</p>
 
 </div>
 </div>
@@ -541,11 +574,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Connect USB <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00498">498</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00501">501</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span>      {</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a8eec551321b0628ccdc67e55b5b1ec02">do_connect</a> ();</div>
+<div class="line"><span class="lineno">  504</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a8eec551321b0628ccdc67e55b5b1ec02"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a8eec551321b0628ccdc67e55b5b1ec02">os::driver::usb::Device::do_connect</a></div><div class="ttdeci">virtual return_t do_connect(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a8eec551321b0628ccdc67e55b5b1ec02">do_connect()</a>.</p>
 
 </div>
 </div>
@@ -572,11 +609,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Disconnect USB <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00504">504</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00507">507</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  508</span>      {</div>
+<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#ac4ba361eab05aa81869d911dfdf9bdfe">do_disconnect</a> ();</div>
+<div class="line"><span class="lineno">  510</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_ac4ba361eab05aa81869d911dfdf9bdfe"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#ac4ba361eab05aa81869d911dfdf9bdfe">os::driver::usb::Device::do_disconnect</a></div><div class="ttdeci">virtual return_t do_disconnect(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#ac4ba361eab05aa81869d911dfdf9bdfe">do_disconnect()</a>.</p>
 
 </div>
 </div>
@@ -606,6 +647,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#abcd3fd9ff4b613982e11bf796b4ca69f">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00556">abort_transfer()</a>.</p>
+
 </div>
 </div>
 <a id="a01116cdd0a7925955aafa71acfd7e7b2" name="a01116cdd0a7925955aafa71acfd7e7b2"></a>
@@ -633,6 +676,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a6d5bc260be3e98f39c71186c13aa9cd8">os::driver::usbd_wrapper</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00519">configure_address()</a>.</p>
 
 </div>
 </div>
@@ -678,6 +723,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a9813c4dec711891578c58529b80eddb6">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00531">configure_endpoint()</a>.</p>
+
 </div>
 </div>
 <a id="a8eec551321b0628ccdc67e55b5b1ec02" name="a8eec551321b0628ccdc67e55b5b1ec02"></a>
@@ -705,6 +752,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a4fa529e24f54bb539cb5dc63c3c389cc">os::driver::usbd_wrapper</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00501">connect()</a>.</p>
 
 </div>
 </div>
@@ -734,6 +783,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a6bcd391a26f364028ef6ab3960578d0b">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00507">disconnect()</a>.</p>
+
 </div>
 </div>
 <a id="a265e07052eeaa5ba34ed9100ddc8e83f" name="a265e07052eeaa5ba34ed9100ddc8e83f"></a>
@@ -761,6 +812,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a614b5c231c959b358b8f5573bd28a698">os::driver::usbd_wrapper</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00489">get_capabilities()</a>.</p>
 
 </div>
 </div>
@@ -790,6 +843,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a6226a794be24d948cde4877afb9f1f68">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00525">get_frame_number()</a>.</p>
+
 </div>
 </div>
 <a id="aeea63a14c66a5cfef87c8f956669e5dc" name="aeea63a14c66a5cfef87c8f956669e5dc"></a>
@@ -818,6 +873,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a3953427f737cefe27ff82d9abba892d7">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00495">get_status()</a>.</p>
+
 </div>
 </div>
 <a id="a22dd1384312d1978cc5970194f6f3177" name="a22dd1384312d1978cc5970194f6f3177"></a>
@@ -845,6 +902,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#ac0a52d9ba45f58e051bc8ea7e9e1e258">os::driver::usbd_wrapper</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00550">get_transfer_count()</a>.</p>
 
 </div>
 </div>
@@ -968,6 +1027,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#ada10e85ddce10702e21a62380205515c">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00544">stall_endpoint()</a>.</p>
+
 </div>
 </div>
 <a id="a8cf74823adf06e4a55c8c7478f03b001" name="a8cf74823adf06e4a55c8c7478f03b001"></a>
@@ -1040,6 +1101,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#a26eec2c2a769c3c742f74a52251efb88">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00538">unconfigure_endpoint()</a>.</p>
+
 </div>
 </div>
 <a id="a3b69b92432a0de8318d0121113f79767" name="a3b69b92432a0de8318d0121113f79767"></a>
@@ -1068,6 +1131,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1driver_1_1usbd__wrapper.html#ae673be7524dc239f7e5b3c8c0b8a19d1">os::driver::usbd_wrapper</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="usb-device_8h_source.html#l00513">wakeup_remote()</a>.</p>
+
 </div>
 </div>
 <a id="a7a069a3179bf58628bc0e48a88886045" name="a7a069a3179bf58628bc0e48a88886045"></a>
@@ -1093,11 +1158,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get driver capabilities. </p>
 <dl class="section return"><dt>Returns</dt><dd>Capabilities. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00486">486</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00489">489</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>      {</div>
+<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a265e07052eeaa5ba34ed9100ddc8e83f">do_get_capabilities</a> ();</div>
+<div class="line"><span class="lineno">  492</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a265e07052eeaa5ba34ed9100ddc8e83f"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a265e07052eeaa5ba34ed9100ddc8e83f">os::driver::usb::Device::do_get_capabilities</a></div><div class="ttdeci">virtual const device::Capabilities &amp; do_get_capabilities(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a265e07052eeaa5ba34ed9100ddc8e83f">do_get_capabilities()</a>.</p>
 
 </div>
 </div>
@@ -1124,11 +1193,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get current USB Frame Number. </p>
 <dl class="section return"><dt>Returns</dt><dd>Frame Number </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00522">522</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00525">525</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  526</span>      {</div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a528c272857ffd02713500ab4a9a5f373">do_get_frame_number</a> ();</div>
+<div class="line"><span class="lineno">  528</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a528c272857ffd02713500ab4a9a5f373"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a528c272857ffd02713500ab4a9a5f373">os::driver::usb::Device::do_get_frame_number</a></div><div class="ttdeci">virtual frame_number_t do_get_frame_number(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a528c272857ffd02713500ab4a9a5f373">do_get_frame_number()</a>.</p>
 
 </div>
 </div>
@@ -1155,11 +1228,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get current USB <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a> Status. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1driver_1_1usb_1_1Device.html">Device</a> State. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00492">492</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00495">495</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>      {</div>
+<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#aeea63a14c66a5cfef87c8f956669e5dc">do_get_status</a> ();</div>
+<div class="line"><span class="lineno">  498</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_aeea63a14c66a5cfef87c8f956669e5dc"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#aeea63a14c66a5cfef87c8f956669e5dc">os::driver::usb::Device::do_get_status</a></div><div class="ttdeci">virtual device::Status &amp; do_get_status(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#aeea63a14c66a5cfef87c8f956669e5dc">do_get_status()</a>.</p>
 
 </div>
 </div>
@@ -1186,8 +1263,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get result of USB Endpoint transfer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -1200,7 +1275,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of successfully transferred data bytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00547">547</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00550">550</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  551</span>      {</div>
+<div class="line"><span class="lineno">  552</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a22dd1384312d1978cc5970194f6f3177">do_get_transfer_count</a> (ep_addr);</div>
+<div class="line"><span class="lineno">  553</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a22dd1384312d1978cc5970194f6f3177"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a22dd1384312d1978cc5970194f6f3177">os::driver::usb::Device::do_get_transfer_count</a></div><div class="ttdeci">virtual std::size_t do_get_transfer_count(endpoint_t ep_addr) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a22dd1384312d1978cc5970194f6f3177">do_get_transfer_count()</a>.</p>
 
 </div>
 </div>
@@ -1227,12 +1308,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get driver version. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1driver_1_1Version.html">Version</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00195">195</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00185">185</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1Base.html#a29e354707bc986f96cb43f16221cca06">do_get_version</a> ();</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1Base_html_a29e354707bc986f96cb43f16221cca06"><div class="ttname"><a href="classos_1_1driver_1_1Base.html#a29e354707bc986f96cb43f16221cca06">os::driver::Base::do_get_version</a></div><div class="ttdeci">virtual const Version &amp; do_get_version(void) noexcept=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a96ea7438b7b8fed8e38ec4b6c203871f" name="a96ea7438b7b8fed8e38ec4b6c203871f"></a>
@@ -1310,8 +1393,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Power up/down device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Power state </td></tr>
@@ -1320,8 +1401,12 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00201">201</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00191">191</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">do_power</a> (state);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1Base_html_ae396e2bab34d6a6929a3e65aa9155412"><div class="ttname"><a href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">os::driver::Base::do_power</a></div><div class="ttdeci">virtual return_t do_power(Power state) noexcept=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a688de8e35598af531305da80e82d98c1" name="a688de8e35598af531305da80e82d98c1"></a>
@@ -1347,8 +1432,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Read setup packet received over Control Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Pointer to buffer for setup packet </td></tr>
@@ -1358,7 +1441,12 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00074">74</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>      {</div>
+<div class="line"><span class="lineno">   76</span>        assert (buf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#abc7058730daddc915ebcd7b3c9d113e1">do_read_setup_packet</a> (buf);</div>
+<div class="line"><span class="lineno">   78</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_abc7058730daddc915ebcd7b3c9d113e1"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#abc7058730daddc915ebcd7b3c9d113e1">os::driver::usb::Device::do_read_setup_packet</a></div><div class="ttdeci">virtual return_t do_read_setup_packet(uint8_t *buf) noexcept=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa9d5502353d4ae3622ee037acf86753f" name="aa9d5502353d4ae3622ee037acf86753f"></a>
@@ -1394,8 +1482,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Register device event callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cb_func</td><td>Pointer to function. </td></tr>
@@ -1405,8 +1491,12 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00056">56</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00055">55</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>      {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#a6268a093ada872cafe8a0fd1c2b8f5ac">cb_device_func_</a> = cb_func;</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#adb3791de59c0cc27bf62751694369c12">cb_device_object_</a> = cb_object;</div>
+<div class="line"><span class="lineno">   60</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad0f489a8ab2c4478c4ad6665c02c1b50" name="ad0f489a8ab2c4478c4ad6665c02c1b50"></a>
@@ -1443,8 +1533,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00064">64</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00063">63</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>      {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab0d0aa18489db4d89db6478673ce3d74">cb_endpoint_func_</a> = cb_func;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab2bb9559a8f39589cb49076653e7061b">cb_endpoint_object_</a> = cb_object;</div>
+<div class="line"><span class="lineno">   69</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4e5d57abce213113667e61355a0e2cdf" name="a4e5d57abce213113667e61355a0e2cdf"></a>
@@ -1470,8 +1564,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Signal device events. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>Event. </td></tr>
@@ -1480,8 +1572,15 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00094">94</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00095">95</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>      {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#a6268a093ada872cafe8a0fd1c2b8f5ac">cb_device_func_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   98</span>          {</div>
+<div class="line"><span class="lineno">   99</span>            <span class="comment">// Forward event to registered callback.</span></div>
+<div class="line"><span class="lineno">  100</span>            <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#a6268a093ada872cafe8a0fd1c2b8f5ac">cb_device_func_</a> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#adb3791de59c0cc27bf62751694369c12">cb_device_object_</a>, event);</div>
+<div class="line"><span class="lineno">  101</span>          }</div>
+<div class="line"><span class="lineno">  102</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a244ef05affa778be22c9f0ff70701f8b" name="a244ef05affa778be22c9f0ff70701f8b"></a>
@@ -1517,8 +1616,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Signal USB Endpoint Event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -1532,8 +1629,15 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00104">104</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00105">105</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>      {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab0d0aa18489db4d89db6478673ce3d74">cb_endpoint_func_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  109</span>          {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="comment">// Forward event to registered callback.</span></div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab0d0aa18489db4d89db6478673ce3d74">cb_endpoint_func_</a> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Device.html#ab2bb9559a8f39589cb49076653e7061b">cb_endpoint_object_</a>, ep_addr, event);</div>
+<div class="line"><span class="lineno">  112</span>          }</div>
+<div class="line"><span class="lineno">  113</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afc5df60a9e2df09bc635797d464acbce" name="afc5df60a9e2df09bc635797d464acbce"></a>
@@ -1569,8 +1673,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Set/Clear Stall for USB Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -1588,7 +1690,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00541">541</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00544">544</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  545</span>      {</div>
+<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a00f7d5328b28ccf92bc9402fa52f66e3">do_stall_endpoint</a> (ep_addr, stall);</div>
+<div class="line"><span class="lineno">  547</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a00f7d5328b28ccf92bc9402fa52f66e3"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a00f7d5328b28ccf92bc9402fa52f66e3">os::driver::usb::Device::do_stall_endpoint</a></div><div class="ttdeci">virtual return_t do_stall_endpoint(endpoint_t ep_addr, bool stall) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a00f7d5328b28ccf92bc9402fa52f66e3">do_stall_endpoint()</a>.</p>
 
 </div>
 </div>
@@ -1631,8 +1739,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Read data from or Write data to USB Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -1648,6 +1754,18 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="usb-device_8cpp_source.html#l00081">81</a> of file <a class="el" href="usb-device_8cpp_source.html">usb-device.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>      {</div>
+<div class="line"><span class="lineno">   84</span>        assert (data != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   86</span>          {</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">RETURN_OK</a>;</div>
+<div class="line"><span class="lineno">   88</span>          }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a8cf74823adf06e4a55c8c7478f03b001">do_transfer</a> (ep_addr, data, num);</div>
+<div class="line"><span class="lineno">   90</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a8cf74823adf06e4a55c8c7478f03b001"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a8cf74823adf06e4a55c8c7478f03b001">os::driver::usb::Device::do_transfer</a></div><div class="ttdeci">virtual return_t do_transfer(endpoint_t ep_addr, uint8_t *data, std::size_t num) noexcept=0</div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_a98267e1a7761553e8a6671de68455497"><div class="ttname"><a href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a></div><div class="ttdeci">constexpr return_t RETURN_OK</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00052">common.h:52</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>.</p>
 
 </div>
 </div>
@@ -1674,8 +1792,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Unconfigure USB Endpoint. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ep_addr</td><td>Endpoint Address<ul>
@@ -1688,7 +1804,13 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00535">535</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00538">538</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  539</span>      {</div>
+<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a45a2ca102e61cfd819da87adc6c83701">do_unconfigure_endpoint</a> (ep_addr);</div>
+<div class="line"><span class="lineno">  541</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a45a2ca102e61cfd819da87adc6c83701"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a45a2ca102e61cfd819da87adc6c83701">os::driver::usb::Device::do_unconfigure_endpoint</a></div><div class="ttdeci">virtual return_t do_unconfigure_endpoint(endpoint_t ep_addr) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a45a2ca102e61cfd819da87adc6c83701">do_unconfigure_endpoint()</a>.</p>
 
 </div>
 </div>
@@ -1715,11 +1837,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Trigger USB Remote Wakeup. </p>
 <dl class="section return"><dt>Returns</dt><dd>Execution status. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00510">510</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00513">513</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  514</span>      {</div>
+<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Device.html#a3b69b92432a0de8318d0121113f79767">do_wakeup_remote</a> ();</div>
+<div class="line"><span class="lineno">  516</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Device_html_a3b69b92432a0de8318d0121113f79767"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Device.html#a3b69b92432a0de8318d0121113f79767">os::driver::usb::Device::do_wakeup_remote</a></div><div class="ttdeci">virtual return_t do_wakeup_remote(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Device.html#a3b69b92432a0de8318d0121113f79767">do_wakeup_remote()</a>.</p>
 
 </div>
 </div>
@@ -1744,9 +1870,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to static function that implements the device callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00442">442</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00438">438</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-device_8cpp_source.html#l00038">Device()</a>.</p>
 
 </div>
 </div>
@@ -1770,9 +1896,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to object instance associated with the device callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00445">445</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00441">441</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-device_8cpp_source.html#l00038">Device()</a>.</p>
 
 </div>
 </div>
@@ -1796,9 +1922,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to static function that implements the endpoint callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00448">448</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00444">444</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-device_8cpp_source.html#l00038">Device()</a>.</p>
 
 </div>
 </div>
@@ -1822,9 +1948,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to object instance associated with the endpoint callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00451">451</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00447">447</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-device_8cpp_source.html#l00038">Device()</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1974,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00451">451</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-device_8h_source.html#l00454">454</a> of file <a class="el" href="usb-device_8h_source.html">usb-device.h</a>.</p>
 
 </div>
 </div>

@@ -91,5 +91,5 @@ var searchData=
   ['ostimerdef_5ft_88',['osTimerDef_t',['../cmsis__os_8h.html#a2144eb7d94a485f516bf0b09078f883a',1,'cmsis_os.h']]],
   ['ostimerid_89',['osTimerId',['../cmsis__os_8h.html#a8dff27523c3fda42403f35ade9c46e50',1,'cmsis_os.h']]],
   ['other_90',['other',['../structos_1_1rtos_1_1memory_1_1allocator__stateless__polymorphic__synchronized_1_1rebind.html#ae530b0bbf5b8b1a41d4959caaa97fe22',1,'os::rtos::memory::allocator_stateless_polymorphic_synchronized::rebind']]],
-  ['out_5fof_5fmemory_5fhandler_5ft_91',['out_of_memory_handler_t',['../group__cmsis-plus-rtos-memres.html#ga165e1d42e364dcabcbf01e5322b9f554',1,'os::rtos::memory']]]
+  ['out_5fof_5fmemory_5fhandler_5ft_91',['out_of_memory_handler_t',['../group__cmsis-plus-rtos-memres.html#ga584da84e822c3f3574ce2e1f14ee0f7e',1,'os::rtos::memory']]]
 ];

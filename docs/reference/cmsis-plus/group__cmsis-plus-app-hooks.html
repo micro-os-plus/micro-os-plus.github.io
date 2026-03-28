@@ -172,7 +172,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 <tr class="separator:gad1551d37cf9ec69bab33cbf502c8d925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>µOS++ application customisable functions and hooks. </p>
 <p>Applications using µOS++ can customise the behaviour of the system or intercept several events by redefining these functions.</p>
 <p>All of them have weak default definitions, providing a reasonable functionality. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -188,7 +187,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00180">180</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00178">178</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +203,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00179">179</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00177">177</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +219,7 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00178">178</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-hooks_8h_source.html#l00176">176</a> of file <a class="el" href="os-hooks_8h_source.html">os-hooks.h</a>.</p>
 
 </div>
 </div>
@@ -240,15 +239,177 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The standard C application entry point. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Does not return.</dd></dl>
 <p>This is the place where the Cortex-M core will go immediately after reset (the <code>Reset_Handler</code> calls this function).</p>
 <p>To reach this location, the reset stack must point to a valid internal RAM area.</p>
 <p>Debugging new startup configurations usually begins with placing a breakpoint at <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2" title="The standard C application entry point.">_start()</a></code>, and stepping through the routine. </p>
 
-<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00250">250</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00241">241</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>{</div>
+<div class="line"><span class="lineno">  243</span>  <span class="comment">// After Reset the Cortex-M processor is in Thread mode,</span></div>
+<div class="line"><span class="lineno">  244</span>  <span class="comment">// priority is Privileged, and the Stack is set to Main.</span></div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>  <span class="comment">// --------------------------------------------------------------------------</span></div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>  <span class="comment">// Initialise hardware right after reset, to switch clock to higher</span></div>
+<div class="line"><span class="lineno">  249</span>  <span class="comment">// frequency and have the rest of the initialisations run faster.</span></div>
+<div class="line"><span class="lineno">  250</span>  <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  251</span>  <span class="comment">// Mandatory on platforms like Kinetis, which start with the watch dog</span></div>
+<div class="line"><span class="lineno">  252</span>  <span class="comment">// enabled and require an early sequence to disable it.</span></div>
+<div class="line"><span class="lineno">  253</span>  <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  254</span>  <span class="comment">// Also useful on platform with external RAM, that need to be</span></div>
+<div class="line"><span class="lineno">  255</span>  <span class="comment">// initialised before filling the BSS section.</span></div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a> ();</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>  <span class="comment">// Use Old Style DATA and BSS section initialisation,</span></div>
+<div class="line"><span class="lineno">  260</span>  <span class="comment">// that will manage a single BSS sections.</span></div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span><span class="preprocessor">#if defined(DEBUG) &amp;&amp; (OS_BOOL_STARTUP_GUARD_CHECKS)</span></div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>  __data_begin_guard = DATA_GUARD_BAD_VALUE;</div>
+<div class="line"><span class="lineno">  265</span>  __data_end_guard = DATA_GUARD_BAD_VALUE;</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span><span class="preprocessor">#if !defined(OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS)</span></div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>  <span class="comment">// Copy the DATA segment from Flash to RAM (inlined).</span></div>
+<div class="line"><span class="lineno">  272</span>  <a class="code hl_function" href="startup_8cpp.html#a4be4e32ccbd908caca10f9f9badc2494">os_initialize_data</a> (&amp;<a class="code hl_variable" href="startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9">_sidata</a>, &amp;<a class="code hl_variable" href="startup_8cpp.html#a5003b70cf06371aede7f4f2fb51b8d67">_sdata</a>, &amp;<a class="code hl_variable" href="startup_8cpp.html#aa271d502d9a165bb4896f2e4a0e7921b">_edata</a>);</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>  <span class="comment">// Copy the data sections from flash to SRAM.</span></div>
+<div class="line"><span class="lineno">  277</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* p = &amp;__data_regions_array_start;</div>
+<div class="line"><span class="lineno">  278</span>       p &lt; &amp;__data_regions_array_end;)</div>
+<div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* from = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>*)(*p++);</div>
+<div class="line"><span class="lineno">  281</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* region_begin = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>*)(*p++);</div>
+<div class="line"><span class="lineno">  282</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* region_end = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>*)(*p++);</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>      <a class="code hl_function" href="startup_8cpp.html#a4be4e32ccbd908caca10f9f9badc2494">os_initialize_data</a> (from, region_begin, region_end);</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span><span class="preprocessor">#if defined(DEBUG) &amp;&amp; (OS_BOOL_STARTUP_GUARD_CHECKS)</span></div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>  <span class="keywordflow">if</span> ((__data_begin_guard != DATA_BEGIN_GUARD_VALUE)</div>
+<div class="line"><span class="lineno">  292</span>      || (__data_end_guard != DATA_END_GUARD_VALUE))</div>
+<div class="line"><span class="lineno">  293</span>    {</div>
+<div class="line"><span class="lineno">  294</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  295</span>        {</div>
+<div class="line"><span class="lineno">  296</span>          __NOP ();</div>
+<div class="line"><span class="lineno">  297</span>        }</div>
+<div class="line"><span class="lineno">  298</span>    }</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  301</span> </div>
+<div class="line"><span class="lineno">  302</span><span class="preprocessor">#if defined(DEBUG) &amp;&amp; (OS_BOOL_STARTUP_GUARD_CHECKS)</span></div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>  __bss_begin_guard = BSS_GUARD_BAD_VALUE;</div>
+<div class="line"><span class="lineno">  305</span>  __bss_end_guard = BSS_GUARD_BAD_VALUE;</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span><span class="preprocessor">#if !defined(OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS)</span></div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>  <span class="comment">// Zero fill the BSS section (inlined).</span></div>
+<div class="line"><span class="lineno">  312</span>  <a class="code hl_function" href="startup_8cpp.html#a76ddd59df06da6d7f78973058e52fe1c">os_initialize_bss</a> (&amp;<a class="code hl_variable" href="startup_8cpp.html#a2431ecc498e90c57e8281de8972c5af8">__bss_start__</a>, &amp;<a class="code hl_variable" href="startup_8cpp.html#aaf3e997542a737017aa3041cd3c8e06a">__bss_end__</a>);</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>  <span class="comment">// Zero fill all bss segments</span></div>
+<div class="line"><span class="lineno">  317</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* p = &amp;__bss_regions_array_start;</div>
+<div class="line"><span class="lineno">  318</span>       p &lt; &amp;__bss_regions_array_end;)</div>
+<div class="line"><span class="lineno">  319</span>    {</div>
+<div class="line"><span class="lineno">  320</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* region_begin = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>*)(*p++);</div>
+<div class="line"><span class="lineno">  321</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* region_end = (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>*)(*p++);</div>
+<div class="line"><span class="lineno">  322</span>      <a class="code hl_function" href="startup_8cpp.html#a76ddd59df06da6d7f78973058e52fe1c">os_initialize_bss</a> (region_begin, region_end);</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span><span class="preprocessor">#if defined(DEBUG) &amp;&amp; (OS_BOOL_STARTUP_GUARD_CHECKS)</span></div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>  <span class="keywordflow">if</span> ((__bss_begin_guard != 0) || (__bss_end_guard != 0))</div>
+<div class="line"><span class="lineno">  330</span>    {</div>
+<div class="line"><span class="lineno">  331</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  332</span>        {</div>
+<div class="line"><span class="lineno">  333</span>          __NOP ();</div>
+<div class="line"><span class="lineno">  334</span>        }</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>  <span class="comment">// Hook to continue the initialisations. Usually compute and store the</span></div>
+<div class="line"><span class="lineno">  340</span>  <span class="comment">// clock frequency in the global CMSIS variable, cleared above.</span></div>
+<div class="line"><span class="lineno">  341</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a> ();</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>  <span class="comment">// Initialise the trace output device. From this moment on,</span></div>
+<div class="line"><span class="lineno">  344</span>  <span class="comment">// trace_printf() calls are available (including in static constructors).</span></div>
+<div class="line"><span class="lineno">  345</span>  <a class="code hl_function" href="trace_8h.html#a3a06d8d6b7fb09eb75de348b3f0d79a6">trace_initialize</a> ();</div>
+<div class="line"><span class="lineno">  346</span> </div>
+<div class="line"><span class="lineno">  347</span>  <a class="code hl_function" href="trace_8h.html#af690ad866f65f64c9ca11ba6722d7974">trace_puts</a> (<span class="stringliteral">&quot;&quot;</span>); <span class="comment">// Empty line</span></div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>  <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;Hardware initialised\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  350</span>  <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;Main stack %p-%p\n&quot;</span>, &amp;<a class="code hl_variable" href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a>, &amp;<a class="code hl_variable" href="startup_8cpp.html#aaf52ec63989f6fa593b6dcfd3608cf9a">__stack</a>);</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a> (</div>
+<div class="line"><span class="lineno">  353</span>      &amp;<a class="code hl_variable" href="startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e">_Heap_Begin</a>,</div>
+<div class="line"><span class="lineno">  354</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span> (<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a>)</div>
+<div class="line"><span class="lineno">  355</span>                           - <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e">_Heap_Begin</a>)));</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>  <span class="comment">// Get the argc/argv (useful in semihosting configurations).</span></div>
+<div class="line"><span class="lineno">  358</span>  <span class="keywordtype">int</span> argc;</div>
+<div class="line"><span class="lineno">  359</span>  <span class="keywordtype">char</span>** argv;</div>
+<div class="line"><span class="lineno">  360</span>  <a class="code hl_function" href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a> (&amp;argc, &amp;argv);</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>  <span class="comment">// Call the standard library initialisation (mandatory for C++ to</span></div>
+<div class="line"><span class="lineno">  363</span>  <span class="comment">// execute the constructors for the static objects).</span></div>
+<div class="line"><span class="lineno">  364</span>  <a class="code hl_function" href="startup_8cpp.html#a1814473106d54cf28b3a7ec44a80de46">os_run_init_array</a> ();</div>
+<div class="line"><span class="lineno">  365</span>  <a class="code hl_function" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a> (<span class="stringliteral">&quot;Static objects constructed\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span><span class="preprocessor">#if defined(OS_HAS_INTERRUPTS_STACK)</span></div>
+<div class="line"><span class="lineno">  368</span>  <a class="code hl_function" href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">os::rtos::interrupts::stack</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#afd904365ef37ccaf74f6cd84e9cfd951">set</a> (</div>
+<div class="line"><span class="lineno">  369</span>      &amp;<a class="code hl_variable" href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a>,</div>
+<div class="line"><span class="lineno">  370</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span> (<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="startup_8cpp.html#aaf52ec63989f6fa593b6dcfd3608cf9a">__stack</a>)</div>
+<div class="line"><span class="lineno">  371</span>                           - <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a>)));</div>
+<div class="line"><span class="lineno">  372</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_HAS_INTERRUPTS_STACK) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  373</span> </div>
+<div class="line"><span class="lineno">  374</span>  <span class="comment">// Call the main entry point, and save the exit code.</span></div>
+<div class="line"><span class="lineno">  375</span>  <span class="keywordtype">int</span> code = <a class="code hl_function" href="startup_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (argc, argv);</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>  <span class="comment">// Standard program termination;</span></div>
+<div class="line"><span class="lineno">  378</span>  <span class="comment">// `atexit()` and C++ static destructors are executed.</span></div>
+<div class="line"><span class="lineno">  379</span>  <a class="code hl_function" href="exit_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c">exit</a> (code);</div>
+<div class="line"><span class="lineno">  380</span>  <span class="comment">/* NOTREACHED */</span></div>
+<div class="line"><span class="lineno">  381</span>}</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1thread_1_1stack_html_afd904365ef37ccaf74f6cd84e9cfd951"><div class="ttname"><a href="classos_1_1rtos_1_1thread_1_1stack.html#afd904365ef37ccaf74f6cd84e9cfd951">os::rtos::thread::stack::set</a></div><div class="ttdeci">void set(stack::element_t *address, std::size_t size_bytes)</div><div class="ttdoc">Set the stack address and size.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l02141">os-thread.h:2141</a></div></div>
+<div class="ttc" id="aexit_8c_html_a7b17e5913b7dff48eec9ba3976ccfd3c"><div class="ttname"><a href="exit_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c">exit</a></div><div class="ttdeci">void exit(int code)</div><div class="ttdef"><b>Definition</b> <a href="exit_8c_source.html#l00070">exit.c:70</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga348982bfc48b68b86a9771dbda12c505"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store</a></div><div class="ttdeci">void os_startup_initialize_free_store(void *heap_address, size_t heap_size_bytes)</div><div class="ttdoc">Initialise free store.</div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga5d70c5328916fbd871e99173c6c2375d"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga5d70c5328916fbd871e99173c6c2375d">os_startup_initialize_hardware_early</a></div><div class="ttdeci">void os_startup_initialize_hardware_early(void)</div><div class="ttdoc">Initialise hardware early.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00054">initialize-hardware.c:54</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_ga93965d610e08f0905fc7c8dff44bed61"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#ga93965d610e08f0905fc7c8dff44bed61">os_startup_initialize_args</a></div><div class="ttdeci">void os_startup_initialize_args(int *p_argc, char ***p_argv)</div><div class="ttdoc">Initialise arguments.</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00406">startup.cpp:406</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-hooks_html_gab9703b4858dc67c7bae54570ffa4ea4f"><div class="ttname"><a href="group__cmsis-plus-app-hooks.html#gab9703b4858dc67c7bae54570ffa4ea4f">os_startup_initialize_hardware</a></div><div class="ttdeci">void os_startup_initialize_hardware(void)</div><div class="ttdoc">Initialise hardware.</div><div class="ttdef"><b>Definition</b> <a href="initialize-hardware_8c_source.html#l00114">initialize-hardware.c:114</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-core_html_ga2060bb385320119880c8956fc8fb1c5b"><div class="ttname"><a href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">os::rtos::interrupts::stack</a></div><div class="ttdeci">class thread::stack * stack(void)</div><div class="ttdoc">Get the interrupts stack.</div><div class="ttdef"><b>Definition</b> <a href="os-core_8cpp_source.html#l00583">os-core.cpp:583</a></div></div>
+<div class="ttc" id="astartup_8cpp_html_a000ff36b580f32054d95c832eae95738"><div class="ttname"><a href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a></div><div class="ttdeci">unsigned long int _Heap_Limit</div></div>
+<div class="ttc" id="astartup_8cpp_html_a034a2e962ab1ae5deebdf525ad4ab0e9"><div class="ttname"><a href="startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9">_sidata</a></div><div class="ttdeci">unsigned int _sidata</div></div>
+<div class="ttc" id="astartup_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="startup_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">Default implementation of main().</div><div class="ttdef"><b>Definition</b> <a href="os-main_8cpp_source.html#l00113">os-main.cpp:113</a></div></div>
+<div class="ttc" id="astartup_8cpp_html_a1814473106d54cf28b3a7ec44a80de46"><div class="ttname"><a href="startup_8cpp.html#a1814473106d54cf28b3a7ec44a80de46">os_run_init_array</a></div><div class="ttdeci">static void os_run_init_array(void)</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00163">startup.cpp:163</a></div></div>
+<div class="ttc" id="astartup_8cpp_html_a2431ecc498e90c57e8281de8972c5af8"><div class="ttname"><a href="startup_8cpp.html#a2431ecc498e90c57e8281de8972c5af8">__bss_start__</a></div><div class="ttdeci">unsigned int __bss_start__</div></div>
+<div class="ttc" id="astartup_8cpp_html_a3c8886a9b622a24d13774d0b6acb624e"><div class="ttname"><a href="startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e">_Heap_Begin</a></div><div class="ttdeci">unsigned int _Heap_Begin</div></div>
+<div class="ttc" id="astartup_8cpp_html_a4be4e32ccbd908caca10f9f9badc2494"><div class="ttname"><a href="startup_8cpp.html#a4be4e32ccbd908caca10f9f9badc2494">os_initialize_data</a></div><div class="ttdeci">static void os_initialize_data(unsigned int *from, unsigned int *region_begin, unsigned int *region_end)</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00129">startup.cpp:129</a></div></div>
+<div class="ttc" id="astartup_8cpp_html_a5003b70cf06371aede7f4f2fb51b8d67"><div class="ttname"><a href="startup_8cpp.html#a5003b70cf06371aede7f4f2fb51b8d67">_sdata</a></div><div class="ttdeci">unsigned int _sdata</div></div>
+<div class="ttc" id="astartup_8cpp_html_a76ddd59df06da6d7f78973058e52fe1c"><div class="ttname"><a href="startup_8cpp.html#a76ddd59df06da6d7f78973058e52fe1c">os_initialize_bss</a></div><div class="ttdeci">static void os_initialize_bss(unsigned int *region_begin, unsigned int *region_end)</div><div class="ttdef"><b>Definition</b> <a href="startup_8cpp_source.html#l00142">startup.cpp:142</a></div></div>
+<div class="ttc" id="astartup_8cpp_html_aa271d502d9a165bb4896f2e4a0e7921b"><div class="ttname"><a href="startup_8cpp.html#aa271d502d9a165bb4896f2e4a0e7921b">_edata</a></div><div class="ttdeci">unsigned int _edata</div></div>
+<div class="ttc" id="astartup_8cpp_html_aaf3e997542a737017aa3041cd3c8e06a"><div class="ttname"><a href="startup_8cpp.html#aaf3e997542a737017aa3041cd3c8e06a">__bss_end__</a></div><div class="ttdeci">unsigned int __bss_end__</div></div>
+<div class="ttc" id="astartup_8cpp_html_aaf52ec63989f6fa593b6dcfd3608cf9a"><div class="ttname"><a href="startup_8cpp.html#aaf52ec63989f6fa593b6dcfd3608cf9a">__stack</a></div><div class="ttdeci">unsigned long int __stack</div></div>
+<div class="ttc" id="atrace_8h_html_a3a06d8d6b7fb09eb75de348b3f0d79a6"><div class="ttname"><a href="trace_8h.html#a3a06d8d6b7fb09eb75de348b3f0d79a6">trace_initialize</a></div><div class="ttdeci">void trace_initialize(void)</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00165">trace.cpp:165</a></div></div>
+<div class="ttc" id="atrace_8h_html_a6a6492d4a967fc866e4825f6146cec37"><div class="ttname"><a href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf</a></div><div class="ttdeci">int trace_printf(const char *format,...)</div></div>
+<div class="ttc" id="atrace_8h_html_af690ad866f65f64c9ca11ba6722d7974"><div class="ttname"><a href="trace_8h.html#af690ad866f65f64c9ca11ba6722d7974">trace_puts</a></div><div class="ttdeci">int trace_puts(const char *s)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="startup_8cpp.html#aaf3e997542a737017aa3041cd3c8e06a">__bss_end__</a>, <a class="el" href="startup_8cpp.html#a2431ecc498e90c57e8281de8972c5af8">__bss_start__</a>, <a class="el" href="startup_8cpp.html#aaf52ec63989f6fa593b6dcfd3608cf9a">__stack</a>, <a class="el" href="startup_8cpp.html#aa271d502d9a165bb4896f2e4a0e7921b">_edata</a>, <a class="el" href="startup_8cpp.html#a3c8886a9b622a24d13774d0b6acb624e">_Heap_Begin</a>, <a class="el" href="startup_8cpp.html#a000ff36b580f32054d95c832eae95738">_Heap_Limit</a>, <a class="el" href="startup_8cpp.html#a5003b70cf06371aede7f4f2fb51b8d67">_sdata</a>, <a class="el" href="startup_8cpp.html#a034a2e962ab1ae5deebdf525ad4ab0e9">_sidata</a>, <a class="el" href="exit_8c_source.html#l00070">exit()</a>, <a class="el" href="os-main_8cpp_source.html#l00113">main()</a>, <a class="el" href="startup_8cpp_source.html#l00142">os_initialize_bss()</a>, <a class="el" href="startup_8cpp_source.html#l00129">os_initialize_data()</a>, <a class="el" href="startup_8cpp_source.html#l00163">os_run_init_array()</a>, <a class="el" href="startup_8cpp_source.html#l00406">os_startup_initialize_args()</a>, <a class="el" href="group__cmsis-plus-app-hooks.html#ga348982bfc48b68b86a9771dbda12c505">os_startup_initialize_free_store()</a>, <a class="el" href="initialize-hardware_8c_source.html#l00114">os_startup_initialize_hardware()</a>, <a class="el" href="initialize-hardware_8c_source.html#l00054">os_startup_initialize_hardware_early()</a>, <a class="el" href="os-thread_8h_source.html#l02141">os::rtos::thread::stack::set()</a>, <a class="el" href="os-core_8cpp_source.html#l00583">os::rtos::interrupts::stack()</a>, <a class="el" href="trace_8cpp_source.html#l00165">trace_initialize()</a>, <a class="el" href="trace_8h.html#a6a6492d4a967fc866e4825f6146cec37">trace_printf()</a>, and <a class="el" href="trace_8h.html#af690ad866f65f64c9ca11ba6722d7974">trace_puts()</a>.</p>
 
 </div>
 </div>
@@ -267,8 +428,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Hook to handle out of memory in the application free store. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>This function is called when the application memory manager detects an out of memory condition.</p>
@@ -276,7 +435,15 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 <p>However, for special memory managers, which do not coalesce automatically, it might be possible to first try to coalesce. If this succeeds, this call can return, and the allocation will be resumed.</p>
 <dl class="section note"><dt>Note</dt><dd>Since most allocations are done in critical sections, this function is very likely to be called with the scheduler locked. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00291">291</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00299">299</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>{</div>
+<div class="line"><span class="lineno">  301</span>  <a class="code hl_function" href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">estd::__throw_bad_alloc</a> ();</div>
+<div class="line"><span class="lineno">  302</span>}</div>
+<div class="ttc" id="anamespaceos_1_1estd_html_afdfb11bebd11da95682c3379cd1b48a9"><div class="ttname"><a href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">os::estd::__throw_bad_alloc</a></div><div class="ttdeci">void __throw_bad_alloc(void)</div><div class="ttdef"><b>Definition</b> <a href="memory-resource_8cpp_source.html#l00042">memory-resource.cpp:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="memory-resource_8cpp_source.html#l00042">os::estd::__throw_bad_alloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="initialise-free-store_8cpp_source.html#l00082">os_startup_initialize_free_store()</a>.</p>
 
 </div>
 </div>
@@ -295,8 +462,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Hook to enter a power saving mode. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -310,7 +475,12 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 <p>This function is executed by the idle thread on each iteration, and must limit complexity to reasonably levels.</p>
 <p>If the user function decides not to enter a power saving mode, it must return <code>false</code>, which will make the idle thread proceed as usual, by entering a shallow sleep waiting for the next interrupt. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-idle_8cpp_source.html#l00059">59</a> of file <a class="el" href="os-idle_8cpp_source.html">os-idle.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-idle_8cpp_source.html#l00057">57</a> of file <a class="el" href="os-idle_8cpp_source.html">os-idle.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-idle_8cpp_source.html#l00063">os_rtos_idle_actions()</a>.</p>
 
 </div>
 </div>
@@ -329,8 +499,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Hook to handle out of memory in the RTOS dynamic memory. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>This function is called when the RTOS system memory manager detects an out of memory condition.</p>
@@ -338,7 +506,14 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 <p>However, for special memory managers, which do not coalesce automatically, it might be possible to first try to coalesce. If this succeeds, this call can return, and the allocation will be resumed.</p>
 <dl class="section note"><dt>Note</dt><dd>Since most allocations are done in critical sections, this function is very likely to be called with the scheduler locked. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00314">314</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="initialise-free-store_8cpp_source.html#l00322">322</a> of file <a class="el" href="initialise-free-store_8cpp_source.html">initialise-free-store.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>{</div>
+<div class="line"><span class="lineno">  324</span>  <a class="code hl_function" href="namespaceos_1_1estd.html#afdfb11bebd11da95682c3379cd1b48a9">estd::__throw_bad_alloc</a> ();</div>
+<div class="line"><span class="lineno">  325</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="memory-resource_8cpp_source.html#l00042">os::estd::__throw_bad_alloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="initialise-free-store_8cpp_source.html#l00082">os_startup_initialize_free_store()</a>.</p>
 
 </div>
 </div>
@@ -357,10 +532,10 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Create the idle thread. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="os-main_8cpp_source.html#l00113">main()</a>.</p>
 
 </div>
 </div>
@@ -389,8 +564,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialise arguments. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">p_argc</td><td>Pointer to argc. </td></tr>
@@ -399,7 +572,28 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00417">417</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="startup_8cpp_source.html#l00406">406</a> of file <a class="el" href="startup_8cpp_source.html">startup.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  407</span>{</div>
+<div class="line"><span class="lineno">  408</span>  <span class="comment">// By the time we reach this, the data and bss should have been initialised.</span></div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>  <span class="comment">// The strings pointed to by the argv array shall be modifiable by the</span></div>
+<div class="line"><span class="lineno">  411</span>  <span class="comment">// program, and retain their last-stored values between program startup</span></div>
+<div class="line"><span class="lineno">  412</span>  <span class="comment">// and program termination. (static, no const)</span></div>
+<div class="line"><span class="lineno">  413</span>  <span class="keyword">static</span> <span class="keywordtype">char</span> name[] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>  <span class="comment">// The string pointed to by argv[0] represents the program name;</span></div>
+<div class="line"><span class="lineno">  416</span>  <span class="comment">// argv[0][0] shall be the null character if the program name is not</span></div>
+<div class="line"><span class="lineno">  417</span>  <span class="comment">// available from the host environment. argv[argc] shall be a null pointer.</span></div>
+<div class="line"><span class="lineno">  418</span>  <span class="comment">// (static, no const)</span></div>
+<div class="line"><span class="lineno">  419</span>  <span class="keyword">static</span> <span class="keywordtype">char</span>* argv[2] = { name, NULL };</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>  *p_argc = 1;</div>
+<div class="line"><span class="lineno">  422</span>  *p_argv = &amp;argv[0];</div>
+<div class="line"><span class="lineno">  423</span> </div>
+<div class="line"><span class="lineno">  424</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  425</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>.</p>
 
 </div>
 </div>
@@ -428,8 +622,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialise free store. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">heap_address</td><td>The first unallocated RAM address (after the BSS). </td></tr>
@@ -438,6 +630,8 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>.</p>
 
 </div>
 </div>
@@ -456,15 +650,20 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialise hardware. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>This is the default implementation for the second hardware initialisation routine.</p>
 <p>It is called from <code><a class="el" href="group__cmsis-plus-app-hooks.html#ga8b67a6ff3f33fae9b3f1b142005c0bc2" title="The standard C application entry point.">_start()</a></code>, right after DATA &amp; BSS init, before the static constructors.</p>
 <p>The application can redefine it for more complex cases that require custom inits (before constructors), otherwise these inits can be done in <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main().">main()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00115">115</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00114">114</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
+<div class="line"><span class="lineno">  116</span>  <span class="comment">// Call the CSMSIS system clock routine to store the clock frequency</span></div>
+<div class="line"><span class="lineno">  117</span>  <span class="comment">// in the SystemCoreClock global RAM location.</span></div>
+<div class="line"><span class="lineno">  118</span>  SystemCoreClockUpdate ();</div>
+<div class="line"><span class="lineno">  119</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>.</p>
 
 </div>
 </div>
@@ -483,8 +682,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialise hardware early. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>This is the default early hardware initialisation routine.</p>
@@ -493,7 +690,51 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
 <p>It is mandatory on platforms like Kinetis, which start with the watch dog enabled and require an early sequence to disable it.</p>
 <p>Also useful on platform with external RAM, that need to be initialised before filling the BSS section. </p>
 
-<p class="definition">Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00055">55</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="initialize-hardware_8c_source.html#l00054">54</a> of file <a class="el" href="initialize-hardware_8c_source.html">initialize-hardware.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
+<div class="line"><span class="lineno">   56</span>  <span class="comment">// Call the CSMSIS system initialisation routine.</span></div>
+<div class="line"><span class="lineno">   57</span>  SystemInit ();</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span><span class="preprocessor">#if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)</span></div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>  <span class="comment">// Set VTOR to the actual address, provided by the linker script.</span></div>
+<div class="line"><span class="lineno">   62</span>  <span class="comment">// Override the manual, possibly wrong, SystemInit() setting.</span></div>
+<div class="line"><span class="lineno">   63</span>  SCB-&gt;VTOR = (uint32_t)(&amp;__vectors_start);</div>
+<div class="line"><span class="lineno">   64</span>  <span class="comment">// Ensure all subsequence instructions use the new configuration.</span></div>
+<div class="line"><span class="lineno">   65</span>  __DSB ();</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">/* defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>  <span class="comment">// The current version of SystemInit() leaves the value of the clock</span></div>
+<div class="line"><span class="lineno">   70</span>  <span class="comment">// in a RAM variable (SystemCoreClock), which will be cleared shortly,</span></div>
+<div class="line"><span class="lineno">   71</span>  <span class="comment">// so it needs to be recomputed after the RAM initialisations</span></div>
+<div class="line"><span class="lineno">   72</span>  <span class="comment">// are completed.</span></div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span><span class="preprocessor">#if defined(OS_INCLUDE_STARTUP_INIT_FP) || defined(__ARM_FP)</span></div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  <span class="comment">// Normally FP init is done by SystemInit(). In case this is not done</span></div>
+<div class="line"><span class="lineno">   77</span>  <span class="comment">// there, it is possible to force its inclusion by defining</span></div>
+<div class="line"><span class="lineno">   78</span>  <span class="comment">// OS_INCLUDE_STARTUP_INIT_FP.</span></div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  <span class="comment">// Enable the Cortex-M4 FPU only when -mfloat-abi=hard or -mfloat-abi=softfp.</span></div>
+<div class="line"><span class="lineno">   81</span>  <span class="comment">// Code taken from Section 7.1, Cortex-M4 TRM (DDI0439C)</span></div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>  <span class="comment">// Set bits 20-23 to enable CP10 and CP11 coprocessor.</span></div>
+<div class="line"><span class="lineno">   84</span>  SCB-&gt;CPACR |= (0xF &lt;&lt; 20);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  <span class="comment">// Lazy save.</span></div>
+<div class="line"><span class="lineno">   87</span>  FPU-&gt;FPCCR |= FPU_FPCCR_ASPEN_Msk | FPU_FPCCR_LSPEN_Msk;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_STARTUP_INIT_FP) || defined (__ARM_FP) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span><span class="preprocessor">#if defined(OS_DEBUG_SEMIHOSTING_FAULTS)</span></div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>  SCB-&gt;SHCSR |= SCB_SHCSR_USGFAULTENA_Msk;</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   96</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>.</p>
 
 </div>
 </div>
@@ -512,8 +753,6 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Terminate the application. There is no more life after this. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>Exit code, 0 for success, non 0 for failure. </td></tr>
@@ -521,6 +760,8 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="exit_8c_source.html#l00112">_Exit()</a>, and <a class="el" href="exit_8c_source.html#l00070">exit()</a>.</p>
 
 </div>
 </div>
@@ -539,12 +780,55 @@ $(document).ready(function(){initNavTree('group__cmsis-plus-app-hooks.html','');
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Display statistics and say goodbye before terminating. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-main_8cpp_source.html#l00186">186</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-main_8cpp_source.html#l00194">194</a> of file <a class="el" href="os-main_8cpp_source.html">os-main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>{</div>
+<div class="line"><span class="lineno">  196</span><span class="preprocessor">#if defined(TRACE)</span></div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span><span class="preprocessor">#if !defined(OS_EXCLUDE_DYNAMIC_MEMORY_ALLOCATIONS)</span></div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>  <span class="comment">// Application memory.</span></div>
+<div class="line"><span class="lineno">  203</span>  <a class="code hl_function" href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">estd::pmr::get_default_resource</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#acb7ce5c8033fedc1c2b441cd6d3fe220">trace_print_statistics</a> ();</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span><span class="preprocessor">#if defined(OS_INTEGER_RTOS_DYNAMIC_MEMORY_SIZE_BYTES)</span></div>
+<div class="line"><span class="lineno">  206</span>  <a class="code hl_function" href="group__cmsis-plus-rtos-memres.html#ga61c4946b90c917a9fc2a0b0f1c43ad89">rtos::memory::get_default_resource</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1memory_1_1memory__resource.html#acb7ce5c8033fedc1c2b441cd6d3fe220">trace_print_statistics</a> ();</div>
+<div class="line"><span class="lineno">  207</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INTEGER_RTOS_DYNAMIC_MEMORY_SIZE_BYTES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span><span class="preprocessor">#endif </span><span class="comment">/* !defined(OS_EXCLUDE_DYNAMIC_MEMORY_ALLOCATIONS) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>  <span class="keyword">class </span><a class="code hl_class" href="classos_1_1rtos_1_1thread_1_1stack.html">rtos::thread::stack</a>&amp; st = <a class="code hl_variable" href="os-main_8cpp.html#aaeeb063b41c494c124fa442f464764cd">os_main_thread</a>-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1thread.html#a84d41467e9e43c68581743e5d6ce5405">stack</a> ();</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>  <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;Main thread stack: %u/%u bytes used\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  214</span>                 st.<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">size</a> () - st.<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#ae0ef4b3107daa7299d1e8dbe95d300f9">available</a> (), st.<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">size</a> ());</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span><span class="preprocessor">#if defined(OS_HAS_INTERRUPTS_STACK)</span></div>
+<div class="line"><span class="lineno">  217</span>  <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;Interrupts stack: %u/%u bytes used\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  218</span>                 <a class="code hl_function" href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">rtos::interrupts::stack</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">size</a> ()</div>
+<div class="line"><span class="lineno">  219</span>                     - <a class="code hl_function" href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">rtos::interrupts::stack</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#ae0ef4b3107daa7299d1e8dbe95d300f9">available</a> (),</div>
+<div class="line"><span class="lineno">  220</span>                 <a class="code hl_function" href="group__cmsis-plus-rtos-core.html#ga2060bb385320119880c8956fc8fb1c5b">rtos::interrupts::stack</a> ()-&gt;<a class="code hl_function" href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">size</a> ());</div>
+<div class="line"><span class="lineno">  221</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_HAS_INTERRUPTS_STACK) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>  <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;\nHasta la Vista!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span><span class="preprocessor">#endif </span><span class="comment">/* defined(TRACE) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  226</span>}</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory_1_1memory__resource_html_acb7ce5c8033fedc1c2b441cd6d3fe220"><div class="ttname"><a href="classos_1_1rtos_1_1memory_1_1memory__resource.html#acb7ce5c8033fedc1c2b441cd6d3fe220">os::rtos::memory::memory_resource::trace_print_statistics</a></div><div class="ttdeci">void trace_print_statistics(void)</div><div class="ttdoc">Print a long message with usage statistics.</div><div class="ttdef"><b>Definition</b> <a href="os-memory_8h_source.html#l01444">os-memory.h:1444</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1thread_1_1stack_html"><div class="ttname"><a href="classos_1_1rtos_1_1thread_1_1stack.html">os::rtos::thread::stack</a></div><div class="ttdoc">Thread stack.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l00432">os-thread.h:433</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1thread_1_1stack_html_a61b9e1a9e083aa0ede901dbfa42fc38e"><div class="ttname"><a href="classos_1_1rtos_1_1thread_1_1stack.html#a61b9e1a9e083aa0ede901dbfa42fc38e">os::rtos::thread::stack::size</a></div><div class="ttdeci">std::size_t size(void)</div><div class="ttdoc">Get the stack size.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l02175">os-thread.h:2175</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1thread_1_1stack_html_ae0ef4b3107daa7299d1e8dbe95d300f9"><div class="ttname"><a href="classos_1_1rtos_1_1thread_1_1stack.html#ae0ef4b3107daa7299d1e8dbe95d300f9">os::rtos::thread::stack::available</a></div><div class="ttdeci">std::size_t available(void)</div><div class="ttdoc">Compute how much available stack remains.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8cpp_source.html#l00202">os-thread.cpp:202</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1thread_html_a84d41467e9e43c68581743e5d6ce5405"><div class="ttname"><a href="classos_1_1rtos_1_1thread.html#a84d41467e9e43c68581743e5d6ce5405">os::rtos::thread::stack</a></div><div class="ttdeci">thread::stack &amp; stack(void)</div><div class="ttdoc">Get the thread context stack.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l02451">os-thread.h:2451</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-memres_html_ga61c4946b90c917a9fc2a0b0f1c43ad89"><div class="ttname"><a href="group__cmsis-plus-rtos-memres.html#ga61c4946b90c917a9fc2a0b0f1c43ad89">os::rtos::memory::get_default_resource</a></div><div class="ttdeci">memory_resource * get_default_resource(void) noexcept</div><div class="ttdoc">Get the default RTOS system memory manager.</div><div class="ttdef"><b>Definition</b> <a href="os-memory_8h_source.html#l01136">os-memory.h:1136</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-memres_html_ga984b9c524b3d5f8eaa560e4f98c55928"><div class="ttname"><a href="group__cmsis-plus-rtos-memres.html#ga984b9c524b3d5f8eaa560e4f98c55928">os::estd::pmr::get_default_resource</a></div><div class="ttdeci">memory_resource * get_default_resource(void) noexcept</div><div class="ttdoc">Get the default application memory manager.</div><div class="ttdef"><b>Definition</b> <a href="memory__resource_source.html#l00181">memory_resource:181</a></div></div>
+<div class="ttc" id="aos-main_8cpp_html_aaeeb063b41c494c124fa442f464764cd"><div class="ttname"><a href="os-main_8cpp.html#aaeeb063b41c494c124fa442f464764cd">os_main_thread</a></div><div class="ttdeci">rtos::thread * os_main_thread</div><div class="ttdef"><b>Definition</b> <a href="os-main_8cpp_source.html#l00092">os-main.cpp:92</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-thread_8cpp_source.html#l00202">os::rtos::thread::stack::available()</a>, <a class="el" href="memory__resource_source.html#l00181">os::estd::pmr::get_default_resource()</a>, <a class="el" href="os-memory_8h_source.html#l01136">os::rtos::memory::get_default_resource()</a>, <a class="el" href="os-main_8cpp_source.html#l00092">os_main_thread</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="os-thread_8h_source.html#l02175">os::rtos::thread::stack::size()</a>, <a class="el" href="os-thread_8h_source.html#l02451">os::rtos::thread::stack()</a>, <a class="el" href="os-core_8cpp_source.html#l00583">os::rtos::interrupts::stack()</a>, and <a class="el" href="os-memory_8h_source.html#l01444">os::rtos::memory::memory_resource::trace_print_statistics()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="exit_8c_source.html#l00112">_Exit()</a>.</p>
 
 </div>
 </div>

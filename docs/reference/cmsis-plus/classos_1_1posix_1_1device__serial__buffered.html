@@ -120,14 +120,14 @@ $(document).ready(function(){initNavTree('classos_1_1posix_1_1device__serial__bu
   <div class="summary">
 <a href="#pri-types">Private Types</a> &#124;
 <a href="classos_1_1posix_1_1device__serial__buffered-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">os::posix::device_serial_buffered&lt; CS &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">os::posix::device_serial_buffered&lt; CS &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__cmsis-plus-posix-io.html">µOS++ POSIX I/O C++ API</a> &raquo; <a class="el" href="group__cmsis-plus-posix-io-drivers.html">Driver classes</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Buffered serial driver class template.  
+<p>Buffered serial driver class template.&lt;<a class="el" href="circular-buffer_8h.html">cmsis-plus/posix-driver/circular-buffer.h</a>&gt;  
  <a href="classos_1_1posix_1_1device__serial__buffered.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="circular-buffer_8h_source.html">cmsis-plus/posix-driver/circular-buffer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="circular-buffer_8h_source.html">circular-buffer.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for os::posix::device_serial_buffered&lt; CS &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -174,8 +174,7 @@ Private Types</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename CS&gt;<br />
-class os::posix::device_serial_buffered&lt; CS &gt;</div><p>Buffered serial driver class template. </p>
-
+class os::posix::device_serial_buffered&lt; CS &gt;</div>
 <p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00052">52</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a2937a3010fd2000eca88e732fb867a63" name="a2937a3010fd2000eca88e732fb867a63"></a>
@@ -245,7 +244,28 @@ template&lt;typename CS &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00198">198</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00191">191</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>        : <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  196</span>          device_char (device_name), <span class="comment">// Construct parent.</span></div>
+<div class="line"><span class="lineno">  197</span>          driver_ (driver), <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  198</span>          rx_buf_ (rx_buf), <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  199</span>          tx_buf_ (tx_buf) <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  200</span>    {</div>
+<div class="line"><span class="lineno">  201</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(\&quot;%s\&quot;,%p,%p,%p) %p\n&quot;</span>, __func__, device_name, driver,</div>
+<div class="line"><span class="lineno">  202</span>                     rx_buf, tx_buf, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>      assert (rx_buf != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>      <span class="comment">// Do not check the same for tx_buf, it may be null.</span></div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>      driver_-&gt;register_callback (</div>
+<div class="line"><span class="lineno">  209</span>          <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespaceos_1_1driver.html#aeef3f35290ca9712ccf81320fd7dab50">os::driver::signal_event_t</a><span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1posix_1_1device__serial__buffered.html#a0284eb47a0cfcaa084b3f16ed7ad1bb6">signal_event</a>), <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1device__serial__buffered_html_a0284eb47a0cfcaa084b3f16ed7ad1bb6"><div class="ttname"><a href="classos_1_1posix_1_1device__serial__buffered.html#a0284eb47a0cfcaa084b3f16ed7ad1bb6">os::posix::device_serial_buffered::signal_event</a></div><div class="ttdeci">static void signal_event(device_serial_buffered *object, uint32_t event)</div><div class="ttdef"><b>Definition</b> <a href="device-serial-buffered_8h_source.html#l00603">device-serial-buffered.h:603</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_aeef3f35290ca9712ccf81320fd7dab50"><div class="ttname"><a href="namespaceos_1_1driver.html#aeef3f35290ca9712ccf81320fd7dab50">os::driver::signal_event_t</a></div><div class="ttdeci">void(* signal_event_t)(const void *object, event_t event)</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00067">common.h:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, and <a class="el" href="device-serial-buffered_8h_source.html#l00603">os::posix::device_serial_buffered&lt; CS &gt;::signal_event()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +291,16 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00220">220</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00213">213</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>    {</div>
+<div class="line"><span class="lineno">  215</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>      driver_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  218</span>      is_connected_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  219</span>      is_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -302,7 +331,59 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00354">354</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00346">346</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>    {</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>      <span class="keywordflow">if</span> (is_connected_)</div>
+<div class="line"><span class="lineno">  350</span>        {</div>
+<div class="line"><span class="lineno">  351</span>          <span class="comment">// Wait for write to complete.</span></div>
+<div class="line"><span class="lineno">  352</span>          <span class="comment">// TODO: what if flow control prevents this?</span></div>
+<div class="line"><span class="lineno">  353</span>          <span class="keywordflow">if</span> (tx_buf_ != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  354</span>            {</div>
+<div class="line"><span class="lineno">  355</span>              <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  356</span>                {</div>
+<div class="line"><span class="lineno">  357</span>                  <span class="keywordflow">if</span> (tx_buf_-&gt;empty ())</div>
+<div class="line"><span class="lineno">  358</span>                    {</div>
+<div class="line"><span class="lineno">  359</span>                      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  360</span>                    }</div>
+<div class="line"><span class="lineno">  361</span>                  tx_sem_.wait ();</div>
+<div class="line"><span class="lineno">  362</span>                }</div>
+<div class="line"><span class="lineno">  363</span>            }</div>
+<div class="line"><span class="lineno">  364</span>        }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>      <span class="comment">// Abort pending reads.</span></div>
+<div class="line"><span class="lineno">  367</span>      <a class="code hl_typedef" href="namespaceos_1_1driver.html#ae505c9532fc7b402d8a54ec68c19f8ae">os::driver::return_t</a> ret;</div>
+<div class="line"><span class="lineno">  368</span>      ret = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a14eef31f95b79f1719a677e9220b8552">os::driver::serial::Control::abort_receive</a>);</div>
+<div class="line"><span class="lineno">  369</span>      assert (ret == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>      <span class="comment">// Abort pending writes.</span></div>
+<div class="line"><span class="lineno">  372</span>      ret = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a214e9e4ee9d03d256bca18e8c0a13d7b">os::driver::serial::Control::abort_send</a>);</div>
+<div class="line"><span class="lineno">  373</span>      assert (ret == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>      <span class="comment">// Disable transmitter and receiver.</span></div>
+<div class="line"><span class="lineno">  376</span>      ret = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a64c2b8f6add19172ee8a813511824f93">os::driver::serial::Control::disable_tx</a>);</div>
+<div class="line"><span class="lineno">  377</span>      assert (ret == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>      ret = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5afa3f5628bbfc60d09884c579fbc2a9b7">os::driver::serial::Control::disable_rx</a>);</div>
+<div class="line"><span class="lineno">  380</span>      assert (ret == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  381</span>      ret = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a632a0e2b4681f4b4c6f784ba5b0162e1">os::driver::serial::Control::disable_break</a>);</div>
+<div class="line"><span class="lineno">  382</span>      assert (ret == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>      is_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  385</span>      is_connected_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span>      <span class="comment">// Return POSIX idea of OK.</span></div>
+<div class="line"><span class="lineno">  388</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5a14eef31f95b79f1719a677e9220b8552"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a14eef31f95b79f1719a677e9220b8552">os::driver::serial::abort_receive</a></div><div class="ttdeci">@ abort_receive</div><div class="ttdoc">Abort Serial::receive().</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00203">serial.h:203</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5a214e9e4ee9d03d256bca18e8c0a13d7b"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a214e9e4ee9d03d256bca18e8c0a13d7b">os::driver::serial::abort_send</a></div><div class="ttdeci">@ abort_send</div><div class="ttdoc">Abort Serial::send().</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00200">serial.h:200</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5a632a0e2b4681f4b4c6f784ba5b0162e1"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a632a0e2b4681f4b4c6f784ba5b0162e1">os::driver::serial::disable_break</a></div><div class="ttdeci">@ disable_break</div><div class="ttdoc">Disable Continuous Break transmission;.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00216">serial.h:215</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5a64c2b8f6add19172ee8a813511824f93"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5a64c2b8f6add19172ee8a813511824f93">os::driver::serial::disable_tx</a></div><div class="ttdeci">@ disable_tx</div><div class="ttdoc">Disable Transmitter.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00209">serial.h:209</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5afa3f5628bbfc60d09884c579fbc2a9b7"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5afa3f5628bbfc60d09884c579fbc2a9b7">os::driver::serial::disable_rx</a></div><div class="ttdeci">@ disable_rx</div><div class="ttdoc">Disable Receiver.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00212">serial.h:212</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_a98267e1a7761553e8a6671de68455497"><div class="ttname"><a href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a></div><div class="ttdeci">constexpr return_t RETURN_OK</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00052">common.h:52</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_ae505c9532fc7b402d8a54ec68c19f8ae"><div class="ttname"><a href="namespaceos_1_1driver.html#ae505c9532fc7b402d8a54ec68c19f8ae">os::driver::return_t</a></div><div class="ttdeci">int32_t return_t</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00046">common.h:46</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="serial_8h_source.html#l00203">os::driver::serial::abort_receive</a>, <a class="el" href="serial_8h_source.html#l00200">os::driver::serial::abort_send</a>, <a class="el" href="serial_8h_source.html#l00215">os::driver::serial::disable_break</a>, <a class="el" href="serial_8h_source.html#l00212">os::driver::serial::disable_rx</a>, <a class="el" href="serial_8h_source.html#l00209">os::driver::serial::disable_tx</a>, and <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>.</p>
 
 </div>
 </div>
@@ -332,8 +413,11 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00347">347</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00339">339</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>    {</div>
+<div class="line"><span class="lineno">  341</span>      <span class="keywordflow">return</span> is_connected_;</div>
+<div class="line"><span class="lineno">  342</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa4e15718e798d41c58752846ef0121be" name="aa4e15718e798d41c58752846ef0121be"></a>
@@ -362,8 +446,11 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00340">340</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00332">332</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  333</span>    {</div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">return</span> is_opened_;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2045b195a116e708d4a4803beafdf606" name="a2045b195a116e708d4a4803beafdf606"></a>
@@ -402,8 +489,36 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00401">401</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00393">393</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  394</span>    {</div>
+<div class="line"><span class="lineno">  395</span>      <span class="comment">// TODO: implement cases when 0 must be returned</span></div>
+<div class="line"><span class="lineno">  396</span>      <span class="comment">// (disconnects, timeouts).</span></div>
+<div class="line"><span class="lineno">  397</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  398</span>        {</div>
+<div class="line"><span class="lineno">  399</span>          std::size_t count;</div>
+<div class="line"><span class="lineno">  400</span>          {</div>
+<div class="line"><span class="lineno">  401</span>            <span class="comment">// ----- Enter critical section -------------------------------</span></div>
+<div class="line"><span class="lineno">  402</span>            <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs;</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>            count = rx_buf_-&gt;pop_front (<span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span> (buf), nbyte);</div>
+<div class="line"><span class="lineno">  405</span>            <span class="comment">// ----- Exit critical section --------------------------------</span></div>
+<div class="line"><span class="lineno">  406</span>          }</div>
+<div class="line"><span class="lineno">  407</span>          <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno">  408</span>            {</div>
+<div class="line"><span class="lineno">  409</span>              <span class="comment">// Actual number of chars received in buffer.</span></div>
+<div class="line"><span class="lineno">  410</span>              <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  411</span>            }</div>
+<div class="line"><span class="lineno">  412</span>          <span class="keywordflow">if</span> (!is_connected_)</div>
+<div class="line"><span class="lineno">  413</span>            {</div>
+<div class="line"><span class="lineno">  414</span>              errno = EIO;</div>
+<div class="line"><span class="lineno">  415</span>              <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  416</span>            }</div>
+<div class="line"><span class="lineno">  417</span>          <span class="comment">// Block and wait for bytes to arrive.</span></div>
+<div class="line"><span class="lineno">  418</span>          rx_sem_.wait ();</div>
+<div class="line"><span class="lineno">  419</span>        }</div>
+<div class="line"><span class="lineno">  420</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1device__serial__buffered_html_a2937a3010fd2000eca88e732fb867a63"><div class="ttname"><a href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">os::posix::device_serial_buffered::critical_section</a></div><div class="ttdeci">CS critical_section</div><div class="ttdef"><b>Definition</b> <a href="device-serial-buffered_8h_source.html#l00054">device-serial-buffered.h:54</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aabdb2cc7c6b6376d6c29e1f97ec714ca" name="aabdb2cc7c6b6376d6c29e1f97ec714ca"></a>
@@ -448,7 +563,115 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00239">239</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00232">232</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>    {</div>
+<div class="line"><span class="lineno">  235</span>      <span class="keywordflow">if</span> (is_opened_)</div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>          errno = EEXIST; <span class="comment">// Already opened</span></div>
+<div class="line"><span class="lineno">  238</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>      int32_t result;</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>      <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  244</span>        {</div>
+<div class="line"><span class="lineno">  245</span>          <span class="comment">// Reset semaphores, in case we come here after close.</span></div>
+<div class="line"><span class="lineno">  246</span>          open_sem_.reset ();</div>
+<div class="line"><span class="lineno">  247</span>          rx_sem_.reset ();</div>
+<div class="line"><span class="lineno">  248</span>          tx_sem_.reset ();</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>          is_opened_ = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>          <span class="comment">// Clear buffers.</span></div>
+<div class="line"><span class="lineno">  253</span>          rx_buf_-&gt;clear ();</div>
+<div class="line"><span class="lineno">  254</span>          rx_count_ = 0;</div>
+<div class="line"><span class="lineno">  255</span> </div>
+<div class="line"><span class="lineno">  256</span>          <span class="keywordflow">if</span> (tx_buf_ != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  257</span>            {</div>
+<div class="line"><span class="lineno">  258</span>              tx_buf_-&gt;clear ();</div>
+<div class="line"><span class="lineno">  259</span>            }</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>          <span class="comment">// Default configuration: 8 bits, no parity, 1 stop bit,</span></div>
+<div class="line"><span class="lineno">  262</span>          <span class="comment">// no flow control, 115200 bps.</span></div>
+<div class="line"><span class="lineno">  263</span>          result = driver_-&gt;configure (</div>
+<div class="line"><span class="lineno">  264</span>              <a class="code hl_variable" href="namespaceos_1_1driver_1_1serial.html#a7d717d90a7dca82986a9e9d14da8508c">os::driver::serial::MODE_ASYNCHRONOUS</a></div>
+<div class="line"><span class="lineno">  265</span>                  | <a class="code hl_variable" href="namespaceos_1_1driver_1_1serial.html#a18eb3e0ba8f184c923fea9b97fe7cfca">os::driver::serial::DATA_BITS_8</a></div>
+<div class="line"><span class="lineno">  266</span>                  | <a class="code hl_variable" href="namespaceos_1_1driver_1_1serial.html#a18a98960d8974e55b0c6a4386a69a45d">os::driver::serial::PARITY_NONE</a></div>
+<div class="line"><span class="lineno">  267</span>                  | <a class="code hl_variable" href="namespaceos_1_1driver_1_1serial.html#a41d57e9953d645508f5e33649e4dc931">os::driver::serial::STOP_BITS_1</a></div>
+<div class="line"><span class="lineno">  268</span>                  | <a class="code hl_variable" href="namespaceos_1_1driver_1_1serial.html#ab257e431a306b6c07da31b818b9bf25d">os::driver::serial::FLOW_CONTROL_NONE</a>,</div>
+<div class="line"><span class="lineno">  269</span>              115200);</div>
+<div class="line"><span class="lineno">  270</span>          <span class="comment">// assert(result == os::driver::RETURN_OK);</span></div>
+<div class="line"><span class="lineno">  271</span>          <span class="keywordflow">if</span> (result != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>          <span class="comment">// Enable TX output.</span></div>
+<div class="line"><span class="lineno">  275</span>          result = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af2ab2cc4eb54f4c0b40b4f0a483239c3">os::driver::serial::Control::enable_tx</a>);</div>
+<div class="line"><span class="lineno">  276</span>          <span class="keywordflow">if</span> (result != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>          <span class="comment">// Enable RX input.</span></div>
+<div class="line"><span class="lineno">  280</span>          result = driver_-&gt;control (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af5c4e5e8156442278a2492c1f6ce5c2f">os::driver::serial::Control::enable_rx</a>);</div>
+<div class="line"><span class="lineno">  281</span>          <span class="keywordflow">if</span> (result != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="line"><span class="lineno">  284</span>      <span class="keywordflow">while</span> (<span class="keyword">false</span>); <span class="comment">// Actually NOT a loop, just a sequence of ifs!</span></div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>      <span class="keywordflow">if</span> (result != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>          errno = EIO;</div>
+<div class="line"><span class="lineno">  289</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>      <a class="code hl_class" href="classos_1_1driver_1_1serial_1_1Capabilities.html">os::driver::serial::Capabilities</a> capa;</div>
+<div class="line"><span class="lineno">  293</span>      capa = driver_-&gt;get_capabilities ();</div>
+<div class="line"><span class="lineno">  294</span>      <span class="keywordflow">if</span> (capa.<a class="code hl_variable" href="classos_1_1driver_1_1serial_1_1Capabilities.html#af688bc917b275cab9775760af342a404">dcd</a>)</div>
+<div class="line"><span class="lineno">  295</span>        {</div>
+<div class="line"><span class="lineno">  296</span>          <a class="code hl_class" href="classos_1_1driver_1_1serial_1_1Modem__status.html">os::driver::serial::Modem_status</a> status;</div>
+<div class="line"><span class="lineno">  297</span>          <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  298</span>            {</div>
+<div class="line"><span class="lineno">  299</span>              {</div>
+<div class="line"><span class="lineno">  300</span>                <span class="comment">// ----- Enter critical section ---------------------------</span></div>
+<div class="line"><span class="lineno">  301</span>                <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs;</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>                status = driver_-&gt;get_modem_status ();</div>
+<div class="line"><span class="lineno">  304</span>                <span class="comment">// ----- Exit critical section ----------------------------</span></div>
+<div class="line"><span class="lineno">  305</span>              }</div>
+<div class="line"><span class="lineno">  306</span>              <span class="keywordflow">if</span> (status.<a class="code hl_function" href="classos_1_1driver_1_1serial_1_1Modem__status.html#adcfbdb34be9d308978c7fd0406bf782c">is_dcd_active</a> ())</div>
+<div class="line"><span class="lineno">  307</span>                {</div>
+<div class="line"><span class="lineno">  308</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  309</span>                }</div>
+<div class="line"><span class="lineno">  310</span>              open_sem_.wait ();</div>
+<div class="line"><span class="lineno">  311</span>            }</div>
+<div class="line"><span class="lineno">  312</span>        }</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>      uint8_t* pbuf;</div>
+<div class="line"><span class="lineno">  315</span>      std::size_t nbyte = rx_buf_-&gt;back_contiguous_buffer (&amp;pbuf);</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>      result = driver_-&gt;receive (pbuf, nbyte);</div>
+<div class="line"><span class="lineno">  318</span>      <span class="keywordflow">if</span> (result != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  319</span>        {</div>
+<div class="line"><span class="lineno">  320</span>          errno = EIO;</div>
+<div class="line"><span class="lineno">  321</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>      is_connected_ = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>      <span class="comment">// Return POSIX idea of OK.</span></div>
+<div class="line"><span class="lineno">  327</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  328</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Capabilities_html"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Capabilities.html">os::driver::serial::Capabilities</a></div><div class="ttdoc">Serial device driver capabilities.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00454">serial.h:455</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Capabilities_html_af688bc917b275cab9775760af342a404"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Capabilities.html#af688bc917b275cab9775760af342a404">os::driver::serial::Capabilities::dcd</a></div><div class="ttdeci">bool dcd</div><div class="ttdoc">DCD Line: false=not available, true=available.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00506">serial.h:506</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Modem__status_html"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Modem__status.html">os::driver::serial::Modem_status</a></div><div class="ttdoc">Serial modem status</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00354">serial.h:355</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Modem__status_html_adcfbdb34be9d308978c7fd0406bf782c"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Modem__status.html#adcfbdb34be9d308978c7fd0406bf782c">os::driver::serial::Modem_status::is_dcd_active</a></div><div class="ttdeci">bool is_dcd_active(void)</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00804">serial.h:804</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_a18a98960d8974e55b0c6a4386a69a45d"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#a18a98960d8974e55b0c6a4386a69a45d">os::driver::serial::PARITY_NONE</a></div><div class="ttdeci">constexpr config_t PARITY_NONE</div><div class="ttdoc">No Parity = (default);.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00104">serial.h:104</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_a18eb3e0ba8f184c923fea9b97fe7cfca"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#a18eb3e0ba8f184c923fea9b97fe7cfca">os::driver::serial::DATA_BITS_8</a></div><div class="ttdeci">constexpr config_t DATA_BITS_8</div><div class="ttdoc">8 Data bits = (default);.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00094">serial.h:94</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_a41d57e9953d645508f5e33649e4dc931"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#a41d57e9953d645508f5e33649e4dc931">os::driver::serial::STOP_BITS_1</a></div><div class="ttdeci">constexpr config_t STOP_BITS_1</div><div class="ttdoc">1 Stop bit = (default);.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00117">serial.h:117</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_a7d717d90a7dca82986a9e9d14da8508c"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#a7d717d90a7dca82986a9e9d14da8508c">os::driver::serial::MODE_ASYNCHRONOUS</a></div><div class="ttdeci">constexpr config_t MODE_ASYNCHRONOUS</div><div class="ttdoc">UART = (Asynchronous);; arg = Baudrate.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00062">serial.h:62</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ab257e431a306b6c07da31b818b9bf25d"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ab257e431a306b6c07da31b818b9bf25d">os::driver::serial::FLOW_CONTROL_NONE</a></div><div class="ttdeci">constexpr config_t FLOW_CONTROL_NONE</div><div class="ttdoc">No Flow Control = (default);.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00133">serial.h:133</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5af2ab2cc4eb54f4c0b40b4f0a483239c3"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af2ab2cc4eb54f4c0b40b4f0a483239c3">os::driver::serial::enable_tx</a></div><div class="ttdeci">@ enable_tx</div><div class="ttdoc">Enable Transmitter.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00191">serial.h:191</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_abc4f4c19135e501a0a9f3820a8eb80d5af5c4e5e8156442278a2492c1f6ce5c2f"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#abc4f4c19135e501a0a9f3820a8eb80d5af5c4e5e8156442278a2492c1f6ce5c2f">os::driver::serial::enable_rx</a></div><div class="ttdeci">@ enable_rx</div><div class="ttdoc">Enable Receiver.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00194">serial.h:194</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="serial_8h_source.html#l00094">os::driver::serial::DATA_BITS_8</a>, <a class="el" href="serial_8h_source.html#l00506">os::driver::serial::Capabilities::dcd</a>, <a class="el" href="serial_8h_source.html#l00194">os::driver::serial::enable_rx</a>, <a class="el" href="serial_8h_source.html#l00191">os::driver::serial::enable_tx</a>, <a class="el" href="serial_8h_source.html#l00133">os::driver::serial::FLOW_CONTROL_NONE</a>, <a class="el" href="serial_8h_source.html#l00804">os::driver::serial::Modem_status::is_dcd_active()</a>, <a class="el" href="serial_8h_source.html#l00062">os::driver::serial::MODE_ASYNCHRONOUS</a>, <a class="el" href="serial_8h_source.html#l00104">os::driver::serial::PARITY_NONE</a>, <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>, and <a class="el" href="serial_8h_source.html#l00117">os::driver::serial::STOP_BITS_1</a>.</p>
 
 </div>
 </div>
@@ -488,7 +711,159 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00432">432</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00424">424</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>    {</div>
+<div class="line"><span class="lineno">  426</span>      std::size_t count;</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>      <span class="keywordflow">if</span> (tx_buf_ != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  429</span>        {</div>
+<div class="line"><span class="lineno">  430</span>          count = 0;</div>
+<div class="line"><span class="lineno">  431</span>          {</div>
+<div class="line"><span class="lineno">  432</span>            <span class="comment">// ----- Enter critical section -------------------------------</span></div>
+<div class="line"><span class="lineno">  433</span>            <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs;</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">if</span> (tx_buf_-&gt;below_high_water_mark ())</div>
+<div class="line"><span class="lineno">  436</span>              {</div>
+<div class="line"><span class="lineno">  437</span>                <span class="comment">// If there is more space in the buffer, try to fill it.</span></div>
+<div class="line"><span class="lineno">  438</span>                count = tx_buf_-&gt;push_back (<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span> (buf),</div>
+<div class="line"><span class="lineno">  439</span>                                            nbyte);</div>
+<div class="line"><span class="lineno">  440</span>              }</div>
+<div class="line"><span class="lineno">  441</span>            <span class="comment">// ----- Exit critical section --------------------------------</span></div>
+<div class="line"><span class="lineno">  442</span>          }</div>
+<div class="line"><span class="lineno">  443</span>          <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  444</span>            {</div>
+<div class="line"><span class="lineno">  445</span>              <a class="code hl_class" href="classos_1_1driver_1_1serial_1_1Status.html">os::driver::serial::Status</a> status;</div>
+<div class="line"><span class="lineno">  446</span>              {</div>
+<div class="line"><span class="lineno">  447</span>                <span class="comment">// ----- Enter critical section ---------------------------</span></div>
+<div class="line"><span class="lineno">  448</span>                <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs;</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  451</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  452</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  453</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Waggregate-return&quot;</span></div>
+<div class="line"><span class="lineno">  454</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  455</span>                status = driver_-&gt;get_status ();</div>
+<div class="line"><span class="lineno">  456</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>                <span class="comment">// ----- Exit critical section ----------------------------</span></div>
+<div class="line"><span class="lineno">  459</span>              }</div>
+<div class="line"><span class="lineno">  460</span>              <span class="keywordflow">if</span> (!status.<a class="code hl_variable" href="classos_1_1driver_1_1serial_1_1Status.html#a38ea186dede403801e3ff21b26746c34">tx_busy</a>)</div>
+<div class="line"><span class="lineno">  461</span>                {</div>
+<div class="line"><span class="lineno">  462</span>                  uint8_t* pbuf;</div>
+<div class="line"><span class="lineno">  463</span>                  std::size_t nb;</div>
+<div class="line"><span class="lineno">  464</span>                  {</div>
+<div class="line"><span class="lineno">  465</span>                    <span class="comment">// ----- Enter critical section -----------------------</span></div>
+<div class="line"><span class="lineno">  466</span>                    <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs; <span class="comment">// -----</span></div>
+<div class="line"><span class="lineno">  467</span> </div>
+<div class="line"><span class="lineno">  468</span>                    nb = tx_buf_-&gt;front_contiguous_buffer (&amp;pbuf);</div>
+<div class="line"><span class="lineno">  469</span>                    <span class="comment">// ----- Exit critical section ------------------------</span></div>
+<div class="line"><span class="lineno">  470</span>                  }</div>
+<div class="line"><span class="lineno">  471</span>                  <span class="keywordflow">if</span> (nb &gt; 0)</div>
+<div class="line"><span class="lineno">  472</span>                    {</div>
+<div class="line"><span class="lineno">  473</span>                      <span class="keywordflow">if</span> (driver_-&gt;send (pbuf, nb) != <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  474</span>                        {</div>
+<div class="line"><span class="lineno">  475</span>                          errno = EIO;</div>
+<div class="line"><span class="lineno">  476</span>                          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  477</span>                        }</div>
+<div class="line"><span class="lineno">  478</span>                    }</div>
+<div class="line"><span class="lineno">  479</span>                }</div>
+<div class="line"><span class="lineno">  480</span> </div>
+<div class="line"><span class="lineno">  481</span>              <span class="comment">//                bool isBelowHWM;</span></div>
+<div class="line"><span class="lineno">  482</span>              <span class="comment">//                  {</span></div>
+<div class="line"><span class="lineno">  483</span>              <span class="comment">//                    critical_section cs; // -----</span></div>
+<div class="line"><span class="lineno">  484</span>              <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  485</span>              <span class="comment">//                    isBelowHWM = tx_buf_-&gt;below_high_water_mark</span></div>
+<div class="line"><span class="lineno">  486</span>              <span class="comment">//                    ();</span></div>
+<div class="line"><span class="lineno">  487</span>              <span class="comment">//                  }</span></div>
+<div class="line"><span class="lineno">  488</span>              <span class="keywordflow">if</span> (count == nbyte)</div>
+<div class="line"><span class="lineno">  489</span>                {</div>
+<div class="line"><span class="lineno">  490</span>                  <span class="keywordflow">return</span> nbyte;</div>
+<div class="line"><span class="lineno">  491</span>                }</div>
+<div class="line"><span class="lineno">  492</span> </div>
+<div class="line"><span class="lineno">  493</span>              <span class="keywordflow">if</span> (!is_connected_)</div>
+<div class="line"><span class="lineno">  494</span>                {</div>
+<div class="line"><span class="lineno">  495</span>                  <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno">  496</span>                    {</div>
+<div class="line"><span class="lineno">  497</span>                      <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  498</span>                    }</div>
+<div class="line"><span class="lineno">  499</span> </div>
+<div class="line"><span class="lineno">  500</span>                  errno = EIO;</div>
+<div class="line"><span class="lineno">  501</span>                  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  502</span>                }</div>
+<div class="line"><span class="lineno">  503</span> </div>
+<div class="line"><span class="lineno">  504</span>              <span class="comment">// Block and wait for buffer to be freed.</span></div>
+<div class="line"><span class="lineno">  505</span>              tx_sem_.wait ();</div>
+<div class="line"><span class="lineno">  506</span> </div>
+<div class="line"><span class="lineno">  507</span>              <span class="keywordflow">if</span> (count &lt; nbyte)</div>
+<div class="line"><span class="lineno">  508</span>                {</div>
+<div class="line"><span class="lineno">  509</span>                  <span class="comment">// ----- Enter critical section ---------------------------</span></div>
+<div class="line"><span class="lineno">  510</span>                  <a class="code hl_typedef" href="classos_1_1posix_1_1device__serial__buffered.html#a2937a3010fd2000eca88e732fb867a63">critical_section</a> cs;</div>
+<div class="line"><span class="lineno">  511</span> </div>
+<div class="line"><span class="lineno">  512</span>                  std::size_t n;</div>
+<div class="line"><span class="lineno">  513</span>                  <span class="comment">// If there is more space in the buffer, try to fill it.</span></div>
+<div class="line"><span class="lineno">  514</span>                  n = tx_buf_-&gt;push_back (<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span> (buf)</div>
+<div class="line"><span class="lineno">  515</span>                                              + count,</div>
+<div class="line"><span class="lineno">  516</span>                                          nbyte - count);</div>
+<div class="line"><span class="lineno">  517</span>                  count += n;</div>
+<div class="line"><span class="lineno">  518</span>                  <span class="comment">// ----- Exit critical section ----------------------------</span></div>
+<div class="line"><span class="lineno">  519</span>                }</div>
+<div class="line"><span class="lineno">  520</span>            }</div>
+<div class="line"><span class="lineno">  521</span>        }</div>
+<div class="line"><span class="lineno">  522</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  523</span>        {</div>
+<div class="line"><span class="lineno">  524</span>          <span class="comment">// Do not use a transmit buffer, send directly from the user buffer.</span></div>
+<div class="line"><span class="lineno">  525</span>          <span class="comment">// Wait while transmitting.</span></div>
+<div class="line"><span class="lineno">  526</span>          <a class="code hl_class" href="classos_1_1driver_1_1serial_1_1Status.html">os::driver::serial::Status</a> status;</div>
+<div class="line"><span class="lineno">  527</span>          <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  528</span>            {</div>
+<div class="line"><span class="lineno">  529</span>              <span class="keywordflow">if</span> (!is_connected_)</div>
+<div class="line"><span class="lineno">  530</span>                {</div>
+<div class="line"><span class="lineno">  531</span>                  errno = EIO;</div>
+<div class="line"><span class="lineno">  532</span>                  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  533</span>                }</div>
+<div class="line"><span class="lineno">  534</span> </div>
+<div class="line"><span class="lineno">  535</span>              status = driver_-&gt;get_status ();</div>
+<div class="line"><span class="lineno">  536</span>              <span class="keywordflow">if</span> (!status.<a class="code hl_function" href="classos_1_1driver_1_1serial_1_1Status.html#a7c9740c841bd2402c903a674ae3bee88">is_tx_busy</a> ())</div>
+<div class="line"><span class="lineno">  537</span>                {</div>
+<div class="line"><span class="lineno">  538</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  539</span>                }</div>
+<div class="line"><span class="lineno">  540</span>              tx_sem_.wait ();</div>
+<div class="line"><span class="lineno">  541</span>            }</div>
+<div class="line"><span class="lineno">  542</span> </div>
+<div class="line"><span class="lineno">  543</span>          <span class="keywordflow">if</span> ((driver_-&gt;send (buf, nbyte)) == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>)</div>
+<div class="line"><span class="lineno">  544</span>            {</div>
+<div class="line"><span class="lineno">  545</span>              <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><span class="lineno">  546</span>                {</div>
+<div class="line"><span class="lineno">  547</span>                  <span class="keywordflow">if</span> (!is_connected_)</div>
+<div class="line"><span class="lineno">  548</span>                    {</div>
+<div class="line"><span class="lineno">  549</span>                      errno = EIO;</div>
+<div class="line"><span class="lineno">  550</span>                      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  551</span>                    }</div>
+<div class="line"><span class="lineno">  552</span> </div>
+<div class="line"><span class="lineno">  553</span>                  status = driver_-&gt;get_status ();</div>
+<div class="line"><span class="lineno">  554</span>                  <span class="keywordflow">if</span> (!status.<a class="code hl_function" href="classos_1_1driver_1_1serial_1_1Status.html#a7c9740c841bd2402c903a674ae3bee88">is_tx_busy</a> ())</div>
+<div class="line"><span class="lineno">  555</span>                    {</div>
+<div class="line"><span class="lineno">  556</span>                      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  557</span>                    }</div>
+<div class="line"><span class="lineno">  558</span>                  tx_sem_.wait ();</div>
+<div class="line"><span class="lineno">  559</span>                }</div>
+<div class="line"><span class="lineno">  560</span>              count = driver_-&gt;get_tx_count ();</div>
+<div class="line"><span class="lineno">  561</span>            }</div>
+<div class="line"><span class="lineno">  562</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  563</span>            {</div>
+<div class="line"><span class="lineno">  564</span>              count = -1;</div>
+<div class="line"><span class="lineno">  565</span>              errno = EIO;</div>
+<div class="line"><span class="lineno">  566</span>            }</div>
+<div class="line"><span class="lineno">  567</span>        }</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>      <span class="comment">// Actual number of bytes transmitted from buffer.</span></div>
+<div class="line"><span class="lineno">  570</span>      <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  571</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Status_html"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Status.html">os::driver::serial::Status</a></div><div class="ttdoc">Serial port status</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00258">serial.h:259</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Status_html_a38ea186dede403801e3ff21b26746c34"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Status.html#a38ea186dede403801e3ff21b26746c34">os::driver::serial::Status::tx_busy</a></div><div class="ttdeci">bool tx_busy</div><div class="ttdoc">Transmitter busy flag.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00289">serial.h:289</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1serial_1_1Status_html_a7c9740c841bd2402c903a674ae3bee88"><div class="ttname"><a href="classos_1_1driver_1_1serial_1_1Status.html#a7c9740c841bd2402c903a674ae3bee88">os::driver::serial::Status::is_tx_busy</a></div><div class="ttdeci">bool is_tx_busy(void)</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00748">serial.h:748</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="serial_8h_source.html#l00748">os::driver::serial::Status::is_tx_busy()</a>, <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>, and <a class="el" href="serial_8h_source.html#l00289">os::driver::serial::Status::tx_busy</a>.</p>
 
 </div>
 </div>
@@ -528,7 +903,128 @@ template&lt;typename CS &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00610">610</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device-serial-buffered_8h_source.html#l00603">603</a> of file <a class="el" href="device-serial-buffered_8h_source.html">device-serial-buffered.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  605</span>    {</div>
+<div class="line"><span class="lineno">  606</span>      <span class="keywordflow">if</span> (!object-&gt;is_opened_)</div>
+<div class="line"><span class="lineno">  607</span>        {</div>
+<div class="line"><span class="lineno">  608</span>          <span class="comment">// After close(), ignore interrupts.</span></div>
+<div class="line"><span class="lineno">  609</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  610</span>        }</div>
+<div class="line"><span class="lineno">  611</span>      <span class="keywordflow">if</span> ((event</div>
+<div class="line"><span class="lineno">  612</span>           &amp; (<a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590aca1b793b0f88d578263a00078c12c152">os::driver::serial::Event::receive_complete</a></div>
+<div class="line"><span class="lineno">  613</span>              | <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a0f1463b958b2744ba0fa3e052b4d337b">os::driver::serial::Event::rx_framing_error</a></div>
+<div class="line"><span class="lineno">  614</span>              | <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ac55f449c77c7b2befa3d6097731d6d8d">os::driver::serial::Event::rx_timeout</a>)))</div>
+<div class="line"><span class="lineno">  615</span>        {</div>
+<div class="line"><span class="lineno">  616</span>          <span class="comment">// TODO: process errors and timeouts</span></div>
+<div class="line"><span class="lineno">  617</span>          std::size_t tmpCount = <span class="keywordtype">object</span>-&gt;driver_-&gt;get_rx_count ();</div>
+<div class="line"><span class="lineno">  618</span>          std::size_t count = tmpCount - <span class="keywordtype">object</span>-&gt;rx_count_;</div>
+<div class="line"><span class="lineno">  619</span>          <span class="keywordtype">object</span>-&gt;rx_count_ = tmpCount;</div>
+<div class="line"><span class="lineno">  620</span>          std::size_t adjust = <span class="keywordtype">object</span>-&gt;rx_buf_-&gt;advance_back (count);</div>
+<div class="line"><span class="lineno">  621</span>          assert (count == adjust);</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>          <span class="keywordflow">if</span> (event &amp; <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590aca1b793b0f88d578263a00078c12c152">os::driver::serial::Event::receive_complete</a>)</div>
+<div class="line"><span class="lineno">  624</span>            {</div>
+<div class="line"><span class="lineno">  625</span>              uint8_t* pbuf;</div>
+<div class="line"><span class="lineno">  626</span>              std::size_t nbyte</div>
+<div class="line"><span class="lineno">  627</span>                  = <span class="keywordtype">object</span>-&gt;rx_buf_-&gt;back_contiguous_buffer (&amp;pbuf);</div>
+<div class="line"><span class="lineno">  628</span>              <span class="keywordflow">if</span> (nbyte == 0)</div>
+<div class="line"><span class="lineno">  629</span>                {</div>
+<div class="line"><span class="lineno">  630</span>                  <span class="comment">// Overwrite the last byte, but keep the driver in</span></div>
+<div class="line"><span class="lineno">  631</span>                  <span class="comment">// receive mode continuously.</span></div>
+<div class="line"><span class="lineno">  632</span>                  <span class="keywordtype">object</span>-&gt;rx_buf_-&gt;retreat_back ();</div>
+<div class="line"><span class="lineno">  633</span>                  nbyte = <span class="keywordtype">object</span>-&gt;rx_buf_-&gt;back_contiguous_buffer (&amp;pbuf);</div>
+<div class="line"><span class="lineno">  634</span>                }</div>
+<div class="line"><span class="lineno">  635</span>              assert (nbyte &gt; 0);</div>
+<div class="line"><span class="lineno">  636</span> </div>
+<div class="line"><span class="lineno">  637</span>              <span class="comment">// Read as much as we can.</span></div>
+<div class="line"><span class="lineno">  638</span>              int32_t status;</div>
+<div class="line"><span class="lineno">  639</span>              status = <span class="keywordtype">object</span>-&gt;driver_-&gt;receive (pbuf, nbyte);</div>
+<div class="line"><span class="lineno">  640</span>              <span class="comment">// TODO: implement error processing.</span></div>
+<div class="line"><span class="lineno">  641</span>              assert (status == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  642</span> </div>
+<div class="line"><span class="lineno">  643</span>              <span class="keywordtype">object</span>-&gt;rx_count_ = 0;</div>
+<div class="line"><span class="lineno">  644</span>            }</div>
+<div class="line"><span class="lineno">  645</span>          <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno">  646</span>            {</div>
+<div class="line"><span class="lineno">  647</span>              <span class="comment">// Immediately wake up, do not wait to reach any water mark.</span></div>
+<div class="line"><span class="lineno">  648</span>              <span class="keywordtype">object</span>-&gt;rx_sem_.post ();</div>
+<div class="line"><span class="lineno">  649</span>            }</div>
+<div class="line"><span class="lineno">  650</span>        }</div>
+<div class="line"><span class="lineno">  651</span>      <span class="keywordflow">if</span> (event &amp; <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ad963728e28716ad517337bae40bf758d">os::driver::serial::Event::tx_complete</a>)</div>
+<div class="line"><span class="lineno">  652</span>        {</div>
+<div class="line"><span class="lineno">  653</span>          <span class="keywordflow">if</span> (object-&gt;tx_buf_ != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  654</span>            {</div>
+<div class="line"><span class="lineno">  655</span>              std::size_t count = <span class="keywordtype">object</span>-&gt;driver_-&gt;get_tx_count ();</div>
+<div class="line"><span class="lineno">  656</span>              std::size_t adjust = <span class="keywordtype">object</span>-&gt;tx_buf_-&gt;advance_front (count);</div>
+<div class="line"><span class="lineno">  657</span>              assert (count == adjust);</div>
+<div class="line"><span class="lineno">  658</span> </div>
+<div class="line"><span class="lineno">  659</span>              uint8_t* pbuf;</div>
+<div class="line"><span class="lineno">  660</span>              std::size_t nbyte</div>
+<div class="line"><span class="lineno">  661</span>                  = <span class="keywordtype">object</span>-&gt;tx_buf_-&gt;front_contiguous_buffer (&amp;pbuf);</div>
+<div class="line"><span class="lineno">  662</span>              <span class="keywordflow">if</span> (nbyte &gt; 0)</div>
+<div class="line"><span class="lineno">  663</span>                {</div>
+<div class="line"><span class="lineno">  664</span>                  int32_t status;</div>
+<div class="line"><span class="lineno">  665</span>                  status = <span class="keywordtype">object</span>-&gt;driver_-&gt;send (pbuf, nbyte);</div>
+<div class="line"><span class="lineno">  666</span>                  <span class="comment">// TODO: implement error processing</span></div>
+<div class="line"><span class="lineno">  667</span>                  assert (status == <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a>);</div>
+<div class="line"><span class="lineno">  668</span>                }</div>
+<div class="line"><span class="lineno">  669</span>              <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  670</span>                {</div>
+<div class="line"><span class="lineno">  671</span>                  <span class="keywordtype">object</span>-&gt;tx_busy_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  672</span>                }</div>
+<div class="line"><span class="lineno">  673</span>              <span class="keywordflow">if</span> (object-&gt;tx_buf_-&gt;below_low_water_mark ())</div>
+<div class="line"><span class="lineno">  674</span>                {</div>
+<div class="line"><span class="lineno">  675</span>                  <span class="comment">// Wake up thread, to come and send more bytes.</span></div>
+<div class="line"><span class="lineno">  676</span>                  <span class="keywordtype">object</span>-&gt;tx_sem_.post ();</div>
+<div class="line"><span class="lineno">  677</span>                }</div>
+<div class="line"><span class="lineno">  678</span>            }</div>
+<div class="line"><span class="lineno">  679</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  680</span>            {</div>
+<div class="line"><span class="lineno">  681</span>              <span class="comment">// No buffer, wake up the thread to return from write().</span></div>
+<div class="line"><span class="lineno">  682</span>              <span class="keywordtype">object</span>-&gt;tx_sem_.post ();</div>
+<div class="line"><span class="lineno">  683</span>            }</div>
+<div class="line"><span class="lineno">  684</span>        }</div>
+<div class="line"><span class="lineno">  685</span>      <span class="keywordflow">if</span> (event &amp; <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ab3e14962b245eaf7deab89f03da5408e">os::driver::serial::Event::dcd</a>)</div>
+<div class="line"><span class="lineno">  686</span>        {</div>
+<div class="line"><span class="lineno">  687</span>          <a class="code hl_class" href="classos_1_1driver_1_1serial_1_1Modem__status.html">os::driver::serial::Modem_status</a> status;</div>
+<div class="line"><span class="lineno">  688</span>          status = <span class="keywordtype">object</span>-&gt;driver_-&gt;get_modem_status ();</div>
+<div class="line"><span class="lineno">  689</span> </div>
+<div class="line"><span class="lineno">  690</span>          <span class="keywordtype">bool</span> is_dcd_active = status.<a class="code hl_function" href="classos_1_1driver_1_1serial_1_1Modem__status.html#adcfbdb34be9d308978c7fd0406bf782c">is_dcd_active</a> ();</div>
+<div class="line"><span class="lineno">  691</span>          <span class="keywordtype">object</span>-&gt;is_connected_ = is_dcd_active;</div>
+<div class="line"><span class="lineno">  692</span>          <span class="keywordflow">if</span> (is_dcd_active)</div>
+<div class="line"><span class="lineno">  693</span>            {</div>
+<div class="line"><span class="lineno">  694</span>              <span class="comment">// Connected, wake-up open().</span></div>
+<div class="line"><span class="lineno">  695</span>              <span class="keywordtype">object</span>-&gt;open_sem_.post ();</div>
+<div class="line"><span class="lineno">  696</span>            }</div>
+<div class="line"><span class="lineno">  697</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  698</span>            {</div>
+<div class="line"><span class="lineno">  699</span>              <span class="comment">// Disconnected, cancel read.</span></div>
+<div class="line"><span class="lineno">  700</span>              <span class="keywordtype">object</span>-&gt;rx_sem_.post ();</div>
+<div class="line"><span class="lineno">  701</span> </div>
+<div class="line"><span class="lineno">  702</span>              <span class="comment">// Cancel write.</span></div>
+<div class="line"><span class="lineno">  703</span>              <span class="keywordtype">object</span>-&gt;tx_sem_.post ();</div>
+<div class="line"><span class="lineno">  704</span>            }</div>
+<div class="line"><span class="lineno">  705</span>        }</div>
+<div class="line"><span class="lineno">  706</span>      <span class="keywordflow">if</span> (event &amp; <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a0b2fdd1a3182f97c4532c62dd446cdd1">os::driver::serial::Event::cts</a>)</div>
+<div class="line"><span class="lineno">  707</span>        {</div>
+<div class="line"><span class="lineno">  708</span>          <span class="comment">// TODO: add flow control</span></div>
+<div class="line"><span class="lineno">  709</span>        }</div>
+<div class="line"><span class="lineno">  710</span>      <span class="keywordflow">if</span> (event &amp; <a class="code hl_enumvalue" href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a64058584a4b7ca529ac5ec07c37eabed">os::driver::serial::Event::dsr</a>)</div>
+<div class="line"><span class="lineno">  711</span>        {</div>
+<div class="line"><span class="lineno">  712</span>          <span class="comment">// TODO: add flow control</span></div>
+<div class="line"><span class="lineno">  713</span>        }</div>
+<div class="line"><span class="lineno">  714</span>    }</div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590a0b2fdd1a3182f97c4532c62dd446cdd1"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a0b2fdd1a3182f97c4532c62dd446cdd1">os::driver::serial::cts</a></div><div class="ttdeci">@ cts</div><div class="ttdoc">CTS state changed (optional).</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00430">serial.h:430</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590a0f1463b958b2744ba0fa3e052b4d337b"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a0f1463b958b2744ba0fa3e052b4d337b">os::driver::serial::rx_framing_error</a></div><div class="ttdeci">@ rx_framing_error</div><div class="ttdoc">Framing error detected on receive.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00424">serial.h:424</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590a64058584a4b7ca529ac5ec07c37eabed"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590a64058584a4b7ca529ac5ec07c37eabed">os::driver::serial::dsr</a></div><div class="ttdeci">@ dsr</div><div class="ttdoc">DSR state changed (optional).</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00433">serial.h:433</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590ab3e14962b245eaf7deab89f03da5408e"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ab3e14962b245eaf7deab89f03da5408e">os::driver::serial::dcd</a></div><div class="ttdeci">@ dcd</div><div class="ttdoc">DCD state changed (optional).</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00436">serial.h:436</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590ac55f449c77c7b2befa3d6097731d6d8d"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ac55f449c77c7b2befa3d6097731d6d8d">os::driver::serial::rx_timeout</a></div><div class="ttdeci">@ rx_timeout</div><div class="ttdoc">Receive character timeout (optional).</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00418">serial.h:418</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590aca1b793b0f88d578263a00078c12c152"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590aca1b793b0f88d578263a00078c12c152">os::driver::serial::receive_complete</a></div><div class="ttdeci">@ receive_complete</div><div class="ttdoc">Receive completed.</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00403">serial.h:403</a></div></div>
+<div class="ttc" id="anamespaceos_1_1driver_1_1serial_html_ac67705f57aef90334268affc4ff9a590ad963728e28716ad517337bae40bf758d"><div class="ttname"><a href="namespaceos_1_1driver_1_1serial.html#ac67705f57aef90334268affc4ff9a590ad963728e28716ad517337bae40bf758d">os::driver::serial::tx_complete</a></div><div class="ttdeci">@ tx_complete</div><div class="ttdoc">Transmit completed (optional).</div><div class="ttdef"><b>Definition</b> <a href="serial_8h_source.html#l00409">serial.h:409</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="serial_8h_source.html#l00430">os::driver::serial::cts</a>, <a class="el" href="serial_8h_source.html#l00436">os::driver::serial::dcd</a>, <a class="el" href="serial_8h_source.html#l00433">os::driver::serial::dsr</a>, <a class="el" href="serial_8h_source.html#l00804">os::driver::serial::Modem_status::is_dcd_active()</a>, <a class="el" href="serial_8h_source.html#l00403">os::driver::serial::receive_complete</a>, <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>, <a class="el" href="serial_8h_source.html#l00424">os::driver::serial::rx_framing_error</a>, <a class="el" href="serial_8h_source.html#l00418">os::driver::serial::rx_timeout</a>, and <a class="el" href="serial_8h_source.html#l00409">os::driver::serial::tx_complete</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device-serial-buffered_8h_source.html#l00191">os::posix::device_serial_buffered&lt; CS &gt;::device_serial_buffered()</a>.</p>
 
 </div>
 </div>

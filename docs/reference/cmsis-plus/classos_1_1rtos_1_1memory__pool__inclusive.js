@@ -27,7 +27,7 @@ var classos_1_1rtos_1_1memory__pool__inclusive =
     [ "reset", "classos_1_1rtos_1_1memory__pool__inclusive.html#ac764ac06d8a23bc517ea0785caccf350", null ],
     [ "timed_alloc", "classos_1_1rtos_1_1memory__pool__inclusive.html#a6a3bb3d446d5eb2ebbf02b5413751e2d", null ],
     [ "try_alloc", "classos_1_1rtos_1_1memory__pool__inclusive.html#aaf2fa870e2f933383239cbbf2ec87e13", null ],
-    [ "arena_", "classos_1_1rtos_1_1memory__pool__inclusive.html#a0b3d51171623ce3cc363e22f7bf3ede4", null ],
+    [ "arena_", "classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03", null ],
     [ "blocks", "classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8", null ],
     [ "initializer", "classos_1_1rtos_1_1memory__pool__inclusive.html#ga7fd442f85898940215d53d32e7a4eee7", null ],
     [ "max_size", "classos_1_1rtos_1_1memory__pool__inclusive.html#ga25abdce615f4418c120dfdaa66db582e", null ]

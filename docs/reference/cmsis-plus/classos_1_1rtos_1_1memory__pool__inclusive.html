@@ -249,22 +249,21 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ga7fd442f85898940215d53d32e7a4eee7"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classos_1_1rtos_1_1memory__pool_1_1attributes.html">attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-mempool.html#ga7fd442f85898940215d53d32e7a4eee7">initializer</a></td></tr>
 <tr class="memdesc:ga7fd442f85898940215d53d32e7a4eee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default memory pool initialiser.  <br /></td></tr>
 <tr class="separator:ga7fd442f85898940215d53d32e7a4eee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga25abdce615f4418c120dfdaa66db582e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__cmsis-plus-rtos-mempool.html#ga2906df850164ea47bd55d45a254f6699">memory_pool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-mempool.html#ga25abdce615f4418c120dfdaa66db582e">max_size</a></td></tr>
+<tr class="memitem:ga25abdce615f4418c120dfdaa66db582e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__cmsis-plus-rtos-mempool.html#ga2906df850164ea47bd55d45a254f6699">memory_pool::size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmsis-plus-rtos-mempool.html#ga25abdce615f4418c120dfdaa66db582e">max_size</a> = static_cast&lt;<a class="el" href="group__cmsis-plus-rtos-mempool.html#ga2906df850164ea47bd55d45a254f6699">memory_pool::size_t</a>&gt; (0 - 1)</td></tr>
 <tr class="memdesc:ga25abdce615f4418c120dfdaa66db582e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum pool size.  <br /></td></tr>
 <tr class="separator:ga25abdce615f4418c120dfdaa66db582e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Private Member Variables</div></td></tr>
-<tr class="memitem:a0b3d51171623ce3cc363e22f7bf3ede4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1memory__pool_1_1arena.html">arena</a>&lt; void *, <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, sizeof(T)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a0b3d51171623ce3cc363e22f7bf3ede4">arena_</a></td></tr>
-<tr class="memdesc:a0b3d51171623ce3cc363e22f7bf3ede4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local storage for the pool.  <br /></td></tr>
-<tr class="separator:a0b3d51171623ce3cc363e22f7bf3ede4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b4b332736e3888b04cf380304b7c03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classos_1_1rtos_1_1memory__pool_1_1arena.html">arena</a>&lt; void *, <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, sizeof(T)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">arena_</a></td></tr>
+<tr class="memdesc:a44b4b332736e3888b04cf380304b7c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local storage for the pool.  <br /></td></tr>
+<tr class="separator:a44b4b332736e3888b04cf380304b7c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, std::size_t N&gt;<br />
-class os::rtos::memory_pool_inclusive&lt; T, N &gt;</div><p>Template of a synchronised <b>memory pool</b> with block type and local storage. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00761">761</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+class os::rtos::memory_pool_inclusive&lt; T, N &gt;</div>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00755">755</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5ef5fc603da1b3dfd918ca4d03f8ff97" name="a5ef5fc603da1b3dfd918ca4d03f8ff97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ef5fc603da1b3dfd918ca4d03f8ff97">&#9670;&#160;</a></span>allocator_type</h2>
@@ -286,8 +285,6 @@ class os::rtos::memory_pool_inclusive&lt; T, N &gt;</div><p>Template of a synchr
 </table>
 </div><div class="memdoc">
 
-<p>Default RTOS allocator. </p>
-
 <p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00201">201</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
@@ -306,9 +303,7 @@ template&lt;typename T , std::size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Local type of message. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00768">768</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00761">761</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
 </div>
 </div>
@@ -330,8 +325,6 @@ template&lt;typename T , std::size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct a memory pool object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Reference to attributes.</td></tr>
@@ -345,8 +338,13 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Implemented as a wrapper over the parent constructor, automatically passing the message size and the storage details.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01302">1302</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01291">1291</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1292</span>    {</div>
+<div class="line"><span class="lineno"> 1293</span>      internal_construct_ (<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, <span class="keyword">sizeof</span> (T), attr, &amp;<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">arena_</a>, <span class="keyword">sizeof</span> (<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">arena_</a>));</div>
+<div class="line"><span class="lineno"> 1294</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool__inclusive_html_a44b4b332736e3888b04cf380304b7c03"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">os::rtos::memory_pool_inclusive::arena_</a></div><div class="ttdeci">arena&lt; void *, blocks, sizeof(T)&gt; arena_</div><div class="ttdoc">Local storage for the pool.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8h_source.html#l00829">os-mempool.h:829</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool__inclusive_html_a8689eb9bde72838004c335a80d80a3f8"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">os::rtos::memory_pool_inclusive::blocks</a></div><div class="ttdeci">static const std::size_t blocks</div><div class="ttdoc">Local constant based on template definition.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8h_source.html#l00766">os-mempool.h:766</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3181b8d9e6ff8adc40c938e3136558c0" name="a3181b8d9e6ff8adc40c938e3136558c0"></a>
@@ -376,8 +374,6 @@ template&lt;typename T , std::size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct a named memory pool object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pointer to name. </td></tr>
@@ -392,7 +388,15 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Implemented as a wrapper over the parent constructor, automatically passing the message size and the storage details.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01335">1335</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01323">1323</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1325</span>        : <a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a2170a2c21e7c9c5234a111ffedecd9ce">memory_pool</a>{ <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> }</div>
+<div class="line"><span class="lineno"> 1326</span>    {</div>
+<div class="line"><span class="lineno"> 1327</span>      internal_construct_ (<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, <span class="keyword">sizeof</span> (T), attr, &amp;<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">arena_</a>, <span class="keyword">sizeof</span> (<a class="code hl_variable" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a44b4b332736e3888b04cf380304b7c03">arena_</a>));</div>
+<div class="line"><span class="lineno"> 1328</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1object__named_html_a3103a84c5e0521c3639306f5879526ba"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">os::rtos::internal::object_named::name</a></div><div class="ttdeci">const char * name(void) const</div><div class="ttdoc">Get object name.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00753">os-decls.h:753</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a2170a2c21e7c9c5234a111ffedecd9ce"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a2170a2c21e7c9c5234a111ffedecd9ce">os::rtos::memory_pool::memory_pool</a></div><div class="ttdeci">memory_pool(std::size_t blocks, std::size_t block_size_bytes, const attributes &amp;attr=initializer, const allocator_type &amp;allocator=allocator_type())</div><div class="ttdoc">Construct a memory pool object instance.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8cpp_source.html#l00231">os-mempool.cpp:231</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8h_source.html#l00829">os::rtos::memory_pool_inclusive&lt; T, N &gt;::arena_</a>, and <a class="el" href="os-mempool_8h_source.html#l00766">os::rtos::memory_pool_inclusive&lt; T, N &gt;::blocks</a>.</p>
 
 </div>
 </div>
@@ -417,14 +421,14 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the memory pool object instance. </p>
 <p>This destructor shall destroy the memory pool object; the object becomes, in effect, uninitialised. An implementation may cause the destructor to set the object to an invalid value.</p>
 <p>It shall be safe to destroy an initialised memory pool object upon which no threads are currently blocked. Attempting to destroy a memory pool object upon which other threads are currently blocked results in undefined behaviour.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01357">1357</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01344">1344</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1345</span>    {</div>
+<div class="line"><span class="lineno"> 1346</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -453,14 +457,19 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate a memory block. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if interrupted.</dd></dl>
 <p>Wrapper over the parent method, automatically passing the cast.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a398b56100a97f150fb31bcc781ced974" title="Allocate a memory block.">memory_pool::alloc()</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01370">1370</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01357">1357</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1358</span>    {</div>
+<div class="line"><span class="lineno"> 1359</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a58c609f468d4fa5430d9c04ca11ceb9d">value_type</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a398b56100a97f150fb31bcc781ced974">memory_pool::alloc</a> ());</div>
+<div class="line"><span class="lineno"> 1360</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool__inclusive_html_a58c609f468d4fa5430d9c04ca11ceb9d"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool__inclusive.html#a58c609f468d4fa5430d9c04ca11ceb9d">os::rtos::memory_pool_inclusive::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdoc">Local type of message.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8h_source.html#l00761">os-mempool.h:761</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a398b56100a97f150fb31bcc781ced974"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a398b56100a97f150fb31bcc781ced974">os::rtos::memory_pool::alloc</a></div><div class="ttdeci">void * alloc(void)</div><div class="ttdoc">Allocate a memory block.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8cpp_source.html#l00510">os-mempool.cpp:510</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>.</p>
 
 </div>
 </div>
@@ -487,14 +496,15 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get block size. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The block size, in bytes.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00931">931</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00923">923</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  924</span>    {</div>
+<div class="line"><span class="lineno">  925</span>      <span class="keywordflow">return</span> block_size_bytes_;</div>
+<div class="line"><span class="lineno">  926</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6611d00923116927509330745999c02e" name="a6611d00923116927509330745999c02e"></a>
@@ -520,13 +530,16 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get memory pool capacity. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The max number of blocks in the pool.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00922">922</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00914">914</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  915</span>    {</div>
+<div class="line"><span class="lineno">  916</span>      <span class="keywordflow">return</span> blocks_;</div>
+<div class="line"><span class="lineno">  917</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-mempool_8h_source.html#l00950">os::rtos::memory_pool::full()</a>.</p>
 
 </div>
 </div>
@@ -565,8 +578,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Calculator for pool storage requirements. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">blocks</td><td>Number of blocks. </td></tr>
@@ -577,6 +588,13 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Total required storage in bytes, including internal alignment. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00188">188</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>      {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="comment">// Align each block</span></div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> (blocks</div>
+<div class="line"><span class="lineno">  193</span>                * ((block_size_bytes + (<span class="keyword">sizeof</span> (T) - 1)) &amp; ~(<span class="keyword">sizeof</span> (T) - 1)));</div>
+<div class="line"><span class="lineno">  194</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-mempool_8cpp_source.html#l00266">os::rtos::memory_pool::memory_pool()</a>, and <a class="el" href="os-mempool_8h_source.html#l01026">os::rtos::memory_pool_allocated&lt; Allocator &gt;::memory_pool_allocated()</a>.</p>
 
 </div>
 </div>
@@ -603,13 +621,16 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get blocks count. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of blocks used from the queue.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00940">940</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00932">932</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  933</span>    {</div>
+<div class="line"><span class="lineno">  934</span>      <span class="keywordflow">return</span> count_;</div>
+<div class="line"><span class="lineno">  935</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-mempool_8h_source.html#l00941">os::rtos::memory_pool::empty()</a>, and <a class="el" href="os-mempool_8h_source.html#l00950">os::rtos::memory_pool::full()</a>.</p>
 
 </div>
 </div>
@@ -636,8 +657,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the memory pool is empty. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -648,7 +667,13 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00949">949</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00941">941</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  942</span>    {</div>
+<div class="line"><span class="lineno">  943</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a8c3f1aa4c42b7b2a94b536b8e07bb381">count</a> () == 0);</div>
+<div class="line"><span class="lineno">  944</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a8c3f1aa4c42b7b2a94b536b8e07bb381"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a8c3f1aa4c42b7b2a94b536b8e07bb381">os::rtos::memory_pool::count</a></div><div class="ttdeci">std::size_t count(void) const</div><div class="ttdoc">Get blocks count.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8h_source.html#l00932">os-mempool.h:932</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8h_source.html#l00932">os::rtos::memory_pool::count()</a>.</p>
 
 </div>
 </div>
@@ -677,8 +702,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Free the memory block. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -690,7 +713,13 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the cast.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063" title="Free the memory block.">memory_pool::free()</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01412">1412</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01399">1399</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1400</span>    {</div>
+<div class="line"><span class="lineno"> 1401</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063">memory_pool::free</a> (block);</div>
+<div class="line"><span class="lineno"> 1402</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a95efd50d23b62a19590750f1ff07c063"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a95efd50d23b62a19590750f1ff07c063">os::rtos::memory_pool::free</a></div><div class="ttdeci">result_t free(void *block)</div><div class="ttdoc">Free the memory block.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8cpp_source.html#l00781">os-mempool.cpp:781</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8cpp_source.html#l00781">os::rtos::memory_pool::free()</a>.</p>
 
 </div>
 </div>
@@ -717,8 +746,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Free the memory block. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>Pointer to memory block to free. </td></tr>
@@ -736,7 +763,69 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>It uses a critical section to protect simultaneous access from other threads or interrupts.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00783">783</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00781">781</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  782</span>    {</div>
+<div class="line"><span class="lineno">  783</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_MEMPOOL)</span></div>
+<div class="line"><span class="lineno">  784</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%p) @%p %s\n&quot;</span>, __func__, block, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  785</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  786</span> </div>
+<div class="line"><span class="lineno">  787</span>      <span class="comment">// Don&#39;t call this from high priority interrupts.</span></div>
+<div class="line"><span class="lineno">  788</span>      assert (port::interrupts::is_priority_valid ());</div>
+<div class="line"><span class="lineno">  789</span> </div>
+<div class="line"><span class="lineno">  790</span>      <span class="comment">// Validate pointer.</span></div>
+<div class="line"><span class="lineno">  791</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  792</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  793</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  794</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  795</span>      <span class="keywordflow">if</span> ((block &lt; pool_addr_)</div>
+<div class="line"><span class="lineno">  796</span>          || (block &gt;= (<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (pool_addr_)</div>
+<div class="line"><span class="lineno">  797</span>                        + blocks_ * block_size_bytes_)))</div>
+<div class="line"><span class="lineno">  798</span>        {</div>
+<div class="line"><span class="lineno">  799</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_MEMPOOL)</span></div>
+<div class="line"><span class="lineno">  800</span>          <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s(%p) EINVAL @%p %s\n&quot;</span>, __func__, block, <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  801</span>                         <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  802</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  803</span>          <span class="keywordflow">return</span> EINVAL;</div>
+<div class="line"><span class="lineno">  804</span>        }</div>
+<div class="line"><span class="lineno">  805</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  806</span> </div>
+<div class="line"><span class="lineno">  807</span>      {</div>
+<div class="line"><span class="lineno">  808</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  809</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  810</span> </div>
+<div class="line"><span class="lineno">  811</span>        <span class="comment">// Perform a push_front() on the single linked LIFO list,</span></div>
+<div class="line"><span class="lineno">  812</span>        <span class="comment">// i.e. add the block to the beginning of the list.</span></div>
+<div class="line"><span class="lineno">  813</span> </div>
+<div class="line"><span class="lineno">  814</span>        <span class="comment">// Link previous list to this block; may be null, but it does</span></div>
+<div class="line"><span class="lineno">  815</span>        <span class="comment">// not matter.</span></div>
+<div class="line"><span class="lineno">  816</span>        *(<span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>**<span class="keyword">&gt;</span> (block)) = first_;</div>
+<div class="line"><span class="lineno">  817</span> </div>
+<div class="line"><span class="lineno">  818</span>        <span class="comment">// Now this block is the first one.</span></div>
+<div class="line"><span class="lineno">  819</span>        first_ = block;</div>
+<div class="line"><span class="lineno">  820</span> </div>
+<div class="line"><span class="lineno">  821</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  822</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  823</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">  824</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  825</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">  826</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  827</span>        --count_;</div>
+<div class="line"><span class="lineno">  828</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  829</span> </div>
+<div class="line"><span class="lineno">  830</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  831</span>      }</div>
+<div class="line"><span class="lineno">  832</span> </div>
+<div class="line"><span class="lineno">  833</span>      <span class="comment">// Wake-up one thread, if any.</span></div>
+<div class="line"><span class="lineno">  834</span>      list_.resume_one ();</div>
+<div class="line"><span class="lineno">  835</span> </div>
+<div class="line"><span class="lineno">  836</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  837</span>    }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1result_html_a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b"><div class="ttname"><a href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a></div><div class="ttdeci">@ ok</div><div class="ttdoc">Function completed; no errors or events occurred.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00181">os-decls.h:179</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-mempool_8h_source.html#l01257">os::rtos::memory_pool_typed&lt; T, Allocator &gt;::free()</a>, and <a class="el" href="os-mempool_8h_source.html#l01399">os::rtos::memory_pool_inclusive&lt; T, N &gt;::free()</a>.</p>
 
 </div>
 </div>
@@ -763,8 +852,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the memory pool is full. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -775,7 +862,13 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00958">958</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00950">950</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  951</span>    {</div>
+<div class="line"><span class="lineno">  952</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a8c3f1aa4c42b7b2a94b536b8e07bb381">count</a> () == <a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a6611d00923116927509330745999c02e">capacity</a> ());</div>
+<div class="line"><span class="lineno">  953</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a6611d00923116927509330745999c02e"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a6611d00923116927509330745999c02e">os::rtos::memory_pool::capacity</a></div><div class="ttdeci">std::size_t capacity(void) const</div><div class="ttdoc">Get memory pool capacity.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8h_source.html#l00914">os-mempool.h:914</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8h_source.html#l00914">os::rtos::memory_pool::capacity()</a>, and <a class="el" href="os-mempool_8h_source.html#l00932">os::rtos::memory_pool::count()</a>.</p>
 
 </div>
 </div>
@@ -802,14 +895,17 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get object name. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A null terminated string.</dd></dl>
 <p>All objects return a non-null string; anonymous objects return <code>"-"</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00759">759</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00753">753</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  754</span>      {</div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">return</span> name_;</div>
+<div class="line"><span class="lineno">  756</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lifo_8h_source.html#l00365">os::memory::lifo::lifo()</a>, <a class="el" href="malloc_8h_source.html#l00214">os::memory::malloc_memory_resource::malloc_memory_resource()</a>, <a class="el" href="os-mqueue_8h_source.html#l01551">os::rtos::message_queue_typed&lt; T, Allocator &gt;::message_queue_typed()</a>, <a class="el" href="block-pool_8cpp_source.html#l00034">os::memory::block_pool::~block_pool()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00201">os::rtos::event_flags::~event_flags()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00034">os::memory::first_fit_top::~first_fit_top()</a>, <a class="el" href="lifo_8cpp_source.html#l00034">os::memory::lifo::~lifo()</a>, <a class="el" href="malloc_8h_source.html#l00225">os::memory::malloc_memory_resource::~malloc_memory_resource()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00400">os::rtos::memory_pool::~memory_pool()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00485">os::rtos::message_queue::~message_queue()</a>, <a class="el" href="os-mutex_8cpp_source.html#l00570">os::rtos::mutex::~mutex()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00224">os::rtos::semaphore::~semaphore()</a>, <a class="el" href="os-thread_8cpp_source.html#l00595">os::rtos::thread::~thread()</a>, <a class="el" href="os-timer_8cpp_source.html#l00209">os::rtos::timer::~timer()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>, <a class="el" href="os-thread_8cpp_source.html#l00995">os::rtos::thread::cancel()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00575">os::rtos::event_flags::clear()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01530">os::rtos::mutex::consistent()</a>, <a class="el" href="os-thread_8cpp_source.html#l00883">os::rtos::thread::detach()</a>, <a class="el" href="malloc_8h_source.html#l00277">os::memory::new_delete_memory_resource::do_allocate()</a>, <a class="el" href="block-pool_8cpp_source.html#l00047">os::memory::block_pool::do_allocate()</a>, <a class="el" href="first-fit-top_8cpp_source.html#l00112">os::memory::first_fit_top::do_allocate()</a>, <a class="el" href="lifo_8cpp_source.html#l00068">os::memory::lifo::do_allocate()</a>, <a class="el" href="malloc_8h_source.html#l00239">os::memory::malloc_memory_resource::do_allocate()</a>, <a class="el" href="os-thread_8cpp_source.html#l01313">os::rtos::thread::flags_raise()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00781">os::rtos::memory_pool::free()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00614">os::rtos::event_flags::get()</a>, <a class="el" href="os-thread_8cpp_source.html#l01020">os::rtos::thread::interrupt()</a>, <a class="el" href="os-thread_8cpp_source.html#l00941">os::rtos::thread::join()</a>, <a class="el" href="os-thread_8cpp_source.html#l01231">os::rtos::thread::kill()</a>, <a class="el" href="os-lists_8cpp_source.html#l00535">os::rtos::internal::terminated_threads_list::link()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01003">os::rtos::mutex::lock()</a>, <a class="el" href="os-memory_8h_source.html#l01375">os::rtos::memory::memory_resource::out_of_memory_handler()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00339">os::rtos::semaphore::post()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01461">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01417">os::rtos::mutex::prio_ceiling()</a>, <a class="el" href="os-thread_8cpp_source.html#l00734">os::rtos::thread::priority()</a>, <a class="el" href="os-thread_8cpp_source.html#l00802">os::rtos::thread::priority_inherited()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00540">os::rtos::event_flags::raise()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01269">os::rtos::message_queue::receive()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00846">os::rtos::memory_pool::reset()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01596">os::rtos::message_queue::reset()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01567">os::rtos::mutex::reset()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00759">os::rtos::semaphore::reset()</a>, <a class="el" href="os-thread_8cpp_source.html#l00630">os::rtos::thread::resume()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00929">os::rtos::message_queue::send()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00175">os::rtos::clock::sleep_for()</a>, <a class="el" href="os-timer_8cpp_source.html#l00243">os::rtos::timer::start()</a>, <a class="el" href="os-timer_8cpp_source.html#l00307">os::rtos::timer::stop()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01205">os::rtos::mutex::timed_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01484">os::rtos::message_queue::timed_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01129">os::rtos::message_queue::timed_send()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00598">os::rtos::semaphore::timed_wait()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00425">os::rtos::event_flags::timed_wait()</a>, <a class="el" href="os-memory_8h_source.html#l01444">os::rtos::memory::memory_resource::trace_print_statistics()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00604">os::rtos::memory_pool::try_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01126">os::rtos::mutex::try_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01383">os::rtos::message_queue::try_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01042">os::rtos::message_queue::try_send()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00343">os::rtos::event_flags::try_wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00524">os::rtos::semaphore::try_wait()</a>, <a class="el" href="os-lists_8cpp_source.html#l00126">os::rtos::internal::ready_threads_list::unlink_head()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01379">os::rtos::mutex::unlock()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00241">os::rtos::event_flags::wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00424">os::rtos::semaphore::wait()</a>, and <a class="el" href="os-evflags_8cpp_source.html#l00642">os::rtos::event_flags::waiting()</a>.</p>
 
 </div>
 </div>
@@ -846,8 +942,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated object instance. using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to object. </td></tr>
@@ -862,7 +956,16 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00122">122</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00120">120</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>      {</div>
+<div class="line"><span class="lineno">  122</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        rtos::memory::allocator&lt;char&gt; ().deallocate (<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span> (ptr),</div>
+<div class="line"><span class="lineno">  125</span>                                                     bytes);</div>
+<div class="line"><span class="lineno">  126</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1interrupts_html_acb9f50dd130d6226b861ffaee191ee5a"><div class="ttname"><a href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">os::rtos::interrupts::in_handler_mode</a></div><div class="ttdeci">bool in_handler_mode(void)</div><div class="ttdoc">Check if the CPU is in handler mode.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l01101">os-sched.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#a070977f77b4fef4e886f045c940a3dd2">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::deallocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -899,8 +1002,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Deallocate the dynamically allocated array of object. instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to array of objects. </td></tr>
@@ -914,8 +1015,12 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is deallocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00143">143</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00141">141</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>      {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="comment">// Forward array deallocation to single element deallocation.</span></div>
+<div class="line"><span class="lineno">  144</span>        <span class="keyword">operator</span> <span class="keyword">delete</span> (ptr, bytes);</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1456983acc3a56e02cd4a48a220f222c" name="a1456983acc3a56e02cd4a48a220f222c"></a>
@@ -941,8 +1046,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for a new object instance using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -954,7 +1057,14 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00044">44</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00043">43</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>      {</div>
+<div class="line"><span class="lineno">   45</span>        assert (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> ());</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> rtos::memory::allocator&lt;char&gt; ().allocate (bytes);</div>
+<div class="line"><span class="lineno">   48</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1rtos_1_1memory_1_1allocator__stateless__default__resource.html#ae960d872a45386c6d51ebb721ffadafd">os::rtos::memory::allocator_stateless_default_resource&lt; T &gt;::allocate()</a>, and <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>.</p>
 
 </div>
 </div>
@@ -991,8 +1101,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace a new object instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -1005,8 +1113,11 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00081">81</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00080">80</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>      {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><span class="lineno">   83</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a27026070d8fd2c51873036cfd1661ce4" name="a27026070d8fd2c51873036cfd1661ce4"></a>
@@ -1032,8 +1143,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate space for an array of new object instances using the RTOS system allocator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to allocate. </td></tr>
@@ -1045,8 +1154,12 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00062">62</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00061">61</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>      {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes);</div>
+<div class="line"><span class="lineno">   65</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad415429ae3487ec5ae1258b4d2a5787f" name="ad415429ae3487ec5ae1258b4d2a5787f"></a>
@@ -1082,8 +1195,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Emplace an array of new object instances. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>Number of bytes to emplace. </td></tr>
@@ -1096,8 +1207,12 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>The storage is allocated using the RTOS system allocator.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00098">98</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-inlines_8h_source.html#l00097">97</a> of file <a class="el" href="os-inlines_8h_source.html">os-inlines.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>      {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="comment">// Forward array allocation to single element allocation.</span></div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> <span class="keyword">operator</span> <span class="keyword">new</span> (bytes, ptr);</div>
+<div class="line"><span class="lineno">  101</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef89826c91bc8b7e7b9d08644bcd0098" name="aef89826c91bc8b7e7b9d08644bcd0098"></a>
@@ -1123,8 +1238,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compare memory pools. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>The given memory pool is the same as this memory pool. </td></tr>
@@ -1134,8 +1247,11 @@ template&lt;typename T , std::size_t N&gt; </div>
 </dl>
 <p>Identical memory pools should have the same memory address. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00913">913</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00905">905</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  906</span>    {</div>
+<div class="line"><span class="lineno">  907</span>      <span class="keywordflow">return</span> <span class="keyword">this</span> == &amp;rhs;</div>
+<div class="line"><span class="lineno">  908</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa1fde03a7e551f6d28f12a1e21d10e87" name="aa1fde03a7e551f6d28f12a1e21d10e87"></a>
@@ -1161,14 +1277,15 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the pool storage address. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to storage.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00967">967</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00959">959</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  960</span>    {</div>
+<div class="line"><span class="lineno">  961</span>      <span class="keywordflow">return</span> pool_addr_;</div>
+<div class="line"><span class="lineno">  962</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac764ac06d8a23bc517ea0785caccf350" name="ac764ac06d8a23bc517ea0785caccf350"></a>
@@ -1194,8 +1311,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reset the memory pool. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -1207,7 +1322,33 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Reset the memory pool to the initial state, with all blocks free.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00843">843</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8cpp_source.html#l00846">846</a> of file <a class="el" href="os-mempool_8cpp_source.html">os-mempool.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  847</span>    {</div>
+<div class="line"><span class="lineno">  848</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_MEMPOOL)</span></div>
+<div class="line"><span class="lineno">  849</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() @%p %s\n&quot;</span>, __func__, <span class="keyword">this</span>, <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1object__named.html#a3103a84c5e0521c3639306f5879526ba">name</a> ());</div>
+<div class="line"><span class="lineno">  850</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  851</span> </div>
+<div class="line"><span class="lineno">  852</span>      <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  853</span>      <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!<a class="code hl_function" href="namespaceos_1_1rtos_1_1interrupts.html#acb9f50dd130d6226b861ffaee191ee5a">interrupts::in_handler_mode</a> (), EPERM);</div>
+<div class="line"><span class="lineno">  854</span> </div>
+<div class="line"><span class="lineno">  855</span>      {</div>
+<div class="line"><span class="lineno">  856</span>        <span class="comment">// ----- Enter critical section ---------------------------------------</span></div>
+<div class="line"><span class="lineno">  857</span>        interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  858</span> </div>
+<div class="line"><span class="lineno">  859</span>        internal_init_ ();</div>
+<div class="line"><span class="lineno">  860</span>        <span class="comment">// ----- Exit critical section ----------------------------------------</span></div>
+<div class="line"><span class="lineno">  861</span>      }</div>
+<div class="line"><span class="lineno">  862</span> </div>
+<div class="line"><span class="lineno">  863</span>      <span class="comment">// Wake-up all threads, if any.</span></div>
+<div class="line"><span class="lineno">  864</span>      <span class="comment">// Need not be inside the critical section,</span></div>
+<div class="line"><span class="lineno">  865</span>      <span class="comment">// the list is protected by inner `resume_one()`.</span></div>
+<div class="line"><span class="lineno">  866</span>      list_.resume_all ();</div>
+<div class="line"><span class="lineno">  867</span> </div>
+<div class="line"><span class="lineno">  868</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  869</span>    }</div>
+<div class="ttc" id="aos-decls_8h_html_ae9cede0de19446e3a5eb930b6b10dd39"><div class="ttname"><a href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a></div><div class="ttdeci">#define os_assert_err(__e, __er)</div><div class="ttdoc">Assert or return an error.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l01101">os-decls.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="os-decls_8h_source.html#l00753">os::rtos::internal::object_named::name()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -1236,8 +1377,6 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate a memory block with timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout to wait, in clock units (ticks or seconds). </td></tr>
@@ -1248,7 +1387,13 @@ template&lt;typename T , std::size_t N&gt; </div>
 <p>Wrapper over the parent method, automatically passing the cast.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a368b3eeaa2c28df26b6f3970fd209f3b" title="Allocate a memory block with timeout.">memory_pool::timed_alloc()</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01398">1398</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01385">1385</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1386</span>    {</div>
+<div class="line"><span class="lineno"> 1387</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a58c609f468d4fa5430d9c04ca11ceb9d">value_type</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a368b3eeaa2c28df26b6f3970fd209f3b">memory_pool::timed_alloc</a> (timeout));</div>
+<div class="line"><span class="lineno"> 1388</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a368b3eeaa2c28df26b6f3970fd209f3b"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a368b3eeaa2c28df26b6f3970fd209f3b">os::rtos::memory_pool::timed_alloc</a></div><div class="ttdeci">void * timed_alloc(clock::duration_t timeout)</div><div class="ttdoc">Allocate a memory block with timeout.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8cpp_source.html#l00669">os-mempool.cpp:669</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>.</p>
 
 </div>
 </div>
@@ -1277,20 +1422,24 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate a memory block. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to memory block, or <code>nullptr</code> if no memory available.</dd></dl>
 <p>Wrapper over the parent method, automatically passing the cast.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classos_1_1rtos_1_1memory__pool.html#a3755c8ce8f934469047b735209ab58b3" title="Try to allocate a memory block.">memory_pool::try_alloc()</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01384">1384</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l01371">1371</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1372</span>    {</div>
+<div class="line"><span class="lineno"> 1373</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a58c609f468d4fa5430d9c04ca11ceb9d">value_type</a>*<span class="keyword">&gt;</span> (<a class="code hl_function" href="classos_1_1rtos_1_1memory__pool.html#a3755c8ce8f934469047b735209ab58b3">memory_pool::try_alloc</a> ());</div>
+<div class="line"><span class="lineno"> 1374</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1memory__pool_html_a3755c8ce8f934469047b735209ab58b3"><div class="ttname"><a href="classos_1_1rtos_1_1memory__pool.html#a3755c8ce8f934469047b735209ab58b3">os::rtos::memory_pool::try_alloc</a></div><div class="ttdeci">void * try_alloc(void)</div><div class="ttdoc">Try to allocate a memory block.</div><div class="ttdef"><b>Definition</b> <a href="os-mempool_8cpp_source.html#l00604">os-mempool.cpp:604</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-mempool_8cpp_source.html#l00604">os::rtos::memory_pool::try_alloc()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0b3d51171623ce3cc363e22f7bf3ede4" name="a0b3d51171623ce3cc363e22f7bf3ede4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3d51171623ce3cc363e22f7bf3ede4">&#9670;&#160;</a></span>arena_</h2>
+<a id="a44b4b332736e3888b04cf380304b7c03" name="a44b4b332736e3888b04cf380304b7c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b4b332736e3888b04cf380304b7c03">&#9670;&#160;</a></span>arena_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1301,7 +1450,7 @@ template&lt;typename T , std::size_t N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classos_1_1rtos_1_1memory__pool_1_1arena.html">arena</a>&lt;void*, <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, sizeof(T)&gt; <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html">os::rtos::memory_pool_inclusive</a>&lt; T, N &gt;::arena_</td>
+          <td class="memname"><a class="el" href="classos_1_1rtos_1_1memory__pool_1_1arena.html">arena</a>&lt;void*, <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html#a8689eb9bde72838004c335a80d80a3f8">blocks</a>, sizeof (T)&gt; <a class="el" href="classos_1_1rtos_1_1memory__pool__inclusive.html">os::rtos::memory_pool_inclusive</a>&lt; T, N &gt;::arena_</td>
         </tr>
       </table>
   </td>
@@ -1310,11 +1459,11 @@ template&lt;typename T , std::size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Local storage for the pool. </p>
 <p>The local storage is large enough to include <code>blocks</code> blocks of type <code>T</code>. For performance reasons, the individual components are aligned as pointers. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00835">835</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00829">829</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-mempool_8h_source.html#l01323">os::rtos::memory_pool_inclusive&lt; T, N &gt;::memory_pool_inclusive()</a>.</p>
 
 </div>
 </div>
@@ -1340,9 +1489,9 @@ template&lt;typename T , std::size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Local constant based on template definition. </p>
+<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00766">766</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="os-mempool_8h_source.html#l00773">773</a> of file <a class="el" href="os-mempool_8h_source.html">os-mempool.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="os-mempool_8h_source.html#l01323">os::rtos::memory_pool_inclusive&lt; T, N &gt;::memory_pool_inclusive()</a>.</p>
 
 </div>
 </div>

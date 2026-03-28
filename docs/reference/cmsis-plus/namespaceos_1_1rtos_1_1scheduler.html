@@ -187,8 +187,7 @@ Functions</h2></td></tr>
 <tr class="separator:a329b18ede652413b54dcd0f7b17f6d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scheduler namespace. </p>
-<p>The <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html" title="Scheduler namespace.">os::rtos::scheduler</a></code> namespace groups scheduler types and functions. </p>
+<div class="textblock"><p>The <code><a class="el" href="namespaceos_1_1rtos_1_1scheduler.html" title="Scheduler namespace.">os::rtos::scheduler</a></code> namespace groups scheduler types and functions. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a1c31cc0ed6497cc93167b57974dc7080" name="a1c31cc0ed6497cc93167b57974dc7080"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c31cc0ed6497cc93167b57974dc7080">&#9670;&#160;</a></span>state_t</h2>
@@ -201,11 +200,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Type of variables holding scheduler state codes. </p>
 <p>Usually a boolean telling if the scheduler is locked or not, but for recursive locks it might also be a numeric counter. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00202">202</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-decls_8h_source.html#l00200">200</a> of file <a class="el" href="os-decls_8h_source.html">os-decls.h</a>.</p>
 
 </div>
 </div>
@@ -225,8 +222,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get the children threads. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">th</td><td>Pointer to thread or nullptr. </td></tr>
@@ -236,7 +231,19 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to children list.</dd></dl>
 <p>If the input pointer is nullptr, the function returns the list of top level threads. </p>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00261">261</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00265">265</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>      {</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">if</span> (th == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  268</span>          {</div>
+<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">return</span> top_threads_list_;</div>
+<div class="line"><span class="lineno">  270</span>          }</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  272</span>          {</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">return</span> th-&gt;children_;</div>
+<div class="line"><span class="lineno">  274</span>          }</div>
+<div class="line"><span class="lineno">  275</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l01173">os_children_threads_iter_begin()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l01199">os_children_threads_iter_end()</a>.</p>
 
 </div>
 </div>
@@ -255,8 +262,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialise the RTOS scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -269,7 +274,31 @@ Functions</h2></td></tr>
 <p>Must be called only once, usually in <a class="el" href="os-main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Default implementation of main().">main()</a>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00160">160</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00164">164</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>      {</div>
+<div class="line"><span class="lineno">  166</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  167</span>        trace::printf (<span class="stringliteral">&quot;scheduler::%s() \n&quot;</span>, __func__);</div>
+<div class="line"><span class="lineno">  168</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (!interrupts::in_handler_mode (), EPERM);</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> port::scheduler::initialize ();</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>        port::scheduler::initialize ();</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> result::ok;</div>
+<div class="line"><span class="lineno">  182</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  183</span>      }</div>
+<div class="ttc" id="aos-decls_8h_html_ae9cede0de19446e3a5eb930b6b10dd39"><div class="ttname"><a href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a></div><div class="ttdeci">#define os_assert_err(__e, __er)</div><div class="ttdoc">Assert or return an error.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l01101">os-decls.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#ad4a138fd5ba3ed7f75a0794a190136d0">os::rtos::port::scheduler::initialize()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00413">os_sched_initialize()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l03409">osKernelInitialize()</a>.</p>
 
 </div>
 </div>
@@ -296,14 +325,19 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Lock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous state of the scheduler lock.</dd></dl>
 <p>Set the scheduler lock state to locked and return the previous state.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00869">869</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00871">871</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  872</span>      {</div>
+<div class="line"><span class="lineno">  873</span>        <span class="keywordflow">return</span> port::scheduler::lock ();</div>
+<div class="line"><span class="lineno">  874</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a2dac383aee6954ff50ae7e01f35a3508">os::rtos::port::scheduler::lock()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-sched_8h_source.html#l00980">os::rtos::scheduler::lockable::lock()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l00449">os_sched_lock()</a>, and <a class="el" href="os-sched_8h_source.html#l00993">os::rtos::scheduler::lockable::try_lock()</a>.</p>
 
 </div>
 </div>
@@ -330,8 +364,6 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Lock/unlock the scheduler. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>The new state of the scheduler lock. </td></tr>
@@ -343,7 +375,12 @@ Functions</h2></td></tr>
 <p>This allows to implement scheduler critical sections, where the scheduler is disabled and context switches are not performed.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00899">899</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00901">901</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  902</span>      {</div>
+<div class="line"><span class="lineno">  903</span>        <span class="keywordflow">return</span> port::scheduler::locked (state);</div>
+<div class="line"><span class="lineno">  904</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#abe3bdbd162960a0000c376d4d03b98e3">os::rtos::port::scheduler::locked()</a>.</p>
 
 </div>
 </div>
@@ -370,8 +407,6 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the scheduler is locked. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -383,7 +418,14 @@ Functions</h2></td></tr>
 <p>Check if the scheduler is locked on the current thread or is switching threads from the ready list.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00856">856</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00858">858</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  859</span>      {</div>
+<div class="line"><span class="lineno">  860</span>        <span class="keywordflow">return</span> port::scheduler::locked ();</div>
+<div class="line"><span class="lineno">  861</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#abe3bdbd162960a0000c376d4d03b98e3">os::rtos::port::scheduler::locked()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-sched_8h_source.html#l00926">os::rtos::scheduler::critical_section::~critical_section()</a>, <a class="el" href="os-sched_8h_source.html#l00954">os::rtos::scheduler::uncritical_section::~uncritical_section()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00510">os::rtos::memory_pool::alloc()</a>, <a class="el" href="os-thread_8cpp_source.html#l00941">os::rtos::thread::join()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01003">os::rtos::mutex::lock()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l00485">os_sched_is_locked()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l00473">os_sched_set_locked()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01269">os::rtos::message_queue::receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l00929">os::rtos::message_queue::send()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00175">os::rtos::clock::sleep_for()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00225">os::rtos::clock::sleep_until()</a>, <a class="el" href="os-mempool_8cpp_source.html#l00669">os::rtos::memory_pool::timed_alloc()</a>, <a class="el" href="os-mutex_8cpp_source.html#l01205">os::rtos::mutex::timed_lock()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01484">os::rtos::message_queue::timed_receive()</a>, <a class="el" href="os-mqueue_8cpp_source.html#l01129">os::rtos::message_queue::timed_send()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00598">os::rtos::semaphore::timed_wait()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00425">os::rtos::event_flags::timed_wait()</a>, <a class="el" href="os-sched_8h_source.html#l01003">os::rtos::scheduler::lockable::unlock()</a>, <a class="el" href="os-evflags_8cpp_source.html#l00241">os::rtos::event_flags::wait()</a>, <a class="el" href="os-semaphore_8cpp_source.html#l00424">os::rtos::semaphore::wait()</a>, and <a class="el" href="os-clocks_8cpp_source.html#l00264">os::rtos::clock::wait_for()</a>.</p>
 
 </div>
 </div>
@@ -402,8 +444,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set the scheduler preemptive mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>The new state of the scheduler preemptive mode. </td></tr>
@@ -413,7 +453,37 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The previous state of the preemptive mode.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00227">227</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00231">231</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>      {</div>
+<div class="line"><span class="lineno">  233</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  234</span>        trace::printf (<span class="stringliteral">&quot;scheduler::%s(%d) \n&quot;</span>, __func__, state);</div>
+<div class="line"><span class="lineno">  235</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  236</span>        <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_define" href="os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137">os_assert_throw</a> (!interrupts::in_handler_mode (), EPERM);</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span><span class="preprocessor">#if defined(OS_USE_RTOS_PORT_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">return</span> port::scheduler::preemptive (state);</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordtype">bool</span> tmp;</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>        {</div>
+<div class="line"><span class="lineno">  247</span>          <span class="comment">// ----- Enter critical section -------------------------------------</span></div>
+<div class="line"><span class="lineno">  248</span>          <a class="code hl_class" href="classos_1_1rtos_1_1interrupts_1_1critical__section.html">interrupts::critical_section</a> ics;</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>          tmp = is_preemptive_;</div>
+<div class="line"><span class="lineno">  251</span>          is_preemptive_ = state;</div>
+<div class="line"><span class="lineno">  252</span>          <span class="comment">// ----- Exit critical section --------------------------------------</span></div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><span class="lineno">  256</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  257</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1interrupts_1_1critical__section_html"><div class="ttname"><a href="classos_1_1rtos_1_1interrupts_1_1critical__section.html">os::rtos::interrupts::critical_section</a></div><div class="ttdoc">Interrupts critical section RAII helper.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00501">os-sched.h:502</a></div></div>
+<div class="ttc" id="aos-decls_8h_html_a7ca7d74dfe5c184cdd627cc958564137"><div class="ttname"><a href="os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137">os_assert_throw</a></div><div class="ttdeci">#define os_assert_throw(__e, __er)</div><div class="ttdoc">Assert or throw a system error exception.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l01122">os-decls.h:1122</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="os-decls_8h_source.html#l01122">os_assert_throw</a>, <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a77599af3555dc227e504469900fe6fc3">os::rtos::port::scheduler::preemptive()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -440,8 +510,6 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the scheduler is in preemptive mode. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -453,7 +521,18 @@ Functions</h2></td></tr>
 <p>Check if the scheduler preemption is enabled.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00839">839</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00841">841</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  842</span>      {</div>
+<div class="line"><span class="lineno">  843</span><span class="preprocessor">#if !defined(OS_USE_RTOS_PORT_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  844</span>        <span class="keywordflow">return</span> is_preemptive_;</div>
+<div class="line"><span class="lineno">  845</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  846</span>        <span class="keywordflow">return</span> port::scheduler::preemptive ();</div>
+<div class="line"><span class="lineno">  847</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  848</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a77599af3555dc227e504469900fe6fc3">os::rtos::port::scheduler::preemptive()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00497">os_sched_is_preemptive()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l00509">os_sched_set_preemptive()</a>.</p>
 
 </div>
 </div>
@@ -472,14 +551,56 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Start the RTOS scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section user"><dt>Returns</dt><dd>Nothing.</dd></dl>
 <p>The scheduler cannot be stopped, it will run forever, but thread switching can be locked/unlocked.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00189">189</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00193">193</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>      {</div>
+<div class="line"><span class="lineno">  195</span>        trace::printf (<span class="stringliteral">&quot;scheduler::%s() \n&quot;</span>, __func__);</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">// Don&#39;t call this from interrupt handlers.</span></div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_define" href="os-decls_8h.html#a7ca7d74dfe5c184cdd627cc958564137">os_assert_throw</a> (!interrupts::in_handler_mode (), EPERM);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>        <a class="code hl_variable" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">sysclock</a>.<a class="code hl_function" href="classos_1_1rtos_1_1clock__systick.html#a88a6dd03e89d58f735dcf3f298ecd1b0">start</a> ();</div>
+<div class="line"><span class="lineno">  201</span>        <a class="code hl_variable" href="group__cmsis-plus-rtos-clock.html#ga18ff478876ee99a5b7ce1b3f5b57d710">hrclock</a>.<a class="code hl_function" href="classos_1_1rtos_1_1clock__highres.html#a40e86fe32a72ce45eb31be76e71adb02">start</a> ();</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a">rtclock</a>.<a class="code hl_function" href="classos_1_1rtos_1_1clock__rtc.html#a6774838e21769a676c72c29750c0ad88">start</a> ();</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES)</span></div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>        scheduler::statistics::context_switches_ = 0;</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CONTEXT_SWITCHES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span><span class="preprocessor">#if defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES)</span></div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>        scheduler::statistics::cpu_cycles_ = 0;</div>
+<div class="line"><span class="lineno">  214</span>        scheduler::statistics::switch_timestamp_ = <a class="code hl_variable" href="group__cmsis-plus-rtos-clock.html#ga18ff478876ee99a5b7ce1b3f5b57d710">hrclock</a>.<a class="code hl_function" href="classos_1_1rtos_1_1clock__highres.html#a8d5cec471d7b21d53064ff2cc1dbc27d">now</a> ();</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_INCLUDE_RTOS_STATISTICS_THREAD_CPU_CYCLES) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span><span class="preprocessor">#if !defined(OS_USE_RTOS_PORT_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  219</span>        is_preemptive_ = <a class="code hl_define" href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a>;</div>
+<div class="line"><span class="lineno">  220</span><span class="preprocessor">#endif </span><span class="comment">/* defined(OS_USE_RTOS_PORT_SCHEDULER) */</span><span class="preprocessor"></span></div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>        is_started_ = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>        port::scheduler::start ();</div>
+<div class="line"><span class="lineno">  225</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1clock__highres_html_a40e86fe32a72ce45eb31be76e71adb02"><div class="ttname"><a href="classos_1_1rtos_1_1clock__highres.html#a40e86fe32a72ce45eb31be76e71adb02">os::rtos::clock_highres::start</a></div><div class="ttdeci">virtual void start(void) override</div><div class="ttdoc">Start the clock.</div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1clock__highres_html_a8d5cec471d7b21d53064ff2cc1dbc27d"><div class="ttname"><a href="classos_1_1rtos_1_1clock__highres.html#a8d5cec471d7b21d53064ff2cc1dbc27d">os::rtos::clock_highres::now</a></div><div class="ttdeci">virtual timestamp_t now(void) override</div><div class="ttdoc">Tell the current time.</div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1clock__rtc_html_a6774838e21769a676c72c29750c0ad88"><div class="ttname"><a href="classos_1_1rtos_1_1clock__rtc.html#a6774838e21769a676c72c29750c0ad88">os::rtos::clock_rtc::start</a></div><div class="ttdeci">virtual void start(void) override</div><div class="ttdoc">Initialise and make the RTC tick.</div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1clock__systick_html_a88a6dd03e89d58f735dcf3f298ecd1b0"><div class="ttname"><a href="classos_1_1rtos_1_1clock__systick.html#a88a6dd03e89d58f735dcf3f298ecd1b0">os::rtos::clock_systick::start</a></div><div class="ttdeci">virtual void start(void) override</div><div class="ttdoc">Start the clock.</div></div>
+<div class="ttc" id="agroup__cmsis-plus-app-config-rtos_html_ga06cdcf78fd8d8a0e8dd564e597108e4f"><div class="ttname"><a href="group__cmsis-plus-app-config-rtos.html#ga06cdcf78fd8d8a0e8dd564e597108e4f">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a></div><div class="ttdeci">#define OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</div><div class="ttdoc">Default definition for the pre-emption flag.</div><div class="ttdef"><b>Definition</b> <a href="os-app-config_8h_source.html#l00464">os-app-config.h:464</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-clock_html_ga18ff478876ee99a5b7ce1b3f5b57d710"><div class="ttname"><a href="group__cmsis-plus-rtos-clock.html#ga18ff478876ee99a5b7ce1b3f5b57d710">os::rtos::hrclock</a></div><div class="ttdeci">clock_highres hrclock</div><div class="ttdoc">The high resolution clock object instance.</div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-clock_html_ga316a778e38336232ebf8bcff50d11f3a"><div class="ttname"><a href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a">os::rtos::rtclock</a></div><div class="ttdeci">clock_rtc rtclock</div><div class="ttdoc">The real time clock object instance.</div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-clock_html_gab46d0af461e8a8434153e068bc32dc5a"><div class="ttname"><a href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">os::rtos::sysclock</a></div><div class="ttdeci">clock_systick sysclock</div><div class="ttdoc">The system clock object instance.</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-rtos-clock.html#ga18ff478876ee99a5b7ce1b3f5b57d710">os::rtos::hrclock</a>, <a class="el" href="os-sched_8h_source.html#l01101">os::rtos::interrupts::in_handler_mode()</a>, <a class="el" href="classos_1_1rtos_1_1clock__highres.html#a8d5cec471d7b21d53064ff2cc1dbc27d">os::rtos::clock_highres::now()</a>, <a class="el" href="os-decls_8h_source.html#l01122">os_assert_throw</a>, <a class="el" href="os-app-config_8h_source.html#l00464">OS_BOOL_RTOS_SCHEDULER_PREEMPTIVE</a>, <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>, <a class="el" href="group__cmsis-plus-rtos-clock.html#ga316a778e38336232ebf8bcff50d11f3a">os::rtos::rtclock</a>, <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#af711bfad8d55c482c6d7128d1b25e0b1">os::rtos::port::scheduler::start()</a>, <a class="el" href="classos_1_1rtos_1_1clock__systick.html#a88a6dd03e89d58f735dcf3f298ecd1b0">os::rtos::clock_systick::start()</a>, <a class="el" href="classos_1_1rtos_1_1clock__rtc.html#a6774838e21769a676c72c29750c0ad88">os::rtos::clock_rtc::start()</a>, <a class="el" href="classos_1_1rtos_1_1clock__highres.html#a40e86fe32a72ce45eb31be76e71adb02">os::rtos::clock_highres::start()</a>, and <a class="el" href="group__cmsis-plus-rtos-clock.html#gab46d0af461e8a8434153e068bc32dc5a">os::rtos::sysclock</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00425">os_sched_start()</a>, and <a class="el" href="os-c-wrapper_8cpp_source.html#l03431">osKernelStart()</a>.</p>
 
 </div>
 </div>
@@ -506,8 +627,6 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Check if the scheduler was started. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -519,7 +638,12 @@ Functions</h2></td></tr>
 <p>Check if the scheduler was started, i.e. if <a class="el" href="namespaceos_1_1rtos_1_1scheduler.html#a447a6a5aa512129d0ab5a28b0fce6890" title="Start the RTOS scheduler.">scheduler::start()</a> was called.</p>
 <dl class="section note"><dt>Note</dt><dd>Can be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00827">827</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00829">829</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  830</span>      {</div>
+<div class="line"><span class="lineno">  831</span>        <span class="keywordflow">return</span> is_started_;</div>
+<div class="line"><span class="lineno">  832</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-clocks_8cpp_source.html#l00095">os_rtc_handler()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l00437">os_sched_is_started()</a>, <a class="el" href="os-clocks_8cpp_source.html#l00036">os_systick_handler()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l03446">osKernelRunning()</a>, and <a class="el" href="os-thread_8cpp_source.html#l01672">os::rtos::this_thread::yield()</a>.</p>
 
 </div>
 </div>
@@ -546,14 +670,19 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Unlock the scheduler. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous state of the scheduler lock.</dd></dl>
 <p>Set the scheduler lock state to unlocked and return the previous state.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00882">882</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00884">884</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  885</span>      {</div>
+<div class="line"><span class="lineno">  886</span>        <span class="keywordflow">return</span> port::scheduler::unlock ();</div>
+<div class="line"><span class="lineno">  887</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a03a7388064ca0937b8142ddf05f8a5e1">os::rtos::port::scheduler::unlock()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="os-c-wrapper_8cpp_source.html#l00461">os_sched_unlock()</a>.</p>
 
 </div>
 </div>

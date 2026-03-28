@@ -149,7 +149,6 @@ Functions</h2></td></tr>
 <tr class="separator:ga2060bb385320119880c8956fc8fb1c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>C++ API scheduler definitions. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga2060bb385320119880c8956fc8fb1c5b" name="ga2060bb385320119880c8956fc8fb1c5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2060bb385320119880c8956fc8fb1c5b">&#9670;&#160;</a></span>stack()</h2>
@@ -166,15 +165,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get the interrupts stack. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to stack object instance.</dd></dl>
 <p>The interrupts stack can be manipulated in a way similar to the thread stack.</p>
 <dl class="section note"><dt>Note</dt><dd>This function is available only on platforms that support a separate interrupt stack (like Cortex-M).</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00571">571</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00583">583</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  584</span>      {</div>
+<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">return</span> &amp;interrupts_stack;</div>
+<div class="line"><span class="lineno">  586</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="startup_8cpp_source.html#l00241">_start()</a>, <a class="el" href="os-c-wrapper_8cpp_source.html#l00624">os_irq_get_stack()</a>, <a class="el" href="os-idle_8cpp_source.html#l00063">os_rtos_idle_actions()</a>, and <a class="el" href="os-main_8cpp_source.html#l00194">os_terminate_goodbye()</a>.</p>
 
 </div>
 </div>

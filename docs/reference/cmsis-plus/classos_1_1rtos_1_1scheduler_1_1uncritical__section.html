@@ -139,9 +139,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a778a178fb74a79a98119e0030b62b2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scheduler uncritical section <a href="https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">RAII</a> helper. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00241">241</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00244">244</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a734f70ec83e1265b90608b9694931ca9" name="a734f70ec83e1265b90608b9694931ca9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a734f70ec83e1265b90608b9694931ca9">&#9670;&#160;</a></span>uncritical_section()</h2>
@@ -165,13 +164,21 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Enter a critical section. </p>
 <dl class="section user"><dt>Parameters</dt><dd>None.</dd></dl>
 <p>Lock the scheduler and remember the initial scheduler state.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00942">942</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00940">940</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  940</span>                                                     : state_ (<a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#a329b18ede652413b54dcd0f7b17f6d12">unlock</a> ())</div>
+<div class="line"><span class="lineno">  941</span>      {</div>
+<div class="line"><span class="lineno">  942</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  943</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;{U &quot;</span>);</div>
+<div class="line"><span class="lineno">  944</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  945</span>      }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1scheduler_html_a329b18ede652413b54dcd0f7b17f6d12"><div class="ttname"><a href="namespaceos_1_1rtos_1_1scheduler.html#a329b18ede652413b54dcd0f7b17f6d12">os::rtos::scheduler::unlock</a></div><div class="ttdeci">state_t unlock(void)</div><div class="ttdoc">Unlock the scheduler.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00884">os-sched.h:884</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -197,12 +204,19 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Exit a critical section. </p>
 <p>Restore the initial scheduler state and possibly unlock the scheduler.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Cannot be invoked from Interrupt Service Routines. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00958">958</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-sched_8h_source.html#l00954">954</a> of file <a class="el" href="os-sched_8h_source.html">os-sched.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  955</span>      {</div>
+<div class="line"><span class="lineno">  956</span><span class="preprocessor">#if defined(OS_TRACE_RTOS_SCHEDULER)</span></div>
+<div class="line"><span class="lineno">  957</span>        <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot; U}&quot;</span>);</div>
+<div class="line"><span class="lineno">  958</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  959</span>        <a class="code hl_function" href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">locked</a> (state_);</div>
+<div class="line"><span class="lineno">  960</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1scheduler_html_adc237cecdf686cfb10780a29931166a4"><div class="ttname"><a href="namespaceos_1_1rtos_1_1scheduler.html#adc237cecdf686cfb10780a29931166a4">os::rtos::scheduler::locked</a></div><div class="ttdeci">bool locked(void)</div><div class="ttdoc">Check if the scheduler is locked.</div><div class="ttdef"><b>Definition</b> <a href="os-sched_8h_source.html#l00858">os-sched.h:858</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-sched_8h_source.html#l00858">os::rtos::scheduler::locked()</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>

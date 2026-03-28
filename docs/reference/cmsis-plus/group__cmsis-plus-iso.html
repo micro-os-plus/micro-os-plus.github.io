@@ -156,7 +156,6 @@ Classes</h2></td></tr>
 <tr class="separator:ga363a215f669d5e9b210bd61701f24241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>µOS++ ISO Threads summary page. </p>
 <p>This page groups the main µOS++ ISO Threads classes and namespaces.</p>
 <dl class="section user"><dt>Standards</dt><dd>These definitions provide implementations for the classes defined in the <b>C++ Standard ISO/IEC 14882:2011(E) Third edition (2011-09-01)</b>. </dd></dl>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -186,8 +185,14 @@ Classes</h2></td></tr>
 <tr><td class="fieldname"><a id="gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc" name="gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc"></a>timeout&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00071">71</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00070">70</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>      <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">no_timeout</a>, <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   73</span>      <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">timeout</a></div>
+<div class="line"><span class="lineno">   74</span>    };</div>
+<div class="ttc" id="agroup__cmsis-plus-iso_html_gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd"><div class="ttname"><a href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">os::estd::cv_status::no_timeout</a></div><div class="ttdeci">@ no_timeout</div></div>
+<div class="ttc" id="agroup__cmsis-plus-iso_html_gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc"><div class="ttname"><a href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::cv_status::timeout</a></div><div class="ttdeci">@ timeout</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -217,8 +222,12 @@ Classes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00081">81</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00080">80</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>      <span class="comment">//__thread_local_data()-&gt;notify_all_at_thread_exit(&amp;cond, lk.release());</span></div>
+<div class="line"><span class="lineno">   84</span>      std::abort (); <span class="comment">// Not implemented</span></div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

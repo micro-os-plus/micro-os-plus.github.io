@@ -162,7 +162,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00199">199</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00190">190</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
 
 </div>
 </div>
@@ -178,7 +178,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00101">101</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00097">97</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,20 @@ template&lt;class _To , class Rep_T , class Period_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00269">269</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00258">258</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>      {</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"><span class="lineno">  261</span>        _To r = std::chrono::duration_cast&lt;_To&gt; (d);</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (r &lt; d)</div>
+<div class="line"><span class="lineno">  263</span>          {</div>
+<div class="line"><span class="lineno">  264</span>            ++r;</div>
+<div class="line"><span class="lineno">  265</span>          }</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">return</span> r;</div>
+<div class="line"><span class="lineno">  267</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="chrono_source.html#l00258">ceil()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="chrono_source.html#l00258">ceil()</a>, and <a class="el" href="condition__variable_source.html#l00276">os::estd::condition_variable::wait_for()</a>.</p>
 
 </div>
 </div>
@@ -237,8 +250,13 @@ template&lt;class _To , class Rep_T , class Period_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00118">118</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="chrono_source.html#l00115">115</a> of file <a class="el" href="chrono_source.html">chrono</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>      {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceos_1_1estd_1_1chrono.html#a9b7ab9a98367ac210a415d0848738ea8">systicks</a> (<span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a5149a4ee2d5108fa31d2397d82aebe14">systick_clock::rep</a><span class="keyword">&gt;</span> (t));</div>
+<div class="line"><span class="lineno">  118</span>      }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1chrono_1_1systick__clock_html_a5149a4ee2d5108fa31d2397d82aebe14"><div class="ttname"><a href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a5149a4ee2d5108fa31d2397d82aebe14">os::estd::chrono::systick_clock::rep</a></div><div class="ttdeci">rtos::clock_systick::timestamp_t rep</div><div class="ttdoc">type of variable holding the tick counter</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00070">chrono:70</a></div></div>
+<div class="ttc" id="anamespaceos_1_1estd_1_1chrono_html_a9b7ab9a98367ac210a415d0848738ea8"><div class="ttname"><a href="namespaceos_1_1estd_1_1chrono.html#a9b7ab9a98367ac210a415d0848738ea8">os::estd::chrono::systicks</a></div><div class="ttdeci">systick_clock::duration systicks</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00097">chrono:97</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

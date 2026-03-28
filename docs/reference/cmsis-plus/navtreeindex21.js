@@ -1,12 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"globals_func_a.html":[6,1,1,1],
-"globals_func_b.html":[6,1,1,2],
-"globals_func_c.html":[6,1,1,3],
-"globals_func_e.html":[6,1,1,4],
-"globals_func_f.html":[6,1,1,5],
-"globals_func_g.html":[6,1,1,6],
-"globals_func_h.html":[6,1,1,7],
 "globals_func_i.html":[6,1,1,8],
 "globals_func_k.html":[6,1,1,9],
 "globals_func_l.html":[6,1,1,10],
@@ -249,5 +242,12 @@ var NAVTREEINDEX21 =
 "group__cmsis-plus-rtos-c-clock.html#ga1858b30c0a9beeed4a71eb89abd697d5":[3,3,2,19],
 "group__cmsis-plus-rtos-c-clock.html#ga1c4939b771023f6bcea3702df2a6c49e":[3,3,2,9],
 "group__cmsis-plus-rtos-c-clock.html#ga315d0b52f36d2e57fe75c791cf68f849":[3,3,2,3],
-"group__cmsis-plus-rtos-c-clock.html#ga4227a69d2ab6d5a295134c5fcd795b8b":[3,3,2,12]
+"group__cmsis-plus-rtos-c-clock.html#ga4227a69d2ab6d5a295134c5fcd795b8b":[3,3,2,12],
+"group__cmsis-plus-rtos-c-clock.html#ga44ba577219411050f947e194d1b404db":[3,3,2,1],
+"group__cmsis-plus-rtos-c-clock.html#ga467f1606b44bb8cfbc1db82bf8eeaf1a":[3,3,2,14],
+"group__cmsis-plus-rtos-c-clock.html#ga5bf21e10e72c6abc8c23d76cb1385938":[3,3,2,4],
+"group__cmsis-plus-rtos-c-clock.html#ga5ecb6a91c5a5a5e7bc405ca3df217fc3":[3,3,2,11],
+"group__cmsis-plus-rtos-c-clock.html#ga6d30b43ae4c7f98b2b51e420b5a04849":[3,3,2,20],
+"group__cmsis-plus-rtos-c-clock.html#ga790772dc72e4f14f01f7aa477b42a314":[3,3,2,6],
+"group__cmsis-plus-rtos-c-clock.html#ga87247431f85e060f6fd9214f6d57941d":[3,3,2,16]
 };

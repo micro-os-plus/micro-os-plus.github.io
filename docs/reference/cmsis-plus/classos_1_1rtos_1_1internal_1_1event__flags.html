@@ -155,9 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab40d0a3c053123d36fc305e9be62c442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Internal event flags implementation. </p>
-
-<p class="definition">Definition at line <a class="el" href="os-flags_8h_source.html#l00047">47</a> of file <a class="el" href="os-flags_8h_source.html">os-flags.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="os-flags_8h_source.html#l00046">46</a> of file <a class="el" href="os-flags_8h_source.html">os-flags.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9e9242141ec8a16885eaf01a53f31834" name="a9e9242141ec8a16885eaf01a53f31834"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e9242141ec8a16885eaf01a53f31834">&#9670;&#160;</a></span>event_flags()</h2>
@@ -181,8 +180,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Construct an internal event flags object instance. </p>
 
 </div>
 </div>
@@ -208,8 +205,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destruct the internal event flags object instance. </p>
 
 </div>
 </div>
@@ -245,8 +240,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Check if expected flags are raised. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The expected flags (OR-ed bit-mask); if <code><a class="el" href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8" title="Special mask to represent any flag.">flags::any</a></code>, any flag raised will do it. </td></tr>
@@ -263,7 +256,60 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00064">64</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00063">63</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>      {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a> == <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8">flags::any</a>)</div>
+<div class="line"><span class="lineno">   67</span>          {</div>
+<div class="line"><span class="lineno">   68</span>            <span class="comment">// Any flag will do it.</span></div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (flags_mask_ != 0)</div>
+<div class="line"><span class="lineno">   70</span>              {</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (oflags != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   72</span>                  {</div>
+<div class="line"><span class="lineno">   73</span>                    *oflags = flags_mask_;</div>
+<div class="line"><span class="lineno">   74</span>                  }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (mode &amp; <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a">flags::mode::clear</a>)</div>
+<div class="line"><span class="lineno">   77</span>                  {</div>
+<div class="line"><span class="lineno">   78</span>                    <span class="comment">// Clear them all.</span></div>
+<div class="line"><span class="lineno">   79</span>                    flags_mask_ = 0;</div>
+<div class="line"><span class="lineno">   80</span>                  }</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>              }</div>
+<div class="line"><span class="lineno">   83</span>          }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (((((mode &amp; <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa0efea2cf0731279e9b4aa341820582a2">flags::mode::all</a>) != 0))</div>
+<div class="line"><span class="lineno">   85</span>                  &amp;&amp; ((flags_mask_ &amp; <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>) == <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>))</div>
+<div class="line"><span class="lineno">   86</span>                 || (((mode &amp; <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aab708645ba400c7eaa8a0a22a25322339">flags::mode::any</a>) != 0)</div>
+<div class="line"><span class="lineno">   87</span>                     &amp;&amp; ((flags_mask_ &amp; <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>) != 0)))</div>
+<div class="line"><span class="lineno">   88</span>          {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (oflags != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   90</span>              {</div>
+<div class="line"><span class="lineno">   91</span>                *oflags = (flags_mask_ &amp; <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>);</div>
+<div class="line"><span class="lineno">   92</span>              }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (mode &amp; <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a">flags::mode::clear</a>)</div>
+<div class="line"><span class="lineno">   95</span>              {</div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   97</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">   98</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">   99</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  100</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  102</span>                <span class="comment">// Clear desired flags.</span></div>
+<div class="line"><span class="lineno">  103</span>                flags_mask_ &amp;= ~mask;</div>
+<div class="line"><span class="lineno">  104</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  105</span>              }</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  107</span>          }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  110</span>      }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1internal_1_1event__flags_html_ab40d0a3c053123d36fc305e9be62c442"><div class="ttname"><a href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">os::rtos::internal::event_flags::mask</a></div><div class="ttdeci">flags::mask_t mask(void)</div><div class="ttdoc">Get the flags mask.</div><div class="ttdef"><b>Definition</b> <a href="os-flags_8h_source.html#l00189">os-flags.h:189</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1flags_1_1mode_html_a1472154078ef02cfa5f62ae1ca50758aa0efea2cf0731279e9b4aa341820582a2"><div class="ttname"><a href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa0efea2cf0731279e9b4aa341820582a2">os::rtos::flags::mode::all</a></div><div class="ttdeci">@ all</div><div class="ttdoc">Return when all flags are set.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00295">os-decls.h:295</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1flags_1_1mode_html_a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a"><div class="ttname"><a href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a">os::rtos::flags::mode::clear</a></div><div class="ttdeci">@ clear</div><div class="ttdoc">Ask for flags to be cleared after read.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00306">os-decls.h:305</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1flags_1_1mode_html_a1472154078ef02cfa5f62ae1ca50758aab708645ba400c7eaa8a0a22a25322339"><div class="ttname"><a href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aab708645ba400c7eaa8a0a22a25322339">os::rtos::flags::mode::any</a></div><div class="ttdeci">@ any</div><div class="ttdoc">Return when at least one flag is set.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00300">os-decls.h:300</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1flags_html_a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8"><div class="ttname"><a href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8">os::rtos::flags::any</a></div><div class="ttdeci">@ any</div><div class="ttdoc">Special mask to represent any flag.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00317">os-decls.h:317</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-decls_8h_source.html#l00295">os::rtos::flags::mode::all</a>, <a class="el" href="os-decls_8h_source.html#l00300">os::rtos::flags::mode::any</a>, <a class="el" href="os-decls_8h_source.html#l00317">os::rtos::flags::any</a>, <a class="el" href="os-decls_8h_source.html#l00305">os::rtos::flags::mode::clear</a>, and <a class="el" href="os-flags_8h_source.html#l00189">mask()</a>.</p>
 
 </div>
 </div>
@@ -292,8 +338,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Clear event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to clear. </td></tr>
@@ -310,6 +354,37 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00149">149</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>      {</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a> != 0, EINVAL);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>        {</div>
+<div class="line"><span class="lineno">  154</span>          <span class="comment">// ----- Enter critical section -------------------------------------</span></div>
+<div class="line"><span class="lineno">  155</span>          interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>          <span class="keywordflow">if</span> (oflags != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>              *oflags = flags_mask_;</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  163</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  164</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">  165</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  166</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">  167</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  168</span>          <span class="comment">// Clear the selected bits; leave the rest untouched.</span></div>
+<div class="line"><span class="lineno">  169</span>          flags_mask_ &amp;= ~mask;</div>
+<div class="line"><span class="lineno">  170</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>          <span class="comment">// ----- Exit critical section --------------------------------------</span></div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">  176</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1result_html_a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b"><div class="ttname"><a href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a></div><div class="ttdeci">@ ok</div><div class="ttdoc">Function completed; no errors or events occurred.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00181">os-decls.h:179</a></div></div>
+<div class="ttc" id="aos-decls_8h_html_ae9cede0de19446e3a5eb930b6b10dd39"><div class="ttname"><a href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a></div><div class="ttdeci">#define os_assert_err(__e, __er)</div><div class="ttdoc">Assert or return an error.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l01101">os-decls.h:1101</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-flags_8h_source.html#l00189">mask()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>.</p>
 
 </div>
 </div>
@@ -338,8 +413,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get (and possibly clear) event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to get/clear; can be <code><a class="el" href="namespaceos_1_1rtos_1_1flags.html#a096d5e2918efd09347ff64e76d4b9125ae00cc70aef8c5b5bbd8998096f1317e8" title="Special mask to represent any flag.">flags::any</a></code>. </td></tr>
@@ -350,6 +423,42 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The selected bits from the flags mask. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00113">113</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>      {</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_typedef" href="namespaceos_1_1rtos_1_1flags.html#a87571a2d62e491d2af4e4390eb1aca06">flags::mask_t</a> ret;</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>          <span class="comment">// ----- Enter critical section -------------------------------------</span></div>
+<div class="line"><span class="lineno">  118</span>          interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a> == 0)</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>              <span class="comment">// Return the entire mask.</span></div>
+<div class="line"><span class="lineno">  123</span>              ret = flags_mask_;</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>              ret = flags_mask_ &amp; <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>;</div>
+<div class="line"><span class="lineno">  128</span>              <span class="keywordflow">if</span> ((mode &amp; <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1flags_1_1mode.html#a1472154078ef02cfa5f62ae1ca50758aa71559e3634890b5547e62ff93160ac3a">flags::mode::clear</a>) != 0)</div>
+<div class="line"><span class="lineno">  129</span>                {</div>
+<div class="line"><span class="lineno">  130</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  131</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  132</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">  133</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">  134</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  136</span>                  <span class="comment">// Clear the selected bits; leave the rest untouched.</span></div>
+<div class="line"><span class="lineno">  137</span>                  flags_mask_ &amp;= ~mask;</div>
+<div class="line"><span class="lineno">  138</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  139</span>                }</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>          <span class="comment">// ----- Exit critical section --------------------------------------</span></div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        <span class="comment">// Return the selected bits.</span></div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  146</span>      }</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1flags_html_a87571a2d62e491d2af4e4390eb1aca06"><div class="ttname"><a href="namespaceos_1_1rtos_1_1flags.html#a87571a2d62e491d2af4e4390eb1aca06">os::rtos::flags::mask_t</a></div><div class="ttdeci">uint32_t mask_t</div><div class="ttdoc">Type of variables holding flags masks.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00266">os-decls.h:266</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-decls_8h_source.html#l00305">os::rtos::flags::mode::clear</a>, and <a class="el" href="os-flags_8h_source.html#l00189">mask()</a>.</p>
 
 </div>
 </div>
@@ -376,11 +485,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the flags mask. </p>
 <dl class="section return"><dt>Returns</dt><dd>The internal bit-mask. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-flags_8h_source.html#l00192">192</a> of file <a class="el" href="os-flags_8h_source.html">os-flags.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-flags_8h_source.html#l00189">189</a> of file <a class="el" href="os-flags_8h_source.html">os-flags.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>      {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">return</span> flags_mask_;</div>
+<div class="line"><span class="lineno">  192</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="os-flags_8cpp_source.html#l00063">check_raised()</a>, <a class="el" href="os-flags_8cpp_source.html#l00149">clear()</a>, <a class="el" href="os-flags_8cpp_source.html#l00113">get()</a>, and <a class="el" href="os-flags_8cpp_source.html#l00033">raise()</a>.</p>
 
 </div>
 </div>
@@ -409,8 +521,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Raise event flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The OR-ed flags to raise. </td></tr>
@@ -427,7 +537,36 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00034">34</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-flags_8cpp_source.html#l00033">33</a> of file <a class="el" href="os-flags_8cpp_source.html">os-flags.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>      {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="os-decls_8h.html#ae9cede0de19446e3a5eb930b6b10dd39">os_assert_err</a> (<a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a> != 0, EINVAL);</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>        assert (port::interrupts::is_priority_valid ());</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>          <span class="comment">// ----- Enter critical section -------------------------------------</span></div>
+<div class="line"><span class="lineno">   41</span>          interrupts::critical_section ics;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>          <span class="keywordflow">if</span> (oflags != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>              *oflags = flags_mask_;</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">   50</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-volatile&quot;</span></div>
+<div class="line"><span class="lineno">   51</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><span class="lineno">   52</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wvolatile&quot;</span></div>
+<div class="line"><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   54</span>          flags_mask_ |= <a class="code hl_function" href="classos_1_1rtos_1_1internal_1_1event__flags.html#ab40d0a3c053123d36fc305e9be62c442">mask</a>;</div>
+<div class="line"><span class="lineno">   55</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>          <span class="comment">// ----- Exit critical section --------------------------------------</span></div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">result::ok</a>;</div>
+<div class="line"><span class="lineno">   60</span>      }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-flags_8h_source.html#l00189">mask()</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="os-decls_8h_source.html#l01101">os_assert_err</a>.</p>
 
 </div>
 </div>

@@ -186,7 +186,7 @@ Private Types</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00077">77</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00076">76</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3e758d72c162cb411cd16578ab3a98ed" name="a3e758d72c162cb411cd16578ab3a98ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e758d72c162cb411cd16578ab3a98ed">&#9670;&#160;</a></span>Native_clock</h2>
@@ -208,7 +208,7 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00138">138</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00134">134</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
 
 </div>
 </div>
@@ -224,7 +224,7 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00085">85</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00082">82</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
 
 </div>
 </div>
@@ -248,7 +248,7 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00081">81</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00079">79</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
 
 </div>
 </div>
@@ -276,8 +276,10 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00213">213</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00205">205</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a06b9e91ec5b7c680e14850d0a7cb67ee" name="a06b9e91ec5b7c680e14850d0a7cb67ee"></a>
@@ -303,8 +305,10 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00218">218</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00209">209</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>    {</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa79a801fc06c20ddef15b27dd2fc91f5" name="aa79a801fc06c20ddef15b27dd2fc91f5"></a>
@@ -374,7 +378,26 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00043">43</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00042">42</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>      <a class="code hl_typedef" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">os::rtos::result_t</a> res;</div>
+<div class="line"><span class="lineno">   45</span>      res = <a class="code hl_variable" href="classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210">ncv_</a>.<a class="code hl_function" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81">broadcast</a> ();</div>
+<div class="line"><span class="lineno">   46</span>      <span class="keywordflow">if</span> (res != <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>          <a class="code hl_function" href="namespaceos_1_1estd.html#ac596ba385da43ceb3605f700ea538ce5">os::estd::__throw_cmsis_error</a> (</div>
+<div class="line"><span class="lineno">   49</span>              <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (res),</div>
+<div class="line"><span class="lineno">   50</span>              <span class="stringliteral">&quot;condition_variable::notify_all() failed&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1condition__variable_html_a419a3d1e0adafc44d74f0b454a675210"><div class="ttname"><a href="classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210">os::estd::condition_variable::ncv_</a></div><div class="ttdeci">native_type ncv_</div><div class="ttdef"><b>Definition</b> <a href="condition__variable_source.html#l00133">condition_variable:133</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1condition__variable_html_a70e53d0f2e67d00ffb809319fb84bc81"><div class="ttname"><a href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81">os::rtos::condition_variable::broadcast</a></div><div class="ttdeci">result_t broadcast(void)</div><div class="ttdoc">Notify all threads waiting for a condition variable.</div></div>
+<div class="ttc" id="anamespaceos_1_1estd_html_ac596ba385da43ceb3605f700ea538ce5"><div class="ttname"><a href="namespaceos_1_1estd.html#ac596ba385da43ceb3605f700ea538ce5">os::estd::__throw_cmsis_error</a></div><div class="ttdeci">void __throw_cmsis_error(int ev, const char *what_arg)</div><div class="ttdef"><b>Definition</b> <a href="system-error_8cpp_source.html#l00124">system-error.cpp:124</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1result_html_a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b"><div class="ttname"><a href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a></div><div class="ttdeci">@ ok</div><div class="ttdoc">Function completed; no errors or events occurred.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00181">os-decls.h:179</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_html_a54633089ccffe9e56ce1137ebe57776d"><div class="ttname"><a href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">os::rtos::result_t</a></div><div class="ttdeci">uint32_t result_t</div><div class="ttdoc">Type of values returned by RTOS functions.</div><div class="ttdef"><b>Definition</b> <a href="os-decls_8h_source.html#l00095">os-decls.h:95</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="system-error_8cpp_source.html#l00124">os::estd::__throw_cmsis_error()</a>, <a class="el" href="classos_1_1rtos_1_1condition__variable.html#a70e53d0f2e67d00ffb809319fb84bc81">os::rtos::condition_variable::broadcast()</a>, <a class="el" href="condition__variable_source.html#l00133">ncv_</a>, and <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition__variable_source.html#l00336">os::estd::condition_variable_any::notify_all()</a>.</p>
 
 </div>
 </div>
@@ -401,7 +424,22 @@ Private Types</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00030">30</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00029">29</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>      <a class="code hl_typedef" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">os::rtos::result_t</a> res;</div>
+<div class="line"><span class="lineno">   32</span>      res = <a class="code hl_variable" href="classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210">ncv_</a>.<a class="code hl_function" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766">signal</a> ();</div>
+<div class="line"><span class="lineno">   33</span>      <span class="keywordflow">if</span> (res != <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a>)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>          <a class="code hl_function" href="namespaceos_1_1estd.html#ac596ba385da43ceb3605f700ea538ce5">os::estd::__throw_cmsis_error</a> (</div>
+<div class="line"><span class="lineno">   36</span>              <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (res),</div>
+<div class="line"><span class="lineno">   37</span>              <span class="stringliteral">&quot;condition_variable::notify_one() failed&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1condition__variable_html_a2cee82ef11f1690e478733a1d7abe766"><div class="ttname"><a href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766">os::rtos::condition_variable::signal</a></div><div class="ttdeci">result_t signal(void)</div><div class="ttdoc">Notify one thread waiting for a condition variable.</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="system-error_8cpp_source.html#l00124">os::estd::__throw_cmsis_error()</a>, <a class="el" href="condition__variable_source.html#l00133">ncv_</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="classos_1_1rtos_1_1condition__variable.html#a2cee82ef11f1690e478733a1d7abe766">os::rtos::condition_variable::signal()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition__variable_source.html#l00329">os::estd::condition_variable_any::notify_one()</a>.</p>
 
 </div>
 </div>
@@ -447,7 +485,26 @@ Private Types</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00056">56</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition-variable_8cpp_source.html#l00055">55</a> of file <a class="el" href="condition-variable_8cpp_source.html">condition-variable.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>      <span class="keywordflow">if</span> (!lk.owns_lock ())</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>          <a class="code hl_function" href="namespaceos_1_1estd.html#a951c9b2c6401f3a3bb40d4b2c3213f46">os::estd::__throw_system_error</a> (</div>
+<div class="line"><span class="lineno">   60</span>              EPERM, <span class="stringliteral">&quot;condition_variable::wait: mutex not locked&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>      <a class="code hl_typedef" href="namespaceos_1_1rtos.html#a54633089ccffe9e56ce1137ebe57776d">os::rtos::result_t</a> res = <a class="code hl_variable" href="classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210">ncv_</a>.<a class="code hl_function" href="classos_1_1rtos_1_1condition__variable.html#ac920555b675c7778d8db780307fdcd3d">wait</a> ((*(lk.mutex ()-&gt;native_handle ())));</div>
+<div class="line"><span class="lineno">   63</span>      <span class="keywordflow">if</span> (res != <a class="code hl_enumvalue" href="namespaceos_1_1rtos_1_1result.html#a1f5b41a48ca4ac9f7aeb3bd1c702b45aac3daa6d58a1202b112a91628d144685b">os::rtos::result::ok</a>)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>          <a class="code hl_function" href="namespaceos_1_1estd.html#ac596ba385da43ceb3605f700ea538ce5">os::estd::__throw_cmsis_error</a> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (res),</div>
+<div class="line"><span class="lineno">   66</span>                                         <span class="stringliteral">&quot;condition_variable wait failed&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aclassos_1_1rtos_1_1condition__variable_html_ac920555b675c7778d8db780307fdcd3d"><div class="ttname"><a href="classos_1_1rtos_1_1condition__variable.html#ac920555b675c7778d8db780307fdcd3d">os::rtos::condition_variable::wait</a></div><div class="ttdeci">result_t wait(mutex &amp;mutex)</div><div class="ttdoc">Wait for a condition variable to be notified.</div></div>
+<div class="ttc" id="anamespaceos_1_1estd_html_a951c9b2c6401f3a3bb40d4b2c3213f46"><div class="ttname"><a href="namespaceos_1_1estd.html#a951c9b2c6401f3a3bb40d4b2c3213f46">os::estd::__throw_system_error</a></div><div class="ttdeci">void __throw_system_error(int ev, const char *what_arg)</div><div class="ttdef"><b>Definition</b> <a href="system-error_8cpp_source.html#l00109">system-error.cpp:109</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="system-error_8cpp_source.html#l00124">os::estd::__throw_cmsis_error()</a>, <a class="el" href="system-error_8cpp_source.html#l00109">os::estd::__throw_system_error()</a>, <a class="el" href="condition__variable_source.html#l00133">ncv_</a>, <a class="el" href="os-decls_8h_source.html#l00179">os::rtos::result::ok</a>, and <a class="el" href="classos_1_1rtos_1_1condition__variable.html#ac920555b675c7778d8db780307fdcd3d">os::rtos::condition_variable::wait()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition__variable_source.html#l00359">os::estd::condition_variable_any::wait()</a>, and <a class="el" href="condition__variable_source.html#l00215">wait()</a>.</p>
 
 </div>
 </div>
@@ -479,7 +536,14 @@ template&lt;class Predicate_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00224">224</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00215">215</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>      <span class="keywordflow">while</span> (!pred ())</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_function" href="classos_1_1estd_1_1condition__variable.html#a97aef0512dae07309c5feccd4fde4538">wait</a> (lock);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1condition__variable_html_a97aef0512dae07309c5feccd4fde4538"><div class="ttname"><a href="classos_1_1estd_1_1condition__variable.html#a97aef0512dae07309c5feccd4fde4538">os::estd::condition_variable::wait</a></div><div class="ttdeci">void wait(std::unique_lock&lt; mutex &gt; &amp;lock)</div><div class="ttdef"><b>Definition</b> <a href="condition-variable_8cpp_source.html#l00055">condition-variable.cpp:55</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="condition-variable_8cpp_source.html#l00055">wait()</a>.</p>
 
 </div>
 </div>
@@ -511,7 +575,43 @@ template&lt;class Rep_T , class Period_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00284">284</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00276">276</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>      <span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>      <span class="keywordflow">if</span> (rel_time &lt;= rel_time.zero ())</div>
+<div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>          <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">cv_status::timeout</a>;</div>
+<div class="line"><span class="lineno">  285</span>        }</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>      <a class="code hl_typedef" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a4e95cfc049a638e31bdd6bd148f6ef96">Native_clock::time_point</a> start_tp = <a class="code hl_function" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a66e7d7eeb4ca19e9b724be841503a442">Native_clock::now</a> ();</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>      <a class="code hl_typedef" href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">os::rtos::clock::duration_t</a> ticks</div>
+<div class="line"><span class="lineno">  290</span>          = <a class="code hl_function" href="namespaceos_1_1estd_1_1chrono.html#af35c9ccc733c569f92f9e25bbc505f3f">os::estd::chrono::ceil</a>&lt;std::chrono::duration&lt;</div>
+<div class="line"><span class="lineno">  291</span>              <a class="code hl_typedef" href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">os::rtos::clock::duration_t</a>, <span class="keyword">typename</span> <a class="code hl_typedef" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a14abc1975e738dd137f5b3259d14f1dd">Native_clock::period</a>&gt;&gt; (</div>
+<div class="line"><span class="lineno">  292</span>                rel_time)</div>
+<div class="line"><span class="lineno">  293</span>                .count ();</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>      <a class="code hl_variable" href="classos_1_1estd_1_1condition__variable.html#a419a3d1e0adafc44d74f0b454a675210">ncv_</a>.<a class="code hl_function" href="classos_1_1rtos_1_1condition__variable.html#aea63b3c19dd9e0fa2f17c781ec220198">timed_wait</a> (</div>
+<div class="line"><span class="lineno">  296</span>          <span class="comment">/*(rtos::mutex &amp;)*/</span> (*(<a class="code hl_function" href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a2dac383aee6954ff50ae7e01f35a3508">lock</a>.mutex ()-&gt;native_handle ())), ticks);</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a66e7d7eeb4ca19e9b724be841503a442">Native_clock::now</a> () - start_tp) &lt; rel_time</div>
+<div class="line"><span class="lineno">  299</span>                 ? <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">cv_status::no_timeout</a></div>
+<div class="line"><span class="lineno">  300</span>                 : <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">cv_status::timeout</a>;</div>
+<div class="line"><span class="lineno">  301</span>    }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1chrono_1_1systick__clock_html_a14abc1975e738dd137f5b3259d14f1dd"><div class="ttname"><a href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a14abc1975e738dd137f5b3259d14f1dd">os::estd::chrono::systick_clock::period</a></div><div class="ttdeci">std::ratio&lt; 1, os::rtos::clock_systick::frequency_hz &gt; period</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00074">chrono:74</a></div></div>
+<div class="ttc" id="aclassos_1_1estd_1_1chrono_1_1systick__clock_html_a4e95cfc049a638e31bdd6bd148f6ef96"><div class="ttname"><a href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a4e95cfc049a638e31bdd6bd148f6ef96">os::estd::chrono::systick_clock::time_point</a></div><div class="ttdeci">std::chrono::time_point&lt; systick_clock &gt; time_point</div><div class="ttdoc">basic time_point type of clock</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00079">chrono:79</a></div></div>
+<div class="ttc" id="aclassos_1_1estd_1_1chrono_1_1systick__clock_html_a66e7d7eeb4ca19e9b724be841503a442"><div class="ttname"><a href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a66e7d7eeb4ca19e9b724be841503a442">os::estd::chrono::systick_clock::now</a></div><div class="ttdeci">static time_point now() noexcept</div><div class="ttdef"><b>Definition</b> <a href="chrono_8cpp_source.html#l00048">chrono.cpp:48</a></div></div>
+<div class="ttc" id="aclassos_1_1rtos_1_1condition__variable_html_aea63b3c19dd9e0fa2f17c781ec220198"><div class="ttname"><a href="classos_1_1rtos_1_1condition__variable.html#aea63b3c19dd9e0fa2f17c781ec220198">os::rtos::condition_variable::timed_wait</a></div><div class="ttdeci">result_t timed_wait(mutex &amp;mutex, clock::duration_t timeout)</div><div class="ttdoc">Timed wait for a condition variable to be notified.</div></div>
+<div class="ttc" id="agroup__cmsis-plus-iso_html_gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd"><div class="ttname"><a href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">os::estd::cv_status::no_timeout</a></div><div class="ttdeci">@ no_timeout</div></div>
+<div class="ttc" id="agroup__cmsis-plus-iso_html_gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc"><div class="ttname"><a href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::cv_status::timeout</a></div><div class="ttdeci">@ timeout</div></div>
+<div class="ttc" id="agroup__cmsis-plus-rtos-clock_html_ga149d8b5cea55224ef5cfede8a81df04c"><div class="ttname"><a href="group__cmsis-plus-rtos-clock.html#ga149d8b5cea55224ef5cfede8a81df04c">os::rtos::clock::duration_t</a></div><div class="ttdeci">port::clock::duration_t duration_t</div><div class="ttdoc">Type of variables holding clock durations.</div><div class="ttdef"><b>Definition</b> <a href="os-clocks_8h_source.html#l00078">os-clocks.h:78</a></div></div>
+<div class="ttc" id="anamespaceos_1_1estd_1_1chrono_html_af35c9ccc733c569f92f9e25bbc505f3f"><div class="ttname"><a href="namespaceos_1_1estd_1_1chrono.html#af35c9ccc733c569f92f9e25bbc505f3f">os::estd::chrono::ceil</a></div><div class="ttdeci">constexpr std::enable_if&lt; std::chrono::__is_duration&lt; _To &gt;::value, _To &gt;::type ceil(std::chrono::duration&lt; Rep_T, Period_T &gt; d)</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00258">chrono:258</a></div></div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1port_1_1scheduler_html_a2dac383aee6954ff50ae7e01f35a3508"><div class="ttname"><a href="namespaceos_1_1rtos_1_1port_1_1scheduler.html#a2dac383aee6954ff50ae7e01f35a3508">os::rtos::port::scheduler::lock</a></div><div class="ttdeci">port::scheduler::state_t lock(void)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="chrono_source.html#l00258">os::estd::chrono::ceil()</a>, <a class="el" href="condition__variable_source.html#l00133">ncv_</a>, <a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">os::estd::no_timeout</a>, <a class="el" href="chrono_8cpp_source.html#l00048">os::estd::chrono::systick_clock::now()</a>, <a class="el" href="classos_1_1rtos_1_1condition__variable.html#aea63b3c19dd9e0fa2f17c781ec220198">os::rtos::condition_variable::timed_wait()</a>, and <a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::timeout</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition__variable_source.html#l00229">wait_until()</a>.</p>
 
 </div>
 </div>
@@ -557,7 +657,14 @@ template&lt;class Rep_T , class Period_T , class Predicate_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00313">313</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00305">305</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>    {</div>
+<div class="line"><span class="lineno">  310</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1estd_1_1condition__variable.html#ab5e736ff02386ca6f643a0031e52ed8a">wait_until</a> (lock, <a class="code hl_function" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#a66e7d7eeb4ca19e9b724be841503a442">Native_clock::now</a> () + rel_time,</div>
+<div class="line"><span class="lineno">  311</span>                         std::move (pred));</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1condition__variable_html_ab5e736ff02386ca6f643a0031e52ed8a"><div class="ttname"><a href="classos_1_1estd_1_1condition__variable.html#ab5e736ff02386ca6f643a0031e52ed8a">os::estd::condition_variable::wait_until</a></div><div class="ttdeci">cv_status wait_until(std::unique_lock&lt; mutex &gt; &amp;lock, const std::chrono::time_point&lt; Clock_T, Duration_T &gt; &amp;abs_time)</div><div class="ttdef"><b>Definition</b> <a href="condition__variable_source.html#l00229">condition_variable:229</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="chrono_8cpp_source.html#l00048">os::estd::chrono::systick_clock::now()</a>, and <a class="el" href="condition__variable_source.html#l00229">wait_until()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +696,32 @@ template&lt;class Clock_T , class Duration_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00238">238</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00229">229</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>      <span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"><span class="lineno">  234</span>      <span class="keyword">using </span><a class="code hl_function" href="group__cmsis-plus-posix-io-c.html#gade863cfcca9ee19f20ca95796f8ddc1e">clock</a> = Clock_T;</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_function" href="classos_1_1estd_1_1condition__variable.html#ae3c664f12d88b3011ef0409636bd8d7d">wait_for</a> (lock, abs_time - Clock_T::now ());</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">  239</span>        Clock_T::now () &lt; abs_time ?</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">cv_status::no_timeout</a> : <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">cv_status::timeout</a>;</div>
+<div class="line"><span class="lineno">  241</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  242</span>      <span class="comment">// Optimise to native (ticks). LLVM compares using the</span></div>
+<div class="line"><span class="lineno">  243</span>      <span class="comment">// original clock, which might be more accurate.</span></div>
+<div class="line"><span class="lineno">  244</span>      <a class="code hl_typedef" href="classos_1_1estd_1_1chrono_1_1systick__clock.html#ae62096974d838cfe4c8b3432944e6014">Native_clock::duration</a> rel_time</div>
+<div class="line"><span class="lineno">  245</span>          = std::chrono::duration_cast&lt;Native_clock::duration&gt; (</div>
+<div class="line"><span class="lineno">  246</span>              abs_time - clock::now ());</div>
+<div class="line"><span class="lineno">  247</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1estd_1_1condition__variable.html#ae3c664f12d88b3011ef0409636bd8d7d">wait_for</a> (lock, rel_time);</div>
+<div class="line"><span class="lineno">  248</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="ttc" id="aclassos_1_1estd_1_1chrono_1_1systick__clock_html_ae62096974d838cfe4c8b3432944e6014"><div class="ttname"><a href="classos_1_1estd_1_1chrono_1_1systick__clock.html#ae62096974d838cfe4c8b3432944e6014">os::estd::chrono::systick_clock::duration</a></div><div class="ttdeci">std::chrono::duration&lt; rep, period &gt; duration</div><div class="ttdoc">basic duration type of clock</div><div class="ttdef"><b>Definition</b> <a href="chrono_source.html#l00076">chrono:76</a></div></div>
+<div class="ttc" id="aclassos_1_1estd_1_1condition__variable_html_ae3c664f12d88b3011ef0409636bd8d7d"><div class="ttname"><a href="classos_1_1estd_1_1condition__variable.html#ae3c664f12d88b3011ef0409636bd8d7d">os::estd::condition_variable::wait_for</a></div><div class="ttdeci">cv_status wait_for(std::unique_lock&lt; mutex &gt; &amp;lock, const std::chrono::duration&lt; Rep_T, Period_T &gt; &amp;rel_time)</div><div class="ttdef"><b>Definition</b> <a href="condition__variable_source.html#l00276">condition_variable:276</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-posix-io-c_html_gade863cfcca9ee19f20ca95796f8ddc1e"><div class="ttname"><a href="group__cmsis-plus-posix-io-c.html#gade863cfcca9ee19f20ca95796f8ddc1e">clock</a></div><div class="ttdeci">clock_t clock(void)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-posix-io-c.html#gade863cfcca9ee19f20ca95796f8ddc1e">clock()</a>, <a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a70d61392e69e95a8c7f9603306634cbd">os::estd::no_timeout</a>, <a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::timeout</a>, and <a class="el" href="condition__variable_source.html#l00276">wait_for()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition__variable_source.html#l00305">wait_for()</a>, <a class="el" href="condition__variable_source.html#l00382">os::estd::condition_variable_any::wait_until()</a>, and <a class="el" href="condition__variable_source.html#l00255">wait_until()</a>.</p>
 
 </div>
 </div>
@@ -627,7 +759,17 @@ template&lt;class Clock_T , class Duration_T , class Predicate_T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00263">263</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00255">255</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>    {</div>
+<div class="line"><span class="lineno">  260</span>      <span class="keywordflow">while</span> (!pred ())</div>
+<div class="line"><span class="lineno">  261</span>        {</div>
+<div class="line"><span class="lineno">  262</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="classos_1_1estd_1_1condition__variable.html#ab5e736ff02386ca6f643a0031e52ed8a">wait_until</a> (lock, abs_time) == <a class="code hl_enumvalue" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">cv_status::timeout</a>)</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">return</span> pred ();</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+<div class="line"><span class="lineno">  265</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  266</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__cmsis-plus-iso.html#gga0910ad1ca1123a4da2cc323f70882196a90272dda245ae1fb3cf197e91a8689dc">os::estd::timeout</a>, and <a class="el" href="condition__variable_source.html#l00229">wait_until()</a>.</p>
 
 </div>
 </div>
@@ -652,7 +794,9 @@ template&lt;class Clock_T , class Duration_T , class Predicate_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00137">137</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+<p class="definition">Definition at line <a class="el" href="condition__variable_source.html#l00133">133</a> of file <a class="el" href="condition__variable_source.html">condition_variable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="condition-variable_8cpp_source.html#l00042">notify_all()</a>, <a class="el" href="condition-variable_8cpp_source.html#l00029">notify_one()</a>, <a class="el" href="condition-variable_8cpp_source.html#l00055">wait()</a>, and <a class="el" href="condition__variable_source.html#l00276">wait_for()</a>.</p>
 
 </div>
 </div>

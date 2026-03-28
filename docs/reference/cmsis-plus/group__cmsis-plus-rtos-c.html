@@ -173,8 +173,7 @@ Modules</h2></td></tr>
 <tr class="separator:ga39b9754c96beda392bdb080bc5653e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>µOS++ RTOS C API summary page. </p>
-<p>The C API maps most of the basic C++ functionality to C programmers. Usually the overhead is minimal, one function call. The object pointer is passsed as the first parameter. The names are prefixed with a unique string inspired by the namespace qualifier.</p>
+<p>The C API maps most of the basic C++ functionality to C programmers. Usually the overhead is minimal, one function call. The object pointer is passed as the first parameter. The names are prefixed with a unique string inspired by the namespace qualifier.</p>
 <p>To use the C API, include the <code>&lt;<a class="el" href="os-c-api_8h.html">cmsis-plus/rtos/os-c-api.h</a>&gt;</code> header. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga39b9754c96beda392bdb080bc5653e9e" name="ga39b9754c96beda392bdb080bc5653e9e"></a>
@@ -192,11 +191,15 @@ Modules</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Per-thread error support. </p>
 <p>Standard C libraries define <code>errno</code> as a macro to a function returning a pointer. This function returns such a pointer, specific to each thread. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to per-thread errno value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00657">657</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os-core_8cpp_source.html#l00672">672</a> of file <a class="el" href="os-core_8cpp_source.html">os-core.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  673</span>{</div>
+<div class="line"><span class="lineno">  674</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceos_1_1rtos_1_1this__thread.html#afb95537285d0aa314fc611ec05897cbf">os::rtos::this_thread::__errno</a> ();</div>
+<div class="line"><span class="lineno">  675</span>}</div>
+<div class="ttc" id="anamespaceos_1_1rtos_1_1this__thread_html_afb95537285d0aa314fc611ec05897cbf"><div class="ttname"><a href="namespaceos_1_1rtos_1_1this__thread.html#afb95537285d0aa314fc611ec05897cbf">os::rtos::this_thread::__errno</a></div><div class="ttdeci">int * __errno(void)</div><div class="ttdoc">Implementation of the library __errno() function.</div><div class="ttdef"><b>Definition</b> <a href="os-thread_8h_source.html#l02106">os-thread.h:2106</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="os-thread_8h_source.html#l02106">os::rtos::this_thread::__errno()</a>.</p>
 
 </div>
 </div>
@@ -225,8 +228,6 @@ Modules</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Application entry point, running on the main thread context. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">argc</td><td>Count of arguments. </td></tr>

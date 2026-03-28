@@ -180,7 +180,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00172">172</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00169">169</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8bdbe039512fbc7e55f0906aaad2f205" name="a8bdbe039512fbc7e55f0906aaad2f205"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bdbe039512fbc7e55f0906aaad2f205">&#9670;&#160;</a></span>file_impl()</h2>
@@ -198,7 +198,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00121">121</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00118">118</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>                                           : file_system_ (fs)</div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE)</span></div>
+<div class="line"><span class="lineno">  121</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_impl::%s()=%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  122</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -225,7 +234,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00129">129</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00125">125</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span><span class="preprocessor">#if defined(OS_TRACE_POSIX_IO_FILE)</span></div>
+<div class="line"><span class="lineno">  128</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;file_impl::%s() @%p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  129</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -256,6 +272,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1posix_1_1block__device__partition__impl.html#a2819d2cf5d35008cecaff625f50702e6">os::posix::block_device_partition_impl</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00189">os::posix::io::alloc_file_descriptor()</a>, and <a class="el" href="io_8cpp_source.html#l00164">os::posix::io::close()</a>.</p>
+
 </div>
 </div>
 <a id="ade2f4b94ac22a4897daab3617a588383" name="ade2f4b94ac22a4897daab3617a588383"></a>
@@ -282,8 +300,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00483">483</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00482">482</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  485</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afcd653fb293a373fc0a1dc47dbc2a47d" name="afcd653fb293a373fc0a1dc47dbc2a47d"></a>
@@ -310,7 +331,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00535">535</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00539">539</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  540</span>    {</div>
+<div class="line"><span class="lineno">  541</span>      errno = ENOSYS; <span class="comment">// Not implemented</span></div>
+<div class="line"><span class="lineno">  542</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  543</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00416">os::posix::io::fstat()</a>.</p>
 
 </div>
 </div>
@@ -338,7 +365,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00155">155</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00151">151</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>      errno = ENOSYS; <span class="comment">// Not implemented</span></div>
+<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="file_8cpp_source.html#l00091">os::posix::file::fsync()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +399,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00146">146</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8cpp_source.html#l00142">142</a> of file <a class="el" href="file_8cpp_source.html">file.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
+<div class="line"><span class="lineno">  144</span>      errno = ENOSYS; <span class="comment">// Not implemented</span></div>
+<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="file_8cpp_source.html#l00072">os::posix::file::ftruncate()</a>.</p>
 
 </div>
 </div>
@@ -394,8 +433,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00497">497</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00496">496</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>    {</div>
+<div class="line"><span class="lineno">  498</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  499</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2beb1da77fa410cd38bb48fc62bad8a5" name="a2beb1da77fa410cd38bb48fc62bad8a5"></a>
@@ -423,6 +465,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classos_1_1posix_1_1device__impl.html#a74932d67837e541b1ec6e15f876693aa">os::posix::device_impl</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="io_8h_source.html#l00458">os::posix::io::is_opened()</a>.</p>
 
 </div>
 </div>
@@ -452,7 +496,13 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classos_1_1posix_1_1tty__impl.html#acf91dd9ed7b7d6376b69c2e5610c147d">os::posix::tty_impl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00528">528</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00532">532</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  533</span>    {</div>
+<div class="line"><span class="lineno">  534</span>      errno = ENOTTY; <span class="comment">// By default, it is not a TTY.</span></div>
+<div class="line"><span class="lineno">  535</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  536</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00406">os::posix::io::isatty()</a>.</p>
 
 </div>
 </div>
@@ -492,6 +542,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a44191e4c386a27cc84cec89eed7c9a50">os::posix::block_device_impl</a>, and <a class="el" href="classos_1_1posix_1_1char__device__impl.html#a33920d60fba26eac5ac9cbe700cb8b47">os::posix::char_device_impl</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00447">os::posix::io::lseek()</a>.</p>
+
 </div>
 </div>
 <a id="aea4699c0070028f199dc219258201418" name="aea4699c0070028f199dc219258201418"></a>
@@ -530,6 +582,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a42941c66eb8cbc88bebfda062c29060c">os::posix::block_device_impl</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00217">os::posix::io::read()</a>.</p>
+
 </div>
 </div>
 <a id="aa350b4f251fa74bf1d029898ad7e2a69" name="aa350b4f251fa74bf1d029898ad7e2a69"></a>
@@ -566,7 +620,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00521">521</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00525">525</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  526</span>    {</div>
+<div class="line"><span class="lineno">  527</span>      errno = ENOSYS; <span class="comment">// Not implemented</span></div>
+<div class="line"><span class="lineno">  528</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  529</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00380">os::posix::io::vfcntl()</a>.</p>
 
 </div>
 </div>
@@ -606,6 +666,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classos_1_1posix_1_1block__device__impl.html#a9b57e0d768392c44fa21479a0f181e91">os::posix::block_device_impl</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00502">os::posix::io_impl::do_writev()</a>, and <a class="el" href="io_8cpp_source.html#l00268">os::posix::io::write()</a>.</p>
+
 </div>
 </div>
 <a id="a826e91ac762e6c480c523da8af9049f1" name="a826e91ac762e6c480c523da8af9049f1"></a>
@@ -642,7 +704,35 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00503">503</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8cpp_source.html#l00502">502</a> of file <a class="el" href="io_8cpp_source.html">io.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  503</span>    {</div>
+<div class="line"><span class="lineno">  504</span>      ssize_t total = 0;</div>
+<div class="line"><span class="lineno">  505</span> </div>
+<div class="line"><span class="lineno">  506</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">  507</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><span class="lineno">  508</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><span class="lineno">  509</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  510</span>      <span class="keyword">const</span> <span class="comment">/* struct */</span> <a class="code hl_struct" href="structiovec.html">iovec</a>* p = iov;</div>
+<div class="line"><span class="lineno">  511</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iovcnt; ++i, ++p)</div>
+<div class="line"><span class="lineno">  512</span>        {</div>
+<div class="line"><span class="lineno">  513</span>          ssize_t ret = <a class="code hl_function" href="classos_1_1posix_1_1io__impl.html#aaf72efcd064d35f9b93012ce18fd47c4">do_write</a> (p-&gt;<a class="code hl_variable" href="structiovec.html#a07aeddeccf80f14520fdd7ef0759442b">iov_base</a>, p-&gt;<a class="code hl_variable" href="structiovec.html#a17b5ac2078fd1adfabb262a95808a07d">iov_len</a>);</div>
+<div class="line"><span class="lineno">  514</span>          <span class="keywordflow">if</span> (ret &lt; 0)</div>
+<div class="line"><span class="lineno">  515</span>            {</div>
+<div class="line"><span class="lineno">  516</span>              <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  517</span>            }</div>
+<div class="line"><span class="lineno">  518</span>          total += ret;</div>
+<div class="line"><span class="lineno">  519</span>        }</div>
+<div class="line"><span class="lineno">  520</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">return</span> total;</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1io__impl_html_aaf72efcd064d35f9b93012ce18fd47c4"><div class="ttname"><a href="classos_1_1posix_1_1io__impl.html#aaf72efcd064d35f9b93012ce18fd47c4">os::posix::io_impl::do_write</a></div><div class="ttdeci">virtual ssize_t do_write(const void *buf, std::size_t nbyte)=0</div></div>
+<div class="ttc" id="astructiovec_html"><div class="ttname"><a href="structiovec.html">iovec</a></div><div class="ttdef"><b>Definition</b> <a href="uio_8h_source.html#l00039">uio.h:40</a></div></div>
+<div class="ttc" id="astructiovec_html_a07aeddeccf80f14520fdd7ef0759442b"><div class="ttname"><a href="structiovec.html#a07aeddeccf80f14520fdd7ef0759442b">iovec::iov_base</a></div><div class="ttdeci">void * iov_base</div><div class="ttdef"><b>Definition</b> <a href="uio_8h_source.html#l00041">uio.h:41</a></div></div>
+<div class="ttc" id="astructiovec_html_a17b5ac2078fd1adfabb262a95808a07d"><div class="ttname"><a href="structiovec.html#a17b5ac2078fd1adfabb262a95808a07d">iovec::iov_len</a></div><div class="ttdeci">size_t iov_len</div><div class="ttdef"><b>Definition</b> <a href="uio_8h_source.html#l00042">uio.h:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1posix_1_1io__impl.html#aaf72efcd064d35f9b93012ce18fd47c4">os::posix::io_impl::do_write()</a>, <a class="el" href="uio_8h_source.html#l00041">iovec::iov_base</a>, and <a class="el" href="uio_8h_source.html#l00042">iovec::iov_len</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="io_8cpp_source.html#l00321">os::posix::io::writev()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +760,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00501">501</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8h_source.html#l00492">492</a> of file <a class="el" href="file_8h_source.html">file.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  493</span>    {</div>
+<div class="line"><span class="lineno">  494</span>      <span class="keywordflow">return</span> file_system_;</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="file_8h_source.html#l00478">os::posix::file::get_file_system()</a>.</p>
 
 </div>
 </div>
@@ -698,7 +793,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8h_source.html#l00482">482</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8h_source.html#l00478">478</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  479</span>    {</div>
+<div class="line"><span class="lineno">  480</span>      offset_ = <a class="code hl_function" href="classos_1_1posix_1_1io__impl.html#a5e5f831b8554dd3cc40cdb0382c462a8">offset</a>;</div>
+<div class="line"><span class="lineno">  481</span>    }</div>
+<div class="ttc" id="aclassos_1_1posix_1_1io__impl_html_a5e5f831b8554dd3cc40cdb0382c462a8"><div class="ttname"><a href="classos_1_1posix_1_1io__impl.html#a5e5f831b8554dd3cc40cdb0382c462a8">os::posix::io_impl::offset</a></div><div class="ttdeci">off_t offset(void)</div><div class="ttdef"><b>Definition</b> <a href="io_8h_source.html#l00472">io.h:472</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="io_8h_source.html#l00472">os::posix::io_impl::offset()</a>.</p>
 
 </div>
 </div>
@@ -726,7 +827,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="io_8h_source.html#l00476">476</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8h_source.html#l00472">472</a> of file <a class="el" href="io_8h_source.html">io.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>    {</div>
+<div class="line"><span class="lineno">  474</span>      <span class="keywordflow">return</span> offset_;</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="block-device-partition_8cpp_source.html#l00104">os::posix::block_device_partition_impl::configure()</a>, <a class="el" href="block-device_8cpp_source.html#l00206">os::posix::block_device_impl::do_lseek()</a>, and <a class="el" href="io_8h_source.html#l00478">os::posix::io_impl::offset()</a>.</p>
 
 </div>
 </div>

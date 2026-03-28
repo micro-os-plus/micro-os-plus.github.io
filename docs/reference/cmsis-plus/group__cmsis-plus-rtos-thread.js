@@ -53,7 +53,7 @@ var group__cmsis_plus_rtos_thread =
     [ "os::rtos::thread", "classos_1_1rtos_1_1thread.html", [
       [ "allocator_type", "classos_1_1rtos_1_1thread.html#aad1b11b58a161d9ee54c9ca297a28cd6", null ],
       [ "func_args_t", "classos_1_1rtos_1_1thread.html#af172404a80d16e472f9425ca59c30808", null ],
-      [ "func_t", "classos_1_1rtos_1_1thread.html#a562163ef5c0911be98a342a6a2ee07bc", null ],
+      [ "func_t", "classos_1_1rtos_1_1thread.html#ad45de411752858505b98fba1fa1d4517", null ],
       [ "priority_t", "group__cmsis-plus-rtos-thread.html#gaa5d09b05379b4799f126477d0ac29c36", null ],
       [ "state_t", "classos_1_1rtos_1_1thread.html#a2ad4ea288b751984ac2af3c762da7b61", null ],
       [ "thread", "classos_1_1rtos_1_1thread.html#a2fbb4d093486561fe72243e46badb6ef", null ],
@@ -91,7 +91,7 @@ var group__cmsis_plus_rtos_thread =
     [ "os::rtos::thread_allocated< Allocator >", "classos_1_1rtos_1_1thread__allocated.html", [
       [ "allocator_type", "classos_1_1rtos_1_1thread__allocated.html#af0bf53488faad1b1bf857b145ce72af8", null ],
       [ "func_args_t", "classos_1_1rtos_1_1thread__allocated.html#af172404a80d16e472f9425ca59c30808", null ],
-      [ "func_t", "classos_1_1rtos_1_1thread__allocated.html#a562163ef5c0911be98a342a6a2ee07bc", null ],
+      [ "func_t", "classos_1_1rtos_1_1thread__allocated.html#ad45de411752858505b98fba1fa1d4517", null ],
       [ "priority_t", "classos_1_1rtos_1_1thread__allocated.html#gaa5d09b05379b4799f126477d0ac29c36", null ],
       [ "state_t", "classos_1_1rtos_1_1thread__allocated.html#a2ad4ea288b751984ac2af3c762da7b61", null ],
       [ "thread_allocated", "classos_1_1rtos_1_1thread__allocated.html#a196343ad792593981ad7b2139f407367", null ],
@@ -129,7 +129,7 @@ var group__cmsis_plus_rtos_thread =
     [ "os::rtos::thread_inclusive< N >", "classos_1_1rtos_1_1thread__inclusive.html", [
       [ "allocator_type", "classos_1_1rtos_1_1thread__inclusive.html#aad1b11b58a161d9ee54c9ca297a28cd6", null ],
       [ "func_args_t", "classos_1_1rtos_1_1thread__inclusive.html#af172404a80d16e472f9425ca59c30808", null ],
-      [ "func_t", "classos_1_1rtos_1_1thread__inclusive.html#a562163ef5c0911be98a342a6a2ee07bc", null ],
+      [ "func_t", "classos_1_1rtos_1_1thread__inclusive.html#ad45de411752858505b98fba1fa1d4517", null ],
       [ "priority_t", "classos_1_1rtos_1_1thread__inclusive.html#gaa5d09b05379b4799f126477d0ac29c36", null ],
       [ "state_t", "classos_1_1rtos_1_1thread__inclusive.html#a2ad4ea288b751984ac2af3c762da7b61", null ],
       [ "thread_inclusive", "classos_1_1rtos_1_1thread__inclusive.html#a01ad81444dba0d5fac89c79293c74481", null ],

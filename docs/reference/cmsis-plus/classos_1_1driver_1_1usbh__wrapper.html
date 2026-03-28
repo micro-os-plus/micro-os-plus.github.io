@@ -263,7 +263,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00050">50</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00049">49</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acc1bf7cc4c80509c183a345acc1567c6" name="acc1bf7cc4c80509c183a345acc1567c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc1bf7cc4c80509c183a345acc1567c6">&#9670;&#160;</a></span>usbh_wrapper() <span class="overload">[1/3]</span></h2>
@@ -305,7 +305,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00029">29</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00028">28</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        : <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a> (driver), <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a503658d0a00691259d7579f661860ed0">c_cb_port_func_</a> (c_cb_port_func),</div>
+<div class="line"><span class="lineno">   32</span>          <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a20e3ef3c5fec8fab04b4e084e927ccb9">c_cb_pipe_func_</a> (c_cb_pipe_func)</div>
+<div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_a20e3ef3c5fec8fab04b4e084e927ccb9"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#a20e3ef3c5fec8fab04b4e084e927ccb9">os::driver::usbh_wrapper::c_cb_pipe_func_</a></div><div class="ttdeci">ARM_USBH_SignalPipeEvent_t c_cb_pipe_func_</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00140">usbh-wrapper.h:140</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_a503658d0a00691259d7579f661860ed0"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#a503658d0a00691259d7579f661860ed0">os::driver::usbh_wrapper::c_cb_port_func_</a></div><div class="ttdeci">ARM_USBH_SignalPortEvent_t c_cb_port_func_</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00139">usbh-wrapper.h:139</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_aad7aebf62530d580820556f9e4992de7"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">os::driver::usbh_wrapper::driver_</a></div><div class="ttdeci">ARM_DRIVER_USBH * driver_</div><div class="ttdoc">Pointer to CMSIS USBD Keil driver.</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00135">usbh-wrapper.h:135</a></div></div>
+<div class="ttc" id="agroup__cmsis-plus-diag_html_gab99139b69af4fe6f063b4a236133b2ee"><div class="ttname"><a href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">os::trace::printf</a></div><div class="ttdeci">int printf(const char *format,...)</div><div class="ttdoc">Write a formatted string to the trace device.</div><div class="ttdef"><b>Definition</b> <a href="trace_8cpp_source.html#l00059">trace.cpp:59</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +395,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00039">39</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00037">37</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>      <a class="code hl_function" href="group__cmsis-plus-diag.html#gab99139b69af4fe6f063b4a236133b2ee">trace::printf</a> (<span class="stringliteral">&quot;%s() %p\n&quot;</span>, __func__, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>      <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="usbh-wrapper_8h_source.html#l00135">driver_</a>, and <a class="el" href="trace_8cpp_source.html#l00059">os::trace::printf()</a>.</p>
 
 </div>
 </div>
@@ -413,7 +431,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00491">491</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00495">495</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  496</span>      {</div>
+<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#aa8082dbe6985f89bde04b4ec8930beb4">do_abort_transfer</a> (pipe);</div>
+<div class="line"><span class="lineno">  498</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_aa8082dbe6985f89bde04b4ec8930beb4"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#aa8082dbe6985f89bde04b4ec8930beb4">os::driver::usb::Host::do_abort_transfer</a></div><div class="ttdeci">virtual return_t do_abort_transfer(pipe_t pipe) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#aa8082dbe6985f89bde04b4ec8930beb4">os::driver::usb::Host::do_abort_transfer()</a>.</p>
 
 </div>
 </div>
@@ -487,7 +511,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00453">453</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00455">455</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  460</span>      {</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#ab034c50fba150d2d84d535213f83e924">do_create_pipe</a> (dev_addr, dev_speed, hub_addr, hub_port,</div>
+<div class="line"><span class="lineno">  462</span>                               ep_addr, ep_type, ep_max_packet_size,</div>
+<div class="line"><span class="lineno">  463</span>                               ep_interval);</div>
+<div class="line"><span class="lineno">  464</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_ab034c50fba150d2d84d535213f83e924"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#ab034c50fba150d2d84d535213f83e924">os::driver::usb::Host::do_create_pipe</a></div><div class="ttdeci">virtual pipe_t do_create_pipe(device_address_t dev_addr, speed_t dev_speed, hub_addr_t hub_addr, hub_port_t hub_port, endpoint_t ep_addr, endpoint_type_t ep_type, packet_size_t ep_max_packet_size, polling_interval_t ep_interval) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab034c50fba150d2d84d535213f83e924">os::driver::usb::Host::do_create_pipe()</a>.</p>
 
 </div>
 </div>
@@ -515,7 +547,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00473">473</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00477">477</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  478</span>      {</div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a55b5253334caefc209f77326fa434cb2">do_delete_pipe</a> (pipe);</div>
+<div class="line"><span class="lineno">  480</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a55b5253334caefc209f77326fa434cb2"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a55b5253334caefc209f77326fa434cb2">os::driver::usb::Host::do_delete_pipe</a></div><div class="ttdeci">virtual return_t do_delete_pipe(pipe_t pipe) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a55b5253334caefc209f77326fa434cb2">os::driver::usb::Host::do_delete_pipe()</a>.</p>
 
 </div>
 </div>
@@ -545,8 +583,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#aa8082dbe6985f89bde04b4ec8930beb4">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00188">188</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00185">185</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeTransferAbort (pipe);</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a57c6993eaec45f7628d6a8b163c10cf8" name="a57c6993eaec45f7628d6a8b163c10cf8"></a>
@@ -621,8 +662,13 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab034c50fba150d2d84d535213f83e924">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00135">135</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00133">133</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeCreate (dev_addr, dev_speed, hub_addr, hub_port,</div>
+<div class="line"><span class="lineno">  143</span>                                  ep_addr, ep_type, ep_max_packet_size,</div>
+<div class="line"><span class="lineno">  144</span>                                  ep_interval);</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a94a947cef11c30fcc3b02c1a13f8fe62" name="a94a947cef11c30fcc3b02c1a13f8fe62"></a>
@@ -651,8 +697,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a55b5253334caefc209f77326fa434cb2">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00162">162</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00159">159</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeDelete (pipe);</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2b4d3d8672742b2cd4380a5ee794c494" name="a2b4d3d8672742b2cd4380a5ee794c494"></a>
@@ -681,8 +730,15 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab4230093dd5de1da0f0f2701047a0700">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00065">65</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00063">63</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>      <span class="comment">// Overwrite the C++ instance. Assume same layout.</span></div>
+<div class="line"><span class="lineno">   66</span>      *(<span class="keyword">reinterpret_cast&lt;</span>ARM_USBH_CAPABILITIES*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a6ed14352b22dadd359a4191e0b8395fc">capa_</a>))</div>
+<div class="line"><span class="lineno">   67</span>          = <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;GetCapabilities ();</div>
+<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a6ed14352b22dadd359a4191e0b8395fc">capa_</a>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_a6ed14352b22dadd359a4191e0b8395fc"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#a6ed14352b22dadd359a4191e0b8395fc">os::driver::usbh_wrapper::capa_</a></div><div class="ttdeci">usb::host::Capabilities capa_</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00150">usbh-wrapper.h:150</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a47b7c589def92dfda64ada8fcb277395" name="a47b7c589def92dfda64ada8fcb277395"></a>
@@ -711,8 +767,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a774c4f3b74b2cdf8562b73ac44d6736e">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00194">194</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00191">191</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;GetFrameNumber ();</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adad70b016ccdc97eb94bd6190def3c41" name="adad70b016ccdc97eb94bd6190def3c41"></a>
@@ -741,8 +800,15 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a37b632c370f762bd7043fdb8519869d8">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00074">74</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00072">72</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>      <span class="comment">// Overwrite the C++ instance. Assume same layout.</span></div>
+<div class="line"><span class="lineno">   75</span>      *(<span class="keyword">reinterpret_cast&lt;</span>ARM_USBH_PORT_STATE*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a648795cb8ff9d126152dfa744ffc521e">status_</a>))</div>
+<div class="line"><span class="lineno">   76</span>          = <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PortGetState (port);</div>
+<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a648795cb8ff9d126152dfa744ffc521e">status_</a>;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_a648795cb8ff9d126152dfa744ffc521e"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#a648795cb8ff9d126152dfa744ffc521e">os::driver::usbh_wrapper::status_</a></div><div class="ttdeci">usb::host::Status status_</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00151">usbh-wrapper.h:151</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b312b4e133af83b19e3fc03519cc78d" name="a7b312b4e133af83b19e3fc03519cc78d"></a>
@@ -771,8 +837,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab625f78640afeddc187fd162fe3bb2ea">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00182">182</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00179">179</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>    {</div>
+<div class="line"><span class="lineno">  181</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeTransferGetResult (pipe);</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4cd8e10e49035fcdb4b5df31f94c5ea1" name="a4cd8e10e49035fcdb4b5df31f94c5ea1"></a>
@@ -801,8 +870,15 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1Base.html#a29e354707bc986f96cb43f16221cca06">os::driver::Base</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00056">56</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00054">54</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>      <span class="comment">// Overwrite the C++ instance. Assume same layout.</span></div>
+<div class="line"><span class="lineno">   57</span>      *(<span class="keyword">reinterpret_cast&lt;</span>ARM_DRIVER_VERSION*<span class="keyword">&gt;</span> (&amp;<a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aaded8479b0be99ffd3aa8835c63cd219">version_</a>))</div>
+<div class="line"><span class="lineno">   58</span>          = <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;GetVersion ();</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aaded8479b0be99ffd3aa8835c63cd219">version_</a>;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usbh__wrapper_html_aaded8479b0be99ffd3aa8835c63cd219"><div class="ttname"><a href="classos_1_1driver_1_1usbh__wrapper.html#aaded8479b0be99ffd3aa8835c63cd219">os::driver::usbh_wrapper::version_</a></div><div class="ttdeci">Version version_</div><div class="ttdef"><b>Definition</b> <a href="usbh-wrapper_8h_source.html#l00149">usbh-wrapper.h:149</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a200b8c904e99ae1c737d9a97f61f75bf" name="a200b8c904e99ae1c737d9a97f61f75bf"></a>
@@ -865,8 +941,12 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a801b8df9aabe52e55584c3b3364fd02f">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00150">150</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00148">148</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeModify (pipe, dev_addr, dev_speed, hub_addr,</div>
+<div class="line"><span class="lineno">  155</span>                                  hub_port, ep_max_packet_size);</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a85d7228fe0be9f1b7d2c16eff971bacd" name="a85d7228fe0be9f1b7d2c16eff971bacd"></a>
@@ -895,7 +975,35 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">os::driver::Base</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00085">85</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00083">83</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>      assert (<a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a> != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>      <a class="code hl_typedef" href="namespaceos_1_1driver.html#ae505c9532fc7b402d8a54ec68c19f8ae">return_t</a> status;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>      <span class="keywordflow">if</span> (state == <a class="code hl_enumvalue" href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7ddae9dc924f238fa6cc29465942875fe8f0">Power::full</a>)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>          status = <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;Initialize (<a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a503658d0a00691259d7579f661860ed0">c_cb_port_func_</a>, <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#a20e3ef3c5fec8fab04b4e084e927ccb9">c_cb_pipe_func_</a>);</div>
+<div class="line"><span class="lineno">   92</span>          <span class="keywordflow">if</span> (status != ARM_DRIVER_OK)</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>              <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>      status = <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PowerControl (<span class="keyword">static_cast&lt;</span>ARM_POWER_STATE<span class="keyword">&gt;</span> (state));</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>      <span class="keywordflow">if</span> (state == <a class="code hl_enumvalue" href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda3262d48df5d75e3452f0f16b313b7808">Power::off</a>)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>          <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;Uninitialize ();</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>      <span class="keywordflow">return</span> status;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="ttc" id="anamespaceos_1_1driver_html_aa85d900c8bd49c5298b435e90d37a7dda3262d48df5d75e3452f0f16b313b7808"><div class="ttname"><a href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda3262d48df5d75e3452f0f16b313b7808">os::driver::Power::off</a></div><div class="ttdeci">@ off</div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_aa85d900c8bd49c5298b435e90d37a7ddae9dc924f238fa6cc29465942875fe8f0"><div class="ttname"><a href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7ddae9dc924f238fa6cc29465942875fe8f0">os::driver::Power::full</a></div><div class="ttdeci">@ full</div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_ae505c9532fc7b402d8a54ec68c19f8ae"><div class="ttname"><a href="namespaceos_1_1driver.html#ae505c9532fc7b402d8a54ec68c19f8ae">os::driver::return_t</a></div><div class="ttdeci">int32_t return_t</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00046">common.h:46</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7ddae9dc924f238fa6cc29465942875fe8f0">os::driver::full</a>, and <a class="el" href="namespaceos_1_1driver.html#aa85d900c8bd49c5298b435e90d37a7dda3262d48df5d75e3452f0f16b313b7808">os::driver::off</a>.</p>
 
 </div>
 </div>
@@ -935,8 +1043,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a0b01408be547f09b8dd80ae68c317a90">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00111">111</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00109">109</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PortVbusOnOff (port, vbus);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a13942a21d4f2556ddc2e9bb3f445aa57" name="a13942a21d4f2556ddc2e9bb3f445aa57"></a>
@@ -965,8 +1076,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a4492233a2e6dc54684f6ef8dbfc66a2a">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00168">168</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00165">165</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeReset (pipe);</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab2921ea9b06a3f45c6a7249326c43aa5" name="ab2921ea9b06a3f45c6a7249326c43aa5"></a>
@@ -995,8 +1109,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#aed5aeff59e0418918cef7e9782d529f6">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00117">117</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00115">115</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PortReset (port);</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab809c7104e1c995f4d01de8b75344e92" name="ab809c7104e1c995f4d01de8b75344e92"></a>
@@ -1025,8 +1142,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a72476e16230095a98ee53c388f142492">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00129">129</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00127">127</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PortResume (port);</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8eb287eb2c390d2ca813b3a2e1b0a83c" name="a8eb287eb2c390d2ca813b3a2e1b0a83c"></a>
@@ -1055,8 +1175,11 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a0f4e618fc52a9460a2b9182669b6074c">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00123">123</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00121">121</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PortSuspend (port);</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0b11beb7730c1ce824e2034dfbb3fde0" name="a0b11beb7730c1ce824e2034dfbb3fde0"></a>
@@ -1107,8 +1230,12 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#afffbd63c07920281954db03fa17196b3">os::driver::usb::Host</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00174">174</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8cpp_source.html#l00171">171</a> of file <a class="el" href="usbh-wrapper_8cpp_source.html">usbh-wrapper.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>    {</div>
+<div class="line"><span class="lineno">  174</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classos_1_1driver_1_1usbh__wrapper.html#aad7aebf62530d580820556f9e4992de7">driver_</a>-&gt;PipeTransfer (pipe, packet, data,</div>
+<div class="line"><span class="lineno">  175</span>                                    <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span> (num));</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a354da0b3ca915fb873bb3ea312360f6d" name="a354da0b3ca915fb873bb3ea312360f6d"></a>
@@ -1135,7 +1262,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00417">417</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00419">419</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  420</span>      {</div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#ab4230093dd5de1da0f0f2701047a0700">do_get_capabilities</a> ();</div>
+<div class="line"><span class="lineno">  422</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_ab4230093dd5de1da0f0f2701047a0700"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#ab4230093dd5de1da0f0f2701047a0700">os::driver::usb::Host::do_get_capabilities</a></div><div class="ttdeci">virtual const host::Capabilities &amp; do_get_capabilities(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab4230093dd5de1da0f0f2701047a0700">os::driver::usb::Host::do_get_capabilities()</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1296,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00497">497</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00501">501</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span>      {</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a774c4f3b74b2cdf8562b73ac44d6736e">do_get_frame_number</a> ();</div>
+<div class="line"><span class="lineno">  504</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a774c4f3b74b2cdf8562b73ac44d6736e"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a774c4f3b74b2cdf8562b73ac44d6736e">os::driver::usb::Host::do_get_frame_number</a></div><div class="ttdeci">virtual uint16_t do_get_frame_number(void) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a774c4f3b74b2cdf8562b73ac44d6736e">os::driver::usb::Host::do_get_frame_number()</a>.</p>
 
 </div>
 </div>
@@ -1191,7 +1330,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00447">447</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00449">449</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  450</span>      {</div>
+<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a37b632c370f762bd7043fdb8519869d8">do_get_port_status</a> (port);</div>
+<div class="line"><span class="lineno">  452</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a37b632c370f762bd7043fdb8519869d8"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a37b632c370f762bd7043fdb8519869d8">os::driver::usb::Host::do_get_port_status</a></div><div class="ttdeci">virtual host::Status &amp; do_get_port_status(port_t port) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a37b632c370f762bd7043fdb8519869d8">os::driver::usb::Host::do_get_port_status()</a>.</p>
 
 </div>
 </div>
@@ -1219,7 +1364,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00485">485</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00489">489</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>      {</div>
+<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#ab625f78640afeddc187fd162fe3bb2ea">do_get_transfer_count</a> (pipe);</div>
+<div class="line"><span class="lineno">  492</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_ab625f78640afeddc187fd162fe3bb2ea"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#ab625f78640afeddc187fd162fe3bb2ea">os::driver::usb::Host::do_get_transfer_count</a></div><div class="ttdeci">virtual std::size_t do_get_transfer_count(pipe_t pipe) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#ab625f78640afeddc187fd162fe3bb2ea">os::driver::usb::Host::do_get_transfer_count()</a>.</p>
 
 </div>
 </div>
@@ -1246,12 +1397,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get driver version. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classos_1_1driver_1_1Version.html">Version</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00195">195</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00185">185</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1Base.html#a29e354707bc986f96cb43f16221cca06">do_get_version</a> ();</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1Base_html_a29e354707bc986f96cb43f16221cca06"><div class="ttname"><a href="classos_1_1driver_1_1Base.html#a29e354707bc986f96cb43f16221cca06">os::driver::Base::do_get_version</a></div><div class="ttdeci">virtual const Version &amp; do_get_version(void) noexcept=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aac20ab43632317a150048735c5c1b7fc" name="aac20ab43632317a150048735c5c1b7fc"></a>
@@ -1312,7 +1465,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00464">464</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00467">467</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  471</span>      {</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a801b8df9aabe52e55584c3b3364fd02f">do_modify_pipe</a> (pipe, dev_addr, dev_speed, hub_addr, hub_port,</div>
+<div class="line"><span class="lineno">  473</span>                               ep_max_packet_size);</div>
+<div class="line"><span class="lineno">  474</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a801b8df9aabe52e55584c3b3364fd02f"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a801b8df9aabe52e55584c3b3364fd02f">os::driver::usb::Host::do_modify_pipe</a></div><div class="ttdeci">virtual return_t do_modify_pipe(pipe_t pipe, device_address_t dev_addr, speed_t dev_speed, hub_addr_t hub_addr, hub_port_t hub_port, packet_size_t ep_max_packet_size) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a801b8df9aabe52e55584c3b3364fd02f">os::driver::usb::Host::do_modify_pipe()</a>.</p>
 
 </div>
 </div>
@@ -1391,8 +1551,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Power up/down device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Power state </td></tr>
@@ -1401,8 +1559,12 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00201">201</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00191">191</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">do_power</a> (state);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1Base_html_ae396e2bab34d6a6929a3e65aa9155412"><div class="ttname"><a href="classos_1_1driver_1_1Base.html#ae396e2bab34d6a6929a3e65aa9155412">os::driver::Base::do_power</a></div><div class="ttdeci">virtual return_t do_power(Power state) noexcept=0</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d38a38c19aa69db3ac692f8cfe534e6" name="a8d38a38c19aa69db3ac692f8cfe534e6"></a>
@@ -1439,7 +1601,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00423">423</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00425">425</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  426</span>      {</div>
+<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a0b01408be547f09b8dd80ae68c317a90">do_power_port_vbus</a> (port, vbus);</div>
+<div class="line"><span class="lineno">  428</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a0b01408be547f09b8dd80ae68c317a90"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a0b01408be547f09b8dd80ae68c317a90">os::driver::usb::Host::do_power_port_vbus</a></div><div class="ttdeci">virtual return_t do_power_port_vbus(port_t port, bool vbus) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a0b01408be547f09b8dd80ae68c317a90">os::driver::usb::Host::do_power_port_vbus()</a>.</p>
 
 </div>
 </div>
@@ -1477,8 +1645,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00064">64</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00063">63</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>      {</div>
+<div class="line"><span class="lineno">   66</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a81e8486afa78c916d176c29031a025ee">cb_pipe_func_</a> = cb_func;</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#ab0d8807dcacdd5c19fa61471317fad66">cb_pipe_object_</a> = cb_object;</div>
+<div class="line"><span class="lineno">   68</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a81e8486afa78c916d176c29031a025ee"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a81e8486afa78c916d176c29031a025ee">os::driver::usb::Host::cb_pipe_func_</a></div><div class="ttdeci">host::signal_pipe_event_t cb_pipe_func_</div><div class="ttdoc">Pointer to static function that implements the pipe callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-host_8h_source.html#l00378">usb-host.h:378</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_ab0d8807dcacdd5c19fa61471317fad66"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#ab0d8807dcacdd5c19fa61471317fad66">os::driver::usb::Host::cb_pipe_object_</a></div><div class="ttdeci">const void * cb_pipe_object_</div><div class="ttdoc">Pointer to object instance associated with the pipe callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-host_8h_source.html#l00381">usb-host.h:381</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a70ac146ce17aa07885d4154ef0a9ad9e" name="a70ac146ce17aa07885d4154ef0a9ad9e"></a>
@@ -1514,8 +1688,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Register port event callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cb_func</td><td>Pointer to callback function. </td></tr>
@@ -1524,8 +1696,14 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00056">56</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00055">55</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>      {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a0ce9349be326da851572768f1188259a">cb_port_func_</a> = cb_func;</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#ac24876f1c6e8c8cc186fa3121937d402">cb_port_object_</a> = cb_object;</div>
+<div class="line"><span class="lineno">   60</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a0ce9349be326da851572768f1188259a"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a0ce9349be326da851572768f1188259a">os::driver::usb::Host::cb_port_func_</a></div><div class="ttdeci">host::signal_port_event_t cb_port_func_</div><div class="ttdoc">Pointer to static function that implements the port callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-host_8h_source.html#l00372">usb-host.h:372</a></div></div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_ac24876f1c6e8c8cc186fa3121937d402"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#ac24876f1c6e8c8cc186fa3121937d402">os::driver::usb::Host::cb_port_object_</a></div><div class="ttdeci">const void * cb_port_object_</div><div class="ttdoc">Pointer to object instance associated with the port callback.</div><div class="ttdef"><b>Definition</b> <a href="usb-host_8h_source.html#l00375">usb-host.h:375</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acdbbdb9db2a54ff4adcc4076eb8cdc1b" name="acdbbdb9db2a54ff4adcc4076eb8cdc1b"></a>
@@ -1552,7 +1730,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00479">479</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00483">483</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  484</span>      {</div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a4492233a2e6dc54684f6ef8dbfc66a2a">do_reset_pipe</a> (pipe);</div>
+<div class="line"><span class="lineno">  486</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a4492233a2e6dc54684f6ef8dbfc66a2a"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a4492233a2e6dc54684f6ef8dbfc66a2a">os::driver::usb::Host::do_reset_pipe</a></div><div class="ttdeci">virtual return_t do_reset_pipe(pipe_t pipe) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a4492233a2e6dc54684f6ef8dbfc66a2a">os::driver::usb::Host::do_reset_pipe()</a>.</p>
 
 </div>
 </div>
@@ -1580,7 +1764,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00429">429</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00431">431</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  432</span>      {</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#aed5aeff59e0418918cef7e9782d529f6">do_reset_port</a> (port);</div>
+<div class="line"><span class="lineno">  434</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_aed5aeff59e0418918cef7e9782d529f6"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#aed5aeff59e0418918cef7e9782d529f6">os::driver::usb::Host::do_reset_port</a></div><div class="ttdeci">virtual return_t do_reset_port(port_t port) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#aed5aeff59e0418918cef7e9782d529f6">os::driver::usb::Host::do_reset_port()</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1798,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00441">441</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00443">443</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  444</span>      {</div>
+<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a72476e16230095a98ee53c388f142492">do_resume_port</a> (port);</div>
+<div class="line"><span class="lineno">  446</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a72476e16230095a98ee53c388f142492"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a72476e16230095a98ee53c388f142492">os::driver::usb::Host::do_resume_port</a></div><div class="ttdeci">virtual return_t do_resume_port(port_t port) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a72476e16230095a98ee53c388f142492">os::driver::usb::Host::do_resume_port()</a>.</p>
 
 </div>
 </div>
@@ -1646,8 +1842,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00098">98</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00097">97</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>      {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a81e8486afa78c916d176c29031a025ee">cb_pipe_func_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  100</span>          {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="comment">// Forward event to registered callback.</span></div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a81e8486afa78c916d176c29031a025ee">cb_pipe_func_</a> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#ab0d8807dcacdd5c19fa61471317fad66">cb_pipe_object_</a>, pipe, event);</div>
+<div class="line"><span class="lineno">  103</span>          }</div>
+<div class="line"><span class="lineno">  104</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af676fbe5bf78c7b8b30b5c355b92c6b0" name="af676fbe5bf78c7b8b30b5c355b92c6b0"></a>
@@ -1684,8 +1887,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00088">88</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00087">87</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>      {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a0ce9349be326da851572768f1188259a">cb_port_func_</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   90</span>          {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="comment">// Forward event to registered callback.</span></div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#a0ce9349be326da851572768f1188259a">cb_port_func_</a> (<a class="code hl_variable" href="classos_1_1driver_1_1usb_1_1Host.html#ac24876f1c6e8c8cc186fa3121937d402">cb_port_object_</a>, port, event);</div>
+<div class="line"><span class="lineno">   93</span>          }</div>
+<div class="line"><span class="lineno">   94</span>      }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab9750f5d6ff33635046cc67cb1bf09b1" name="ab9750f5d6ff33635046cc67cb1bf09b1"></a>
@@ -1712,7 +1922,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00435">435</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00437">437</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  438</span>      {</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#a0f4e618fc52a9460a2b9182669b6074c">do_suspend_port</a> (port);</div>
+<div class="line"><span class="lineno">  440</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_a0f4e618fc52a9460a2b9182669b6074c"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#a0f4e618fc52a9460a2b9182669b6074c">os::driver::usb::Host::do_suspend_port</a></div><div class="ttdeci">virtual return_t do_suspend_port(port_t port) noexcept=0</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classos_1_1driver_1_1usb_1_1Host.html#a0f4e618fc52a9460a2b9182669b6074c">os::driver::usb::Host::do_suspend_port()</a>.</p>
 
 </div>
 </div>
@@ -1762,7 +1978,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00074">74</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8cpp_source.html#l00073">73</a> of file <a class="el" href="usb-host_8cpp_source.html">usb-host.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>      {</div>
+<div class="line"><span class="lineno">   76</span>        assert (data != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">   78</span>          {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">RETURN_OK</a>;</div>
+<div class="line"><span class="lineno">   80</span>          }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classos_1_1driver_1_1usb_1_1Host.html#afffbd63c07920281954db03fa17196b3">do_transfer</a> (pipe, packet, data, num);</div>
+<div class="line"><span class="lineno">   82</span>      }</div>
+<div class="ttc" id="aclassos_1_1driver_1_1usb_1_1Host_html_afffbd63c07920281954db03fa17196b3"><div class="ttname"><a href="classos_1_1driver_1_1usb_1_1Host.html#afffbd63c07920281954db03fa17196b3">os::driver::usb::Host::do_transfer</a></div><div class="ttdeci">virtual return_t do_transfer(pipe_t pipe, uint32_t packet, uint8_t *data, std::size_t num) noexcept=0</div></div>
+<div class="ttc" id="anamespaceos_1_1driver_html_a98267e1a7761553e8a6671de68455497"><div class="ttname"><a href="namespaceos_1_1driver.html#a98267e1a7761553e8a6671de68455497">os::driver::RETURN_OK</a></div><div class="ttdeci">constexpr return_t RETURN_OK</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00052">common.h:52</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="common_8h_source.html#l00052">os::driver::RETURN_OK</a>.</p>
 
 </div>
 </div>
@@ -1787,7 +2015,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00143">143</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00140">140</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
 </div>
 </div>
@@ -1812,7 +2040,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Pointer to non-reentrant callback. Must be stored because Initialize() is now delayed just before PowerControl(FULL). </p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00142">142</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00139">139</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +2064,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00154">154</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00150">150</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
 </div>
 </div>
@@ -1860,9 +2088,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to static function that implements the pipe callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00378">378</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00375">375</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-host_8cpp_source.html#l00038">os::driver::usb::Host::Host()</a>.</p>
 
 </div>
 </div>
@@ -1886,9 +2114,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to object instance associated with the pipe callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00381">381</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00378">378</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-host_8cpp_source.html#l00038">os::driver::usb::Host::Host()</a>.</p>
 
 </div>
 </div>
@@ -1912,9 +2140,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to static function that implements the port callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00372">372</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00369">369</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-host_8cpp_source.html#l00038">os::driver::usb::Host::Host()</a>.</p>
 
 </div>
 </div>
@@ -1938,9 +2166,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to object instance associated with the port callback. </p>
+<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00375">375</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usb-host_8h_source.html#l00372">372</a> of file <a class="el" href="usb-host_8h_source.html">usb-host.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usb-host_8cpp_source.html#l00038">os::driver::usb::Host::Host()</a>.</p>
 
 </div>
 </div>
@@ -1964,9 +2192,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to CMSIS USBD Keil driver. </p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00135">135</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00138">138</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usbh-wrapper_8cpp_source.html#l00037">~usbh_wrapper()</a>.</p>
 
 </div>
 </div>
@@ -1990,7 +2218,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00155">155</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00151">151</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
 </div>
 </div>
@@ -2014,7 +2242,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00152">152</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usbh-wrapper_8h_source.html#l00149">149</a> of file <a class="el" href="usbh-wrapper_8h_source.html">usbh-wrapper.h</a>.</p>
 
 </div>
 </div>
