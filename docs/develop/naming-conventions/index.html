@@ -242,7 +242,7 @@
 <h1 class="page-title">C/C++ naming conventions</h1>
 <table id="last-modified">
   <tr>
-    <td id="last-modified">Last modified on Sat Mar 28 11:34:05 2026 UTC.</td>
+    <td id="last-modified">Last modified on Thu Jun 11 21:38:41 2026 UTC.</td>
     <td id="improve" align="right"><a id="improve" href="https://github.com/micro-os-plus/web-jekyll/edit/master/pages/develop/naming-conventions.md"><i class="fa fa-pencil"></i>  Improve this page</a></td>
   </tr>
 </table>
@@ -908,13 +908,15 @@ the presence of parenthesis is a clear sign of an array.</p>
 
 <ul>
   <li>
-<strong>The configuration header</strong> (<code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/config.h&gt;</code>, conditionally included based on <code class="language-plaintext highlighter-rouge">MICRO_OS_PLUS_INCLUDE_CONFIG_H</code>)</li>
+<strong>The configuration header</strong> (<code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/project-config.h&gt;</code>, conditionally included)</li>
   <li>Blank line</li>
   <li>
-<strong>The related header</strong> (the <code class="language-plaintext highlighter-rouge">.h</code> for this <code class="language-plaintext highlighter-rouge">.cpp</code> file, if applicable)</li>
+<strong>The related header</strong> (the <code class="language-plaintext highlighter-rouge">xxx.h</code> for this <code class="language-plaintext highlighter-rouge">xxx.cpp</code> file, if applicable)</li>
   <li>Blank line</li>
   <li>
-<strong>Project headers</strong> (your own <code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/...&gt;</code>)</li>
+<strong>Platform header</strong> (<code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/platform.h&gt;</code>, if not using <code class="language-plaintext highlighter-rouge">xxx.h</code>)</li>
+  <li>
+<strong>Dependencies headers</strong> (<code class="language-plaintext highlighter-rouge">&lt;micro-os-plus/...&gt;</code>)</li>
   <li>Blank line</li>
   <li><strong>Third-party library headers</strong></li>
   <li>Blank line</li>
@@ -930,13 +932,64 @@ the presence of parenthesis is a clear sign of an array.</p>
 
 <p>Example:</p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#if defined(MICRO_OS_PLUS_INCLUDE_CONFIG_H)
-#include &lt;micro-os-plus/config.h&gt;
-#endif // MICRO_OS_PLUS_INCLUDE_CONFIG_H
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#if __has_include(&lt;micro-os-plus/project-config.h&gt;)
+#include &lt;micro-os-plus/project-config.h&gt;
+#endif // __has_include(&lt;micro-os-plus/project-config.h&gt;)
 </span>
-<span class="cp">#include &lt;micro-os-plus/micro-test-plus.h&gt;
+<span class="cp">#include &lt;micro-os-plus/platform.h&gt;
+#include &lt;micro-os-plus/micro-test-plus.h&gt;
 </span>
 <span class="cp">#include &lt;time.h&gt;
+</span></code></pre></div></div>
+
+<h3 id="package-specific-headers">Package specific headers</h3>
+
+<p>The package public header files should include</p>
+
+<ul>
+  <li>the check for the standard</li>
+  <li>the project configuration</li>
+  <li>the generated defines</li>
+</ul>
+
+<p>Example</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#if !(__cplusplus &gt;= 202002L || (defined(_MSVC_LANG) &amp;&amp; _MSVC_LANG &gt;= 202002L))
+#error "C++20 or higher is required"
+#endif
+</span>
+<span class="cp">#if __has_include(&lt;micro-os-plus/project-config.h&gt;)
+#include &lt;micro-os-plus/project-config.h&gt;
+#endif // __has_include(&lt;micro-os-plus/project-config.h&gt;)
+</span>
+<span class="cp">#if __has_include(&lt;micro-os-plus/utils/lists-defines.h&gt;)
+#include &lt;micro-os-plus/utils/lists-defines.h&gt;
+#endif // __has_include(&lt;micro-os-plus/utils/lists-defines.h&gt;)
+</span>
+<span class="cp">#include "..."
+</span></code></pre></div></div>
+
+<p>The project configuration is first because it might be very well included
+by a previously processed file.</p>
+
+<h3 id="package-internal-sources">Package internal sources</h3>
+
+<p>If the source files do not include the public headers, they must include</p>
+
+<ul>
+  <li>the project configuration</li>
+  <li>the generated defines</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#if __has_include(&lt;micro-os-plus/project-config.h&gt;)
+#include &lt;micro-os-plus/project-config.h&gt;
+#endif // __has_include(&lt;micro-os-plus/project-config.h&gt;)
+</span>
+<span class="cp">#if __has_include(&lt;micro-os-plus/utils/lists-defines.h&gt;)
+#include &lt;micro-os-plus/utils/lists-defines.h&gt;
+#endif // __has_include(&lt;micro-os-plus/utils/lists-defines.h&gt;)
+</span>
+<span class="cp">#include &lt;micro-os-plus/utils/doubly-list-links.h&gt;
 </span></code></pre></div></div>
 
 <h3 id="inline-single-line-methods">Inline single line methods</h3>
